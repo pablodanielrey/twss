@@ -190,4 +190,11 @@ cinemalaplata.com.ar
     - normalizar el manejo de idiomas. Castellano == Español?
       para nuestro caso de aplicación me parece que si.
 
-    - Actores estan separados por , por lo que es simple obtener la lista. y están 
+    - Actores estan separados por , por lo que es simple obtener la lista. y están con la correcta  
+
+    - fecha de la función en cinemalapalta no esta, se asume cartelera idem todos los días. 
+      la fecha límite de finalización de esa cartelera esta indicada arriba del todo.
+      el div con clase 'post-container title'
+      <div class="post-container page-title">
+        Cartelera hasta 31/3/2021
+      </div>
