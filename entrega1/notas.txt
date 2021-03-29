@@ -166,3 +166,28 @@ usando algún beautifier de json analizo un poco los datos.
 https://codebeautify.org/jsonviewer
 
 
+---
+
+
+IMPORTANTE:
+
+cinemalaplata.com.ar
+    - idioma en la película es el idioma original. ignorar la descripción que indica después.
+      ej:
+        Inglés subtitulada ---> Inglés
+
+    para ver si esta subtitulada o doblada se debe ver en la descripción de las funciones.
+      ej:
+        :	CASTELLANO:     16:45 - 19:45
+            SUBTITULADA:     13:45 - 22:45
+
+
+    - el manejo de salas está indicado en el nombre del CINE separado por -
+        ej: :	
+            CINEMA PARADISO - SALA HD
+            CINEMA CITY - SALA 4D
+            
+    - normalizar el manejo de idiomas. Castellano == Español?
+      para nuestro caso de aplicación me parece que si.
+
+    - Actores estan separados por , por lo que es simple obtener la lista. y están 

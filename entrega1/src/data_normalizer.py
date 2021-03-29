@@ -21,5 +21,7 @@ def normalize_dict(o:dict):
 
 with open('data/bruto_cinema_.json','r') as f:
     data = json.loads(f.read())
-    norm = normalize_dict(data)
-    print(json.dumps(norm, ensure_ascii=False))
+    normalized_data = normalize_dict(data)
+
+with open('data/norm_cinema_.json','w') as f:
+    f.write(json.dumps(normalized_data, ensure_ascii=False))
