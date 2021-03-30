@@ -30,12 +30,28 @@ def process_movie(movie):
     hours = movie_data.find('div', id=re.compile('Funciones'))
 
     for function in hours.find_all('div'):
-        cinema = function.h5.span.get_text()
+        """ obtener datos del cine y la sala """
+        cinema_data = function.h5.span.get_text().split('-')
+        cinema = cinema_data[0].strip()
+        room = cinema_data[1].strip()
+        
+        """ obtener datos de las funciones """
+        lh = re.compile("(?P<lang>[a-zA-Z]*?):\s*(?P<hours>\d+.*)")
+        hs = re.compile("(?P<hours>\d+:\d+)")
         displays = [s.get_text() for s in function.p.find_all('span')]
-        functions.append({
-            'cine': cinema,
-            'shows': displays
-        }) 
+        for d in displays:
+            m1 = lh.match(d)
+            language = m1.group('lang')
+            hours = m1.group('hours')
+            m2 = hs.finditer(hours)
+            hours = [h.group('hours') for h in m2]
+
+            functions.append({
+                'cine': cinema,
+                'sala': room,
+                'idioma': language,
+                'hours': hours 
+            }) 
 
     scraped_data['funciones'] = functions
     return scraped_data
