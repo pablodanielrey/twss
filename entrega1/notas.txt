@@ -153,23 +153,19 @@ en el caso de tener múltiples shows en distintos cines:
 
 ---------------------------- solución del punto 2 -------------------------
 
-después de alguna mirada a los datos se ve que los datos retornados no están normalizados como es de esperar.
+después de algún análisis a los datos se ve que los datos retornados no están normalizados como es de esperar.
 tienen retornos de carros, saltos de línea, no todo tiene tilde, etc.
 
 la idea principal sería generar un formateador que normalice un poco los datos.
-y posiblemente deduplique los mismos.
-
-----
+y posiblemente deduplique los mismos a futuro.
 
 usando algún beautifier de json analizo un poco los datos.
-
 https://codebeautify.org/jsonviewer
-
 
 ---
 
 
-IMPORTANTE:
+Algunas conclusiones:
 
 cinemalaplata.com.ar
     - idioma en la película es el idioma original. ignorar la descripción que indica después.
@@ -220,5 +216,16 @@ primero desagrupo los horarios del idioma y en una segunda expresión capturo to
 (?P<hours>\d+:\d+)
 las pude probar usando por ejemplo: https://pythex.org/
 corrijo el script para usar esas expresiones y poder tener esos datos desagregados.
+
+--------------------
+
+problema a resolver desagregar los actores en una lista.
+están separados por , así que con un simple split se resuelve.
+corrijo el script para realizarlo
+
+--------------------
+
+use el mismo esquema que la solución anterior, para dejar correctamente el idioma original y los minutos de duracíón.
+corrijo el script para realizarlo
 
 --------------------

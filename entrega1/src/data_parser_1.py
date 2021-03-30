@@ -12,6 +12,28 @@ def get_page_and_parse(link):
         raise Exception(f'no se pudo obtener el contenido del link {link}')
     return bs4.BeautifulSoup(r.text, 'html.parser')
 
+
+def process_actors(l):
+    return l.split(',')
+
+def process_languaje(l):
+    return l.replace('subtitulado', '').replace('subtitulada','').strip()
+    
+def process_duration(d):
+    return d.replace('minutos.','').strip()
+
+process_functions = [
+    ('Duracion',process_duration),
+    ('Idioma',process_languaje),
+    ('Actores',process_actors)
+]
+
+def process_data(k,d):
+    for pk, pp in process_functions:
+        if pk in k:
+            return pp(d)    
+    return d
+
 def process_movie(movie):
     scraped_data = {}
     titles = movie.find_all('div', attrs={'class':'post-container page-title'})
@@ -23,7 +45,8 @@ def process_movie(movie):
     for d in movie_data.find_all('div', attrs={'class':'dropcap6'}):
         data_type = d.h4.get_text()
         data = d.p.span.get_text()
-        scraped_data[data_type] = data
+        processed_data = process_data(data_type, data)
+        scraped_data[data_type] = processed_data
 
     """ obtengo los datos de los horarios - es el último div """
     functions = []
