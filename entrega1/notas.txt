@@ -204,7 +204,8 @@ cinemalaplata.com.ar
 
 primer modificación al script de parser de datos.
 manejar las salas.
-se resuelve usando un split en la info del cine.
+se resuelve usando un split en la info del cine, eso me da la sala y el cine.
+corrijo el script para obtener esa info desagregada
 
 -------
 
@@ -218,7 +219,6 @@ primero desagrupo los horarios del idioma y en una segunda expresión capturo to
 (?P<lang>[a-zA-Z]*?):\s*(?P<hours>\d+.*)
 (?P<hours>\d+:\d+)
 las pude probar usando por ejemplo: https://pythex.org/
-ajusto el script para poder manejar esos datos y desagregarlos en el json resultante.
-
+corrijo el script para usar esas expresiones y poder tener esos datos desagregados.
 
 --------------------
