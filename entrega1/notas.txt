@@ -219,7 +219,7 @@ corrijo el script para usar esas expresiones y poder tener esos datos desagregad
 
 --------------------
 
-problema a resolver desagregar los actores en una lista.
+problema a resolver : desagregar los actores en una lista.
 están separados por , así que con un simple split se resuelve.
 corrijo el script para realizarlo
 
@@ -229,3 +229,7 @@ use el mismo esquema que la solución anterior, para dejar correctamente el idio
 corrijo el script para realizarlo
 
 --------------------
+
+Creo que ya se tienen datos aceptables del sitio de cinemalaplata.com.ar
+ahora habría que lograr lo mismo pero con el otro sitio.
+
