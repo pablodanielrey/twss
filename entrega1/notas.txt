@@ -233,3 +233,11 @@ corrijo el script para realizarlo
 Creo que ya se tienen datos aceptables del sitio de cinemalaplata.com.ar
 ahora habría que lograr lo mismo pero con el otro sitio.
 
+-------------------------------
+
+la parte de selenium. instalo el driver del chrome
+
+https://www.toptal.com/python/web-scraping-with-python
+
+https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
+
