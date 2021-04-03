@@ -87,7 +87,16 @@ if __name__ == '__main__':
         """
             voy seleccionando por día disponible
         """
-
+        dates_filter = filters.find_element_by_class_name('showtimes-filter-component-dates')
+        try:
+            for day in dates_filter.find_elements_by_tag_name('button'):
+                date = day.get_attribute('value')
+                print(f'Cargando resultados para fecha {date}')
+                day.click()
+                print('Espernado los resultados')
+                wait_until_loaded(details, movie_showtimes_data)
+        except Exception as e:
+            print(e)
 
         print('esperando que esten los resultados cargados')
         wait_until_loaded(details, movie_showtimes_data)
