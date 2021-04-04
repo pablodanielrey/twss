@@ -60,7 +60,7 @@ def process_movie(movie):
     scraped_data = {}
     titles = movie.find_all('div', attrs={'class':'post-container page-title'})
     title = titles[0].get_text()
-    scraped_data['titulo'] = title
+    scraped_data['title'] = title
     movie_data = movie.find('div', attrs={'class':'page-container singlepost'})
 
     """ obtengo los datos inciales """
@@ -92,13 +92,13 @@ def process_movie(movie):
             hours = [h.group('hours') for h in m2]
 
             functions.append({
-                'cine': cinema,
-                'sala': room,
-                'idioma': language,
+                'cinema': cinema,
+                'showroom': room,
+                'language': language,
                 'hours': hours 
             }) 
 
-    scraped_data['funciones'] = functions
+    scraped_data['shows'] = functions
     return scraped_data
 
 
