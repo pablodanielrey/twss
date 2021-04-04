@@ -19,6 +19,11 @@ from selenium.webdriver.support import expected_conditions as EC
                         li
                             button <-- value = 2021-04-04
             accordion
+                movie-showtimes-component
+                    movie-showtimes-component-combination
+                        movie-showtimes-component-label
+                        movie-showtimes-component-schedule
+
 """
 
 
@@ -36,12 +41,35 @@ def movie_dates_filter():
     return EC.presence_of_element_located((By.CLASS_NAME,'showtimes-filter-component-dates'))
 
 def movie_showtimes_data():
-    return EC.presence_of_element_located((By.CLASS_NAME,'accordion'))
+    return EC.presence_of_element_located((By.CLASS_NAME,'movie-showtimes-component'))
 
 
 def wait_until_loaded(driver, ec):
     element = WebDriverWait(driver, 10).until(ec())
     return element
+
+
+def scrape_movie_data(driver):
+    all_cinemas = driver.find_elements_by_class_name('panel-primary')
+    for cinema in all_cinemas:
+        cinema_name = cinema.find_element_by_xpath('.//div[1]/h2/button')
+        print(cinema_name.text)
+
+        try:
+            shows = cinema.find_elements_by_class_name('movie-showtimes-component-combination')
+            for show in shows:
+                """ movie-showtimes-component-label """
+                #show_formats = show.find_element_by_class_name('movie-showtimes-component-label').find_element_by_xpath('.//div/small')
+                show_formats = show.find_element_by_xpath("//div[contains(@class,'movie-showtimes-component-label')]/div/small")
+                print(show_formats.get_attribute('innerHTML'))
+                
+                schedule = show.find_element_by_xpath("//div[contains(@class,'movie-showtimes-component-schedule')]")
+                hours = schedule.find_elements_by_tag_name('a')
+                hp = [h.get_attribute('innerHTML') for h in hours]
+                print(hp)
+        except Exception as e:
+            print(e)
+
 
 if __name__ == '__main__':
 
@@ -70,6 +98,9 @@ if __name__ == '__main__':
             Selecciono el Todos de cada filtro.
             lo hago explícito para que quede mas claro el código
         """
+        """
+            creo que este código no es necesario ya que por defecto están seleccionados todos los filtros.
+
         filters_to_select = ['showtimes-filter-component-screens', 'showtimes-filter-component-formats', 'showtimes-filter-component-versions']
         for fs in filters_to_select:
             selected_filter = filters.find_element_by_class_name(fs)
@@ -82,6 +113,7 @@ if __name__ == '__main__':
             except Exception as e:
                 print('No debería haber pasado ya que siempre existe el Todos en los filtros')
                 print(e)
+        """
 
 
         """
@@ -95,12 +127,16 @@ if __name__ == '__main__':
                 day.click()
                 print('Espernado los resultados')
                 wait_until_loaded(details, movie_showtimes_data)
+                scrape_movie_data(details)
+
+                break
+
+
         except Exception as e:
             print(e)
 
-        print('esperando que esten los resultados cargados')
-        wait_until_loaded(details, movie_showtimes_data)
-        print(details.text)
+
+        break
 
     """
     cplx = driver.find_element_by_id("complex_id_select")

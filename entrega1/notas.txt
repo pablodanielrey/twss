@@ -241,3 +241,6 @@ https://www.toptal.com/python/web-scraping-with-python
 
 https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
 
+https://www.perfecto.io/blog/xpath-in-selenium
+
+https://www.guru99.com/xpath-selenium.html
