@@ -221,6 +221,6 @@ if __name__ == '__main__':
 
     driver.close()
 
-    with open(f'data/bruto_cinepolis_.json','w') as f:
+    with open(f'data/scraper_cinepolis.json','w') as f:
         f.write(json.dumps({'movies':movies_data}, ensure_ascii=False))
 

@@ -42,14 +42,10 @@ def get_page_and_parse(link):
         raise Exception(f'no se pudo obtener el contenido del link {link}')
     return bs4.BeautifulSoup(r.text, 'html.parser')
 
-
-def process_actors(l):
-    return [s.strip() for s in l.split(',')]
-
 process_functions = [
     ('Duracion', lambda s: s.replace('minutos.','').strip()),
     ('Idioma', lambda s: s.replace('subtitulado', '').replace('subtitulada','').strip()),
-    ('Actores',process_actors),
+    ('Actores', lambda l: [s.strip() for s in l.split(',')]),
     ('Origen', lambda l: [s.strip() for s in l.split('-')]),
     ('Género', lambda l: [s.strip() for s in l.split('/')])
 ]
@@ -118,5 +114,5 @@ if __name__ == '__main__':
         ndata = normalize_dict(data)
         collected_data.append(ndata)
 
-    with open(f'data/bruto_cinema_.json','w') as f:
+    with open(f'data/scraper_cinema.json','w') as f:
         f.write(json.dumps({'movies':collected_data}, ensure_ascii=False))

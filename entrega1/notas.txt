@@ -290,3 +290,25 @@ cinépolis (Estados Unidos)
 Actores -
 cinemalaplata - no siempre esta completa e inclusive errónea. 
 antonio banderas está como cast de nuevos mutantes y no existe en imdb
+
+
+------------
+
+
+generación del proceso de merge.
+
+dado los datos que estoy analizando de las carteleras despues de obtener los jsons.
+me parece correcto generar el merge en base a:
+
+Titulo y director 
+
+ya que tengo esa info y es la misma dentro de todas las películas analizadas.
+se debe tener en cuenta el director también ya que existen remake de películas con mismo título pero distintos actores.
+
+tomar el conjunto de actores para relacionar películas entre si.
+como comentaron en el foro una buena técnica a usar es alguna intersección del conjunto de actores para incrementar la confianza en la relación entre las películas.
+esto no es determinante ya que podría darse una trilogía, segundas partes, películas del mismo universo como las de super héroes, con los mismos actores pero siendo distintas películas.
+
+también usando IA se podría dar al algoritmo esos parámetro + el plot de la película, y obtener algún indice de confianza de igualdad, pero excede el problema del TP1.
+por ejemplo:
+https://towardsdatascience.com/using-nlp-to-find-similar-movies-based-on-plot-summaries-b1481a2ba49b
