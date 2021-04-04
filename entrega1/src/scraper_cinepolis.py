@@ -27,6 +27,34 @@ from selenium.webdriver.support import expected_conditions as EC
 """
 
 
+"""
+    ///////////////////////////
+    funciones de normalización
+    ///////////////////////////
+"""
+def normalize_data(d):
+    if type(d) is str:
+        return d.replace('\r','').replace('\n','').strip()
+    if type(d) is dict:
+        return normalize_dict(d)
+    if type(d) is list:
+        return normalize_list(d)
+    raise Exception('se desconoce el tipo de datos a normalizar')
+
+def normalize_list(l:list):
+    return [normalize_data(d) for d in l]
+
+def normalize_dict(o:dict):
+    normalized = {}
+    for k in o.keys():
+        data = o[k]
+        normalized[normalize_data(k)] = normalize_data(data)
+    return normalized
+
+"""
+    ////////////////////////
+"""
+
 
 def ec_movies():
     return EC.presence_of_element_located((By.CLASS_NAME,'movie-grid'))
@@ -48,30 +76,42 @@ def wait_until_loaded(driver, ec):
     element = WebDriverWait(driver, 10).until(ec())
     return element
 
-
 def scrape_movie_data(driver):
+
+    movie_shows = []
+
     all_cinemas = driver.find_elements_by_class_name('panel-primary')
     for cinema in all_cinemas:
-        cinema_name = cinema.find_element_by_xpath('.//div[1]/h2/button')
-        print(cinema_name.text)
+        data = {}
 
-        try:
-            shows = cinema.find_elements_by_class_name('movie-showtimes-component-combination')
-            for show in shows:
-                """ movie-showtimes-component-label """
-                #show_formats = show.find_element_by_class_name('movie-showtimes-component-label').find_element_by_xpath('.//div/small')
-                show_formats = show.find_element_by_xpath("//div[contains(@class,'movie-showtimes-component-label')]/div/small")
-                print(show_formats.get_attribute('innerHTML'))
-                
-                schedule = show.find_element_by_xpath("//div[contains(@class,'movie-showtimes-component-schedule')]")
-                hours = schedule.find_elements_by_tag_name('a')
-                hp = [h.get_attribute('innerHTML') for h in hours]
-                print(hp)
-        except Exception as e:
-            print(e)
+        cinema_name = cinema.find_element_by_xpath('.//div[1]/h2/button')
+        data['cine'] = cinema_name.text
+
+        shows = cinema.find_elements_by_class_name('movie-showtimes-component-combination')
+        for show in shows:
+
+            show_formats = show.find_element_by_xpath("//div[contains(@class,'movie-showtimes-component-label')]/div/small")
+            room_data = show_formats.get_attribute('innerHTML')
+            rfi = room_data.split('•')
+            data['sala'] = rfi[0]
+            data['formato'] = rfi[1]
+            data['idioma'] = rfi[2]
+
+            schedule = show.find_element_by_xpath("//div[contains(@class,'movie-showtimes-component-schedule')]")
+            hours = schedule.find_elements_by_tag_name('a')
+            hp = [h.get_attribute('innerHTML') for h in hours]
+            data['hours'] = hp
+
+        nd = normalize_data(data)
+        movie_shows.append(nd)
+    
+    return movie_shows
 
 
 if __name__ == '__main__':
+
+    movies_data = []
+
 
     base = 'https://www.cinepolis.com.ar'
 
@@ -127,22 +167,12 @@ if __name__ == '__main__':
                 day.click()
                 print('Espernado los resultados')
                 wait_until_loaded(details, movie_showtimes_data)
-                scrape_movie_data(details)
-
-                break
-
+                movie_data = scrape_movie_data(details)
+                movies_data.append(movie_data)      
 
         except Exception as e:
             print(e)
 
-
-        break
-
-    """
-    cplx = driver.find_element_by_id("complex_id_select")
-    elem.clear()  
-    elem.send_keys("pycon")
-    elem.send_keys(Keys.RETURN)
-    assert "No results found." not in driver.page_source
-    """
     driver.close()
+
+    print(movies_data)
