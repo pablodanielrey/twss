@@ -263,13 +263,34 @@ https://www.guru99.com/xpath-selenium.html
 
 NOTAS:
 
-los idiomas en cinepolis se indican como subtitulado/español en cada función
-y no dice el idioma de la película original.
-
+Idioma -
 en cinemalaplata si dice el idioma original.
 y si esta subtitulado indica como subtitulado, si esta doblada indica CASTELLANO
 
+los idiomas en cinepolis se indican como subtitulado/español en cada función
+y no dice el idioma de la película original.
+
 --
 
+Género-
 cinemalaplata asigna solo un Género
 cinepolis asigna múltiples generos separados por ,
+
+--
+
+Formato-
+cinemalaplata no tiene formato. se asume por le nombre de la sala?
+cinepolis si indica el formato (2d,3d)
+
+--
+
+Clasificación-
+cinemalaplata tiene otra nomenclatura para calificación
+cinepolis usa el standard de calificación P-13, P-
+
+---
+
+Origen-
+en cinemalaplata orígenes difieren las plabras. ej EEUU
+cinépolis (Estados Unidos)
+

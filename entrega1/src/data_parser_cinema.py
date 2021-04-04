@@ -5,6 +5,36 @@ import sys
 import re
 import datetime
 
+"""
+    ///////////////////////////////
+    funciones de normalización 
+    //////////////////////
+"""
+
+
+def normalize_data(d):
+    if type(d) is str:
+        return d.replace('\r','').replace('\n','').strip()
+    if type(d) is dict:
+        return normalize_dict(d)
+    if type(d) is list:
+        return normalize_list(d)
+    raise Exception('se desconoce el tipo de datos a normalizar')
+
+def normalize_list(l:list):
+    return [normalize_data(d) for d in l]
+
+def normalize_dict(o:dict):
+    normalized = {}
+    for k in o.keys():
+        data = o[k]
+        normalized[normalize_data(k)] = normalize_data(data)
+    return normalized
+
+"""
+    ///////////////////
+"""
+
 
 def get_page_and_parse(link):
     r = requests.get(link)
@@ -14,18 +44,13 @@ def get_page_and_parse(link):
 
 
 def process_actors(l):
-    return l.split(',')
-
-def process_languaje(l):
-    return l.replace('subtitulado', '').replace('subtitulada','').strip()
-    
-def process_duration(d):
-    return d.replace('minutos.','').strip()
+    return [s.strip() for s in l.split(',')]
 
 process_functions = [
-    ('Duracion',process_duration),
-    ('Idioma',process_languaje),
-    ('Actores',process_actors)
+    ('Duracion', lambda s: s.replace('minutos.','').strip()),
+    ('Idioma', lambda s: s.replace('subtitulado', '').replace('subtitulada','').strip()),
+    ('Actores',process_actors),
+    ('Origen', lambda l: [s.strip() for s in l.split('-')])
 ]
 
 def process_data(k,d):
@@ -89,7 +114,8 @@ if __name__ == '__main__':
         link = m.find('a').get('href')
         s1 = get_page_and_parse(f"{base}/{link}")
         data = process_movie(s1)
-        collected_data.append(data)
+        ndata = normalize_dict(data)
+        collected_data.append(ndata)
 
     with open(f'data/bruto_cinema_.json','w') as f:
         f.write(json.dumps({'movies':collected_data}, ensure_ascii=False))
