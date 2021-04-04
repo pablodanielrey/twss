@@ -106,6 +106,8 @@ def wait_until_loaded(driver, ec):
 
 def scrape_movie_data(driver):
     movie = {}
+    title_element = driver.find_element_by_xpath("/html/body/div/main/div[1]/div/h2")
+    movie['Título'] = title_element.get_attribute('textContent').strip()
     md = driver.find_element_by_xpath("//div[@id='tecnicos']/p")
     mdt = md.get_attribute('innerHTML').split('<br>')
     for m in mdt:

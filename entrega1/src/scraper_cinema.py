@@ -50,7 +50,8 @@ process_functions = [
     ('Duracion', lambda s: s.replace('minutos.','').strip()),
     ('Idioma', lambda s: s.replace('subtitulado', '').replace('subtitulada','').strip()),
     ('Actores',process_actors),
-    ('Origen', lambda l: [s.strip() for s in l.split('-')])
+    ('Origen', lambda l: [s.strip() for s in l.split('-')]),
+    ('Género', lambda l: [s.strip() for s in l.split('/')])
 ]
 
 def process_data(k,d):

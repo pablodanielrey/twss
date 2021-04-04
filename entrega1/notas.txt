@@ -248,17 +248,6 @@ https://www.guru99.com/xpath-selenium.html
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 ----------------------
 
 NOTAS:
@@ -268,13 +257,16 @@ en cinemalaplata si dice el idioma original.
 y si esta subtitulado indica como subtitulado, si esta doblada indica CASTELLANO
 
 los idiomas en cinepolis se indican como subtitulado/español en cada función
-y no dice el idioma de la película original.
+y no dice el idioma de la película original. se debe inferir desde el origen de la película.
+pero el problema se da en caso de coproducciones.
 
 --
 
 Género-
-cinemalaplata asigna solo un Género
+cinemalaplata asigna solo un Género y/o los separa por /
 cinepolis asigna múltiples generos separados por ,
+
+inclusive difieren las clasificaciones. para nuevos mutantes cinemalaplata tiene comedia, y cinepolis no.
 
 --
 
@@ -294,3 +286,7 @@ Origen-
 en cinemalaplata orígenes difieren las plabras. ej EEUU
 cinépolis (Estados Unidos)
 
+---
+Actores -
+cinemalaplata - no siempre esta completa e inclusive errónea. 
+antonio banderas está como cast de nuevos mutantes y no existe en imdb
