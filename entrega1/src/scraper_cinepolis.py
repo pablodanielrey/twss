@@ -1,5 +1,5 @@
 import time
-
+import json
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -76,8 +76,37 @@ def wait_until_loaded(driver, ec):
     element = WebDriverWait(driver, 10).until(ec())
     return element
 
-def scrape_movie_data(driver):
 
+def list_normalizer(d):
+    return d.split(',')
+
+matrix_normalizer = [
+    ('Origen',list_normalizer),
+    ('Género', list_normalizer),
+    ('Actores', list_normalizer)
+]
+
+def scrape_movie_data(driver):
+    movie = {}
+    md = driver.find_element_by_xpath("//div[@id='tecnicos']/p")
+    mdt = md.get_attribute('innerHTML').split('<br>')
+    for m in mdt:
+        mdata = m.replace('<strong>','').replace('</strong>','').replace('<br>','').replace('\n','').strip().split(':')
+        if len(mdata) > 1:
+            key = mdata[0]
+            data = mdata[1]
+            for nk, nf in matrix_normalizer:
+                if key == nk:
+                    movie[key] = nf(data)
+                    break
+            else:
+                movie[key] = data
+    return movie
+
+def scrape_movie_shows_data(driver):
+    """
+        obtiene los datos de las funciones para una fecha ya cargada
+    """
     movie_shows = []
 
     all_cinemas = driver.find_elements_by_class_name('panel-primary')
@@ -131,6 +160,23 @@ if __name__ == '__main__':
 
     for href in hrefs:
         driver.get(href)
+        
+        """
+            /////////////////////////////////////////////////
+            scrapping de los dátos básicos de la película 
+            /////////////////////////////////////////////////
+        """
+        
+        movie_data = scrape_movie_data(driver)
+
+
+        """
+            ////////////////////////////////////////////////
+            scrapping teniendo en cuenta los filtros
+            ///////////////////////////////////////////////
+        """
+
+
         details = wait_until_loaded(driver, movie_details)
         filters = wait_until_loaded(details, movie_filters)
 
@@ -155,10 +201,12 @@ if __name__ == '__main__':
                 print(e)
         """
 
-
         """
             voy seleccionando por día disponible
         """
+
+        movie_data['funciones'] = []
+
         dates_filter = filters.find_element_by_class_name('showtimes-filter-component-dates')
         try:
             for day in dates_filter.find_elements_by_tag_name('button'):
@@ -167,12 +215,18 @@ if __name__ == '__main__':
                 day.click()
                 print('Espernado los resultados')
                 wait_until_loaded(details, movie_showtimes_data)
-                movie_data = scrape_movie_data(details)
-                movies_data.append(movie_data)      
+                movie_shows = scrape_movie_shows_data(details)
+                for ms in movie_shows:
+                    ms['fecha'] = date
+                movie_data['funciones'].extend(movie_shows)
 
         except Exception as e:
             print(e)
 
+        movies_data.append(movie_data)
+
     driver.close()
 
-    print(movies_data)
+    with open(f'data/bruto_cinepolis_.json','w') as f:
+        f.write(json.dumps({'movies':movies_data}, ensure_ascii=False))
+

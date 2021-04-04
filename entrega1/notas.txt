@@ -244,3 +244,32 @@ https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
 https://www.perfecto.io/blog/xpath-in-selenium
 
 https://www.guru99.com/xpath-selenium.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------
+
+NOTAS:
+
+los idiomas en cinepolis se indican como subtitulado/español en cada función
+y no dice el idioma de la película original.
+
+en cinemalaplata si dice el idioma original.
+y si esta subtitulado indica como subtitulado, si esta doblada indica CASTELLANO
+
+--
+
+cinemalaplata asigna solo un Género
+cinepolis asigna múltiples generos separados por ,
