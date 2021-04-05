@@ -325,7 +325,8 @@ temas a analizar.
 
 unificación de las claves a usar en el json.
 combiene que ya el proceso de scraping genere los diccionarios con claves standards.
-así el proceso de merge usa esas claves para analizar
+así el proceso de merge usa esas claves para analizar la igualdad
+
 
 
 cambie el esquema final del json. 
