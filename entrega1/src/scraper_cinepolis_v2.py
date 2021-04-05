@@ -36,7 +36,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from merge import Movie, Show, Scrape
+from common import Movie, Show, Scrape, get_movie_id
 
 
 """
@@ -165,9 +165,6 @@ def scrape_movie_shows_data(movie_id, driver):
         movie_shows.append(data)
     
     return movie_shows
-
-def get_movie_id(movie):
-    return movie[Movie.TITLE.value]
 
 
 if __name__ == '__main__':

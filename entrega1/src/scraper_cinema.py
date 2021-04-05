@@ -6,7 +6,7 @@ import re
 import datetime
 
 
-from merge import Movie, Show, Scrape
+from common import Movie, Show, Scrape, get_movie_id
 
 """
     ///////////////////////////////
@@ -59,10 +59,6 @@ def process_data(k,d):
         if pk is k:
             return pp(d)    
     return d
-
-
-def get_movie_id(movie):
-    return movie[Movie.TITLE.value]
 
 
 def scrape_movie_data(movie):
