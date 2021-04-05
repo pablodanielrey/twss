@@ -5,6 +5,9 @@ import sys
 import re
 import datetime
 
+
+from merge import Movie, Show, Scrape
+
 """
     ///////////////////////////////
     funciones de normalización 
@@ -42,7 +45,6 @@ def get_page_and_parse(link):
         raise Exception(f'no se pudo obtener el contenido del link {link}')
     return bs4.BeautifulSoup(r.text, 'html.parser')
 
-from merge import Movie, Show
 
 process_functions = [
     (Movie.DURATION.value, lambda s: s.replace('minutos.','').strip()),
@@ -59,7 +61,11 @@ def process_data(k,d):
     return d
 
 
-def process_movie(movie):
+def get_movie_id(movie):
+    return movie[Movie.TITLE.value]
+
+
+def scrape_movie_data(movie):
     index = {
         'titulo': Movie.TITLE.value,
         'Género': Movie.GENRE.value,
@@ -77,19 +83,23 @@ def process_movie(movie):
     """ titulo """
     titles = movie.find_all('div', attrs={'class':'post-container page-title'})
     title = titles[0].get_text()
-    scraped_data[Movie.TITLE.value] = title
-    movie_data = movie.find('div', attrs={'class':'page-container singlepost'})
+    scraped_data[Movie.TITLE.value] = normalize_data(title)
+    movie_source_data = movie.find('div', attrs={'class':'page-container singlepost'})
 
     """ 
         obtengo los datos adicionales que tiene la página
     """
-    for d in movie_data.find_all('div', attrs={'class':'dropcap6'}):
+    for d in movie_source_data.find_all('div', attrs={'class':'dropcap6'}):
         data_type = normalize_data(d.h4.get_text())
         normalized_key = index[data_type]
         data = d.p.span.get_text()
         processed_data = process_data(normalized_key, data)
         scraped_data[normalized_key] = processed_data
 
+    return movie_source_data, scraped_data
+
+
+def scrape_show_data(movie_id, movie_data):
     """ obtengo los datos de los horarios - es el último div """
     functions = []
     hours = movie_data.find('div', id=re.compile('Funciones'))
@@ -112,27 +122,46 @@ def process_movie(movie):
             hours = [h.group('hours') for h in m2]
 
             functions.append({
+                Show.MOVIE.value: movie_id,
                 Show.CINEMA.value: cinema,
                 Show.SHOWROOM.value: room,
                 Show.LANGUAGE.value: language,
                 Show.HOURS.value: hours 
             }) 
 
-    scraped_data[Movie.SHOWS.value] = functions
-    return scraped_data
+    return functions
+
 
 
 if __name__ == '__main__':
+    movies_data = []
+    shows_data = []
+
     base = 'http://cinemalaplata.com.ar/'
     s = get_page_and_parse(f'{base}/Cartelera.aspx')
     movies = s.find_all('div', attrs={'class':'page-container singlepost'})
-    collected_data = []
+    
     for m in movies:
         link = m.find('a').get('href')
         s1 = get_page_and_parse(f"{base}/{link}")
-        data = process_movie(s1)
-        ndata = normalize_dict(data)
-        collected_data.append(ndata)
+        
+        """ scraping de los datos de la pelicula """
+        movie_source_data, movie_data = scrape_movie_data(s1)
+        ndata = normalize_dict(movie_data)
+        movies_data.append(ndata)
+
+        """ scraping de los datos del show """
+        movie_id = get_movie_id(movie_data)
+        scraped_shows_data = scrape_show_data(movie_id, movie_source_data)
+        shows_data.append(scraped_shows_data)
+
+    """ genero la info de scraping """
+    scraped_data = {
+        Scrape.DATE.value: str(datetime.datetime.utcnow()),
+        Scrape.SOURCE.value: 'cinemalaplata.com.ar',
+        Scrape.MOVIES.value: movies_data,
+        Scrape.SHOWS.value: shows_data
+    }
 
     with open(f'data/scraper_cinema.json','w') as f:
-        f.write(json.dumps({'movies':collected_data}, ensure_ascii=False))
+        f.write(json.dumps(scraped_data, ensure_ascii=False))

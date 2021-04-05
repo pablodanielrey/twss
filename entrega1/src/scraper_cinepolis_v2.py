@@ -28,6 +28,7 @@
 
 
 import time
+import datetime
 import json
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -35,7 +36,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-from merge import Movie, Show
+from merge import Movie, Show, Scrape
 
 
 """
@@ -130,7 +131,7 @@ def scrape_movie_data(driver):
                 movie[key] = sanitize_data(data)
     return movie
 
-def scrape_movie_shows_data(driver):
+def scrape_movie_shows_data(movie_id, driver):
     """
         obtiene los datos de las funciones para una fecha ya cargada
     """
@@ -140,6 +141,7 @@ def scrape_movie_shows_data(driver):
     all_cinemas = driver.find_elements_by_xpath(".//div[contains(@class,'panel-primary')]")
     for cinema in all_cinemas:
         data = {}
+        data[Show.MOVIE.value] = movie_id
 
         cinema_name = cinema.find_element_by_xpath('.//div[1]/h2/button')
         data[Show.CINEMA.value] = sanitize_data(cinema_name.text)
@@ -164,10 +166,14 @@ def scrape_movie_shows_data(driver):
     
     return movie_shows
 
+def get_movie_id(movie):
+    return movie[Movie.TITLE.value]
+
 
 if __name__ == '__main__':
 
     movies_data = []
+    shows_data = []
 
 
     base = 'https://www.cinepolis.com.ar'
@@ -198,7 +204,8 @@ if __name__ == '__main__':
         """
         
         movie_data = scrape_movie_data(driver)
-
+        movies_data.append(movie_data)
+        movie_id = get_movie_id(movie_data)
 
         """
             ////////////////////////////////////////////////
@@ -223,11 +230,18 @@ if __name__ == '__main__':
         """
 
         details = wait_until_loaded(driver, movie_show_data)
-        movie_data[Movie.SHOWS.value] = scrape_movie_shows_data(details)
-        movies_data.append(movie_data)
+        scraped_show_data = scrape_movie_shows_data(movie_id, details)
+        shows_data.append(scraped_show_data)
 
     driver.close()
 
+    scraped_data = {
+        Scrape.DATE.value: str(datetime.datetime.utcnow()),
+        Scrape.SOURCE.value: 'cinepolis.com.ar',
+        Scrape.MOVIES.value: movies_data,
+        Scrape.SHOWS.value: shows_data
+    }
+
     with open(f'data/scraper_cinepolis.json','w') as f:
-        f.write(json.dumps({'movies':movies_data}, ensure_ascii=False))
+        f.write(json.dumps(scraped_data, ensure_ascii=False))
 

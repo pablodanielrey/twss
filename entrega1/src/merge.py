@@ -1,36 +1,13 @@
 
 
-"""
-    Registro de claves.
-
-    Movies:
-        title
-        original_title
-        genre
-        language
-        web
-        origin
-        duration
-        director
-        rating
-        actors
-        distribution
-        synopsis
-
-    Shows:
-        cinema
-        showroom
-        format
-        language
-        subtitles = True|False
-        hours:
-            xx:xx
-            xx:xx
-            xx:xx
-
-
-"""
 from enum import Enum
+class Scrape(Enum):
+    DATE = 'DATE'
+    SOURCE = 'SOURCE'
+    MOVIES = 'MOVIES'
+    SHOWS = 'SHOWS'
+    VALIDITY = 'VALIDITY'
+
 class Movie(Enum):
     TITLE = 'TITLE'
     ORIGINAL_TITLE = 'ORIGINAL_TITLE'
@@ -47,10 +24,11 @@ class Movie(Enum):
     SHOWS = 'SHOWS'
 
 class Show(Enum):
+    MOVIE = 'MOVIE'
     CINEMA = 'CINEMA'
     SHOWROOM = 'SHOWROOM'
     LANGUAGE = 'LANGUAGE'
     HOURS = 'HOURS'
     FORMAT = 'FORMAT'
 
-    
+
