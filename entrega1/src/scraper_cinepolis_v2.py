@@ -35,41 +35,49 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from merge import Movie, Show
+
 
 """
     ///////////////////////////
-    funciones de normalización
+    funciones de sanitización
     ///////////////////////////
 """
-def normalize_data(d):
+def sanitize_data(d):
     if type(d) is str:
         return d.replace('\r','').replace('\n','').strip()
     if type(d) is dict:
-        return normalize_dict(d)
+        return sanitize_dict(d)
     if type(d) is list:
-        return normalize_list(d)
-    raise Exception('se desconoce el tipo de datos a normalizar')
+        return sanitize_list(d)
+    raise Exception(f'{type(d)} {str(d)} se desconoce el tipo de datos a sanitizar')
 
-def normalize_list(l:list):
-    return [normalize_data(d) for d in l]
+def sanitize_list(l:list):
+    return [sanitize_data(d) for d in l]
 
-def normalize_dict(o:dict):
+def sanitize_dict(o:dict):
     normalized = {}
     for k in o.keys():
         data = o[k]
-        normalized[normalize_data(k)] = normalize_data(data)
+        normalized[sanitize_data(k)] = sanitize_data(data)
     return normalized
 
+"""
+    ////////////////////////////////
+    formateado de los datos
+    ////////////////////////////////
+"""
 
-def list_normalizer(d):
-    return [s.strip() for s in d.split(',')]
+def list_formater(d):
+    return [s.replace('\r','').replace('\n','').strip() for s in d.split(',')]
 
-matrix_normalizer = [
-    ('Origen',list_normalizer),
-    ('Género', list_normalizer),
-    ('Actores', list_normalizer),
-    ('Duración', lambda s: s.replace('min.','').strip())
+format_matrix = [
+    (Movie.ORIGIN.value, list_formater),
+    (Movie.GENRE.value, list_formater),
+    (Movie.ACTORS.value, list_formater),
+    (Movie.DURATION.value, lambda s: s.replace('min.','').strip())
 ]
+
 
 """
     ////////////////////////
@@ -85,42 +93,41 @@ def movie_show_data():
 def movie_filters():
     return EC.presence_of_element_located((By.CLASS_NAME,'showtimes-filter-component'))
 
-
-
-
-def movie_details():
-    return EC.presence_of_element_located((By.CLASS_NAME,'movie-detail-showtimes-component'))
-
-
-def movie_dates_filter():
-    return EC.presence_of_element_located((By.CLASS_NAME,'showtimes-filter-component-dates'))
-
-def movie_showtimes_data():
-    return EC.presence_of_element_located((By.CLASS_NAME,'movie-showtimes-component'))
-
-
 def wait_until_loaded(driver, ec):
     element = WebDriverWait(driver, 10).until(ec())
     return element
 
 
 def scrape_movie_data(driver):
+    index = {
+        'Título': Movie.TITLE.value,
+        'Título Original': Movie.ORIGINAL_TITLE.value,
+        'Origen': Movie.ORIGIN.value,
+        'Género': Movie.GENRE.value,
+        'Duración': Movie.DURATION.value,
+        'Director': Movie.DIRECTOR.value,
+        'Calificación': Movie.RATING.value,
+        'Actores': Movie.ACTORS.value,
+        'Distribuidora': Movie.DISTRIBUTION.value
+        
+    }
+
     movie = {}
     title_element = driver.find_element_by_xpath("/html/body/div/main/div[1]/div/h2")
-    movie['Título'] = title_element.get_attribute('textContent').strip()
+    movie[Movie.TITLE.value] = title_element.get_attribute('textContent').strip()
     md = driver.find_element_by_xpath("//div[@id='tecnicos']/p")
     mdt = md.get_attribute('innerHTML').split('<br>')
     for m in mdt:
         mdata = m.replace('<strong>','').replace('</strong>','').replace('<br>','').replace('\n','').strip().split(':')
         if len(mdata) > 1:
-            key = mdata[0]
+            key = index[sanitize_data(mdata[0])]
             data = mdata[1]
-            for nk, nf in matrix_normalizer:
+            for nk, nf in format_matrix:
                 if key == nk:
                     movie[key] = nf(data)
                     break
             else:
-                movie[key] = data
+                movie[key] = sanitize_data(data)
     return movie
 
 def scrape_movie_shows_data(driver):
@@ -135,7 +142,7 @@ def scrape_movie_shows_data(driver):
         data = {}
 
         cinema_name = cinema.find_element_by_xpath('.//div[1]/h2/button')
-        data['cine'] = cinema_name.text
+        data[Show.CINEMA.value] = sanitize_data(cinema_name.text)
 
         shows = cinema.find_elements_by_class_name('movie-showtimes-component-combination')
         for show in shows:
@@ -143,17 +150,17 @@ def scrape_movie_shows_data(driver):
             show_formats = show.find_element_by_xpath("//div[contains(@class,'movie-showtimes-component-label')]/div/small")
             room_data = show_formats.get_attribute('innerHTML')
             rfi = room_data.split('•')
-            data['sala'] = rfi[0]
-            data['formato'] = rfi[1]
-            data['idioma'] = rfi[2]
+            data[Show.SHOWROOM.value] = sanitize_data(rfi[0])
+            data[Show.FORMAT.value] = sanitize_data(rfi[1])
+            data[Show.LANGUAGE.value] = sanitize_data(rfi[2])
 
             schedule = show.find_element_by_xpath("//div[contains(@class,'movie-showtimes-component-schedule')]")
             hours = schedule.find_elements_by_tag_name('a')
-            hp = [h.get_attribute('innerHTML') for h in hours]
-            data['hours'] = hp
+            hp = [sanitize_data(h.get_attribute('innerHTML')) for h in hours]
+            data[Show.HOURS.value] = hp
 
-        nd = normalize_data(data)
-        movie_shows.append(nd)
+        #nd = sanitize_data(data)
+        movie_shows.append(data)
     
     return movie_shows
 
@@ -216,7 +223,7 @@ if __name__ == '__main__':
         """
 
         details = wait_until_loaded(driver, movie_show_data)
-        movie_data['funciones'] = scrape_movie_shows_data(details)
+        movie_data[Movie.SHOWS.value] = scrape_movie_shows_data(details)
         movies_data.append(movie_data)
 
     driver.close()

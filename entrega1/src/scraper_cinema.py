@@ -28,7 +28,7 @@ def normalize_dict(o:dict):
     normalized = {}
     for k in o.keys():
         data = o[k]
-        normalized[normalize_data(k)] = normalize_data(data)
+        normalized[k] = normalize_data(data)
     return normalized
 
 """
@@ -42,33 +42,53 @@ def get_page_and_parse(link):
         raise Exception(f'no se pudo obtener el contenido del link {link}')
     return bs4.BeautifulSoup(r.text, 'html.parser')
 
+from merge import Movie, Show
+
 process_functions = [
-    ('Duracion', lambda s: s.replace('minutos.','').strip()),
-    ('Idioma', lambda s: s.replace('subtitulado', '').replace('subtitulada','').strip()),
-    ('Actores', lambda l: [s.strip() for s in l.split(',')]),
-    ('Origen', lambda l: [s.strip() for s in l.split('-')]),
-    ('Género', lambda l: [s.strip() for s in l.split('/')])
+    (Movie.DURATION.value, lambda s: s.replace('minutos.','').strip()),
+    (Movie.LANGUAGE.value, lambda s: s.replace('subtitulado', '').replace('subtitulada','').strip()),
+    (Movie.ACTORS.value, lambda l: [s.strip() for s in l.split(',')]),
+    (Movie.ORIGIN.value, lambda l: [s.strip() for s in l.split('-')]),
+    (Movie.GENRE.value, lambda l: [s.strip() for s in l.split('/')])
 ]
 
 def process_data(k,d):
     for pk, pp in process_functions:
-        if pk in k:
+        if pk is k:
             return pp(d)    
     return d
 
+
 def process_movie(movie):
+    index = {
+        'titulo': Movie.TITLE.value,
+        'Género': Movie.GENRE.value,
+        'Idioma': Movie.LANGUAGE.value,
+        'Web Oficial': Movie.WEB.value,
+        'Duracion': Movie.DURATION.value,
+        'Director': Movie.DIRECTOR.value,
+        'Calificacion': Movie.RATING.value,
+        'Actores': Movie.ACTORS.value,
+        'Origen': Movie.ORIGIN.value
+    }
+
     scraped_data = {}
+
+    """ titulo """
     titles = movie.find_all('div', attrs={'class':'post-container page-title'})
     title = titles[0].get_text()
-    scraped_data['title'] = title
+    scraped_data[Movie.TITLE.value] = title
     movie_data = movie.find('div', attrs={'class':'page-container singlepost'})
 
-    """ obtengo los datos inciales """
+    """ 
+        obtengo los datos adicionales que tiene la página
+    """
     for d in movie_data.find_all('div', attrs={'class':'dropcap6'}):
-        data_type = d.h4.get_text()
+        data_type = normalize_data(d.h4.get_text())
+        normalized_key = index[data_type]
         data = d.p.span.get_text()
-        processed_data = process_data(data_type, data)
-        scraped_data[data_type] = processed_data
+        processed_data = process_data(normalized_key, data)
+        scraped_data[normalized_key] = processed_data
 
     """ obtengo los datos de los horarios - es el último div """
     functions = []
@@ -81,24 +101,24 @@ def process_movie(movie):
         room = cinema_data[1].strip()
         
         """ obtener datos de las funciones """
-        lh = re.compile("(?P<lang>[a-zA-Z]*?):\s*(?P<hours>\d+.*)")
-        hs = re.compile("(?P<hours>\d+:\d+)")
+        rlang_hours = re.compile("(?P<lang>[a-zA-Z]*?):\s*(?P<hours>\d+.*)")
+        rhours = re.compile("(?P<hours>\d+:\d+)")
         displays = [s.get_text() for s in function.p.find_all('span')]
         for d in displays:
-            m1 = lh.match(d)
+            m1 = rlang_hours.match(d)
             language = m1.group('lang')
             hours = m1.group('hours')
-            m2 = hs.finditer(hours)
+            m2 = rhours.finditer(hours)
             hours = [h.group('hours') for h in m2]
 
             functions.append({
-                'cinema': cinema,
-                'showroom': room,
-                'language': language,
-                'hours': hours 
+                Show.CINEMA.value: cinema,
+                Show.SHOWROOM.value: room,
+                Show.LANGUAGE.value: language,
+                Show.HOURS.value: hours 
             }) 
 
-    scraped_data['shows'] = functions
+    scraped_data[Movie.SHOWS.value] = functions
     return scraped_data
 
 

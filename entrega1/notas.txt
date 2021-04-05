@@ -312,3 +312,17 @@ esto no es determinante ya que podría darse una trilogía, segundas partes, pel
 también usando IA se podría dar al algoritmo esos parámetro + el plot de la película, y obtener algún indice de confianza de igualdad, pero excede el problema del TP1.
 por ejemplo:
 https://towardsdatascience.com/using-nlp-to-find-similar-movies-based-on-plot-summaries-b1481a2ba49b
+
+
+
+https://www.jsonmatrix.com/
+
+
+--- 
+
+
+temas a analizar.
+
+unificación de las claves a usar en el json.
+combiene que ya el proceso de scraping genere los diccionarios con claves standards.
+así el proceso de merge usa esas claves para analizar

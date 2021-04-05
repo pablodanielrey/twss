@@ -30,8 +30,27 @@
 
 
 """
+from enum import Enum
+class Movie(Enum):
+    TITLE = 'TITLE'
+    ORIGINAL_TITLE = 'ORIGINAL_TITLE'
+    GENRE = 'GENRE'
+    LANGUAGE = 'LANGUAGE'
+    WEB = 'WEB'
+    ORIGIN = 'ORIGIN'
+    DURATION = 'DURATION'
+    DIRECTOR = 'DIRECTOR'
+    ACTORS = 'ACTORS'
+    RATING = 'RATING'
+    DISTRIBUTION = 'DISTRIBUTION'
+    SYNOPSIS = 'SYNOPSIS'
+    SHOWS = 'SHOWS'
 
-
-if __name__ == '__main__':
+class Show(Enum):
+    CINEMA = 'CINEMA'
+    SHOWROOM = 'SHOWROOM'
+    LANGUAGE = 'LANGUAGE'
+    HOURS = 'HOURS'
+    FORMAT = 'FORMAT'
 
     
