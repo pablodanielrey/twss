@@ -1,355 +1,329 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-Diseño y análisis de solución inicial
-//////////////////////////////////////////////////////////////
+TP1 - 
+Contexto
+Usted quiere construir un sitio web que ofrezca, en un solo lugar, información sobre las películas disponibles en cines de la ciudad y alrededores, sus horarios, sinopsis, género, distancia del cine a su posición actual, etc. Esa información ya se encuentra disponible en la web (por ejemplo en los sitios de los cines, en los sitios de películas, en los diarios on-line) y se actualiza regularmente. No tiene sentido que usted vuelva a cargar toda la información por lo que considera estratégico poder recuperar y reutilizar la que ya existe. De esa manera usted podrá concentrarse en ofrecer servicios adicionales como cupones de descuento, sugerencias del mejor momento para ver una pelicula en base a la ubicación del usuario, el cine, y el estado del tránsito. 
 
-datos a obtener de las películas, en base a lo que explicaron del tp1:
-título
-hora
-fecha
-duración
-se esta dando o es a futuro?
-director
-idioma
-idioma es original? (para analizar si es doblada)
-tiene subtitulos
-idioma subtitulos
+Tarea
+En este TP nos enfocaremos solo en el aspecto de recuperar la información existente y almacenarla localmente para dejarla disponible para su futura reutilización en la eventual  aplicación a desarrollar. 
 
-los puntos principales para seguir en el diseño de la solucíón:
-1 - la idea principal es primero testear si se puede hacer scraping de la página para obtener datos mínimos (script inicial)
-2 - evaluar datos obtenidos para ver si tienen algún formato, si se pueden agrupar de alguna forma, deduplicación, etc.
-3 - implementar un script mínimo para almacenar los datos de alguna forma normalizada
-4 - evaluar la implementación anterior y diseñar alguna implementación mas correcta, dar prioridad a la simplicidad y claridad de código, no a la performance. enfocandome en no sobrediseñar la solución.
+Trabajaremos solo con dos fuentes de datos:
+
+http://www.cinemalaplata.com (relativamente simple)
+
+http://www.villagecines.com (bastante mas complejo)
+
+Su tarea es obtener  información de las películas actualmente en cartelera (o en futuros extremos si no es posible la cartelera) y almacenarla para que luego pueda ser procesada. Para almacenar la información puede utilizar archivos planos, una base de datos, u otra técnica que conozca y considere adecuada. 
+
+Tenga en cuenta que su estrategia debe servir también para actualizar los datos de una pelicula que pueda haber sido almacenada con anterioridad. 
 
 
-------------------------- implementación del punto 1. sobre cinemalaplata.com.ar ------------------------------
-
-script inicial en base al dado en la teoría para testear librerías y el ambiente.
-
----
-
-la estructura que veo de cada detalle de película es:
-
-<div id='content'> <-- contenido
-    <div class='page-container page-title'>
-            titulo
-    </div>
-    <div class='post-container singlepost'>
-        <div class='dropcap6'> <-- contenido de cada dato.
-            <h4> <--- tipo de dato
-            <p><span> <-- dato
-        </div>
-    </div>
-</div>
-
-datos que se pueden obtener:
-
-Género
-Idioma
-Origen
-Web Oficial
-Duracion
-Director
-Clasificacion
-Actores
-Sinopsis
-Horarios
-
-el div de horarios tiene, la siguiente estructura:
-
-<div>
-    <h4>
-    <div>
-        <h5><span><a> <----- cine
-        <p>
-            <span> <-- horario 1
-            <span> <-- horario 2
-
-ejemplo de datos:
-
-Horarios:
-
-<div id="ctl00_cph_pnFunciones">
-		
-            <h4 class="shortcodes-title">
-                Horarios
-            </h4>
-            
-            <div class="col-2">
-                <h5>
-                    <span id="ctl00_cph_rptSalas_ctl00_lblSala"><a href="/complejos.aspx?Complejo=CINEMA OCHO" class="cine">CINEMA OCHO</a> - SALA HD</span></h5>
-                <p>
-                    
-                            <span id="ctl00_cph_rptSalas_ctl00_rptHorarios_ctl00_lblHorarios">CASTELLANO:     16:10<br></span>
-                        
-                            <span id="ctl00_cph_rptSalas_ctl00_rptHorarios_ctl01_lblHorarios">SUBTITULADA:     14:00 - 18:25 - 23:05<br></span>
-                        
-                    <br>
-                </p>
-            </div>
-       
-	</div>
-
-en el caso de tener múltiples shows en distintos cines:
-
-<div id="ctl00_cph_pnFunciones">
-		
-            <h4 class="shortcodes-title">
-                Horarios</h4>
-            
-                    <div class="col-2">
-                        <h5>
-                            <span id="ctl00_cph_rptSalas_ctl00_lblSala"><a href="/complejos.aspx?Complejo=CINEMA CITY" class="cine">CINEMA CITY</a> - SALA 4D <img src="/IMG/4D.GIF"></span></h5>
-                        <p>
-                            
-                                    <span id="ctl00_cph_rptSalas_ctl00_rptHorarios_ctl00_lblHorarios">CASTELLANO:     13:00 - 15:30 - 18:05<br></span>
-                                
-                                    <span id="ctl00_cph_rptSalas_ctl00_rptHorarios_ctl01_lblHorarios">SUBTITULADA:     20:40 - 23:10<br></span>
-                                
-                            <br>
-                        </p>
-                    </div>
-                
-                    <div class="col-2">
-                        <h5>
-                            <span id="ctl00_cph_rptSalas_ctl01_lblSala"><a href="/complejos.aspx?Complejo=CINEMA OCHO" class="cine">CINEMA OCHO</a> - SALA HD</span></h5>
-                        <p>
-                            
-                                    <span id="ctl00_cph_rptSalas_ctl01_rptHorarios_ctl00_lblHorarios">CASTELLANO:     16:45 - 19:45<br></span>
-                                
-                                    <span id="ctl00_cph_rptSalas_ctl01_rptHorarios_ctl01_lblHorarios">SUBTITULADA:     13:45 - 22:45<br></span>
-                                
-                            <br>
-                        </p>
-                    </div>
-                
-                    <div class="col-2">
-                        <h5>
-                            <span id="ctl00_cph_rptSalas_ctl02_lblSala"><a href="/complejos.aspx?Complejo=CINEMA ROCHA" class="cine">CINEMA ROCHA</a> - SALA HD</span></h5>
-                        <p>
-                            
-                                    <span id="ctl00_cph_rptSalas_ctl02_rptHorarios_ctl00_lblHorarios">CASTELLANO:     15:00 - 20:20<br></span>
-                                
-                                    <span id="ctl00_cph_rptSalas_ctl02_rptHorarios_ctl01_lblHorarios">SUBTITULADA:     17:40 - 23:00<br></span>
-                                
-                            <br>
-                        </p>
-                    </div>
-                
-                    <div class="col-2">
-                        <h5>
-                            <span id="ctl00_cph_rptSalas_ctl03_lblSala"><a href="/complejos.aspx?Complejo=CINEMA SAN MARTIN" class="cine">CINEMA SAN MARTIN</a> - SALA HD</span></h5>
-                        <p>
-                            
-                                    <span id="ctl00_cph_rptSalas_ctl03_rptHorarios_ctl00_lblHorarios">CASTELLANO:     14:00 - 17:00 - 22:40<br></span>
-                                
-                                    <span id="ctl00_cph_rptSalas_ctl03_rptHorarios_ctl01_lblHorarios">SUBTITULADA:     19:50<br></span>
-                                
-                            <br>
-                        </p>
-                    </div>        
-        
-	</div>
+-------------------------
 
 
----------------------------- solución del punto 2 -------------------------
+Primer idea del desarrollo fue separar en etapas el proceso y tomarlas como etapas totalmente separadas debido a la diferencia en características que tiene cada una de ellas.
+identifico 2 etapas mínimas:
+scraping:
+    donde se obtienen los datos de las páginas. a su vez se dividen en distintos scripts de scraping. uno para cada fuente de datos a analizar.
+    y se almacenan los resultados en archivos json, cada uno con los datos relevantes a cada fuente de datos.
 
-después de algún análisis a los datos se ve que los datos retornados no están normalizados como es de esperar.
-tienen retornos de carros, saltos de línea, no todo tiene tilde, etc.
+merging
+    se procesan los archivos json generados en el paso anterior e intenta identificar películas iguales para unificarlas.
+    los criterios de comparación están basados en los datos que disponemos de las películas.
 
-la idea principal sería generar un formateador que normalice un poco los datos.
-y posiblemente deduplique los mismos a futuro.
+etapas posteriores pueden ser añadidas para el procesamiento de información, almacenamiento, generación de nuevas bases para responder consultas adicionales, etc.
+un ejemplo de estas estapas posteriores sería el script : dump_movies_info.py 
+el cual se encarga de procesar la base final y generar otro json en otro formato mas simple de evaluar con un visor online de json.
 
-usando algún beautifier de json analizo un poco los datos.
-https://codebeautify.org/jsonviewer
+--------------
 
----
+El razonamiento para resolver el ejercicio:
 
+1 - generar un script de concepto que haga scraping de cinemalaplata
+2 - generar un script de concepto que haga scraping de cinepolis
+3 - evaluar la información obtenida para analizar las similitudes, diferencias, información que se completemente, etc y generar algún formato de intercambio entre estos scripts y el de merge
+4 - iterar sobre los scripts de scraping para implementar el formato común.
+5 - implementar un script de merge de concepto. merge.py
+6 - evaluar la info resultante y si logró hacer merge de algunas películas.
+7 - refinar el proceso de merge.
+8 - sacar conclusiones sobre los problemas encontrados.
 
-Algunas conclusiones:
+consideraciones:
+1 - dar prioridad a resolver el tp1 con código mínimo, no hacer sobreingeniería de la solución.
+2 - refinar el proceso evaluando los problemas que nos encontremos, no anticipar problemas que nunca se van a dar.
+3 - a medida que se vayan agregando fuentes de datos se tendrá que refinar el formato común final. el usado en merged.json
+4 - dar prioridad a claridad de solución por sobre rapidez. temas como paralelización se pueden implementar a futuro o nunca, depende de si es necesario.
+5 - es una prueba de concepto para refinar a medida que se vaya implementando los demas TPs (al no ser un sistema completo, no están definidas componentes ni tecnologías de implementación. ej: como se corren los scrapers automáticamente, etc)
 
-cinemalaplata.com.ar
-    - idioma en la película es el idioma original. ignorar la descripción que indica después.
-      ej:
-        Inglés subtitulada ---> Inglés
+--------------
 
-    para ver si esta subtitulada o doblada se debe ver en la descripción de las funciones.
-      ej:
-        :	CASTELLANO:     16:45 - 19:45
-            SUBTITULADA:     13:45 - 22:45
+Elegí json como formato de intercambio debido a :
+1 - fue el recomendado por la cátedra
+2 - es flexible en cuanto a las claves a almacenar. no es necesario tener definido todo un esquema de datos común antes de comenzar a desarrollar (merged.json mantiene distintas claves para los shows dependiendo de si vienen de cinemalaplata o de cinepolis)
+4 - usando python y diccionarios es trivial almacenarlo en archivos.
+5 - la cantidad de datos a procesar se puede manejar en ram facilmente asi que podemos procesar todo con diccionarios.
+6 - es muy simple de evaluar usando visores online del mismo, o editores de json, etc.
 
+--------------
 
-    - el manejo de salas está indicado en el nombre del CINE separado por -
-        ej: :	
-            CINEMA PARADISO - SALA HD
-            CINEMA CITY - SALA 4D
-            
-    - normalizar el manejo de idiomas. Castellano == Español?
-      para nuestro caso de aplicación me parece que si.
+Resumen del formato resultante del scraper de cinemalaplata:
 
-    - Actores estan separados por , por lo que es simple obtener la lista.
+{
+    DATE:       <-- fecha del scraping
+    SOURCE:     <-- origen scrapeado
+    MOVIES: [   <--- lista de películas obtenidas
+        {
+            ID:         <--- id autogenerado para identificar la película (abajo explico por que es necesario)
+            TITLE:      <--- titulo de la película
+            GENRE:      <--- géneros de la película (SciFi, comedia, terror, etc)
+            LANGUAGE:   <--- lenguaje original de la película
+            ORIGIN:     <--- el origen de la película, Estados Unidos, Argentina, etc. (es una lista por las coproducciones)
+            WEB:        <--- web original de la película (cinemalaplata exporta esa info)
+            DURATION:   <--- duración en minutos de la película
+            DIRECTOR:   <--- directores de la película, hay co-directores, etc. (es una lista)
+            RATING:     <--- clasificación de la película.
+            ACTORS:     <--- actores de la película (es una lista)
+        }
+    ]
+    SHOWS: [    <--- funciones en las que se reproduce la película.
+        {
+            MOVIE:      <--- id de la película que se va a mostrar
+            CINEMA:     <--- cine en el que se da la función
+            SHOWROOM:   <--- sala en la que se da la función
+            LANGUAGE:   <--- idioma de la función (como explico abajo no está todavía normalizado)
+            HOURS:      <--- horas de las funciones (es una lista)
+        }
+    ]
+}
 
-    - fecha de la función en cinemalapalta no esta, se asume cartelera idem todos los días. 
-      la fecha límite de finalización de esa cartelera esta indicada arriba del todo.
-      el div con clase 'post-container title'
-      <div class="post-container page-title">
-        Cartelera hasta 31/3/2021
-      </div>
+Resumen del formato de cinepolis
 
+{
+    DATE:       <-- fecha del scraping
+    SOURCE:     <-- origen scrapeado
+    MOVIES: [   <--- lista de películas obtenidas
+        {
+            ID:             <--- id autogenerado para identificar la película (abajo explico por que es necesario)
+            TITLE:          <--- titulo de la película
+            ORIGINAL_TITLE  <--- título original de la película
+            GENRE:          <--- géneros de la película (SciFi, comedia, terror, etc)
+            LANGUAGE:       <--- lenguaje original de la película
+            ORIGIN:         <--- el origen de la película, Estados Unidos, Argentina, etc. (es una lista por las coproducciones)
+            DURATION:       <--- duración en minutos de la película
+            DIRECTOR:       <--- directores de la película, hay co-directores, etc. (es una lista)
+            RATING:         <--- clasificación de la película.
+            ACTORS:         <--- actores de la película (es una lista)
+            DISTRIBUTION:   <--- empresa que distribuye la película
+        }
+    ]
+    SHOWS: [    <--- funciones en las que se reproduce la película.
+        {
+            MOVIE:      <--- id de la película que se va a mostrar
+            CINEMA:     <--- cine en el que se da la función
+            SHOWROOM:   <--- sala en la que se da la función
+            LANGUAGE:   <--- idioma de la función (como explico abajo no está todavía normalizado)
+            HOURS:      <--- horas de las funciones (es una lista)
+            FORMAT:     <--- formato de reproducción de la película (2d, 3d)
+        }
+    ]
+}
 
------
+el formato de merge resultante es (algunas claves son opcionales, marcadas con *, si es que no se hizo merging y/o el origen scrapeado no tenía esa info),
 
-primer modificación al script de parser de datos.
-manejar las salas.
-se resuelve usando un split en la info del cine, eso me da la sala y el cine.
-corrijo el script para obtener esa info desagregada
-
--------
-
-ahora el problema a resolver es parear los horarios de las funciones.
-lo mejor que veo es generar alguna expresión regular para poder parsear el contenido del string.
-pero en casos como:
-CASTELLANO:     16:30 - 20:30 - 22:10
-tengo grupos de patrones repetidos.
-la solución que se me ocurre inicialente es usar 2 expresiones regulares.
-primero desagrupo los horarios del idioma y en una segunda expresión capturo todos los horarios.
-(?P<lang>[a-zA-Z]*?):\s*(?P<hours>\d+.*)
-(?P<hours>\d+:\d+)
-las pude probar usando por ejemplo: https://pythex.org/
-corrijo el script para usar esas expresiones y poder tener esos datos desagregados.
-
---------------------
-
-problema a resolver : desagregar los actores en una lista.
-están separados por , así que con un simple split se resuelve.
-corrijo el script para realizarlo
-
---------------------
-
-use el mismo esquema que la solución anterior, para dejar correctamente el idioma original y los minutos de duracíón.
-corrijo el script para realizarlo
-
---------------------
-
-Creo que ya se tienen datos aceptables del sitio de cinemalaplata.com.ar
-ahora habría que lograr lo mismo pero con el otro sitio.
-
--------------------------------
-
-la parte de selenium. instalo el driver del chrome
-
-https://www.toptal.com/python/web-scraping-with-python
-
-https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
-
-https://www.perfecto.io/blog/xpath-in-selenium
-
-https://www.guru99.com/xpath-selenium.html
+{
+    DATE:       <-- fecha del merge
+    MOVIES: [   <--- lista de películas 
+        {
+            ID:             <--- id autogenerado para identificar la película (abajo explico por que es necesario)
+            TITLE:          <--- titulo de la película
+            ORIGINAL_TITLE* <--- título original de la película
+            GENRE:          <--- géneros de la película (SciFi, comedia, terror, etc)
+            LANGUAGE:       <--- lenguaje original de la película
+            ORIGIN:         <--- el origen de la película, Estados Unidos, Argentina, etc. (es una lista por las coproducciones)
+            DURATION:       <--- duración en minutos de la película
+            DIRECTOR:       <--- directores de la película, hay co-directores, etc. (es una lista)
+            RATING:         <--- clasificación de la película.
+            ACTORS:         <--- actores de la película (es una lista)
+            DISTRIBUTION*:  <--- empresa que distribuye la película
+            WEB*:           <--- web original de la película (cinemalaplata exporta esa info)
+        }
+    ]
+    SHOWS: [    <--- funciones en las que se reproduce la película.
+        {
+            MOVIE:      <--- id de la película que se va a mostrar
+            CINEMA:     <--- cine en el que se da la función
+            SHOWROOM:   <--- sala en la que se da la función
+            LANGUAGE:   <--- idioma de la función (como explico abajo no está todavía normalizado)
+            HOURS:      <--- horas de las funciones (es una lista)
+            FORMAT*:    <--- formato de reproducción de la película (2d, 3d)
+        }
+    ]
+    MERGES: [               <-- info de merges realizados para generar MOVIES
+        {
+            NEW_ID:         <-- id de la película resultante dentro de MOVIES
+            MOVIES: [
+                {
+                    ID:     <-- id original de la película como se obtuvo del scraper
+                    TITLE   <-- titulo de la película
+                },
+                ...
+                ..
+            ]
+        }
+    ]
+}
 
 
 
+con estos formatos resultantes se pueden responder las preguntas indicadas en el TP1 de la siguiente forma (pseudocódigo):
+
+1 - ¿Qué películas están en cartelera en Cinema Ocho? ¿Qué películas están en cartelera en Village Pilar? 
+
+peliculas_en_cine = [s[MOVIE] for s in base[SHOWS] if s[CINEMA] == cine]
+peliculas = [m[TITLE] for m in base[MOVIES] if m[ID] in peliculas_en_cine]
+
+
+2 - ¿A qué hora y en qué salas dan, hoy, "Mujer maravilla 1984"?
+
+pelicula_id = None
+for p in base[MOVIES]:
+    if p[TITPLE] == 'Mujes maravilla 1984':
+        pelicula_id = p[ID]
+        break
+shows = [s for s in base[SHOWS] if s[MOVIE] == pelicula_id]
+
+3 - ¿Qué películas podría ver (y donde) si tengo tiempo libre de máximo 90 minutos? (ignorando el tiempo de viaje hasta el cine)
+
+peliculas_id = [m[ID] for m in base[MOVIES] if m[DURATION] <= 90]
+shows = [s for s in base[SHOWS] if s[MOVIE] in pelicula_id]
+
+
+4 - ¿Qué películas de ciencia ficción hay en cartelera?
+
+peliculas = [ m for m in base[MOVIES] if 'scifi' in m[GENRE] ]
+
+5 - ¿Qué películas en cartelera dirige Christopher Nolan? (siempre es bueno saber si hay alguna película de Nolan)
+
+peliculas = [ m for m in base[MOVIES] if 'Nolan' in m[DIRECTOR] ]
+
+6 - ¿En qué salas van a dar "El secreto del bosque" en Castellano/Español (doblada)? ¿En qué salas la dan en su idioma original con subtítulos? 
+
+pelicula_id = None
+for p in base[MOVIES]:
+    if p[TITPLE] == 'El secreto del bosque':
+        pelicula_id = p[ID]
+        break
+shows_subtitulados = [s for s in base[SHOWS] if s[MOVIE] == pelicula_id and 'subtitulada' == s[LANGUAGE]]
+shows_españoles = [s for s in base[SHOWS] if s[MOVIE] == pelicula_id and 'Español' == s[LANGUAGE]]
+
+
+------------------
+
+
+Notas sobre la solución:
+
+1- para realizar el merge tomé el criterio de evaluar los directores, actores y el título. Parecida a la idea comentada en el foro del TP1.
+dentro de merge.py 
+
+
+def test_equal(m1, m2):
+    """ 
+        testea por igualdad 2 películas
+        los criterios de igualdad son:
+            al menos un director en común
+            al menos un actor en común 
+            los títulos idénticos sin tener en cuenta los caracteres especiales.
+    """
+
+    """ tiene directores en común (al menos el director principal!!) """
+    a1 = [normalize(a) for a in m1[Movie.DIRECTOR.value]]
+    a2 = [normalize(a) for a in m2[Movie.DIRECTOR.value]]
+    if len(set(a1).intersection(set(a2))) == 0:
+        return False
+
+    """ testeo que al menos tenga algun actor en comun (el actor principal!!) """
+    a1 = [normalize(a) for a in m1[Movie.ACTORS.value]]
+    a2 = [normalize(a) for a in m2[Movie.ACTORS.value]]
+    if len(set(a1).intersection(set(a2))) == 0:
+        return False
+
+    """ los titulos son iguales sin tener en cuenta los tildes? """
+    t1 = normalize(m1[Movie.TITLE.value])
+    t2 = normalize(m2[Movie.TITLE.value])
+    if t1 == t2:
+        return True
+
+    return False
+
+
+fue suficiente para la solución actual dado los datos que se tienen de los sitios.
+se puede mejorar muchísimo esta solución!!!!.
+pero para el problema actual dió resultado esperado solo con esas comparaciones. 
+se mergearon 8 películas exitosamente. (dentro de merged.json la clave MERGES)
+
+2- genere datos adicionales no estrictamente necesarios pero facilita el proceso de correción
+dentro de merged.json y dumped.json existen claves que indican cuales películas fueron mergeadas y con cuales.
+la clave MERGES del json.
+
+3- El código NO esta optimizado en ninguna forma. no vi necesidad ya que el conjunto de datos es mínimo. y no llegué con el tiempo.
+para optimizarlo se pueden aplicar distintas técnicas pero en mi experiencia es mejor realizar un profing del código para ver cuales son las partes que realmente 
+se ejecutan en tiempos inaceptables.
+Tambien si se usa paralelización para optimizar ciertos procesos de scraping es necesario chequear que no estémos saturando al sitio origen. y que no tenga políticas de filtrado 
+en base a demasiados acesos.
+
+4- En el caso del scraper de cinepolis implementé código para clickear todos los filtros así me aseguraba de que esté cargada toda la info completa.
+pero la carga por defecto de la información ya la trae. por lo que eliminé el código. (codigo de referencia en codigo_antiguo/scraper_cinepolis_v1.py)
+el único que quedó dentro del scraper actual es el que clickea el botón TODOS de la cartelera. me encontré con casos de pruebas randoms donde 
+no me cargaba la cartelera completamente el sitio, así que quedo implementado. parece no ser necesario pero en mis pruebas lo fué.
+
+------------------------------
+
+PROBLEMAS ENCONTRADOS DURANTE EL DESARROLLO
 
 ----------------------
 
-NOTAS:
+1- 
+Información publicada errónea:
+pueden tener distintos impactos dependiendo del tipo de info errónea
 
-Idioma -
-en cinemalaplata si dice el idioma original.
-y si esta subtitulado indica como subtitulado, si esta doblada indica CASTELLANO
+problema:
 
-los idiomas en cinepolis se indican como subtitulado/español en cada función
-y no dice el idioma de la película original. se debe inferir desde el origen de la película.
-pero que pasa en caso de coproducciones?
+"Los nuevos mutantes"
+en cinemalaplata se asigna como actor a "Antonio Banderas"
+en cinepolis no aparece como actor
+en imdb.com no aparece como actor
 
---
+impacto:
+afecta al proceso de merge.
+los actores son uno de los parámetros que se usan para el proceso de merge de las películas. para decidir si son la misma película o no.
+en el proceso de scraping no se puede identificar si es información errónea o no. ya que no se tiene otra fuente de datos para comparar y sacar conclusiones.
 
-Género-
-cinemalaplata asigna solo un Género y/o los separa por /
-cinepolis asigna múltiples generos separados por ,
-
-inclusive difieren las clasificaciones. para nuevos mutantes cinemalaplata tiene comedia, y cinepolis no.
-
---
-
-Formato-
-cinemalaplata no tiene formato. se asume por el nombre de la sala?
-cinepolis si indica el formato (2d,3d)
-
---
-
-Clasificación-
-cinemalaplata tiene otra nomenclatura para calificación
-cinepolis usa el standard de calificación P-13, P-
+estrategia de solución:
+procesar manualmente la información antes de pasar a etapas posteriores.
+usar mas fuentes de información para permitir comparaciones y realizar algunos procesos estadísticos. Pero esto se realizaría en el proceso de merge ya que ahi se dispone de mas fuentes.
 
 ---
+problema:
+cinemalaplata publica para scoobydoo los actores: "animación"
 
-Origen-
-en cinemalaplata orígenes difieren las plabras. ej EEUU
-cinépolis (Estados Unidos)
+impacto:
+afecta al proceso de merge, idem al caso anterior. y en este caso al ser el único actor publicado NO se realiza merge de la película!!
+el criterio usado para merge es:
+al menos 1 director en común, al menos 1 actor en común, titulos similares.
 
----
-Actores -
-cinemalaplata - no siempre esta completa e inclusive errónea. 
-antonio banderas está como cast de nuevos mutantes y no existe en imdb
-
-
-------------
-
-
-generación del proceso de merge.
-
-dado los datos que estoy analizando de las carteleras despues de obtener los jsons.
-me parece correcto generar el merge en base a:
-
-Titulo y director 
-
-ya que tengo esa info y es la misma dentro de todas las películas analizadas.
-se debe tener en cuenta el director también ya que existen remake de películas con mismo título pero distintos actores.
-
-tomar el conjunto de actores para relacionar películas entre si.
-como comentaron en el foro una buena técnica a usar es alguna intersección del conjunto de actores para incrementar la confianza en la relación entre las películas.
-esto no es determinante ya que podría darse una trilogía, segundas partes, películas del mismo universo como las de super héroes, con los mismos actores pero siendo distintas películas.
-
-también usando IA se podría dar al algoritmo esos parámetro + el plot de la película, y obtener algún indice de confianza de igualdad, pero excede el problema del TP1.
-por ejemplo:
-https://towardsdatascience.com/using-nlp-to-find-similar-movies-based-on-plot-summaries-b1481a2ba49b
+estrategia de solución:
+a diferencia del caso anterior, si se puede identificar un universo de actores, nombres propios.
+en este caso se podría haber identificado "animación" no como actor y eliminar esa información.
 
 
+2-
+Falta de información para realizar procesos de merge:
 
-https://www.jsonmatrix.com/
-
-
---- 
-
-
-temas a analizar.
-
-unificación de las claves a usar en el json.
-combiene que ya el proceso de scraping genere los diccionarios con claves standards.
-así el proceso de merge usa esas claves para analizar la igualdad
-
-
-
-cambie el esquema final del json. 
-ahora tiene información del proceso de scraping y los datos de los shows está separado al de las películas.
-
-agregar información de validez de los datos scrapeados
-usando una cabecera para estos datos se puede agregar todos los datos necesarios para evaluar los procesos de scrapings
-
-
-----------
-
-Problema para unificar varias fuentes de datos en una sola.
-el caso de trolls 2 es un caso particular
-
-los criterios que use para identificar si son la misma película e intentar unificar los datos de la misma son:
-titulo, director y actores
-
-en cinemalaplata.com.ar cargaron la película con título en inglés, y en este caso el sitio no provee titulo original dentro de los metadatos de la película.
+problema:
+en cinemalaplata.com.ar cargaron la película con título en inglés, y en este caso el sitio no provee "titulo original" dentro de los metadatos de la película.
 "Trolls 2: World Tour"
 los actores cargados son : "animación" 
 director: "Walt Dohrn, David P. Smith" 
 
-en cinepolis.com el título se encuentra en castellano y el título original que se encuentra indicado en inglés esta cargado como "Trolls 2" solamente.
+en cinepolis.com el "título" se encuentra en castellano y el "título original" que se encuentra indicado en inglés esta cargado como "Trolls 2" solamente.
 "Trolls 2: Gira mundial" 
 titulo origial: "Trolls 2"
 los actores si están cargados correctamente.
@@ -359,34 +333,71 @@ en imdb.com
 la película se indica con el título : "Trolls World Tour"
 los directores los indica como: "Walt Dohrn, David P. Smith (co-director)"
 
-no veo salida a este tipo de situaciones mas que usar campos adicionales, por ejemplo la synopsis mediante algun proceso estadístico o de IA para determinar si se está describiendo a la misma película.
-el año de estreno, escritores, etc. (que en este caso no se obtienen de ninguno de los sitios scrapeados)
+impacto:
+falla el proceso de merge de las películas.
 
+estrategia:
+usar campos adicionales, por ejemplo la synopsis mediante algun proceso estadístico o de IA para determinar si se está describiendo a la misma película.
+como se indica por ejemplo aca:
+https://towardsdatascience.com/using-nlp-to-find-similar-movies-based-on-plot-summaries-b1481a2ba49b
+u otros campos en el caso de que se encuentren cargados. el año de estreno, escritores, etc. (que en este caso no se obtienen de ninguno de los sitios scrapeados)
+
+o al igual que en el problema de información errónea, agregar procesos manuales de verificación de la información.
 otra estrategia podria ser aplicar procesos de revisión sobre los datos antes de publicarlos. marcar los casos dudosos para poder recitificarlos en el proceso de merge.
-ej: mediante una base especial se indicaría que trolls2, trolls 2: gira mundial son la misma película, esta base la tendría en cuenta el proceso de merge para "forzar" el merge de esas 2 películas.
+
+-----
+problema:
+cinepolis no pone el idioma original de la película. solo indica en la sala que idioma se reproduce.
+
+impacto:
+no se puede tomar desiciones en base a esa información faltante.
+
+estrategia:
+usar mas fuentes de información para cumplimentar la que no se exporta de la fuente que se está scrapeando.
+tambien podría refinar ciertos procesos para tratar de inferir los campos faltantes en base a otros que si existen.
+ej: inferir que el idioma original de la película es el idioma que se reproduce en ciertas salas sin subtitulado. 
+lo cual en determinados casos no es correcto ya que podría estar siendo doblada si el idioma es español.
+sería correcto también preguntarse que pasa con las coproducciones?. una película Estadounidense/Francesa.
 
 
-----------
+3- 
+Distintos datos exportados por diferentes fuentes.
 
-Problema de representación de datos para casos donde no se tiene la información completa.
-por ejemplo el formato de la pelicula en las salas de los cines. (cinepolis lo indica, cinemalaplata no)
-algo importante a evaluar es en donde manejamos este tipo de cuestiones. 
-una posibilidad es en la base de datos usada. ej si usamos una db relacional y tenemos una tabla para almacenar los shows, deberíamos ir modificando los esquemas para agregar los campos que nos van apareciendo. quedarán incompletos o nulos los casos que no se cuente con esa información.
-otra posibilidad es manejarlo en código y controlar si existen esos datos o no al momento de procesarlos, ej: usando un json que permite almacenar solo las claves que se tengan.
-en mi caso ya que estoy usando json para almacenar los datos uso el control en código.
+problema:
+cinemalaplata exporta la información de WEB pero no la información del formato de reproducción de la película en cada sala.
+cinepolis no exporta la info de la WEB y si la información del formato de la pelicula en cada sala.
 
--------
+impacto:
+dependiendo de los esquemas que se usen para almacenar los datos esto puede ser un problema.
+ej en bases de datos relacionales tendríamos campos nulos en las tablas ya que de determinadas películas no tendríamos esa información.
+en otros tipos de bases no sería un problema.
 
-Problema de diferentes standards entre los sitios para representar la misma información.
-Por ejemplo:
-cinemalaplata indica como EEUU al origen de algunas películas
-cinépolis indica como Estados Unidos
+estrategia:
+solo obtener de cada fuente los campos comunes que exportan las fuentes de datos. (ej: desechar WEB y desechar FORMATO) siempre y cuando la información 
+resultante es suficiente para los propósitos del sistema.
 
-otro caso podría ser el de la clasificación de las películas.
+
+4- 
+Distintos formatos para representar la misma información. 
+
+problema:
+cinemalaplata indica como origen EEUU a las películas estadounidenses.
+cinepolis indica como origen Estados Unidos.
+
+otro caso similar es el de la clasificación de las películas.
 cinemalaplata indica de formato : "Apta mayores de 16 años"
 cinepolis usa un standard : "P-13"
 
-estrategias para resolver ese tipo de cuestiones podrían ser aplicar algún análisis de cada sitio, y generar mapeos manuales de la info en los scrapers hacia el standard que queremos manejar en el sistema.
+
+impacto:
+puede afectar los procesos de merge de la información, también afectar a procesos de desiciones y filtrados sobre etapas posteriores ya que al no mantener un lenguaje en común es mas complejo realizar las comparaciones.
+EEUU == Estados Unidos.
+P-16 == Apta mayores de 16 años.
+
+estrategia:
+generar algún formato común de representación, y llevar a ese formato la información lo antes posible. por ejemplo en los scrapers
+generar mapeos manuales de la info hacia el standard que queremos manejar en el sistema.
+
 ej: "mayores de 16" --> "P-16"
 y usar en estos casos el standard P-X para representar las clasificaciones dentro del sistema.
 estrategia usada en el scraper de cinemalaplata.
@@ -405,31 +416,39 @@ def format_rating(s):
     
     return s.strip()
 
-o
 
-(Movie.ORIGIN.value, lambda l: [s.strip().replace('EEUU','Estados Unidos') for s in l.split('-')]),
+5-
+Información inconsistente
 
-
------
-
-Problema de información errónea dentro de uno de los sitios que se hace scraping.
-
-"Los nuevos mutantes"
-en cinemalaplata se asigna como actor a "Antonio Banderas"
-en cinepolis no aparece como actor
-en imdb.com no aparece como actor
-
-en este caso no podemos identificar en el proceso de merge si "Antonio Banderas" es un actor que falta agregar o es información errónea.
-una estrategia para solucionar este problema podría ser usar una fuente "cierta, verificada o confiable" de información para cada dato, y unificar los resultados en el proceso de merge teniendo en cuenta solo una fuente para cada uno de los mismos. Ej sacar solo de imdb.com los datos de los actores de las películas.
-otra estrategia podría ser aplicar algún proceso estadístico entre varias fuentes de datos. ej scrapear mas sitios de detalle de películas para identificar los actores y sacar la intersección de esos conjuntos. De esta forma estaríamos un poco mas seguros de que por lo menos los actores obtenidos están referidos en varios sitios. 
-
-
----------
-
-Problema de información inconsistente
-
+problema:
 En algnuos casos la información de la duración de las películas es inconsistente.
+cada sitio indica duraciones distintas para la misma película.
+
+impacto:
+desiciones incorrectas a la hora de mostrar y/o realizar filtrados de la información.
+por ejemplo afecta directamente a una de las preguntas de ejemplo a reponder. ¿Qué películas podría ver (y donde) si tengo tiempo libre de máximo 90 minutos?
+
+estrategia:
 Para el TP1 elegí la misma opción comentada en los foros, de mantener la duración mayor. Esta desición es consistente con las consultas que realizarán los usuarios al sistema, ya que 
 aunque dure unos minutos menos en algunas salas, la persona podrá ver igualmente la totalidad de la película. Si dispone de 94 minutos, entonces podra verla aunque dure 87 minutos.
+el caso contratio no es normalmente cierto. y con solo 2 fuentes de información no podemos analizar cual es la duración real.
 
-otra solución podría ser mantener la duración asociada a cada sala y no alamacenarla como dato de la película. Para este dato me parece que no es necesario y genera complejidad adicional sin mucha ganancia.
+otra solución podría ser almacenar la duración de la película en la sala de cada cine. y no asociada a la película en si.
+asi uno podría 
+ir a la sala de cinema ocho y ver la película que dura 84 minutos.
+y no ir a la sala de cinepolis pilar que ahi dura 90 minutos.
+
+para el caso de la duración y los márgenes evaluados no vale la pena y lo resolví en la película. es simple modificarlo para manejarlo en las salas.
+
+
+
+
+Referencias:
+https://www.toptal.com/python/web-scraping-with-python
+https://chromedriver.storage.googleapis.com/index.html?path=89.0.4389.23/
+https://www.perfecto.io/blog/xpath-in-selenium
+https://www.guru99.com/xpath-selenium.html
+
+
+https://pythex.org/
+https://codebeautify.org/jsonviewer

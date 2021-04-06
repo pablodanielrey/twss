@@ -7,7 +7,7 @@ import uuid
 import datetime
 
 
-from common import Movie, Show, Scrape, get_movie_id
+from common import Movie, Show, Scrape
 
 """
     ///////////////////////////////

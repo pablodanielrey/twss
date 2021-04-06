@@ -1,0 +1,62 @@
+Desarrollado en linux 64bits usando python3 3.9.1+
+para instalar los prerequisitos:
+
+pip3 install -r src/requirements.txt
+
+el scraper de cinepolis usa selenium con el driver de chrome.
+por lo que se debe dejar en el path el driver indicado para la versión que se tenga de chrome.
+en mi caso usé la version: 89.0.4389.90 (Build oficial) (64 bits)
+
+python3 src/scraper_cinema.py
+python3 src/scraper_cinepolis.py
+
+python3 src/merge.py
+
+
+los archivos generados son:
+
+data/scraper_cinema.json
+data/scraper_cinepolis.json
+data/merged.json                <---- esta es la base final.
+
+generé un script adicional para poder analizar los datos resultantes de forma simple.
+
+python3 dump_movies_info.py
+
+genera el archivo
+
+data/dumped.json
+
+este script toma los datos merged.json y los procesa para dejar de una forma mas plana la info de cada película y los shows de cada una.
+agrega tambien la info del merge si es que se realizó alguno.
+algo como:
+
+movies [
+    id
+    titulo
+    ...
+    ..
+
+    shows: [
+        {
+            cine
+            sala
+            horarios: [
+                00:01
+                12:02
+                ...
+            ]
+        }
+    ]
+    merges: [
+       {
+           id <-- id original antes del merge
+           titulo
+       },
+       {
+           id <-- id original antes del merge
+           titulo 
+       },
+       .....
+    ]
+]
