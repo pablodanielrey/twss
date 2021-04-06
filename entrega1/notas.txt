@@ -338,26 +338,84 @@ usando una cabecera para estos datos se puede agregar todos los datos necesarios
 
 ----------
 
-Problema para unificar una película.
+Problema para unificar varias fuentes de datos en una sola.
 el caso de trolls 2 es un caso particular
 
-en cinemalaplata.com.ar cargaron la película con título en inglés, y en este caso el sitio no provee titulo original.
+los criterios que use para identificar si son la misma película e intentar unificar los datos de la misma son:
+titulo, director y actores
+
+en cinemalaplata.com.ar cargaron la película con título en inglés, y en este caso el sitio no provee titulo original dentro de los metadatos de la película.
 "Trolls 2: World Tour"
-los actores cargados para el título son : "animación"  
-claramente se encuentra mal cargada la película dentro del sitio.
+los actores cargados son : "animación" 
+director: "Walt Dohrn, David P. Smith" 
 
 en cinepolis.com el título se encuentra en castellano y el título original que se encuentra indicado en inglés esta cargado como "Trolls 2" solamente.
 "Trolls 2: Gira mundial" 
 titulo origial: "Trolls 2"
 los actores si están cargados correctamente.
+director: "Walt Dohrn"
 
 en imdb.com
 la película se indica con el título : "Trolls World Tour"
 los directores los indica como: "Walt Dohrn, David P. Smith (co-director)"
 
+no veo salida a este tipo de situaciones mas que usar campos adicionales, por ejemplo la synopsis mediante algun proceso estadístico o de IA para determinar si se está describiendo a la misma película.
+el año de estreno, escritores, etc. (que en este caso no se obtienen de ninguno de los sitios scrapeados)
+
+otra estrategia podria ser aplicar procesos de revisión sobre los datos antes de publicarlos. marcar los casos dudosos para poder recitificarlos en el proceso de merge.
+ej: mediante una base especial se indicaría que trolls2, trolls 2: gira mundial son la misma película, esta base la tendría en cuenta el proceso de merge para "forzar" el merge de esas 2 películas.
+
 
 ----------
 
 Problema de representación de datos para casos donde no se tiene la información completa.
-los shows en las salas de los cines.
-algunos indican el formato, otro no, etc.
+por ejemplo el formato de la pelicula en las salas de los cines. (cinepolis lo indica, cinemalaplata no)
+algo importante a evaluar es en donde manejamos este tipo de cuestiones. 
+una posibilidad es en la base de datos usada. ej si usamos una db relacional y tenemos una tabla para almacenar los shows, deberíamos ir modificando los esquemas para agregar los campos que nos van apareciendo. quedarán incompletos o nulos los casos que no se cuente con esa información.
+otra posibilidad es manejarlo en código y controlar si existen esos datos o no al momento de procesarlos, ej: usando un json que permite almacenar solo las claves que se tengan.
+en mi caso ya que estoy usando json para almacenar los datos uso el control en código.
+
+-------
+
+Problema de diferentes standards entre los sitios para representar la misma información.
+Por ejemplo:
+cinemalaplata indica como EEUU al origen de algunas películas
+cinépolis indica como Estados Unidos
+
+otro caso podría ser el de la clasificación de las películas.
+cinemalaplata indica de formato : "Apta mayores de 16 años"
+cinepolis usa un standard : "P-13"
+
+estrategias para resolver ese tipo de cuestiones podrían ser aplicar algún análisis de cada sitio, y generar mapeos manuales de la info en los scrapers.
+ej: "mayores de 16" --> "P-16"
+y usar en estos casos el standard P-X para representar las clasificaciones.
+realicé un ejemplo de esto con la info de EEUU en el scraper de cinemalaplata.
+
+(Movie.ORIGIN.value, lambda l: [s.strip().replace('EEUU','Estados Unidos') for s in l.split('-')]),
+
+
+otra estrategia puede ser mantener pesos sobre la información y elegir en el caso de que esté disponible en base al peso. o sea un sitio mas prioritario que el otro. Usando esta estrategia solo tendríamos la información que no existe en el sitio que determinemos que tiene mas peso.
+
+-----
+
+Problema de información errónea dentro de uno de los sitios que se hace scraping.
+
+"Los nuevos mutantes"
+en cinemalaplata se asigna como actor a "Antonio Banderas"
+en cinepolis no aparece como actor
+en imdb.com no aparece como actor
+
+en este caso no podemos identificar en el proceso de merge si "Antonio Banderas" es un actor que falta agregar o es información errónea.
+una estrategia para solucionar este problema podría ser usar una fuente "cierta, verificada o confiable" de información para cada dato, y unificar los resultados en el proceso de merge teniendo en cuenta solo una fuente para cada uno de los mismos. Ej sacar solo de imdb.com los datos de los actores de las películas.
+otra estrategia podría ser aplicar algún proceso estadístico entre varias fuentes de datos. ej scrapear mas sitios de detalle de películas para identificar los actores y sacar la intersección de esos conjuntos. De esta forma estaríamos un poco mas seguros de que por lo menos los actores obtenidos están referidos en varios sitios. 
+
+
+---------
+
+Problema de información inconsistente
+
+En algnuos casos la información de la duración de las películas es inconsistente.
+Para el TP1 elegí la misma opción comentada en los foros, de mantener la duración mayor. Esta desición es consistente con las consultas que realizarán los usuarios al sistema, ya que 
+aunque dure unos minutos menos en algunas salas, la persona podrá ver igualmente la totalidad de la película. Si dispone de 94 minutos, entonces podra verla aunque dure 87 minutos.
+
+otra solución podría ser mantener la duración asociada a cada sala y no alamacenarla como dato de la película. Para este dato me parece que no es necesario y genera complejidad adicional sin mucha ganancia.
