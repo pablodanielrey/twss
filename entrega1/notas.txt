@@ -386,15 +386,13 @@ otro caso podría ser el de la clasificación de las películas.
 cinemalaplata indica de formato : "Apta mayores de 16 años"
 cinepolis usa un standard : "P-13"
 
-estrategias para resolver ese tipo de cuestiones podrían ser aplicar algún análisis de cada sitio, y generar mapeos manuales de la info en los scrapers.
+estrategias para resolver ese tipo de cuestiones podrían ser aplicar algún análisis de cada sitio, y generar mapeos manuales de la info en los scrapers hacia el standard que queremos manejar en el sistema.
 ej: "mayores de 16" --> "P-16"
-y usar en estos casos el standard P-X para representar las clasificaciones.
+y usar en estos casos el standard P-X para representar las clasificaciones dentro del sistema.
 realicé un ejemplo de esto con la info de EEUU en el scraper de cinemalaplata.
 
 (Movie.ORIGIN.value, lambda l: [s.strip().replace('EEUU','Estados Unidos') for s in l.split('-')]),
 
-
-otra estrategia puede ser mantener pesos sobre la información y elegir en el caso de que esté disponible en base al peso. o sea un sitio mas prioritario que el otro. Usando esta estrategia solo tendríamos la información que no existe en el sitio que determinemos que tiene mas peso.
 
 -----
 
