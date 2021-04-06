@@ -72,11 +72,16 @@ def sanitize_dict(o:dict):
 def list_formater(d):
     return [s.replace('\r','').replace('\n','').strip() for s in d.split(',')]
 
-format_matrix = [
+def format_directors(s):
+    directors = [d.strip() for d in s.replace('.','').split(',')]
+    return directors
+
+format_functions = [
+    (Movie.DIRECTOR.value, format_directors),
     (Movie.ORIGIN.value, list_formater),
     (Movie.GENRE.value, list_formater),
     (Movie.ACTORS.value, list_formater),
-    (Movie.DURATION.value, lambda s: s.replace('min.','').strip())
+    (Movie.DURATION.value, lambda s: int(s.replace('min.','').strip()))
 ]
 
 
@@ -123,7 +128,7 @@ def scrape_movie_data(driver):
         if len(mdata) > 1:
             key = index[sanitize_data(mdata[0])]
             data = mdata[1]
-            for nk, nf in format_matrix:
+            for nk, nf in format_functions:
                 if key == nk:
                     movie[key] = nf(data)
                     break
