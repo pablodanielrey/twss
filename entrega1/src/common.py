@@ -33,7 +33,6 @@ class Movie(Enum):
     RATING = 'RATING'
     DISTRIBUTION = 'DISTRIBUTION'
     SYNOPSIS = 'SYNOPSIS'
-    SHOWS = 'SHOWS'
 
 class Show(Enum):
     MOVIE = 'MOVIE'
