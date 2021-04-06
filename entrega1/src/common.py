@@ -6,6 +6,11 @@ class Merge(Enum):
     DATE = 'DATE'
     MOVIES = 'MOVIES'
     SHOWS = 'SHOWS'
+    MERGES = 'MERGES'
+
+class MergeInfo(Enum):
+    MOVIES = 'MOVIES'
+    NEW_ID = 'NEW_ID'
 
 class Scrape(Enum):
     DATE = 'DATE'

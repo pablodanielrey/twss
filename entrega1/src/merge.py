@@ -1,7 +1,8 @@
+import uuid
 import json
 import datetime
 import unicodedata
-from common import Merge, Movie, Show, Scrape, get_movie_id
+from common import Merge, Movie, Show, Scrape, MergeInfo
 
 def normalize(s):
     return s.lower().replace('.','').replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u')
@@ -78,6 +79,7 @@ def merge_movies(ml):
         duration = m[Movie.DURATION.value] if m[Movie.DURATION.value] > duration else duration
 
     mr = {
+        Movie.ID.value: str(uuid.uuid4()),
         Movie.TITLE.value: title,
         Movie.ACTORS.value: actors,
         Movie.DIRECTOR.value: directors,
@@ -137,6 +139,9 @@ if __name__ == '__main__':
         with open(fp, 'r') as f:
             scraped_data = json.loads(f.read())
 
+            """ agrego la info de los shows """
+            shows.extend(scraped_data[Scrape.SHOWS.value])
+
             if len(movies) <= 0:
                 """ el primer archivo tiene todas las películas unificadas ya """
                 movies.extend(sorted(scraped_data[Scrape.MOVIES.value], key=lambda m: m[Movie.DIRECTOR.value]))
@@ -157,11 +162,24 @@ if __name__ == '__main__':
                                 movies.remove(m)
                         movies.append(merged_movie)
 
-                        candidates_titles = [m[Movie.TITLE.value] for m in candidates]
-                        
+                        """ actualizo la info de los shows con el nuevo id """
+                        candidates_ids = [c[Movie.ID.value] for c in candidates]
+                        for show in shows:
+                            if show[Show.MOVIE.value] in candidates_ids:
+                                show[Show.MOVIE.value] = merged_movie[Movie.ID.value]
 
-            """ agrego la info de los shows """
-            shows.extend(scraped_data[Scrape.SHOWS.value])
+                        """ genero info solo para debug y seguimiento """
+                        merged_movies_info = [
+                            {
+                                Movie.TITLE.value: c[Movie.TITLE.value],
+                                Movie.ID.value: c[Movie.ID.value]
+                            } 
+                            for c in candidates
+                        ]
+                        merges.append({
+                            MergeInfo.NEW_ID.value: merged_movie[Movie.ID.value],
+                            MergeInfo.MOVIES.value: merged_movies_info
+                        })
 
             """ agrego la info de los scrapes """
             del scraped_data[Scrape.MOVIES.value]
@@ -171,7 +189,8 @@ if __name__ == '__main__':
     merged = {
         Merge.DATE.value: str(datetime.datetime.utcnow()),
         Merge.MOVIES.value: movies,
-        Merge.SHOWS.value: shows
+        Merge.SHOWS.value: shows,
+        Merge.MERGES.value: merges
     }
     with open('data/merged.json', 'w') as f:
         f.write(json.dumps(merged, ensure_ascii=False))
