@@ -50,7 +50,7 @@ process_functions = [
     (Movie.DURATION.value, lambda s: s.replace('minutos.','').strip()),
     (Movie.LANGUAGE.value, lambda s: s.replace('subtitulado', '').replace('subtitulada','').strip()),
     (Movie.ACTORS.value, lambda l: [s.strip() for s in l.split(',')]),
-    (Movie.ORIGIN.value, lambda l: [s.strip() for s in l.split('-')]),
+    (Movie.ORIGIN.value, lambda l: [s.strip().replace('EEUU','Estados Unidos') for s in l.split('-')]),
     (Movie.GENRE.value, lambda l: [s.strip() for s in l.split('/')])
 ]
 

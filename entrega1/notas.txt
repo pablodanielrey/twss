@@ -258,7 +258,7 @@ y si esta subtitulado indica como subtitulado, si esta doblada indica CASTELLANO
 
 los idiomas en cinepolis se indican como subtitulado/español en cada función
 y no dice el idioma de la película original. se debe inferir desde el origen de la película.
-pero el problema se da en caso de coproducciones.
+pero que pasa en caso de coproducciones?
 
 --
 
@@ -271,7 +271,7 @@ inclusive difieren las clasificaciones. para nuevos mutantes cinemalaplata tiene
 --
 
 Formato-
-cinemalaplata no tiene formato. se asume por le nombre de la sala?
+cinemalaplata no tiene formato. se asume por el nombre de la sala?
 cinepolis si indica el formato (2d,3d)
 
 --
@@ -334,3 +334,30 @@ ahora tiene información del proceso de scraping y los datos de los shows está 
 
 agregar información de validez de los datos scrapeados
 usando una cabecera para estos datos se puede agregar todos los datos necesarios para evaluar los procesos de scrapings
+
+
+----------
+
+Problema para unificar una película.
+el caso de trolls 2 es un caso particular
+
+en cinemalaplata.com.ar cargaron la película con título en inglés, y en este caso el sitio no provee titulo original.
+"Trolls 2: World Tour"
+los actores cargados para el título son : "animación"  
+claramente se encuentra mal cargada la película dentro del sitio.
+
+en cinepolis.com el título se encuentra en castellano y el título original que se encuentra indicado en inglés esta cargado como "Trolls 2" solamente.
+"Trolls 2: Gira mundial" 
+titulo origial: "Trolls 2"
+los actores si están cargados correctamente.
+
+en imdb.com
+la película se indica con el título : "Trolls World Tour"
+los directores los indica como: "Walt Dohrn, David P. Smith (co-director)"
+
+
+----------
+
+Problema de representación de datos para casos donde no se tiene la información completa.
+los shows en las salas de los cines.
+algunos indican el formato, otro no, etc.
