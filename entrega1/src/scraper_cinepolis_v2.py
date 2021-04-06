@@ -233,7 +233,7 @@ if __name__ == '__main__':
 
         details = wait_until_loaded(driver, movie_show_data)
         scraped_show_data = scrape_movie_shows_data(movie_id, details)
-        shows_data.append(scraped_show_data)
+        shows_data.extend(scraped_show_data)
 
     driver.close()
 
