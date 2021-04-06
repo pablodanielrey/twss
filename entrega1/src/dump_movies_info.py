@@ -15,7 +15,8 @@ if __name__ == '__main__':
         merges = json.loads(f.read())
         _movies = merges[Merge.MOVIES.value]
         for m in _movies:
-            m['SHOWS'] = [s for s in merges[Merge.SHOWS.value] if s[Show.MOVIE.value] == m[Movie.ID.value]] 
+            m['SHOWS'] = [s for s in merges[Merge.SHOWS.value] if s[Show.MOVIE.value] == m[Movie.ID.value]]
+            m['MERGES'] = [s[MergeInfo.MOVIES.value] for s in merges[Merge.MERGES.value] if s[MergeInfo.NEW_ID.value] == m[Movie.ID.value]]
             movies.append(m)
 
     dumped = {
