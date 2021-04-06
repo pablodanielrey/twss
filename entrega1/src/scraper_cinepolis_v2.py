@@ -28,6 +28,7 @@
 
 
 import time
+import uuid
 import datetime
 import json
 from selenium import webdriver
@@ -119,6 +120,8 @@ def scrape_movie_data(driver):
     }
 
     movie = {}
+    movie[Movie.ID.value] = str(uuid.uuid4())
+
     title_element = driver.find_element_by_xpath("/html/body/div/main/div[1]/div/h2")
     movie[Movie.TITLE.value] = title_element.get_attribute('textContent').strip()
     md = driver.find_element_by_xpath("//div[@id='tecnicos']/p")
@@ -207,7 +210,7 @@ if __name__ == '__main__':
         
         movie_data = scrape_movie_data(driver)
         movies_data.append(movie_data)
-        movie_id = get_movie_id(movie_data)
+        movie_id = movie_data[Movie.ID.value]
 
         """
             ////////////////////////////////////////////////
