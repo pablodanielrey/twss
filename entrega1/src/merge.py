@@ -6,30 +6,28 @@ from common import Merge, Movie, Show, Scrape, get_movie_id
 def normalize(s):
     return s.lower().replace('.','').replace('á','a').replace('é','e').replace('í','i').replace('ó','o').replace('ú','u')
 
-def ten(s1, s2):
-    n1 = normalize(s1)
-    n2 = normalize(s2)
-    return n1 == n2
-
 def test_equal(m1, m2):
     """ 
         testea por igualdad 2 películas
-        para considerarlas iguales deben tener el mismo director, al menos un actor en común y los títulos idénticos sin tener en cuenta los caracteres especiales.
+        los criterios de igualdad son:
+            al menos un director en común
+            al menos un actor en común 
+            los títulos idénticos sin tener en cuenta los caracteres especiales.
     """
 
-    """ testeo los directores """
-    d1 = m1[Movie.DIRECTOR.value]
-    d2 = m2[Movie.DIRECTOR.value]
-    if not ten(d1,d2):
+    """ tiene directores en común (al menos el director principal!!) """
+    a1 = [normalize(a) for a in m1[Movie.DIRECTOR.value]]
+    a2 = [normalize(a) for a in m2[Movie.DIRECTOR.value]]
+    if len(set(a1).intersection(set(a2))) == 0:
         return False
 
-    """ testeo que al menos tenga algun actor en comun """
+    """ testeo que al menos tenga algun actor en comun (el actor principal!!) """
     a1 = [normalize(a) for a in m1[Movie.ACTORS.value]]
     a2 = [normalize(a) for a in m2[Movie.ACTORS.value]]
     if len(set(a1).intersection(set(a2))) == 0:
         return False
 
-    """ los titulos son iguales? """
+    """ los titulos son iguales sin tener en cuenta los tildes? """
     t1 = normalize(m1[Movie.TITLE.value])
     t2 = normalize(m2[Movie.TITLE.value])
     if t1 == t2:
@@ -57,6 +55,16 @@ def merge_movies(ml):
             if nactor not in nactors:
                 nactors.append(nactor)
                 actors.append(a)
+
+    """ uno todos los directores """
+    ndirs = []
+    directors = []
+    for m in ml:
+        for a in m[Movie.DIRECTOR.value]:
+            ndir = normalize(a)
+            if ndir not in ndirs:
+                ndirs.append(ndir)
+                directors.append(a)                
     
     """ uno los géneros """
     genres = set()
@@ -67,14 +75,12 @@ def merge_movies(ml):
     """ duración elijo la mayor """
     duration = -1
     for m in ml:
-        md = int(m[Movie.DURATION.value])
-        if  md > duration:
-            duration = md
+        duration = m[Movie.DURATION.value] if m[Movie.DURATION.value] > duration else duration
 
     mr = {
         Movie.TITLE.value: title,
         Movie.ACTORS.value: actors,
-        Movie.DIRECTOR.value: ml[0][Movie.DIRECTOR.value],
+        Movie.DIRECTOR.value: directors,
         Movie.GENRE.value: genres,
         Movie.DURATION.value: duration
     }
@@ -105,7 +111,7 @@ def merge_movies(ml):
     rating = sorted((m[Movie.RATING.value] for m in ml if Movie.RATING.value in m), key=lambda r: len(r))[0]
     mr[Movie.RATING.value] = rating
 
-    """ origen """
+    """ uno todos los origenes """
     origin = set()
     for m in ml:
         origin.update(m[Movie.ORIGIN.value])
