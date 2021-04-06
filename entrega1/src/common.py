@@ -15,6 +15,7 @@ class Scrape(Enum):
     VALIDITY = 'VALIDITY'
 
 class Movie(Enum):
+    ID = 'ID'
     TITLE = 'TITLE'
     ORIGINAL_TITLE = 'ORIGINAL_TITLE'
     GENRE = 'GENRE'

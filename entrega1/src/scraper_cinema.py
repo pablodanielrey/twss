@@ -3,6 +3,7 @@ import requests
 import json
 import sys
 import re
+import uuid
 import datetime
 
 
@@ -107,6 +108,8 @@ def scrape_movie_data(movie):
 
     scraped_data = {}
 
+    scraped_data[Movie.ID.value] = str(uuid.uuid4())
+
     """ titulo """
     titles = movie.find_all('div', attrs={'class':'post-container page-title'})
     title = titles[0].get_text()
@@ -181,11 +184,14 @@ if __name__ == '__main__':
         movies_data.append(movie_data)
 
         """ scraping de los datos del show """
-        movie_id = get_movie_id(movie_data)
+        movie_id = movie_data[Movie.ID.value]
         scraped_shows_data = scrape_show_data(movie_id, movie_source_data)
-        shows_data.append(scraped_shows_data)
+        shows_data.extend(scraped_shows_data)
 
-    """ genero la info de scraping """
+    """ 
+        genero la info de scraping 
+        aca puede ir la info de validez de los datos, pero para el TP1 no hace falta.
+    """
     scraped_data = {
         Scrape.DATE.value: str(datetime.datetime.utcnow()),
         Scrape.SOURCE.value: 'cinemalaplata.com.ar',

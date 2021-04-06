@@ -131,27 +131,34 @@ if __name__ == '__main__':
     scrapes = []
     movies = []
     shows = []
+    merges = []
     
     for fp in files:
         with open(fp, 'r') as f:
             scraped_data = json.loads(f.read())
 
-            """ agrego las peliculas que falten """
             if len(movies) <= 0:
+                """ el primer archivo tiene todas las películas unificadas ya """
                 movies.extend(sorted(scraped_data[Scrape.MOVIES.value], key=lambda m: m[Movie.DIRECTOR.value]))
             else:
+                """ proceso las peliculas scrapeadas y las que ya tengo en movies """
                 smovies = sorted(scraped_data[Scrape.MOVIES.value], key=lambda m: m[Movie.DIRECTOR.value])
                 for sm in smovies:
                     candidates = [m for m in movies if test_equal(sm, m)]
                     if len(candidates) <= 0:
+                        """ la película a procesar no tiene ninguna "igual" en movies """
                         movies.append(sm)
                     else:
+                        """ hago merge de las películas ya que la que se está procesando "parece" ser igual a otras almacenadas en movies """
                         candidates.append(sm)
                         merged_movie = merge_movies(candidates)
                         for m in candidates:
                             if m in movies:
                                 movies.remove(m)
                         movies.append(merged_movie)
+
+                        candidates_titles = [m[Movie.TITLE.value] for m in candidates]
+                        
 
             """ agrego la info de los shows """
             shows.extend(scraped_data[Scrape.SHOWS.value])
