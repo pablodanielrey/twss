@@ -46,19 +46,50 @@ def get_page_and_parse(link):
     return bs4.BeautifulSoup(r.text, 'html.parser')
 
 
-process_functions = [
-    (Movie.DURATION.value, lambda s: s.replace('minutos.','').strip()),
-    (Movie.LANGUAGE.value, lambda s: s.replace('subtitulado', '').replace('subtitulada','').strip()),
+"""
+    //////////////////////////////////
+    formato de los datos
+    /////////////////////////////////
+"""
+
+def format_rating(s):
+    atp_rating = re.compile('.*?apta\s*.*?todo\s*.*?público.*', re.IGNORECASE)
+    m = atp_rating.match(s)
+    if m:
+        return 'ATP'
+
+    yrating = re.compile('.*?(?P<years>\d+)\s*?años.*', re.IGNORECASE)
+    m = yrating.match(s)
+    if m:
+        years = m.group('years')
+        return f'P-{years}'
+    
+    return s.strip()
+
+def format_directors(s):
+    directors = [d.strip() for d in s.replace('.','').split(',')]
+    return directors
+    
+
+format_functions = [
+    (Movie.DURATION.value, lambda s: int(s.replace('minutos.','').strip())),
+    (Movie.LANGUAGE.value, lambda s: s.replace('subtitulado', '').replace('subtitulada','').replace('Castellano','Español').strip()),
     (Movie.ACTORS.value, lambda l: [s.strip() for s in l.split(',')]),
     (Movie.ORIGIN.value, lambda l: [s.strip().replace('EEUU','Estados Unidos') for s in l.split('-')]),
-    (Movie.GENRE.value, lambda l: [s.strip() for s in l.split('/')])
+    (Movie.GENRE.value, lambda l: [s.strip() for s in l.split('/')]),
+    (Movie.RATING.value, format_rating),
+    (Movie.DIRECTOR.value, format_directors)
 ]
 
-def process_data(k,d):
-    for pk, pp in process_functions:
+def process_format(k,d):
+    for pk, pp in format_functions:
         if pk is k:
             return pp(d)    
     return d
+
+"""
+    ///////////////////////////////////
+"""
 
 
 def scrape_movie_data(movie):
@@ -89,7 +120,7 @@ def scrape_movie_data(movie):
         data_type = normalize_data(d.h4.get_text())
         normalized_key = index[data_type]
         data = d.p.span.get_text()
-        processed_data = process_data(normalized_key, data)
+        processed_data = process_format(normalized_key, data)
         scraped_data[normalized_key] = processed_data
 
     return movie_source_data, scraped_data
@@ -141,10 +172,13 @@ if __name__ == '__main__':
         link = m.find('a').get('href')
         s1 = get_page_and_parse(f"{base}/{link}")
         
+        print(f'Analizando {link}')
+
         """ scraping de los datos de la pelicula """
         movie_source_data, movie_data = scrape_movie_data(s1)
-        ndata = normalize_dict(movie_data)
-        movies_data.append(ndata)
+        #ndata = normalize_dict(movie_data)
+        #movies_data.append(ndata)
+        movies_data.append(movie_data)
 
         """ scraping de los datos del show """
         movie_id = get_movie_id(movie_data)

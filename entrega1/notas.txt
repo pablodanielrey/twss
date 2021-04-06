@@ -389,7 +389,23 @@ cinepolis usa un standard : "P-13"
 estrategias para resolver ese tipo de cuestiones podrían ser aplicar algún análisis de cada sitio, y generar mapeos manuales de la info en los scrapers hacia el standard que queremos manejar en el sistema.
 ej: "mayores de 16" --> "P-16"
 y usar en estos casos el standard P-X para representar las clasificaciones dentro del sistema.
-realicé un ejemplo de esto con la info de EEUU en el scraper de cinemalaplata.
+estrategia usada en el scraper de cinemalaplata.
+
+def format_rating(s):
+    atp_rating = re.compile('.*?apta\s*.*?todo\s*.*?público.*', re.IGNORECASE)
+    m = atp_rating.match(s)
+    if m:
+        return 'ATP'
+
+    yrating = re.compile('.*?(?P<years>\d+)\s*?años.*', re.IGNORECASE)
+    m = yrating.match(s)
+    if m:
+        years = m.group('years')
+        return f'P-{years}'
+    
+    return s.strip()
+
+o
 
 (Movie.ORIGIN.value, lambda l: [s.strip().replace('EEUU','Estados Unidos') for s in l.split('-')]),
 
