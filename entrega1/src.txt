@@ -7,11 +7,15 @@ el scraper de cinepolis usa selenium con el driver de chrome.
 por lo que se debe dejar en el path el driver indicado para la versión que se tenga de chrome.
 en mi caso usé la version: 89.0.4389.90 (Build oficial) (64 bits)
 
+
+Para ejecutar los pasos son:
+
 python3 src/scraper_cinema.py
 python3 src/scraper_cinepolis.py
 
-python3 src/merge.py
+y para realizar merge de la info en una base única:
 
+python3 src/merge.py
 
 los archivos generados son:
 
