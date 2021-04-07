@@ -78,13 +78,17 @@ def merge_movies(ml):
     for m in ml:
         duration = m[Movie.DURATION.value] if m[Movie.DURATION.value] > duration else duration
 
+    """ sinopsis elijo la mas larga """
+    synopsis = sorted(ml, key=lambda m: len(m[Movie.SYNOPSIS.value]))[-1][Movie.SYNOPSIS.value]
+
     mr = {
         Movie.ID.value: str(uuid.uuid4()),
         Movie.TITLE.value: title,
         Movie.ACTORS.value: actors,
         Movie.DIRECTOR.value: directors,
         Movie.GENRE.value: genres,
-        Movie.DURATION.value: duration
+        Movie.DURATION.value: duration,
+        Movie.SYNOPSIS.value: synopsis
     }
 
     """

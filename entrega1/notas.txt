@@ -81,6 +81,7 @@ Resumen del formato resultante del scraper de cinemalaplata:
             DIRECTOR:   <--- directores de la película, hay co-directores, etc. (es una lista)
             RATING:     <--- clasificación de la película.
             ACTORS:     <--- actores de la película (es una lista)
+            SYNOPSIS:   <--- sinopsis de la película.
         }
     ]
     SHOWS: [    <--- funciones en las que se reproduce la película.
@@ -112,6 +113,7 @@ Resumen del formato de cinepolis
             RATING:         <--- clasificación de la película.
             ACTORS:         <--- actores de la película (es una lista)
             DISTRIBUTION:   <--- empresa que distribuye la película
+            SYNOPSIS:       <--- sinopsis de la película
         }
     ]
     SHOWS: [    <--- funciones en las que se reproduce la película.
@@ -144,6 +146,7 @@ el formato de merge resultante es (algunas claves son opcionales, marcadas con *
             ACTORS:         <--- actores de la película (es una lista)
             DISTRIBUTION*:  <--- empresa que distribuye la película
             WEB*:           <--- web original de la película (cinemalaplata exporta esa info)
+            SYNOPSIS:       <--- sinopsis de la película.
         }
     ]
     SHOWS: [    <--- funciones en las que se reproduce la película.
@@ -294,7 +297,8 @@ shows = {
 }
 para este caso no lo vi necesario. pero es una modificación simple de realizar.
 
-
+7- En la sinopsis elegí solo guardar una. la mas larga de las de los sitios que se hacen merge.
+en base a los datos obtenidos creo que no valía la pena almacenar todas las sinopsis indicando de que sitio se sacó
 
 ------------------------------
 

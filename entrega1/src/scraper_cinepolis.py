@@ -124,6 +124,10 @@ def scrape_movie_data(driver):
 
     title_element = driver.find_element_by_xpath("/html/body/div/main/div[1]/div/h2")
     movie[Movie.TITLE.value] = title_element.get_attribute('textContent').strip()
+
+    synopsis = driver.find_element_by_xpath("//div[@id='sinopsis']")
+    movie[Movie.SYNOPSIS.value] = sanitize_data(synopsis.get_attribute('innerHTML'))
+
     md = driver.find_element_by_xpath("//div[@id='tecnicos']/p")
     mdt = md.get_attribute('innerHTML').split('<br>')
     for m in mdt:
@@ -137,6 +141,7 @@ def scrape_movie_data(driver):
                     break
             else:
                 movie[key] = sanitize_data(data)
+   
     return movie
 
 def scrape_movie_shows_data(movie_id, driver):

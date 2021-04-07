@@ -126,6 +126,9 @@ def scrape_movie_data(movie):
         processed_data = process_format(normalized_key, data)
         scraped_data[normalized_key] = processed_data
 
+    synopsis = movie_source_data.find('span', id=re.compile('Sinopsis'))
+    scraped_data[Movie.SYNOPSIS.value] = synopsis.get_text()
+
     return movie_source_data, scraped_data
 
 
