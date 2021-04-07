@@ -277,6 +277,25 @@ no me cargaba la cartelera completamente el sitio, así que quedo implementado. 
 5- No vi necesario todavía generar clases o algún esquema mas complejo. por ahora solo manejo enums para ordenar un poquito y diccionarios.
 si se complejiza mas la solución analizaré si es necesario modificar y agregar algún esquema de clases.
 
+6- Implementé relaciones mediantes ids entre las películas y los shows.
+podría haber realizado lo mismo para las salas y el manejo de horarios.
+ej:
+sala = {
+    sala_id
+    cine
+    sala
+}
+
+shows = {
+    sala_id
+    hora: xx:xx
+    idioma:
+    formato:
+}
+para este caso no lo vi necesario. pero es una modificación simple de realizar.
+
+
+
 ------------------------------
 
 PROBLEMAS ENCONTRADOS DURANTE EL DESARROLLO
