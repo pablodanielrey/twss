@@ -274,6 +274,9 @@ pero la carga por defecto de la información ya la trae. por lo que eliminé el 
 el único que quedó dentro del scraper actual es el que clickea el botón TODOS de la cartelera. me encontré con casos de pruebas randoms donde 
 no me cargaba la cartelera completamente el sitio, así que quedo implementado. parece no ser necesario pero en mis pruebas lo fué.
 
+5- No vi necesario todavía generar clases o algún esquema mas complejo. por ahora solo manejo enums para ordenar un poquito y diccionarios.
+si se complejiza mas la solución analizaré si es necesario modificar y agregar algún esquema de clases.
+
 ------------------------------
 
 PROBLEMAS ENCONTRADOS DURANTE EL DESARROLLO
