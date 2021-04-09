@@ -1,0 +1,43 @@
+Objetivo didáctico
+Reconocer el valor de contar con datos estructurados en base a estandares.
+Crear aplicaciones para extraer, de html, datos publicados con Microdata o JSON-LD (y schema.org).
+
+Requerimientos
+Para realizar este debe poder desarrollar pequeños programas en el lenguaje de su preferencia para obtener páginas web. Para probar sus programas requerirá acceso a internet. Si bien existen librerías para extraer Microdatos, en este trabajo veremos que programar los extractores no es tan complejo.
+
+Contexto
+En el TP1 usted quería construir un sitio web que ofrezca, en un solo lugar, información sobre las películas disponibles en cines de la ciudad. Quería aprovechar que esa información ya estaba disponible en la web y reusarla (integrando información de múltiples sitios).
+En ese trabajo descubrió algunos de los desafíos de esa tarea y probablemente concluyó que es esfuerzo que requiere la tarea probablemente no se justifique. En este trabajo intentaremos hacer lo mismo pero solamente enfocándonos en sitios que ofrecen información estructurada con Microdatos (Microdata), JSON-LD y los vocabularios de Schema.org.
+
+
+Tarea
+En este TP nos enfocaremos, nuevamente, solo en el aspecto de recuperar la información existente y almacenarla localmente para dejarla disponible para su futura reutilización en la eventual aplicación a desarrollar.
+Nos vamos a concentrar en combinar información de sitios que sabemos utilizan vocabularios de Schema.org y los integran en sus páginas via Microdatos, y JSON-LD. 
+
+En particular, vamos a integrar la información de estas URLs:
+
+https://www.rottentomatoes.com/m/wonder_woman_1984
+https://www.imdb.com/title/tt7126948/
+https://www.metacritic.com/movie/wonder-woman-1984
+https://www.ecartelera.com/peliculas/wonder-woman-1984
+De forma similar a como hicimos en el TP01, el objetivo es obtener toda las información que sea posible sobre esta película para integrarla en un solo archivo o base de datos (sobre el que se podrían hacer aplicaciones a futuro). Note que ahora tenemos información sobre la película y sobre opiniones de usuarios. Vea cuánto puede colectar. 
+Preste atención a las siguientes preguntas:
+
+
+¿Cuán complejos son, en comparación con los scrappers que escribió en el TP1, los extractores que tuvo que escribir ahora?
+¿Tuvo que hacer uno para cada página o pudo reutilizarlos? Si encontráramos otro sitio que hable de una pelicula utilizando Schema.org y Microdatos o JSON-LD como mecanismo de serialización, ¿podríamos utilizar estos extractores?
+¿Cuáles cree que son las ventajas y desventajas de utilizar Microdata?
+¿Cuáles cree que son las ventajas y desventajas de utilizar JSON-LD?
+¿Cuáles cree que son las ventajas y desventajas de utilizar el vocabulario de Schema.org?
+¿Cuáles cree que son los desafíos que todavía quedan por resolver?
+
+Entrega
+Este ejercicio se entrega por la plataforma (catedras.info.unlp.edu.ar). Puede hacerse de manera individual o de a pares.
+Debe entregar un archivo comprimido que incluya:
+un directorio "data" con los datos obtenidos (en el formato que usted indique, archivos planos, dump de mysql, archivo excell, etc.).
+un archivo "data.txt" que explique muy brevemente el modelo/esquema de la base de datos.
+un directorio "src" que incluya el código utilizado para obtener, extraer y almacenar los datos. Puede ser un programa único o varios programas que implementen pasos individuales del proceso.
+un archivo "src.txt" que explique brevemente cómo utilizar los programas.
+un archivo respuestas.txt en el que responde a las preguntas planteadas al final de la tarea
+Discusión y consultas
+Durante las dos semanas dedicadas al desarrollo de este trabajo discutiremos en un foro los desafíos que la tarea implica. Participar de esas discusiones es parte de la actividad y parte de la calificación del trabajo.
