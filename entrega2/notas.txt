@@ -1,3 +1,7 @@
+https://search.google.com/structured-data/testing-tool/u/0/
+
+
+
 
 los datos de json-ld siempre se cargan en forma sincrónica o podrían cargarse en forma asincrónica mediante consultas javascript?.
 esto me define que tipo de parser armar. ya que en el caso de javascript va a necesitar algun framework al estilo selenium.
