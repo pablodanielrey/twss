@@ -206,4 +206,6 @@ problema de unificación de diccionarios, es complejo hacer algo genérico.
 hace falta armar un script para unificar distintos tipos, ya que el unificar Personas es directo dentro de las propiedades del diccionario.
 el unificar Movies no es directo, ya que a la lista de actores si las unificamos sin conocer los elementos componentes e identificando su unificdad se duplican los actores.
 idem directores, etc.
+ya que la herencia no es compleja y los tipos que estamos manejando son pocos, es mas simple armar un unificador por tipo de schema.org.
+
 
