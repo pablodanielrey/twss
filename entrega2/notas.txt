@@ -209,3 +209,88 @@ idem directores, etc.
 ya que la herencia no es compleja y los tipos que estamos manejando son pocos, es mas simple armar un unificador por tipo de schema.org.
 
 
+al unificar datos que sabemos que salen de una url indicada en una propiedad de un tipo definido, sabemos que lo que nos retorna son datos pertenecientes a ese tipo.
+
+
+
+-----
+
+
+analisis de la spect de json-ld y como definir contextos:
+
+
+A node reference is a node object containing only the @id property,
+ej:
+{ @id: 'sdfdsfdsfsdfds' }
+
+
+6.1 Interpreting JSON as JSON-LD  (se agrega una cabecera HTTP Link)
+JSON documents can be interpreted as JSON-LD without having to be modified by referencing a context via an HTTP Link Header as described in § 
+6.1 Interpreting JSON as JSON-LD. It is also possible to apply a custom context using the JSON-LD 1.1 API [JSON-LD11-API].
+
+
+
+--
+In JSON-LD documents, contexts may also be specified inline.
+
+y por lo que veo todas las propiedades atómicas se definen por sobre tipos rdfs, por lo menos los de schema.org
+
+Ej: name
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "schema:name",
+  "@type": "rdf:Property",
+  "http://www.w3.org/2002/07/owl#equivalentProperty": {
+    "@id": "http://purl.org/dc/terms/title"
+  },
+  "rdfs:comment": "The name of the item.",
+  "rdfs:label": "name",
+  "rdfs:subPropertyOf": {
+    "@id": "rdfs:label"
+  },
+  "schema:domainIncludes": {
+    "@id": "schema:Thing"
+  },
+  "schema:rangeIncludes": {
+    "@id": "schema:Text"
+  }
+}
+
+aca existe algo de data de como definir contextos propios.
+https://stackoverflow.com/questions/33168490/creating-context-for-json-ld
+https://www.upbuild.io/blog/how-to-combine-multiple-schema-org-itemtype-declarations-in-a-single-script/
+
+y aca finalmente indica como crear vocabularios para agregar a los contextos
+https://stackoverflow.com/questions/38585416/can-i-add-custom-properties-to-a-given-type-in-json-ld
+
+
+https://stackoverflow.com/questions/53243358/adding-custom-properties-to-an-existing-type-in-json-ld
+
+
+3.2 IRIs
+This section is non-normative.
+
+IRIs (Internationalized Resource Identifiers [RFC3987]) are fundamental to Linked Data as that is how most nodes and properties are identified. In JSON-LD, IRIs may be represented as an IRI reference. An IRI is defined in [RFC3987] as containing a scheme along with path and optional query and fragment segments. A relative IRI reference is an IRI that is relative to some other IRI. In JSON-LD, with exceptions that are as described below, all relative IRI references are resolved relative to the base IRI.
+
+NOTE
+As noted in § 1.1 How to Read this Document, IRIs can often be confused with URLs (Uniform Resource Locators), the primary distinction is that a URL locates a resource on the web, an IRI identifies a resource. While it is a good practice for resource identifiers to be dereferenceable, sometimes this is not practical. In particular, note the [URN] scheme for Uniform Resource Names, such as UUID. An example UUID is urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6.
+
+
+
+
+-----
+
+tratar de usar pyld tira error al obtener el context de schema.org.
+
+curl http://xmlns.com/foaf/spec/ -H "Accept: application/ld+json"
+curl -i -L -H "Accept: application/ld+json" "http://schema.org"
+
+https://github.com/digitalbazaar/pyld/issues/128
+
+
+-----

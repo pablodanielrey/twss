@@ -100,7 +100,9 @@ if __name__ == '__main__':
     url = 'https://www.rottentomatoes.com/m/wonder_woman_1984'
     b = get_page_and_parse(url)
     movies = find_all_jsons(b)
-    for m in movies:
-        parse_movie_actors(m)
-        parse_movie_director(m)
-        print(json.dumps(m))
+    m = movies[0]
+    parse_movie_actors(m)
+    parse_movie_director(m)
+    print(json.dumps(m))
+    with open('data/rotten.json','w') as f:
+        f.write(json.dumps(m))
