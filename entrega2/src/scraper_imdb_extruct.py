@@ -46,6 +46,14 @@ movie
 """
 
 
+def dereference_entity(ds, base:str):
+    if type(ds) == list:
+        for d in ds:
+            if type(d) == dict:
+                dereference_urls(d, base)
+    elif type(ds) == dict:
+        dereference_urls(ds, base)
+
 
 if __name__ == '__main__':
 
@@ -55,14 +63,8 @@ if __name__ == '__main__':
     movies = get_jsons(url)
     for m in movies:
         #dereference_urls(m, base)
-        for a in m['actor']:
-            if type(a) == dict:
-                dereference_urls(a, base)
-        for a in m['director']:
-            if type(a) == dict:
-                dereference_urls(a, base)
-        for a in m['creator']:
-            if type(a) == dict:
-                dereference_urls(a, base)
+        dereference_entity(m['actor'], base)
+        dereference_entity(m['director'], base)
+        dereference_entity(m['creator'], base)
     print(json.dumps(movies[0]))
 
