@@ -68,5 +68,5 @@ if __name__ == '__main__':
         dereference_entity(m['creator'], base)
     print(json.dumps(movies[0]))
     with open('data/imdb.json', 'w') as f:
-        f.write(json.dumps(movies[0]))
+        f.write(json.dumps(movies[0],ensure_ascii=False))
 

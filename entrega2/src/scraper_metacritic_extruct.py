@@ -94,5 +94,5 @@ if __name__ == '__main__':
     print(json.dumps(movies[0]))
     """
     with open('data/metacritic.json', 'w') as f:
-        f.write(json.dumps(movies[0]))
+        f.write(json.dumps(movies[0],ensure_ascii=False))
 
