@@ -107,8 +107,6 @@ def process_list(source:dict, k:str, data:dict):
     source[k] = refs
 
 
-
-
 def process_entity(d:dict, data:dict):
     for k in d:
         if '@' in k:
@@ -121,20 +119,16 @@ def process_entity(d:dict, data:dict):
 
 if __name__ == '__main__':
 
-    files = [
-        (url, f"data/scraped_{get_file_name(url)}.json", f"data/normalized_{get_file_name(url)}.json") for url in get_urls_of_data()
-    ]
+    merged_file = 'data/merged.json'
+    data = {
+    }
 
-    #fjson = sys.argv[1]
-    for url, scraped_file, normalized_file in files:
-        data = {
-        }
+    with open(merged_file, 'r') as f:
+        doc = json.loads(f.read())
 
-        with open(scraped_file, 'r') as f:
-            doc = json.loads(f.read())
+    process_entity(doc, data)
+    data['Movie'] = doc
 
-        process_entity(doc, data)
-        data['Movie'] = doc
-
-        with open(normalized_file,'w') as f:
-            f.write(json.dumps(data, ensure_ascii=False))
+    normalized_file = 'data/final.json'
+    with open(normalized_file,'w') as f:
+        f.write(json.dumps(data, ensure_ascii=False))

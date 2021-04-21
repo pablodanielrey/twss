@@ -391,3 +391,51 @@ habria que generar algún vocabulario para implementar este tipo de situaciones.
                 "origen": "https://www.rottentomatoes.com/m/wonder_woman_1984"
             }
         ],
+
+
+en imdb por ejemplo se da duplicada la información de creador. o sea no hay unicidad de las personas.
+
+    "creator": [
+        {
+            "@type": "Person",
+            "url": "/name/nm0420941/",
+            "name": "Patty Jenkins",
+            "@context": "http://schema.org",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTg4NDA4NTQ5MF5BMl5BanBnXkFtZTgwOTA0Nzc0MzE@._V1_.jpg",
+            "jobTitle": [
+                "Director",
+                "Producer",
+                "Writer"
+            ],
+            "description": "Patty Jenkins is a writer/director best known for directing Wonder Woman, the Warner Bros./DC Comics blockbuster of 2017, and her debut feature Monster. Patty also works in television where she is best known for the pilot and finale episode of AMC's hit show The Killing. Patty began her career as a painter at The Cooper Union in New York City. Upon...",
+            "birthDate": "1971-07-24"
+        },
+        {
+            "@type": "Person",
+            "url": "/name/nm0424315/",
+            "name": "Geoff Johns",
+            "@context": "http://schema.org",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTQ2MjUyMDUxOF5BMl5BanBnXkFtZTgwMjAxNTkzODE@._V1_.jpg",
+            "jobTitle": [
+                "Producer",
+                "Writer",
+                "Additional Crew"
+            ],
+            "description": "Geoff Johns is an American comic book and television writer, film and television producer. He is the Chief Creative Officer at DC Comics, a position he has served in since 2010. His most notable work in different media has used the DC Comics characters Green Lantern, Aquaman, The Flash and Superman. In 2006, Johns co-wrote the story for the Justice ...",
+            "birthDate": "1973-01-25"
+        },
+        {
+            "@type": "Person",
+            "url": "/name/nm0420941/",
+            "name": "Patty Jenkins",
+            "@context": "http://schema.org",
+            "image": "https://m.media-amazon.com/images/M/MV5BMTg4NDA4NTQ5MF5BMl5BanBnXkFtZTgwOTA0Nzc0MzE@._V1_.jpg",
+            "jobTitle": [
+                "Director",
+                "Producer",
+                "Writer"
+            ],
+            "description": "Patty Jenkins is a writer/director best known for directing Wonder Woman, the Warner Bros./DC Comics blockbuster of 2017, and her debut feature Monster. Patty also works in television where she is best known for the pilot and finale episode of AMC's hit show The Killing. Patty began her career as a painter at The Cooper Union in New York City. Upon...",
+            "birthDate": "1971-07-24"
+        },
+        {

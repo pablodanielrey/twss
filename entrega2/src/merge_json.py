@@ -79,15 +79,21 @@ def agregate_rating_merger(dst:dict, src:dict, k:str):
     dst[k] = d
     
 
+def compare_persons(p1,p2):
+    if not p1 or not p2:
+        return False
+    if 'name' in p1 and 'name' in p2:
+        return p1['name'] == p2['name']
+    return False
+
 def merge_schema_entities(dst:dict, src:dict, k:str):
     if not dst[k]:
         dst[k] = []
     if type(dst[k]) is not list:
         dst[k] = [dst[k]]
-    if type(src[k]) is list:
-        dst[k].extend(src[k])
-        return
-    dst[k].append(src[k])
+    if type(src[k]) is not list:
+       src[k] = [src[k]]
+    dst[k].extend(src[k])
 
 movie_fields_matrix = {
     'genre': imdb_source,
@@ -142,23 +148,28 @@ def merge(dst:dict, src:dict):
 if __name__ == '__main__':
 
     files = [
-        f"data/normalized_{get_file_name(url)}.json" for url in get_urls_of_data()
+        f"data/scraped_{get_file_name(url)}.json" for url in get_urls_of_data()
     ]
 
+    """
     data = {
         'Movie': {}
     }
+    """
+    data = {}
+    
 
     for fjson in files:
         with open(fjson, 'r') as f:
             doc = json.loads(f.read())
 
-        merge_movies(data['Movie'], doc['Movie'])
+        #merge_movies(data['Movie'], doc['Movie'])
+        merge_movies(data, doc)
 
     """
         escribo el archivo final unificado
     """
     jpath, jfile = os.path.split(fjson)
-    normalized_file = f'{jpath}{os.path.sep}final.json'
+    normalized_file = f'{jpath}{os.path.sep}merged.json'
     with open(normalized_file,'w') as f:
         f.write(json.dumps(data, ensure_ascii=False))
