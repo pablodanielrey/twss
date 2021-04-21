@@ -85,6 +85,7 @@ if __name__ == '__main__':
     base = f"{scheme}://{netloc}"
     movies = get_jsons(url)
     print(json.dumps(movies[0]))
+    movies[0]['isBasedOnUrl'] = url
     """
     for m in movies:
         #dereference_urls(m, base)
@@ -93,6 +94,6 @@ if __name__ == '__main__':
         dereference_entity(m['publisher'], base)
     print(json.dumps(movies[0]))
     """
-    with open('data/metacritic.json', 'w') as f:
+    with open('data/scraped_metacritic.json', 'w') as f:
         f.write(json.dumps(movies[0],ensure_ascii=False))
 

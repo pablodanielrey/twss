@@ -304,3 +304,9 @@ https://github.com/digitalbazaar/pyld/issues/128
 
 
 -----
+
+
+creator de imdb es una lista de personas y organizaciones.
+o sea una lista no del mismo tipo
+
+y en imdb el atributo de Movie es review. falla la comprobación de google.

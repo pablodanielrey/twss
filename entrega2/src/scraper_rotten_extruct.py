@@ -82,11 +82,11 @@ if __name__ == '__main__':
     movies = get_jsons(url)
     print(json.dumps(movies[0]))
     for m in movies:
-        #dereference_urls(m, base)
+        m['isBasedOnUrl'] = url
         dereference_entity(m['actors'], base)
         dereference_entity(m['director'], base)
         dereference_entity(m['author'], base)
     print(json.dumps(movies[0]))
-    with open('data/rotten.json', 'w') as f:
+    with open('data/scraped_rotten.json', 'w') as f:
         f.write(json.dumps(movies[0],ensure_ascii=False))
 

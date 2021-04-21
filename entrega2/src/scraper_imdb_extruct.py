@@ -62,11 +62,11 @@ if __name__ == '__main__':
     base = f"{scheme}://{netloc}"
     movies = get_jsons(url)
     for m in movies:
-        #dereference_urls(m, base)
+        m['isBasedOnUrl'] = url
         dereference_entity(m['actor'], base)
         dereference_entity(m['director'], base)
         dereference_entity(m['creator'], base)
     print(json.dumps(movies[0]))
-    with open('data/imdb.json', 'w') as f:
+    with open('data/scraped_imdb.json', 'w') as f:
         f.write(json.dumps(movies[0],ensure_ascii=False))
 
