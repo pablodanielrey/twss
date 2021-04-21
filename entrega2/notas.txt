@@ -359,3 +359,21 @@ por ej image de la peli muestra el problema.
 
 
 si bien no es perfecta, es muchisimo mas simple realizar la normalización de los datos. 
+
+
+cuando se hace merge de diccionarios, por ejemplo en productionCompany
+
+        "productionCompany": {
+            "@type": "Organization",
+            "name": "Warner Bros. Pictures",
+            "mainEntityOfPage": "https://www.ecartelera.com/empresas/warner-bros/"
+        },
+
+        "productionCompany": {
+            "@type": "Organization",
+            "name": "Warner Bros. Pictures"
+        },        
+
+la opción que tome es agregarle isBasedOnURL 
+a la info cuando la genero en lista. no necesariamente está bien esto.
+habria que generar algún vocabulario para implementar este tipo de situaciones.

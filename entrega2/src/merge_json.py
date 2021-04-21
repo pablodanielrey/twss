@@ -50,8 +50,13 @@ def property_list(dst:dict, src:dict, k:str):
     acc = []
     for d in [dst,src]:
         if type(d[k]) is list:
-            acc.extend(d[k])
+            for de in d[k]:
+                if type(de) == dict:
+                    de['isBasedOnUrl'] = d['isBasedOnUrl']
+                acc.append(de)
         else:
+            if type(d[k]) == dict:
+                d[k]['isBasedOnUrl'] = d['isBasedOnUrl']
             acc.append(d[k])
     dst[k] = acc
 
@@ -74,6 +79,7 @@ def agregate_rating_merger(dst:dict, src:dict, k:str):
     dst[k] = d
     
 
+
 movie_fields_matrix = {
     'genre': imdb_source,
     'name': imdb_source,
@@ -85,7 +91,8 @@ movie_fields_matrix = {
     'image': property_list,
     'trailer': property_list,
     'isBasedOnUrl': property_list,
-    'aggregateRating': agregate_rating_merger
+    'aggregateRating': agregate_rating_merger,
+    'productionCompany': property_list
 }
 
 
