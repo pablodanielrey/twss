@@ -4,6 +4,7 @@ import sys
 import json
 import uuid
 
+from common import get_urls_of_data, get_file_name
 
 def merge_dicts(dst, src):
     ''' copia la claves de src hacia dst. si se duplican las claves entonces los valores quedan en una lista '''
@@ -55,8 +56,8 @@ def property_list(dst:dict, src:dict, k:str):
     dst[k] = acc
 
 def agregate_rating_merger(dst:dict, src:dict, k:str):
-    assert dst[k]['@type'] is 'AggregateRating'
-    assert src[k]['@type'] is 'AggregateRating'
+    assert dst[k]['@type'] == 'AggregateRating'
+    assert src[k]['@type'] == 'AggregateRating'
 
     d = {
         '@type': 'AggregateRating',
@@ -120,12 +121,8 @@ def merge(dst:dict, src:dict):
 
 if __name__ == '__main__':
 
-
     files = [
-        'data/normalized_scraped_imdb.json',
-        'data/normalized_scraped_rotten.json',
-        'data/normalized_scraped_metacritic.json',
-        'data/normalized_scraped_ecartelera.json'
+        f"data/normalized_{get_file_name(url)}.json" for url in get_urls_of_data()
     ]
 
     data = {
@@ -138,6 +135,9 @@ if __name__ == '__main__':
 
         merge_movies(data['Movie'], doc['Movie'])
 
+    """
+        escribo el archivo final unificado
+    """
     jpath, jfile = os.path.split(fjson)
     normalized_file = f'{jpath}{os.path.sep}final.json'
     with open(normalized_file,'w') as f:

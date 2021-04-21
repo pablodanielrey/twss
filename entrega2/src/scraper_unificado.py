@@ -5,6 +5,9 @@ import pprint
 import json
 from urllib.parse import urlparse
 
+
+from common import get_urls_of_data, get_file_name
+
 def get_jsons(url):
     headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"}
     r = requests.get(url, headers=headers)
@@ -59,12 +62,7 @@ def dereference_entity(ds, base:str):
             
 if __name__ == '__main__':
 
-    urls = [
-        'https://www.ecartelera.com/peliculas/wonder-woman-1984',
-        'https://www.rottentomatoes.com/m/wonder_woman_1984',
-        'https://www.metacritic.com/movie/wonder-woman-1984',
-        'https://www.imdb.com/title/tt7126948/'
-    ]
+    urls = get_urls_of_data()
     for url in urls:
         print(f"Obteniendo datos de {url}")
 
@@ -78,7 +76,7 @@ if __name__ == '__main__':
                 if k in m:
                     dereference_entity(m[k], base)
 
-        scraped_file = f"scraped_{url.split('.')[1]}.json"
+        scraped_file = f"scraped_{get_file_name(url)}.json"
         with open(f'data/{scraped_file}', 'w') as f:
             f.write(json.dumps(movies[0],ensure_ascii=False))
 

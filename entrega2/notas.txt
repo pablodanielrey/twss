@@ -334,6 +334,6 @@ asi que para ese tipo de cmapos tomo como autoridad imdb.
 --- ecartelera no sigue las convenciones de schema.org para el tipo ratingValue de AggregateRating. usa , como separador decimal.
 
 ---
-metacritic para los datos de las personas no trae nada
+metacritic para los datos de las personas no trae nada de metadatos
 ej:
   https://www.metacritic.com/person/lynda-carter

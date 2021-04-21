@@ -4,6 +4,7 @@ import sys
 import json
 import uuid
 
+from common import get_urls_of_data, get_file_name
 
 def gen_uid():
     return f'urn:uuid:{str(uuid.uuid4())}'
@@ -121,25 +122,19 @@ def process_entity(d:dict, data:dict):
 if __name__ == '__main__':
 
     files = [
-        'data/scraped_rotten.json',
-        'data/scraped_metacritic.json',
-        'data/scraped_imdb.json',
-        'data/scraped_ecartelera.json'
+        (url, f"data/scraped_{get_file_name(url)}.json", f"data/normalized_{get_file_name(url)}.json") for url in get_urls_of_data()
     ]
 
     #fjson = sys.argv[1]
-    for fjson in files:
+    for url, scraped_file, normalized_file in files:
         data = {
         }
 
-        #fjson = 'entrega2/data/rotten.json'
-        with open(fjson, 'r') as f:
+        with open(scraped_file, 'r') as f:
             doc = json.loads(f.read())
 
         process_entity(doc, data)
         data['Movie'] = doc
 
-        jpath, jfile = os.path.split(fjson)
-        normalized_file = f'{jpath}{os.path.sep}normalized_{jfile}'
         with open(normalized_file,'w') as f:
             f.write(json.dumps(data, ensure_ascii=False))
