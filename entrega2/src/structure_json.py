@@ -24,6 +24,7 @@ def process_person(p, data):
     name = p['name']
     for d in data[clazz]:
         if name == d['name']:
+            d.update(p)
             return gen_reference(d['@id'])        
 
     data[clazz].append(p)
@@ -37,6 +38,7 @@ def process_review(p, data):
     r = p['reviewBody']
     for d in data[clazz]:
         if r == d['reviewBody']:
+            d.update(r)
             return gen_reference(d['@id'])        
 
     process_entity(p, data)
@@ -102,7 +104,8 @@ def process_list(source:dict, k:str, data:dict):
             data[clazz] = []
         process = process_matrix[clazz]
         ref = process(d, data)
-        refs.append(ref)
+        if ref not in refs:
+            refs.append(ref)
 
     source[k] = refs
 
