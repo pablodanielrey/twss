@@ -1,0 +1,26 @@
+La estructura final del archivo json existen 3 claves principales.
+
+{
+    movie: {
+        Datos de la película
+    },
+    person: [
+        {
+            Persona1
+        },
+        {
+            Persona2
+        },
+        ....
+    ],
+    review: [
+        {
+            Review1
+        },
+        {
+            Review2
+        },
+        ...
+    ]
+}
+
