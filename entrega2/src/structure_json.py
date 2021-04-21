@@ -120,7 +120,6 @@ def process_entity(d:dict, data:dict):
 
 if __name__ == '__main__':
 
-
     files = [
         'data/scraped_rotten.json',
         'data/scraped_metacritic.json',

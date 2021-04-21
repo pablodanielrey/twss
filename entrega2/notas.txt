@@ -310,3 +310,30 @@ creator de imdb es una lista de personas y organizaciones.
 o sea una lista no del mismo tipo
 
 y en imdb el atributo de Movie es review. falla la comprobación de google.
+
+
+---
+
+
+en el caso de hacer los merges existen problemas de idioma. 
+por ejemplo los géneros quedan:
+"genre": [
+            "Action",
+            "Adventure",
+            "Fantasy",
+            "Action & Adventure",
+            "Science Fiction & Fantasy",
+            "Acción",
+            "Aventura",
+            "Fantasía"
+        ],
+
+asi que para ese tipo de cmapos tomo como autoridad imdb.
+
+
+--- ecartelera no sigue las convenciones de schema.org para el tipo ratingValue de AggregateRating. usa , como separador decimal.
+
+---
+metacritic para los datos de las personas no trae nada
+ej:
+  https://www.metacritic.com/person/lynda-carter
