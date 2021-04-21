@@ -1,0 +1,35 @@
+El ejercicio se divide en 3 etapas.
+1 - scraping
+2 - merging
+3 - structure y deduplicación
+
+Para ejecutar todas las etapas se deben estar parado sobre la raiz del proyecto.
+
+Etapa1 - scraping:
+
+    python3 src/scraper_unificado.py
+
+la salida de esta etapa son archivos dentro de data/
+con la info scrapeada de los sitios.
+
+
+Etapa2 - merging
+
+    python3 src/merge_json.py
+
+la salida de esta etapa es un archivo data/merged.json
+con el merge de la info scrapeada
+
+
+Etapa3 - structure y deduplicación
+
+    python3 src/structure_json.py
+
+la salida de esta etapa es un archivo data/final.json
+con la info reestructurada y deduplicada (las personas y reviews pueden venir duplicados de las 
+fuentes de datos y/o pertenecer a múltiples campos)
+ej: 
+Patty Jenkins 
+aparece como director, creador y autor.
+
+
