@@ -52,11 +52,11 @@ def property_list(dst:dict, src:dict, k:str):
         if type(d[k]) is list:
             for de in d[k]:
                 if type(de) == dict:
-                    de['isBasedOnUrl'] = d['isBasedOnUrl']
+                    de['origen'] = d['origen']
                 acc.append(de)
         else:
             if type(d[k]) == dict:
-                d[k]['isBasedOnUrl'] = d['isBasedOnUrl']
+                d[k]['origen'] = d['origen']
             acc.append(d[k])
     dst[k] = acc
 
@@ -79,6 +79,15 @@ def agregate_rating_merger(dst:dict, src:dict, k:str):
     dst[k] = d
     
 
+def merge_schema_entities(dst:dict, src:dict, k:str):
+    if not dst[k]:
+        dst[k] = []
+    if type(dst[k]) is not list:
+        dst[k] = [dst[k]]
+    if type(src[k]) is list:
+        dst[k].extend(src[k])
+        return
+    dst[k].append(src[k])
 
 movie_fields_matrix = {
     'genre': imdb_source,
@@ -92,7 +101,11 @@ movie_fields_matrix = {
     'trailer': property_list,
     'isBasedOnUrl': property_list,
     'aggregateRating': agregate_rating_merger,
-    'productionCompany': property_list
+    'productionCompany': property_list,
+    'director': merge_schema_entities,
+    'actor': merge_schema_entities,
+    'review': merge_schema_entities
+
 }
 
 

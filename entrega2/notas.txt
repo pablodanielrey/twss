@@ -374,6 +374,20 @@ cuando se hace merge de diccionarios, por ejemplo en productionCompany
             "name": "Warner Bros. Pictures"
         },        
 
-la opción que tome es agregarle isBasedOnURL 
+la opción que tome es agregarle un origen
 a la info cuando la genero en lista. no necesariamente está bien esto.
 habria que generar algún vocabulario para implementar este tipo de situaciones.
+
+        "productionCompany": [
+            {
+                "@type": "Organization",
+                "name": "Warner Bros. Pictures",
+                "mainEntityOfPage": "https://www.ecartelera.com/empresas/warner-bros/",
+                "origen": "https://www.ecartelera.com/peliculas/wonder-woman-1984"
+            },
+            {
+                "@type": "Organization",
+                "name": "Warner Bros. Pictures",
+                "origen": "https://www.rottentomatoes.com/m/wonder_woman_1984"
+            }
+        ],

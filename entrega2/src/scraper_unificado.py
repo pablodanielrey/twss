@@ -89,7 +89,11 @@ if __name__ == '__main__':
         
         for m in movies:
             m['isBasedOnUrl'] = url
-            for k in ['actors', 'director', 'author', 'actor', 'creator']:
+            m['origen'] = url
+            if 'actors' in m:
+                m['actor'] = m['actors']
+                del m['actors']
+            for k in ['director', 'author', 'actor', 'creator']:
                 if k in m:
                     dereference_entity(m[k], base)
             normalize_movie(m)
