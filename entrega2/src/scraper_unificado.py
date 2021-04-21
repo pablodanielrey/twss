@@ -59,6 +59,23 @@ def dereference_entity(ds, base:str):
     elif type(ds) == dict:
         dereference_urls(ds, base)
 
+
+"""
+    ///////////////////
+    ejemplo de función de normalización de datos
+    ///////////////////
+"""
+
+
+def normalize_movie(m):
+    if 'aggregateRating' in m:
+        ar = m['aggregateRating']
+        for k in ['bestRating', 'worstRating', 'ratingCount', 'ratingValue']:
+            if type(ar[k]) is str:
+                ar[k] = float(ar[k].replace(',','.').strip())
+            else:
+                ar[k] = float(ar[k])
+
             
 if __name__ == '__main__':
 
@@ -75,6 +92,7 @@ if __name__ == '__main__':
             for k in ['actors', 'director', 'author', 'actor', 'creator']:
                 if k in m:
                     dereference_entity(m[k], base)
+            normalize_movie(m)
 
         scraped_file = f"scraped_{get_file_name(url)}.json"
         with open(f'data/{scraped_file}', 'w') as f:

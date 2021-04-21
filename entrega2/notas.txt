@@ -337,3 +337,25 @@ asi que para ese tipo de cmapos tomo como autoridad imdb.
 metacritic para los datos de las personas no trae nada de metadatos
 ej:
   https://www.metacritic.com/person/lynda-carter
+
+
+  ---
+
+
+aprendizaje:
+
+distintas formas de representar lo mismo. hace falta normalizar a todos objetos de Schema.org (hacer algo como las referencias a los objetos)
+por ej image de la peli muestra el problema.
+
+          "image": [
+            {
+                "@type": "ImageObject",
+                "url": "https://img.ecartelera.com/carteles/13100/13170/009_p.jpg"
+            },
+            "https://resizing.flixster.com/m8G6eIbecl1KNYf1yd2lt2F5yX8=/740x380/v1.bjsyNTUxODM4O2o7MTg4Mzk7MTIwMDs0MTIyOzIzMTI",
+            "https://static.metacritic.com/images/products/movies/4/9d1a4650bb42f43a0a781bfa70a7772d.jpg",
+            "https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+        ],
+
+
+si bien no es perfecta, es muchisimo mas simple realizar la normalización de los datos. 
