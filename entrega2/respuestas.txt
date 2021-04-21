@@ -1,0 +1,56 @@
+¿Cuán complejos son, en comparación con los scrappers que escribió en el TP1, los extractores que tuvo que escribir ahora?
+
+muchísimo mas simple!! hasta me permitió unificar los scrapers en uno solo para múltiples fuentes de forma casi instantenea.
+
+¿Tuvo que hacer uno para cada página o pudo reutilizarlos? Si encontráramos otro sitio que hable de una pelicula utilizando Schema.org y Microdatos o JSON-LD como mecanismo de serialización, ¿podríamos utilizar estos extractores?
+
+si, solo hace falta analizar un poco la estrcutura que retorna la nueva fuente de datos, y si cumple totalmente con Schema.org o necesita algunos ajustes.
+pero es posible agregar la fuente de datos al scraper unificado y obtendriamos la info de la fuente. 
+
+¿Cuáles cree que son las ventajas y desventajas de utilizar Microdata?
+
+toda la información exportada por microdata duplicaba información exportada en json-ld, por lo que la descarté completamente.
+usando librerías que extraigan esa info como extruct, desde el lado de la programación del scraper es indistinto usar microdata o json-ld
+pero en el caso de que haya que desarrollar un scraper sin librerías que lo resuelvan, microdata se torna un poco mas dificil de parsear, ya que es necesario parsear los tags y sus propiedades.
+en el caso de que los tags se generen en base a nuevos requerimientos disparados por javascript, es necesario una herramienta estilo selenium para poder disparar esas consultas y después parsear nuevamente el dom en busca de microdata.
+el problema principal es que está asociado a tags dentro del html generado. 
+en json-ld es my simple importar la información a un objeto javascript con un formato mas o menos standard.
+en microdata es mas compleja esta generación.
+no veo ninguna ventaja por sobre json-ld
+
+¿Cuáles cree que son las ventajas y desventajas de utilizar JSON-LD?
+
+mucho mas simple de parsear
+no es necesario herramientas como selenium para poder obtenerlo.
+las urls e ids, permiten apuntar a un contenido que no sea el archivo json mismo si no que puede ser redireccionado por una cabecera LINK en el http.
+super flexible. ya que se pueden usar multiples contextos, definir nuevos vocabularios, etc.
+tiene varias posibles representaciones de los mismos datos, y existen procesadores que permiten cambiar estas. flatten, compact, expanded
+
+¿Cuáles cree que son las ventajas y desventajas de utilizar el vocabulario de Schema.org?
+
+una desventaja es que no existen todos los conceptos representados dentro de schema.org
+otra desventaja es que es complejo de entender la jerarquía al principio. y no está claro 
+una ventaja es que es un standard acordado por empresas principales, y por lo que he leído es uno de los vocabularios principales usados.
+
+
+¿Cuáles cree que son los desafíos que todavía quedan por resolver?
+
+identificación global de las entidades usadas, eso es un desafío importante a analizar. requeriría de algún registro de entidades?
+aderir mas estrictamente al vocabulario, algunos sitios implementan solo algunas cosas de json-ld y schema.org.
+alguna forma de ponderar la información exportada, por ejemplo imdb que sea la fuente oficial de películas, samsung que sea la fuente oficial de los celulares marca samsung (como explicaba casco en la teoría), etc.
+
+a mi en particular definir vocabularios propios. no llegué a terminar con eso.
+y realizar scrapers mas robustos que normalicen la información a un solo tipo de representación. 
+por ej image de la peli
+
+          "image": [
+            {
+                "@type": "ImageObject",
+                "url": "https://img.ecartelera.com/carteles/13100/13170/009_p.jpg"
+            },
+            "https://resizing.flixster.com/m8G6eIbecl1KNYf1yd2lt2F5yX8=/740x380/v1.bjsyNTUxODM4O2o7MTg4Mzk7MTIwMDs0MTIyOzIzMTI",
+            "https://static.metacritic.com/images/products/movies/4/9d1a4650bb42f43a0a781bfa70a7772d.jpg",
+            "https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+        ],
+
+

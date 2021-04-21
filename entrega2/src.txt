@@ -4,6 +4,8 @@ El ejercicio se divide en 3 etapas.
 3 - structure y deduplicación
 
 Para ejecutar todas las etapas se deben estar parado sobre la raiz del proyecto.
+e instaladas las dependencias usando:
+pip3 install -r requirements.txt
 
 Etapa1 - scraping:
 
@@ -33,3 +35,11 @@ Patty Jenkins
 aparece como director, creador y autor.
 
 
+-----
+
+dentro de src/scrapers deje los scrapers iniciales no unificados.
+también uno de los scrapers usa bs4 que fue reemplazado por extruct en los demás.
+
+
+dentro de src/pruebas
+deje algunos scripts de pruebas, para jugar con el formato json-ld, y el scraper inicial con bs4.

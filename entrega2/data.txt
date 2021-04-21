@@ -1,26 +1,79 @@
-La estructura final del archivo json existen 3 claves principales.
+La estructura de datos elegida es un json que consiste de 3 claves principales.
 
 {
     movie: {
         Datos de la película
+        actor: [
+            {@id:......},
+            {@id:......},
+            {@id:......},
+            ....
+        ],
+        review: [
+            {@id:......},
+            {@id:......},
+            {@id:......},
+        ]
+
     },
     person: [
         {
+            @id: .....
             Persona1
         },
         {
+            @id: ......
             Persona2
         },
         ....
     ],
     review: [
         {
+            @id: ....
             Review1
         },
         {
+            @id: .....
             Review2
         },
         ...
     ]
 }
 
+
+la idea de mantener este formato fué motivada por la especificación de json-ld
+y la posibilidad de ahora generar links entre los nodos del grafo de información almancenada en el json.
+al ser nativas dentro del formato las referencias entre los nodos me permitió realizar algo similar al tp1.
+si bien ahora las relaciones no son entre salas y películas, si no que son personas con películas y reviews con películas.
+dentro de la película se mantienen las referencias a los nodos.
+
+me pareció interesante explorar este formato para analizar las posibilidades, así este ejercicio sirve para poder entender mejor el formato que se consume 
+desde las fuentes de datos y como procesarlos.
+
+las relaciones se generan como indica la especificación del json-ld
+un solo nodo, con una sola propiedad id
+{
+    '@id': '.....'
+}
+
+para el contenido de @id elegí usar una IRI válida pero generada por un uuid. (también indicado en la especificación)
+o sea urn:uuid:.......
+
+también podría haber usado referencias a nodos internos al json. que serían del estilo "_:...."
+idem a cuando se produce el flatten del arbol mediante algún procesador de json-ld
+(deje un ejemplo de esto dentro de la carpeta data/adicionales/flatten_imdb.json)
+
+
+
+------
+3.2 IRIs
+This section is non-normative.
+
+IRIs (Internationalized Resource Identifiers [RFC3987]) are fundamental to Linked Data as that is how most nodes and properties are identified. In JSON-LD, IRIs may be represented as
+ an IRI reference. An IRI is defined in [RFC3987] as containing a scheme along with path and optional query and fragment segments. A relative IRI reference is an IRI that is relative to some 
+ other IRI. In JSON-LD, with exceptions that are as described below, all relative IRI references are resolved relative to the base IRI.
+
+NOTE
+As noted in § 1.1 How to Read this Document, IRIs can often be confused with URLs (Uniform Resource Locators), the primary distinction is that a URL locates a resource on the web, 
+an IRI identifies a resource. While it is a good practice for resource identifiers to be dereferenceable, sometimes this is not practical. In particular, note the [URN] scheme for Uniform Resource Names, such as UUID. 
+An example UUID is urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6
