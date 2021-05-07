@@ -1,0 +1,79 @@
+TP 03 - RDF y OWL
+TP - 03: RDF Y OWL
+Objetivo didáctico
+Identificar los elementos centrales del modelo RDF, RDFS y OWL. Aplicar estos conceptos al modelado de un dominio y combinarlos con vocabularios existentes (por ejemplo: FOAF, Dublin Core, SIOC).
+
+Requerimientos
+Para realizar este trabajo práctico debe diseñar un modelo OWL del dominio de las películas, las funciones y las opiniones con el que estuvo trabajando en la materia durante los primeros dos trabajos prácticos. Para poder realizar este trabajo deberá utilizar los datos extraídos anteriormente (o lo mecanismos con los que los extrajo) y publicarlos en los formatos RDF (en su notación turtle).
+
+Contexto
+En los trabajos prácticos anteriores Ud. debió definir formas para extraer información de diferentes sitios Webs. Para ello fue necesario programar extractores que analizando las paginas debían encontrar los textos en el documento web que representaban, por ejemplo, al titulo de una pelicula, a su idioma, etc.
+
+
+
+La complejidad de la primera tarea residia en que los datos no estaban estructurados, los datos poseían diferentes representaciones entre sitios (por ejemplo las fechas y los horarios). Con la ayuda de los microdatos/json-ld fue posible realizar la extracción de una forma un poco más automatizable ya que los datos tenían mayor estructura, sin embargo igual existen dificultades como por ejemplo identificar a un mismo recurso dentro de una página y el formato de los datos continúa siendo una dificultad. Cuanto la información (complementaria y/o redundante) se encontraba en distintos sitios, era difícil integrarla.
+
+
+
+En este trabajo intentaremos representar la información de una forma que sea estructurada, con datos siguiendo un formato definido y con la capacidad de identificar los elementos en forma unívoca. Además, será posible integrar información parcial proveniente de distintos sitios.
+
+Tarea
+Representar y publicar la información que pudieron extraer sobre películas y funciones en los trabajos anteriores, pero en formatos compatibles con la Web Semántica. En otras palabras, el resultado de esta tarea será un documento OWL con la información que puede extraer de la web, utilizando en gran medida la herramienta Protegé.
+
+ 
+
+Dentro de esta tarea deberá:
+
+Analizar los conceptos y elementos que representen la información contenida en las bases de películas y salas.
+¿Qué clases de elementos hay?
+¿Qué propiedades para esos elementos detecta? ¿Qué clases?
+En función del análisis anterior chequear si ya existen vocabularios que modelen el dominio de películas, funciones, etc. Para esto ayudese con todo lo visto en la materia y con el buscador de vocabularios LOV (http://lov.okfn.org) - sugerimos mirar Dublin Core, SIOC, FOAF, Schema.org .
+Escribir un archivo OWL utilizando la herramienta Protegé (https://protege.stanford.edu) en su versión de escritorio, que modele y describa la información de películas, salas y horarios.
+El archivo lo genererá utilizando la herramienta para definir las clases, datatype properties, objectproperties y todo lo que considere necesario. 
+Agrege individuals a su representación.
+Adapte su scrapper anterior para que la información la deposite siguiendo su definición en OWL. Es decir, el output de su scrapper debe esribir la parte de individuals de su OWL
+
+Responda:
+
+ 
+
+¿Qué ventajas supone que hubiese obtenido si en los trabajos anteriores contaba con la información descrita en OWL?
+
+¿Qué ventajas tiene utilizar vocabularios existentes en lugar de crear los propios?
+
+¿Utilizó solamente clases y propiedades de un único vocabulario?
+
+¿Que impacto hubiese tenido al momento de almacenar la información obtenida el contar con un modelo como OWL?
+¿Qué diferencia hay entre utilizar un modelo de objetos para integrar la información que obtuvo (como hizo anteriormente) con utilizar tripletas?
+¿Cuán dificil es generar archivos OWL en otros formatos (por ejemplo N3, RDF/XML) a partir de la información que tiene? Y con su scrapper.
+ Entrega
+
+Este ejercicio se entrega por esta plataforma 
+
+Puede hacerse de manera individual o de a pares.
+
+Debe entregar un archivo comprimido que incluya:
+
+un directorio "data" que contiene:
+
+el archivo resultado OWL sobre las peliculas, salas y horarios.
+
+si partió de un archivo JSON o base de datos (resultado del TP anterior) también deberá incluirlo
+
+
+un directorio "src" que incluya el código de su scrapper utilizado para generar el archivo. Puede ser un programa único o  varios programas que implementen pasos individuales del proceso.
+
+un archivo "src.txt" que explique brevemente cómo utilizar los programas y que a partir de la base de datos en “data” genera nuevamente el archivo OWL.
+
+
+un archivo respuestas.txt en el que responde a las preguntas planteadas al final de la tarea
+
+Discusión y consultas
+Durante las dos semanas dedicadas al desarrollo de este trabajo discutiremos en un foro los desafíos que la tarea implica. Participar de esas discusiones es parte de la actividad y parte de la calificación del trabajo.
+
+Evaluación
+Suficiente: Generael modelo OWL de manera adecuada y lo escribe en un archivo en alguno de los tres formatos sugeridos. Parte desde el archivo obtenido en el trabajo anterior.
+
+ 
+
+Muy bueno: Genera el modelo OWL de manera adecuada. Reutiliza la lógica de extracción del TP anterior (o la escribe de cero), construye directamente el modelo OWL (sin pasar por un modelo de objetos). Responde las preguntas. Participa activamente de la discusión en los foros.
