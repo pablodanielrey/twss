@@ -24,14 +24,14 @@ Representar y publicar la información que pudieron extraer sobre películas y f
 
 Dentro de esta tarea deberá:
 
-Analizar los conceptos y elementos que representen la información contenida en las bases de películas y salas.
-¿Qué clases de elementos hay?
-¿Qué propiedades para esos elementos detecta? ¿Qué clases?
-En función del análisis anterior chequear si ya existen vocabularios que modelen el dominio de películas, funciones, etc. Para esto ayudese con todo lo visto en la materia y con el buscador de vocabularios LOV (http://lov.okfn.org) - sugerimos mirar Dublin Core, SIOC, FOAF, Schema.org .
-Escribir un archivo OWL utilizando la herramienta Protegé (https://protege.stanford.edu) en su versión de escritorio, que modele y describa la información de películas, salas y horarios.
-El archivo lo genererá utilizando la herramienta para definir las clases, datatype properties, objectproperties y todo lo que considere necesario. 
-Agrege individuals a su representación.
-Adapte su scrapper anterior para que la información la deposite siguiendo su definición en OWL. Es decir, el output de su scrapper debe esribir la parte de individuals de su OWL
+1 -Analizar los conceptos y elementos que representen la información contenida en las bases de películas y salas.
+2 - ¿Qué clases de elementos hay?
+3 - ¿Qué propiedades para esos elementos detecta? ¿Qué clases?
+4 - En función del análisis anterior chequear si ya existen vocabularios que modelen el dominio de películas, funciones, etc. Para esto ayudese con todo lo visto en la materia y con el buscador de vocabularios LOV (http://lov.okfn.org) - sugerimos mirar Dublin Core, SIOC, FOAF, Schema.org .
+5 - Escribir un archivo OWL utilizando la herramienta Protegé (https://protege.stanford.edu) en su versión de escritorio, que modele y describa la información de películas, salas y horarios.
+6 - El archivo lo genererá utilizando la herramienta para definir las clases, datatype properties, objectproperties y todo lo que considere necesario. 
+7 - Agrege individuals a su representación.
+8 - Adapte su scrapper anterior para que la información la deposite siguiendo su definición en OWL. Es decir, el output de su scrapper debe esribir la parte de individuals de su OWL
 
 Responda:
 
@@ -77,3 +77,8 @@ Suficiente: Generael modelo OWL de manera adecuada y lo escribe en un archivo en
  
 
 Muy bueno: Genera el modelo OWL de manera adecuada. Reutiliza la lógica de extracción del TP anterior (o la escribe de cero), construye directamente el modelo OWL (sin pasar por un modelo de objetos). Responde las preguntas. Participa activamente de la discusión en los foros.
+
+
+
+
+
