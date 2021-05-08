@@ -1,0 +1,103 @@
+idea, como comentó casco en el foro, esta bueno pensar en tripletas en vez de en clases.
+asi que voy a hacer la prueba de cargar los jsons-ld que responden los sitios a tripletas y manejarlos internamente en el scraper como tripletas.
+para todas las operaciones posteriores realizarlas en el grafo.
+
+
+genero un parser para ver si puedo parsear la info json-ld a tripletas.
+uso rdflib para testear.
+
+
+primer problema encontrado:
+
+
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/context.py", line 65, in subcontext
+    ctx.load(source)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/context.py", line 200, in load
+    self._prep_sources(base, source, sources)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/context.py", line 213, in _prep_sources
+    source = source_to_json(source_url)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/util.py", line 28, in source_to_json
+    return json.load(StringIO(stream.read().decode('utf-8')))
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte
+
+
+cuando leo detenidamente el fuente de rdflib_jsonld está tratando de cargar contextos, no es relacionado a los datos de entrada del json fuente que les estoy dando.
+por lo que veo es un bug de schema.org
+
+https://github.com/RDFLib/rdflib-jsonld/issues/84
+
+
+
+efectivamente trata de descargar el context de schema.org ya que el json-ld de origen lo lista como contexto.
+viendo el tráfico de red generado cuando ejecuto el script. veo que se comunica con schema.org
+
+    192.168.10.5.45910 > 172.217.172.78.80: Flags [P.], cksum 0x913d (correct), seq 1:213, ack 1, win 502, options [nop,nop,TS val 1128910949 ecr 556658059], length 212: HTTP, length: 212
+	GET / HTTP/1.1
+	Accept-Encoding: identity
+	Host: schema.org
+	User-Agent: rdflib-5.0.0 (http://rdflib.net/; eikeon@eikeon.com)
+	Accept: application/ld+json, application/json;q=0.9, */*;q=0.1
+	Connection: close
+	
+19:05:23.272368 IP (tos 0x0, ttl 58, id 34438, offset 0, flags [none], proto TCP (6), length 52)
+    172.217.172.78.80 > 192.168.10.5.45910: Flags [.], cksum 0x7e6a (correct), ack 213, win 261, options [nop,nop,TS val 556658075 ecr 1128910949], length 0
+19:05:23.272417 IP (tos 0x0, ttl 58, id 34439, offset 0, flags [none], proto TCP (6), length 52)
+    172.217.172.78.80 > 192.168.10.5.45910: Flags [.], cksum 0x7e6a (correct), ack 213, win 261, options [nop,nop,TS val 556658075 ecr 1128910949], length 0
+19:05:23.445763 IP (tos 0x0, ttl 58, id 34553, offset 0, flags [none], proto TCP (6), length 303)
+    172.217.172.78.80 > 192.168.10.5.45910: Flags [P.], cksum 0xcb52 (correct), seq 1:252, ack 213, win 261, options [nop,nop,TS val 556658250 ecr 1128910949], length 251: HTTP, length: 251
+	HTTP/1.1 301 Moved Permanently
+	Location: https://schema.org/
+	X-Cloud-Trace-Context: 5dd336392bd7d9264f23ac7362a8d2e3;o=1
+	Date: Sat, 08 May 2021 22:05:23 GMT
+	Content-Type: text/html
+	Server: Google Frontend
+	Content-Length: 0
+	Connection: close
+	
+
+
+curl -v -H "accept: application/ld+json" "http://schema.org"
+https://github.com/schemaorg/schemaorg/issues/2578
+
+
+
+el problema es generado por la cabecera link de shcema.org
+es parte de la especificación de json-ld 1.1 pero parece que las librerías todavia no lo han actualizado.
+asi que modifico HORRIBLEMENTE la librería como dicen en los issues de github para que carge del archivo local el contexto de schema.org
+
+
+rdflib_jsonld/context.py
+
+    def _prep_sources(self, base, inputs, sources, referenced_contexts=None,
+            in_source_url=None):
+        referenced_contexts = referenced_contexts or set()
+        for source in inputs:
+            if isinstance(source, str):
+                source_url = urljoin(base, source)
+
+                ''' TODO: horrible hack: sacado: https://github.com/RDFLib/rdflib-jsonld/issues/84 '''
+                if "/schema.org" in source_url:
+                    source_url = "src/jsonldcontext.jsonld"
+
+                if source_url in referenced_contexts:
+                    raise errors.RECURSIVE_CONTEXT_INCLUSION
+                referenced_contexts.add(source_url)
+                source = source_to_json(source_url)
+                if CONTEXT not in source:
+                    raise errors.INVALID_REMOTE_CONTEXT
+            else:
+                source_url = in_source_url
+
+            if isinstance(source, dict):
+                if CONTEXT in source:
+                    source = source[CONTEXT]
+                    source = source if isinstance(source, list) else [source]
+            if isinstance(source, list):
+                self._prep_sources(base, source, sources, referenced_contexts, source_url)
+            else:
+                sources.append((source_url, source))
+
+
+-----
+
+
