@@ -1,0 +1,22 @@
+¿Qué ventajas supone que hubiese obtenido si en los trabajos anteriores contaba con la información descrita en OWL?
+
+¿Qué ventajas tiene utilizar vocabularios existentes en lugar de crear los propios?
+
+al usar vocabularios existentes se mejora la compatibilidad que existe con la información de otros sitios, ej si todos usamos la clase Person de foaf
+para representar las personas de nuestra información, facilitamos la interpretación de esta misma por parte de herraminetas de análisis.
+Idealmente debería existir un solo vocabulario para cada uno de los dominios de aplicación.
+El problema de generar un vocabulario único para cada dominio, es que estos imponen ciertas restricciones semánticas, lo cual lo hace impráctico en el uso de situaciones para las cuales no estaba diseñado.
+
+
+Un ejemplo claro de esto es lo que ocurre con schema.org, donde el foco esta en estructurar la información pero sin imponer demasiadas restricciones semánticas, permitiendo que 
+se exporte al menos algún tipo de información.
+
+
+
+¿Utilizó solamente clases y propiedades de un único vocabulario?
+
+¿Que impacto hubiese tenido al momento de almacenar la información obtenida el contar con un modelo como OWL?
+
+¿Qué diferencia hay entre utilizar un modelo de objetos para integrar la información que obtuvo (como hizo anteriormente) con utilizar tripletas?
+
+¿Cuán dificil es generar archivos OWL en otros formatos (por ejemplo N3, RDF/XML) a partir de la información que tiene? Y con su scrapper.
