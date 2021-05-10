@@ -32,8 +32,17 @@
           rdfs:range owl:Thing .
 
 
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#movie
+:movie rdf:type owl:ObjectProperty ;
+       rdfs:domain :Show ;
+       rdfs:range :Movie ;
+       rdfs:label "Película que se reproduce" .
+
+
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#showsIn
-:showsIn rdf:type owl:ObjectProperty .
+:showsIn rdf:type owl:ObjectProperty ;
+         rdfs:domain :Show ;
+         rdfs:range :ShowRoom .
 
 
 #################################################################
@@ -84,6 +93,13 @@
       rdfs:label "Nombre" .
 
 
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#showFormat
+:showFormat rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Show ;
+            rdfs:range xsd:string ;
+            rdfs:label "Formato de reproducción de la película" .
+
+
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#showLanguage
 :showLanguage rdf:type owl:DatatypeProperty ;
               rdfs:domain :Show ;
@@ -93,7 +109,8 @@
 
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#showTime
 :showTime rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Show .
+          rdfs:domain :Show ;
+          rdfs:label "Horario de reproducción de la película" .
 
 
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#synopsis

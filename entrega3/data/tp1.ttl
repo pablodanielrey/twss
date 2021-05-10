@@ -1,0 +1,1678 @@
+@prefix twss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+twssd:show_00047259-4eff-4aa4-aea8-259f881fcc01 a twss:Show ;
+    twss:movie twssd:On_a_magical_night ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "19:50" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_00faffa5-ccdc-4792-8d4a-cb928a5d13b9 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_6b877666-9b31-4e23-a2d2-cb4a524adf11 .
+
+twssd:show_02378baa-e2b9-468a-983a-5f858e6d3283 a twss:Show ;
+    twss:movie twssd:La_noche_magica ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:40" ;
+    twss:showsIn twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd .
+
+twssd:show_03de2ed6-43f1-4539-a4de-f76b942d7c50 a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_054533e6-5ac3-4e93-bd0d-3ca69cc29506 a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_d8f71d9f-344d-4e26-967a-55252bc21ddf .
+
+twssd:show_056788fb-f21a-47f8-8a7d-c54d914d8d58 a twss:Show ;
+    twss:movie twssd:Los_Intrusos ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "16:00",
+        "20:30" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_064074e8-4b0b-4afb-919b-6d44a25cf793 a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_324c32b7-fb88-48ea-8a3c-37715dd6d828 .
+
+twssd:show_0b2c5900-b375-4222-861d-d88f9c146428 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_55ef7a75-5a78-44d6-93a5-2d1af22b0b2f .
+
+twssd:show_0f044e16-c833-43c0-b841-3f364a98f928 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_ef4fab92-c7e6-4138-bc2d-7cc4f9950c6c .
+
+twssd:show_0f9595a0-0cc2-405f-b45e-63b256de6fb0 a twss:Show ;
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "19:45" ;
+    twss:showsIn twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e .
+
+twssd:show_14f63db8-3cab-487b-b751-e53fa06b7e11 a twss:Show ;
+    twss:movie twssd:On_a_magical_night ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "14:00",
+        "18:00",
+        "20:00",
+        "22:00" ;
+    twss:showsIn twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e .
+
+twssd:show_1605eb0f-2f5a-4f8b-aef0-7bca23513ed7 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_89b247f5-0429-40d1-bd2f-a8391850d2e2 .
+
+twssd:show_17db4c09-1c81-45d8-8c3b-8ab305c52157 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_188fe272-c6b9-4428-9406-663cc0361b7e a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_4fe8e8e0-ce28-4f5e-a7b4-45ceba9c0cd6 .
+
+twssd:show_1a47febc-815c-41f2-ad54-73d2ca96598f a twss:Show ;
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:10",
+        "15:25",
+        "17:45",
+        "20:00" ;
+    twss:showsIn twssd:showroom_b0e48c99-11af-4761-9680-eebfc22ddce0 .
+
+twssd:show_1da2fe94-ff4d-4c22-ab2e-a994f9ae6d35 a twss:Show ;
+    twss:movie twssd:Tenet ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:10" ;
+    twss:showsIn twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 .
+
+twssd:show_1e2159c9-e748-4a91-9f43-7e964f72d029 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "15:30",
+        "23:00" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_27617a7e-956d-40ce-8676-beac50fc59ea a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 .
+
+twssd:show_2c34a939-3b26-4cc4-9d75-5459c1496df2 a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:45",
+        "18:15" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_2fd25a02-4efd-45bd-8d98-e5331fbdca02 a twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_ef2265f8-0b56-4b76-981d-35bac4d8a423 .
+
+twssd:show_31ad6621-dfc3-4cf3-9ce2-2412f44f4260 a twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_ef2265f8-0b56-4b76-981d-35bac4d8a423 .
+
+twssd:show_346776bf-e731-4003-a0dc-a24de77298c2 a twss:Show ;
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:45",
+        "16:45",
+        "19:45" ;
+    twss:showsIn twssd:showroom_d701a6a6-36a9-405f-8dae-1a62222a7557 .
+
+twssd:show_3493e7b9-1d75-4d5c-8021-2581a9d13fca a twss:Show ;
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:00",
+        "15:15",
+        "17:30" ;
+    twss:showsIn twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e .
+
+twssd:show_3730067d-c18c-41fc-9b15-8431ab5182b3 a twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_ef2265f8-0b56-4b76-981d-35bac4d8a423 .
+
+twssd:show_373b62a2-5482-479f-9d94-efd005acded1 a twss:Show ;
+    twss:movie twssd:El_Secreto_Del_Bosque ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "20:45",
+        "23:10" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_37e69d23-0a36-48cc-ac45-6e2aa754bb2f a twss:Show ;
+    twss:movie twssd:La_noche_magica ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "20:45",
+        "23:10" ;
+    twss:showsIn twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e .
+
+twssd:show_390124ba-920a-424e-a36e-1e2a09061807 a twss:Show ;
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:20",
+        "15:40",
+        "18:00" ;
+    twss:showsIn twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e .
+
+twssd:show_3cf27d23-ea89-4bcf-a8cf-ba049beaf4f9 a twss:Show ;
+    twss:movie twssd:Promising_young_woman ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd .
+
+twssd:show_4232d231-3a86-4300-a23a-8946ea0ca463 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "20:45",
+        "23:10" ;
+    twss:showsIn twssd:showroom_d701a6a6-36a9-405f-8dae-1a62222a7557 .
+
+twssd:show_4b4d9784-9d0f-40da-b93b-f5c2b8ebd0ce a twss:Show ;
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "16:10" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_4c2b947c-bd67-49a9-ac02-7bb8fc957f6a a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_120f5b01-d57f-4827-b426-e6cbb13aeb22 .
+
+twssd:show_4c670624-1837-4fed-a65d-44ccb71b57c9 a twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 .
+
+twssd:show_4dd39e96-cc1d-4271-8ba1-d55a6be2c390 a twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_324c32b7-fb88-48ea-8a3c-37715dd6d828 .
+
+twssd:show_4fb8b3ad-673e-4ae6-a26d-7b6219a3db65 a twss:Show ;
+    twss:movie twssd:Promising_young_woman ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_5081a70b-12e8-4810-af6a-179903ed9455 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "13:45",
+        "22:45" ;
+    twss:showsIn twssd:showroom_afb5e69e-18af-4e7c-b593-663bc3b4c0ed .
+
+twssd:show_53d27cf1-2d9c-4640-8464-52e3cd6cad93 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_a58b2a3d-804b-4087-aa75-a1aa61e2a2f8 .
+
+twssd:show_5788fbb3-4a6c-4803-b11a-e3e9846a0fb6 a twss:Show ;
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "16:00" ;
+    twss:showsIn twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e .
+
+twssd:show_58e7e677-3519-4b37-bbe6-6199eddc10d5 a twss:Show ;
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "14:00",
+        "18:25" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_601fcb9f-e5c9-4e56-a87b-88817c922220 a twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_6f6ca022-b05c-4b61-9b04-fc5a36f1776b a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "23:10" ;
+    twss:showsIn twssd:showroom_3017eced-4979-4098-853c-55a74cf54ebe .
+
+twssd:show_7d303ad3-8b18-45a7-bbe5-0e237b6629ce a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_4626bd53-19b2-454d-9b8c-ccc6e39247a3 .
+
+twssd:show_7e015123-ed83-4dd9-a4bb-5fdb185439cd a twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_39a28434-251c-40e4-8970-2ae86c3c56aa .
+
+twssd:show_7feef69f-3395-497f-b748-9ef69b6b595c a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 .
+
+twssd:show_80428a1f-a2fb-4b91-8faf-d214ed154d52 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:15",
+        "15:40",
+        "20:20",
+        "22:50" ;
+    twss:showsIn twssd:showroom_afb5e69e-18af-4e7c-b593-663bc3b4c0ed .
+
+twssd:show_838a4ffe-f71a-4750-8a3a-b43eeab768ed a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "22:45" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_84782064-68d2-4c4e-aaa8-d20232f690d4 a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_ef2265f8-0b56-4b76-981d-35bac4d8a423 .
+
+twssd:show_86b2a8d9-cda3-4392-99fd-c10f2dd0ed7b a twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_120f5b01-d57f-4827-b426-e6cbb13aeb22 .
+
+twssd:show_8b719828-cb77-4c81-80ce-abbc0d322247 a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_120f5b01-d57f-4827-b426-e6cbb13aeb22 .
+
+twssd:show_9b2c3794-251a-496d-9f26-1abff821faba a twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd .
+
+twssd:show_9bea9c41-3f94-4c1c-8e9c-6d63b7521c20 a twss:Show ;
+    twss:movie twssd:Tenet ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:10" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_a0a36985-a1a8-483f-a5cb-4737b2482455 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:00",
+        "15:30",
+        "18:00",
+        "20:30",
+        "23:00" ;
+    twss:showsIn twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e .
+
+twssd:show_a193e066-5878-451d-858d-a1ddc245853f a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:00",
+        "15:30",
+        "18:05",
+        "20:40" ;
+    twss:showsIn twssd:showroom_3017eced-4979-4098-853c-55a74cf54ebe .
+
+twssd:show_a2f4a0b0-fbd6-48a9-94ec-2cc1ecd55eed a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_4fe8e8e0-ce28-4f5e-a7b4-45ceba9c0cd6 .
+
+twssd:show_a58c69e0-b184-4bd1-a3c5-68198271cdbe a twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_4fe8e8e0-ce28-4f5e-a7b4-45ceba9c0cd6 .
+
+twssd:show_b2d91731-2891-49e5-a09f-f55a41da10a6 a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_39a28434-251c-40e4-8970-2ae86c3c56aa .
+
+twssd:show_b3aa7ced-17e5-48ef-aa40-fab9c14a11b7 a twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_120f5b01-d57f-4827-b426-e6cbb13aeb22 .
+
+twssd:show_b47133cf-949e-4cae-a38e-0ebb713efba1 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_6e3d4238-9561-44aa-b1f7-75fea3a9119a .
+
+twssd:show_ba83efef-5e0e-44d7-bc11-c90082321696 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_39a28434-251c-40e4-8970-2ae86c3c56aa .
+
+twssd:show_ba8bfd90-f6c5-4169-9965-c77c085d1195 a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_120f5b01-d57f-4827-b426-e6cbb13aeb22 .
+
+twssd:show_bb766336-cfec-4495-b7d9-e7efedda0124 a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_324c32b7-fb88-48ea-8a3c-37715dd6d828 .
+
+twssd:show_bdf58a55-73e1-49f9-8e34-f9754380f2b2 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_ef2265f8-0b56-4b76-981d-35bac4d8a423 .
+
+twssd:show_bfb449fc-0df3-42cf-be48-530f04318a55 a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_c12cf96c-4aeb-4df4-b6ba-8c82e2ca8810 a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_39a28434-251c-40e4-8970-2ae86c3c56aa .
+
+twssd:show_c2e7b785-eaa3-46de-b1a1-6985fd412be5 a twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 .
+
+twssd:show_c34d49d0-ace4-4eb9-b1a1-a656d34718f9 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd .
+
+twssd:show_c4816776-3033-4b95-bf99-b1c637932774 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "22:15" ;
+    twss:showsIn twssd:showroom_b0e48c99-11af-4761-9680-eebfc22ddce0 .
+
+twssd:show_c53ea42c-5185-4149-83f4-c8ab48b8f850 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_324c32b7-fb88-48ea-8a3c-37715dd6d828 .
+
+twssd:show_c6033b0e-5a3e-4842-aa7e-3e14ebd0fe6a a twss:Show ;
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:00",
+        "15:20",
+        "17:50",
+        "20:15",
+        "22:30" ;
+    twss:showsIn twssd:showroom_afb5e69e-18af-4e7c-b593-663bc3b4c0ed .
+
+twssd:show_c69a5c54-4815-4d1c-91e8-2095ecf7abc8 a twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_324c32b7-fb88-48ea-8a3c-37715dd6d828 .
+
+twssd:show_c74d3bba-6e26-41f3-912e-0eef3c5e14d5 a twss:Show ;
+    twss:movie twssd:Promising_young_woman ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "13:15",
+        "15:40",
+        "18:10",
+        "20:30",
+        "23:00" ;
+    twss:showsIn twssd:showroom_b0e48c99-11af-4761-9680-eebfc22ddce0 .
+
+twssd:show_cd86dad9-319e-4966-8d44-32a7df2f02e9 a twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_120f5b01-d57f-4827-b426-e6cbb13aeb22 .
+
+twssd:show_cec19f56-a21b-4dad-9f8c-484151752444 a twss:Show ;
+    twss:movie twssd:La_noche_magica ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:40" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_d0e3aafd-aacd-4138-9554-c509291b5658 a twss:Show ;
+    twss:movie twssd:Tenet ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "22:45" ;
+    twss:showsIn twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e .
+
+twssd:show_d0e82191-257c-406f-aa68-c1da7af6ae49 a twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 .
+
+twssd:show_d11cb6ef-5913-4d73-9580-2ae39d3dfd43 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "14:00",
+        "17:00",
+        "19:50",
+        "22:40" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_d25e32a3-8ed5-4ca7-b044-fc29ad14b9fd a twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_d4822e31-a9c1-4b25-8c51-12b22167a616 a twss:Show ;
+    twss:movie twssd:Promising_young_woman ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_324c32b7-fb88-48ea-8a3c-37715dd6d828 .
+
+twssd:show_d68bc7c0-66e1-4b98-a98a-bc84b720e09b a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:00",
+        "18:00",
+        "20:30" ;
+    twss:showsIn twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b .
+
+twssd:show_d7c962e7-8bb4-426c-8a26-ed38fe0cb00c a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_7ae055c8-58e6-4af8-8916-428324f0b737 .
+
+twssd:show_d7ded076-54bc-4598-8b83-fbd7ebfaadfb a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "16:45",
+        "19:45" ;
+    twss:showsIn twssd:showroom_afb5e69e-18af-4e7c-b593-663bc3b4c0ed .
+
+twssd:show_dbd93f6c-bde5-42a5-baf2-45db8888efe4 a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_ef2265f8-0b56-4b76-981d-35bac4d8a423 .
+
+twssd:show_e05038c6-5395-4d54-844d-d8bcfc35cdf4 a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd .
+
+twssd:show_e4dd7029-735d-43d4-ab76-e63b119580bc a twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd .
+
+twssd:show_e5b5a911-546c-449f-bef7-d50b91892b19 a twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd .
+
+twssd:show_e891fd12-2456-4e44-8521-b58616ee18a8 a twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_e8a0eb3f-9dee-4b1e-a1f5-a4d67b412d9a a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "23:00" ;
+    twss:showsIn twssd:showroom_d701a6a6-36a9-405f-8dae-1a62222a7557 .
+
+twssd:show_e8c536cf-8f41-40d8-8200-16f8317f6f61 a twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_4fe8e8e0-ce28-4f5e-a7b4-45ceba9c0cd6 .
+
+twssd:show_e9ce7c95-f9d2-4031-a672-b07c277f590d a twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_d701a6a6-36a9-405f-8dae-1a62222a7557 .
+
+twssd:show_ed1ee4f1-68c6-479c-b474-200d66be4a68 a twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "18:05" ;
+    twss:showsIn twssd:showroom_afb5e69e-18af-4e7c-b593-663bc3b4c0ed .
+
+twssd:show_eea1583c-5358-4cb2-97f6-9d43adb5fc78 a twss:Show ;
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "14:00",
+        "16:15",
+        "18:30" ;
+    twss:showsIn twssd:showroom_d701a6a6-36a9-405f-8dae-1a62222a7557 .
+
+twssd:show_f2573dae-3dab-4f9d-9c97-48c2c3b614a1 a twss:Show ;
+    twss:movie twssd:El_silencio_del_cazador ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "22:20" ;
+    twss:showsIn twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 .
+
+twssd:show_f3f7ab02-17bd-4594-abb6-a421b9475a99 a twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "15:00",
+        "17:40",
+        "20:20" ;
+    twss:showsIn twssd:showroom_d701a6a6-36a9-405f-8dae-1a62222a7557 .
+
+twssd:show_fa93edf6-7f89-4e32-855e-fc08cbc11a8a a twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_39a28434-251c-40e4-8970-2ae86c3c56aa .
+
+twssd:show_fb72ac85-b5e0-4855-8a42-2814ecb27a50 a twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd .
+
+twssd:show_fb8cd8de-2d66-49ec-b14f-f9d83ce7c8d9 a twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 .
+
+twssd:show_fc15e01f-54a7-42f0-ac9e-6d0b4a72887c a twss:Show ;
+    twss:movie twssd:Promising_young_woman ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_120f5b01-d57f-4827-b426-e6cbb13aeb22 .
+
+twssd:show_fcb39a46-6fb3-4be2-94cb-b0fa861f4e6b a twss:Show ;
+    twss:movie twssd:Promising_young_woman ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada> twss:name "Óscar Jaenada" ;
+    twss:type twss:Person .
+
+twssd:Aaron_Taylor-Johnson twss:name "Aaron Taylor-Johnson" ;
+    twss:type twss:Person .
+
+twssd:Adam_Brody twss:name "Adam Brody" ;
+    twss:type twss:Person .
+
+twssd:Adam_Wingard twss:name "Adam Wingard" ;
+    twss:type twss:Person .
+
+twssd:Akari_Kito twss:name "Akari Kito" ;
+    twss:type twss:Person .
+
+twssd:Alberto_Ammann twss:name "Alberto Ammann" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> twss:name "Alexander Skarsgård" ;
+    twss:type twss:Person .
+
+twssd:Alice_Braga twss:name "Alice Braga" ;
+    twss:type twss:Person .
+
+twssd:Alison_Brie twss:name "Alison Brie" ;
+    twss:type twss:Person .
+
+twssd:Andrew_Ellis twss:name "Andrew Ellis" ;
+    twss:type twss:Person .
+
+twssd:Anna_Kendrick twss:name "Anna Kendrick" ;
+    twss:type twss:Person .
+
+twssd:Anthony_Ramos twss:name "Anthony Ramos" ;
+    twss:type twss:Person .
+
+twssd:Antonio_Banderas twss:name "Antonio Banderas" ;
+    twss:type twss:Person .
+
+twssd:Anya_Taylor-Joy twss:name "Anya Taylor-Joy" ;
+    twss:type twss:Person .
+
+twssd:Awkwafina twss:name "Awkwafina" ;
+    twss:type twss:Person .
+
+twssd:Benjamin_Biolay twss:name "Benjamin Biolay" ;
+    twss:type twss:Person .
+
+twssd:Blu_Hunt twss:name "Blu Hunt" ;
+    twss:type twss:Person .
+
+twssd:Bo_Burnham twss:name "Bo Burnham" ;
+    twss:type twss:Person .
+
+twssd:Bobby_Cannavale twss:name "Bobby Cannavale" ;
+    twss:type twss:Person .
+
+twssd:Brian_Tyree_Henry twss:name "Brian Tyree Henry" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/C%C3%A9sar_Bord%C3%B3n> twss:name "César Bordón" ;
+    twss:type twss:Person .
+
+twssd:CINEMA_OCHO a twss:Cinema ;
+    twss:name "CINEMA OCHO" .
+
+twssd:CINEMA_PARADISO a twss:Cinema ;
+    twss:name "CINEMA PARADISO" .
+
+twssd:CINEMA_ROCHA a twss:Cinema ;
+    twss:name "CINEMA ROCHA" .
+
+twssd:CINEMA_SAN_MARTIN a twss:Cinema ;
+    twss:name "CINEMA SAN MARTIN" .
+
+twssd:Camille_Cottin twss:name "Camille Cottin" ;
+    twss:type twss:Person .
+
+twssd:Carey_Mulligan twss:name "Carey Mulligan" ;
+    twss:type twss:Person .
+
+twssd:Carlos_Lopez_Estrada twss:name "Carlos Lopez Estrada" ;
+    twss:type twss:Person .
+
+twssd:Carole_Bouquet twss:name "Carole Bouquet" ;
+    twss:type twss:Person .
+
+twssd:Chance_the_Rapper twss:name "Chance the Rapper" ;
+    twss:type twss:Person .
+
+twssd:Charlie_Heaton twss:name "Charlie Heaton" ;
+    twss:type twss:Person .
+
+twssd:Chiara_Mastroianni twss:name "Chiara Mastroianni" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chlo%C3%AB_Grace_Moretz> twss:name "Chloë Grace Moretz" ;
+    twss:type twss:Person .
+
+twssd:Chris_Pine twss:name "Chris Pine" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> twss:name "Christophe Honoré" ;
+    twss:type twss:Person .
+
+twssd:Christopher_Mintz-Plasse twss:name "Christopher Mintz-Plasse" ;
+    twss:type twss:Person .
+
+twssd:Christopher_Nolan twss:name "Christopher Nolan" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> a twss:Cinema ;
+    twss:name "Cinépolis Maipú" .
+
+twssd:Clancy_Brown twss:name "Clancy Brown" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clemence_Po%C3%A9sy> twss:name "Clemence Poésy" ;
+    twss:type twss:Person .
+
+twssd:Connie_Britton twss:name "Connie Britton" ;
+    twss:type twss:Person .
+
+twssd:Connie_Nielsen twss:name "Connie Nielsen" ;
+    twss:type twss:Person .
+
+twssd:Cynthia_Erivo twss:name "Cynthia Erivo" ;
+    twss:type twss:Person .
+
+twssd:Daisy_Ridley twss:name "Daisy Ridley" ;
+    twss:type twss:Person .
+
+twssd:Daniel_Dae_Kim twss:name "Daniel Dae Kim" ;
+    twss:type twss:Person .
+
+twssd:David_Oyelowo twss:name "David Oyelowo" ;
+    twss:type twss:Person .
+
+twssd:David_P_Smith twss:name "David P Smith" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Demi%C3%A1n_Bichir> twss:name "Demián Bichir" ;
+    twss:type twss:Person .
+
+twssd:Demian_Bichir twss:name "Demian Bichir" ;
+    twss:type twss:Person .
+
+twssd:Dennis_Mojen twss:name "Dennis Mojen" ;
+    twss:type twss:Person .
+
+twssd:Diego_Peretti twss:name "Diego Peretti" ;
+    twss:type twss:Person .
+
+twssd:Dimple_Kapadia twss:name "Dimple Kapadia" ;
+    twss:type twss:Person .
+
+twssd:Don_Hall twss:name "Don Hall" ;
+    twss:type twss:Person .
+
+twssd:Doug_Liman twss:name "Doug Liman" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez> twss:name "Eiza González" ;
+    twss:type twss:Person .
+
+twssd:El_Secreto_Del_Bosque a twss:Movie ;
+    twss:actor twssd:Sahil_Shroff,
+        twssd:Subrat_Dutta,
+        twssd:Vanessa_Curry ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Vikram_Jayakumar ;
+    twss:durationInMinutes 87 ;
+    twss:genre "Terror" ;
+    twss:language "Inglés" ;
+    twss:movieRating "P-13" ;
+    twss:synopsis "Mientras disfrutan de una escapada romántica en la India salvaje, una pareja de Los Angeles accidentalmente es testigo del exorcismo de una niña de 11 años a la cual intentarán rescatar." ;
+    twss:title "El Secreto Del Bosque" .
+
+twssd:El_silencio_del_cazador a twss:Movie ;
+    twss:actor twssd:Alberto_Ammann,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/C%C3%A9sar_Bord%C3%B3n>,
+        twssd:Mercedes_Burgos,
+        twssd:Mora_Recalde,
+        twssd:Pablo_Echarri ;
+    twss:countryOfOrigin "Argentina" ;
+    twss:director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mart%C3%ADn_Desalvo> ;
+    twss:durationInMinutes 103 ;
+    twss:genre "Drama",
+        "Thriller" ;
+    twss:movieRating "P13R" ;
+    twss:synopsis "Guzmán trabaja en un parque nacional con un grupo pequeño pero comprometido de guardas en alerta, ante la aparición de un animal salvaje que acecha desde la selva. Sara, esposa de Guzmán, es una médica dedicada a la comunidad local. Entre ellos se encuentra un amigo de la infancia de ambos y expareja de Sara. Los celos, las cuestiones no saldadas y las relaciones de poder enfrentarán a los tres hasta llegar a un desenlace sin tregua." ;
+    twss:title "El silencio del cazador" .
+
+twssd:Elizabeth_Debicki twss:name "Elizabeth Debicki" ;
+    twss:type twss:Person .
+
+twssd:Emerald_Fennell twss:name "Emerald Fennell" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emilia_Sch%C3%BCle> twss:name "Emilia Schüle" ;
+    twss:type twss:Person .
+
+twssd:Esteban_Bigliardi twss:name "Esteban Bigliardi" ;
+    twss:type twss:Person .
+
+twssd:Flula_Borg twss:name "Flula Borg" ;
+    twss:type twss:Person .
+
+twssd:Frank_Welker twss:name "Frank Welker" ;
+    twss:type twss:Person .
+
+twssd:Gabriella_Wilde twss:name "Gabriella Wilde" ;
+    twss:type twss:Person .
+
+twssd:Gal_Gadot twss:name "Gal Gadot" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gast%C3%B3n_Portal> twss:name "Gastón Portal" ;
+    twss:type twss:Person .
+
+twssd:Happy_Anderson twss:name "Happy Anderson" ;
+    twss:type twss:Person .
+
+twssd:Harrison_Arevalo twss:name "Harrison Arevalo" ;
+    twss:type twss:Person .
+
+twssd:Haruo_Sotozaki twss:name "Haruo Sotozaki" ;
+    twss:type twss:Person .
+
+twssd:Heiner_Lauterbach twss:name "Heiner Lauterbach" ;
+    twss:type twss:Person .
+
+twssd:Henry_Zaga twss:name "Henry Zaga" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Hern%C3%A1n_Jim%C3%A9nez> twss:name "Hernán Jiménez" ;
+    twss:type twss:Person .
+
+twssd:Himesh_Patel twss:name "Himesh Patel" ;
+    twss:type twss:Person .
+
+twssd:Hiro_Shimono twss:name "Hiro Shimono" ;
+    twss:type twss:Person .
+
+twssd:Ian_Kenny twss:name "Ian Kenny" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Isabela_Pal%C3%B3poli> twss:name "Isabela Palópoli" ;
+    twss:type twss:Person .
+
+twssd:Jake_Curran twss:name "Jake Curran" ;
+    twss:type twss:Person .
+
+twssd:James_Corden twss:name "James Corden" ;
+    twss:type twss:Person .
+
+twssd:Jamie_Dornan twss:name "Jamie Dornan" ;
+    twss:type twss:Person .
+
+twssd:Jeffrey_Corazzini twss:name "Jeffrey Corazzini" ;
+    twss:type twss:Person .
+
+twssd:Jennifer_Coolidge twss:name "Jennifer Coolidge" ;
+    twss:type twss:Person .
+
+twssd:Jessica_Henwick twss:name "Jessica Henwick" ;
+    twss:type twss:Person .
+
+twssd:John_David_Washington twss:name "John David Washington" ;
+    twss:type twss:Person .
+
+twssd:John_David_Washington_Kenneth_Branagh twss:name "John David Washington Kenneth Branagh" ;
+    twss:type twss:Person .
+
+twssd:Josh_Boone twss:name "Josh Boone" ;
+    twss:type twss:Person .
+
+twssd:Julian_Dennison twss:name "Julian Dennison" ;
+    twss:type twss:Person .
+
+twssd:Julius_Berg twss:name "Julius Berg" ;
+    twss:type twss:Person .
+
+twssd:June_Foray twss:name "June Foray" ;
+    twss:type twss:Person .
+
+twssd:Justin_Timberlake twss:name "Justin Timberlake" ;
+    twss:type twss:Person .
+
+twssd:Karan_Soni twss:name "Karan Soni" ;
+    twss:type twss:Person .
+
+twssd:Katsuyuki_Konishi twss:name "Katsuyuki Konishi" ;
+    twss:type twss:Person .
+
+twssd:Kelly_Marie_Tran twss:name "Kelly Marie Tran" ;
+    twss:type twss:Person .
+
+twssd:Ken_Duken twss:name "Ken Duken" ;
+    twss:type twss:Person .
+
+twssd:Kenichi_Suzumura twss:name "Kenichi Suzumura" ;
+    twss:type twss:Person .
+
+twssd:Kenneth_Branagh twss:name "Kenneth Branagh" ;
+    twss:type twss:Person .
+
+twssd:Kristen_Wiig twss:name "Kristen Wiig" ;
+    twss:type twss:Person .
+
+twssd:Kunal_Nayyar twss:name "Kunal Nayyar" ;
+    twss:type twss:Person .
+
+twssd:Kurt_Sutter twss:name "Kurt Sutter" ;
+    twss:type twss:Person .
+
+twssd:Kyle_Chandler twss:name "Kyle Chandler" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> a twss:Movie ;
+    twss:actor twssd:Dennis_Mojen,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emilia_Sch%C3%BCle>,
+        twssd:Heiner_Lauterbach,
+        twssd:Ken_Duken,
+        twssd:Michael_Gwisdek,
+        twssd:Nikolai_Kinski,
+        twssd:Wilfried_Hochholdinger ;
+    twss:countryOfOrigin "Alemania" ;
+    twss:director twssd:Martin_Schreier ;
+    twss:durationInMinutes 127 ;
+    twss:genre "Drama romantico" ;
+    twss:language "Aleman" ;
+    twss:movieRating "ATP" ;
+    twss:synopsis "Durante el verano de 1961, Emil comienza a trabajar como extra en los famosos estudios de cine Babelsberg. Durante el rodaje de una superproducción, se enamora de la bailarina francesa llamada Milou. Cuando por fin conquista a Milou, el rodaje se cancela repentinamente y son obligados a separarse ya que El Muro de Berlín es levantado en agosto de ese año. Años más tarde, Emil trazará un atrevido y arriesgado plan para lograr que el rodaje continúe y reencontrarse con Milou." ;
+    twss:title "La Fabrica De Sueños" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laura_L%C3%B3pez_Moyano> twss:name "Laura López Moyano" ;
+    twss:type twss:Person .
+
+twssd:Laverne_Cox twss:name "Laverne Cox" ;
+    twss:type twss:Person .
+
+twssd:Lil_Rel_Howery twss:name "Lil Rel Howery" ;
+    twss:type twss:Person .
+
+twssd:Los_Intrusos a twss:Movie ;
+    twss:actor twssd:Andrew_Ellis,
+        twssd:Ian_Kenny,
+        twssd:Jake_Curran,
+        twssd:Maisie_Williams,
+        twssd:Rita_Tushingham,
+        twssd:Stacha_Hicks,
+        twssd:Sylvester_McCoy ;
+    twss:countryOfOrigin "Francia",
+        "Reino Unido" ;
+    twss:director twssd:Julius_Berg ;
+    twss:durationInMinutes 92 ;
+    twss:genre "Terror" ;
+    twss:language "Inglés" ;
+    twss:movieRating "P-16" ;
+    twss:synopsis "Inglaterra rural, principios de los noventa: los amigos de la infancia Nathan y Terry son inducidos por el sociópata local para robar a los Huggins, un médico anciano y su esposa. La novia de Nathan, Mary, está totalmente en contra del plan, pero al cabo de unas horas se encuentra en el caserón, al lado de la caja fuerte del sótano y de una panda de individuos, a cual más sospechoso." ;
+    twss:title "Los Intrusos" .
+
+twssd:Mads_Mikkelsen twss:name "Mads Mikkelsen" ;
+    twss:type twss:Person .
+
+twssd:Marie-Christine_Adam twss:name "Marie-Christine Adam" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mart%C3%ADn_Desalvo> twss:name "Martín Desalvo" ;
+    twss:type twss:Person .
+
+twssd:Martin_Donovan twss:name "Martin Donovan" ;
+    twss:type twss:Person .
+
+twssd:Martin_Schreier twss:name "Martin Schreier" ;
+    twss:type twss:Person .
+
+twssd:Max_Greenfield twss:name "Max Greenfield" ;
+    twss:type twss:Person .
+
+twssd:Mel_Blanc twss:name "Mel Blanc" ;
+    twss:type twss:Person .
+
+twssd:Mercedes_Burgos twss:name "Mercedes Burgos" ;
+    twss:type twss:Person .
+
+twssd:Michael_Caine twss:name "Michael Caine" ;
+    twss:type twss:Person .
+
+twssd:Michael_Gwisdek twss:name "Michael Gwisdek" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Pe%C3%B1a> twss:name "Michael Peña" ;
+    twss:type twss:Person .
+
+twssd:Mickey_Gilmore twss:name "Mickey Gilmore" ;
+    twss:type twss:Person .
+
+twssd:Millie_Bobby_Brown twss:name "Millie Bobby Brown" ;
+    twss:type twss:Person .
+
+twssd:Molly_Shannon twss:name "Molly Shannon" ;
+    twss:type twss:Person .
+
+twssd:Mora_Recalde twss:name "Mora Recalde" ;
+    twss:type twss:Person .
+
+twssd:Natalia_Oreiro twss:name "Natalia Oreiro" ;
+    twss:type twss:Person .
+
+twssd:Natasha_Rothwell twss:name "Natasha Rothwell" ;
+    twss:type twss:Person .
+
+twssd:Natsuki_Hanae twss:name "Natsuki Hanae" ;
+    twss:type twss:Person .
+
+twssd:Nick_Jonas twss:name "Nick Jonas" ;
+    twss:type twss:Person .
+
+twssd:Nicky_Jam twss:name "Nicky Jam" ;
+    twss:type twss:Person .
+
+twssd:Nikolai_Kinski twss:name "Nikolai Kinski" ;
+    twss:type twss:Person .
+
+twssd:Oakley_Bull twss:name "Oakley Bull" ;
+    twss:type twss:Person .
+
+twssd:Pablo_Echarri twss:name "Pablo Echarri" ;
+    twss:type twss:Person .
+
+twssd:Pablo_Rago twss:name "Pablo Rago" ;
+    twss:type twss:Person .
+
+twssd:Patty_Jenkins twss:name "Patty Jenkins" ;
+    twss:type twss:Person .
+
+twssd:Paul_Briggs twss:name "Paul Briggs" ;
+    twss:type twss:Person .
+
+twssd:Pedro_Pascal twss:name "Pedro Pascal" ;
+    twss:type twss:Person .
+
+twssd:Ravi_Patel twss:name "Ravi Patel" ;
+    twss:type twss:Person .
+
+twssd:Ray_McKinnon twss:name "Ray McKinnon" ;
+    twss:type twss:Person .
+
+twssd:Rebecca_Hall twss:name "Rebecca Hall" ;
+    twss:type twss:Person .
+
+twssd:Rita_Tushingham twss:name "Rita Tushingham" ;
+    twss:type twss:Person .
+
+twssd:Robert_Pattinson twss:name "Robert Pattinson" ;
+    twss:type twss:Person .
+
+twssd:Robin_Wright twss:name "Robin Wright" ;
+    twss:type twss:Person .
+
+twssd:Rosario_Dawson twss:name "Rosario Dawson" ;
+    twss:type twss:Person .
+
+twssd:Sahil_Shroff twss:name "Sahil Shroff" ;
+    twss:type twss:Person .
+
+twssd:Sam_Richardson twss:name "Sam Richardson" ;
+    twss:type twss:Person .
+
+twssd:Sam_Rockwell twss:name "Sam Rockwell" ;
+    twss:type twss:Person .
+
+twssd:Saori_Hayami twss:name "Saori Hayami" ;
+    twss:type twss:Person .
+
+twssd:Satoshi_Hino twss:name "Satoshi Hino" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> a twss:Movie ;
+    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Tony_Cervone ;
+    twss:durationInMinutes 94 ;
+    twss:genre "Acción, Aventuras" ;
+    twss:language "Español" ;
+    twss:movieRating "ATP" ;
+    twss:synopsis """Película animada sobre el dibujito Scooby-Doo que sigue a un perro Gran Danés y sus 4 amigos: Fred, Daphne, Vilma y Shaggy quienes juntos viajan por el mundo resolviendo misterios relacionados con fantasmas y otras fuerzas sobrenaturales.-\r
+Scooby! revela cómo se conocieron los amigos de toda la vida Scooby y Shaggy, y cómo se unieron con los jóvenes detectives Fred, Velma y Daphne para formar Mystery Inc. Ahora, con cientos de casos resueltos y aventuras compartidas, Scooby y la pandilla se enfrentan al misterio más desafiante de todos los tiempos: una trama para liberar Cerberus, el perro fantasma, sobre el mundo. Mientras compiten para detener este "perrocalipsis" global, la pandilla descubre que Scooby tiene un legado secreto y un gran y épico destino que nadie imaginaba.""" ;
+    twss:title "Scooby!" .
+
+twssd:Shun_Oguri twss:name "Shun Oguri" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/St%C3%A9phane_Roger> twss:name "Stéphane Roger" ;
+    twss:type twss:Person .
+
+twssd:Stacha_Hicks twss:name "Stacha Hicks" ;
+    twss:type twss:Person .
+
+twssd:Subrat_Dutta twss:name "Subrat Dutta" ;
+    twss:type twss:Person .
+
+twssd:Sylvester_McCoy twss:name "Sylvester McCoy" ;
+    twss:type twss:Person .
+
+twssd:T-Pain twss:name "T-Pain" ;
+    twss:type twss:Person .
+
+twssd:Takahiro_Sakurai twss:name "Takahiro Sakurai" ;
+    twss:type twss:Person .
+
+twssd:Thomas_Kee twss:name "Thomas Kee" ;
+    twss:type twss:Person .
+
+twssd:Tom_Holland twss:name "Tom Holland" ;
+    twss:type twss:Person .
+
+twssd:Tomokazu_Seki twss:name "Tomokazu Seki" ;
+    twss:type twss:Person .
+
+twssd:Tony_Cervone twss:name "Tony Cervone" ;
+    twss:type twss:Person .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> a twss:Movie ;
+    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:David_P_Smith,
+        twssd:Walt_Dohrn ;
+    twss:durationInMinutes 91 ;
+    twss:genre "Animación" ;
+    twss:language "Español" ;
+    twss:movieRating "ATP" ;
+    twss:synopsis "En una aventura que les llevará más allá de todo lo que habían conocido, Poppy y Branch descubren que su tribu de Trolls es solo una de las seis que existen, que el resto están repartidas en seis reinos y consagradas a seis tipos distintos de música: funk, country, tecno, clásica, pop y rock. La reina Bárbara, miembro de la realeza del hard rock, y su padre, el Rey Metal, quieren acabar con el resto de géneros musicales e imponer el reinado del rock. Con el destino del mundo en juego, Poppy y Branch, junto con el resto de la pandilla - Grandullón, Chanelle, Satén, Cooper y Guy Diamante-, visitarán los demás reinos para unir a los Trolls contra los planes de Barb de eclipsarlos a todos." ;
+    twss:title "Trolls 2: World Tour" .
+
+twssd:Vanessa_Curry twss:name "Vanessa Curry" ;
+    twss:type twss:Person .
+
+twssd:Vikram_Jayakumar twss:name "Vikram Jayakumar" ;
+    twss:type twss:Person .
+
+twssd:Vincent_Lacoste twss:name "Vincent Lacoste" ;
+    twss:type twss:Person .
+
+twssd:Wilfried_Hochholdinger twss:name "Wilfried Hochholdinger" ;
+    twss:type twss:Person .
+
+twssd:William_Hanna twss:name "William Hanna" ;
+    twss:type twss:Person .
+
+twssd:Yoshitsugu_Matsuoka twss:name "Yoshitsugu Matsuoka" ;
+    twss:type twss:Person .
+
+twssd:showroom_4626bd53-19b2-454d-9b8c-ccc6e39247a3 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
+    twss:name "4D" .
+
+twssd:showroom_55ef7a75-5a78-44d6-93a5-2d1af22b0b2f a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
+    twss:name "4D" .
+
+twssd:showroom_6b877666-9b31-4e23-a2d2-cb4a524adf11 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
+    twss:name "4D" .
+
+twssd:showroom_6e3d4238-9561-44aa-b1f7-75fea3a9119a a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
+    twss:name "4D" .
+
+twssd:showroom_7ae055c8-58e6-4af8-8916-428324f0b737 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
+    twss:name "4D" .
+
+twssd:showroom_89b247f5-0429-40d1-bd2f-a8391850d2e2 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
+    twss:name "4D" .
+
+twssd:showroom_a58b2a3d-804b-4087-aa75-a1aa61e2a2f8 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
+    twss:name "4D" .
+
+twssd:showroom_d8f71d9f-344d-4e26-967a-55252bc21ddf a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> ;
+    twss:name "Classic" .
+
+twssd:showroom_ef4fab92-c7e6-4138-bc2d-7cc4f9950c6c a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
+    twss:name "4D" .
+
+twssd:CINEMA_CITY a twss:Cinema ;
+    twss:name "CINEMA CITY" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> a twss:Cinema ;
+    twss:name "Cinépolis Avellaneda" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> a twss:Cinema ;
+    twss:name "Cinépolis Luján" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> a twss:Cinema ;
+    twss:name "Cinépolis Mendoza" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> a twss:Cinema ;
+    twss:name "Cinépolis Merlo" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> a twss:Cinema ;
+    twss:name "Cinépolis Neuquén" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> a twss:Cinema ;
+    twss:name "Cinépolis Pilar" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> a twss:Cinema ;
+    twss:name "Cinépolis Recoleta" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> a twss:Cinema ;
+    twss:name "Cinépolis Rosario" .
+
+twssd:Maisie_Williams twss:name "Maisie Williams" ;
+    twss:type twss:Person .
+
+twssd:On_a_magical_night a twss:Movie ;
+    twss:actor twssd:Benjamin_Biolay,
+        twssd:Camille_Cottin,
+        twssd:Carole_Bouquet,
+        twssd:Chiara_Mastroianni,
+        twssd:Harrison_Arevalo,
+        twssd:Marie-Christine_Adam,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/St%C3%A9phane_Roger>,
+        twssd:Vincent_Lacoste ;
+    twss:countryOfOrigin "Francia" ;
+    twss:director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> ;
+    twss:durationInMinutes 87 ;
+    twss:genre "Comedia",
+        "Comedia dramática" ;
+    twss:language "Francés" ;
+    twss:movieRating "P-13" ;
+    twss:synopsis "Tras 20 años de matrimonio, Maria decide dejarlo todo atrás y empezar una nueva vida. El primer paso es hospedarse en la habitación 212 de un hotel próximo a la casa en la que vivía junto a su familia. Con el paso del tiempo, comienza a preguntarse si ha tomado la decisión correcta." ;
+    twss:title "Habitacion 212",
+        "On a magical night" .
+
+twssd:Tim_Story twss:name "Tim Story" ;
+    twss:type twss:Person .
+
+twssd:Walt_Dohrn twss:name "Walt Dohrn" ;
+    twss:type twss:Person .
+
+twssd:showroom_3017eced-4979-4098-853c-55a74cf54ebe a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_CITY ;
+    twss:name "SALA 4D" .
+
+twssd:La_noche_magica a twss:Movie ;
+    twss:actor twssd:Diego_Peretti,
+        twssd:Esteban_Bigliardi,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Hern%C3%A1n_Jim%C3%A9nez>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Isabela_Pal%C3%B3poli>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laura_L%C3%B3pez_Moyano>,
+        twssd:Natalia_Oreiro,
+        twssd:Pablo_Rago ;
+    twss:countryOfOrigin "Argentina" ;
+    twss:director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gast%C3%B3n_Portal> ;
+    twss:durationInMinutes 98 ;
+    twss:genre "Comedia",
+        "Thriller" ;
+    twss:language "Español" ;
+    twss:movieRating "P-16" ;
+    twss:synopsis "La Noche Mágica, la película protagonizada por Natalia Oreiro y Diego Peretti, llega a los cines argentinos el 11 de marzo.El film, una innovadora comedia dramática con ritmo y suspenso de thriller, dirigida por Gastón Portal, cuenta también con las actuaciones de Pablo Rago y Esteban Bigliardi. Está producida por Aeroplano.La Noche Mágica transcurre durante Nochebuena en una casa en San Isidro. Kira (Natalia Oreiro) y su amante Cachete (Pablo Rago), se encuentran en el dormitorio cuando oyen llegar a Juan (Esteban Bigliardi), el marido de Kira. Pero cuando Cachete se esconde en el balcón, se encuentra con algo peor; NICOLA (Diego Peretti), un excéntrico ladrón que, como Papa Noel lleva una barba blanca y un gorro rojo, ha venido a robar el domicilio. Nicola procede a esposar a todos los presentes pero el atraco se complica cuando se encuentra con Alicia, la pequeña hija del matrimonio, quien apenas lo ve le extiende una lista de deseos…Una producción de Aeroplano, en coproducción con World Media (Uruguay), DirecTV, Diego Kolankowsky y Silvia Rodriguez; en asociación con Welavit, RBS, Film Suez, Ketama, TeDigoQue y Dk Entertainment." ;
+    twss:title "La Noche Magica",
+        "La noche magica" .
+
+twssd:Tenet a twss:Movie ;
+    twss:actor twssd:Aaron_Taylor-Johnson,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clemence_Po%C3%A9sy>,
+        twssd:Dimple_Kapadia,
+        twssd:Elizabeth_Debicki,
+        twssd:Himesh_Patel,
+        twssd:John_David_Washington,
+        twssd:John_David_Washington_Kenneth_Branagh,
+        twssd:Kenneth_Branagh,
+        twssd:Martin_Donovan,
+        twssd:Michael_Caine,
+        twssd:Robert_Pattinson ;
+    twss:countryOfOrigin "Estados Unidos",
+        "Reino Unido" ;
+    twss:director twssd:Christopher_Nolan ;
+    twss:durationInMinutes 155 ;
+    twss:genre "Acción",
+        "Ciencia Ficción",
+        "Thriller" ;
+    twss:language "Inglés" ;
+    twss:movieRating "P-13" ;
+    twss:synopsis "Armado solamente con una palabra, Tenet, el protagonista deberá luchar por la supervivencia del mundo entero y evitar la Tercera Guerra Mundial, en una historia de espionaje internacional. La misión se desplegará más allá del tiempo real. No son viajes en el tiempo, es inversión." ;
+    twss:title "Tenet" .
+
+twssd:Tom_Y_Jerry a twss:Movie ;
+    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Tim_Story ;
+    twss:durationInMinutes 101 ;
+    twss:genre "Animación" ;
+    twss:language "Inglés" ;
+    twss:movieRating "ATP" ;
+    twss:synopsis """Película del clásico dibujo animado de Tom y Jerry que mezcla live-action con animación. \r
+Jerry se muda al hotel más lujoso de Nueva York justo antes del "casamiento del siglo"; la coordinadora de la ceremonia, desesperada, no tiene más opción que contratar a Tom para eliminar a Jerry. Esto desata una batalla entre gato y ratón que amenaza con destruir la carrera de la coordinadora, la ceremonia e incluso quizás el hotel mismo.\r
+Pero pronto surge un problema más grave: un empleado ambicioso y diabólico que conspira contra los tres.""" ;
+    twss:title "Tom Y Jerry" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> twss:name "animación" ;
+    twss:type twss:Person .
+
+twssd:showroom_b0e48c99-11af-4761-9680-eebfc22ddce0 a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_CITY ;
+    twss:name "SALA HD" .
+
+twssd:Raya_Y_El_Ultimo_Dragon a twss:Movie ;
+    twss:actor twssd:Awkwafina,
+        twssd:Daniel_Dae_Kim,
+        twssd:Kelly_Marie_Tran ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Carlos_Lopez_Estrada,
+        twssd:Don_Hall,
+        twssd:Paul_Briggs ;
+    twss:durationInMinutes 114 ;
+    twss:genre "Animación" ;
+    twss:language "Español" ;
+    twss:movieRating "ATP" ;
+    twss:synopsis "Ambientada en el sudeste asiático, la cinta sigue la historia de Raya, una niña de un gran espíritu aventurero que vive en un reino llamado Kumandra. Este lejano y recóndito territorio está habitado por una civilización milenaria. Cinco son los clanes que forman esta tierra conocida como la del dragón y Raya, con el objetivo de devolver el equilibrio a su tierra, será la encargada de encontrar al último de los dragones en la mayor aventura de su vida." ;
+    twss:title "Raya Y El Ultimo Dragon" .
+
+twssd:showroom_4fe8e8e0-ce28-4f5e-a7b4-45ceba9c0cd6 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
+    twss:name "Classic" .
+
+twssd:showroom_39a28434-251c-40e4-8970-2ae86c3c56aa a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
+    twss:name "Classic" .
+
+twssd:showroom_afb5e69e-18af-4e7c-b593-663bc3b4c0ed a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_OCHO ;
+    twss:name "SALA HD" .
+
+twssd:Promising_young_woman a twss:Movie ;
+    twss:actor twssd:Adam_Brody,
+        twssd:Alison_Brie,
+        twssd:Bo_Burnham,
+        twssd:Carey_Mulligan,
+        twssd:Christopher_Mintz-Plasse,
+        twssd:Clancy_Brown,
+        twssd:Connie_Britton,
+        twssd:Jennifer_Coolidge,
+        twssd:Laverne_Cox,
+        twssd:Max_Greenfield,
+        twssd:Molly_Shannon,
+        twssd:Sam_Richardson ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Emerald_Fennell ;
+    twss:durationInMinutes 117 ;
+    twss:genre "Crimen",
+        "Drama",
+        "Thriller" ;
+    twss:language "Inglés" ;
+    twss:movieRating "ATP" ;
+    twss:synopsis "De la innovadora directora Emerald Fennell (Killing Eve) llega una deliciosa nueva visión sobre la venganza. Todos dicen que Cassie (Carey Mulligan) era una prometedora mujer joven...hasta que un misterioso suceso abruptamente descarrilló su futuro. Pero nada en la vida de Cassie es lo que aparenta ser: ella es pícaramente inteligente, atormentadoramente astuta y vive una secreta doble vida por la noche. Ahora, un encuentro inesperado está a punto de darle a Cassie la posibilidad de reparar los errores del pasado en esta fascinante y totalmente divertida historia." ;
+    twss:title "Hermosa Venganza",
+        "Promising young woman" .
+
+twssd:Wonder_Woman_1984 a twss:Movie ;
+    twss:actor twssd:Chris_Pine,
+        twssd:Connie_Nielsen,
+        twssd:Gabriella_Wilde,
+        twssd:Gal_Gadot,
+        twssd:Kristen_Wiig,
+        twssd:Natasha_Rothwell,
+        twssd:Oakley_Bull,
+        twssd:Pedro_Pascal,
+        twssd:Ravi_Patel,
+        twssd:Robin_Wright ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Patty_Jenkins ;
+    twss:durationInMinutes 151 ;
+    twss:genre "Acción",
+        "Ciencia Ficción" ;
+    twss:language "Inglés" ;
+    twss:movieRating "P-13" ;
+    twss:synopsis "Ambientada en los años 80s. El mayor deseo de Diana Prince parece ser tener devuelta a Steve Trevor. Esto inexplicablemente parece haberse convertido en realidad, pero la enfrentará a dos nuevos villanos: Max Lord y Cheetah" ;
+    twss:title "Mujer Maravilla 1984",
+        "Wonder Woman 1984" .
+
+twssd:showroom_324c32b7-fb88-48ea-8a3c-37715dd6d828 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
+    twss:name "Classic" .
+
+twssd:showroom_d701a6a6-36a9-405f-8dae-1a62222a7557 a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_ROCHA ;
+    twss:name "SALA HD" .
+
+twssd:showroom_ef2265f8-0b56-4b76-981d-35bac4d8a423 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
+    twss:name "Classic" .
+
+twssd:showroom_120f5b01-d57f-4827-b426-e6cbb13aeb22 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
+    twss:name "Classic" .
+
+twssd:Demon_Slayer_Mugen_Train a twss:Movie ;
+    twss:actor twssd:Akari_Kito,
+        twssd:Hiro_Shimono,
+        twssd:Katsuyuki_Konishi,
+        twssd:Kenichi_Suzumura,
+        twssd:Natsuki_Hanae,
+        twssd:Saori_Hayami,
+        twssd:Satoshi_Hino,
+        twssd:Takahiro_Sakurai,
+        twssd:Tomokazu_Seki,
+        twssd:Yoshitsugu_Matsuoka ;
+    twss:countryOfOrigin "Japón" ;
+    twss:director twssd:Haruo_Sotozaki ;
+    twss:durationInMinutes 120 ;
+    twss:genre "Acción",
+        "Animación",
+        "Aventura",
+        "Drama",
+        "Fantasía" ;
+    twss:movieRating "N/A" ;
+    twss:synopsis "Demon Slayer: Mugen Train cuenta la historia de Tanjiro Kamado, Kyoujurou Rengoku y sus amigos de la Compañía de Cazadores de Demonios (Demon Slayer Corps). Juntos, se unen con uno de los mejores espadachines de la compañía, Kyojuro Rengoku, para investigar una misteriosa serie de desapariciones que han ocurrido dentro del “Tren Infinito”. Poco saben que Enmu, uno de los miembros de las Doce Lunas Demoníacas, también está a bordo y les ha preparado una trampa." ;
+    twss:title "Demon Slayer Mugen Train" .
+
+twssd:Trolls_2 a twss:Movie ;
+    twss:actor twssd:Anna_Kendrick,
+        twssd:Anthony_Ramos,
+        twssd:Chance_the_Rapper,
+        twssd:Flula_Borg,
+        twssd:James_Corden,
+        twssd:Jamie_Dornan,
+        twssd:Justin_Timberlake,
+        twssd:Karan_Soni,
+        twssd:Kunal_Nayyar,
+        twssd:Sam_Rockwell ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Walt_Dohrn ;
+    twss:durationInMinutes 90 ;
+    twss:genre "Animación",
+        "Aventura",
+        "Comedia",
+        "Familia",
+        "Fantasía",
+        "Música" ;
+    twss:movieRating "N/A" ;
+    twss:synopsis "En una aventura que les llevará más allá de todo lo que habían conocido, Poppy y Branch descubren que su tribu de Trolls es solo una de las seis que existen, que el resto están repartidas en seis reinos y consagradas a seis tipos distintos de música: funk, country, tecno, clásica, pop y rock. La reina Bárbara, miembro de la realeza del hard rock, y su padre, el Rey Metal, quieren acabar con el resto de géneros musicales e imponer el reinado del rock. Con el destino del mundo en juego, Poppy y Branch, junto con el resto de la pandilla — Grandullón, Chanelle, Satén, Cooper y Guy Diamante—, visitarán los demás reinos para unir a los Trolls contra los planes de Barb de eclipsarlos a todos." ;
+    twss:title "Trolls 2",
+        "Trolls 2: Gira mundial" .
+
+twssd:showroom_5cb734f6-edd9-4d3c-8d11-087459ed2830 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
+    twss:name "Classic" .
+
+twssd:showroom_ece4a807-87e1-435d-b2e4-86e3df83a7cd a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
+    twss:name "Classic" .
+
+twssd:showroom_f2d1c610-43da-44e3-ac0e-26785e57825e a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_PARADISO ;
+    twss:name "SALA HD" .
+
+twssd:Tom_and_Jerry a twss:Movie ;
+    twss:actor twssd:Bobby_Cannavale,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chlo%C3%AB_Grace_Moretz>,
+        twssd:Frank_Welker,
+        twssd:June_Foray,
+        twssd:Lil_Rel_Howery,
+        twssd:Mel_Blanc,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Pe%C3%B1a>,
+        twssd:Nicky_Jam,
+        twssd:T-Pain,
+        twssd:William_Hanna ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Tim_Story ;
+    twss:durationInMinutes 101 ;
+    twss:genre "Acción",
+        "Animación",
+        "Aventura",
+        "Comedia",
+        "Familia" ;
+    twss:movieRating "ATP" ;
+    twss:synopsis "Tom el gato y Jerry el ratón son expulsados de su casa y se trasladan a un elegante hotel de Nueva York, donde una empleada descuidada llamada Kayla perderá su trabajo si no puede desalojar a Jerry antes de una boda de clase alta en el hotel. ¿Su solución? Contratar a Tom para deshacerse del molesto ratón." ;
+    twss:title "Tom and Jerry",
+        "Tom y Jerry" .
+
+twssd:showroom_d948cdae-24bf-4818-879a-7d375d838e2b a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_SAN_MARTIN ;
+    twss:name "SALA HD" .
+
+twssd:Chaos_Walking a twss:Movie ;
+    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada>,
+        twssd:Cynthia_Erivo,
+        twssd:Daisy_Ridley,
+        twssd:David_Oyelowo,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Demi%C3%A1n_Bichir>,
+        twssd:Kurt_Sutter,
+        twssd:Mads_Mikkelsen,
+        twssd:Nick_Jonas,
+        twssd:Ray_McKinnon,
+        twssd:Tom_Holland ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Doug_Liman ;
+    twss:durationInMinutes 110 ;
+    twss:genre "Acción",
+        "Aventura",
+        "Ciencia Ficción",
+        "Thriller" ;
+    twss:language "Inglés" ;
+    twss:movieRating "P-13" ;
+    twss:synopsis "En un futuro no muy lejano, en un mundo donde las mujeres han desaparecido y los hombres han sido afectados por “el ruido” – una fuerza que exhibe todos sus pensamientos – Todd Hewitt (Tom Holland) se encuentra con Viola (Daisy Ridley), una joven misteriosa que ha aterrizado en su planeta. Con Viola bajo riesgo, Todd jura protegerla y ponerla fuera de peligro. Para salvarla Todd tendrá que controlar su “ruido”, descubrir su propia fuerza y desbloquear todos los obscuros secretos que guarda su planeta y su comunidad.Del director de Identidad Desconocida (The Bourne Identity) y Al Filo del Mañana (Edge of Tomorrow), basada en la novela bestseller, El Cuchillo en la Mano del escritor Patrick Ness. Tom Holland y Daisy Ridely protagonizan junto con David Oyelowo, Nick Jonas, Mads Mikkelsen y Demián Bichir. Caos: El Inicio (Chaos Walking) llegará a los cines en 2021." ;
+    twss:title "Caos: El Inicio",
+        "Chaos Walking" .
+
+twssd:showroom_7e801cde-8c3e-4ab2-8e85-28d44ed39196 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
+    twss:name "Classic" .
+
+twssd:New_Mutants a twss:Movie ;
+    twss:actor twssd:Alice_Braga,
+        twssd:Antonio_Banderas,
+        twssd:Anya_Taylor-Joy,
+        twssd:Blu_Hunt,
+        twssd:Charlie_Heaton,
+        twssd:Happy_Anderson,
+        twssd:Henry_Zaga,
+        twssd:Jeffrey_Corazzini,
+        twssd:Maisie_Williams,
+        twssd:Mickey_Gilmore,
+        twssd:Rosario_Dawson,
+        twssd:Thomas_Kee ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Josh_Boone ;
+    twss:durationInMinutes 98 ;
+    twss:genre "Acción",
+        "Ciencia Ficción",
+        "Comedia",
+        "Terror" ;
+    twss:language "Inglés" ;
+    twss:movieRating "P-13" ;
+    twss:synopsis """Encerrados contra su voluntad en una institución secreta, 5 jóvenes mutantes descubren sus poderosas habilidades. Están bajo el estudio y análisis de la Doctora Cecilia Reyes quién tiene como objetivo curarlos.\r
+Wolfsbane, Cannonball, Magik, Mirage y Sunspot deberán enfrentar sus miedos, poderes y peligros que los rodean para intentar escapar a su pasado y salvarse a si mismos.""" ;
+    twss:title "Los Nuevos Mutantes",
+        "New Mutants" .
+
+twssd:Godzilla_vs._Kong a twss:Movie ;
+    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>,
+        twssd:Brian_Tyree_Henry,
+        twssd:Demian_Bichir,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez>,
+        twssd:Jessica_Henwick,
+        twssd:Julian_Dennison,
+        twssd:Kyle_Chandler,
+        twssd:Millie_Bobby_Brown,
+        twssd:Rebecca_Hall,
+        twssd:Shun_Oguri ;
+    twss:countryOfOrigin "Estados Unidos" ;
+    twss:director twssd:Adam_Wingard ;
+    twss:durationInMinutes 117 ;
+    twss:genre "Acción",
+        "Aventura",
+        "Ciencia Ficción",
+        "Thriller" ;
+    twss:language "Inglés" ;
+    twss:movieRating "P-13" ;
+    twss:synopsis "Godzilla y Kong, dos de las fuerzas más poderosas de un planeta habitado por todo tipo de aterradoras criaturas, se enfrentan en un espectacular combate que sacude los cimientos de la humanidad. Monarch (Kyle Chandler) se embarca en una misión de alto riesgo y pone rumbo hacia territorios inexplorados para descubrir los orígenes de estos dos titanes, en un último esfuerzo por tratar de salvar a dos bestias que parecen tener las horas contadas sobre la faz de la Tierra." ;
+    twss:title "Godzilla Vs. Kong",
+        "Godzilla vs. Kong" .
+

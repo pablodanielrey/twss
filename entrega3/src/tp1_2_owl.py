@@ -46,13 +46,14 @@ def get_showrom_iris(cinema_map, showroom_map, show):
         ciri = quote(cinema.replace(' ', '_'))
         cinema_map[cinema] = ciri
 
-    showroom = show['SHOWROOM']
+    showroom = f"{show['CINEMA']}_{show['SHOWROOM']}"
     if showroom in showroom_map:
         return (ciri, showroom_map[showroom]['IRI'])
     iri = f'showroom_{str(uuid.uuid4())}'
     showroom_map[showroom] = {
         'IRI': iri,
-        'CINEMA': ciri
+        'CINEMA': ciri,
+        'SHOWROOM': show['SHOWROOM']
     }
     return (ciri, iri)
 
@@ -125,7 +126,7 @@ if __name__ == '__main__':
 
         g.add((shiri, RDF.type, o.Show))
         ''' pelicula '''
-        g.add((shiri, o.shows, d[miri]))
+        g.add((shiri, o.movie, d[miri]))
         ''' sala '''
         g.add((shiri, o.showsIn, showroom_iri))
         ''' lenguaje de reproducción '''
@@ -138,5 +139,28 @@ if __name__ == '__main__':
             ''' hora de reproducción '''
             g.add((shiri, o.showTime, Literal(hour)))
         
+    ''' agrego las salas y los cines '''
+    for showroom in showroom_map:
+        shiri = d[showroom_map[showroom]['IRI']]
+        ciri = d[showroom_map[showroom]['CINEMA']]
+        g.add((shiri, RDF.type, o.ShowRoom))
+        g.add((shiri, o.name, Literal(showroom_map[showroom]['SHOWROOM'])))
+        g.add((shiri, o.isPartOf, ciri))
+    
+    ''' agrego los cines '''
+    for cinema_name in cinema_map:
+        ciri = d[cinema_map[cinema_name]]
+        g.add((ciri, RDF.type, o.Cinema))
+        g.add((ciri, o.name, Literal(cinema_name)))
 
-    print(g.serialize(format="turtle").decode("utf-8"))
+    with open('data/tp1.ttl','w') as f:
+        f.write(g.serialize(format="turtle").decode("utf-8"))
+
+    with open('data/tp1_showrooms.ttl', 'w') as f:
+        g2 = Graph()
+        g2.bind("twss", o)
+        g2.bind("twssd", d)        
+        for t in g.triples((None, RDF.type, o.ShowRoom)):
+            for t2 in g.triples((t[0],None,None)):
+                g2.add(t2)
+        f.write(g2.serialize(format="turtle").decode("utf-8"))
