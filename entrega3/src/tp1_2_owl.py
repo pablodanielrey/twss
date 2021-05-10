@@ -109,7 +109,7 @@ if __name__ == '__main__':
     ''' agrego los actores identificados dentro del grafo '''
     for name, iri in persons_map.items():
         piri = d[iri]
-        g.add((piri, o.type, o.Person))
+        g.add((piri, RDF.type, o.Person))
         g.add((piri, o.name, Literal(name)))
 
     ''' agrego los datos de los shows '''
@@ -153,8 +153,18 @@ if __name__ == '__main__':
         g.add((ciri, RDF.type, o.Cinema))
         g.add((ciri, o.name, Literal(cinema_name)))
 
+    ''' escribo todos los datos '''
     with open('data/tp1.ttl','w') as f:
         f.write(g.serialize(format="turtle").decode("utf-8"))
+
+    with open('data/tp1_persons.ttl', 'w') as f:
+        g2 = Graph()
+        g2.bind("twss", o)
+        g2.bind("twssd", d)        
+        for t in g.triples((None, RDF.type, o.Person)):
+            for t2 in g.triples((t[0],None,None)):
+                g2.add(t2)
+        f.write(g2.serialize(format="turtle").decode("utf-8"))
 
     with open('data/tp1_showrooms.ttl', 'w') as f:
         g2 = Graph()
@@ -164,3 +174,13 @@ if __name__ == '__main__':
             for t2 in g.triples((t[0],None,None)):
                 g2.add(t2)
         f.write(g2.serialize(format="turtle").decode("utf-8"))
+
+    with open('data/tp1_cinemas.ttl', 'w') as f:
+        g2 = Graph()
+        g2.bind("twss", o)
+        g2.bind("twssd", d)        
+        for t in g.triples((None, RDF.type, o.Cinema)):
+            for t2 in g.triples((t[0],None,None)):
+                g2.add(t2)
+        f.write(g2.serialize(format="turtle").decode("utf-8"))
+

@@ -1,0 +1,468 @@
+@prefix twss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada> a twss:Person ;
+    twss:name "Óscar Jaenada" .
+
+twssd:Aaron_Taylor-Johnson a twss:Person ;
+    twss:name "Aaron Taylor-Johnson" .
+
+twssd:Adam_Brody a twss:Person ;
+    twss:name "Adam Brody" .
+
+twssd:Adam_Wingard a twss:Person ;
+    twss:name "Adam Wingard" .
+
+twssd:Akari_Kito a twss:Person ;
+    twss:name "Akari Kito" .
+
+twssd:Alberto_Ammann a twss:Person ;
+    twss:name "Alberto Ammann" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> a twss:Person ;
+    twss:name "Alexander Skarsgård" .
+
+twssd:Alice_Braga a twss:Person ;
+    twss:name "Alice Braga" .
+
+twssd:Alison_Brie a twss:Person ;
+    twss:name "Alison Brie" .
+
+twssd:Andrew_Ellis a twss:Person ;
+    twss:name "Andrew Ellis" .
+
+twssd:Anna_Kendrick a twss:Person ;
+    twss:name "Anna Kendrick" .
+
+twssd:Anthony_Ramos a twss:Person ;
+    twss:name "Anthony Ramos" .
+
+twssd:Antonio_Banderas a twss:Person ;
+    twss:name "Antonio Banderas" .
+
+twssd:Anya_Taylor-Joy a twss:Person ;
+    twss:name "Anya Taylor-Joy" .
+
+twssd:Awkwafina a twss:Person ;
+    twss:name "Awkwafina" .
+
+twssd:Benjamin_Biolay a twss:Person ;
+    twss:name "Benjamin Biolay" .
+
+twssd:Blu_Hunt a twss:Person ;
+    twss:name "Blu Hunt" .
+
+twssd:Bo_Burnham a twss:Person ;
+    twss:name "Bo Burnham" .
+
+twssd:Bobby_Cannavale a twss:Person ;
+    twss:name "Bobby Cannavale" .
+
+twssd:Brian_Tyree_Henry a twss:Person ;
+    twss:name "Brian Tyree Henry" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/C%C3%A9sar_Bord%C3%B3n> a twss:Person ;
+    twss:name "César Bordón" .
+
+twssd:Camille_Cottin a twss:Person ;
+    twss:name "Camille Cottin" .
+
+twssd:Carey_Mulligan a twss:Person ;
+    twss:name "Carey Mulligan" .
+
+twssd:Carlos_Lopez_Estrada a twss:Person ;
+    twss:name "Carlos Lopez Estrada" .
+
+twssd:Carole_Bouquet a twss:Person ;
+    twss:name "Carole Bouquet" .
+
+twssd:Chance_the_Rapper a twss:Person ;
+    twss:name "Chance the Rapper" .
+
+twssd:Charlie_Heaton a twss:Person ;
+    twss:name "Charlie Heaton" .
+
+twssd:Chiara_Mastroianni a twss:Person ;
+    twss:name "Chiara Mastroianni" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chlo%C3%AB_Grace_Moretz> a twss:Person ;
+    twss:name "Chloë Grace Moretz" .
+
+twssd:Chris_Pine a twss:Person ;
+    twss:name "Chris Pine" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> a twss:Person ;
+    twss:name "Christophe Honoré" .
+
+twssd:Christopher_Mintz-Plasse a twss:Person ;
+    twss:name "Christopher Mintz-Plasse" .
+
+twssd:Christopher_Nolan a twss:Person ;
+    twss:name "Christopher Nolan" .
+
+twssd:Clancy_Brown a twss:Person ;
+    twss:name "Clancy Brown" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clemence_Po%C3%A9sy> a twss:Person ;
+    twss:name "Clemence Poésy" .
+
+twssd:Connie_Britton a twss:Person ;
+    twss:name "Connie Britton" .
+
+twssd:Connie_Nielsen a twss:Person ;
+    twss:name "Connie Nielsen" .
+
+twssd:Cynthia_Erivo a twss:Person ;
+    twss:name "Cynthia Erivo" .
+
+twssd:Daisy_Ridley a twss:Person ;
+    twss:name "Daisy Ridley" .
+
+twssd:Daniel_Dae_Kim a twss:Person ;
+    twss:name "Daniel Dae Kim" .
+
+twssd:David_Oyelowo a twss:Person ;
+    twss:name "David Oyelowo" .
+
+twssd:David_P_Smith a twss:Person ;
+    twss:name "David P Smith" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Demi%C3%A1n_Bichir> a twss:Person ;
+    twss:name "Demián Bichir" .
+
+twssd:Demian_Bichir a twss:Person ;
+    twss:name "Demian Bichir" .
+
+twssd:Dennis_Mojen a twss:Person ;
+    twss:name "Dennis Mojen" .
+
+twssd:Diego_Peretti a twss:Person ;
+    twss:name "Diego Peretti" .
+
+twssd:Dimple_Kapadia a twss:Person ;
+    twss:name "Dimple Kapadia" .
+
+twssd:Don_Hall a twss:Person ;
+    twss:name "Don Hall" .
+
+twssd:Doug_Liman a twss:Person ;
+    twss:name "Doug Liman" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez> a twss:Person ;
+    twss:name "Eiza González" .
+
+twssd:Elizabeth_Debicki a twss:Person ;
+    twss:name "Elizabeth Debicki" .
+
+twssd:Emerald_Fennell a twss:Person ;
+    twss:name "Emerald Fennell" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emilia_Sch%C3%BCle> a twss:Person ;
+    twss:name "Emilia Schüle" .
+
+twssd:Esteban_Bigliardi a twss:Person ;
+    twss:name "Esteban Bigliardi" .
+
+twssd:Flula_Borg a twss:Person ;
+    twss:name "Flula Borg" .
+
+twssd:Frank_Welker a twss:Person ;
+    twss:name "Frank Welker" .
+
+twssd:Gabriella_Wilde a twss:Person ;
+    twss:name "Gabriella Wilde" .
+
+twssd:Gal_Gadot a twss:Person ;
+    twss:name "Gal Gadot" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gast%C3%B3n_Portal> a twss:Person ;
+    twss:name "Gastón Portal" .
+
+twssd:Happy_Anderson a twss:Person ;
+    twss:name "Happy Anderson" .
+
+twssd:Harrison_Arevalo a twss:Person ;
+    twss:name "Harrison Arevalo" .
+
+twssd:Haruo_Sotozaki a twss:Person ;
+    twss:name "Haruo Sotozaki" .
+
+twssd:Heiner_Lauterbach a twss:Person ;
+    twss:name "Heiner Lauterbach" .
+
+twssd:Henry_Zaga a twss:Person ;
+    twss:name "Henry Zaga" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Hern%C3%A1n_Jim%C3%A9nez> a twss:Person ;
+    twss:name "Hernán Jiménez" .
+
+twssd:Himesh_Patel a twss:Person ;
+    twss:name "Himesh Patel" .
+
+twssd:Hiro_Shimono a twss:Person ;
+    twss:name "Hiro Shimono" .
+
+twssd:Ian_Kenny a twss:Person ;
+    twss:name "Ian Kenny" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Isabela_Pal%C3%B3poli> a twss:Person ;
+    twss:name "Isabela Palópoli" .
+
+twssd:Jake_Curran a twss:Person ;
+    twss:name "Jake Curran" .
+
+twssd:James_Corden a twss:Person ;
+    twss:name "James Corden" .
+
+twssd:Jamie_Dornan a twss:Person ;
+    twss:name "Jamie Dornan" .
+
+twssd:Jeffrey_Corazzini a twss:Person ;
+    twss:name "Jeffrey Corazzini" .
+
+twssd:Jennifer_Coolidge a twss:Person ;
+    twss:name "Jennifer Coolidge" .
+
+twssd:Jessica_Henwick a twss:Person ;
+    twss:name "Jessica Henwick" .
+
+twssd:John_David_Washington a twss:Person ;
+    twss:name "John David Washington" .
+
+twssd:John_David_Washington_Kenneth_Branagh a twss:Person ;
+    twss:name "John David Washington Kenneth Branagh" .
+
+twssd:Josh_Boone a twss:Person ;
+    twss:name "Josh Boone" .
+
+twssd:Julian_Dennison a twss:Person ;
+    twss:name "Julian Dennison" .
+
+twssd:Julius_Berg a twss:Person ;
+    twss:name "Julius Berg" .
+
+twssd:June_Foray a twss:Person ;
+    twss:name "June Foray" .
+
+twssd:Justin_Timberlake a twss:Person ;
+    twss:name "Justin Timberlake" .
+
+twssd:Karan_Soni a twss:Person ;
+    twss:name "Karan Soni" .
+
+twssd:Katsuyuki_Konishi a twss:Person ;
+    twss:name "Katsuyuki Konishi" .
+
+twssd:Kelly_Marie_Tran a twss:Person ;
+    twss:name "Kelly Marie Tran" .
+
+twssd:Ken_Duken a twss:Person ;
+    twss:name "Ken Duken" .
+
+twssd:Kenichi_Suzumura a twss:Person ;
+    twss:name "Kenichi Suzumura" .
+
+twssd:Kenneth_Branagh a twss:Person ;
+    twss:name "Kenneth Branagh" .
+
+twssd:Kristen_Wiig a twss:Person ;
+    twss:name "Kristen Wiig" .
+
+twssd:Kunal_Nayyar a twss:Person ;
+    twss:name "Kunal Nayyar" .
+
+twssd:Kurt_Sutter a twss:Person ;
+    twss:name "Kurt Sutter" .
+
+twssd:Kyle_Chandler a twss:Person ;
+    twss:name "Kyle Chandler" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laura_L%C3%B3pez_Moyano> a twss:Person ;
+    twss:name "Laura López Moyano" .
+
+twssd:Laverne_Cox a twss:Person ;
+    twss:name "Laverne Cox" .
+
+twssd:Lil_Rel_Howery a twss:Person ;
+    twss:name "Lil Rel Howery" .
+
+twssd:Mads_Mikkelsen a twss:Person ;
+    twss:name "Mads Mikkelsen" .
+
+twssd:Maisie_Williams a twss:Person ;
+    twss:name "Maisie Williams" .
+
+twssd:Marie-Christine_Adam a twss:Person ;
+    twss:name "Marie-Christine Adam" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mart%C3%ADn_Desalvo> a twss:Person ;
+    twss:name "Martín Desalvo" .
+
+twssd:Martin_Donovan a twss:Person ;
+    twss:name "Martin Donovan" .
+
+twssd:Martin_Schreier a twss:Person ;
+    twss:name "Martin Schreier" .
+
+twssd:Max_Greenfield a twss:Person ;
+    twss:name "Max Greenfield" .
+
+twssd:Mel_Blanc a twss:Person ;
+    twss:name "Mel Blanc" .
+
+twssd:Mercedes_Burgos a twss:Person ;
+    twss:name "Mercedes Burgos" .
+
+twssd:Michael_Caine a twss:Person ;
+    twss:name "Michael Caine" .
+
+twssd:Michael_Gwisdek a twss:Person ;
+    twss:name "Michael Gwisdek" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Pe%C3%B1a> a twss:Person ;
+    twss:name "Michael Peña" .
+
+twssd:Mickey_Gilmore a twss:Person ;
+    twss:name "Mickey Gilmore" .
+
+twssd:Millie_Bobby_Brown a twss:Person ;
+    twss:name "Millie Bobby Brown" .
+
+twssd:Molly_Shannon a twss:Person ;
+    twss:name "Molly Shannon" .
+
+twssd:Mora_Recalde a twss:Person ;
+    twss:name "Mora Recalde" .
+
+twssd:Natalia_Oreiro a twss:Person ;
+    twss:name "Natalia Oreiro" .
+
+twssd:Natasha_Rothwell a twss:Person ;
+    twss:name "Natasha Rothwell" .
+
+twssd:Natsuki_Hanae a twss:Person ;
+    twss:name "Natsuki Hanae" .
+
+twssd:Nick_Jonas a twss:Person ;
+    twss:name "Nick Jonas" .
+
+twssd:Nicky_Jam a twss:Person ;
+    twss:name "Nicky Jam" .
+
+twssd:Nikolai_Kinski a twss:Person ;
+    twss:name "Nikolai Kinski" .
+
+twssd:Oakley_Bull a twss:Person ;
+    twss:name "Oakley Bull" .
+
+twssd:Pablo_Echarri a twss:Person ;
+    twss:name "Pablo Echarri" .
+
+twssd:Pablo_Rago a twss:Person ;
+    twss:name "Pablo Rago" .
+
+twssd:Patty_Jenkins a twss:Person ;
+    twss:name "Patty Jenkins" .
+
+twssd:Paul_Briggs a twss:Person ;
+    twss:name "Paul Briggs" .
+
+twssd:Pedro_Pascal a twss:Person ;
+    twss:name "Pedro Pascal" .
+
+twssd:Ravi_Patel a twss:Person ;
+    twss:name "Ravi Patel" .
+
+twssd:Ray_McKinnon a twss:Person ;
+    twss:name "Ray McKinnon" .
+
+twssd:Rebecca_Hall a twss:Person ;
+    twss:name "Rebecca Hall" .
+
+twssd:Rita_Tushingham a twss:Person ;
+    twss:name "Rita Tushingham" .
+
+twssd:Robert_Pattinson a twss:Person ;
+    twss:name "Robert Pattinson" .
+
+twssd:Robin_Wright a twss:Person ;
+    twss:name "Robin Wright" .
+
+twssd:Rosario_Dawson a twss:Person ;
+    twss:name "Rosario Dawson" .
+
+twssd:Sahil_Shroff a twss:Person ;
+    twss:name "Sahil Shroff" .
+
+twssd:Sam_Richardson a twss:Person ;
+    twss:name "Sam Richardson" .
+
+twssd:Sam_Rockwell a twss:Person ;
+    twss:name "Sam Rockwell" .
+
+twssd:Saori_Hayami a twss:Person ;
+    twss:name "Saori Hayami" .
+
+twssd:Satoshi_Hino a twss:Person ;
+    twss:name "Satoshi Hino" .
+
+twssd:Shun_Oguri a twss:Person ;
+    twss:name "Shun Oguri" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/St%C3%A9phane_Roger> a twss:Person ;
+    twss:name "Stéphane Roger" .
+
+twssd:Stacha_Hicks a twss:Person ;
+    twss:name "Stacha Hicks" .
+
+twssd:Subrat_Dutta a twss:Person ;
+    twss:name "Subrat Dutta" .
+
+twssd:Sylvester_McCoy a twss:Person ;
+    twss:name "Sylvester McCoy" .
+
+twssd:T-Pain a twss:Person ;
+    twss:name "T-Pain" .
+
+twssd:Takahiro_Sakurai a twss:Person ;
+    twss:name "Takahiro Sakurai" .
+
+twssd:Thomas_Kee a twss:Person ;
+    twss:name "Thomas Kee" .
+
+twssd:Tim_Story a twss:Person ;
+    twss:name "Tim Story" .
+
+twssd:Tom_Holland a twss:Person ;
+    twss:name "Tom Holland" .
+
+twssd:Tomokazu_Seki a twss:Person ;
+    twss:name "Tomokazu Seki" .
+
+twssd:Tony_Cervone a twss:Person ;
+    twss:name "Tony Cervone" .
+
+twssd:Vanessa_Curry a twss:Person ;
+    twss:name "Vanessa Curry" .
+
+twssd:Vikram_Jayakumar a twss:Person ;
+    twss:name "Vikram Jayakumar" .
+
+twssd:Vincent_Lacoste a twss:Person ;
+    twss:name "Vincent Lacoste" .
+
+twssd:Walt_Dohrn a twss:Person ;
+    twss:name "Walt Dohrn" .
+
+twssd:Wilfried_Hochholdinger a twss:Person ;
+    twss:name "Wilfried Hochholdinger" .
+
+twssd:William_Hanna a twss:Person ;
+    twss:name "William Hanna" .
+
+twssd:Yoshitsugu_Matsuoka a twss:Person ;
+    twss:name "Yoshitsugu Matsuoka" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> a twss:Person ;
+    twss:name "animación" .
+

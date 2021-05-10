@@ -1,0 +1,45 @@
+@prefix twss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+
+twssd:CINEMA_CITY a twss:Cinema ;
+    twss:name "CINEMA CITY" .
+
+twssd:CINEMA_OCHO a twss:Cinema ;
+    twss:name "CINEMA OCHO" .
+
+twssd:CINEMA_PARADISO a twss:Cinema ;
+    twss:name "CINEMA PARADISO" .
+
+twssd:CINEMA_ROCHA a twss:Cinema ;
+    twss:name "CINEMA ROCHA" .
+
+twssd:CINEMA_SAN_MARTIN a twss:Cinema ;
+    twss:name "CINEMA SAN MARTIN" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> a twss:Cinema ;
+    twss:name "Cinépolis Avellaneda" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> a twss:Cinema ;
+    twss:name "Cinépolis Luján" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> a twss:Cinema ;
+    twss:name "Cinépolis Maipú" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> a twss:Cinema ;
+    twss:name "Cinépolis Mendoza" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> a twss:Cinema ;
+    twss:name "Cinépolis Merlo" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> a twss:Cinema ;
+    twss:name "Cinépolis Neuquén" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> a twss:Cinema ;
+    twss:name "Cinépolis Pilar" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> a twss:Cinema ;
+    twss:name "Cinépolis Recoleta" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> a twss:Cinema ;
+    twss:name "Cinépolis Rosario" .
+
