@@ -1,3 +1,39 @@
+
+
+Proceso mental y motivaciones.
+como la web semántica permite representar información desde múltiples fuentes, se me ocurrió hacer eso mismo con los tps.
+
+tp1 exporatría en una ontología básica creada en protegé para experimentar la creación de ontologías simples cmo explicó casco en los videos.
+en este caso voy a leer el archivo json merge que ya está estructurado.
+esto me permite tener una idea de como es exportar datos estructurados de una base en formatos de la web semántica.
+los tomo como si fueran "mis" datos generados en un sistema. (salas cines funciones, etc)
+
+tp2 modificar los scrapers para manejar tripletas directamente, (o generar alguno simplificado ya que no tendría que manejar json-ld si no mas bien tripletas del grafo)
+analizar si es que me conviene usar la ontología creada anteriormente o extender alguna, usar alguna combinación de las mismas.
+la idea es experimentar un caso real sobre la web semántica donde se obtienen datos de múltiples ontologías.
+
+en las etapas anteriores tendría en owl los datos para ser consumidos por la última etapa del sismtea.
+armar algun merger para ver como me conviene tratar los datos. usar distintos grafos nombrados para almacenar los datos de distintas fuentes?.
+o hacer merge directo (unión) de los grafos completos.
+
+
+---
+definición de la ontología.
+
+como representar la duración de las películas en owl, ya que los tipos permitidos xsd:dateTime xsd:dateTimestamp
+si o si llevan la fecha de acuerdo a la definición.
+un posible datatype podría haber sido xsd:decimal y expresarla en minutos.
+pero quería la posibilidad de expresarla en hh:mm:ss
+veo que existe una ontología que es una recomendación para representar el tiempo.
+https://www.w3.org/TR/owl-time/
+la definición esta en : http://www.w3.org/2006/time#
+
+
+
+
+
+----
+
 idea, como comentó casco en el foro, esta bueno pensar en tripletas en vez de en clases.
 asi que voy a hacer la prueba de cargar los jsons-ld que responden los sitios a tripletas y manejarlos internamente en el scraper como tripletas.
 para todas las operaciones posteriores realizarlas en el grafo.
@@ -101,3 +137,4 @@ rdflib_jsonld/context.py
 -----
 
 
+https://lov.linkeddata.es/dataset/lov/ 
