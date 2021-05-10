@@ -154,10 +154,16 @@ if __name__ == '__main__':
         g.add((ciri, o.name, Literal(cinema_name)))
 
     ''' escribo todos los datos '''
-    with open('data/tp1.ttl','w') as f:
+    with open('data/tp1/all.ttl','w') as f:
         f.write(g.serialize(format="turtle").decode("utf-8"))
 
-    with open('data/tp1_persons.ttl', 'w') as f:
+
+    ''' 
+        haciendo algunas pruebas escribo algunas tripletas separadas por tipos 
+        solo para chequear resultados rápidamente.
+    '''
+
+    with open('data/tp1/persons.ttl', 'w') as f:
         g2 = Graph()
         g2.bind("twss", o)
         g2.bind("twssd", d)        
@@ -166,7 +172,7 @@ if __name__ == '__main__':
                 g2.add(t2)
         f.write(g2.serialize(format="turtle").decode("utf-8"))
 
-    with open('data/tp1_showrooms.ttl', 'w') as f:
+    with open('data/tp1/showrooms.ttl', 'w') as f:
         g2 = Graph()
         g2.bind("twss", o)
         g2.bind("twssd", d)        
@@ -175,7 +181,7 @@ if __name__ == '__main__':
                 g2.add(t2)
         f.write(g2.serialize(format="turtle").decode("utf-8"))
 
-    with open('data/tp1_cinemas.ttl', 'w') as f:
+    with open('data/tp1/cinemas.ttl', 'w') as f:
         g2 = Graph()
         g2.bind("twss", o)
         g2.bind("twssd", d)        

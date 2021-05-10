@@ -144,13 +144,17 @@ https://lov.linkeddata.es/dataset/lov/
 ----
 
 Problema que veo en la definición del vocabulario.
-protegé no permite manejar múltiples ontologias. para poder relacionarlas de forma simple.
+protegé no permite manejar múltiples ontologías. para poder relacionarlas de forma simple.
 si se podria importar ontologías de forma cruzada como hacemos con foaf. 
 o sea,
 definir una ontología /cines
 definir una ontología /movies
 abrir las ontologías en 2 proteges
 importar en 1 protegé la otra que no se está trabajando.
+
+si me permitió importar los individuals dentro de la ontología que estoy trabajando.
+asi es simple analizar que individuals fueron creados para cada clase, etc.
+
 
 
 

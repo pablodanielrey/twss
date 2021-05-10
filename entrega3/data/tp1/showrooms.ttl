@@ -1,0 +1,95 @@
+@prefix twss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+
+twssd:showroom_0acc9036-1254-43db-92d4-3265a9c9c6e2 a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_ROCHA ;
+    twss:name "SALA HD" .
+
+twssd:showroom_20faecad-1061-443f-95f6-79e7415c029e a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
+    twss:name "Classic" .
+
+twssd:showroom_2bfac741-7bd8-4186-8b86-10ef3ead88a8 a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_SAN_MARTIN ;
+    twss:name "SALA HD" .
+
+twssd:showroom_2c6372da-744f-4c06-a950-b329d329485c a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_CITY ;
+    twss:name "SALA 4D" .
+
+twssd:showroom_42b12608-aa95-404f-8a42-390c3fd3a92e a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
+    twss:name "Classic" .
+
+twssd:showroom_46b4239b-686b-41ff-b06f-e39d267a78cc a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
+    twss:name "4D" .
+
+twssd:showroom_55baa10e-1709-449b-8c0a-9210f1c83575 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
+    twss:name "Classic" .
+
+twssd:showroom_6c6314ca-078e-4e1e-b760-c678b4a4ffd3 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> ;
+    twss:name "Classic" .
+
+twssd:showroom_76c7511a-0a80-45cd-a897-f014f5186ac7 a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_PARADISO ;
+    twss:name "SALA HD" .
+
+twssd:showroom_8588efe6-8bc6-4f1e-9725-91a4cd8b996c a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
+    twss:name "Classic" .
+
+twssd:showroom_864c911e-3f31-4dba-ba80-7d0eabde5ca8 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
+    twss:name "Classic" .
+
+twssd:showroom_906e6d2a-183d-453b-95c0-c2490b1dde9c a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_CITY ;
+    twss:name "SALA HD" .
+
+twssd:showroom_a4cc4645-ab73-4ef6-a8a2-4fa9caf78371 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
+    twss:name "Classic" .
+
+twssd:showroom_ab659393-e55b-489e-947d-13e3b065ae6d a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
+    twss:name "4D" .
+
+twssd:showroom_acfe3fdc-100a-4fff-b121-32b456a498fa a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
+    twss:name "4D" .
+
+twssd:showroom_bcbbf837-a228-4d49-9487-c4b7ae118e4a a twss:ShowRoom ;
+    twss:isPartOf twssd:CINEMA_OCHO ;
+    twss:name "SALA HD" .
+
+twssd:showroom_c105ff89-f061-4269-b800-03ce483fc51e a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
+    twss:name "Classic" .
+
+twssd:showroom_d0f20c6f-e1f9-4c7c-866e-072aaa2c7622 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
+    twss:name "4D" .
+
+twssd:showroom_dd9d7f31-b7bd-49b6-acf1-31eb361e1855 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
+    twss:name "4D" .
+
+twssd:showroom_e74a0af4-91a5-496d-8737-44595b9aaeb4 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
+    twss:name "Classic" .
+
+twssd:showroom_ecb122c0-f280-4aec-93fe-c5908f920df7 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
+    twss:name "4D" .
+
+twssd:showroom_f6ab27a1-60ff-444a-8bba-df82cce63c49 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
+    twss:name "4D" .
+
+twssd:showroom_fd2d8563-953c-4c6c-abf0-c8eb46530f77 a twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
+    twss:name "4D" .
+
