@@ -33,7 +33,8 @@
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :Movie ,
                              :Person ;
-                 rdfs:range xsd:string .
+                 rdfs:range xsd:string ;
+                 rdfs:label "País de origen" .
 
 
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#duration
