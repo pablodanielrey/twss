@@ -15,13 +15,25 @@
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#actor
 :actor rdf:type owl:ObjectProperty ;
        rdfs:domain :Movie ;
-       rdfs:range :Person .
+       rdfs:range :Person ;
+       rdfs:label "Actor de la película" .
 
 
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#director
 :director rdf:type owl:ObjectProperty ;
           rdfs:domain :Movie ;
-          rdfs:range :Person .
+          rdfs:range :Person ;
+          rdfs:label "Director de la película" .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#isPartOf
+:isPartOf rdf:type owl:ObjectProperty ;
+          rdfs:domain owl:Thing ;
+          rdfs:range owl:Thing .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#showsIn
+:showsIn rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -37,23 +49,65 @@
                  rdfs:label "País de origen" .
 
 
-###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#duration
-:duration rdf:type owl:DatatypeProperty ;
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#durationInMinutes
+:durationInMinutes rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Movie ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:label "Duración en minutos" .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#genre
+:genre rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Movie ;
+       rdfs:range xsd:string ;
+       rdfs:label "Género de la película" .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#language
+:language rdf:type owl:DatatypeProperty ;
           rdfs:domain :Movie ;
-          rdfs:range xsd:decimal ;
-          rdfs:label "Duración en minutos" .
+          rdfs:range xsd:string ;
+          rdfs:label "Lenguaje original de la película" .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#movieRating
+:movieRating rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Movie ;
+             rdfs:range xsd:string ;
+             rdfs:label "Rating de la película" .
 
 
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:domain owl:Thing ;
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      rdfs:label "Nombre" .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#showLanguage
+:showLanguage rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Show ;
+              rdfs:range xsd:string ;
+              rdfs:label "Lenguaje de reproducción de la película" .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#showTime
+:showTime rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Show .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#synopsis
+:synopsis rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Movie ;
+          rdfs:range xsd:string ;
+          rdfs:label "Sinopsis de la película" .
 
 
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#title
 :title rdf:type owl:DatatypeProperty ;
        rdfs:domain :Movie ;
-       rdfs:range xsd:string .
+       rdfs:range xsd:string ;
+       rdfs:label "Título de la película" .
 
 
 #################################################################
@@ -70,6 +124,10 @@
 
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#Person
 :Person rdf:type owl:Class .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#Show
+:Show rdf:type owl:Class .
 
 
 ###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#ShowRoom

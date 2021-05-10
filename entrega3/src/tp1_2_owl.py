@@ -1,4 +1,5 @@
 import sys
+import uuid
 import json
 from urllib.parse import quote
 
@@ -17,6 +18,45 @@ def get_ontology():
     d = Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/')
     return (o,d)
 
+def get_movie_iri(movie_map, movie):
+    if movie['ID'] in movie_map:
+        return movie_map['ID']
+
+    if 'ORIGINAL_TITLE' in movie:
+        title = movie['ORIGINAL_TITLE']
+    else:
+        title = movie['TITLE']
+    iri = quote(title.replace(' ','_'))
+    movie_map[movie['ID']] = iri
+    return iri
+
+def get_person_iri(persons_map, person):
+    person = person.replace('.','')
+    if person in persons_map:
+        return persons_map[person]
+    iri = quote(person.replace(' ','_'))
+    persons_map[person] = iri
+    return iri
+
+def get_showrom_iris(cinema_map, showroom_map, show):
+    cinema = show['CINEMA']
+    if cinema in cinema_map:
+        ciri = cinema_map[cinema]
+    else:
+        ciri = quote(cinema.replace(' ', '_'))
+        cinema_map[cinema] = ciri
+
+    showroom = show['SHOWROOM']
+    if showroom in showroom_map:
+        return (ciri, showroom_map[showroom]['IRI'])
+    iri = f'showroom_{str(uuid.uuid4())}'
+    showroom_map[showroom] = {
+        'IRI': iri,
+        'CINEMA': ciri
+    }
+    return (ciri, iri)
+
+
 if __name__ == '__main__':
 
     o,d = get_ontology()
@@ -24,14 +64,79 @@ if __name__ == '__main__':
     g.bind("twss", o)
     g.bind("twssd", d)
 
+    persons_map = {}
+    movie_map = {}
+    cinema_map = {}
+    showroom_map = {}
+
+    ''' agrego las películas dentro del grafo '''
     data = load_data()
     for movie in data['MOVIES']:
-        title = movie['TITLE']
+        iri = get_movie_iri(movie_map, movie)
+        dmovie = d[iri]
 
-        print(title.replace(' ','_'))
-        vtitle = quote(title.replace(' ','_'))
-        dmovie = d[vtitle]
         g.add((dmovie, RDF.type, o.Movie))
-        g.add((dmovie, o.title, Literal(title)))
+
+        if 'LANGUAGE' in movie:
+            g.add((dmovie, o.language, Literal(movie['LANGUAGE'])))
+
+        g.add((dmovie, o.durationInMinutes, Literal(movie['DURATION'])))
+        g.add((dmovie, o.synopsis, Literal(movie['SYNOPSIS'])))
+        g.add((dmovie, o.movieRating, Literal(movie['RATING'])))
+        if 'WEB' in movie and movie['WEB'] != 'No disponible':
+            g.add((dmovie, RDFS.seeAlso, Literal(movie['WEB'])))
+
+        g.add((dmovie, o.title, Literal(movie['TITLE'])))
+        if 'ORIGINAL_TITLE' in movie:
+            g.add((dmovie, o.title, Literal(movie['ORIGINAL_TITLE'])))
+        
+        for genre in movie['GENRE']:
+            g.add((dmovie, o.genre, Literal(genre)))
+
+        for co in movie['ORIGIN']:
+            g.add((dmovie, o.countryOfOrigin, Literal(co)))
+
+        for director in movie['DIRECTOR']:
+            piri = get_person_iri(persons_map, director)
+            g.add((dmovie, o.director, d[piri]))
+
+        for actor in movie['ACTORS']:
+            piri = get_person_iri(persons_map, actor)
+            g.add((dmovie, o.actor, d[piri]))
+
+
+    ''' agrego los actores identificados dentro del grafo '''
+    for name, iri in persons_map.items():
+        piri = d[iri]
+        g.add((piri, o.type, o.Person))
+        g.add((piri, o.name, Literal(name)))
+
+    ''' agrego los datos de los shows '''
+    for show in data['SHOWS']:
+        movie_id = show['MOVIE']
+        miri = movie_map[movie_id]
+
+        ciri, siri = get_showrom_iris(cinema_map, showroom_map, show)
+        showroom_iri = d[siri]
+
+        ''' el iri del show es autogenerado '''
+        show_iri = f'show_{str(uuid.uuid4())}'
+        shiri = d[show_iri]
+
+        g.add((shiri, RDF.type, o.Show))
+        ''' pelicula '''
+        g.add((shiri, o.shows, d[miri]))
+        ''' sala '''
+        g.add((shiri, o.showsIn, showroom_iri))
+        ''' lenguaje de reproducción '''
+        g.add((shiri, o.showLanguage, Literal(show['LANGUAGE'])))
+        ''' formato de reproduccion '''
+        if 'FORMAT' in show:
+            g.add((shiri, o.showFormat, Literal(show['FORMAT'])))         
+
+        for hour in show['HOURS']:
+            ''' hora de reproducción '''
+            g.add((shiri, o.showTime, Literal(hour)))
+        
 
     print(g.serialize(format="turtle").decode("utf-8"))
