@@ -1,251 +1,403 @@
 @prefix : <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl#> .
-@prefix default1: <http://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
 @prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-default1:actor a owl:ObjectProperty ;
-    rdfs:domain default1:Movie ;
-    rdfs:range default1:Person .
+schema:actor a owl:ObjectProperty ;
+    rdfs:domain schema:Movie ;
+    rdfs:range schema:Person .
 
-default1:aggregateRating a owl:ObjectProperty ;
-    rdfs:domain default1:CreativeWork ;
-    rdfs:range default1:AggregateRating .
+schema:aggregateRating a owl:ObjectProperty ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:AggregateRating .
 
-default1:bestRating a owl:DatatypeProperty ;
-    rdfs:domain default1:Rating ;
+schema:bestRating a owl:DatatypeProperty ;
+    rdfs:domain schema:Rating ;
     rdfs:range xsd:float,
         xsd:string .
 
-default1:countryOfOrigin a owl:DatatypeProperty ;
-    rdfs:domain default1:Movie ;
+schema:countryOfOrigin a owl:DatatypeProperty ;
+    rdfs:domain schema:Movie ;
     rdfs:range xsd:string .
 
-default1:description a owl:DatatypeProperty ;
+schema:description a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-default1:director a owl:ObjectProperty ;
-    rdfs:domain default1:Movie ;
-    rdfs:range default1:Person ;
+schema:director a owl:ObjectProperty ;
+    rdfs:domain schema:Movie ;
+    rdfs:range schema:Person ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-default1:duration a owl:DatatypeProperty ;
-    rdfs:domain default1:Movie ;
+schema:duration a owl:DatatypeProperty ;
+    rdfs:domain schema:Movie ;
     rdfs:range xsd:decimal,
         xsd:string .
 
-default1:genre a owl:DatatypeProperty ;
-    rdfs:domain default1:CreativeWork ;
+schema:genre a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork ;
     rdfs:range xsd:string .
 
-default1:hasPart a owl:ObjectProperty ;
-    rdfs:domain default1:CreativeWork ;
-    rdfs:range default1:CreativeWork .
+schema:hasPart a owl:ObjectProperty ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:CreativeWork .
 
-default1:image a owl:ObjectProperty ;
+schema:image a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
-    rdfs:range default1:ImageObject .
+    rdfs:range schema:ImageObject .
 
-default1:mainEntityOfPage a owl:ObjectProperty ;
+schema:mainEntityOfPage a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
-    rdfs:range default1:CreativeWork ;
+    rdfs:range schema:CreativeWork ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-default1:name a owl:DatatypeProperty ;
+schema:name a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-default1:ratingCount a owl:DatatypeProperty ;
-    rdfs:domain default1:AggregateRating ;
+schema:ratingCount a owl:DatatypeProperty ;
+    rdfs:domain schema:AggregateRating ;
     rdfs:range xsd:integer .
 
-default1:ratingValue a owl:DatatypeProperty ;
-    rdfs:domain default1:Rating ;
+schema:ratingValue a owl:DatatypeProperty ;
+    rdfs:domain schema:Rating ;
     rdfs:range xsd:float .
 
-default1:startDate a owl:DatatypeProperty ;
-    rdfs:domain default1:CreativeWork ;
+schema:startDate a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork ;
     rdfs:range xsd:dateTime .
 
-default1:timeRequired a owl:DatatypeProperty ;
-    rdfs:domain default1:CreativeWork ;
+schema:timeRequired a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork ;
     rdfs:range xsd:string .
 
-default1:url a owl:DatatypeProperty ;
+schema:url a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-default1:worstRating a owl:DatatypeProperty ;
-    rdfs:domain default1:Rating ;
+schema:worstRating a owl:DatatypeProperty ;
+    rdfs:domain schema:Rating ;
     rdfs:range xsd:float .
+
+twssd:7d113473-5ab9-48cd-9aa9-9f8081922a39 a schema:Movie,
+        owl:NamedIndividual ;
+    schema:actor twssd:235aef58-939c-47bc-a124-a817ba281367,
+        twssd:2e0fa7b6-3c44-4463-912c-08cea48d1ef8,
+        twssd:c48af341-e8f8-44b0-92f8-18e3ab893861,
+        twssd:dade658e-de82-4120-b2fd-0f0c49bf87cb ;
+    schema:aggregateRating twssd:fdff34fc-e5cd-41fd-935b-f5f78d213161 ;
+    schema:contentRating "PG-13" ;
+    schema:creator twssd:03140b6f-f2d2-4f35-9068-bb29748e8b5f,
+        twssd:054778fc-ddb9-423e-a732-fe136293ace8,
+        twssd:1704305f-cbeb-4481-bf12-d4814b791a18,
+        twssd:2f2f85bf-1408-4ace-8f24-153f2622eed4,
+        twssd:32c62d1b-e793-4e3e-bfdf-18dedfb01d19,
+        twssd:411ecc8f-1f0a-498f-8102-e1f3a853a4d8,
+        twssd:a067637d-b567-47c0-95da-43f9fe1857ad,
+        twssd:b12ddd6e-06cb-42dd-a8c5-53a3ebdb707d,
+        twssd:bc6adc82-bfe4-453b-88c9-6fa472ef75e8,
+        twssd:d05dfd2e-9496-4510-b189-39ffac3629f0,
+        twssd:f6e8b395-2c00-40fe-97b3-527920b3fc22 ;
+    schema:datePublished "2020-12-16"^^schema:Date ;
+    schema:description "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..." ;
+    schema:director twssd:66a7b0d8-bee6-47e0-b82f-2460399e421a ;
+    schema:duration "PT2H31M" ;
+    schema:genre "Action",
+        "Adventure",
+        "Fantasy" ;
+    schema:image <https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg> ;
+    schema:keywords "sequel,superhero,dc extended universe,dc comics,one woman army" ;
+    schema:name "Wonder Woman 1984" ;
+    schema:review twssd:f7159617-3887-4536-a4aa-71b7191bcb72 ;
+    schema:trailer twssd:5c3fb9f1-f8b4-47d3-a11a-a4abd1282435 ;
+    schema:url <https://www.imdb.com/title/tt7126948/> .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> a owl:Ontology .
 
-:pepe a default1:Movie,
+:pepe a schema:Movie,
         owl:NamedIndividual ;
-    default1:name "pepe" .
+    schema:name "pepe" .
 
-default1:Action a owl:Class .
+schema:Action a owl:Class .
 
-default1:AdministrativeArea a owl:Class ;
-    rdfs:subClassOf default1:Place .
+schema:AdministrativeArea a owl:Class ;
+    rdfs:subClassOf schema:Place .
 
-default1:Clip a owl:Class ;
-    rdfs:subClassOf default1:CreativeWork .
+schema:Clip a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
 
-default1:ConsumeAction a owl:Class ;
-    rdfs:subClassOf default1:Action .
+schema:ConsumeAction a owl:Class ;
+    rdfs:subClassOf schema:Action .
 
-default1:Event a owl:Class .
+schema:Event a owl:Class .
 
-default1:Intangible a owl:Class .
+schema:Intangible a owl:Class .
 
-default1:MediaObject a owl:Class ;
-    rdfs:subClassOf default1:CreativeWork .
+schema:MediaObject a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
 
-default1:Organization a owl:Class .
+schema:Place a owl:Class .
 
-default1:Place a owl:Class .
+schema:PublicationEvent a owl:Class ;
+    rdfs:subClassOf schema:Event .
 
-default1:PublicationEvent a owl:Class ;
-    rdfs:subClassOf default1:Event .
+schema:WatchAction a owl:Class ;
+    rdfs:subClassOf schema:ConsumeAction .
 
-default1:WatchAction a owl:Class ;
-    rdfs:subClassOf default1:ConsumeAction .
-
-twssd:1e586962-8e39-4cc1-94a4-6660e067c0bc a default1:PublicationEvent,
+twssd:03140b6f-f2d2-4f35-9068-bb29748e8b5f a schema:Person,
         owl:NamedIndividual ;
-    default1:location twssd:35d23f8f-a10e-49e7-9467-98ab38dc370d ;
-    default1:startDate "2020-12-18"^^default1:Date .
+    schema:name "Patty Jenkins" ;
+    schema:url <https://www.imdb.com/name/nm0420941/> .
 
-twssd:35d23f8f-a10e-49e7-9467-98ab38dc370d a default1:Country,
+twssd:054778fc-ddb9-423e-a732-fe136293ace8 a schema:Person,
         owl:NamedIndividual ;
-    default1:name "ES" .
+    schema:name "Patty Jenkins" ;
+    schema:url <https://www.imdb.com/name/nm0420941/> .
 
-twssd:60c70629-cbdb-40a8-a9d0-2f9e84035057 a default1:Person,
+twssd:0c58c9d1-e08c-4638-a9ef-9f0f266a154e a schema:Rating,
         owl:NamedIndividual ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot/> ;
-    default1:name "Gal Gadot" .
+    schema:bestRating "10" ;
+    schema:ratingValue "5" ;
+    schema:worstRating "1" .
 
-twssd:706ad878-28e3-4c7f-be81-8feaa340669a a default1:Person,
+twssd:1704305f-cbeb-4481-bf12-d4814b791a18 a schema:Organization,
         owl:NamedIndividual ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright/> ;
-    default1:name "Robin Wright" .
+    schema:url <https://www.imdb.com/company/co0002663/> .
 
-twssd:75bf47a9-9185-4b41-8dd4-5725608896ea a default1:EntryPoint,
+twssd:22c93010-7d23-4486-9957-c379355004f3 a schema:CreativeWork,
         owl:NamedIndividual ;
-    default1:actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
+    schema:url <https://www.imdb.com/title/tt7126948/> .
+
+twssd:235aef58-939c-47bc-a124-a817ba281367 a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "Pedro Pascal" ;
+    schema:url <https://www.imdb.com/name/nm0050959/> .
+
+twssd:2a434189-fcb2-42b8-b2c9-727d248404a2 a schema:Person,
+        owl:NamedIndividual ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot/> ;
+    schema:name "Gal Gadot" .
+
+twssd:2c004653-cee8-4dc5-97ab-d475ae0e183e a schema:Organization,
+        owl:NamedIndividual ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/empresas/warner-bros/> ;
+    schema:name "Warner Bros. Pictures" .
+
+twssd:2e0fa7b6-3c44-4463-912c-08cea48d1ef8 a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "Chris Pine" ;
+    schema:url <https://www.imdb.com/name/nm1517976/> .
+
+twssd:2f2f85bf-1408-4ace-8f24-153f2622eed4 a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "Dave Callaham" ;
+    schema:url <https://www.imdb.com/name/nm1709264/> .
+
+twssd:32c62d1b-e793-4e3e-bfdf-18dedfb01d19 a schema:Organization,
+        owl:NamedIndividual ;
+    schema:url <https://www.imdb.com/company/co0038332/> .
+
+twssd:33a80dde-eb27-4ee6-8a7e-1e16387c7e6c a schema:WatchAction,
+        owl:NamedIndividual ;
+    schema:expectsAcceptanceOf twssd:b57f5010-08a1-4770-9472-3ce61e5baeef ;
+    schema:target twssd:4581f1be-fbde-457c-aa21-b21bd4115a47 .
+
+twssd:411ecc8f-1f0a-498f-8102-e1f3a853a4d8 a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "Geoff Johns" ;
+    schema:url <https://www.imdb.com/name/nm0424315/> .
+
+twssd:4581f1be-fbde-457c-aa21-b21bd4115a47 a schema:EntryPoint,
+        owl:NamedIndividual ;
+    schema:actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
         "http://schema.org/DesktopWebPlatform",
         "http://schema.org/IOSPlatform",
         "http://schema.org/MobileWebPlatform" ;
-    default1:inLanguage "es" ;
-    default1:urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" .
+    schema:inLanguage "es" ;
+    schema:urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" .
 
-twssd:78e97dc7-c4fc-4e52-a206-7386ea1dfa2c a default1:Organization,
+twssd:4ec5ad5d-54ba-44e3-abaa-2df504139708 a schema:Person,
         owl:NamedIndividual ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/empresas/warner-bros/> ;
-    default1:name "Warner Bros. Pictures" .
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright/> ;
+    schema:name "Robin Wright" .
 
-twssd:9e9b0c8a-0862-4973-bd67-dfc74c223be5 a default1:Offer,
+twssd:5c3fb9f1-f8b4-47d3-a11a-a4abd1282435 a schema:VideoObject,
         owl:NamedIndividual ;
-    default1:availabilityStarts "2019-12-08 22:30:37"^^default1:Date ;
-    default1:category "free" ;
-    default1:eligibleRegion twssd:e78cbb21-2609-4a00-98d7-8a53e0d170f8 .
+    schema:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
+    schema:embedUrl <https://www.imdb.com/video/imdb/vi3240214809> ;
+    schema:name "Stream on HBO Max for a Limited Time" ;
+    schema:thumbnail twssd:e2c56b02-8729-4fe4-b147-3a57b40617c0 ;
+    schema:thumbnailUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ;
+    schema:uploadDate "2020-12-07T01:51:07Z"^^schema:Date .
 
-twssd:a3005fe7-7e06-47e9-b5ac-67860b8c5a72 a default1:Person,
+twssd:66a7b0d8-bee6-47e0-b82f-2460399e421a a schema:Person,
         owl:NamedIndividual ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine/> ;
-    default1:name "Chris Pine" .
+    schema:name "Patty Jenkins" ;
+    schema:url <https://www.imdb.com/name/nm0420941/> .
 
-twssd:ab7b7ea3-44c7-45fe-a327-a2ee8dd29253 a default1:Person,
+twssd:6806c3a1-df73-4d88-8941-933ee769a5e7 a schema:PublicationEvent,
         owl:NamedIndividual ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal/> ;
-    default1:name "Pedro Pascal" .
+    schema:location twssd:e7afcc8d-7a9e-4fa4-a27f-c61b5bb164c9 ;
+    schema:startDate "2020-12-18"^^schema:Date .
 
-twssd:b7b0dc84-c8ac-40c1-a1fe-c03fc8e65217 a default1:Clip,
+twssd:7b201c9b-3cc1-489c-afe0-9ad0e8684a98 a schema:Person,
         owl:NamedIndividual ;
-    default1:description "trailer" ;
-    default1:potentialAction twssd:f639c2db-c379-4558-b529-7c0fab3e7871 ;
-    default1:timeRequired "PT2M24S" .
+    schema:name "jayg_58" .
 
-twssd:bfb86e48-4c60-4039-90b0-43deeada5a1f a default1:Person,
+twssd:7ebd4f61-58fc-4dc3-bc3d-6811fe4b4297 a schema:Person,
         owl:NamedIndividual ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/personas/patty-jenkins/> ;
-    default1:name "Patty Jenkins" .
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig/> ;
+    schema:name "Kristen Wiig" .
 
-twssd:c9a6f49a-d55b-4cac-a3fc-09ddf223fa96 a default1:Person,
+twssd:89e91727-041a-4dd7-9731-cbe9efe3d888 a schema:Person,
         owl:NamedIndividual ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/personas/connie-nielsen/> ;
-    default1:name "Connie Nielsen" .
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine/> ;
+    schema:name "Chris Pine" .
 
-twssd:cd91d398-a00a-4736-bccc-e471409742b3 a default1:Person,
+twssd:8c0dd008-9429-4e4a-a3b1-a778189ba6bb a schema:Person,
         owl:NamedIndividual ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig/> ;
-    default1:name "Kristen Wiig" .
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/connie-nielsen/> ;
+    schema:name "Connie Nielsen" .
 
-twssd:d9677246-c539-48b0-a644-c744b0afa353 a default1:ImageObject,
+twssd:a067637d-b567-47c0-95da-43f9fe1857ad a schema:Organization,
         owl:NamedIndividual ;
-    default1:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
+    schema:url <https://www.imdb.com/company/co0283444/> .
 
-twssd:e78cbb21-2609-4a00-98d7-8a53e0d170f8 a default1:Country,
+twssd:b12ddd6e-06cb-42dd-a8c5-53a3ebdb707d a schema:Organization,
         owl:NamedIndividual ;
-    default1:name "ES" .
+    schema:url <https://www.imdb.com/company/co0728674/> .
 
-twssd:ecd02321-7467-4749-bde0-33b61ec5b7d3 a default1:AggregateRating,
+twssd:b57f5010-08a1-4770-9472-3ce61e5baeef a schema:Offer,
         owl:NamedIndividual ;
-    default1:bestRating "10" ;
-    default1:ratingCount "20" ;
-    default1:ratingValue "7,6" ;
-    default1:worstRating "0" .
+    schema:availabilityStarts "2019-12-08 22:30:37"^^schema:Date ;
+    schema:category "free" ;
+    schema:eligibleRegion twssd:ee8ced9c-3df9-4945-bec0-7e7a8ef231e1 .
 
-twssd:f639c2db-c379-4558-b529-7c0fab3e7871 a default1:WatchAction,
+twssd:bc6adc82-bfe4-453b-88c9-6fa472ef75e8 a schema:Organization,
         owl:NamedIndividual ;
-    default1:expectsAcceptanceOf twssd:9e9b0c8a-0862-4973-bd67-dfc74c223be5 ;
-    default1:target twssd:75bf47a9-9185-4b41-8dd4-5725608896ea .
+    schema:url <https://www.imdb.com/company/co0028338/> .
 
-<https://www.ecartelera.com/peliculas/wonder-woman-1984/> a default1:Movie,
+twssd:c13b5a0d-da64-4273-a3b4-5e3aadc415a8 a schema:ImageObject,
         owl:NamedIndividual ;
-    default1:actor twssd:60c70629-cbdb-40a8-a9d0-2f9e84035057,
-        twssd:706ad878-28e3-4c7f-be81-8feaa340669a,
-        twssd:a3005fe7-7e06-47e9-b5ac-67860b8c5a72,
-        twssd:ab7b7ea3-44c7-45fe-a327-a2ee8dd29253,
-        twssd:c9a6f49a-d55b-4cac-a3fc-09ddf223fa96,
-        twssd:cd91d398-a00a-4736-bccc-e471409742b3 ;
-    default1:aggregateRating twssd:ecd02321-7467-4749-bde0-33b61ec5b7d3 ;
-    default1:countryOfOrigin "EE.UU." ;
-    default1:description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
+    schema:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
+
+twssd:c48af341-e8f8-44b0-92f8-18e3ab893861 a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "Kristen Wiig" ;
+    schema:url <https://www.imdb.com/name/nm1325419/> .
+
+twssd:d05dfd2e-9496-4510-b189-39ffac3629f0 a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "Geoff Johns" ;
+    schema:url <https://www.imdb.com/name/nm0424315/> .
+
+twssd:d303c416-4696-498d-b792-13373e24d9af a schema:Clip,
+        owl:NamedIndividual ;
+    schema:description "trailer" ;
+    schema:potentialAction twssd:33a80dde-eb27-4ee6-8a7e-1e16387c7e6c ;
+    schema:timeRequired "PT2M24S" .
+
+twssd:dade658e-de82-4120-b2fd-0f0c49bf87cb a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "Gal Gadot" ;
+    schema:url <https://www.imdb.com/name/nm2933757/> .
+
+twssd:dce8b0e6-86c9-4eb2-94d1-dd5106ed32e4 a schema:Person,
+        owl:NamedIndividual ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/patty-jenkins/> ;
+    schema:name "Patty Jenkins" .
+
+twssd:e2c56b02-8729-4fe4-b147-3a57b40617c0 a schema:ImageObject,
+        owl:NamedIndividual ;
+    schema:contentUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> .
+
+twssd:e66666a6-f7ca-4a61-8c5a-75e0957d5cc2 a schema:Person,
+        owl:NamedIndividual ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal/> ;
+    schema:name "Pedro Pascal" .
+
+twssd:e7afcc8d-7a9e-4fa4-a27f-c61b5bb164c9 a schema:Country,
+        owl:NamedIndividual ;
+    schema:name "ES" .
+
+twssd:ee8ced9c-3df9-4945-bec0-7e7a8ef231e1 a schema:Country,
+        owl:NamedIndividual ;
+    schema:name "ES" .
+
+twssd:eee1f198-0656-4059-a162-5291b529a395 a schema:AggregateRating,
+        owl:NamedIndividual ;
+    schema:bestRating "10" ;
+    schema:ratingCount "20" ;
+    schema:ratingValue "7,6" ;
+    schema:worstRating "0" .
+
+twssd:f6e8b395-2c00-40fe-97b3-527920b3fc22 a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "William Moulton Marston" ;
+    schema:url <https://www.imdb.com/name/nm0551376/> .
+
+twssd:f7159617-3887-4536-a4aa-71b7191bcb72 a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:7b201c9b-3cc1-489c-afe0-9ad0e8684a98 ;
+    schema:dateCreated "2021-01-01"^^schema:Date ;
+    schema:inLanguage "English" ;
+    schema:itemReviewed twssd:22c93010-7d23-4486-9957-c379355004f3 ;
+    schema:name "In quarantine, you'll buy anything." ;
+    schema:reviewBody "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours." ;
+    schema:reviewRating twssd:0c58c9d1-e08c-4638-a9ef-9f0f266a154e .
+
+twssd:fdff34fc-e5cd-41fd-935b-f5f78d213161 a schema:AggregateRating,
+        owl:NamedIndividual ;
+    schema:bestRating "10.0" ;
+    schema:ratingCount 198912 ;
+    schema:ratingValue "5.4" ;
+    schema:worstRating "1.0" .
+
+<https://www.ecartelera.com/peliculas/wonder-woman-1984/> a schema:Movie,
+        owl:NamedIndividual ;
+    schema:actor twssd:2a434189-fcb2-42b8-b2c9-727d248404a2,
+        twssd:4ec5ad5d-54ba-44e3-abaa-2df504139708,
+        twssd:7ebd4f61-58fc-4dc3-bc3d-6811fe4b4297,
+        twssd:89e91727-041a-4dd7-9731-cbe9efe3d888,
+        twssd:8c0dd008-9429-4e4a-a3b1-a778189ba6bb,
+        twssd:e66666a6-f7ca-4a61-8c5a-75e0957d5cc2 ;
+    schema:aggregateRating twssd:eee1f198-0656-4059-a162-5291b529a395 ;
+    schema:countryOfOrigin "EE.UU." ;
+    schema:description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
 \r
 La trama de esta película es una gran misterio. El guión está basado en una historia escrita por Patty Jenkins, Geoff Johns (&#39;The Flash&#39;, &#39;Aquaman&#39;) y Dave Callaham (&#39;Zombieland: Mata y remata&#39;). Se espera que tenga protagonismo la tecnología y la vigilancia, teniendo en cuenta el título que hace referencia a la distopía de &#39;1984&#39; de George Orwell.""" ;
-    default1:director twssd:bfb86e48-4c60-4039-90b0-43deeada5a1f ;
-    default1:duration "PT2H31M" ;
-    default1:genre "Acción",
+    schema:director twssd:dce8b0e6-86c9-4eb2-94d1-dd5106ed32e4 ;
+    schema:duration "PT2H31M" ;
+    schema:genre "Acción",
         "Aventura",
         "Fantasía" ;
-    default1:hasPart twssd:b7b0dc84-c8ac-40c1-a1fe-c03fc8e65217 ;
-    default1:image twssd:d9677246-c539-48b0-a644-c744b0afa353 ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984/> ;
-    default1:name "Wonder Woman 1984" ;
-    default1:productionCompany twssd:78e97dc7-c4fc-4e52-a206-7386ea1dfa2c ;
-    default1:releasedEvent twssd:1e586962-8e39-4cc1-94a4-6660e067c0bc .
+    schema:hasPart twssd:d303c416-4696-498d-b792-13373e24d9af ;
+    schema:image twssd:c13b5a0d-da64-4273-a3b4-5e3aadc415a8 ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984/> ;
+    schema:name "Wonder Woman 1984" ;
+    schema:productionCompany twssd:2c004653-cee8-4dc5-97ab-d475ae0e183e ;
+    schema:releasedEvent twssd:6806c3a1-df73-4d88-8941-933ee769a5e7 .
 
-default1:Country a owl:Class ;
-    rdfs:subClassOf default1:AdministrativeArea .
+schema:Country a owl:Class ;
+    rdfs:subClassOf schema:AdministrativeArea .
 
-default1:ImageObject a owl:Class ;
-    rdfs:subClassOf default1:MediaObject .
+schema:ImageObject a owl:Class ;
+    rdfs:subClassOf schema:MediaObject .
 
-default1:AggregateRating a owl:Class ;
-    rdfs:subClassOf default1:Rating .
+schema:AggregateRating a owl:Class ;
+    rdfs:subClassOf schema:Rating .
 
-default1:Rating a owl:Class ;
-    rdfs:subClassOf default1:Intangible .
+schema:Rating a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
 
-default1:Movie a owl:Class ;
-    rdfs:subClassOf default1:CreativeWork .
+schema:Organization a owl:Class .
 
-default1:Person a owl:Class .
+schema:Movie a owl:Class ;
+    rdfs:subClassOf schema:CreativeWork .
 
-default1:CreativeWork a owl:Class .
+schema:CreativeWork a owl:Class .
+
+schema:Person a owl:Class .
 

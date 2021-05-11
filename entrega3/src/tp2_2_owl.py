@@ -71,33 +71,42 @@ if __name__ == '__main__':
     json_ld = get_jsons(url)[0]
     """
 
-    url = 'https://www.ecartelera.com/peliculas/wonder-woman-1984'
-    print(f'Descargando información de : {url}')
-    with open('data/tp2/https___www.ecartelera.com_peliculas_wonder-woman-1984.json','r') as f:
-        json_ld = json.loads(f.read())[0]
+    unionGraph = Graph()
+    bind_schemas(unionGraph)
 
-    ''' 
-        implemento la solución que comentó Leonardo en el foro. 
-        así no necesito parchear la librería rdflib
-        problema de la redirección usando cabecera LINK
-    '''
-    json_ld['@context'] = json_ld['@context'].replace('http://schema.org','https://schema.org/docs/jsonldcontext.jsonld')
-    djson_ld = json.dumps(json_ld, ensure_ascii=False)
+    urls_files_map = [
+        ('https://www.ecartelera.com/peliculas/wonder-woman-1984', 'data/tp2/https___www.ecartelera.com_peliculas_wonder-woman-1984.json'),
+        ('https://www.imdb.com/title/tt7126948/', 'data/tp2/https___www.imdb.com_title_tt7126948_.json')
+    ]
 
-    ''' ahora si puedo tratar de importar y parsear en el grafo de rdflib '''
-    g = Graph()
-    bind_schemas(g)
-    g.parse(data=djson_ld, format='json-ld', publicID=url)
+    for url, dfile in urls_files_map:
+        print(f'Descargando información de : {url}')
+        with open(dfile,'r') as f:
+            json_ld = json.loads(f.read())[0]
+
+        ''' 
+            implemento la solución que comentó Leonardo en el foro. 
+            así no necesito parchear la librería rdflib
+            problema de la redirección usando cabecera LINK
+        '''
+        json_ld['@context'] = json_ld['@context'].replace('http://schema.org','https://schema.org/docs/jsonldcontext.jsonld')
+        djson_ld = json.dumps(json_ld, ensure_ascii=False)
+
+        ''' ahora si puedo tratar de importar y parsear en el grafo de rdflib '''
+        g = Graph()
+        bind_schemas(g)
+        g.parse(data=djson_ld, format='json-ld', publicID=url)
+        unionGraph = unionGraph + g
 
     data_namespace = Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/')
-    to_lean_graph(data_namespace, g)
-    add_named_individuals(g)
+    to_lean_graph(data_namespace, unionGraph)
+    add_named_individuals(unionGraph)
 
     gontology = Graph()
     with open('../owl/twss_schema.ttl', 'r') as f:
         gontology.parse(f, format='turtle')
 
-    gfinal = gontology + g
+    gfinal = gontology + unionGraph
     with open('data/merged.ttl','w') as f:
         f.write(gfinal.serialize(format="turtle").decode("utf-8"))
 
