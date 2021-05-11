@@ -203,6 +203,18 @@ ahora si entendiendo un poco el proceso armo un script que se conecte al sitio, 
 
 ----
 
+ejecución inicial de una prueba del script.
+
+python3 src/tp2_2_owl.py https://www.ecartelera.com/peliculas/wonder-woman-1984
+
+hace merge de la info de tp1 y lo que lee del sitio en json-ld.
+y lo escribe en un archivo merged.ttl
+
+portegé no muestra cosas coherentes. muestra las clases pero todo lo demas como anotaciones.
+no muestra correctamente las propiedades, etc.
+tiene que estar faltando las clases que usa protegé para analizar y interpretar los datos en su interface.
+
+----
 
 
 
