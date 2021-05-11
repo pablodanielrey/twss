@@ -1,12 +1,9 @@
 @prefix schema: <http://schema.org/> .
 
-<https://www.ecartelera.com/peliculas/wonder-woman-1984/> a schema:Movie ;
+<https://www.ecartelera.com/peliculas/wonder-woman-1984> a schema:Movie ;
     schema:actor [ a schema:Person ;
-            schema:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright/> ;
-            schema:name "Robin Wright" ],
-        [ a schema:Person ;
-            schema:mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal/> ;
-            schema:name "Pedro Pascal" ],
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig/> ;
+            schema:name "Kristen Wiig" ],
         [ a schema:Person ;
             schema:mainEntityOfPage <https://www.ecartelera.com/personas/connie-nielsen/> ;
             schema:name "Connie Nielsen" ],
@@ -14,11 +11,14 @@
             schema:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine/> ;
             schema:name "Chris Pine" ],
         [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright/> ;
+            schema:name "Robin Wright" ],
+        [ a schema:Person ;
             schema:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot/> ;
             schema:name "Gal Gadot" ],
         [ a schema:Person ;
-            schema:mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig/> ;
-            schema:name "Kristen Wiig" ] ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal/> ;
+            schema:name "Pedro Pascal" ] ;
     schema:aggregateRating [ a schema:AggregateRating ;
             schema:bestRating "10" ;
             schema:ratingCount "20" ;

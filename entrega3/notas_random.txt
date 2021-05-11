@@ -231,11 +231,68 @@ ya hice el cambio a los scripts para que le agreguen eso a los datos del tp1.
 
 ---
 
+ahora el tema del procesamiento de los datos que vienen de los sitios con el context schema.org
+lograr que protegé los lea correctamente cuando los escribo en turtle.
+primero le voy a agregar esas clases. (NamedIndividual y Class)
+
+sigue sin funcionar. no me muestra la instancia de schema:Movie con id: 
+https://www.ecartelera.com/peliculas/wonder-woman-1984/
+
+identifique cual es el problema.
+protegé no lo toma como individual si tiene un / final en el iri.
+claramente no es acorde con la sintaxis de las iris.
+
+sintaxis de las iris: https://datatracker.ietf.org/doc/html/rfc3987
+   
+con un ejemplo como :
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://schema.org/Movie> a owl:Class .
+
+<https://www.ecartelera.com/peliculas/wonder-woman-1984> a <http://schema.org/Movie> .
+
+me lo tomó ok el protegé
+
+-----
+
+bien entonces ahora tengo 2 opciones.
+1 - extender mi ontología para abarcar las clases de schema.
+2 - implementar una ontología especifica de schema y asociarla con la mía mediante owl, por ejemplo usando owl:sameAs
+
+voy a probar con la opción 2 para ver como es la ontología de schema.org a ver si le puedo hacer un merge con la mía.
+y replicar solo las propieades que usan los sitios actuales que estamos analizando en los tps
 
 
+problema 1 definiendo schema.org
+mainEntityOfPage --> dominio: Thing  range: CreativeWork, URL
 
+veo los datos:
 
+        [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright/> ;
 
+la cual no es una iri válida, o sea que la debería tomar como una url, un texto. pero como está definida ahi sería una iri de un recurso.
+probé y veo que si le saco la / final el sitio si redirige a la url con /, asi que sería correcto sacarle las /
+
+con respecto a:
+schema:countryOfOrigin "EE.UU." ;
+no es una iri, si no un texto. asi que por ahora lo voy a modelar como un string.
+
+duration:
+schema:duration "PT2H31M" ;
+tambien la modelo como string y como numero para abarcar mi modelo anterior.
+
+url esta definido como hacia una iri    
+schema:image [ a schema:ImageObject ;
+    schema:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> ] ;
+    
+pero me parece mejor definirlo como string.
+
+----
+
+schema.org modela todo como clases. Text, etc.
+pero en la práctica los datos se exportan como string.
 
 
 

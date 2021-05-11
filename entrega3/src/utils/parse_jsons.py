@@ -24,11 +24,21 @@ def visualize(g:Graph):
 if __name__ == '__main__':
     jf = sys.argv[1]
     with open(jf, 'r') as jsonf:
-        data1 = jsonf.read()
+        json_ld = json.loads(jsonf.read())[0]
 
     g = Graph()
     g.bind('schema','http://schema.org/')
-    g.parse(data=data1, format='json-ld')
+
+    ''' 
+        implemento la solución que comentó Leonardo en el foro. 
+        así no necesito parchear la librería rdflib
+        problema de la redirección usando cabecera LINK
+    '''
+    json_ld['@context'] = json_ld['@context'].replace('http://schema.org','https://schema.org/docs/jsonldcontext.jsonld')
+    djson_ld = json.dumps(json_ld, ensure_ascii=False)
+
+
+    g.parse(data=djson_ld, format='json-ld')
     
     ttldfile = jf.replace('.json','.ttl')
 
