@@ -8,7 +8,7 @@ from rdflib.term import URIRef
 
 
 def load_data():
-    with open('data/merged_tp1.json') as f:
+    with open('data/tp1/merged_tp1.json') as f:
         data = json.loads(f.read())
     return data
 
