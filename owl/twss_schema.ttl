@@ -18,6 +18,13 @@
                           rdfs:range <http://schema.org/Person> .
 
 
+###  http://schema.org/actors
+<http://schema.org/actors> rdf:type owl:ObjectProperty ;
+                           rdfs:domain <http://schema.org/Clip> ,
+                                       <http://schema.org/Movie> ;
+                           rdfs:range <http://schema.org/Person> .
+
+
 ###  http://schema.org/aggregateRating
 <http://schema.org/aggregateRating> rdf:type owl:ObjectProperty ;
                                     rdfs:domain <http://schema.org/CreativeWork> ;
@@ -98,6 +105,13 @@
                                       rdfs:range <http://schema.org/Organization> .
 
 
+###  http://schema.org/publisher
+<http://schema.org/publisher> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <http://schema.org/CreativeWork> ;
+                              rdfs:range <http://schema.org/Organization> ,
+                                         <http://schema.org/Person> .
+
+
 ###  http://schema.org/releasedEvent
 <http://schema.org/releasedEvent> rdf:type owl:ObjectProperty ;
                                   rdfs:domain <http://schema.org/CreativeWork> ;
@@ -170,6 +184,12 @@
                                   rdfs:range xsd:string .
 
 
+###  http://schema.org/contentUrl
+<http://schema.org/contentUrl> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/MediaObject> ;
+                               rdfs:range xsd:string .
+
+
 ###  http://schema.org/countryOfOrigin
 <http://schema.org/countryOfOrigin> rdf:type owl:DatatypeProperty ;
                                     rdfs:domain <http://schema.org/Movie> ;
@@ -180,6 +200,12 @@
 <http://schema.org/dateCreated> rdf:type owl:DatatypeProperty ;
                                 rdfs:domain <http://schema.org/CreativeWork> ;
                                 rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/dateModified
+<http://schema.org/dateModified> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://schema.org/CreativeWork> ;
+                                 rdfs:range xsd:dateTime .
 
 
 ###  http://schema.org/datePublished
@@ -248,6 +274,12 @@
 <http://schema.org/reviewBody> rdf:type owl:DatatypeProperty ;
                                rdfs:domain <http://schema.org/Review> ;
                                rdfs:range xsd:string .
+
+
+###  http://schema.org/sameAs
+<http://schema.org/sameAs> rdf:type owl:DatatypeProperty ;
+                           rdfs:domain owl:Thing ;
+                           rdfs:range xsd:string .
 
 
 ###  http://schema.org/startDate
