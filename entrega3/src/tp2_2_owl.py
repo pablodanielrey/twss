@@ -1,11 +1,12 @@
 import sys
+import uuid
 import json
 import rdflib
 import requests
 import extruct
 from w3lib.html import get_base_url
 
-from rdflib import Graph, RDF, RDFS, OWL, Namespace
+from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode
 from rdflib.term import URIRef
 from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 from rdflib.plugin import register, Parser
@@ -28,6 +29,38 @@ def bind_schemas(g:Graph):
     g.bind('schema',Namespace('http://schema.org/'))
     g.bind("twss", Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#'))
     g.bind("twssd", Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/'))
+
+
+def to_lean_graph(data_namespace, g:Graph):
+    blank_nodes = set()
+
+    ''' identifico todos los blank nodes que son clases de algun tipo '''
+    for s,p,o in g.triples((None, RDF.type, None)):
+        if isinstance(s, BNode):
+            blank_nodes.add(s)
+
+    for bn in blank_nodes:
+        ''' genero una iri dentro del namespace de los individuals para el blank node '''
+        bnid = str(uuid.uuid4())
+        dbnid = data_namespace[bnid]
+
+        ''' genero las tripletas con ese nuevo id y remuevo las tripletas anteriores '''
+
+        for st,sp,so in g.triples((bn, None, None)):
+            g.add((dbnid, sp, so))
+            g.remove((st,sp,so))
+
+        for st,sp,so in g.triples((None, None, bn)):
+            g.add((st, sp, dbnid))
+            g.remove((st,sp,so))
+
+def add_named_individuals(g:Graph):
+    #schema = Namespace('http://schema.org/')
+    #used_types = [schema.Movie, schema.Person, schema.Clip, schema.PublicationEvent, ]
+    #for type in used_types:
+    for s,p,o in g.triples((None, RDF.type, None)):
+        g.add((s,RDF.type, OWL.NamedIndividual))    
+
 
 if __name__ == '__main__':
 
@@ -56,21 +89,16 @@ if __name__ == '__main__':
     bind_schemas(g)
     g.parse(data=djson_ld, format='json-ld', publicID=url)
 
-    """ agrego las entidades que maneja protegé a las entidades leidas en el json-ld """
-    schema = Namespace('http://schema.org/')
-    used_types = [schema.Movie, schema.Clip, schema.Person, schema.Country]
-    for type in used_types:
-        for s,p,o in g.triples((None, RDF.type, type)):
-            g.add((s,RDF.type, OWL.NamedIndividual))
+    data_namespace = Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/')
+    to_lean_graph(data_namespace, g)
+    add_named_individuals(g)
 
-    #print(g.serialize(format="turtle").decode("utf-8"))
-    
-    g2 = Graph()
-    bind_schemas(g2)
-    with open('data/tp1/all.ttl','r') as f:
-        g2.parse(f, format='turtle')
-    #print(g2.serialize(format="turtle").decode("utf-8"))
+    gontology = Graph()
+    with open('../owl/twss_schema.ttl', 'r') as f:
+        gontology.parse(f, format='turtle')
 
-    g3 = g + g2
+    gfinal = gontology + g
     with open('data/merged.ttl','w') as f:
-        f.write(g3.serialize(format="turtle").decode("utf-8"))
+        f.write(gfinal.serialize(format="turtle").decode("utf-8"))
+
+    

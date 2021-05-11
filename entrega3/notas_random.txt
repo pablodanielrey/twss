@@ -286,13 +286,91 @@ tambien la modelo como string y como numero para abarcar mi modelo anterior.
 url esta definido como hacia una iri    
 schema:image [ a schema:ImageObject ;
     schema:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> ] ;
-    
+
 pero me parece mejor definirlo como string.
 
 ----
 
 schema.org modela todo como clases. Text, etc.
 pero en la práctica los datos se exportan como string.
+
+
+--------
+
+Problemón!!!! todos los jsons-ld consumidos por los sitios me generan blank nodes para los datos de las películas.
+y no me los interpreta bien protegé.
+así que tengo que convertilos a nodes normales con iris.
+
+defini un pefijo para mi namespace de datos.
+tsswd: https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/
+
+y arme una rutina que busca los blank nodes y los reemplaza por iris de datos.
+o sea generaría una instancia nombrada para que protegé lo reconosca ok.
+
+abri el archivo en protegé y al fin veo las instancias dentro de individuals by Class
+
+---
+
+ahora si me lo interpreta pero todas las propiedades definidas en la ontología me las muestra como anotiaciones y no como propiedades en los individuals.
+si bien están definidas en la ontología, y el archivo de individuals esta con datos correctos.
+ontologia:
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range xsd:string .
+
+
+datos ej:
+@prefix schema: <http://schema.org/> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+
+twssd:1f950821-b321-4914-9263-a4a93af51986 a schema:Person ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright/> ;
+    schema:name "Robin Wright" .
+
+contra una que si muestra:
+:pepe rdf:type owl:NamedIndividual ,
+               <http://schema.org/Movie> ;
+      <http://schema.org/name> "pepe" .
+
+
+voy a probar agregando NamedIndividual a ver si lo entiende protegé.
+
+NO funciona!!!. no es solo eso.
+
+lo que estoy haciendo es abrir el archivo con los individuals en protegé y posteriormente importo mi ontología como indicó casco en el video.
+pero no la interpreta bien de esta forma. asi que voy por la mas simple.
+voy a unificar los archivos de ontología y el de individuals en uno solo, que posteriormente abro con protegé.
+modifico el script para realizar esto.
+
+al manejarlo como tripletas dentro del mismo scraper esto es tan simple como una suma de grajos.
+gfinal = gontology + g 
+
+FUNCIONO!!!!. protegé me muestra la ontología y los individuals con las propiedaes correctamente, no en la parte de anotaciones!!!!!
+perdí casi 1 día con esto. resumen, no la compliques anticipando funcionalidad cuando todavía no hiciste andar el prototipo.
+
+------
+
+Perfecto, hasta este punto tengo funcionando:
+1 - la definición de una ontología con las clases de schema.org (solo las que uso)
+2 - la carga del json-ld desde la página ecartelera y la transformación de ese json-ld al grafo de tripletas.
+3 - el procesamiento de las tripletas para generar correctamente el grafo de individuals. (eliminación de blank nodes, etc)
+4 - el merge entre la ontología que define las clases y los individuals procesados anteriormente.
+
+ahora queda cargar los otros jsons-ld e ir mergeando la info. definiendo las clases que me faltan y analizando en protegé si funciona.
+
+-----
+
+toca el turno a imdb. carga del json-ld
+
+
+
+
+
+
+
+
+
 
 
 
