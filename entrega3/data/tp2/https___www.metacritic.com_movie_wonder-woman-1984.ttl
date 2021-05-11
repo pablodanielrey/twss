@@ -2,125 +2,32 @@
 
 [] a schema:Movie ;
     schema:actor [ a schema:Person ;
-            schema:name "Jamaal Burcher" ;
-            schema:url <https://www.metacritic.com/person/jamaal-burcher> ],
-        [ a schema:Person ;
-            schema:name "Chris Silcox" ;
-            schema:url <https://www.metacritic.com/person/chris-silcox> ],
-        [ a schema:Person ;
-            schema:name "Thomas Clay Strickland" ;
-            schema:url <https://www.metacritic.com/person/thomas-clay-strickland> ],
-        [ a schema:Person ;
-            schema:name "Ella Walker" ;
-            schema:url <https://www.metacritic.com/person/ella-walker> ],
-        [ a schema:Person ;
-            schema:name "Manoj Anand" ;
-            schema:url <https://www.metacritic.com/person/manoj-anand> ],
-        [ a schema:Person ;
-            schema:name "Marla Aaron Wapner" ;
-            schema:url <https://www.metacritic.com/person/marla-aaron-wapner> ],
-        [ a schema:Person ;
-            schema:name "Sia Alipour" ;
-            schema:url <https://www.metacritic.com/person/sia-alipour> ],
-        [ a schema:Person ;
-            schema:name "Robin Wright" ;
-            schema:url <https://www.metacritic.com/person/robin-wright> ],
+            schema:name "Sonia Goswami" ;
+            schema:url <https://www.metacritic.com/person/sonia-goswami> ],
         [ a schema:Person ;
             schema:name "Penelope Kapudija" ;
             schema:url <https://www.metacritic.com/person/penelope-kapudija> ],
         [ a schema:Person ;
-            schema:name "Natasha Rothwell" ;
-            schema:url <https://www.metacritic.com/person/natasha-rothwell> ],
+            schema:name "Oakley Bull" ;
+            schema:url <https://www.metacritic.com/person/oakley-bull> ],
+        [ a schema:Person ;
+            schema:name "Chris Silcox" ;
+            schema:url <https://www.metacritic.com/person/chris-silcox> ],
         [ a schema:Person ;
             schema:name "Chris Pine" ;
             schema:url <https://www.metacritic.com/person/chris-pine> ],
         [ a schema:Person ;
-            schema:name "Julian Ferro" ;
-            schema:url <https://www.metacritic.com/person/julian-ferro> ],
-        [ a schema:Person ;
-            schema:name "Kristen Wiig" ;
-            schema:url <https://www.metacritic.com/person/kristen-wiig> ],
-        [ a schema:Person ;
-            schema:name "Gal Gadot" ;
-            schema:url <https://www.metacritic.com/person/gal-gadot> ],
-        [ a schema:Person ;
             schema:name "Alex Delescu" ;
             schema:url <https://www.metacritic.com/person/alex-delescu> ],
         [ a schema:Person ;
-            schema:name "Sonia Goswami" ;
-            schema:url <https://www.metacritic.com/person/sonia-goswami> ],
-        [ a schema:Person ;
-            schema:name "Lynda Carter" ;
-            schema:url <https://www.metacritic.com/person/lynda-carter> ],
-        [ a schema:Person ;
-            schema:name "Pedro Pascal" ;
-            schema:url <https://www.metacritic.com/person/pedro-pascal> ],
-        [ a schema:Person ;
-            schema:name "Paul Ron Cruz" ;
-            schema:url <https://www.metacritic.com/person/paul-ron-cruz> ],
-        [ a schema:Person ;
-            schema:name "Jamal Alkhaldi" ;
-            schema:url <https://www.metacritic.com/person/jamal-alkhaldi> ],
-        [ a schema:Person ;
-            schema:name "Ravi Patel" ;
-            schema:url <https://www.metacritic.com/person/ravi-patel> ],
+            schema:name "Jamaal Burcher" ;
+            schema:url <https://www.metacritic.com/person/jamaal-burcher> ],
         [ a schema:Person ;
             schema:name "Rick Kelvin Branch" ;
             schema:url <https://www.metacritic.com/person/rick-kelvin-branch> ],
         [ a schema:Person ;
-            schema:name "Brittney Aleah" ;
-            schema:url <https://www.metacritic.com/person/brittney-aleah> ],
-        [ a schema:Person ;
-            schema:name "Amr Waked" ;
-            schema:url <https://www.metacritic.com/person/amr-waked> ],
-        [ a schema:Person ;
-            schema:name "Tessa Bonham Jones" ;
-            schema:url <https://www.metacritic.com/person/tessa-bonham-jones> ],
-        [ a schema:Person ;
-            schema:name "John Gettier" ;
-            schema:url <https://www.metacritic.com/person/john-gettier> ],
-        [ a schema:Person ;
-            schema:name "Monica Haynes" ;
-            schema:url <https://www.metacritic.com/person/monica-haynes> ],
-        [ a schema:Person ;
-            schema:name "Kaila Ingram" ;
-            schema:url <https://www.metacritic.com/person/kaila-ingram> ],
-        [ a schema:Person ;
-            schema:name "Marisol Correa" ;
-            schema:url <https://www.metacritic.com/person/marisol-correa> ],
-        [ a schema:Person ;
-            schema:name "Bern Collaco" ;
-            schema:url <https://www.metacritic.com/person/bern-collaco> ],
-        [ a schema:Person ;
-            schema:name "Joel Morris" ;
-            schema:url <https://www.metacritic.com/person/joel-morris> ],
-        [ a schema:Person ;
-            schema:name "Oakley Bull" ;
-            schema:url <https://www.metacritic.com/person/oakley-bull> ],
-        [ a schema:Person ;
-            schema:name "Kristoffer Polaha" ;
-            schema:url <https://www.metacritic.com/person/kristoffer-polaha> ],
-        [ a schema:Person ;
-            schema:name "Spencer Trinwith" ;
-            schema:url <https://www.metacritic.com/person/spencer-trinwith> ],
-        [ a schema:Person ;
-            schema:name "Lyon Beckwith" ;
-            schema:url <https://www.metacritic.com/person/lyon-beckwith> ],
-        [ a schema:Person ;
-            schema:name "Lilly Aspell" ;
-            schema:url <https://www.metacritic.com/person/lilly-aspell> ],
-        [ a schema:Person ;
-            schema:name "Amreen N. Yaqoob" ;
-            schema:url <https://www.metacritic.com/person/amreen-n-yaqoob> ],
-        [ a schema:Person ;
-            schema:name "Jeff Moore" ;
-            schema:url <https://www.metacritic.com/person/jeff-moore> ],
-        [ a schema:Person ;
-            schema:name "Justin Sisk" ;
-            schema:url <https://www.metacritic.com/person/justin-sisk> ],
-        [ a schema:Person ;
-            schema:name "Connie Nielsen" ;
-            schema:url <https://www.metacritic.com/person/connie-nielsen> ],
+            schema:name "Ella Walker" ;
+            schema:url <https://www.metacritic.com/person/ella-walker> ],
         [ a schema:Person ;
             schema:name "Gabriella Wilde" ;
             schema:url <https://www.metacritic.com/person/gabriella-wilde> ],
@@ -128,8 +35,101 @@
             schema:name "Lolita Marie" ;
             schema:url <https://www.metacritic.com/person/lolita-marie> ],
         [ a schema:Person ;
+            schema:name "Lilly Aspell" ;
+            schema:url <https://www.metacritic.com/person/lilly-aspell> ],
+        [ a schema:Person ;
             schema:name "Jonathan Ajayi" ;
-            schema:url <https://www.metacritic.com/person/jonathan-ajayi> ] ;
+            schema:url <https://www.metacritic.com/person/jonathan-ajayi> ],
+        [ a schema:Person ;
+            schema:name "Tessa Bonham Jones" ;
+            schema:url <https://www.metacritic.com/person/tessa-bonham-jones> ],
+        [ a schema:Person ;
+            schema:name "Jamal Alkhaldi" ;
+            schema:url <https://www.metacritic.com/person/jamal-alkhaldi> ],
+        [ a schema:Person ;
+            schema:name "Natasha Rothwell" ;
+            schema:url <https://www.metacritic.com/person/natasha-rothwell> ],
+        [ a schema:Person ;
+            schema:name "Amreen N. Yaqoob" ;
+            schema:url <https://www.metacritic.com/person/amreen-n-yaqoob> ],
+        [ a schema:Person ;
+            schema:name "Julian Ferro" ;
+            schema:url <https://www.metacritic.com/person/julian-ferro> ],
+        [ a schema:Person ;
+            schema:name "Kristen Wiig" ;
+            schema:url <https://www.metacritic.com/person/kristen-wiig> ],
+        [ a schema:Person ;
+            schema:name "Joel Morris" ;
+            schema:url <https://www.metacritic.com/person/joel-morris> ],
+        [ a schema:Person ;
+            schema:name "Robin Wright" ;
+            schema:url <https://www.metacritic.com/person/robin-wright> ],
+        [ a schema:Person ;
+            schema:name "Gal Gadot" ;
+            schema:url <https://www.metacritic.com/person/gal-gadot> ],
+        [ a schema:Person ;
+            schema:name "Thomas Clay Strickland" ;
+            schema:url <https://www.metacritic.com/person/thomas-clay-strickland> ],
+        [ a schema:Person ;
+            schema:name "Ravi Patel" ;
+            schema:url <https://www.metacritic.com/person/ravi-patel> ],
+        [ a schema:Person ;
+            schema:name "Kristoffer Polaha" ;
+            schema:url <https://www.metacritic.com/person/kristoffer-polaha> ],
+        [ a schema:Person ;
+            schema:name "Bern Collaco" ;
+            schema:url <https://www.metacritic.com/person/bern-collaco> ],
+        [ a schema:Person ;
+            schema:name "Spencer Trinwith" ;
+            schema:url <https://www.metacritic.com/person/spencer-trinwith> ],
+        [ a schema:Person ;
+            schema:name "Jeff Moore" ;
+            schema:url <https://www.metacritic.com/person/jeff-moore> ],
+        [ a schema:Person ;
+            schema:name "Manoj Anand" ;
+            schema:url <https://www.metacritic.com/person/manoj-anand> ],
+        [ a schema:Person ;
+            schema:name "Marla Aaron Wapner" ;
+            schema:url <https://www.metacritic.com/person/marla-aaron-wapner> ],
+        [ a schema:Person ;
+            schema:name "Lynda Carter" ;
+            schema:url <https://www.metacritic.com/person/lynda-carter> ],
+        [ a schema:Person ;
+            schema:name "Amr Waked" ;
+            schema:url <https://www.metacritic.com/person/amr-waked> ],
+        [ a schema:Person ;
+            schema:name "Justin Sisk" ;
+            schema:url <https://www.metacritic.com/person/justin-sisk> ],
+        [ a schema:Person ;
+            schema:name "Brittney Aleah" ;
+            schema:url <https://www.metacritic.com/person/brittney-aleah> ],
+        [ a schema:Person ;
+            schema:name "Kaila Ingram" ;
+            schema:url <https://www.metacritic.com/person/kaila-ingram> ],
+        [ a schema:Person ;
+            schema:name "Marisol Correa" ;
+            schema:url <https://www.metacritic.com/person/marisol-correa> ],
+        [ a schema:Person ;
+            schema:name "Connie Nielsen" ;
+            schema:url <https://www.metacritic.com/person/connie-nielsen> ],
+        [ a schema:Person ;
+            schema:name "Monica Haynes" ;
+            schema:url <https://www.metacritic.com/person/monica-haynes> ],
+        [ a schema:Person ;
+            schema:name "Paul Ron Cruz" ;
+            schema:url <https://www.metacritic.com/person/paul-ron-cruz> ],
+        [ a schema:Person ;
+            schema:name "Pedro Pascal" ;
+            schema:url <https://www.metacritic.com/person/pedro-pascal> ],
+        [ a schema:Person ;
+            schema:name "Lyon Beckwith" ;
+            schema:url <https://www.metacritic.com/person/lyon-beckwith> ],
+        [ a schema:Person ;
+            schema:name "John Gettier" ;
+            schema:url <https://www.metacritic.com/person/john-gettier> ],
+        [ a schema:Person ;
+            schema:name "Sia Alipour" ;
+            schema:url <https://www.metacritic.com/person/sia-alipour> ] ;
     schema:aggregateRating [ a schema:AggregateRating ;
             schema:bestRating "100" ;
             schema:ratingCount "57" ;

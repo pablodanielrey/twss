@@ -157,6 +157,9 @@ if __name__ == '__main__':
     with open('data/tp1/all.ttl','w') as f:
         f.write(g.serialize(format="turtle").decode("utf-8"))
 
+    ''' escribo todos los datos '''
+    with open('data/tp1/all.json-ld','w') as f:
+        f.write(g.serialize(format="json-ld").decode("utf-8"))
 
     ''' 
         haciendo algunas pruebas escribo algunas tripletas separadas por tipos 

@@ -1,5 +1,4 @@
 import json
-import rdflib
 import requests
 import extruct
 from w3lib.html import get_base_url

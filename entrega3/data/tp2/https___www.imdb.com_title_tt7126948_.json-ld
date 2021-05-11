@@ -1,0 +1,519 @@
+[
+  {
+    "@id": "_:N1815a41a718347cf849b0f281252f87a",
+    "@type": [
+      "http://schema.org/Movie"
+    ],
+    "http://schema.org/actor": [
+      {
+        "@id": "_:N19f820a926104ebea8df283567b48027"
+      },
+      {
+        "@id": "_:Nb62c7d04da304a9087d8fc19676d5219"
+      },
+      {
+        "@id": "_:Nd31cd3847e164cfd95538c9591911610"
+      },
+      {
+        "@id": "_:N5b44fdddfa954c06aba6e7c55991af16"
+      }
+    ],
+    "http://schema.org/aggregateRating": [
+      {
+        "@id": "_:N602d6d1428ac4989a89354fc9c1c29ae"
+      }
+    ],
+    "http://schema.org/contentRating": [
+      {
+        "@value": "PG-13"
+      }
+    ],
+    "http://schema.org/creator": [
+      {
+        "@id": "_:Na591d59d5c8f4456a63f97c510b3ae63"
+      },
+      {
+        "@id": "_:N4f136741104b4e4fb09609b67486d83c"
+      },
+      {
+        "@id": "_:N485d26f701a245c3a6a1c638cca7f452"
+      },
+      {
+        "@id": "_:N6c2eaed1f12f44858bbd65ae0c91e545"
+      },
+      {
+        "@id": "_:Na8a9be67baa141d2a6198abe5ecebc79"
+      },
+      {
+        "@id": "_:Ndcd921e12de44033a01b5c864ed9d7b4"
+      },
+      {
+        "@id": "_:N8c3f633e1ebd4dd4bc35c72a50b48177"
+      },
+      {
+        "@id": "_:Nb826724db5074f0db9dab8697ee02759"
+      },
+      {
+        "@id": "_:N2d08de19f0074387bf8d5721b79d16e7"
+      },
+      {
+        "@id": "_:N6cc2f8fd63b0427b87477b989378bff6"
+      },
+      {
+        "@id": "_:N8f1f47506bfd45bc82780bb7359f6e7e"
+      }
+    ],
+    "http://schema.org/datePublished": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2020-12-16"
+      }
+    ],
+    "http://schema.org/description": [
+      {
+        "@value": "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..."
+      }
+    ],
+    "http://schema.org/director": [
+      {
+        "@id": "_:N2fcd8b853d7e413c9c81143ebcf2a937"
+      }
+    ],
+    "http://schema.org/duration": [
+      {
+        "@value": "PT2H31M"
+      }
+    ],
+    "http://schema.org/genre": [
+      {
+        "@value": "Fantasy"
+      },
+      {
+        "@value": "Adventure"
+      },
+      {
+        "@value": "Action"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg"
+      }
+    ],
+    "http://schema.org/keywords": [
+      {
+        "@value": "sequel,superhero,dc extended universe,dc comics,one woman army"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Wonder Woman 1984"
+      }
+    ],
+    "http://schema.org/review": [
+      {
+        "@id": "_:N72233126d031465e86ea56ff26653709"
+      }
+    ],
+    "http://schema.org/trailer": [
+      {
+        "@id": "_:Nb87f330c8e5c49de91b38c2c28fb32fa"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///title/tt7126948/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N72233126d031465e86ea56ff26653709",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N14930a5770654af482d2b088886d3a20"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-01-01"
+      }
+    ],
+    "http://schema.org/inLanguage": [
+      {
+        "@value": "English"
+      }
+    ],
+    "http://schema.org/itemReviewed": [
+      {
+        "@id": "_:Na5096efa577143d3a51d4bb3715ed313"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "In quarantine, you'll buy anything."
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N1f095464caa0405c9afbf5dcf3dd5c9a"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1f095464caa0405c9afbf5dcf3dd5c9a",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "10"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": "5"
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N14930a5770654af482d2b088886d3a20",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "jayg_58"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na5096efa577143d3a51d4bb3715ed313",
+    "@type": [
+      "http://schema.org/CreativeWork"
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///title/tt7126948/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N602d6d1428ac4989a89354fc9c1c29ae",
+    "@type": [
+      "http://schema.org/AggregateRating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "10.0"
+      }
+    ],
+    "http://schema.org/ratingCount": [
+      {
+        "@value": 198912
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": "5.4"
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "1.0"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na591d59d5c8f4456a63f97c510b3ae63",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///company/co0028338/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4f136741104b4e4fb09609b67486d83c",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Geoff Johns"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm0424315/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N19f820a926104ebea8df283567b48027",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Gal Gadot"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm2933757/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N485d26f701a245c3a6a1c638cca7f452",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///company/co0728674/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6c2eaed1f12f44858bbd65ae0c91e545",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///company/co0038332/"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na8a9be67baa141d2a6198abe5ecebc79",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///company/co0002663/"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndcd921e12de44033a01b5c864ed9d7b4",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///company/co0283444/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2fcd8b853d7e413c9c81143ebcf2a937",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Patty Jenkins"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm0420941/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8c3f633e1ebd4dd4bc35c72a50b48177",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "William Moulton Marston"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm0551376/"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb62c7d04da304a9087d8fc19676d5219",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Pedro Pascal"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm0050959/"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb87f330c8e5c49de91b38c2c28fb32fa",
+    "@type": [
+      "http://schema.org/VideoObject"
+    ],
+    "http://schema.org/description": [
+      {
+        "@value": "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah."
+      }
+    ],
+    "http://schema.org/embedUrl": [
+      {
+        "@id": "file:///video/imdb/vi3240214809"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Stream on HBO Max for a Limited Time"
+      }
+    ],
+    "http://schema.org/thumbnail": [
+      {
+        "@id": "_:N4ebec7dee3f84c8cba4e42a2a55b5d0c"
+      }
+    ],
+    "http://schema.org/thumbnailUrl": [
+      {
+        "@id": "https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg"
+      }
+    ],
+    "http://schema.org/uploadDate": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2020-12-07T01:51:07Z"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4ebec7dee3f84c8cba4e42a2a55b5d0c",
+    "@type": [
+      "http://schema.org/ImageObject"
+    ],
+    "http://schema.org/contentUrl": [
+      {
+        "@id": "https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd31cd3847e164cfd95538c9591911610",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Kristen Wiig"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm1325419/"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb826724db5074f0db9dab8697ee02759",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Patty Jenkins"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm0420941/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5b44fdddfa954c06aba6e7c55991af16",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Chris Pine"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm1517976/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2d08de19f0074387bf8d5721b79d16e7",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Dave Callaham"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm1709264/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6cc2f8fd63b0427b87477b989378bff6",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Patty Jenkins"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm0420941/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8f1f47506bfd45bc82780bb7359f6e7e",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Geoff Johns"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "file:///name/nm0424315/"
+      }
+    ]
+  }
+]

@@ -3,51 +3,51 @@
 
 [] a schema:Movie ;
     schema:actor [ a schema:Person ;
-            schema:name "Pedro Pascal" ;
-            schema:url <file:///name/nm0050959/> ],
-        [ a schema:Person ;
-            schema:name "Kristen Wiig" ;
-            schema:url <file:///name/nm1325419/> ],
-        [ a schema:Person ;
             schema:name "Gal Gadot" ;
             schema:url <file:///name/nm2933757/> ],
         [ a schema:Person ;
             schema:name "Chris Pine" ;
-            schema:url <file:///name/nm1517976/> ] ;
+            schema:url <file:///name/nm1517976/> ],
+        [ a schema:Person ;
+            schema:name "Pedro Pascal" ;
+            schema:url <file:///name/nm0050959/> ],
+        [ a schema:Person ;
+            schema:name "Kristen Wiig" ;
+            schema:url <file:///name/nm1325419/> ] ;
     schema:aggregateRating [ a schema:AggregateRating ;
             schema:bestRating "10.0" ;
             schema:ratingCount 198912 ;
             schema:ratingValue "5.4" ;
             schema:worstRating "1.0" ] ;
     schema:contentRating "PG-13" ;
-    schema:creator [ a schema:Organization ;
+    schema:creator [ a schema:Person ;
+            schema:name "Dave Callaham" ;
+            schema:url <file:///name/nm1709264/> ],
+        [ a schema:Organization ;
+            schema:url <file:///company/co0728674/> ],
+        [ a schema:Person ;
+            schema:name "Geoff Johns" ;
+            schema:url <file:///name/nm0424315/> ],
+        [ a schema:Organization ;
+            schema:url <file:///company/co0038332/> ],
+        [ a schema:Person ;
+            schema:name "Patty Jenkins" ;
+            schema:url <file:///name/nm0420941/> ],
+        [ a schema:Person ;
+            schema:name "William Moulton Marston" ;
+            schema:url <file:///name/nm0551376/> ],
+        [ a schema:Person ;
+            schema:name "Geoff Johns" ;
+            schema:url <file:///name/nm0424315/> ],
+        [ a schema:Organization ;
+            schema:url <file:///company/co0028338/> ],
+        [ a schema:Organization ;
             schema:url <file:///company/co0002663/> ],
         [ a schema:Person ;
             schema:name "Patty Jenkins" ;
             schema:url <file:///name/nm0420941/> ],
-        [ a schema:Person ;
-            schema:name "Dave Callaham" ;
-            schema:url <file:///name/nm1709264/> ],
         [ a schema:Organization ;
-            schema:url <file:///company/co0283444/> ],
-        [ a schema:Organization ;
-            schema:url <file:///company/co0728674/> ],
-        [ a schema:Organization ;
-            schema:url <file:///company/co0028338/> ],
-        [ a schema:Person ;
-            schema:name "Geoff Johns" ;
-            schema:url <file:///name/nm0424315/> ],
-        [ a schema:Person ;
-            schema:name "Geoff Johns" ;
-            schema:url <file:///name/nm0424315/> ],
-        [ a schema:Person ;
-            schema:name "Patty Jenkins" ;
-            schema:url <file:///name/nm0420941/> ],
-        [ a schema:Organization ;
-            schema:url <file:///company/co0038332/> ],
-        [ a schema:Person ;
-            schema:name "William Moulton Marston" ;
-            schema:url <file:///name/nm0551376/> ] ;
+            schema:url <file:///company/co0283444/> ] ;
     schema:datePublished "2020-12-16"^^schema:Date ;
     schema:description "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..." ;
     schema:director [ a schema:Person ;

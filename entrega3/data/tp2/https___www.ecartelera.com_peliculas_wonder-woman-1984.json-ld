@@ -1,0 +1,387 @@
+[
+  {
+    "@id": "https://www.ecartelera.com/peliculas/wonder-woman-1984/",
+    "@type": [
+      "http://schema.org/Movie"
+    ],
+    "http://schema.org/actor": [
+      {
+        "@id": "_:N6c6979e8b5d44455853b74273b109464"
+      },
+      {
+        "@id": "_:N88b28347cddf43578bcff381133b40cc"
+      },
+      {
+        "@id": "_:N1e8c00565958491780a0bd4c13ae9293"
+      },
+      {
+        "@id": "_:Nb99d6f7f29f64464855c2ce31eccf3c6"
+      },
+      {
+        "@id": "_:N5a907d3317e84f9ab3a471170cb885b6"
+      },
+      {
+        "@id": "_:Ne7278a93709940c2bcf5912d855c2974"
+      }
+    ],
+    "http://schema.org/aggregateRating": [
+      {
+        "@id": "_:Ncb9168f1f41e472c917e367d3f68b6b5"
+      }
+    ],
+    "http://schema.org/countryOfOrigin": [
+      {
+        "@value": "EE.UU."
+      }
+    ],
+    "http://schema.org/description": [
+      {
+        "@value": "&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r\n\r\nLa trama de esta película es una gran misterio. El guión está basado en una historia escrita por Patty Jenkins, Geoff Johns (&#39;The Flash&#39;, &#39;Aquaman&#39;) y Dave Callaham (&#39;Zombieland: Mata y remata&#39;). Se espera que tenga protagonismo la tecnología y la vigilancia, teniendo en cuenta el título que hace referencia a la distopía de &#39;1984&#39; de George Orwell."
+      }
+    ],
+    "http://schema.org/director": [
+      {
+        "@id": "_:Nb9ff576e630640b49f03f737090b21e1"
+      }
+    ],
+    "http://schema.org/duration": [
+      {
+        "@value": "PT2H31M"
+      }
+    ],
+    "http://schema.org/genre": [
+      {
+        "@value": "Acción"
+      },
+      {
+        "@value": "Fantasía"
+      },
+      {
+        "@value": "Aventura"
+      }
+    ],
+    "http://schema.org/hasPart": [
+      {
+        "@id": "_:N70e2041f2cdb4d31bc3d58581b0eae0a"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "_:Nd30d29415fa94be5a409a39cfaa16451"
+      }
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/peliculas/wonder-woman-1984/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Wonder Woman 1984"
+      }
+    ],
+    "http://schema.org/productionCompany": [
+      {
+        "@id": "_:Nedd7a357e9ed422691753e22a9bcf987"
+      }
+    ],
+    "http://schema.org/releasedEvent": [
+      {
+        "@id": "_:N567246ae0eb84553b8fccaae9dbb4d25"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6c6979e8b5d44455853b74273b109464",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/personas/connie-nielsen/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Connie Nielsen"
+      }
+    ]
+  },
+  {
+    "@id": "_:N88b28347cddf43578bcff381133b40cc",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/personas/chris-pine/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Chris Pine"
+      }
+    ]
+  },
+  {
+    "@id": "_:N567246ae0eb84553b8fccaae9dbb4d25",
+    "@type": [
+      "http://schema.org/PublicationEvent"
+    ],
+    "http://schema.org/location": [
+      {
+        "@id": "_:N0a5fd6ad6b0f4b95922c37770b5024d5"
+      }
+    ],
+    "http://schema.org/startDate": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2020-12-18"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0a5fd6ad6b0f4b95922c37770b5024d5",
+    "@type": [
+      "http://schema.org/Country"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "ES"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb9ff576e630640b49f03f737090b21e1",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/personas/patty-jenkins/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Patty Jenkins"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1e8c00565958491780a0bd4c13ae9293",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/personas/robin-wright/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Robin Wright"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb99d6f7f29f64464855c2ce31eccf3c6",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/personas/gal-gadot/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Gal Gadot"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd30d29415fa94be5a409a39cfaa16451",
+    "@type": [
+      "http://schema.org/ImageObject"
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://img.ecartelera.com/carteles/13100/13170/009_p.jpg"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nedd7a357e9ed422691753e22a9bcf987",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/empresas/warner-bros/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Warner Bros. Pictures"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncb9168f1f41e472c917e367d3f68b6b5",
+    "@type": [
+      "http://schema.org/AggregateRating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "10"
+      }
+    ],
+    "http://schema.org/ratingCount": [
+      {
+        "@value": "20"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": "7,6"
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "0"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5a907d3317e84f9ab3a471170cb885b6",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/personas/pedro-pascal/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Pedro Pascal"
+      }
+    ]
+  },
+  {
+    "@id": "_:N70e2041f2cdb4d31bc3d58581b0eae0a",
+    "@type": [
+      "http://schema.org/Clip"
+    ],
+    "http://schema.org/description": [
+      {
+        "@value": "trailer"
+      }
+    ],
+    "http://schema.org/potentialAction": [
+      {
+        "@id": "_:N398bac9383224d31a4e7ca3ac0d2e7cb"
+      }
+    ],
+    "http://schema.org/timeRequired": [
+      {
+        "@value": "PT2M24S"
+      }
+    ]
+  },
+  {
+    "@id": "_:N398bac9383224d31a4e7ca3ac0d2e7cb",
+    "@type": [
+      "http://schema.org/WatchAction"
+    ],
+    "http://schema.org/expectsAcceptanceOf": [
+      {
+        "@id": "_:N85b6185b702447e1997a8d0c9abe68d5"
+      }
+    ],
+    "http://schema.org/target": [
+      {
+        "@id": "_:Ne8a2da2a9768499a9ba3ac19a034b005"
+      }
+    ]
+  },
+  {
+    "@id": "_:N85b6185b702447e1997a8d0c9abe68d5",
+    "@type": [
+      "http://schema.org/Offer"
+    ],
+    "http://schema.org/availabilityStarts": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2019-12-08 22:30:37"
+      }
+    ],
+    "http://schema.org/category": [
+      {
+        "@value": "free"
+      }
+    ],
+    "http://schema.org/eligibleRegion": [
+      {
+        "@id": "_:Ne6b00fead46b4fc081dff5da9c590288"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne6b00fead46b4fc081dff5da9c590288",
+    "@type": [
+      "http://schema.org/Country"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "ES"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne8a2da2a9768499a9ba3ac19a034b005",
+    "@type": [
+      "http://schema.org/EntryPoint"
+    ],
+    "http://schema.org/actionPlatform": [
+      {
+        "@value": "http://schema.org/MobileWebPlatform"
+      },
+      {
+        "@value": "http://schema.org/DesktopWebPlatform"
+      },
+      {
+        "@value": "http://schema.org/IOSPlatform"
+      },
+      {
+        "@value": "http://schema.googleapis.com/GoogleVideoCast"
+      }
+    ],
+    "http://schema.org/inLanguage": [
+      {
+        "@value": "es"
+      }
+    ],
+    "http://schema.org/urlTemplate": [
+      {
+        "@value": "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne7278a93709940c2bcf5912d855c2974",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/mainEntityOfPage": [
+      {
+        "@id": "https://www.ecartelera.com/personas/kristen-wiig/"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Kristen Wiig"
+      }
+    ]
+  }
+]

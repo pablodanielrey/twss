@@ -3,9 +3,13 @@
 
 [] a schema:Movie ;
     schema:actors [ a schema:Person ;
-            schema:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
-            schema:name "Gal Gadot" ;
-            schema:sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> ],
+            schema:image <https://resizing.flixster.com/9Pu5qp5qfehIlclgv8tIbVPGlr0=/2938x3500/v1.cjs1MDM1NztqOzE4NzY1OzEyMDA7MjkzODszNTAw> ;
+            schema:name "Connie Nielsen" ;
+            schema:sameAs <https://www.rottentomatoes.com/celebrity/connie_nielsen> ],
+        [ a schema:Person ;
+            schema:image <https://resizing.flixster.com/s5rTePWBzCqGE8uYUIYqS52D6JU=/1000x1500/v1.bjs3NDQ4MjY7ajsxODgxODsxMjAwOzEwMDA7MTUwMA> ;
+            schema:name "Robin Wright" ;
+            schema:sameAs <https://www.rottentomatoes.com/celebrity/robin_wright> ],
         [ a schema:Person ;
             schema:image <https://resizing.flixster.com/P6P3MFr8YZqj_iCOIh7GxeYrPLg=/2000x2083/v1.cjs0OTMxNjtqOzE4NzY1OzEyMDA7MjAwMDsyMDgz> ;
             schema:name "Kristen Wiig" ;
@@ -15,13 +19,9 @@
             schema:name "Chris Pine" ;
             schema:sameAs <https://www.rottentomatoes.com/celebrity/christopher_pine> ],
         [ a schema:Person ;
-            schema:image <https://resizing.flixster.com/9Pu5qp5qfehIlclgv8tIbVPGlr0=/2938x3500/v1.cjs1MDM1NztqOzE4NzY1OzEyMDA7MjkzODszNTAw> ;
-            schema:name "Connie Nielsen" ;
-            schema:sameAs <https://www.rottentomatoes.com/celebrity/connie_nielsen> ],
-        [ a schema:Person ;
-            schema:image <https://resizing.flixster.com/s5rTePWBzCqGE8uYUIYqS52D6JU=/1000x1500/v1.bjs3NDQ4MjY7ajsxODgxODsxMjAwOzEwMDA7MTUwMA> ;
-            schema:name "Robin Wright" ;
-            schema:sameAs <https://www.rottentomatoes.com/celebrity/robin_wright> ],
+            schema:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
+            schema:name "Gal Gadot" ;
+            schema:sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> ],
         [ a schema:Person ;
             schema:image <https://resizing.flixster.com/uEke7o3H4ngITX7oLEYgZox9q2A=/220x196/v1.cjs0NDAwMDtqOzE4NzY1OzEyMDA7MjIwOzE5Ng> ;
             schema:name "Pedro Pascal" ;
@@ -56,6 +56,62 @@
             schema:name "Warner Bros. Pictures" ] ;
     schema:review [ a schema:Review ;
             schema:author [ a schema:Person ;
+                    schema:name "Jennifer Ouellette" ;
+                    schema:url <https://www.rottentomatoes.com/critic/jennifer-ouellette> ] ;
+            schema:dateCreated "2021-02-11T02:38:41-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Ars Technica" ;
+                    schema:url <https://www.rottentomatoes.com/source-2985> ] ;
+            schema:reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor/> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Dan Tabor" ;
+                    schema:url <https://www.rottentomatoes.com/critic/dan-tabor> ] ;
+            schema:dateCreated "2021-02-05T01:55:00-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Phawker" ;
+                    schema:url <https://www.rottentomatoes.com/source-3631> ] ;
+            schema:reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot/> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Amy Nicholson" ;
+                    schema:url <https://www.rottentomatoes.com/critic/amy-nicholson> ] ;
+            schema:dateCreated "2021-01-04T03:37:14-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "FilmWeek (KPCC - NPR Los Angeles)" ;
+                    schema:url <https://www.rottentomatoes.com/source-3509> ] ;
+            schema:reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo/> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "David Sims" ;
+                    schema:url <https://www.rottentomatoes.com/critic/david-sims> ] ;
+            schema:dateCreated "2020-12-28T07:45:33-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "The Atlantic" ;
+                    schema:url <https://www.rottentomatoes.com/source-24> ] ;
+            schema:reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470/> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
                     schema:name "Jake Wilson" ;
                     schema:url <https://www.rottentomatoes.com/critic/jake-wilson> ] ;
             schema:dateCreated "2020-12-28T07:49:06-08:00"^^schema:Date ;
@@ -84,88 +140,32 @@
             schema:url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> ],
         [ a schema:Review ;
             schema:author [ a schema:Person ;
-                    schema:name "Dan Tabor" ;
-                    schema:url <https://www.rottentomatoes.com/critic/dan-tabor> ] ;
-            schema:dateCreated "2021-02-05T01:55:00-08:00"^^schema:Date ;
+                    schema:name "David Bax" ;
+                    schema:url <https://www.rottentomatoes.com/critic/david-bax> ] ;
+            schema:dateCreated "2021-03-23T10:02:10-07:00"^^schema:Date ;
             schema:publisher [ a schema:Organization ;
-                    schema:name "Phawker" ;
-                    schema:url <https://www.rottentomatoes.com/source-3631> ] ;
-            schema:reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
+                    schema:name "Battleship Pretension" ;
+                    schema:url <https://www.rottentomatoes.com/source-3090> ] ;
+            schema:reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
             schema:reviewRating [ a schema:Rating ;
                     schema:bestRating "1" ;
                     schema:ratingValue 1 ;
                     schema:worstRating "-1" ] ;
-            schema:url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot/> ],
+            schema:url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax/> ],
         [ a schema:Review ;
             schema:author [ a schema:Person ;
-                    schema:name "Avaryl Halley" ;
-                    schema:url <https://www.rottentomatoes.com/critic/avaryl-halley> ] ;
-            schema:dateCreated "2021-03-11T05:51:39-08:00"^^schema:Date ;
+                    schema:name "Sarah Ward" ;
+                    schema:url <https://www.rottentomatoes.com/critic/sarah-ward> ] ;
+            schema:dateCreated "2021-02-21T08:36:54-08:00"^^schema:Date ;
             schema:publisher [ a schema:Organization ;
-                    schema:name "Movie Bitches" ;
-                    schema:url <https://www.rottentomatoes.com/source-3639> ] ;
-            schema:reviewBody "At least \"Justice League\" had at the decency to be short" ;
+                    schema:name "Concrete Playground" ;
+                    schema:url <https://www.rottentomatoes.com/source-2298> ] ;
+            schema:reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
             schema:reviewRating [ a schema:Rating ;
                     schema:bestRating "1" ;
                     schema:ratingValue -1 ;
                     schema:worstRating "-1" ] ;
-            schema:url <https://youtu.be/75nDMuZMfLs> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "David Sims" ;
-                    schema:url <https://www.rottentomatoes.com/critic/david-sims> ] ;
-            schema:dateCreated "2020-12-28T07:45:33-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "The Atlantic" ;
-                    schema:url <https://www.rottentomatoes.com/source-24> ] ;
-            schema:reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470/> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Stephen Romei" ;
-                    schema:url <https://www.rottentomatoes.com/critic/stephen-romei> ] ;
-            schema:dateCreated "2020-12-29T12:09:48-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "The Australian" ;
-                    schema:url <https://www.rottentomatoes.com/source-1964> ] ;
-            schema:reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Tony Medley" ;
-                    schema:url <https://www.rottentomatoes.com/critic/tony-medley> ] ;
-            schema:dateCreated "2021-02-22T06:02:11-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "The Larchmont Chronicle" ;
-                    schema:url <https://www.rottentomatoes.com/source-2992> ] ;
-            schema:reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue -1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Brian Gill" ;
-                    schema:url <https://www.rottentomatoes.com/critic/brian-gill> ] ;
-            schema:dateCreated "2021-02-10T06:48:34-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Mad About Movies Podcast" ;
-                    schema:url <https://www.rottentomatoes.com/source-3256> ] ;
-            schema:reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> ],
+            schema:url <https://concreteplayground.com/sydney/event/wonder-woman-1984> ],
         [ a schema:Review ;
             schema:author [ a schema:Person ;
                     schema:name "Matt Neal" ;
@@ -196,118 +196,6 @@
             schema:url <https://www.theepochtimes.com/film-review-wonder-woman-1984-a-sequel-less-wonderful_3667828.html> ],
         [ a schema:Review ;
             schema:author [ a schema:Person ;
-                    schema:name "Mark Meszoros" ;
-                    schema:url <https://www.rottentomatoes.com/critic/mark-meszoros> ] ;
-            schema:dateCreated "2021-02-13T23:57:56-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "The News-Herald (Willoughby, OH)" ;
-                    schema:url <https://www.rottentomatoes.com/source-3916> ] ;
-            schema:reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Valerie Kalfrin" ;
-                    schema:url <https://www.rottentomatoes.com/critic/valerie-kalfrin> ] ;
-            schema:dateCreated "2021-03-20T08:54:50-07:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Their Own League" ;
-                    schema:url <https://www.rottentomatoes.com/source-3607> ] ;
-            schema:reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984/> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Kevin Carr" ;
-                    schema:url <https://www.rottentomatoes.com/critic/kevin-carr> ] ;
-            schema:dateCreated "2021-04-03T14:11:59-07:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Fat Guys at the Movies" ;
-                    schema:url <https://www.rottentomatoes.com/source-2722> ] ;
-            schema:reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape/> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Rafer Guzman" ;
-                    schema:url <https://www.rottentomatoes.com/critic/rafer-guzman> ] ;
-            schema:dateCreated "2021-01-04T04:59:29-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Newsday" ;
-                    schema:url <https://www.rottentomatoes.com/source-338> ] ;
-            schema:reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "John McDonald" ;
-                    schema:url <https://www.rottentomatoes.com/critic/john-mcdonald> ] ;
-            schema:dateCreated "2021-01-31T18:14:33-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Australian Financial Review" ;
-                    schema:url <https://www.rottentomatoes.com/source-3199> ] ;
-            schema:reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue -1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984/> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Andrew Galdi" ;
-                    schema:url <https://www.rottentomatoes.com/critic/andrew-galdi> ] ;
-            schema:dateCreated "2021-03-11T06:02:25-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Movie Bitches" ;
-                    schema:url <https://www.rottentomatoes.com/source-3639> ] ;
-            schema:reviewBody "There were just such gross failures of filmmaking..." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue -1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://youtu.be/75nDMuZMfLs> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "David Bax" ;
-                    schema:url <https://www.rottentomatoes.com/critic/david-bax> ] ;
-            schema:dateCreated "2021-03-23T10:02:10-07:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Battleship Pretension" ;
-                    schema:url <https://www.rottentomatoes.com/source-3090> ] ;
-            schema:reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax/> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Amy Nicholson" ;
-                    schema:url <https://www.rottentomatoes.com/critic/amy-nicholson> ] ;
-            schema:dateCreated "2021-01-04T03:37:14-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "FilmWeek (KPCC - NPR Los Angeles)" ;
-                    schema:url <https://www.rottentomatoes.com/source-3509> ] ;
-            schema:reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo/> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
                     schema:name "Nina Garin" ;
                     schema:url <https://www.rottentomatoes.com/critic/nina-garin> ] ;
             schema:dateCreated "2021-03-01T08:14:02-08:00"^^schema:Date ;
@@ -320,34 +208,6 @@
                     schema:ratingValue 1 ;
                     schema:worstRating "-1" ] ;
             schema:url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Jennifer Ouellette" ;
-                    schema:url <https://www.rottentomatoes.com/critic/jennifer-ouellette> ] ;
-            schema:dateCreated "2021-02-11T02:38:41-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Ars Technica" ;
-                    schema:url <https://www.rottentomatoes.com/source-2985> ] ;
-            schema:reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue 1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor/> ],
-        [ a schema:Review ;
-            schema:author [ a schema:Person ;
-                    schema:name "Eric Marchen" ;
-                    schema:url <https://www.rottentomatoes.com/critic/eric-marchen> ] ;
-            schema:dateCreated "2021-02-17T02:36:51-08:00"^^schema:Date ;
-            schema:publisher [ a schema:Organization ;
-                    schema:name "Untitled Movie Podcast" ;
-                    schema:url <https://www.rottentomatoes.com/source-3831> ] ;
-            schema:reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
-            schema:reviewRating [ a schema:Rating ;
-                    schema:bestRating "1" ;
-                    schema:ratingValue -1 ;
-                    schema:worstRating "-1" ] ;
-            schema:url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> ],
         [ a schema:Review ;
             schema:author [ a schema:Person ;
                     schema:name "Eddie Harrison" ;
@@ -364,18 +224,32 @@
             schema:url <https://film-authority.com/2021/01/11/wonder-woman-1984/> ],
         [ a schema:Review ;
             schema:author [ a schema:Person ;
-                    schema:name "Sarah Ward" ;
-                    schema:url <https://www.rottentomatoes.com/critic/sarah-ward> ] ;
-            schema:dateCreated "2021-02-21T08:36:54-08:00"^^schema:Date ;
+                    schema:name "Kevin Carr" ;
+                    schema:url <https://www.rottentomatoes.com/critic/kevin-carr> ] ;
+            schema:dateCreated "2021-04-03T14:11:59-07:00"^^schema:Date ;
             schema:publisher [ a schema:Organization ;
-                    schema:name "Concrete Playground" ;
-                    schema:url <https://www.rottentomatoes.com/source-2298> ] ;
-            schema:reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
+                    schema:name "Fat Guys at the Movies" ;
+                    schema:url <https://www.rottentomatoes.com/source-2722> ] ;
+            schema:reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
             schema:reviewRating [ a schema:Rating ;
                     schema:bestRating "1" ;
-                    schema:ratingValue -1 ;
+                    schema:ratingValue 1 ;
                     schema:worstRating "-1" ] ;
-            schema:url <https://concreteplayground.com/sydney/event/wonder-woman-1984> ],
+            schema:url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape/> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Mark Meszoros" ;
+                    schema:url <https://www.rottentomatoes.com/critic/mark-meszoros> ] ;
+            schema:dateCreated "2021-02-13T23:57:56-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "The News-Herald (Willoughby, OH)" ;
+                    schema:url <https://www.rottentomatoes.com/source-3916> ] ;
+            schema:reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> ],
         [ a schema:Review ;
             schema:author [ a schema:Person ;
                     schema:name "Sheri Flanders" ;
@@ -389,6 +263,132 @@
                     schema:bestRating "1" ;
                     schema:ratingValue 1 ;
                     schema:worstRating "-1" ] ;
-            schema:url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> ] ;
+            schema:url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Eric Marchen" ;
+                    schema:url <https://www.rottentomatoes.com/critic/eric-marchen> ] ;
+            schema:dateCreated "2021-02-17T02:36:51-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Untitled Movie Podcast" ;
+                    schema:url <https://www.rottentomatoes.com/source-3831> ] ;
+            schema:reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue -1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Brian Gill" ;
+                    schema:url <https://www.rottentomatoes.com/critic/brian-gill> ] ;
+            schema:dateCreated "2021-02-10T06:48:34-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Mad About Movies Podcast" ;
+                    schema:url <https://www.rottentomatoes.com/source-3256> ] ;
+            schema:reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Stephen Romei" ;
+                    schema:url <https://www.rottentomatoes.com/critic/stephen-romei> ] ;
+            schema:dateCreated "2020-12-29T12:09:48-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "The Australian" ;
+                    schema:url <https://www.rottentomatoes.com/source-1964> ] ;
+            schema:reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "John McDonald" ;
+                    schema:url <https://www.rottentomatoes.com/critic/john-mcdonald> ] ;
+            schema:dateCreated "2021-01-31T18:14:33-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Australian Financial Review" ;
+                    schema:url <https://www.rottentomatoes.com/source-3199> ] ;
+            schema:reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue -1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984/> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Avaryl Halley" ;
+                    schema:url <https://www.rottentomatoes.com/critic/avaryl-halley> ] ;
+            schema:dateCreated "2021-03-11T05:51:39-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Movie Bitches" ;
+                    schema:url <https://www.rottentomatoes.com/source-3639> ] ;
+            schema:reviewBody "At least \"Justice League\" had at the decency to be short" ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue -1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://youtu.be/75nDMuZMfLs> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Valerie Kalfrin" ;
+                    schema:url <https://www.rottentomatoes.com/critic/valerie-kalfrin> ] ;
+            schema:dateCreated "2021-03-20T08:54:50-07:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Their Own League" ;
+                    schema:url <https://www.rottentomatoes.com/source-3607> ] ;
+            schema:reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984/> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Rafer Guzman" ;
+                    schema:url <https://www.rottentomatoes.com/critic/rafer-guzman> ] ;
+            schema:dateCreated "2021-01-04T04:59:29-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Newsday" ;
+                    schema:url <https://www.rottentomatoes.com/source-338> ] ;
+            schema:reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue 1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Tony Medley" ;
+                    schema:url <https://www.rottentomatoes.com/critic/tony-medley> ] ;
+            schema:dateCreated "2021-02-22T06:02:11-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "The Larchmont Chronicle" ;
+                    schema:url <https://www.rottentomatoes.com/source-2992> ] ;
+            schema:reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue -1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> ],
+        [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "Andrew Galdi" ;
+                    schema:url <https://www.rottentomatoes.com/critic/andrew-galdi> ] ;
+            schema:dateCreated "2021-03-11T06:02:25-08:00"^^schema:Date ;
+            schema:publisher [ a schema:Organization ;
+                    schema:name "Movie Bitches" ;
+                    schema:url <https://www.rottentomatoes.com/source-3639> ] ;
+            schema:reviewBody "There were just such gross failures of filmmaking..." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "1" ;
+                    schema:ratingValue -1 ;
+                    schema:worstRating "-1" ] ;
+            schema:url <https://youtu.be/75nDMuZMfLs> ] ;
     schema:url <https://www.rottentomatoes.com/m/wonder_woman_1984> .
 

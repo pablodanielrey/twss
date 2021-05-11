@@ -157,8 +157,48 @@ python3 src/utils/parse_jsons.py data/tp2/https___www.rottentomatoes.com_m_wonde
 
 asi que funciona bien en pasar los json-ld a turttle e interpretar el grafo.
 lo único es que algunas iris al ser relativas y el parser del grafo no sabe cual es la url real las transofrma a iris del sistema de archivos.
+ej:
+
+
+[] a schema:Movie ;
+    schema:actor [ a schema:Person ;
+            schema:name "Pedro Pascal" ;
+            schema:url <file:///name/nm0050959/> ],
+        [ a schema:Person ;
+            schema:name "Kristen Wiig" ;
+            schema:url <file:///name/nm1325419/> ],
+
+
+también noto que varios sitios representan la info con blank nodes y colecciones.
+
+[] a schema:Movie ;
+    schema:actor [ a schema:Person ;
+            schema:name "Jamaal Burcher" ;
+            schema:url <https://www.metacritic.com/person/jamaal-burcher> ],
+        [ a schema:Person ;
+            schema:name "Chris Silcox" ;
+            schema:url <https://www.metacritic.com/person/chris-silcox> ],
+
+en json-ld se ve bien el formato despues de serializar el grafo de tripletas.
+
+[
+  {
+    "@id": "https://www.ecartelera.com/peliculas/wonder-woman-1984/",
+    "@type": [
+      "http://schema.org/Movie"
+    ],
+    "http://schema.org/actor": [
+      {
+        "@id": "_:N6c6979e8b5d44455853b74273b109464"
+      },
+      {
+        "@id": "_:N88b28347cddf43578bcff381133b40cc"
+      },
+
+en ese caso las personas son blank nodes y usa referencias para ubicarlas dentro del json-ld
+
 por ahora solo notarlo, para tenerlo en cuenta en la solución final.
-armo el script que toma de un sitio y la interpreta dentro de un grafo 
+ahora si entendiendo un poco el proceso armo un script que se conecte al sitio, descargue el json-ld y lo transforme a turtle.
 
 
 ----
@@ -181,11 +221,12 @@ si se podria importar ontologías de forma cruzada como hacemos con foaf.
 o sea,
 definir una ontología /cines
 definir una ontología /movies
-abrir las ontologías en 2 proteges
-importar en 1 protegé la otra que no se está trabajando.
+abrir las ontologías en 2 proteges distintos
+importar ontología en forma cruzada en cada uno de los protegé.
 
 si me permitió importar los individuals dentro de la ontología que estoy trabajando.
-asi es simple analizar que individuals fueron creados para cada clase, etc.
+asi es simple analizar que individuals fueron creados para cada clase. y no tengo que armar un filtro y escribir archivos separados como lo hice de ejemplo en tp1_2_owl.py
+
 
 
 

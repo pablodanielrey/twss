@@ -1,0 +1,979 @@
+[
+  {
+    "@id": "_:N5fa80523ab984235909fe6bcf47dd6ff",
+    "@type": [
+      "http://schema.org/Movie"
+    ],
+    "http://schema.org/actor": [
+      {
+        "@id": "_:N8556a43b32dc494ea3d9fb32e55f4508"
+      },
+      {
+        "@id": "_:Nea31c0504cb04123aea8b45be4f8ac19"
+      },
+      {
+        "@id": "_:N6e222c23de2345cd8e710a7019d95a77"
+      },
+      {
+        "@id": "_:Nb6f9505f99a745bdb905917d6f3ea8d0"
+      },
+      {
+        "@id": "_:N1b2a8afec1ff41348ce9f772ff4ef39c"
+      },
+      {
+        "@id": "_:N4977001e545e43858c333a27992e9621"
+      },
+      {
+        "@id": "_:Nd4ea5848db494fc7a659a1682f168071"
+      },
+      {
+        "@id": "_:Nb40932a1b9bc46a08c62b0b2cf17b8ff"
+      },
+      {
+        "@id": "_:N87f0bc92185843e09207f0be661c4575"
+      },
+      {
+        "@id": "_:N070062ac47764dbe8b8bf277869d8aa9"
+      },
+      {
+        "@id": "_:N15e2b237a8d747c08e4071c4f5e3f77c"
+      },
+      {
+        "@id": "_:Nbff30ff767e243e7b06f8d21d814e417"
+      },
+      {
+        "@id": "_:N0c0bb16ee2a34bae94dc8a395aaaf4d9"
+      },
+      {
+        "@id": "_:N4a723418f00e4f5b9e1b206eda5417cb"
+      },
+      {
+        "@id": "_:N9ab278d0a1f545da84fff9a75153e355"
+      },
+      {
+        "@id": "_:N4b0f0e5e4bd4433b9c7686b17141b9e2"
+      },
+      {
+        "@id": "_:N40064b22f1ad44af8783e9798304dd37"
+      },
+      {
+        "@id": "_:Neb31390e69ed4a2eb55d4fa5c4641111"
+      },
+      {
+        "@id": "_:Ne23cad18f0f44ed28f70203d57e938a8"
+      },
+      {
+        "@id": "_:N0c0faceb2d80489f8d0776207f5df43b"
+      },
+      {
+        "@id": "_:N2312958177b04460b8f4028adde22727"
+      },
+      {
+        "@id": "_:Nad331c01cb1b47dd832a5dd924c4dc1e"
+      },
+      {
+        "@id": "_:N2b71123694264ac997a041db6faaaf04"
+      },
+      {
+        "@id": "_:N7c7505013bf8479e824cc6fdc661e57c"
+      },
+      {
+        "@id": "_:Naeadf81dce4046518b6727de51ea233c"
+      },
+      {
+        "@id": "_:Nee285d32eccb4c46a36df688b9ec8f1d"
+      },
+      {
+        "@id": "_:N0c045229ee614a47bad151fd9a450f0c"
+      },
+      {
+        "@id": "_:N8057cc58b9fe48a682429ef7c9f56fa8"
+      },
+      {
+        "@id": "_:Nb6348d0e815d49d6aed03e2bb96eed35"
+      },
+      {
+        "@id": "_:Na389a238b3ad4517a404b44ce53b61c3"
+      },
+      {
+        "@id": "_:N44ff43de11da46849228f539cb076596"
+      },
+      {
+        "@id": "_:N978a9b54f2af48e2b0fadbd95bb3525f"
+      },
+      {
+        "@id": "_:N06990dcc588047f184f142e7cf97a8d4"
+      },
+      {
+        "@id": "_:N9733940fbfca47068e02c7b1b41740f5"
+      },
+      {
+        "@id": "_:Ne2d9ca7effec41fa80491abb4ce8c001"
+      },
+      {
+        "@id": "_:Ne7e3a13e9c994587993cae6ad67fc166"
+      },
+      {
+        "@id": "_:N06740f3b33e84b9bbbaa2a870d218dd5"
+      },
+      {
+        "@id": "_:N633a89e41b404c06a9aaa650b8cad1f3"
+      },
+      {
+        "@id": "_:N98d72874a2b84936b53888e3b4adc514"
+      },
+      {
+        "@id": "_:Ne0bc1392f5514334b6db3720b97d6d58"
+      },
+      {
+        "@id": "_:N21956faae5aa46d8acee698e94d94055"
+      },
+      {
+        "@id": "_:Nfbfa0ad941244d3aa031c1a658e092bd"
+      },
+      {
+        "@id": "_:Nbb58ea0293da4ba3b7472b27b0f4e964"
+      }
+    ],
+    "http://schema.org/aggregateRating": [
+      {
+        "@id": "_:N29f2966902ac4dd2ad134d32e8a0ecf6"
+      }
+    ],
+    "http://schema.org/contentRating": [
+      {
+        "@value": "PG-13"
+      }
+    ],
+    "http://schema.org/datePublished": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "December 25, 2020"
+      }
+    ],
+    "http://schema.org/description": [
+      {
+        "@value": "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah."
+      }
+    ],
+    "http://schema.org/director": [
+      {
+        "@id": "_:N56d93a17872941fda76f69e829f0370f"
+      }
+    ],
+    "http://schema.org/duration": [
+      {
+        "@value": "PT151M"
+      }
+    ],
+    "http://schema.org/genre": [
+      {
+        "@value": "Fantasy"
+      },
+      {
+        "@value": "Action"
+      },
+      {
+        "@value": "Adventure"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://static.metacritic.com/images/products/movies/4/9d1a4650bb42f43a0a781bfa70a7772d.jpg"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Wonder Woman 1984"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Nea7de512e3c34e2c8aa26d55b795c013"
+      }
+    ],
+    "http://schema.org/trailer": [
+      {
+        "@id": "_:N205d73167e32482b8a5694ae728c0db7"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/movie/wonder-woman-1984"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8556a43b32dc494ea3d9fb32e55f4508",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Robin Wright"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/robin-wright"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nea31c0504cb04123aea8b45be4f8ac19",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Pedro Pascal"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/pedro-pascal"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6e222c23de2345cd8e710a7019d95a77",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Julian Ferro"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/julian-ferro"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb6f9505f99a745bdb905917d6f3ea8d0",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Amr Waked"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/amr-waked"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1b2a8afec1ff41348ce9f772ff4ef39c",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Rick Kelvin Branch"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/rick-kelvin-branch"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4977001e545e43858c333a27992e9621",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Tessa Bonham Jones"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/tessa-bonham-jones"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd4ea5848db494fc7a659a1682f168071",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Kaila Ingram"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/kaila-ingram"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb40932a1b9bc46a08c62b0b2cf17b8ff",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Marla Aaron Wapner"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/marla-aaron-wapner"
+      }
+    ]
+  },
+  {
+    "@id": "_:N87f0bc92185843e09207f0be661c4575",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Gal Gadot"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/gal-gadot"
+      }
+    ]
+  },
+  {
+    "@id": "_:N070062ac47764dbe8b8bf277869d8aa9",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Oakley Bull"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/oakley-bull"
+      }
+    ]
+  },
+  {
+    "@id": "_:N15e2b237a8d747c08e4071c4f5e3f77c",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Jamaal Burcher"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/jamaal-burcher"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbff30ff767e243e7b06f8d21d814e417",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Brittney Aleah"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/brittney-aleah"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0c0bb16ee2a34bae94dc8a395aaaf4d9",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Chris Pine"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/chris-pine"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4a723418f00e4f5b9e1b206eda5417cb",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Jamal Alkhaldi"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/jamal-alkhaldi"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9ab278d0a1f545da84fff9a75153e355",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Bern Collaco"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/bern-collaco"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4b0f0e5e4bd4433b9c7686b17141b9e2",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Natasha Rothwell"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/natasha-rothwell"
+      }
+    ]
+  },
+  {
+    "@id": "_:N40064b22f1ad44af8783e9798304dd37",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Lilly Aspell"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/lilly-aspell"
+      }
+    ]
+  },
+  {
+    "@id": "_:Neb31390e69ed4a2eb55d4fa5c4641111",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Lyon Beckwith"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/lyon-beckwith"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne23cad18f0f44ed28f70203d57e938a8",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Connie Nielsen"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/connie-nielsen"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0c0faceb2d80489f8d0776207f5df43b",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Alex Delescu"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/alex-delescu"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2312958177b04460b8f4028adde22727",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Gabriella Wilde"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/gabriella-wilde"
+      }
+    ]
+  },
+  {
+    "@id": "_:N205d73167e32482b8a5694ae728c0db7",
+    "@type": [
+      "http://schema.org/VideoObject"
+    ],
+    "http://schema.org/description": [
+      {
+        "@value": "Video Clip of Wonder Woman 1984"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Wonder Woman 1984 (Trailer 2)"
+      }
+    ],
+    "http://schema.org/thumbnailUrl": [
+      {
+        "@id": "https://content.internetvideoarchive.com/content/hdphotos/13126/013126/013126_820x461_637413475681110755.jpg"
+      }
+    ],
+    "http://schema.org/uploadDate": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2020-11-21 17:41:36"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nad331c01cb1b47dd832a5dd924c4dc1e",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Jeff Moore"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/jeff-moore"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2b71123694264ac997a041db6faaaf04",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Lolita Marie"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/lolita-marie"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nea7de512e3c34e2c8aa26d55b795c013",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Warner Bros. Pictures"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/company/warner-bros-pictures"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7c7505013bf8479e824cc6fdc661e57c",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Kristen Wiig"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/kristen-wiig"
+      }
+    ]
+  },
+  {
+    "@id": "_:Naeadf81dce4046518b6727de51ea233c",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Manoj Anand"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/manoj-anand"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nee285d32eccb4c46a36df688b9ec8f1d",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "John Gettier"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/john-gettier"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0c045229ee614a47bad151fd9a450f0c",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Chris Silcox"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/chris-silcox"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8057cc58b9fe48a682429ef7c9f56fa8",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Joel Morris"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/joel-morris"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb6348d0e815d49d6aed03e2bb96eed35",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Lynda Carter"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/lynda-carter"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na389a238b3ad4517a404b44ce53b61c3",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Spencer Trinwith"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/spencer-trinwith"
+      }
+    ]
+  },
+  {
+    "@id": "_:N44ff43de11da46849228f539cb076596",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Jonathan Ajayi"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/jonathan-ajayi"
+      }
+    ]
+  },
+  {
+    "@id": "_:N978a9b54f2af48e2b0fadbd95bb3525f",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Ravi Patel"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/ravi-patel"
+      }
+    ]
+  },
+  {
+    "@id": "_:N06990dcc588047f184f142e7cf97a8d4",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Penelope Kapudija"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/penelope-kapudija"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9733940fbfca47068e02c7b1b41740f5",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Thomas Clay Strickland"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/thomas-clay-strickland"
+      }
+    ]
+  },
+  {
+    "@id": "_:N29f2966902ac4dd2ad134d32e8a0ecf6",
+    "@type": [
+      "http://schema.org/AggregateRating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "100"
+      }
+    ],
+    "http://schema.org/ratingCount": [
+      {
+        "@value": "57"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": "60"
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "0"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne2d9ca7effec41fa80491abb4ce8c001",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Monica Haynes"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/monica-haynes"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne7e3a13e9c994587993cae6ad67fc166",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Paul Ron Cruz"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/paul-ron-cruz"
+      }
+    ]
+  },
+  {
+    "@id": "_:N06740f3b33e84b9bbbaa2a870d218dd5",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Sonia Goswami"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/sonia-goswami"
+      }
+    ]
+  },
+  {
+    "@id": "_:N633a89e41b404c06a9aaa650b8cad1f3",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Amreen N. Yaqoob"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/amreen-n-yaqoob"
+      }
+    ]
+  },
+  {
+    "@id": "_:N98d72874a2b84936b53888e3b4adc514",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Kristoffer Polaha"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/kristoffer-polaha"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne0bc1392f5514334b6db3720b97d6d58",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Marisol Correa"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/marisol-correa"
+      }
+    ]
+  },
+  {
+    "@id": "_:N21956faae5aa46d8acee698e94d94055",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Ella Walker"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/ella-walker"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfbfa0ad941244d3aa031c1a658e092bd",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Sia Alipour"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/sia-alipour"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbb58ea0293da4ba3b7472b27b0f4e964",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Justin Sisk"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/justin-sisk"
+      }
+    ]
+  },
+  {
+    "@id": "_:N56d93a17872941fda76f69e829f0370f",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Patty Jenkins"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.metacritic.com/person/patty-jenkins"
+      }
+    ]
+  }
+]

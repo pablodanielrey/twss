@@ -9,8 +9,6 @@ from rdflib.term import URIRef
 from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 from rdflib.plugin import register, Parser
 
-
-
 register('json-ld', Parser, 'rdflib_jsonld.parser', 'JsonLDParser')  
 
 
@@ -32,10 +30,14 @@ if __name__ == '__main__':
     g.bind('schema','http://schema.org/')
     g.parse(data=data1, format='json-ld')
     
-    dfile = jf.replace('.json','.ttl')
+    ttldfile = jf.replace('.json','.ttl')
 
-    with open(dfile, 'w') as f:
+    with open(ttldfile, 'w') as f:
         f.write(g.serialize(format="turtle").decode("utf-8"))
+
+    jsondfile = jf.replace('.json','.json-ld')
+    with open(jsondfile, 'w') as f:
+        f.write(g.serialize(format="json-ld").decode("utf-8"))
 
     ''' listar todas las películas '''
     movie = URIRef('http://schema.org/Movie')

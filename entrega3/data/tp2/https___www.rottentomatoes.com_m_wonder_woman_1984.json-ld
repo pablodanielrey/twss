@@ -1,0 +1,2549 @@
+[
+  {
+    "@id": "_:Nea74b00d9c6b44b0adc2ddd81e2596a7",
+    "@type": [
+      "http://schema.org/Movie"
+    ],
+    "http://schema.org/actors": [
+      {
+        "@id": "_:N3309982499fd46ebb8e834a5856732e7"
+      },
+      {
+        "@id": "_:N0073f1e09f9e4fc49ca7461b9108f879"
+      },
+      {
+        "@id": "_:N01088169bfdf4347a0ed7a8f3d473379"
+      },
+      {
+        "@id": "_:N17b3e19386024a66b189d036caaf50ea"
+      },
+      {
+        "@id": "_:Nbe80538889b14df38263bc54870cd3fd"
+      },
+      {
+        "@id": "_:N4ed9f50b18fd4ed692c3e56e410459ac"
+      }
+    ],
+    "http://schema.org/aggregateRating": [
+      {
+        "@id": "_:Ncbcc7ad764a945fab4a46fe6a41996e2"
+      }
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Nb58c27c702f64bf0883c10e2c3bff32f"
+      }
+    ],
+    "http://schema.org/character": [
+      {
+        "@value": "Diana Prince / Wonder Woman"
+      },
+      {
+        "@value": "Hippolyta"
+      },
+      {
+        "@value": "Barbara Minerva / Cheetah"
+      },
+      {
+        "@value": "Antiope"
+      },
+      {
+        "@value": "Steve Trevor"
+      }
+    ],
+    "http://schema.org/contentRating": [
+      {
+        "@value": "PG-13"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2017-09-13T08:24:15-07:00"
+      }
+    ],
+    "http://schema.org/dateModified": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-05-09T21:02:19-07:00"
+      }
+    ],
+    "http://schema.org/director": [
+      {
+        "@id": "_:N9564174538054abd9c4238d394c1bd5e"
+      }
+    ],
+    "http://schema.org/genre": [
+      {
+        "@value": "Action & Adventure"
+      },
+      {
+        "@value": "Science Fiction & Fantasy"
+      }
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://resizing.flixster.com/m8G6eIbecl1KNYf1yd2lt2F5yX8=/740x380/v1.bjsyNTUxODM4O2o7MTg4Mzk7MTIwMDs0MTIyOzIzMTI"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Wonder Woman 1984"
+      }
+    ],
+    "http://schema.org/productionCompany": [
+      {
+        "@id": "_:N416c528b6f9a400f9546b44ab030b257"
+      }
+    ],
+    "http://schema.org/review": [
+      {
+        "@id": "_:N7cfb3192c94e45ab90e2009161a550cd"
+      },
+      {
+        "@id": "_:N9a2625676276404fa829e0b9e89b18e3"
+      },
+      {
+        "@id": "_:N20d88d734581474e912fa55b55cc6530"
+      },
+      {
+        "@id": "_:Ncb052b12991f4ff6902ea497d94a3c68"
+      },
+      {
+        "@id": "_:N2febef37aca44dfda48e1de60d8675cf"
+      },
+      {
+        "@id": "_:N81d98ed7eebe457da66d8ad9630138b3"
+      },
+      {
+        "@id": "_:Nc61cb26fac914c17b6852ea8f4a2fd11"
+      },
+      {
+        "@id": "_:N64e4f279de9f4754a247b110a368ec3b"
+      },
+      {
+        "@id": "_:Nb7ed7173cce9407785b8d080d299192d"
+      },
+      {
+        "@id": "_:N84748b87d8ba4891a78dfd9e25ec3496"
+      },
+      {
+        "@id": "_:N41a2967d22194aeabc3fffe6f47eaece"
+      },
+      {
+        "@id": "_:Na25415ad0afc45dc9db9d04beedea42f"
+      },
+      {
+        "@id": "_:N361dfe721afb42738804159e33d87dfe"
+      },
+      {
+        "@id": "_:N5d2cc5ce557a4195aaa21448026316d8"
+      },
+      {
+        "@id": "_:Nc39efd7e81bc4b508c3b1ffd7d94c8bc"
+      },
+      {
+        "@id": "_:Nd2bf4c422e424e0898860c5911bb7f9c"
+      },
+      {
+        "@id": "_:N5c42adbd8c8b4203b247971edbec7cc0"
+      },
+      {
+        "@id": "_:Nb9d3294a748e427fb826824c232add9e"
+      },
+      {
+        "@id": "_:N5df88c948926423f910f981f17d406e8"
+      },
+      {
+        "@id": "_:N6ec295f932c3423494a1090eed72751e"
+      },
+      {
+        "@id": "_:Ncfb9f8d8395a4e29b10d59d633b3030a"
+      },
+      {
+        "@id": "_:N3b45521d00254a54b88aa3c90a50fd61"
+      },
+      {
+        "@id": "_:N66f99a27273e4d1888ba0a1aa54c2789"
+      },
+      {
+        "@id": "_:Nafa0b2a7e13d4490b98552f575d914fe"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/m/wonder_woman_1984"
+      }
+    ]
+  },
+  {
+    "@id": "_:N7cfb3192c94e45ab90e2009161a550cd",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N0b4047f0c97f400b8e39675e1ef59aff"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-07T19:57:42-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N28025c215b854ba7b3a782bcacbb2edb"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "...a joyless dud, a bucket of sludge when we're crying out for a glass of water..."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Nd733f0f8e2d74a91b402a9ab5a7b1758"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://film-authority.com/2021/01/11/wonder-woman-1984/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0b4047f0c97f400b8e39675e1ef59aff",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Eddie Harrison"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/eddie-harrison"
+      }
+    ]
+  },
+  {
+    "@id": "_:N28025c215b854ba7b3a782bcacbb2edb",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "film-authority.com"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3904"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd733f0f8e2d74a91b402a9ab5a7b1758",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9a2625676276404fa829e0b9e89b18e3",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N32db34bd7bec430f9e18a075772bf7e0"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-01T04:29:30-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N8225b4e43e9b4b698e9654e6795f65f9"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Na86d30f462cc4bf3876d74d8bc872f52"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na86d30f462cc4bf3876d74d8bc872f52",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N32db34bd7bec430f9e18a075772bf7e0",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Sheri Flanders"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/sheri-flanders"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8225b4e43e9b4b698e9654e6795f65f9",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Chicago Reader"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-66"
+      }
+    ]
+  },
+  {
+    "@id": "_:N416c528b6f9a400f9546b44ab030b257",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Warner Bros. Pictures"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3309982499fd46ebb8e834a5856732e7",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://resizing.flixster.com/kXDRe1jUWEU8UFkdf8JhRPMUG8s=/660x990/v1.bjs3NTYxMDQ7ajsxODgxODsxMjAwOzY2MDs5OTA"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Chris Pine"
+      }
+    ],
+    "http://schema.org/sameAs": [
+      {
+        "@id": "https://www.rottentomatoes.com/celebrity/christopher_pine"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0073f1e09f9e4fc49ca7461b9108f879",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://resizing.flixster.com/9Pu5qp5qfehIlclgv8tIbVPGlr0=/2938x3500/v1.cjs1MDM1NztqOzE4NzY1OzEyMDA7MjkzODszNTAw"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Connie Nielsen"
+      }
+    ],
+    "http://schema.org/sameAs": [
+      {
+        "@id": "https://www.rottentomatoes.com/celebrity/connie_nielsen"
+      }
+    ]
+  },
+  {
+    "@id": "_:N20d88d734581474e912fa55b55cc6530",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N2cced2c470384e3da828a3185fea4537"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-11T02:38:41-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Nae9771a9f03b4c68ad6a788ffa84ebfc"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N1efbf9b8ee64407898f3c66aa98db849"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1efbf9b8ee64407898f3c66aa98db849",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2cced2c470384e3da828a3185fea4537",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Jennifer Ouellette"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/jennifer-ouellette"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nae9771a9f03b4c68ad6a788ffa84ebfc",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Ars Technica"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-2985"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncb052b12991f4ff6902ea497d94a3c68",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Nf6ac53f8995d4a0a8dcbc2fa96432910"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-01-04T04:59:29-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Nd369ef6ca68d42e19c74d3277a044961"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Nea7ea2ce9c1040dda6b3ea8c4db4cb9b"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf6ac53f8995d4a0a8dcbc2fa96432910",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Rafer Guzman"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/rafer-guzman"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nea7ea2ce9c1040dda6b3ea8c4db4cb9b",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd369ef6ca68d42e19c74d3277a044961",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Newsday"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-338"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2febef37aca44dfda48e1de60d8675cf",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Na7ee9e294e254375b46663ff015b41e3"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-05T01:55:00-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N9ef075c89eb042ffb64ffd42174a8127"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. "
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Ndfb35d3fd7424f418f88c5a6cfd5a301"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9ef075c89eb042ffb64ffd42174a8127",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Phawker"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3631"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndfb35d3fd7424f418f88c5a6cfd5a301",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na7ee9e294e254375b46663ff015b41e3",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Dan Tabor"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/dan-tabor"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9564174538054abd9c4238d394c1bd5e",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Patty Jenkins"
+      }
+    ],
+    "http://schema.org/sameAs": [
+      {
+        "@id": "https://www.rottentomatoes.com/celebrity/patty_jenkins"
+      }
+    ]
+  },
+  {
+    "@id": "_:N81d98ed7eebe457da66d8ad9630138b3",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Nbf6a0c97091f47f1b80eb4cbdbfec17b"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-04-03T14:11:59-07:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N6ac0964cdadb41f8b907c2aa0fae1069"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N05eab8701ea1434bb94a55630624e0e7"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape/"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbf6a0c97091f47f1b80eb4cbdbfec17b",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Kevin Carr"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/kevin-carr"
+      }
+    ]
+  },
+  {
+    "@id": "_:N05eab8701ea1434bb94a55630624e0e7",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6ac0964cdadb41f8b907c2aa0fae1069",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Fat Guys at the Movies"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-2722"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc61cb26fac914c17b6852ea8f4a2fd11",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N0007a6a65d374003930125c93d7d8422"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-03-20T08:54:50-07:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Nd83862758fef41d386bd0f003be1e08d"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Nfb6be0397afe4f2daffc33823ff0d0f6"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://intheirownleague.com/2020/12/29/review-wonder-woman-1984/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0007a6a65d374003930125c93d7d8422",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Valerie Kalfrin"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/valerie-kalfrin"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfb6be0397afe4f2daffc33823ff0d0f6",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd83862758fef41d386bd0f003be1e08d",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Their Own League"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3607"
+      }
+    ]
+  },
+  {
+    "@id": "_:N01088169bfdf4347a0ed7a8f3d473379",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://resizing.flixster.com/s5rTePWBzCqGE8uYUIYqS52D6JU=/1000x1500/v1.bjs3NDQ4MjY7ajsxODgxODsxMjAwOzEwMDA7MTUwMA"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Robin Wright"
+      }
+    ],
+    "http://schema.org/sameAs": [
+      {
+        "@id": "https://www.rottentomatoes.com/celebrity/robin_wright"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncbcc7ad764a945fab4a46fe6a41996e2",
+    "@type": [
+      "http://schema.org/AggregateRating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "100"
+      }
+    ],
+    "http://schema.org/description": [
+      {
+        "@value": "The Tomatometer rating – based on the published opinions of hundreds of film and television critics – is a trusted measurement of movie and TV programming quality for millions of moviegoers. It represents the percentage of professional critic reviews that are positive for a given film or television show."
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Tomatometer"
+      }
+    ],
+    "http://schema.org/ratingCount": [
+      {
+        "@value": "426"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": "59"
+      }
+    ],
+    "http://schema.org/reviewCount": [
+      {
+        "@value": "426"
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "0"
+      }
+    ]
+  },
+  {
+    "@id": "_:N64e4f279de9f4754a247b110a368ec3b",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Nd6cab0c7899d40ceb8948d0a276d3deb"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-01-31T17:01:54-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Nc087452266dd4cdbb9ba06c5fc495906"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": " After such a stirring debut, it's pains me to say that Wonder Woman 1984 isn't that wonderful."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Ne4aac7b4135549b8b60366f9456f320b"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://movies8mylife.blogspot.com/2021/02/wonder-woman-1984.html"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne4aac7b4135549b8b60366f9456f320b",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd6cab0c7899d40ceb8948d0a276d3deb",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Matt Neal"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/matt-neal"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc087452266dd4cdbb9ba06c5fc495906",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "ABC Radio (Australia)"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-2397"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb7ed7173cce9407785b8d080d299192d",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Nc253b00ec34f4fc79989072d48d9f628"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2020-12-29T12:09:48-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Nf971247342034a98b41d7b01f39ba0db"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. "
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Nf328412a6814465d82ab768ce6fa3a0e"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf328412a6814465d82ab768ce6fa3a0e",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc253b00ec34f4fc79989072d48d9f628",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Stephen Romei"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/stephen-romei"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf971247342034a98b41d7b01f39ba0db",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "The Australian"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-1964"
+      }
+    ]
+  },
+  {
+    "@id": "_:N84748b87d8ba4891a78dfd9e25ec3496",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N4f29561508904dce98ec96f42798917c"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-13T23:57:56-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N9cbf7530576d4e21a5d5ee2c0525ad36"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Nd6e868cbbf2d410984825ec3c111b5dd"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd6e868cbbf2d410984825ec3c111b5dd",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4f29561508904dce98ec96f42798917c",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Mark Meszoros"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/mark-meszoros"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9cbf7530576d4e21a5d5ee2c0525ad36",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "The News-Herald (Willoughby, OH)"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3916"
+      }
+    ]
+  },
+  {
+    "@id": "_:N41a2967d22194aeabc3fffe6f47eaece",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N2d9cdf60901a4613854d40166f0590bd"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2020-12-28T07:49:06-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N92ea3afe4de24524901449f6072fb9e5"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N89b1be598a974c99b3d5cd272fb08867"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html"
+      }
+    ]
+  },
+  {
+    "@id": "_:N92ea3afe4de24524901449f6072fb9e5",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "The Age (Australia)"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-2041"
+      }
+    ]
+  },
+  {
+    "@id": "_:N89b1be598a974c99b3d5cd272fb08867",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2d9cdf60901a4613854d40166f0590bd",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Jake Wilson"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/jake-wilson"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na25415ad0afc45dc9db9d04beedea42f",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Ncfe7518428c0447299265ec57480153d"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-17T02:36:51-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N52b2f4444f7e4c328630d7810b24e86a"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "Feels like this would be better suited for an episode of TV than a 2.5 hour film."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N0043bb7fef5d4c948db6a57298f140fb"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984"
+      }
+    ]
+  },
+  {
+    "@id": "_:N52b2f4444f7e4c328630d7810b24e86a",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Untitled Movie Podcast"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3831"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0043bb7fef5d4c948db6a57298f140fb",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncfe7518428c0447299265ec57480153d",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Eric Marchen"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/eric-marchen"
+      }
+    ]
+  },
+  {
+    "@id": "_:N361dfe721afb42738804159e33d87dfe",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Na6166e9248974b3a99b4815c27d047ef"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-01-04T03:37:14-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N13684fc509654e2fa60565418ee06eb8"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N5b7da64491c94da18cf70d3e745e379f"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5b7da64491c94da18cf70d3e745e379f",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N13684fc509654e2fa60565418ee06eb8",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "FilmWeek (KPCC - NPR Los Angeles)"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3509"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na6166e9248974b3a99b4815c27d047ef",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Amy Nicholson"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/amy-nicholson"
+      }
+    ]
+  },
+  {
+    "@id": "_:N17b3e19386024a66b189d036caaf50ea",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://resizing.flixster.com/P6P3MFr8YZqj_iCOIh7GxeYrPLg=/2000x2083/v1.cjs0OTMxNjtqOzE4NzY1OzEyMDA7MjAwMDsyMDgz"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Kristen Wiig"
+      }
+    ],
+    "http://schema.org/sameAs": [
+      {
+        "@id": "https://www.rottentomatoes.com/celebrity/kristen_wiig"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5d2cc5ce557a4195aaa21448026316d8",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N39443848bccc499bac8244b172862731"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-03-23T10:02:10-07:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N244049ef3e904a93a51daf864d1bc162"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N4687114dacec424ebb35bf1a32ae145c"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N244049ef3e904a93a51daf864d1bc162",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Battleship Pretension"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3090"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4687114dacec424ebb35bf1a32ae145c",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N39443848bccc499bac8244b172862731",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "David Bax"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/david-bax"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbe80538889b14df38263bc54870cd3fd",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://resizing.flixster.com/uEke7o3H4ngITX7oLEYgZox9q2A=/220x196/v1.cjs0NDAwMDtqOzE4NzY1OzEyMDA7MjIwOzE5Ng"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Pedro Pascal"
+      }
+    ],
+    "http://schema.org/sameAs": [
+      {
+        "@id": "https://www.rottentomatoes.com/celebrity/pedro_pascal"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nc39efd7e81bc4b508c3b1ffd7d94c8bc",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N98168c515d8441d3a79b2d230dd37856"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-03-11T05:51:39-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Ne68f280b872f4a5681d25f5479a28fb1"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "At least \"Justice League\" had at the decency to be short"
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N8e21838767094553893a06647370f5c5"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://youtu.be/75nDMuZMfLs"
+      }
+    ]
+  },
+  {
+    "@id": "_:N98168c515d8441d3a79b2d230dd37856",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Avaryl Halley"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/avaryl-halley"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8e21838767094553893a06647370f5c5",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ne68f280b872f4a5681d25f5479a28fb1",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Movie Bitches"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3639"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nd2bf4c422e424e0898860c5911bb7f9c",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Nde419d7e193d428ca45723fd594ff4fa"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-03-11T06:02:25-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N0ca151f0eea14ed1a5ff67f75c4e5f84"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "There were just such gross failures of filmmaking..."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N9dd0df8275834c90b77ba75f23e648e0"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://youtu.be/75nDMuZMfLs"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0ca151f0eea14ed1a5ff67f75c4e5f84",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Movie Bitches"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3639"
+      }
+    ]
+  },
+  {
+    "@id": "_:N9dd0df8275834c90b77ba75f23e648e0",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nde419d7e193d428ca45723fd594ff4fa",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Andrew Galdi"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/andrew-galdi"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5c42adbd8c8b4203b247971edbec7cc0",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N44f0b8b3275b46ab8c08138b3937182e"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-05T19:46:31-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N84aed9652c46430cb16d3d5028a17958"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N8c185e01569e4ea78c582500a3bbdb24"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8c185e01569e4ea78c582500a3bbdb24",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N84aed9652c46430cb16d3d5028a17958",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Kicking the Seat"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3892"
+      }
+    ]
+  },
+  {
+    "@id": "_:N44f0b8b3275b46ab8c08138b3937182e",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Ian Simmons"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/ian-simmons"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb58c27c702f64bf0883c10e2c3bff32f",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Patty Jenkins"
+      }
+    ],
+    "http://schema.org/sameAs": [
+      {
+        "@id": "https://www.rottentomatoes.com/celebrity/patty_jenkins"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb9d3294a748e427fb826824c232add9e",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N47c3c433d1d3436eac1fa8b32994025d"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-01-31T18:14:33-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N27daee97596541118758acb3868b784f"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?"
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Nbcbf5db8df0c4d15bbe1d8f6fd996f45"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.johnmcdonald.net.au/2021/wonder-woman-1984/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N47c3c433d1d3436eac1fa8b32994025d",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "John McDonald"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/john-mcdonald"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nbcbf5db8df0c4d15bbe1d8f6fd996f45",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N27daee97596541118758acb3868b784f",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Australian Financial Review"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3199"
+      }
+    ]
+  },
+  {
+    "@id": "_:N5df88c948926423f910f981f17d406e8",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Nfff01d99f2c54e85ba87c3548494f428"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-21T08:36:54-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N09ef1417ea564f4b94a8e40d990f58d3"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Ndd3b4eb0ce6c42dea91b443836aa62e3"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://concreteplayground.com/sydney/event/wonder-woman-1984"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndd3b4eb0ce6c42dea91b443836aa62e3",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nfff01d99f2c54e85ba87c3548494f428",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Sarah Ward"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/sarah-ward"
+      }
+    ]
+  },
+  {
+    "@id": "_:N09ef1417ea564f4b94a8e40d990f58d3",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Concrete Playground"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-2298"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6ec295f932c3423494a1090eed72751e",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N2e5fb1bb73b94ff3af15fe3157638ceb"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-03-01T08:14:02-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N0a06709a2af94ab588c3875df82d5099"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. "
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N6ed7ca5f4ba441bb874b6055ac163ea7"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2e5fb1bb73b94ff3af15fe3157638ceb",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Nina Garin"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/nina-garin"
+      }
+    ]
+  },
+  {
+    "@id": "_:N6ed7ca5f4ba441bb874b6055ac163ea7",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N0a06709a2af94ab588c3875df82d5099",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "San Diego Union-Tribune"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-503"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ncfb9f8d8395a4e29b10d59d633b3030a",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N1b7c7d0ee0cd42519575eb1bd7d96d82"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-22T06:02:11-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Ndc3f6542c66942358844799791ed40ee"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N2dccd63fd9a843c0adb706f02e6a68ac"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "http://www.tonymedley.com/2020/Wonder_Woman_1984.htm"
+      }
+    ]
+  },
+  {
+    "@id": "_:N1b7c7d0ee0cd42519575eb1bd7d96d82",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Tony Medley"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/tony-medley"
+      }
+    ]
+  },
+  {
+    "@id": "_:N2dccd63fd9a843c0adb706f02e6a68ac",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Ndc3f6542c66942358844799791ed40ee",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "The Larchmont Chronicle"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-2992"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4ed9f50b18fd4ed692c3e56e410459ac",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/image": [
+      {
+        "@id": "https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Gal Gadot"
+      }
+    ],
+    "http://schema.org/sameAs": [
+      {
+        "@id": "https://www.rottentomatoes.com/celebrity/gal-gadot"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3b45521d00254a54b88aa3c90a50fd61",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N3a9bd596d3ee4fb48e093c461fc0ba79"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2020-12-28T07:45:33-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:Nb29e5492c9a7426b82454ef98a4f90d2"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Neeb5c09852934815b1acb5dd516fadf0"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470/"
+      }
+    ]
+  },
+  {
+    "@id": "_:N3a9bd596d3ee4fb48e093c461fc0ba79",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "David Sims"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/david-sims"
+      }
+    ]
+  },
+  {
+    "@id": "_:Neeb5c09852934815b1acb5dd516fadf0",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nb29e5492c9a7426b82454ef98a4f90d2",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "The Atlantic"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-24"
+      }
+    ]
+  },
+  {
+    "@id": "_:N66f99a27273e4d1888ba0a1aa54c2789",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:Nf9633d3b88064424a56056255f9a002c"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-02T10:00:09-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N8bb16da01f7e4ea1bce21893b660ecf5"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "\"Wonder Woman\" (2017) was one of the best superhero movies ever made. It was idealistic, classy, aesthetically pleasing, and romantic, and should've kicked off a fabulous franchise. Unfortunately the sequel is a major letdown."
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:N862a6085d4f74039a28d6aaecea3a942"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.theepochtimes.com/film-review-wonder-woman-1984-a-sequel-less-wonderful_3667828.html"
+      }
+    ]
+  },
+  {
+    "@id": "_:N862a6085d4f74039a28d6aaecea3a942",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": -1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N8bb16da01f7e4ea1bce21893b660ecf5",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Epoch Times"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-2771"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nf9633d3b88064424a56056255f9a002c",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Mark Jackson"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/mark-jackson"
+      }
+    ]
+  },
+  {
+    "@id": "_:Nafa0b2a7e13d4490b98552f575d914fe",
+    "@type": [
+      "http://schema.org/Review"
+    ],
+    "http://schema.org/author": [
+      {
+        "@id": "_:N22c0c4e9177b43959742650761c988ad"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://schema.org/Date",
+        "@value": "2021-02-10T06:48:34-08:00"
+      }
+    ],
+    "http://schema.org/publisher": [
+      {
+        "@id": "_:N4ae6521d8f9043328fb4fba482540a21"
+      }
+    ],
+    "http://schema.org/reviewBody": [
+      {
+        "@value": "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. "
+      }
+    ],
+    "http://schema.org/reviewRating": [
+      {
+        "@id": "_:Na7995013e5c7429784f41983b40b2308"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984"
+      }
+    ]
+  },
+  {
+    "@id": "_:N4ae6521d8f9043328fb4fba482540a21",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Mad About Movies Podcast"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/source-3256"
+      }
+    ]
+  },
+  {
+    "@id": "_:Na7995013e5c7429784f41983b40b2308",
+    "@type": [
+      "http://schema.org/Rating"
+    ],
+    "http://schema.org/bestRating": [
+      {
+        "@value": "1"
+      }
+    ],
+    "http://schema.org/ratingValue": [
+      {
+        "@value": 1
+      }
+    ],
+    "http://schema.org/worstRating": [
+      {
+        "@value": "-1"
+      }
+    ]
+  },
+  {
+    "@id": "_:N22c0c4e9177b43959742650761c988ad",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Brian Gill"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.rottentomatoes.com/critic/brian-gill"
+      }
+    ]
+  }
+]
