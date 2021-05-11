@@ -511,6 +511,23 @@ schema:contentUrl
 schema:thumbnailUrl
 schema:sameAs
 
+-------------
+
+termine de definir las nuevas propieades y corrí de nuevo el script.
+perfecto, reconoció todo.
+ahora solo me falta analizar como hago para deduplicar los datos.
+en principo el grafo resultante tiene muchos ids autogenerados pero que repiten su contenido.
+o sea hay varios individuals personas que son las mismas personas.
+lo mismo con la película de la mujer maravilla.
+asi que lo primero que me viene a la cabeza es generar las iris en mí dominio de datos usando si tiene la propiedad name.
+
+seria algo asi.
+por cada blank node tenga alguna otra tripleta con schema:name
+si la tiene, uso el valor de name de esa tripleta para generar la iri resultante.
+como son tripletas ahora el tema de la deduplicación debería ser super simple (gracias casco!!) ya que las tripletas con las propiedades irían a la misma iri.
+lo pruebo.
+
+
 
 
 
