@@ -76,7 +76,9 @@ if __name__ == '__main__':
 
     urls_files_map = [
         ('https://www.ecartelera.com/peliculas/wonder-woman-1984', 'data/tp2/https___www.ecartelera.com_peliculas_wonder-woman-1984.json'),
-        ('https://www.imdb.com/title/tt7126948/', 'data/tp2/https___www.imdb.com_title_tt7126948_.json')
+        ('https://www.imdb.com/title/tt7126948/', 'data/tp2/https___www.imdb.com_title_tt7126948_.json'),
+        ('https://www.metacritic.com/movie/wonder-woman-1984', 'data/tp2/https___www.metacritic.com_movie_wonder-woman-1984.json'),
+        ('https://www.rottentomatoes.com/m/wonder_woman_1984', 'data/tp2/https___www.rottentomatoes.com_m_wonder_woman_1984.json')
     ]
 
     for url, dfile in urls_files_map:
@@ -89,7 +91,8 @@ if __name__ == '__main__':
             así no necesito parchear la librería rdflib
             problema de la redirección usando cabecera LINK
         '''
-        json_ld['@context'] = json_ld['@context'].replace('http://schema.org','https://schema.org/docs/jsonldcontext.jsonld')
+        json_ld['@context'] = json_ld['@context'].replace('http://schema.org','http://schema.org/docs/jsonldcontext.jsonld')
+        json_ld['@context'] = json_ld['@context'].replace('https://schema.org','http://schema.org/docs/jsonldcontext.jsonld')
         djson_ld = json.dumps(json_ld, ensure_ascii=False)
 
         ''' ahora si puedo tratar de importar y parsear en el grafo de rdflib '''

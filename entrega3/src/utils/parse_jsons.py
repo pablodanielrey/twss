@@ -34,7 +34,8 @@ if __name__ == '__main__':
         así no necesito parchear la librería rdflib
         problema de la redirección usando cabecera LINK
     '''
-    json_ld['@context'] = json_ld['@context'].replace('http://schema.org','https://schema.org/docs/jsonldcontext.jsonld')
+    json_ld['@context'] = json_ld['@context'].replace('http://schema.org','http://schema.org/docs/jsonldcontext.jsonld')
+    json_ld['@context'] = json_ld['@context'].replace('https://schema.org','http://schema.org/docs/jsonldcontext.jsonld')
     djson_ld = json.dumps(json_ld, ensure_ascii=False)
 
 

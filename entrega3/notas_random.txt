@@ -28,9 +28,6 @@ veo que existe una ontología que es una recomendación para representar el tiem
 https://www.w3.org/TR/owl-time/
 la definición esta en : http://www.w3.org/2006/time#
 
-
-
-
 ----
 Ya tengo los datos de tp1 en ontología y sus individuals.
 ahora sigo con tp2 y la modificación del scraper.
@@ -144,11 +141,11 @@ otra alternativa de procesarlo podría haber sido como comentó Leonardo en el p
 cambiar el context de los json-ld para la url donde schema.org sirve los archivos 
 https://schema.org/docs/jsonldcontext.jsonld
 
-era mucho mas facil!!!
+era mucho mas facil que andar debuggeando la libreria!!.
 
 -----
 
-ejemplo de ejecución del script para ver si convierte ok en el grafo a los archivos de json.
+ejemplo de ejecución del script para ver si convierte ok en grafo a los archivos de json.
 
 python3 src/utils/parse_jsons.py data/tp2/https___www.ecartelera.com_peliculas_wonder-woman-1984.json
 python3 src/utils/parse_jsons.py data/tp2/https___www.imdb.com_title_tt7126948_.json 
@@ -232,7 +229,7 @@ ya hice el cambio a los scripts para que le agreguen eso a los datos del tp1.
 ---
 
 ahora el tema del procesamiento de los datos que vienen de los sitios con el context schema.org
-lograr que protegé los lea correctamente cuando los escribo en turtle.
+lograr que protegé los lea correctamente del archivo escribo en turtle por el script
 primero le voy a agregar esas clases. (NamedIndividual y Class)
 
 sigue sin funcionar. no me muestra la instancia de schema:Movie con id: 
@@ -292,12 +289,12 @@ pero me parece mejor definirlo como string.
 ----
 
 schema.org modela todo como clases. Text, etc.
-pero en la práctica los datos se exportan como string.
+pero en la práctica los datos los sitios los exportan como string.
 
 
 --------
 
-Problemón!!!! todos los jsons-ld consumidos por los sitios me generan blank nodes para los datos de las películas.
+Problemón!!!! todos los jsons-ld consumidos de los sitios me generan blank nodes para los datos de las películas. usan colecciones para manejar a los actores, etc.
 y no me los interpreta bien protegé.
 así que tengo que convertilos a nodes normales con iris.
 
@@ -305,7 +302,7 @@ defini un pefijo para mi namespace de datos.
 tsswd: https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/
 
 y arme una rutina que busca los blank nodes y los reemplaza por iris de datos.
-o sea generaría una instancia nombrada para que protegé lo reconosca ok.
+o sea generaría una instancia nombrada para que protegé lo reconozca ok.
 
 abri el archivo en protegé y al fin veo las instancias dentro de individuals by Class
 
@@ -338,7 +335,7 @@ voy a probar agregando NamedIndividual a ver si lo entiende protegé.
 
 NO funciona!!!. no es solo eso.
 
-lo que estoy haciendo es abrir el archivo con los individuals en protegé y posteriormente importo mi ontología como indicó casco en el video.
+lo que estoy haciendo es abrir el archivo con los individuals en protegé y posteriormente importo mi ontología como indicó casco en el video para el ejemplo de schema.org
 pero no la interpreta bien de esta forma. asi que voy por la mas simple.
 voy a unificar los archivos de ontología y el de individuals en uno solo, que posteriormente abro con protegé.
 modifico el script para realizar esto.
@@ -361,17 +358,158 @@ ahora queda cargar los otros jsons-ld e ir mergeando la info. definiendo las cla
 
 -----
 
-toca el turno a imdb. carga del json-ld
+toca el turno a imdb. modifico el script para 
+1 - carga del json-ld
+2 - lo parsea en el grafo de tripletas
+3 - hace unión con el grafo anterior
+
+y despues los puntos normales de unir con la ontología y escribir el turtle final.
+
+FUNCIONAAA!!!.
+lo único que veo es que como anotaciones me dejo las propiedaes que todavía no defini de schema.org en mi ontología.
+
+paso siguiente definir esas propiedades faltantes.
+
+schema:creator 
+schema:contentRating
+schema:datePublished
+schema:keywords
+schema:review
+schema:trailer
+schema:url
+schema:productionCompany
+schema:potentialAction
+schema:releasedEvent
+schema:actionPlatform
+schema:inLanguage
+schema:urlTemplate
+schema:location
+schema:availabilityStarts
+schame:eligibleRegion
+schema:category
+schema:author
+schema:dateCreated
+schema:itemReviewed
+schema:reviewBody
+schema:reviewRating
+schema:embedUrl
+schema:thumbnail
+schema:thumbnailUrl
+schema:uploadDate
 
 
+esta schema:url es raro porque la definí, pero la tengo definida como dataProperty
+y en el archivo turtle esta:
+
+schema:url <https://www.imdb.com/title/tt7126948/> .
+
+o sea una objectProperty, la cambio.
+
+funcionó. ahora protegé lo muestra como una propiedad dentor del individual.
+sigo con el problema de que las iris con / final no las interpreta bien protegé. no muestra nada.
 
 
+-----
+
+defino todas las propiedades que me faltan para terminar con la ontología de schema.org
+
+varias propiedades en schema.org se definen como objectProperty pero en los datos en la práctica aparecen como dataProperties.
+asociadas a strings. ejemplos:
+schema:contentRating
+schema:datePublished
+
+un problema grande es schema:url 
+que en los datos aparece asociado a iris y asociado a strings.!!!!! TEMA A CONSULTAR!!!.
+asumo que lo convertiría en irirs en los scrapers, sería la opción mas correcta.
 
 
+termine de definir todas las propiedades y clases faltantes, corri el script nuevamente y abrí el archivo en protegé y me interpretó correctamente las propiedades.
+no mas datos en anotaciones.
+
+----
+
+agrego metacritic y veo como resulta.
+obvio, problemas con la librería de parseo nuevamnete.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega3$ python3 src/tp2_2_owl.py 
+Descargando información de : https://www.ecartelera.com/peliculas/wonder-woman-1984
+Traceback (most recent call last):
+  File "/src/github/facu-infor/twss/entrega3/src/tp2_2_owl.py", line 100, in <module>
+    g.parse(data=djson_ld, format='json-ld', publicID=url)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib/graph.py", line 1078, in parse
+    parser.parse(source, self, **args)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/parser.py", line 95, in parse
+    to_rdf(data, conj_sink, base, context_data)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/parser.py", line 107, in to_rdf
+    return parser.parse(data, context, dataset)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/parser.py", line 125, in parse
+    context.load(l_ctx, context.base)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/context.py", line 200, in load
+    self._prep_sources(base, source, sources)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/context.py", line 220, in _prep_sources
+    source = source_to_json(source_url)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/util.py", line 23, in source_to_json
+    source = create_input_source(source, format='json-ld')
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib/parser.py", line 193, in create_input_source
+    input_source = URLInputSource(absolute_location, format)
+  File "/home/pablo/.local/lib/python3.9/site-packages/rdflib/parser.py", line 113, in __init__
+    file = urlopen(req)
+  File "/usr/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+pablo@xiaomi:/src/github/facu-infor/twss/entrega3$ 
 
 
+parece que no encuentra algo del contexto también.
+cambie para que el json lo busque por http y que tambien cambie el prefijo de https.
 
+        json_ld['@context'] = json_ld['@context'].replace('http://schema.org','http://schema.org/docs/jsonldcontext.jsonld')
+        json_ld['@context'] = json_ld['@context'].replace('https://schema.org','http://schema.org/docs/jsonldcontext.jsonld')
 
+y salio funcionando. parece algo temporal.
+
+19:31:08.971899 IP (tos 0x0, ttl 64, id 19553, offset 0, flags [DF], proto TCP (6), length 60)
+    192.168.10.5.57782 > 172.217.172.110.80: Flags [S], cksum 0xe8e3 (correct), seq 21734641, win 64240, options [mss 1460,sackOK,TS val 2312580635 ecr 0,nop,wscale 7], length 0
+19:31:08.978163 IP (tos 0x0, ttl 64, id 19554, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.10.5.57782 > 172.217.172.110.80: Flags [.], cksum 0x5e81 (correct), ack 356733432, win 502, options [nop,nop,TS val 2312580641 ecr 1592126450], length 0
+19:31:08.978319 IP (tos 0x0, ttl 64, id 19555, offset 0, flags [DF], proto TCP (6), length 289)
+    192.168.10.5.57782 > 172.217.172.110.80: Flags [P.], cksum 0x99f6 (correct), seq 0:237, ack 1, win 502, options [nop,nop,TS val 2312580641 ecr 1592126450], length 237: HTTP, length: 237
+	GET /docs/jsonldcontext.jsonld HTTP/1.1
+	Accept-Encoding: identity
+	Host: schema.org
+	User-Agent: rdflib-5.0.0 (http://rdflib.net/; eikeon@eikeon.com)
+	Accept: application/ld+json, application/json;q=0.9, */*;q=0.1
+	Connection: close
+	
+19:31:09.159336 IP (tos 0x0, ttl 64, id 19556, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.10.5.57782 > 172.217.172.110.80: Flags [.], cksum 0x5b19 (correct), ack 273, win 501, options [nop,nop,TS val 2312580822 ecr 1592126633], length 0
+19:31:09.160324 IP (tos 0x0, ttl 64, id 19557, offset 0, flags [DF], proto TCP (6), length 52)
+    192.168.10.5.57782 > 172.217.172.110.80: Flags [F.], cksum 0x5b16 (correct), seq 237, ack 274, win 501, op
+
+-------------
+
+parece que todo funciona ok, verifique las propieades y protegé me las tiró en propiedades y no anotaciones.
+asi que agrego el ultimo sitio que es rottentomatoes
+
+aparecieron algunas en anotaciones. 
+
+schema:actors
+schema:publisher
+schema:dateModified
+schema:embedUrl
+schema:contentUrl
+schema:thumbnailUrl
+schema:sameAs
 
 
 
