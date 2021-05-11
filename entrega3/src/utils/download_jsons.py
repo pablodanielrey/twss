@@ -28,5 +28,5 @@ if __name__ == '__main__':
     for url in get_urls_of_data():
         j = get_jsons(url)
         fi = url.replace('/','_').replace(':','_')
-        with open(f'data/{fi}.json','w') as f:
+        with open(f'data/tp2/{fi}.json','w') as f:
             f.write(json.dumps(j,ensure_ascii=False))

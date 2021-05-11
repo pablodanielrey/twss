@@ -1,0 +1,85 @@
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] a schema:Movie ;
+    schema:actor [ a schema:Person ;
+            schema:name "Pedro Pascal" ;
+            schema:url <file:///name/nm0050959/> ],
+        [ a schema:Person ;
+            schema:name "Kristen Wiig" ;
+            schema:url <file:///name/nm1325419/> ],
+        [ a schema:Person ;
+            schema:name "Gal Gadot" ;
+            schema:url <file:///name/nm2933757/> ],
+        [ a schema:Person ;
+            schema:name "Chris Pine" ;
+            schema:url <file:///name/nm1517976/> ] ;
+    schema:aggregateRating [ a schema:AggregateRating ;
+            schema:bestRating "10.0" ;
+            schema:ratingCount 198912 ;
+            schema:ratingValue "5.4" ;
+            schema:worstRating "1.0" ] ;
+    schema:contentRating "PG-13" ;
+    schema:creator [ a schema:Organization ;
+            schema:url <file:///company/co0002663/> ],
+        [ a schema:Person ;
+            schema:name "Patty Jenkins" ;
+            schema:url <file:///name/nm0420941/> ],
+        [ a schema:Person ;
+            schema:name "Dave Callaham" ;
+            schema:url <file:///name/nm1709264/> ],
+        [ a schema:Organization ;
+            schema:url <file:///company/co0283444/> ],
+        [ a schema:Organization ;
+            schema:url <file:///company/co0728674/> ],
+        [ a schema:Organization ;
+            schema:url <file:///company/co0028338/> ],
+        [ a schema:Person ;
+            schema:name "Geoff Johns" ;
+            schema:url <file:///name/nm0424315/> ],
+        [ a schema:Person ;
+            schema:name "Geoff Johns" ;
+            schema:url <file:///name/nm0424315/> ],
+        [ a schema:Person ;
+            schema:name "Patty Jenkins" ;
+            schema:url <file:///name/nm0420941/> ],
+        [ a schema:Organization ;
+            schema:url <file:///company/co0038332/> ],
+        [ a schema:Person ;
+            schema:name "William Moulton Marston" ;
+            schema:url <file:///name/nm0551376/> ] ;
+    schema:datePublished "2020-12-16"^^schema:Date ;
+    schema:description "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..." ;
+    schema:director [ a schema:Person ;
+            schema:name "Patty Jenkins" ;
+            schema:url <file:///name/nm0420941/> ] ;
+    schema:duration "PT2H31M" ;
+    schema:genre "Action",
+        "Adventure",
+        "Fantasy" ;
+    schema:image <https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg> ;
+    schema:keywords "sequel,superhero,dc extended universe,dc comics,one woman army" ;
+    schema:name "Wonder Woman 1984" ;
+    schema:review [ a schema:Review ;
+            schema:author [ a schema:Person ;
+                    schema:name "jayg_58" ] ;
+            schema:dateCreated "2021-01-01"^^schema:Date ;
+            schema:inLanguage "English" ;
+            schema:itemReviewed [ a schema:CreativeWork ;
+                    schema:url <file:///title/tt7126948/> ] ;
+            schema:name "In quarantine, you'll buy anything." ;
+            schema:reviewBody "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours." ;
+            schema:reviewRating [ a schema:Rating ;
+                    schema:bestRating "10" ;
+                    schema:ratingValue "5" ;
+                    schema:worstRating "1" ] ] ;
+    schema:trailer [ a schema:VideoObject ;
+            schema:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
+            schema:embedUrl <file:///video/imdb/vi3240214809> ;
+            schema:name "Stream on HBO Max for a Limited Time" ;
+            schema:thumbnail [ a schema:ImageObject ;
+                    schema:contentUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ] ;
+            schema:thumbnailUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ;
+            schema:uploadDate "2020-12-07T01:51:07Z"^^schema:Date ] ;
+    schema:url <file:///title/tt7126948/> .
+

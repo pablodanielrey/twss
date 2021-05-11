@@ -29,8 +29,14 @@ if __name__ == '__main__':
         data1 = jsonf.read()
 
     g = Graph()
-    g.parse(data=data1, format='json-ld', publicID='https://metacritic')
+    g.bind('schema','http://schema.org/')
+    g.parse(data=data1, format='json-ld')
     
+    dfile = jf.replace('.json','.ttl')
+
+    with open(dfile, 'w') as f:
+        f.write(g.serialize(format="turtle").decode("utf-8"))
+
     ''' listar todas las películas '''
     movie = URIRef('http://schema.org/Movie')
     for mid, _t, _m in g.triples((None,None,movie)):

@@ -148,6 +148,22 @@ era mucho mas facil!!!
 
 -----
 
+ejemplo de ejecución del script para ver si convierte ok en el grafo a los archivos de json.
+
+python3 src/utils/parse_jsons.py data/tp2/https___www.ecartelera.com_peliculas_wonder-woman-1984.json
+python3 src/utils/parse_jsons.py data/tp2/https___www.imdb.com_title_tt7126948_.json 
+python3 src/utils/parse_jsons.py data/tp2/https___www.metacritic.com_movie_wonder-woman-1984.json 
+python3 src/utils/parse_jsons.py data/tp2/https___www.rottentomatoes.com_m_wonder_woman_1984.json 
+
+asi que funciona bien en pasar los json-ld a turttle e interpretar el grafo.
+lo único es que algunas iris al ser relativas y el parser del grafo no sabe cual es la url real las transofrma a iris del sistema de archivos.
+por ahora solo notarlo, para tenerlo en cuenta en la solución final.
+armo el script que toma de un sitio y la interpreta dentro de un grafo 
+
+
+----
+
+
 
 
 

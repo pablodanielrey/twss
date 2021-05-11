@@ -1,0 +1,65 @@
+@prefix schema: <http://schema.org/> .
+
+<https://www.ecartelera.com/peliculas/wonder-woman-1984/> a schema:Movie ;
+    schema:actor [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine/> ;
+            schema:name "Chris Pine" ],
+        [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig/> ;
+            schema:name "Kristen Wiig" ],
+        [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal/> ;
+            schema:name "Pedro Pascal" ],
+        [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot/> ;
+            schema:name "Gal Gadot" ],
+        [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright/> ;
+            schema:name "Robin Wright" ],
+        [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/connie-nielsen/> ;
+            schema:name "Connie Nielsen" ] ;
+    schema:aggregateRating [ a schema:AggregateRating ;
+            schema:bestRating "10" ;
+            schema:ratingCount "20" ;
+            schema:ratingValue "7,6" ;
+            schema:worstRating "0" ] ;
+    schema:countryOfOrigin "EE.UU." ;
+    schema:description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
+\r
+La trama de esta película es una gran misterio. El guión está basado en una historia escrita por Patty Jenkins, Geoff Johns (&#39;The Flash&#39;, &#39;Aquaman&#39;) y Dave Callaham (&#39;Zombieland: Mata y remata&#39;). Se espera que tenga protagonismo la tecnología y la vigilancia, teniendo en cuenta el título que hace referencia a la distopía de &#39;1984&#39; de George Orwell.""" ;
+    schema:director [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/patty-jenkins/> ;
+            schema:name "Patty Jenkins" ] ;
+    schema:duration "PT2H31M" ;
+    schema:genre "Acción",
+        "Aventura",
+        "Fantasía" ;
+    schema:hasPart [ a schema:Clip ;
+            schema:description "trailer" ;
+            schema:potentialAction [ a schema:WatchAction ;
+                    schema:expectsAcceptanceOf [ a schema:Offer ;
+                            schema:availabilityStarts "2019-12-08 22:30:37"^^schema:Date ;
+                            schema:category "free" ;
+                            schema:eligibleRegion [ a schema:Country ;
+                                    schema:name "ES" ] ] ;
+                    schema:target [ a schema:EntryPoint ;
+                            schema:actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
+                                "http://schema.org/DesktopWebPlatform",
+                                "http://schema.org/IOSPlatform",
+                                "http://schema.org/MobileWebPlatform" ;
+                            schema:inLanguage "es" ;
+                            schema:urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" ] ] ;
+            schema:timeRequired "PT2M24S" ] ;
+    schema:image [ a schema:ImageObject ;
+            schema:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> ] ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984/> ;
+    schema:name "Wonder Woman 1984" ;
+    schema:productionCompany [ a schema:Organization ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/empresas/warner-bros/> ;
+            schema:name "Warner Bros. Pictures" ] ;
+    schema:releasedEvent [ a schema:PublicationEvent ;
+            schema:location [ a schema:Country ;
+                    schema:name "ES" ] ;
+            schema:startDate "2020-12-18"^^schema:Date ] .
+

@@ -95,7 +95,7 @@
         "keywords": "sequel,superhero,dc extended universe,dc comics,one woman army",
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingCount": 198289,
+            "ratingCount": 198912,
             "bestRating": "10.0",
             "worstRating": "1.0",
             "ratingValue": "5.4"
@@ -108,17 +108,17 @@
             },
             "author": {
                 "@type": "Person",
-                "name": "hoarei-56760"
+                "name": "jayg_58"
             },
-            "dateCreated": "2021-03-18",
+            "dateCreated": "2021-01-01",
             "inLanguage": "English",
-            "name": "Who should watch and who should not watch this",
-            "reviewBody": "Should:\n\nMen who hate their wives and want to sit on the couch for 3 hours pretending they are doing something (watching this) and therefore cannot talk right now\n\nFans of Mexican and Brazilian daytime soap operas\n\nFans of Italian daytime soap\n\nFans of Gal Gadot's legs (i.e. were never here for the movie or the 'story')\n\nAdult movie scouts\n\nPeople with guns to their heads\n\n Should Not:\n\nEverybody else",
+            "name": "In quarantine, you'll buy anything.",
+            "reviewBody": "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours.",
             "reviewRating": {
                 "@type": "Rating",
                 "worstRating": "1",
                 "bestRating": "10",
-                "ratingValue": "3"
+                "ratingValue": "5"
             }
         },
         "duration": "PT2H31M",
