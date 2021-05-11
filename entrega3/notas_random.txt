@@ -216,6 +216,25 @@ tiene que estar faltando las clases que usa protegé para analizar y interpretar
 
 ----
 
+para los individuals protegé le asigna la clase owl:NamedIndividual
+y para las clases owl:Class
+
+###  http://www.semanticweb.org/pablo/ontologies/2021/4/untitled-ontology-18#Pepe
+:Pepe rdf:type owl:Class .
+
+###  http://www.semanticweb.org/pablo/ontologies/2021/4/untitled-ontology-18#pepeInstance
+:pepeInstance rdf:type owl:NamedIndividual ,
+                       :Pepe .
+
+
+ya hice el cambio a los scripts para que le agreguen eso a los datos del tp1.
+
+---
+
+
+
+
+
 
 
 

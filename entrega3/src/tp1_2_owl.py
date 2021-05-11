@@ -3,7 +3,7 @@ import uuid
 import json
 from urllib.parse import quote
 
-from rdflib import Graph, RDF, RDFS, Namespace, Literal
+from rdflib import Graph, RDF, RDFS, OWL, Namespace, Literal
 from rdflib.term import URIRef
 
 
@@ -71,12 +71,15 @@ if __name__ == '__main__':
     showroom_map = {}
 
     ''' agrego las películas dentro del grafo '''
+    print(f'Cargando datos del tp1')
     data = load_data()
     for movie in data['MOVIES']:
+        print(f"Procesando película : {movie['TITLE']}")
         iri = get_movie_iri(movie_map, movie)
         dmovie = d[iri]
 
         g.add((dmovie, RDF.type, o.Movie))
+        g.add((dmovie, RDF.type, OWL.NamedIndividual))
 
         if 'LANGUAGE' in movie:
             g.add((dmovie, o.language, Literal(movie['LANGUAGE'])))
@@ -110,6 +113,7 @@ if __name__ == '__main__':
     for name, iri in persons_map.items():
         piri = d[iri]
         g.add((piri, RDF.type, o.Person))
+        g.add((piri, RDF.type, OWL.NamedIndividual))
         g.add((piri, o.name, Literal(name)))
 
     ''' agrego los datos de los shows '''
@@ -125,6 +129,7 @@ if __name__ == '__main__':
         shiri = d[show_iri]
 
         g.add((shiri, RDF.type, o.Show))
+        g.add((shiri, RDF.type, OWL.NamedIndividual))
         ''' pelicula '''
         g.add((shiri, o.movie, d[miri]))
         ''' sala '''
@@ -144,6 +149,7 @@ if __name__ == '__main__':
         shiri = d[showroom_map[showroom]['IRI']]
         ciri = d[showroom_map[showroom]['CINEMA']]
         g.add((shiri, RDF.type, o.ShowRoom))
+        g.add((shiri, RDF.type, OWL.NamedIndividual))
         g.add((shiri, o.name, Literal(showroom_map[showroom]['SHOWROOM'])))
         g.add((shiri, o.isPartOf, ciri))
     
@@ -151,6 +157,7 @@ if __name__ == '__main__':
     for cinema_name in cinema_map:
         ciri = d[cinema_map[cinema_name]]
         g.add((ciri, RDF.type, o.Cinema))
+        g.add((ciri, RDF.type, OWL.NamedIndividual))
         g.add((ciri, o.name, Literal(cinema_name)))
 
     ''' escribo todos los datos '''
