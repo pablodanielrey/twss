@@ -160,18 +160,30 @@ if __name__ == '__main__':
         g.add((ciri, RDF.type, OWL.NamedIndividual))
         g.add((ciri, o.name, Literal(cinema_name)))
 
-    ''' escribo todos los datos '''
-    with open('data/tp1/all.ttl','w') as f:
-        f.write(g.serialize(format="turtle").decode("utf-8"))
+
+    ''' busco la ontología definida en protegé y le hago merge con los datos de los individuals arriba procesados '''
+    gontology = Graph()
+    with open('../owl/twss_simple.ttl', 'r') as f:
+        gontology.parse(f, format='turtle')
+
+
+    gfinal = gontology + g
 
     ''' escribo todos los datos '''
-    with open('data/tp1/all.json-ld','w') as f:
-        f.write(g.serialize(format="json-ld").decode("utf-8"))
+    with open('data/merged_tp1.ttl','w') as f:
+        f.write(gfinal.serialize(format="turtle").decode("utf-8"))
+
+
 
     ''' 
-        haciendo algunas pruebas escribo algunas tripletas separadas por tipos 
-        solo para chequear resultados rápidamente.
+        para evaluar datos sin usar protegé escribo algunos archivos separados de chequeos 
+        NO es necesario para la solución.
+        solo verificaciones visuales rápidas
     '''
+
+    ''' escribo todos los datos '''
+    with open('data/tp1/merged.json-ld','w') as f:
+        f.write(g.serialize(format="json-ld").decode("utf-8"))
 
     with open('data/tp1/persons.ttl', 'w') as f:
         g2 = Graph()

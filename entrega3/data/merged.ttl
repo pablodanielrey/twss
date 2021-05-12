@@ -210,6 +210,128 @@ default1:worstRating a owl:DatatypeProperty ;
     rdfs:domain default1:Rating ;
     rdfs:range xsd:float .
 
+twssd:Wonder_Woman_1984 a default1:Movie,
+        owl:NamedIndividual ;
+    default1:actor twssd:Alex_Delescu,
+        twssd:Amr_Waked,
+        twssd:Amreen_N._Yaqoob,
+        twssd:Bern_Collaco,
+        twssd:Brittney_Aleah,
+        twssd:Chris_Pine,
+        twssd:Chris_Silcox,
+        twssd:Connie_Nielsen,
+        twssd:Ella_Walker,
+        twssd:Gabriella_Wilde,
+        twssd:Gal_Gadot,
+        twssd:Jamaal_Burcher,
+        twssd:Jamal_Alkhaldi,
+        twssd:Jeff_Moore,
+        twssd:Joel_Morris,
+        twssd:John_Gettier,
+        twssd:Jonathan_Ajayi,
+        twssd:Julian_Ferro,
+        twssd:Justin_Sisk,
+        twssd:Kaila_Ingram,
+        twssd:Kristen_Wiig,
+        twssd:Kristoffer_Polaha,
+        twssd:Lilly_Aspell,
+        twssd:Lolita_Marie,
+        twssd:Lynda_Carter,
+        twssd:Lyon_Beckwith,
+        twssd:Manoj_Anand,
+        twssd:Marisol_Correa,
+        twssd:Marla_Aaron_Wapner,
+        twssd:Monica_Haynes,
+        twssd:Natasha_Rothwell,
+        twssd:Oakley_Bull,
+        twssd:Paul_Ron_Cruz,
+        twssd:Pedro_Pascal,
+        twssd:Penelope_Kapudija,
+        twssd:Ravi_Patel,
+        twssd:Rick_Kelvin_Branch,
+        twssd:Robin_Wright,
+        twssd:Sia_Alipour,
+        twssd:Sonia_Goswami,
+        twssd:Spencer_Trinwith,
+        twssd:Tessa_Bonham_Jones,
+        twssd:Thomas_Clay_Strickland ;
+    default1:actors twssd:Chris_Pine,
+        twssd:Connie_Nielsen,
+        twssd:Gal_Gadot,
+        twssd:Kristen_Wiig,
+        twssd:Pedro_Pascal,
+        twssd:Robin_Wright ;
+    default1:aggregateRating twssd:Tomatometer,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_4b5f577e-6934-4a12-8dec-32a2a64135af>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_b20c1863-9ba5-45e0-b9c0-87f135e61330> ;
+    default1:author twssd:Patty_Jenkins ;
+    default1:character "Antiope",
+        "Barbara Minerva / Cheetah",
+        "Diana Prince / Wonder Woman",
+        "Hippolyta",
+        "Steve Trevor" ;
+    default1:contentRating "PG-13" ;
+    default1:creator twssd:Dave_Callaham,
+        twssd:Geoff_Johns,
+        twssd:Patty_Jenkins,
+        twssd:William_Moulton_Marston,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_2ad98d05-5d0f-401d-9db2-3f4c60891ae4>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_33148b2b-5d27-415d-b96a-7ba6f562349e>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a6b67a47-ca5e-4409-b06e-f08de4465973>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_bb8f08fb-98d8-4d5b-8f8f-6b5a732bbe39>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_f78e8728-891b-4289-ab80-1fdb7a004f46> ;
+    default1:dateCreated "2017-09-13T08:24:15-07:00"^^default1:Date ;
+    default1:dateModified "2021-05-09T21:02:19-07:00"^^default1:Date ;
+    default1:datePublished "2020-12-16"^^default1:Date,
+        "December 25, 2020"^^default1:Date ;
+    default1:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah.",
+        "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..." ;
+    default1:director twssd:Patty_Jenkins ;
+    default1:duration "PT151M",
+        "PT2H31M" ;
+    default1:genre "Action",
+        "Action & Adventure",
+        "Adventure",
+        "Fantasy",
+        "Science Fiction & Fantasy" ;
+    default1:image <https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg>,
+        <https://resizing.flixster.com/m8G6eIbecl1KNYf1yd2lt2F5yX8=/740x380/v1.bjsyNTUxODM4O2o7MTg4Mzk7MTIwMDs0MTIyOzIzMTI>,
+        <https://static.metacritic.com/images/products/movies/4/9d1a4650bb42f43a0a781bfa70a7772d.jpg> ;
+    default1:keywords "sequel,superhero,dc extended universe,dc comics,one woman army" ;
+    default1:name "Wonder Woman 1984" ;
+    default1:productionCompany twssd:Warner_Bros._Pictures ;
+    default1:publisher twssd:Warner_Bros._Pictures ;
+    default1:review <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0daf7deb-5d47-4f58-ad50-8e6bd94784ff>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0eb72284-1060-487b-84bb-f1fdb0bc69cb>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_1352c23e-ecd1-4fae-89db-1c33ff7c02d9>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_166a12b3-c90a-496c-adb8-a6c8801afe84>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_1d04527d-01e1-4877-98d6-3790f81c529c>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_251b033c-1bbf-411e-909a-34063b8aeb36>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_28555c05-0038-4be3-9a67-562c34b7afb2>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3defd7f9-61e8-4e02-93dc-3bc2086b568e>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4a089564-25a8-4546-9136-6136dea5e4f3>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5112d715-4e0c-49c8-9a4c-59907509a5a5>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_531006af-bf79-4149-8b1d-3c2393d5bfb9>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_54f604aa-b0a3-4396-9245-051cebba7fd0>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_64ed61ec-920f-4bad-967c-00091ccf8ec3>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_66a23d17-cba6-434a-874a-bc51124d7aea>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6825b95a-8385-4daf-947c-6a0ac32fced4>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_722eb0b9-7580-4acd-b21f-7b5a27a27b24>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_76f8c445-556d-4a60-abad-9fec8437fc4a>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7df39bf9-c204-4de0-a3b0-f16add51919b>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_813bf49d-c391-40e6-92ab-a1e65b3a0b4b>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_a22d340c-cc29-4930-8851-81bd0bc6df62>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_a6a50db6-c9c5-463e-9839-fa0254947dcf>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d344d931-67c2-4e21-b3fe-86f645638f29>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d3b04770-bb12-4b0d-b937-73cc0194ac7b>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_f123c60a-4a26-4ab2-91c5-84dd0383371f> ;
+    default1:trailer twssd:Stream_on_HBO_Max_for_a_Limited_Time,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> ;
+    default1:url <https://www.imdb.com/title/tt7126948>,
+        <https://www.metacritic.com/movie/wonder-woman-1984>,
+        <https://www.rottentomatoes.com/m/wonder_woman_1984> .
+
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> a owl:Ontology .
 
 default1:AdministrativeArea a owl:Class ;
@@ -374,10 +496,10 @@ twssd:Ian_Simmons a default1:Person,
     default1:author twssd:jayg_58 ;
     default1:dateCreated "2021-01-01"^^default1:Date ;
     default1:inLanguage "English" ;
-    default1:itemReviewed <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_6521baf0-64c1-42a3-b34e-5e295bfc56e1> ;
+    default1:itemReviewed <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_d4454e24-0430-4614-8970-3fb5e7962792> ;
     default1:name "In quarantine, you'll buy anything." ;
     default1:reviewBody "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_74811db9-dc06-45bc-bd9a-f16f0e93531e> .
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_584c203c-7b65-4933-8e1a-c330a1c0f8cb> .
 
 twssd:Jake_Wilson a default1:Person,
         owl:NamedIndividual ;
@@ -604,7 +726,7 @@ twssd:Stream_on_HBO_Max_for_a_Limited_Time a default1:VideoObject,
     default1:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
     default1:embedUrl <https://www.imdb.com/video/imdb/vi3240214809> ;
     default1:name "Stream on HBO Max for a Limited Time" ;
-    default1:thumbnail <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_d3fcb9b1-83e0-45f5-8d74-8e66d9c8aa3c> ;
+    default1:thumbnail <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_8ea5df68-0d11-4134-87a6-62c1e49243b7> ;
     default1:thumbnailUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ;
     default1:uploadDate "2020-12-07T01:51:07Z"^^default1:Date .
 
@@ -678,129 +800,6 @@ twssd:William_Moulton_Marston a default1:Person,
     default1:name "William Moulton Marston" ;
     default1:url <https://www.imdb.com/name/nm0551376> .
 
-twssd:Wonder_Woman_1984 a default1:Movie,
-        owl:NamedIndividual ;
-    default1:actor twssd:Alex_Delescu,
-        twssd:Amr_Waked,
-        twssd:Amreen_N._Yaqoob,
-        twssd:Bern_Collaco,
-        twssd:Brittney_Aleah,
-        twssd:Chris_Pine,
-        twssd:Chris_Silcox,
-        twssd:Connie_Nielsen,
-        twssd:Ella_Walker,
-        twssd:Gabriella_Wilde,
-        twssd:Gal_Gadot,
-        twssd:Jamaal_Burcher,
-        twssd:Jamal_Alkhaldi,
-        twssd:Jeff_Moore,
-        twssd:Joel_Morris,
-        twssd:John_Gettier,
-        twssd:Jonathan_Ajayi,
-        twssd:Julian_Ferro,
-        twssd:Justin_Sisk,
-        twssd:Kaila_Ingram,
-        twssd:Kristen_Wiig,
-        twssd:Kristoffer_Polaha,
-        twssd:Lilly_Aspell,
-        twssd:Lolita_Marie,
-        twssd:Lynda_Carter,
-        twssd:Lyon_Beckwith,
-        twssd:Manoj_Anand,
-        twssd:Marisol_Correa,
-        twssd:Marla_Aaron_Wapner,
-        twssd:Monica_Haynes,
-        twssd:Natasha_Rothwell,
-        twssd:Oakley_Bull,
-        twssd:Paul_Ron_Cruz,
-        twssd:Pedro_Pascal,
-        twssd:Penelope_Kapudija,
-        twssd:Ravi_Patel,
-        twssd:Rick_Kelvin_Branch,
-        twssd:Robin_Wright,
-        twssd:Sia_Alipour,
-        twssd:Sonia_Goswami,
-        twssd:Spencer_Trinwith,
-        twssd:Tessa_Bonham_Jones,
-        twssd:Thomas_Clay_Strickland ;
-    default1:actors twssd:Chris_Pine,
-        twssd:Connie_Nielsen,
-        twssd:Gal_Gadot,
-        twssd:Kristen_Wiig,
-        twssd:Pedro_Pascal,
-        twssd:Robin_Wright ;
-    default1:aggregateRating twssd:Tomatometer,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_60898526-c7c0-4f5e-a19e-2ada85f1b422>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_ab1398c2-983c-42ba-bb6f-bc7a9272d804> ;
-    default1:author twssd:Patty_Jenkins ;
-    default1:character "Antiope",
-        "Barbara Minerva / Cheetah",
-        "Diana Prince / Wonder Woman",
-        "Hippolyta",
-        "Steve Trevor" ;
-    default1:contentRating "PG-13" ;
-    default1:creator twssd:Dave_Callaham,
-        twssd:Geoff_Johns,
-        twssd:Patty_Jenkins,
-        twssd:William_Moulton_Marston,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_051456fa-1f51-42d4-b7ba-d106014c2831>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_2c6d40f1-804e-47de-aa82-94241a84efe2>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_be78dccf-8859-4808-8fb8-9a4c22f233eb>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_c6ec6008-5826-4f26-9387-9bf6772b0675>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_cb766855-f9d0-4f85-9b46-5e747215a302> ;
-    default1:dateCreated "2017-09-13T08:24:15-07:00"^^default1:Date ;
-    default1:dateModified "2021-05-09T21:02:19-07:00"^^default1:Date ;
-    default1:datePublished "2020-12-16"^^default1:Date,
-        "December 25, 2020"^^default1:Date ;
-    default1:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah.",
-        "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..." ;
-    default1:director twssd:Patty_Jenkins ;
-    default1:duration "PT151M",
-        "PT2H31M" ;
-    default1:genre "Action",
-        "Action & Adventure",
-        "Adventure",
-        "Fantasy",
-        "Science Fiction & Fantasy" ;
-    default1:image <https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg>,
-        <https://resizing.flixster.com/m8G6eIbecl1KNYf1yd2lt2F5yX8=/740x380/v1.bjsyNTUxODM4O2o7MTg4Mzk7MTIwMDs0MTIyOzIzMTI>,
-        <https://static.metacritic.com/images/products/movies/4/9d1a4650bb42f43a0a781bfa70a7772d.jpg> ;
-    default1:keywords "sequel,superhero,dc extended universe,dc comics,one woman army" ;
-    default1:name "Wonder Woman 1984" ;
-    default1:productionCompany twssd:Warner_Bros._Pictures ;
-    default1:publisher twssd:Warner_Bros._Pictures ;
-    default1:review <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0dc41108-123c-4155-83b5-8ab10a423b68>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_2d196213-f652-4a28-a7b7-b6f09a2b4680>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3004eead-6c80-4ad9-a494-d0b22fed9922>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3088f636-cb39-4518-a5f1-35f0547f0118>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_413c97b0-3ed1-495f-9b8b-e6a05ab67849>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_417c0620-2d10-4f86-8b29-bd3e5ff9d94a>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4ec7bf42-af13-47d3-ba77-44949c448324>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_57a04e98-15b8-4830-8239-f5a1b227245b>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_597dcd02-e37d-44d3-b712-6ca4502009b9>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5fcf2fc6-e263-4b7d-9918-3dde1844c19a>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_67944c30-be01-4c3e-9071-12953ffdde95>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7423e956-03b7-415b-b62d-930efca8c478>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_77d6fdf9-2c96-4c7b-ac77-5828e86a0126>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_863e51df-b0bc-4237-a509-a15b8f68b2f8>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_92be8a81-39d0-47a1-a605-b8995414dc13>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_946f4160-3bc4-42d0-b2ab-e9186a07fa82>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_b6db544c-5d47-4850-9758-cf9c4d6b923c>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_bac62967-d7e5-4acf-9088-0338d2f6b246>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c1daac36-0235-47d5-8ef2-da0b42b7c844>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d90048a2-f6f5-47b4-a609-c1673d5052b4>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_eabb5b02-5b2f-455b-b12f-ddb624397f4d>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_f0bd441f-a9bb-4420-bdbc-b53563853014>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_f475fa33-2902-4fc6-9b81-1166aa3057cf>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ffaa6048-5520-42a9-b902-23b39cd72f18> ;
-    default1:trailer twssd:Stream_on_HBO_Max_for_a_Limited_Time,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> ;
-    default1:url <https://www.imdb.com/title/tt7126948>,
-        <https://www.metacritic.com/movie/wonder-woman-1984>,
-        <https://www.rottentomatoes.com/m/wonder_woman_1984> ;
-    owl:sameAs <https://www.ecartelera.com/peliculas/wonder-woman-1984> .
-
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> a default1:VideoObject,
         owl:NamedIndividual ;
     default1:description "Video Clip of Wonder Woman 1984" ;
@@ -813,38 +812,38 @@ twssd:film-authority.com a default1:Organization,
     default1:name "film-authority.com" ;
     default1:url <https://www.rottentomatoes.com/source-3904> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_60898526-c7c0-4f5e-a19e-2ada85f1b422> a default1:AggregateRating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_4b5f577e-6934-4a12-8dec-32a2a64135af> a default1:AggregateRating,
         owl:NamedIndividual ;
     default1:bestRating "10.0" ;
     default1:ratingCount 198912 ;
     default1:ratingValue "5.4" ;
     default1:worstRating "1.0" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_84184100-0257-4db9-8ac8-1790c2252a48> a default1:AggregateRating,
-        owl:NamedIndividual ;
-    default1:bestRating "10" ;
-    default1:ratingCount "20" ;
-    default1:ratingValue "7,6" ;
-    default1:worstRating "0" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_ab1398c2-983c-42ba-bb6f-bc7a9272d804> a default1:AggregateRating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_b20c1863-9ba5-45e0-b9c0-87f135e61330> a default1:AggregateRating,
         owl:NamedIndividual ;
     default1:bestRating "100" ;
     default1:ratingCount "57" ;
     default1:ratingValue "60" ;
     default1:worstRating "0" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_716fe4e4-eae9-4210-8676-99f8daa04cc4> a default1:Clip,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_d785a0fc-35ab-4b3e-bd32-a25692adface> a default1:AggregateRating,
+        owl:NamedIndividual ;
+    default1:bestRating "10" ;
+    default1:ratingCount "20" ;
+    default1:ratingValue "7,6" ;
+    default1:worstRating "0" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_09def2c6-f476-428f-ba1a-770a3ddd447b> a default1:Clip,
         owl:NamedIndividual ;
     default1:description "trailer" ;
-    default1:potentialAction <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_5c74e279-d5fc-4a23-8af7-ba883228a1a6> ;
+    default1:potentialAction <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_2224d8d9-32bc-4740-8087-bad61363f4aa> ;
     default1:timeRequired "PT2M24S" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_6521baf0-64c1-42a3-b34e-5e295bfc56e1> a default1:CreativeWork,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_d4454e24-0430-4614-8970-3fb5e7962792> a default1:CreativeWork,
         owl:NamedIndividual ;
     default1:url <https://www.imdb.com/title/tt7126948> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_c1f0d33a-0cb0-4591-832d-9adf03f1af1a> a default1:EntryPoint,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_c0f3a710-ac60-47b6-bdbc-43a81c859d10> a default1:EntryPoint,
         owl:NamedIndividual ;
     default1:actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
         "http://schema.org/DesktopWebPlatform",
@@ -853,419 +852,444 @@ twssd:film-authority.com a default1:Organization,
     default1:inLanguage "es" ;
     default1:urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_c7662c53-95f0-45f2-a414-e88955af58cb> a default1:ImageObject,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_6a668d70-e442-4c55-8dbc-6e9e6f09d9ee> a default1:ImageObject,
         owl:NamedIndividual ;
     default1:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_d3fcb9b1-83e0-45f5-8d74-8e66d9c8aa3c> a default1:ImageObject,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_8ea5df68-0d11-4134-87a6-62c1e49243b7> a default1:ImageObject,
         owl:NamedIndividual ;
     default1:contentUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_6e7cb834-0adf-424b-89ca-40008fa46814> a default1:Offer,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_6123c98f-94f8-41ba-8fc4-49f959490399> a default1:Offer,
         owl:NamedIndividual ;
     default1:availabilityStarts "2019-12-08 22:30:37"^^default1:Date ;
     default1:category "free" ;
     default1:eligibleRegion twssd:ES .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_051456fa-1f51-42d4-b7ba-d106014c2831> a default1:Organization,
-        owl:NamedIndividual ;
-    default1:url <https://www.imdb.com/company/co0038332> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_2c6d40f1-804e-47de-aa82-94241a84efe2> a default1:Organization,
-        owl:NamedIndividual ;
-    default1:url <https://www.imdb.com/company/co0002663> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_be78dccf-8859-4808-8fb8-9a4c22f233eb> a default1:Organization,
-        owl:NamedIndividual ;
-    default1:url <https://www.imdb.com/company/co0728674> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_c6ec6008-5826-4f26-9387-9bf6772b0675> a default1:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_2ad98d05-5d0f-401d-9db2-3f4c60891ae4> a default1:Organization,
         owl:NamedIndividual ;
     default1:url <https://www.imdb.com/company/co0283444> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_cb766855-f9d0-4f85-9b46-5e747215a302> a default1:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_33148b2b-5d27-415d-b96a-7ba6f562349e> a default1:Organization,
         owl:NamedIndividual ;
     default1:url <https://www.imdb.com/company/co0028338> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_1309008e-ffa3-4f84-9b54-078412879491> a default1:PublicationEvent,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a6b67a47-ca5e-4409-b06e-f08de4465973> a default1:Organization,
+        owl:NamedIndividual ;
+    default1:url <https://www.imdb.com/company/co0002663> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_bb8f08fb-98d8-4d5b-8f8f-6b5a732bbe39> a default1:Organization,
+        owl:NamedIndividual ;
+    default1:url <https://www.imdb.com/company/co0038332> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_f78e8728-891b-4289-ab80-1fdb7a004f46> a default1:Organization,
+        owl:NamedIndividual ;
+    default1:url <https://www.imdb.com/company/co0728674> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_1c915aad-8895-4804-9a49-1427ce6ee40c> a default1:PublicationEvent,
         owl:NamedIndividual ;
     default1:location twssd:ES ;
     default1:startDate "2020-12-18"^^default1:Date .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_022d8dbb-5ce4-4441-981f-ef444ed6a0e1> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0286dd5a-ce97-49d6-a155-f465826d700d> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_27bf5599-e858-4276-ab25-518285c0a776> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue 1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_3451ff28-f16a-4e3a-81d5-ecbe2769c3ed> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue 1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_34e11d13-c9e4-4238-bea6-ef314a8a4409> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue 1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_46108ad6-3dd7-411e-9ec7-490b761ee68a> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0a399801-3f51-4283-85bb-cf13c24d9f40> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue -1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_47374f22-209d-4c47-9e0c-3ef3e5ae52f2> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0b74042a-7709-4139-9b7f-0824a317b85d> a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0feb4e2c-dd0e-4c46-84d5-1d235e8ce2e2> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue -1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_4cae8ff6-12aa-42a0-9975-03087e132056> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_1bfb22cf-9c76-4446-ace6-46ded306d143> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_524d9330-03b9-43f3-96ca-27e20ad7df76> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue 1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6a31f6cb-bbd2-49cf-89b9-0e1863a319db> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue 1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6dc8eab9-5708-4754-97eb-d71a62dff9ff> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue 1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_7054330f-410a-48c9-94e1-463ee64e6a49> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2428f8ca-239c-41ac-b53c-998bd9a4f749> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue -1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_70e32b13-25a3-4fe3-b37d-1a889104e8c5> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_3152e0e1-e2e9-47c5-8944-352c7c2e363e> a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_374d87dd-f50b-437a-84a9-9711b8110bac> a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_40e8125c-da42-4cf9-950e-adb0c41a2c88> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_74811db9-dc06-45bc-bd9a-f16f0e93531e> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_52e97cfd-3fe3-419d-a62c-820b02808a9b> a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_584c203c-7b65-4933-8e1a-c330a1c0f8cb> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "10" ;
     default1:ratingValue "5" ;
     default1:worstRating "1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8b211700-a4ad-47c0-a79b-fb67150929ec> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue -1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8caeb675-0922-4f77-9e0e-eb36e9eae94c> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_5efdb105-ddaf-4651-a3c2-8dda32890de0> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a05f32df-b8df-4f7c-b052-f6b79ca31fcd> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue -1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c6befde4-7100-4968-a1dd-3439093130eb> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue -1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c90b4276-a189-4dfe-8b6b-9fec16d2f25d> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue -1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d5c18daf-050c-424c-8974-18a9fb201d4e> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue -1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_dd4f808c-117f-4d33-a974-e2b597cc4797> a default1:Rating,
-        owl:NamedIndividual ;
-    default1:bestRating "1" ;
-    default1:ratingValue -1 ;
-    default1:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_df612ca0-02b8-4a54-a26c-09ac56af009a> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_60516177-5ad2-46f8-80f5-4c4486de21d1> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e8004437-f6e5-46eb-a44c-3049ab417b7d> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_80037618-585f-49ab-8a2c-70550ac47f08> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_eab566cf-a4aa-4bb6-b578-7704aec0e202> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8c2f61b1-93cb-4cc4-ba3a-7d0724536cf5> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_edc804ca-5a5a-4f22-91d6-7f6c6d1eb706> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8dd06db1-ff80-47e9-9fe8-586f57960ac3> a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_9698a6dc-1d25-46c1-bbfb-e4558a761b28> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f63ba1ef-f638-4636-bdb7-919870fc9b7f> a default1:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_9ff8b472-56d8-48fe-98fb-d9fa3791c04b> a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a4df5d87-e2d0-483b-9521-b7ba88bbede2> a default1:Rating,
         owl:NamedIndividual ;
     default1:bestRating "1" ;
     default1:ratingValue 1 ;
     default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0dc41108-123c-4155-83b5-8ab10a423b68> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_b76d199c-abca-4cb8-8424-8e1eaa2e1d6a> a default1:Rating,
         owl:NamedIndividual ;
-    default1:author twssd:Eric_Marchen ;
-    default1:dateCreated "2021-02-17T02:36:51-08:00"^^default1:Date ;
-    default1:publisher twssd:Untitled_Movie_Podcast ;
-    default1:reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c6befde4-7100-4968-a1dd-3439093130eb> ;
-    default1:url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> .
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_2d196213-f652-4a28-a7b7-b6f09a2b4680> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c0cfa141-473d-4336-8446-2b284a9e8da9> a default1:Rating,
         owl:NamedIndividual ;
-    default1:author twssd:John_McDonald ;
-    default1:dateCreated "2021-01-31T18:14:33-08:00"^^default1:Date ;
-    default1:publisher twssd:Australian_Financial_Review ;
-    default1:reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c90b4276-a189-4dfe-8b6b-9fec16d2f25d> ;
-    default1:url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984> .
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3004eead-6c80-4ad9-a494-d0b22fed9922> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d37057c3-03f6-4318-9578-b47862836f97> a default1:Rating,
         owl:NamedIndividual ;
-    default1:author twssd:Jake_Wilson ;
-    default1:dateCreated "2020-12-28T07:49:06-08:00"^^default1:Date ;
-    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> ;
-    default1:reviewBody "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_524d9330-03b9-43f3-96ca-27e20ad7df76> ;
-    default1:url <https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html> .
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3088f636-cb39-4518-a5f1-35f0547f0118> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_dd3cbb9c-5158-4056-80ff-28d6131f79de> a default1:Rating,
         owl:NamedIndividual ;
-    default1:author twssd:Mark_Meszoros ;
-    default1:dateCreated "2021-02-13T23:57:56-08:00"^^default1:Date ;
-    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> ;
-    default1:reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_3451ff28-f16a-4e3a-81d5-ecbe2769c3ed> ;
-    default1:url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> .
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_413c97b0-3ed1-495f-9b8b-e6a05ab67849> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f041eef2-8d0e-4912-872e-e063fe777ad9> a default1:Rating,
         owl:NamedIndividual ;
-    default1:author twssd:Andrew_Galdi ;
-    default1:dateCreated "2021-03-11T06:02:25-08:00"^^default1:Date ;
-    default1:publisher twssd:Movie_Bitches ;
-    default1:reviewBody "There were just such gross failures of filmmaking..." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_47374f22-209d-4c47-9e0c-3ef3e5ae52f2> ;
-    default1:url <https://youtu.be/75nDMuZMfLs> .
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_417c0620-2d10-4f86-8b29-bd3e5ff9d94a> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_fedf4fe4-b2c1-4d35-a3e7-5d3dfde8d51c> a default1:Rating,
         owl:NamedIndividual ;
-    default1:author twssd:Sarah_Ward ;
-    default1:dateCreated "2021-02-21T08:36:54-08:00"^^default1:Date ;
-    default1:publisher twssd:Concrete_Playground ;
-    default1:reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_46108ad6-3dd7-411e-9ec7-490b761ee68a> ;
-    default1:url <https://concreteplayground.com/sydney/event/wonder-woman-1984> .
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4ec7bf42-af13-47d3-ba77-44949c448324> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Amy_Nicholson ;
-    default1:dateCreated "2021-01-04T03:37:14-08:00"^^default1:Date ;
-    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> ;
-    default1:reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6a31f6cb-bbd2-49cf-89b9-0e1863a319db> ;
-    default1:url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_57a04e98-15b8-4830-8239-f5a1b227245b> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Dan_Tabor ;
-    default1:dateCreated "2021-02-05T01:55:00-08:00"^^default1:Date ;
-    default1:publisher twssd:Phawker ;
-    default1:reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_edc804ca-5a5a-4f22-91d6-7f6c6d1eb706> ;
-    default1:url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_597dcd02-e37d-44d3-b712-6ca4502009b9> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Jennifer_Ouellette ;
-    default1:dateCreated "2021-02-11T02:38:41-08:00"^^default1:Date ;
-    default1:publisher twssd:Ars_Technica ;
-    default1:reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_34e11d13-c9e4-4238-bea6-ef314a8a4409> ;
-    default1:url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5fcf2fc6-e263-4b7d-9918-3dde1844c19a> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Rafer_Guzman ;
-    default1:dateCreated "2021-01-04T04:59:29-08:00"^^default1:Date ;
-    default1:publisher twssd:Newsday ;
-    default1:reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_df612ca0-02b8-4a54-a26c-09ac56af009a> ;
-    default1:url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_67944c30-be01-4c3e-9071-12953ffdde95> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Tony_Medley ;
-    default1:dateCreated "2021-02-22T06:02:11-08:00"^^default1:Date ;
-    default1:publisher twssd:The_Larchmont_Chronicle ;
-    default1:reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a05f32df-b8df-4f7c-b052-f6b79ca31fcd> ;
-    default1:url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7423e956-03b7-415b-b62d-930efca8c478> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Kevin_Carr ;
-    default1:dateCreated "2021-04-03T14:11:59-07:00"^^default1:Date ;
-    default1:publisher twssd:Fat_Guys_at_the_Movies ;
-    default1:reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f63ba1ef-f638-4636-bdb7-919870fc9b7f> ;
-    default1:url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_77d6fdf9-2c96-4c7b-ac77-5828e86a0126> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0daf7deb-5d47-4f58-ad50-8e6bd94784ff> a default1:Review,
         owl:NamedIndividual ;
     default1:author twssd:David_Sims ;
     default1:dateCreated "2020-12-28T07:45:33-08:00"^^default1:Date ;
     default1:publisher twssd:The_Atlantic ;
     default1:reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_eab566cf-a4aa-4bb6-b578-7704aec0e202> ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_60516177-5ad2-46f8-80f5-4c4486de21d1> ;
     default1:url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_863e51df-b0bc-4237-a509-a15b8f68b2f8> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0eb72284-1060-487b-84bb-f1fdb0bc69cb> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Sarah_Ward ;
+    default1:dateCreated "2021-02-21T08:36:54-08:00"^^default1:Date ;
+    default1:publisher twssd:Concrete_Playground ;
+    default1:reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0feb4e2c-dd0e-4c46-84d5-1d235e8ce2e2> ;
+    default1:url <https://concreteplayground.com/sydney/event/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_1352c23e-ecd1-4fae-89db-1c33ff7c02d9> a default1:Review,
         owl:NamedIndividual ;
     default1:author twssd:Eddie_Harrison ;
     default1:dateCreated "2021-02-07T19:57:42-08:00"^^default1:Date ;
     default1:publisher twssd:film-authority.com ;
     default1:reviewBody "...a joyless dud, a bucket of sludge when we're crying out for a glass of water..." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d5c18daf-050c-424c-8974-18a9fb201d4e> ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0a399801-3f51-4283-85bb-cf13c24d9f40> ;
     default1:url <https://film-authority.com/2021/01/11/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_92be8a81-39d0-47a1-a605-b8995414dc13> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Ian_Simmons ;
-    default1:dateCreated "2021-02-05T19:46:31-08:00"^^default1:Date ;
-    default1:publisher twssd:Kicking_the_Seat ;
-    default1:reviewBody "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8caeb675-0922-4f77-9e0e-eb36e9eae94c> ;
-    default1:url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_946f4160-3bc4-42d0-b2ab-e9186a07fa82> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_166a12b3-c90a-496c-adb8-a6c8801afe84> a default1:Review,
         owl:NamedIndividual ;
     default1:author twssd:Matt_Neal ;
     default1:dateCreated "2021-01-31T17:01:54-08:00"^^default1:Date ;
     default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/ABC_Radio_%28Australia%29> ;
     default1:reviewBody " After such a stirring debut, it's pains me to say that Wonder Woman 1984 isn't that wonderful." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_dd4f808c-117f-4d33-a974-e2b597cc4797> ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_b76d199c-abca-4cb8-8424-8e1eaa2e1d6a> ;
     default1:url <https://movies8mylife.blogspot.com/2021/02/wonder-woman-1984.html> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_b6db544c-5d47-4850-9758-cf9c4d6b923c> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_1d04527d-01e1-4877-98d6-3790f81c529c> a default1:Review,
         owl:NamedIndividual ;
-    default1:author twssd:Brian_Gill ;
-    default1:dateCreated "2021-02-10T06:48:34-08:00"^^default1:Date ;
-    default1:publisher twssd:Mad_About_Movies_Podcast ;
-    default1:reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_022d8dbb-5ce4-4441-981f-ef444ed6a0e1> ;
-    default1:url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> .
+    default1:author twssd:Andrew_Galdi ;
+    default1:dateCreated "2021-03-11T06:02:25-08:00"^^default1:Date ;
+    default1:publisher twssd:Movie_Bitches ;
+    default1:reviewBody "There were just such gross failures of filmmaking..." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2428f8ca-239c-41ac-b53c-998bd9a4f749> ;
+    default1:url <https://youtu.be/75nDMuZMfLs> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_bac62967-d7e5-4acf-9088-0338d2f6b246> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_251b033c-1bbf-411e-909a-34063b8aeb36> a default1:Review,
         owl:NamedIndividual ;
-    default1:author twssd:Valerie_Kalfrin ;
-    default1:dateCreated "2021-03-20T08:54:50-07:00"^^default1:Date ;
-    default1:publisher twssd:Their_Own_League ;
-    default1:reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_4cae8ff6-12aa-42a0-9975-03087e132056> ;
-    default1:url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984> .
+    default1:author twssd:Ian_Simmons ;
+    default1:dateCreated "2021-02-05T19:46:31-08:00"^^default1:Date ;
+    default1:publisher twssd:Kicking_the_Seat ;
+    default1:reviewBody "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_1bfb22cf-9c76-4446-ace6-46ded306d143> ;
+    default1:url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c1daac36-0235-47d5-8ef2-da0b42b7c844> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Sheri_Flanders ;
-    default1:dateCreated "2021-02-01T04:29:30-08:00"^^default1:Date ;
-    default1:publisher twssd:Chicago_Reader ;
-    default1:reviewBody "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e8004437-f6e5-46eb-a44c-3049ab417b7d> ;
-    default1:url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d90048a2-f6f5-47b4-a609-c1673d5052b4> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Stephen_Romei ;
-    default1:dateCreated "2020-12-29T12:09:48-08:00"^^default1:Date ;
-    default1:publisher twssd:The_Australian ;
-    default1:reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_27bf5599-e858-4276-ab25-518285c0a776> ;
-    default1:url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_eabb5b02-5b2f-455b-b12f-ddb624397f4d> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:Nina_Garin ;
-    default1:dateCreated "2021-03-01T08:14:02-08:00"^^default1:Date ;
-    default1:publisher twssd:San_Diego_Union-Tribune ;
-    default1:reviewBody "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. " ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_70e32b13-25a3-4fe3-b37d-1a889104e8c5> ;
-    default1:url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_f0bd441f-a9bb-4420-bdbc-b53563853014> a default1:Review,
-        owl:NamedIndividual ;
-    default1:author twssd:David_Bax ;
-    default1:dateCreated "2021-03-23T10:02:10-07:00"^^default1:Date ;
-    default1:publisher twssd:Battleship_Pretension ;
-    default1:reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6dc8eab9-5708-4754-97eb-d71a62dff9ff> ;
-    default1:url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_f475fa33-2902-4fc6-9b81-1166aa3057cf> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_28555c05-0038-4be3-9a67-562c34b7afb2> a default1:Review,
         owl:NamedIndividual ;
     default1:author twssd:Mark_Jackson ;
     default1:dateCreated "2021-02-02T10:00:09-08:00"^^default1:Date ;
     default1:publisher twssd:Epoch_Times ;
     default1:reviewBody "\"Wonder Woman\" (2017) was one of the best superhero movies ever made. It was idealistic, classy, aesthetically pleasing, and romantic, and should've kicked off a fabulous franchise. Unfortunately the sequel is a major letdown." ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_7054330f-410a-48c9-94e1-463ee64e6a49> ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_374d87dd-f50b-437a-84a9-9711b8110bac> ;
     default1:url <https://www.theepochtimes.com/film-review-wonder-woman-1984-a-sequel-less-wonderful_3667828.html> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ffaa6048-5520-42a9-b902-23b39cd72f18> a default1:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3defd7f9-61e8-4e02-93dc-3bc2086b568e> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:John_McDonald ;
+    default1:dateCreated "2021-01-31T18:14:33-08:00"^^default1:Date ;
+    default1:publisher twssd:Australian_Financial_Review ;
+    default1:reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c0cfa141-473d-4336-8446-2b284a9e8da9> ;
+    default1:url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4a089564-25a8-4546-9136-6136dea5e4f3> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Rafer_Guzman ;
+    default1:dateCreated "2021-01-04T04:59:29-08:00"^^default1:Date ;
+    default1:publisher twssd:Newsday ;
+    default1:reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d37057c3-03f6-4318-9578-b47862836f97> ;
+    default1:url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5112d715-4e0c-49c8-9a4c-59907509a5a5> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Stephen_Romei ;
+    default1:dateCreated "2020-12-29T12:09:48-08:00"^^default1:Date ;
+    default1:publisher twssd:The_Australian ;
+    default1:reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_52e97cfd-3fe3-419d-a62c-820b02808a9b> ;
+    default1:url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_531006af-bf79-4149-8b1d-3c2393d5bfb9> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Jake_Wilson ;
+    default1:dateCreated "2020-12-28T07:49:06-08:00"^^default1:Date ;
+    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> ;
+    default1:reviewBody "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_9698a6dc-1d25-46c1-bbfb-e4558a761b28> ;
+    default1:url <https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_54f604aa-b0a3-4396-9245-051cebba7fd0> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Eric_Marchen ;
+    default1:dateCreated "2021-02-17T02:36:51-08:00"^^default1:Date ;
+    default1:publisher twssd:Untitled_Movie_Podcast ;
+    default1:reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8dd06db1-ff80-47e9-9fe8-586f57960ac3> ;
+    default1:url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_64ed61ec-920f-4bad-967c-00091ccf8ec3> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Dan_Tabor ;
+    default1:dateCreated "2021-02-05T01:55:00-08:00"^^default1:Date ;
+    default1:publisher twssd:Phawker ;
+    default1:reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0286dd5a-ce97-49d6-a155-f465826d700d> ;
+    default1:url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_66a23d17-cba6-434a-874a-bc51124d7aea> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Nina_Garin ;
+    default1:dateCreated "2021-03-01T08:14:02-08:00"^^default1:Date ;
+    default1:publisher twssd:San_Diego_Union-Tribune ;
+    default1:reviewBody "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. " ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8c2f61b1-93cb-4cc4-ba3a-7d0724536cf5> ;
+    default1:url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6825b95a-8385-4daf-947c-6a0ac32fced4> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Sheri_Flanders ;
+    default1:dateCreated "2021-02-01T04:29:30-08:00"^^default1:Date ;
+    default1:publisher twssd:Chicago_Reader ;
+    default1:reviewBody "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_40e8125c-da42-4cf9-950e-adb0c41a2c88> ;
+    default1:url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_722eb0b9-7580-4acd-b21f-7b5a27a27b24> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Mark_Meszoros ;
+    default1:dateCreated "2021-02-13T23:57:56-08:00"^^default1:Date ;
+    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> ;
+    default1:reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_fedf4fe4-b2c1-4d35-a3e7-5d3dfde8d51c> ;
+    default1:url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_76f8c445-556d-4a60-abad-9fec8437fc4a> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Kevin_Carr ;
+    default1:dateCreated "2021-04-03T14:11:59-07:00"^^default1:Date ;
+    default1:publisher twssd:Fat_Guys_at_the_Movies ;
+    default1:reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f041eef2-8d0e-4912-872e-e063fe777ad9> ;
+    default1:url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7df39bf9-c204-4de0-a3b0-f16add51919b> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Valerie_Kalfrin ;
+    default1:dateCreated "2021-03-20T08:54:50-07:00"^^default1:Date ;
+    default1:publisher twssd:Their_Own_League ;
+    default1:reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_5efdb105-ddaf-4651-a3c2-8dda32890de0> ;
+    default1:url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_813bf49d-c391-40e6-92ab-a1e65b3a0b4b> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Brian_Gill ;
+    default1:dateCreated "2021-02-10T06:48:34-08:00"^^default1:Date ;
+    default1:publisher twssd:Mad_About_Movies_Podcast ;
+    default1:reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_80037618-585f-49ab-8a2c-70550ac47f08> ;
+    default1:url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_a22d340c-cc29-4930-8851-81bd0bc6df62> a default1:Review,
         owl:NamedIndividual ;
     default1:author twssd:Avaryl_Halley ;
     default1:dateCreated "2021-03-11T05:51:39-08:00"^^default1:Date ;
     default1:publisher twssd:Movie_Bitches ;
     default1:reviewBody "At least \"Justice League\" had at the decency to be short" ;
-    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8b211700-a4ad-47c0-a79b-fb67150929ec> ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_3152e0e1-e2e9-47c5-8944-352c7c2e363e> ;
     default1:url <https://youtu.be/75nDMuZMfLs> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_5c74e279-d5fc-4a23-8af7-ba883228a1a6> a default1:WatchAction,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_a6a50db6-c9c5-463e-9839-fa0254947dcf> a default1:Review,
         owl:NamedIndividual ;
-    default1:expectsAcceptanceOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_6e7cb834-0adf-424b-89ca-40008fa46814> ;
-    default1:target <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_c1f0d33a-0cb0-4591-832d-9adf03f1af1a> .
+    default1:author twssd:Jennifer_Ouellette ;
+    default1:dateCreated "2021-02-11T02:38:41-08:00"^^default1:Date ;
+    default1:publisher twssd:Ars_Technica ;
+    default1:reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a4df5d87-e2d0-483b-9521-b7ba88bbede2> ;
+    default1:url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d344d931-67c2-4e21-b3fe-86f645638f29> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:David_Bax ;
+    default1:dateCreated "2021-03-23T10:02:10-07:00"^^default1:Date ;
+    default1:publisher twssd:Battleship_Pretension ;
+    default1:reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0b74042a-7709-4139-9b7f-0824a317b85d> ;
+    default1:url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d3b04770-bb12-4b0d-b937-73cc0194ac7b> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Amy_Nicholson ;
+    default1:dateCreated "2021-01-04T03:37:14-08:00"^^default1:Date ;
+    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> ;
+    default1:reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_dd3cbb9c-5158-4056-80ff-28d6131f79de> ;
+    default1:url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_f123c60a-4a26-4ab2-91c5-84dd0383371f> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Tony_Medley ;
+    default1:dateCreated "2021-02-22T06:02:11-08:00"^^default1:Date ;
+    default1:publisher twssd:The_Larchmont_Chronicle ;
+    default1:reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
+    default1:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_9ff8b472-56d8-48fe-98fb-d9fa3791c04b> ;
+    default1:url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_2224d8d9-32bc-4740-8087-bad61363f4aa> a default1:WatchAction,
+        owl:NamedIndividual ;
+    default1:expectsAcceptanceOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_6123c98f-94f8-41ba-8fc4-49f959490399> ;
+    default1:target <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_c0f3a710-ac60-47b6-bdbc-43a81c859d10> .
 
 twssd:jayg_58 a default1:Person,
         owl:NamedIndividual ;
     default1:name "jayg_58" .
+
+<https://www.ecartelera.com/peliculas/wonder-woman-1984> a default1:Movie,
+        owl:NamedIndividual ;
+    default1:actor twssd:Chris_Pine,
+        twssd:Connie_Nielsen,
+        twssd:Gal_Gadot,
+        twssd:Kristen_Wiig,
+        twssd:Pedro_Pascal,
+        twssd:Robin_Wright ;
+    default1:aggregateRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_d785a0fc-35ab-4b3e-bd32-a25692adface> ;
+    default1:countryOfOrigin "EE.UU." ;
+    default1:description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
+\r
+La trama de esta película es una gran misterio. El guión está basado en una historia escrita por Patty Jenkins, Geoff Johns (&#39;The Flash&#39;, &#39;Aquaman&#39;) y Dave Callaham (&#39;Zombieland: Mata y remata&#39;). Se espera que tenga protagonismo la tecnología y la vigilancia, teniendo en cuenta el título que hace referencia a la distopía de &#39;1984&#39; de George Orwell.""" ;
+    default1:director twssd:Patty_Jenkins ;
+    default1:duration "PT2H31M" ;
+    default1:genre "Acción",
+        "Aventura",
+        "Fantasía" ;
+    default1:hasPart <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_09def2c6-f476-428f-ba1a-770a3ddd447b> ;
+    default1:image <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_6a668d70-e442-4c55-8dbc-6e9e6f09d9ee> ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984> ;
+    default1:name "Wonder Woman 1984" ;
+    default1:productionCompany twssd:Warner_Bros._Pictures ;
+    default1:releasedEvent <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_1c915aad-8895-4804-9a49-1427ce6ee40c> .
 
 default1:Clip a owl:Class ;
     rdfs:subClassOf default1:CreativeWork .
@@ -1283,32 +1307,6 @@ twssd:Movie_Bitches a default1:Organization,
         owl:NamedIndividual ;
     default1:name "Movie Bitches" ;
     default1:url <https://www.rottentomatoes.com/source-3639> .
-
-<https://www.ecartelera.com/peliculas/wonder-woman-1984> a default1:Movie,
-        owl:NamedIndividual ;
-    default1:actor twssd:Chris_Pine,
-        twssd:Connie_Nielsen,
-        twssd:Gal_Gadot,
-        twssd:Kristen_Wiig,
-        twssd:Pedro_Pascal,
-        twssd:Robin_Wright ;
-    default1:aggregateRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_84184100-0257-4db9-8ac8-1790c2252a48> ;
-    default1:countryOfOrigin "EE.UU." ;
-    default1:description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
-\r
-La trama de esta película es una gran misterio. El guión está basado en una historia escrita por Patty Jenkins, Geoff Johns (&#39;The Flash&#39;, &#39;Aquaman&#39;) y Dave Callaham (&#39;Zombieland: Mata y remata&#39;). Se espera que tenga protagonismo la tecnología y la vigilancia, teniendo en cuenta el título que hace referencia a la distopía de &#39;1984&#39; de George Orwell.""" ;
-    default1:director twssd:Patty_Jenkins ;
-    default1:duration "PT2H31M" ;
-    default1:genre "Acción",
-        "Aventura",
-        "Fantasía" ;
-    default1:hasPart <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_716fe4e4-eae9-4210-8676-99f8daa04cc4> ;
-    default1:image <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_c7662c53-95f0-45f2-a414-e88955af58cb> ;
-    default1:mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984> ;
-    default1:name "Wonder Woman 1984" ;
-    default1:productionCompany twssd:Warner_Bros._Pictures ;
-    default1:releasedEvent <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_1309008e-ffa3-4f84-9b54-078412879491> ;
-    owl:sameAs twssd:Wonder_Woman_1984 .
 
 default1:Action a owl:Class .
 

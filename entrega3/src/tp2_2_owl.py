@@ -195,8 +195,7 @@ if __name__ == '__main__':
     to_lean_graph(data_namespace, unionGraph)
     add_named_individuals(unionGraph)
 
-    mark_as_equal(unionGraph)
-
+    #mark_as_equal(unionGraph)
 
     ''' busco la ontología definida en protegé y le hago merge con los datos de los individuals arriba procesados '''
     gontology = Graph()
