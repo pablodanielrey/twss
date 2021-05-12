@@ -75,6 +75,7 @@ def add_named_individuals(g:Graph):
     for s,p,o in g.triples((None, RDF.type, None)):
         g.add((s,RDF.type, OWL.NamedIndividual))    
 
+"""
 def mark_as_equal(g:Graph):
     '''
         analizo el grafo para ver si puedo identificar los recursos iguales.
@@ -99,7 +100,7 @@ def mark_as_equal(g:Graph):
                     iri2 = data[k][n][i+1]
                     g.add((iri, OWL.sameAs, iri2))
                     g.add((iri2, OWL.sameAs, iri))
-
+"""
 
 """
 /////////////////////////////////////////////////////////////////////////////////////////////

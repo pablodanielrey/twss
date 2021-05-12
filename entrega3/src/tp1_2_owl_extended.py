@@ -97,7 +97,7 @@ if __name__ == '__main__':
             g.add((dmovie, s.inLanguage, Literal(movie['LANGUAGE'])))
 
         g.add((dmovie, s.duration, Literal(movie['DURATION'])))
-        g.add((dmovie, s.text, Literal(movie['SYNOPSIS'])))
+        g.add((dmovie, s.description, Literal(movie['SYNOPSIS'])))
         g.add((dmovie, s.contentRating, Literal(movie['RATING'])))
         if 'WEB' in movie and movie['WEB'] != 'No disponible':
             g.add((dmovie, RDFS.seeAlso, Literal(movie['WEB'])))

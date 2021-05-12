@@ -1,0 +1,203 @@
+Buenas!!
+existen 2 versiones de la solución.
+1 - realizando un merge de ontologías
+2 - intentando extender ontologías
+
+
+la motivación fue a medida que iba investigando realizar ontologías y desarrollando los scripts, me surgió de forma natural.
+la version 1 no me convenció, no se si es problema de protegé que no me muestra correctamente algunas cosas o que yo estoy realizando el merge de forma incorrecta.
+si bien traté de seguir las reglas del libro, y lo que investigué por internet.
+como solución mas aceptable realicé la versión 2, donde con una simple extensión a una ontología existente (tambien creada por mi basado en schema.org), se podían incluir las clases
+y propieades que necesitaba.
+
+todo el desarrollo está documentado en notas_random.txt
+en notas.txt documento los problemas principales que me encontré e identico en el desarrollo.
+
+algo a tener en cuenta es que las ontologías las guarde en owl y los fuentes en src
+asi que deben estar ubicados como estructuro en el tar.gz ya que los scripts buscan directorios para atrás.
+y ejecutados desde la raiz de todo el proyecto.
+
+
+
+las 2 soluciones toman los datos fuente de archivos json almacenados, para evitar problemas de internet.
+pero es muy simple modificarlos para obtener directamente los jsons-ld de las urls sin pasar por un archivo intermedio.
+el tp2_2_owl.py las primeras tienen comentado eso mismo.
+
+los archivos utilitarios que descargan los json y los convierten a turttle son:
+
+utils/download_jsons.py <--- descarga los jsons y los almacena.
+utils/parse_jsons.py    <--- parsea los jsons y los almacena en formato turtle.
+
+dentro de : 
+data/tp2/ s encuentran esos archivos ya descargados.
+
+-rw-r--r-- 1 pablo pablo 5,2K may 10 21:22 https___www.ecartelera.com_peliculas_wonder-woman-1984.json
+-rw-r--r-- 1 pablo pablo 9,3K may 11 13:08 https___www.ecartelera.com_peliculas_wonder-woman-1984.json-ld
+-rw-r--r-- 1 pablo pablo 4,8K may 11 21:39 https___www.ecartelera.com_peliculas_wonder-woman-1984.ttl
+-rw-r--r-- 1 pablo pablo 5,3K may 10 21:22 https___www.imdb.com_title_tt7126948_.json
+-rw-r--r-- 1 pablo pablo  12K may 10 21:52 https___www.imdb.com_title_tt7126948_.json-ld
+-rw-r--r-- 1 pablo pablo 4,9K may 10 21:52 https___www.imdb.com_title_tt7126948_.ttl
+-rw-r--r-- 1 pablo pablo 9,2K may 10 21:22 https___www.metacritic.com_movie_wonder-woman-1984.json
+-rw-r--r-- 1 pablo pablo  20K may 10 21:52 https___www.metacritic.com_movie_wonder-woman-1984.json-ld
+-rw-r--r-- 1 pablo pablo 7,7K may 10 21:52 https___www.metacritic.com_movie_wonder-woman-1984.ttl
+-rw-r--r-- 1 pablo pablo  29K may 10 21:22 https___www.rottentomatoes.com_m_wonder_woman_1984.json
+-rw-r--r-- 1 pablo pablo  56K may 10 21:50 https___www.rottentomatoes.com_m_wonder_woman_1984.json-ld
+-rw-r--r-- 1 pablo pablo  26K may 10 21:50 https___www.rottentomatoes.com_m_wonder_woman_1984.ttl
+
+las versiones json-ld son solo para jugar un poco con los formatos pero no es necesario para la solución.
+los .json son los json-ld descargados de cada una de las páginas.
+los .ttl son los turtle generados a partir de los .json
+
+junto con:
+
+data/tp1/merged_tp1.json 
+
+se usan como fuente de datos para los demás scripts.
+
+
+----------------------
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----------------------
+
+La solución 1 se compone de:
+
+owl/twss_schema.ttl         <--- solucion tp2
+owl/twss_simple.ttl         <--- solucion tp1
+owl/twss.ttl                <--- integra las 2 ontologias anteriores.
+_
+src/tp1_2_owl.py
+src/tp2_2_owl.py
+src/merger.py
+
+la forma de ejecución:
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega3$ python3 src/tp1_2_owl.py 
+Cargando datos del tp1
+Procesando película : Raya Y El Ultimo Dragon
+Procesando película : Los Intrusos
+Procesando película : La Fabrica De Sueños
+Procesando película : Tom Y Jerry
+Procesando película : Scooby!
+Procesando película : El Secreto Del Bosque
+Procesando película : Trolls 2: World Tour
+Procesando película : Godzilla Vs. Kong
+Procesando película : Habitacion 212
+Procesando película : Tenet
+Procesando película : Caos: El Inicio
+Procesando película : Hermosa Venganza
+Procesando película : La Noche Magica
+Procesando película : Demon Slayer Mugen Train
+Procesando película : Los Nuevos Mutantes
+Procesando película : El silencio del cazador
+Procesando película : Mujer Maravilla 1984
+Procesando película : Tom y Jerry
+Procesando película : Trolls 2: Gira mundial
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega3$ python3 src/tp2_2_owl.py 
+Descargando información de : https://www.ecartelera.com/peliculas/wonder-woman-1984
+Descargando información de : https://www.imdb.com/title/tt7126948/
+Descargando información de : https://www.metacritic.com/movie/wonder-woman-1984
+Descargando información de : https://www.rottentomatoes.com/m/wonder_woman_1984
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega3$ python3 src/merger.py 
+
+el resultado es:
+
+merged_tp1.ttl              <----------- con los datos de tp1
+merged_tp2.ttl              <----------- con los datos de tp2
+merged_final.ttl            <----------- con los datos de las 2 ontologías mezclados y usando equivalentProperty y equivalentClass
+
+tengo algunas dudas con la representación que muestra protegé sobre esa solución.
+ej:
+
+twssd:Wonder_Woman_1984 a schema:Movie,
+        owl:NamedIndividual,
+        twss:Movie ;
+    schema:actor twssd:Alex_Delescu,
+        twssd:Amr_Waked,
+    ......
+    ....
+
+
+me la muestra ok dentro de la clase Movie que se encuentra directamente colgada de owl:Thing
+pero no por ejemplo:
+
+twssd:Los_Intrusos a owl:NamedIndividual,
+        twss:Movie ;
+    twss:actor twssd:Andrew_Ellis,
+        twssd:Ian_Kenny,
+        twssd:Jake_Curra
+
+dentro de schmea:Movie
+si bien las clases están anotadas como equivalentes!!.
+asumo que es algún tema de visualización de protegé.
+    
+
+----
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+----
+
+La solución 2.
+La implemente para analizar otra posibilidad de hacer merge de los datos.
+use la ontología definida en twss_schema.ttl  (que está basada en las clases de schema.org)
+y la extendí para adicionarle las clases que necesito para incluir los datos del tp1.
+esa extensión se encuentra dentro de : twss_schema_extended.ttl
+
+consta de los siguientes archivos:
+
+owl/twss_schema.ttl             <---- ontologia basado en schema.org  (solo con lo que necesitaba)
+owl/twss_schema_extended.ttl    <---- ontologia extendida para abarcar tp1
+
+src/tp1_2_owl_extended.py
+src/tp2_2_owl.py
+src/merger_v2.py
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega3$ python3 src/tp1_2_owl_extended.py 
+Cargando datos del tp1
+Procesando película : Raya Y El Ultimo Dragon
+Procesando película : Los Intrusos
+Procesando película : La Fabrica De Sueños
+Procesando película : Tom Y Jerry
+Procesando película : Scooby!
+Procesando película : El Secreto Del Bosque
+Procesando película : Trolls 2: World Tour
+Procesando película : Godzilla Vs. Kong
+Procesando película : Habitacion 212
+Procesando película : Tenet
+Procesando película : Caos: El Inicio
+Procesando película : Hermosa Venganza
+Procesando película : La Noche Magica
+Procesando película : Demon Slayer Mugen Train
+Procesando película : Los Nuevos Mutantes
+Procesando película : El silencio del cazador
+Procesando película : Mujer Maravilla 1984
+Procesando película : Tom y Jerry
+Procesando película : Trolls 2: Gira mundial
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega3$ python3 src/tp2_2_owl.py 
+Descargando información de : https://www.ecartelera.com/peliculas/wonder-woman-1984
+Descargando información de : https://www.imdb.com/title/tt7126948/
+Descargando información de : https://www.metacritic.com/movie/wonder-woman-1984
+Descargando información de : https://www.rottentomatoes.com/m/wonder_woman_1984
+
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega3$ python3 src/merger_v2.py 
+
+
+
+el resultado es:
+
+data/merged_tp1_extended.ttl        <--- individuals de tp1
+data/merged_tp2.ttl                 <--- individuals de tp2.
+data/merged_final_v2.ttl            <--- individuals de todo.
+
+resultado:
+aca en vez de poner las ontologías en el archivo final.
+solo pongo la extendida e incluyo en su version web a la original.
+me pareció interesante contrastarlo con la solución 1. protegé me lo muestra correctamente.
+
+veo ok los individuals y sus propieades.

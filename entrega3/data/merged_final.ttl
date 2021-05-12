@@ -43,6 +43,10 @@ schema:category a owl:DatatypeProperty ;
     rdfs:domain schema:Offer ;
     rdfs:range xsd:string .
 
+schema:character a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range xsd:string .
+
 schema:contentRating a owl:DatatypeProperty ;
     rdfs:domain schema:CreativeWork ;
     rdfs:range xsd:string .
@@ -215,56 +219,32 @@ schema:worstRating a owl:DatatypeProperty ;
     rdfs:domain schema:Rating ;
     rdfs:range xsd:float .
 
-twssd:show_001ae3da-83b7-4d37-abfd-d46912812e4b a owl:NamedIndividual,
+twssd:show_033bff5e-ed95-40f6-995f-b0e7b1b2aa0b a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_f7ee0a39-5304-406e-98db-60e4744e9d8e .
-
-twssd:show_017bff6a-ebfb-4935-b6c1-6acf8367f545 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_04f4db3e-ae28-42ba-a5f2-11ec2487351a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
     twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:45",
-        "18:15" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
+    twss:showTime "16:45",
+        "19:45" ;
+    twss:showsIn twssd:showroom_2ad28d7f-2d7e-420a-b6c2-5fffe591ca8d .
 
-twssd:show_07c6209c-04e1-4024-8bbd-cd73f9d21932 a owl:NamedIndividual,
+twssd:show_03c4e876-9e9e-4374-b35d-773683b39c32 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
+    twss:movie twssd:On_a_magical_night ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
+    twss:showTime "19:50" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
 
-twssd:show_07d55005-e29b-44a3-81de-cc9054da2c45 a owl:NamedIndividual,
+twssd:show_03e7f669-f798-4e36-925a-67debb43303f a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 .
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:20",
+        "15:40",
+        "18:00" ;
+    twss:showsIn twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 .
 
-twssd:show_08d6427e-e70e-412e-b3b9-e48a972b2e97 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
-
-twssd:show_08da6ea5-083c-4fba-8f31-0c5b8640a01e a owl:NamedIndividual,
+twssd:show_03ef2534-7b99-4865-a9db-ec8644b8727f a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Godzilla_vs._Kong ;
     twss:showLanguage "CASTELLANO" ;
@@ -273,498 +253,279 @@ twssd:show_08da6ea5-083c-4fba-8f31-0c5b8640a01e a owl:NamedIndividual,
         "18:00",
         "20:30",
         "23:00" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
+    twss:showsIn twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 .
 
-twssd:show_0a4e814a-30d0-4b5a-a5e4-510a746833ec a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
-
-twssd:show_1064fd2f-b919-4d48-b18d-9ccf507e3509 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_10a36919-5f2a-4069-89fb-23996f8b258d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
-
-twssd:show_119cc248-ffed-4b25-bb93-f566def5370c a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "22:15" ;
-    twss:showsIn twssd:showroom_e938c6c9-93d8-49cb-9b91-feaeb444c8b8 .
-
-twssd:show_15322464-fd57-40a9-b427-13a19dd75294 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
-
-twssd:show_1c26c917-c7b8-40ee-81e6-d07ffa3c1494 a owl:NamedIndividual,
+twssd:show_06908b98-1b15-4aa4-8c72-ed1f4a247b36 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Tom_and_Jerry ;
     twss:showFormat "2D" ;
     twss:showLanguage "Español" ;
     twss:showTime "16:10",
         "18:50" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
+    twss:showsIn twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 .
 
-twssd:show_1e4483a5-1b30-4ef7-9dd3-71098d92c49d a owl:NamedIndividual,
+twssd:show_0974ad1e-3b4d-4d44-a35c-cb9d5d1a1bec a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Tenet ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "22:45" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
 
-twssd:show_1eda9fa9-0787-4323-b5f2-3e0e9782c9a6 a owl:NamedIndividual,
+twssd:show_0a08902b-df77-42de-a825-1e4c1c5048a2 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "15:30",
+        "23:00" ;
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
+
+twssd:show_0ddac325-1ada-4308-9dca-31681089f03d a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Demon_Slayer_Mugen_Train ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
+    twss:showsIn twssd:showroom_e038b7d0-491b-4936-ad74-4662f5e19043 .
 
-twssd:show_1ff10ad8-f4b1-4f41-8694-cc7ad3e9409b a owl:NamedIndividual,
+twssd:show_11aa7cbc-1938-4181-bdaf-ff8ad1e9ba01 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Godzilla_vs._Kong ;
     twss:showLanguage "CASTELLANO" ;
-    twss:showTime "16:45",
-        "19:45" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
+    twss:showTime "14:00",
+        "17:00",
+        "19:50",
+        "22:40" ;
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
 
-twssd:show_2051867a-cd08-4a03-8ba0-9e36a0d4902d a owl:NamedIndividual,
+twssd:show_13b0e085-aef5-4e14-8036-ad1b6d47edca a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:El_silencio_del_cazador ;
+    twss:movie twssd:New_Mutants ;
     twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "22:20" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
 
-twssd:show_2699a592-64de-48a9-a002-334925b81c00 a owl:NamedIndividual,
+twssd:show_148fd6c5-e200-43b3-9cf7-b14d96055ea7 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "20:45",
+        "23:10" ;
+    twss:showsIn twssd:showroom_827687f1-e397-4613-93db-e7c395d856f7 .
+
+twssd:show_159c279e-99cc-400b-9882-070675feecd2 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Wonder_Woman_1984 ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
+    twss:showsIn twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 .
 
-twssd:show_2928497a-826e-43df-8616-d47c13ac6246 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
-
-twssd:show_2c36c126-60e0-48aa-84d5-f1ddb738222b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tenet ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:10" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_2c7bdb4f-5f07-43a0-84e9-4d1730490757 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "15:00",
-        "17:40",
-        "20:20" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_30538fe6-c148-4a3c-98eb-81baa75c6079 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_335e3142-263b-437f-a566-a46c2bed91c9 a owl:NamedIndividual,
+twssd:show_174883e3-b3e3-442d-926f-7c536e0b714a a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Godzilla_vs._Kong ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_30633358-d7cc-437d-8047-7c470a2bb875 .
+    twss:showsIn twssd:showroom_5a28d79b-bbed-4b9d-8b43-bca3f8e634ad .
 
-twssd:show_38b08b3c-3657-4bae-a07c-89f95c7a9fd7 a owl:NamedIndividual,
+twssd:show_18830df3-8bf4-499f-add3-c1f21e573a44 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "23:10" ;
-    twss:showsIn twssd:showroom_bc1fd77e-c6f7-43d4-b2b5-6e62318a6303 .
-
-twssd:show_38e61d37-4c08-4d67-ba98-f55d1e94a24f a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
+    twss:movie twssd:Promising_young_woman ;
     twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 .
 
-twssd:show_3b7cb904-573e-4a2c-9be8-234b12950062 a owl:NamedIndividual,
+twssd:show_19e29a4a-7c55-4bc2-a62e-189aaee49bbd a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "14:00",
+        "18:25" ;
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
+
+twssd:show_19f72a8d-7085-4a29-8eb2-61958f481120 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "14:00",
+        "16:15",
+        "18:30" ;
+    twss:showsIn twssd:showroom_827687f1-e397-4613-93db-e7c395d856f7 .
+
+twssd:show_1b4cb2cc-b417-4f07-b449-6cb1c25a4323 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Tom_and_Jerry ;
     twss:showFormat "2D" ;
     twss:showLanguage "Español" ;
     twss:showTime "16:10",
         "18:50" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
+    twss:showsIn twssd:showroom_e038b7d0-491b-4936-ad74-4662f5e19043 .
 
-twssd:show_3d7e0ecd-7a57-4c95-af83-6e34660c3375 a owl:NamedIndividual,
+twssd:show_1e7a6b69-b85c-49f9-a5c6-da88e726001b a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_e63d328f-08b1-4e89-a855-bb044a615440 .
 
-twssd:show_3e5d65e8-17dc-4478-9e19-f0c140269f42 a owl:NamedIndividual,
+twssd:show_1ee27a3b-e470-43bd-b9cd-4bedb7fc54d7 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
+
+twssd:show_1f765a1f-2520-4920-8133-083e40a1e52a a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:La_noche_magica ;
     twss:showLanguage "CASTELLANO" ;
-    twss:showTime "16:00" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
+    twss:showTime "20:45",
+        "23:10" ;
+    twss:showsIn twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 .
 
-twssd:show_3ef5149b-a17a-456d-95e0-764e7a66e45f a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:00",
-        "18:00",
-        "20:30" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_41a7f78d-479e-4b11-949a-fdfcd539524d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_47acf41e-149a-4831-b6d6-a2b41bdb9bc0 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_490a3958-2c58-4eb3-bbf4-5c7e63ac5ff9 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:On_a_magical_night ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "14:00",
-        "18:00",
-        "20:00",
-        "22:00" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_4dc75d65-d2dc-4e00-9fda-1e9d305f45e6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_1035f0db-861b-4a1c-a898-7894025671ec .
-
-twssd:show_515f44d5-6199-40d6-aad3-e3a872fa3312 a owl:NamedIndividual,
+twssd:show_2061aaee-1794-4a4b-b689-28c2fa4d8747 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
     twss:showLanguage "CASTELLANO" ;
     twss:showTime "13:45",
         "16:45",
         "19:45" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
+    twss:showsIn twssd:showroom_827687f1-e397-4613-93db-e7c395d856f7 .
 
-twssd:show_57b5f645-253c-4417-8864-d67aece8f643 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:La_noche_magica ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:40" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_583f1c14-9bc4-4326-b6d1-b8a5a7d906a1 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_8d56bbe0-cdf8-424f-9c44-7266f1152299 .
-
-twssd:show_593c1f5b-172a-4c1a-b75e-848fabf260a0 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:On_a_magical_night ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "19:50" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_5aca1192-a7c1-419a-aecd-2b05658bae53 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_b90711fd-6b28-4b73-83e3-8ee82fe06384 .
-
-twssd:show_5e2f28d0-6443-486a-9df3-a523efc7439f a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
-
-twssd:show_5f1527ac-6175-4af2-8e3e-09cab3dd9aef a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
-
-twssd:show_5f52b5b2-6a07-43eb-93b8-eafcdeffa4ec a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:El_Secreto_Del_Bosque ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "20:45",
-        "23:10" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_617e2f4e-ebb4-4dec-bbfb-7ca8b9635029 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_6392192c-90b3-4803-9dab-0a688108e88d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_658c167f-7fe8-4143-ab69-53d39f5557ad a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 .
-
-twssd:show_68811a5f-5239-460d-90d8-53055233e95b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
-
-twssd:show_6a02b583-dc67-47fa-9384-9f9219ee39d6 a owl:NamedIndividual,
+twssd:show_27888d9b-c3d6-4e4b-bae4-491c270dfdc3 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:New_Mutants ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
+    twss:showsIn twssd:showroom_e63d328f-08b1-4e89-a855-bb044a615440 .
 
-twssd:show_6a1b275b-439e-4306-88a7-5fc13429a4eb a owl:NamedIndividual,
+twssd:show_27f8fdb2-bf08-4600-81dc-a40427623876 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Tom_Y_Jerry ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "14:00",
-        "18:25" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_6f97bf21-7ecc-49df-b97f-caf1d1eb7cbe a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_Y_Jerry ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:20",
-        "15:40",
-        "18:00" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_73a2d499-034d-486c-a0cd-71dada1c01a0 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movie twssd:Tenet ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
+    twss:showTime "23:10" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
 
-twssd:show_7460c55a-fae7-4ecb-bfda-aada79369ffe a owl:NamedIndividual,
+twssd:show_293d195a-194d-4c2a-b569-beeb30429cc3 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_31176210-36b0-461b-80ac-2c1912e671db .
+
+twssd:show_2cacd7c8-4e78-4e84-90f3-e6d3ebdb857a a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "19:45" ;
+    twss:showsIn twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 .
+
+twssd:show_2cfffe59-8ae9-497b-9b56-dd06cc093d24 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tenet ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "22:45" ;
+    twss:showsIn twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 .
+
+twssd:show_3070d2ba-197e-4ff8-ad0c-7f6deb38be06 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_69d2b0ec-de49-4395-929d-85a763782001 .
+
+twssd:show_35d2d0f1-c63e-472f-9ecb-1f51813fb84a a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
+
+twssd:show_35d88dea-910c-4657-b693-c1057df0a8d9 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Trolls_2 ;
     twss:showFormat "2D" ;
     twss:showLanguage "Español" ;
     twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
+    twss:showsIn twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 .
 
-twssd:show_747358b7-7b9e-46f3-b9f1-448513dd27bc a owl:NamedIndividual,
+twssd:show_3a8899c7-b633-4437-a93b-18f51608bf39 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movie twssd:Chaos_Walking ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_e63d328f-08b1-4e89-a855-bb044a615440 .
 
-twssd:show_74963b69-935d-4b94-9b07-c4813cb691e1 a owl:NamedIndividual,
+twssd:show_46cf2e33-fed1-489e-bde6-cf451e50b513 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Promising_young_woman ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
 
-twssd:show_773c5bc7-ff04-4851-ba20-48d0d9dcade6 a owl:NamedIndividual,
+twssd:show_47c31946-59e9-4296-83ae-1af920892706 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:La_noche_magica ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:40" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_7997cc19-a10c-4d9a-9f15-cb2562fbadd9 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_7be5717f-8ad4-4826-87ef-14032653e2b6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:movie twssd:Godzilla_vs._Kong ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_ee8929d9-6006-4d32-bc1c-b979732a001d .
 
-twssd:show_7c0fffad-3755-47d5-8ef6-c83e483a2c6b a owl:NamedIndividual,
+twssd:show_49fb70e9-6d32-4106-8d23-4533218e58b9 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
-
-twssd:show_819528d2-f52a-419f-81cd-0986bc7b1e21 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 .
 
-twssd:show_842c6d30-b594-4c48-8051-04e9b9287ea6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_7cb08145-bd67-4523-b723-1c2ff5160858 .
-
-twssd:show_874f7452-d899-422b-ade5-3a7879ee5c4e a owl:NamedIndividual,
+twssd:show_4e2a0c01-140a-4a4d-b663-bc504ef014f5 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:New_Mutants ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
+    twss:showsIn twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 .
 
-twssd:show_885cf155-6aba-40c2-af69-233446cccff1 a owl:NamedIndividual,
+twssd:show_4ed284c3-cb1f-400a-97a4-3b96cc2a8e23 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:New_Mutants ;
     twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "15:30",
-        "23:00" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
+    twss:showTime "18:05" ;
+    twss:showsIn twssd:showroom_2ad28d7f-2d7e-420a-b6c2-5fffe591ca8d .
 
-twssd:show_8aca9574-3dc5-4e9f-9b31-f54466a5dc70 a owl:NamedIndividual,
+twssd:show_53f2ae4a-0405-40ed-a46f-a13d67c703b7 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 .
-
-twssd:show_8c39b5e7-9c0f-46c3-bb25-d0fa32d8d21a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:movie twssd:Godzilla_vs._Kong ;
     twss:showLanguage "CASTELLANO" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
+    twss:showTime "15:00",
+        "17:40",
+        "20:20" ;
+    twss:showsIn twssd:showroom_827687f1-e397-4613-93db-e7c395d856f7 .
 
-twssd:show_90b455db-2c19-40f3-8c49-3f0ef4d02d0a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:15",
-        "15:40",
-        "20:20",
-        "22:50" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
-
-twssd:show_90c9aa73-0f56-4770-8a7a-370f18a03c0a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_911f9205-9627-4df4-ac44-324093d8de31 a owl:NamedIndividual,
+twssd:show_5676a8ca-a5f2-4b15-b75b-83090ee0106a a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Tom_and_Jerry ;
     twss:showFormat "2D" ;
     twss:showLanguage "Español" ;
     twss:showTime "16:10",
         "18:50" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
+    twss:showsIn twssd:showroom_e63d328f-08b1-4e89-a855-bb044a615440 .
 
-twssd:show_92b3fd4f-da30-48a5-9f5b-ffedf3750bf2 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Los_Intrusos ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "16:00",
-        "20:30" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_96a990ce-7b14-4dc6-98c6-28797cc4078d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
-
-twssd:show_99090e3f-9c95-42c6-943c-12d955e4dcd7 a owl:NamedIndividual,
+twssd:show_5712ef7e-b1d5-4b9c-b0fe-7a8503b4a060 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Promising_young_woman ;
     twss:showLanguage "SUBTITULADA" ;
@@ -773,61 +534,219 @@ twssd:show_99090e3f-9c95-42c6-943c-12d955e4dcd7 a owl:NamedIndividual,
         "18:10",
         "20:30",
         "23:00" ;
-    twss:showsIn twssd:showroom_e938c6c9-93d8-49cb-9b91-feaeb444c8b8 .
+    twss:showsIn twssd:showroom_fa3da2b4-bd1a-4360-bb10-ca78f045d965 .
 
-twssd:show_998c8ad1-0978-4ba9-a18d-fd635ab7c20d a owl:NamedIndividual,
+twssd:show_592ccdc0-41d1-4679-a970-d15773c7e02b a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:El_silencio_del_cazador ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "22:20" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
+
+twssd:show_5b3b7b61-91cd-4b73-9203-380c801cb022 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 .
+
+twssd:show_5e26aa9c-61f7-4cac-a275-529bf1d428c2 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "23:00" ;
+    twss:showsIn twssd:showroom_827687f1-e397-4613-93db-e7c395d856f7 .
+
+twssd:show_600ce72f-b7fe-43ad-a439-18aec45a1a76 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 .
+
+twssd:show_63e4d554-98db-44c6-9c3f-86554e592f47 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_7ebac982-f4b3-4b25-ae20-35fe14ae2dca .
+
+twssd:show_6548f775-c74c-41b3-8296-15418819c91e a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_7ebac982-f4b3-4b25-ae20-35fe14ae2dca .
+
+twssd:show_66cb3c0c-c948-407d-b602-ffedc5db7a1e a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 .
+
+twssd:show_69be1f17-e6a1-4764-abb9-b9120ad96a7b a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:La_noche_magica ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:40" ;
+    twss:showsIn twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 .
+
+twssd:show_6a0f28e3-4db1-478e-a821-080553ab0ab3 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_827687f1-e397-4613-93db-e7c395d856f7 .
+
+twssd:show_6c4a886d-7c03-491f-a193-ff29aa76318d a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_e038b7d0-491b-4936-ad74-4662f5e19043 .
+
+twssd:show_74951517-4a10-498a-885a-47c31545931c a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_7ebac982-f4b3-4b25-ae20-35fe14ae2dca .
+
+twssd:show_76d44929-0c4a-4d7f-bdab-dac8216f857f a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "22:45" ;
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
+
+twssd:show_7af2955a-0c82-4d59-baa4-92d96de143b5 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_e038b7d0-491b-4936-ad74-4662f5e19043 .
+
+twssd:show_7cef27c9-69d5-4afa-a2ac-da690d64bd2b a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_69d2b0ec-de49-4395-929d-85a763782001 .
+
+twssd:show_7d303b6a-d71d-4e76-bf93-efe70c420f73 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_e038b7d0-491b-4936-ad74-4662f5e19043 .
+
+twssd:show_85c5db27-2183-49a1-8eb7-bfd2508a1e97 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
+
+twssd:show_86c38faf-b72e-4f42-b130-289ef96aecbc a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_a47fcc88-f983-4e3f-8575-183d4c136a0d .
+
+twssd:show_8a6b6dec-093c-4be2-b4f1-8547d38948b4 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "22:15" ;
+    twss:showsIn twssd:showroom_fa3da2b4-bd1a-4360-bb10-ca78f045d965 .
+
+twssd:show_8e7bf9b7-3cd2-4c94-aa99-c47eed038560 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Promising_young_woman ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
+    twss:showsIn twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 .
 
-twssd:show_9e6d693d-e5e9-4e08-941c-1b2b635cc1d5 a owl:NamedIndividual,
+twssd:show_90719565-cd97-4751-96d6-dce44fa6382d a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
+    twss:movie twssd:Tenet ;
     twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:10" ;
+    twss:showsIn twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 .
 
-twssd:show_9fb9c0df-9e15-4cca-adae-0b7e594d3f2b a owl:NamedIndividual,
+twssd:show_94758e07-527a-4f8a-9ca0-c2a05c8d0bf4 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movie twssd:New_Mutants ;
     twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:00",
-        "15:30",
-        "18:05",
-        "20:40" ;
-    twss:showsIn twssd:showroom_bc1fd77e-c6f7-43d4-b2b5-6e62318a6303 .
+    twss:showTime "13:15",
+        "15:40",
+        "20:20",
+        "22:50" ;
+    twss:showsIn twssd:showroom_2ad28d7f-2d7e-420a-b6c2-5fffe591ca8d .
 
-twssd:show_ab8c5a1d-c86c-44bf-a8af-999522d829de a owl:NamedIndividual,
+twssd:show_97dd1958-6c92-4eb2-a8ee-9167d24d6c03 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
+    twss:movie twssd:On_a_magical_night ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "14:00",
+        "18:00",
+        "20:00",
+        "22:00" ;
+    twss:showsIn twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 .
 
-twssd:show_ae1dc054-b548-4c9c-879c-4b3a3deb4ce4 a owl:NamedIndividual,
+twssd:show_992b2b74-e70d-4b8b-89c5-658e13c9f42d a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:La_noche_magica ;
+    twss:movie twssd:El_Secreto_Del_Bosque ;
     twss:showLanguage "CASTELLANO" ;
     twss:showTime "20:45",
         "23:10" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
 
-twssd:show_b7628914-90f5-433e-bb08-972d34ab7688 a owl:NamedIndividual,
+twssd:show_a3b3a9a6-7ef2-4339-9208-2f7d3010d1f6 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "13:45",
-        "22:45" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:00",
+        "15:15",
+        "17:30" ;
+    twss:showsIn twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 .
 
-twssd:show_b9609950-6bba-4b8d-825b-c7b1ed544a70 a owl:NamedIndividual,
+twssd:show_a6e370a2-59e0-44e6-a5c0-6777d9aad6b4 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "16:00" ;
+    twss:showsIn twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 .
+
+twssd:show_ab8812d6-8de6-4954-931c-f3a8d1ad5014 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
+
+twssd:show_b060866b-85e7-4f5e-8afd-ce3b2bf0900f a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
     twss:showLanguage "CASTELLANO" ;
@@ -836,142 +755,132 @@ twssd:show_b9609950-6bba-4b8d-825b-c7b1ed544a70 a owl:NamedIndividual,
         "17:50",
         "20:15",
         "22:30" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
+    twss:showsIn twssd:showroom_2ad28d7f-2d7e-420a-b6c2-5fffe591ca8d .
 
-twssd:show_baff59bd-e5c9-4464-a1c7-bbb40a828ff5 a owl:NamedIndividual,
+twssd:show_b0c02f65-97d7-4db7-bbec-2075bdd4cc28 a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "23:00" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_bca1c3f6-cbdd-4274-8514-5f310e66b22c a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "18:05" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
-
-twssd:show_c008286d-9257-4459-92df-61c1a8cbc5c7 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_17e69fda-979f-4a5a-b2b0-13e1e07047c0 .
-
-twssd:show_c8f44514-bdbe-49a3-a232-31dde8b2726a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "22:45" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_c91e3bf7-83cb-4dda-9011-2bffc53c0f18 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "16:10" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_caac4d13-2400-46a3-9832-72e704a821a2 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_ccb2c477-f2c4-4e16-aa36-bacf4efc74ed a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
+    twss:movie twssd:La_noche_magica ;
     twss:showFormat "2D" ;
     twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
+    twss:showTime "17:40" ;
+    twss:showsIn twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 .
 
-twssd:show_d246eb6d-0c7e-4846-be5b-61a75e1e7c77 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_d2e2c436-6701-4f5f-b117-0199ab1ac53c a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_f491af3c-110c-42a3-b3be-15265cca969e .
-
-twssd:show_daadea09-77e9-409b-af8f-9f9967e699a7 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_Y_Jerry ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "14:00",
-        "16:15",
-        "18:30" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_de902d92-24f3-4311-9269-b9d5d08f9316 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_e058c21e-fbe6-4115-935e-8b682c1a23fc a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "19:45" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_e7851d3f-1f18-436b-bd35-71a05825bbd7 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 .
-
-twssd:show_e7e7bfff-cfa9-4459-8400-478e5f33806e a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "20:45",
-        "23:10" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_e87527e3-56df-492f-b6a7-36fdd107c7e5 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tenet ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:10" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_ecd4c3b9-e25c-471d-9732-81f9ad99241e a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:00",
-        "15:15",
-        "17:30" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_eea882f5-4929-4a78-b64b-e70bcb890bd2 a owl:NamedIndividual,
+twssd:show_b1f0f724-5ba7-41ce-8918-9942dda772b6 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Chaos_Walking ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
+    twss:showsIn twssd:showroom_7ebac982-f4b3-4b25-ae20-35fe14ae2dca .
 
-twssd:show_f1fc0feb-86ec-4336-9560-edfe8d2e576b a owl:NamedIndividual,
+twssd:show_b2ce35de-a759-4db8-a110-d5e0953af5c6 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_a47fcc88-f983-4e3f-8575-183d4c136a0d .
+
+twssd:show_b330e962-5093-41ef-9d28-256ad6422a19 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 .
+
+twssd:show_beaa56d0-dd2c-40fa-8d0c-d996c6c75825 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Los_Intrusos ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "16:00",
+        "20:30" ;
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
+
+twssd:show_c00ef589-3c90-435c-81e3-bc46baf02d5d a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Promising_young_woman ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_e63d328f-08b1-4e89-a855-bb044a615440 .
+
+twssd:show_c0653003-6082-493a-8547-993af34422bc a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Promising_young_woman ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:10" ;
+    twss:showsIn twssd:showroom_7ebac982-f4b3-4b25-ae20-35fe14ae2dca .
+
+twssd:show_c66ee049-c739-445e-9c41-145b13b2a09c a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 .
+
+twssd:show_c790295f-736d-4f2c-83c4-eb4253752e92 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:40" ;
+    twss:showsIn twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 .
+
+twssd:show_c852c24d-04c2-4d08-88eb-3054a90196b9 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:New_Mutants ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:00",
+        "18:00",
+        "20:30" ;
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
+
+twssd:show_c941cfbb-630a-4fd9-ab49-56046ae05f5d a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_a47fcc88-f983-4e3f-8575-183d4c136a0d .
+
+twssd:show_cc14943a-10f3-4034-bdc2-86c721d7b4b9 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_7c5c21c4-e9aa-4064-ac1d-361dc10e209b .
+
+twssd:show_ce39baee-2dcf-4375-a390-114d63158532 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Trolls_2 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "17:15" ;
+    twss:showsIn twssd:showroom_e63d328f-08b1-4e89-a855-bb044a615440 .
+
+twssd:show_ce8c259c-947f-4b75-9c8f-3e40045b606f a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_96d3fc26-2d2a-4895-8b29-fe938a7e79e3 .
+
+twssd:show_d1c2b165-5a3c-421b-b65d-6cf36833009d a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 .
+
+twssd:show_d465f0aa-6460-4f1c-ab0b-045b42db4f75 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
     twss:showLanguage "CASTELLANO" ;
@@ -979,41 +888,136 @@ twssd:show_f1fc0feb-86ec-4336-9560-edfe8d2e576b a owl:NamedIndividual,
         "15:25",
         "17:45",
         "20:00" ;
-    twss:showsIn twssd:showroom_e938c6c9-93d8-49cb-9b91-feaeb444c8b8 .
+    twss:showsIn twssd:showroom_fa3da2b4-bd1a-4360-bb10-ca78f045d965 .
 
-twssd:show_f5500846-622b-44ef-87f0-ae20852f0574 a owl:NamedIndividual,
+twssd:show_d4ac5a48-cf8e-4fce-80cb-60d03cfd365c a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movie twssd:Chaos_Walking ;
     twss:showLanguage "CASTELLANO" ;
-    twss:showTime "14:00",
-        "17:00",
-        "19:50",
-        "22:40" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
+    twss:showTime "13:45",
+        "18:15" ;
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
 
-twssd:show_f89664c8-8134-4ace-94ae-a50e02cc96aa a owl:NamedIndividual,
+twssd:show_ded591c0-6ec5-4b95-a2d4-dffdac65b07a a owl:NamedIndividual,
         twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "16:10" ;
+    twss:showsIn twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b .
 
-twssd:show_f8a1594d-b6c6-4745-9bd9-f021dcc0ae69 a owl:NamedIndividual,
+twssd:show_e4d2ccb7-2c9c-4bd0-99ba-61466caac671 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Godzilla_vs._Kong ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_7baa845e-dc52-497c-a8aa-343b8818bd8d .
+    twss:showsIn twssd:showroom_1af11656-4b40-44af-adc4-ca3d859aa416 .
 
-twssd:show_ff956d9d-dbde-44b7-9fed-33318e0d57fd a owl:NamedIndividual,
+twssd:show_e598f9c4-a8ce-45dc-9405-508d9b723cdb a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_e038b7d0-491b-4936-ad74-4662f5e19043 .
+
+twssd:show_e8646198-fc67-40ac-8304-de50d95d6476 a owl:NamedIndividual,
         twss:Show ;
     twss:movie twssd:Demon_Slayer_Mugen_Train ;
     twss:showFormat "2D" ;
     twss:showLanguage "Subtitulado" ;
     twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
+    twss:showsIn twssd:showroom_7ebac982-f4b3-4b25-ae20-35fe14ae2dca .
+
+twssd:show_e8684146-b0bb-495e-8063-e55b4a5d9f40 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "13:45",
+        "22:45" ;
+    twss:showsIn twssd:showroom_2ad28d7f-2d7e-420a-b6c2-5fffe591ca8d .
+
+twssd:show_efa5dd2a-1b1a-4a8c-a8d8-fc595918cfc0 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_69d2b0ec-de49-4395-929d-85a763782001 .
+
+twssd:show_f314854a-ecba-47b5-ae6d-e6fcca98d78e a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_f285e584-83da-4968-bc2c-238150c81289 .
+
+twssd:show_f36019ae-f761-4fd3-87d8-df1d07b59fde a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "SUBTITULADA" ;
+    twss:showTime "23:10" ;
+    twss:showsIn twssd:showroom_9ea6e2c4-a638-4876-bc2a-46336eedf60a .
+
+twssd:show_f3f44ddf-bddc-439a-9ad2-80a08e80935c a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_c0ff1923-d3c5-4f63-a6f6-dea856a717f7 .
+
+twssd:show_f737feff-90f3-4870-a11c-6570c593af93 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "20:00" ;
+    twss:showsIn twssd:showroom_a47fcc88-f983-4e3f-8575-183d4c136a0d .
+
+twssd:show_f869ced9-cc52-43c1-9b62-380bd6f55037 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Español" ;
+    twss:showTime "16:10",
+        "18:50" ;
+    twss:showsIn twssd:showroom_69d2b0ec-de49-4395-929d-85a763782001 .
+
+twssd:show_fb27e6b1-0736-47cb-8dec-403a96be60ea a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showLanguage "CASTELLANO" ;
+    twss:showTime "13:00",
+        "15:30",
+        "18:05",
+        "20:40" ;
+    twss:showsIn twssd:showroom_9ea6e2c4-a638-4876-bc2a-46336eedf60a .
+
+twssd:show_fb5e0d58-6fa1-4b0b-b406-5fdf53fbb423 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:50" ;
+    twss:showsIn twssd:showroom_e63d328f-08b1-4e89-a855-bb044a615440 .
+
+twssd:show_fc1c717f-ce05-4c4c-ae37-8fa85164f370 a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Chaos_Walking ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "23:15" ;
+    twss:showsIn twssd:showroom_a47fcc88-f983-4e3f-8575-183d4c136a0d .
+
+twssd:show_fff7719e-42ef-4863-a878-e72b6f92331f a owl:NamedIndividual,
+        twss:Show ;
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showFormat "2D" ;
+    twss:showLanguage "Subtitulado" ;
+    twss:showTime "22:00" ;
+    twss:showsIn twssd:showroom_bdedff13-635f-4f64-b6f1-fa6f7ed870fd .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss.ttl> a owl:Ontology ;
     owl:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl>,
@@ -1546,10 +1550,10 @@ twssd:Ian_Simmons a schema:Person,
     schema:author twssd:jayg_58 ;
     schema:dateCreated "2021-01-01"^^schema:Date ;
     schema:inLanguage "English" ;
-    schema:itemReviewed <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_d6a2aeb2-209c-4717-b5ad-637a70f7e4ed> ;
+    schema:itemReviewed <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_29463d57-3e62-4816-9bc2-b1e10a03fc60> ;
     schema:name "In quarantine, you'll buy anything." ;
     schema:reviewBody "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2c15738d-2777-4912-8958-85285dc5c007> .
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_4467f175-6b4c-4630-9ca0-3e624e9247d4> .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Isabela_Pal%C3%B3poli> a owl:NamedIndividual,
         twss:Person ;
@@ -2059,7 +2063,7 @@ twssd:Stream_on_HBO_Max_for_a_Limited_Time a schema:VideoObject,
     schema:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
     schema:embedUrl <https://www.imdb.com/video/imdb/vi3240214809> ;
     schema:name "Stream on HBO Max for a Limited Time" ;
-    schema:thumbnail <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_bbff3153-9310-4e81-9203-34c6dce7450e> ;
+    schema:thumbnail <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_65ea6db6-94a4-43cd-b1e9-ee8862f9d48b> ;
     schema:thumbnailUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ;
     schema:uploadDate "2020-12-07T01:51:07Z"^^schema:Date .
 
@@ -2214,38 +2218,38 @@ twssd:film-authority.com a schema:Organization,
     schema:name "film-authority.com" ;
     schema:url <https://www.rottentomatoes.com/source-3904> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_76fceb37-c0b5-46ba-b318-36b1251f4dc1> a schema:AggregateRating,
-        owl:NamedIndividual ;
-    schema:bestRating "10" ;
-    schema:ratingCount "20" ;
-    schema:ratingValue "7,6" ;
-    schema:worstRating "0" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_87aa2f62-880b-41c3-86af-6432ca2e4dcd> a schema:AggregateRating,
-        owl:NamedIndividual ;
-    schema:bestRating "10.0" ;
-    schema:ratingCount 198912 ;
-    schema:ratingValue "5.4" ;
-    schema:worstRating "1.0" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_b01bf5ba-6cd5-4e35-97cb-27203d58bb20> a schema:AggregateRating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_26cbb993-f444-431a-8555-33730bef8c88> a schema:AggregateRating,
         owl:NamedIndividual ;
     schema:bestRating "100" ;
     schema:ratingCount "57" ;
     schema:ratingValue "60" ;
     schema:worstRating "0" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_3f17a7fd-3acf-4c5f-bce2-a73bb41c5238> a schema:Clip,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_686435ca-ae2d-434c-be3b-6176ad5af72c> a schema:AggregateRating,
+        owl:NamedIndividual ;
+    schema:bestRating "10.0" ;
+    schema:ratingCount 198912 ;
+    schema:ratingValue "5.4" ;
+    schema:worstRating "1.0" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_a142fa80-9928-4177-af97-3cc50cc55fde> a schema:AggregateRating,
+        owl:NamedIndividual ;
+    schema:bestRating "10" ;
+    schema:ratingCount "20" ;
+    schema:ratingValue "7,6" ;
+    schema:worstRating "0" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_35b9b7d9-566d-4234-9775-7ca1e73247c3> a schema:Clip,
         owl:NamedIndividual ;
     schema:description "trailer" ;
-    schema:potentialAction <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_b605f59c-ebe7-4c0e-bf69-820afadee5a5> ;
+    schema:potentialAction <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_3a9b0211-1f62-4fed-bd97-d18d65272135> ;
     schema:timeRequired "PT2M24S" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_d6a2aeb2-209c-4717-b5ad-637a70f7e4ed> a schema:CreativeWork,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_29463d57-3e62-4816-9bc2-b1e10a03fc60> a schema:CreativeWork,
         owl:NamedIndividual ;
     schema:url <https://www.imdb.com/title/tt7126948> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_3337e591-0c30-4759-a293-02d72af2d7ff> a schema:EntryPoint,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_0904a57c-09f2-420e-baa5-0ab198116015> a schema:EntryPoint,
         owl:NamedIndividual ;
     schema:actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
         "http://schema.org/DesktopWebPlatform",
@@ -2254,463 +2258,463 @@ twssd:film-authority.com a schema:Organization,
     schema:inLanguage "es" ;
     schema:urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_3b851d1e-5a8a-48d1-a62c-43b28f0de5e8> a schema:ImageObject,
-        owl:NamedIndividual ;
-    schema:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_bbff3153-9310-4e81-9203-34c6dce7450e> a schema:ImageObject,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_65ea6db6-94a4-43cd-b1e9-ee8862f9d48b> a schema:ImageObject,
         owl:NamedIndividual ;
     schema:contentUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_77cb36bc-fa1d-4184-9f98-db2259d54e96> a schema:Offer,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_e89ca42a-3bba-41f5-82e8-27815c5d951d> a schema:ImageObject,
+        owl:NamedIndividual ;
+    schema:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_d931db48-7080-456b-9efd-dc3ed00db7b4> a schema:Offer,
         owl:NamedIndividual ;
     schema:availabilityStarts "2019-12-08 22:30:37"^^schema:Date ;
     schema:category "free" ;
     schema:eligibleRegion twssd:ES .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_1d460420-b4ed-490f-9b01-3e04639ebce3> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_7f06e0ba-5759-42f2-8b32-bbcc8532058c> a schema:Organization,
         owl:NamedIndividual ;
     schema:url <https://www.imdb.com/company/co0728674> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_676b4538-55c4-45b8-a8df-68e7014fd1c0> a schema:Organization,
-        owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/company/co0028338> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a0901e40-83a9-4487-9747-1f1bfa89add9> a schema:Organization,
-        owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/company/co0283444> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a35f195b-29a0-46f1-b822-1a40052448f6> a schema:Organization,
-        owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/company/co0038332> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_b4a907f3-a855-4fa3-84c1-0a1ba6358480> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_99fd2de3-746e-4735-b5d8-e13d22556130> a schema:Organization,
         owl:NamedIndividual ;
     schema:url <https://www.imdb.com/company/co0002663> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_01002525-f8b2-4cc1-ad10-082e2229d59d> a schema:PublicationEvent,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_bc8763d6-c71d-4e35-ae25-a974c413e944> a schema:Organization,
+        owl:NamedIndividual ;
+    schema:url <https://www.imdb.com/company/co0028338> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_bd3de86e-e1d7-49f6-93cc-6ae38dfeb336> a schema:Organization,
+        owl:NamedIndividual ;
+    schema:url <https://www.imdb.com/company/co0283444> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_c5847960-0f1f-47dc-a36d-07bb83f151e6> a schema:Organization,
+        owl:NamedIndividual ;
+    schema:url <https://www.imdb.com/company/co0038332> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_25547f97-7679-49d2-9518-eb12a485502d> a schema:PublicationEvent,
         owl:NamedIndividual ;
     schema:location twssd:ES ;
     schema:startDate "2020-12-18"^^schema:Date .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0544aaea-77dc-42a3-82b5-ab589630462d> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_1115501b-2f6c-4b19-af6d-dd769f96f6cc> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0da97cc4-a8e8-4483-a938-b98a3205875d> a schema:Rating,
-        owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_203f398c-f0a6-41f9-b821-930dbb140390> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_1fbde34b-7369-4437-9365-69568ab97c0a> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue -1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_26355d08-165f-4e80-9db7-34b538991465> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_22d66821-e53e-4b0b-bb69-b95d0fa2396b> a schema:Rating,
+        owl:NamedIndividual ;
+    schema:bestRating "1" ;
+    schema:ratingValue -1 ;
+    schema:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2d45cab8-12e0-4874-9186-7a03d8d95bf9> a schema:Rating,
+        owl:NamedIndividual ;
+    schema:bestRating "1" ;
+    schema:ratingValue -1 ;
+    schema:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_3039b7a2-8685-4205-b422-9319e38ef3e7> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2c15738d-2777-4912-8958-85285dc5c007> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_4467f175-6b4c-4630-9ca0-3e624e9247d4> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "10" ;
     schema:ratingValue "5" ;
     schema:worstRating "1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2d7e3fba-b223-4ad5-942c-0d6c9ac79ae9> a schema:Rating,
-        owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_376861c0-e275-4531-9117-799eb98caff9> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_51b003f6-0896-4c79-9bc2-9f315c451976> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue -1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_5459982f-faba-4282-ab98-309b4911eee2> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_56b28bec-b2bd-4f8c-b7f1-dca4e244ce3f> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_63929bcc-bad9-44ad-b366-e41d77ef43b3> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_59021dfb-cfa9-4fb6-9c6f-640cead3b27f> a schema:Rating,
+        owl:NamedIndividual ;
+    schema:bestRating "1" ;
+    schema:ratingValue 1 ;
+    schema:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_7f02a2bc-961c-4f69-8271-caac7d16f359> a schema:Rating,
+        owl:NamedIndividual ;
+    schema:bestRating "1" ;
+    schema:ratingValue 1 ;
+    schema:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8c2e0e2d-0114-4af4-a8ea-d231c2686720> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue -1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6a872320-4732-4880-aae5-4dba3da72f36> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8e52bf28-dd50-4636-b1a6-6462eb18574d> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6c132113-cda4-492b-9728-e50a51c39386> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a332681c-b435-4220-8e4d-7600fea6128f> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue -1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6ee3fc29-06a3-4a81-904c-0752f04cf0f7> a schema:Rating,
-        owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6f791d7d-92b3-4a35-8fce-61da5e40cb58> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_aa4f3013-2126-4fba-aa8b-69f3f127becc> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue -1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8131f886-44d5-473d-b684-230f4afeebb8> a schema:Rating,
-        owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_855538e1-4a24-4628-908b-dd5b43b5bceb> a schema:Rating,
-        owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a85f1106-a704-48ce-b8d2-8e3a99255f2e> a schema:Rating,
-        owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c142f8db-be59-4bd9-80aa-2835ebd8f268> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_ac34394a-c975-4de4-b707-d102ce0c511f> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue -1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c34b8648-0e9b-4433-bf40-88554eee8404> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_b2d20698-33fc-428d-b30f-da09e5eb672f> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_cf3a5c08-f682-4e9c-97a3-39fd29d903d7> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_bd7f149f-22e1-4d1f-91f4-01149a4014be> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d0d145e8-9b6b-4daf-87c0-5549c72241cd> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c9de3bd0-8169-4198-af5b-56a1fbb7a9e0> a schema:Rating,
+        owl:NamedIndividual ;
+    schema:bestRating "1" ;
+    schema:ratingValue 1 ;
+    schema:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_ce3c3a86-af77-489e-8755-d54cbb8b8761> a schema:Rating,
+        owl:NamedIndividual ;
+    schema:bestRating "1" ;
+    schema:ratingValue 1 ;
+    schema:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d87ae6d0-e62d-4386-b0e2-c5b4b3e1cff2> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue -1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_db2bfa9c-8e0b-4300-a634-1c1342f5af5e> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e9690d5c-b0cd-4509-bf26-c86a8cd62837> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_dc361cd7-cbdc-405a-b4be-8d28814a9823> a schema:Rating,
-        owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e938c88f-a3a4-4875-9730-763f0ba0bb32> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f09f6786-ec85-4a3b-8457-64b9e6a39120> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e9dd66b3-68ca-4025-965d-43e7e62dda48> a schema:Rating,
-        owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_eab14ca3-e459-45e8-8174-742be3cf01c5> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f3e2c05f-2626-4920-ac3a-b4fe19b9cf1b> a schema:Rating,
         owl:NamedIndividual ;
     schema:bestRating "1" ;
     schema:ratingValue 1 ;
     schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_00240a33-a036-463f-ad4c-f6b17b886896> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f69d7e62-4b06-422a-a32d-fc65f504d67e> a schema:Rating,
         owl:NamedIndividual ;
-    schema:author twssd:Andrew_Galdi ;
-    schema:dateCreated "2021-03-11T06:02:25-08:00"^^schema:Date ;
-    schema:publisher twssd:Movie_Bitches ;
-    schema:reviewBody "There were just such gross failures of filmmaking..." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e9dd66b3-68ca-4025-965d-43e7e62dda48> ;
-    schema:url <https://youtu.be/75nDMuZMfLs> .
+    schema:bestRating "1" ;
+    schema:ratingValue 1 ;
+    schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_09b1b22f-2aeb-4e6c-a6b7-fa87decfd62a> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_febd5f75-fd4b-4657-8a54-4d86592ef4a6> a schema:Rating,
         owl:NamedIndividual ;
-    schema:author twssd:Ian_Simmons ;
-    schema:dateCreated "2021-02-05T19:46:31-08:00"^^schema:Date ;
-    schema:publisher twssd:Kicking_the_Seat ;
-    schema:reviewBody "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0544aaea-77dc-42a3-82b5-ab589630462d> ;
-    schema:url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> .
+    schema:bestRating "1" ;
+    schema:ratingValue 1 ;
+    schema:worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0a44b512-1555-4281-9bde-568c8bb8c0cd> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Nina_Garin ;
-    schema:dateCreated "2021-03-01T08:14:02-08:00"^^schema:Date ;
-    schema:publisher twssd:San_Diego_Union-Tribune ;
-    schema:reviewBody "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. " ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_eab14ca3-e459-45e8-8174-742be3cf01c5> ;
-    schema:url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_10125c42-3bb7-49fb-a878-cbde3763e035> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Avaryl_Halley ;
-    schema:dateCreated "2021-03-11T05:51:39-08:00"^^schema:Date ;
-    schema:publisher twssd:Movie_Bitches ;
-    schema:reviewBody "At least \"Justice League\" had at the decency to be short" ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6f791d7d-92b3-4a35-8fce-61da5e40cb58> ;
-    schema:url <https://youtu.be/75nDMuZMfLs> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_11f670dd-ef39-43fd-8403-100ddcf484ae> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_05da74fb-4b19-4242-945a-1ef562b7c5c7> a schema:Review,
         owl:NamedIndividual ;
     schema:author twssd:Brian_Gill ;
     schema:dateCreated "2021-02-10T06:48:34-08:00"^^schema:Date ;
     schema:publisher twssd:Mad_About_Movies_Podcast ;
     schema:reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_cf3a5c08-f682-4e9c-97a3-39fd29d903d7> ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_1115501b-2f6c-4b19-af6d-dd769f96f6cc> ;
     schema:url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_18671ee0-40ea-469a-ba2c-4a9eca7bed24> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Mark_Meszoros ;
-    schema:dateCreated "2021-02-13T23:57:56-08:00"^^schema:Date ;
-    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> ;
-    schema:reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_855538e1-4a24-4628-908b-dd5b43b5bceb> ;
-    schema:url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_1e32a381-1029-4d02-b6e0-55291b4130ab> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:David_Sims ;
-    schema:dateCreated "2020-12-28T07:45:33-08:00"^^schema:Date ;
-    schema:publisher twssd:The_Atlantic ;
-    schema:reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6ee3fc29-06a3-4a81-904c-0752f04cf0f7> ;
-    schema:url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_28cadb89-e567-4bd4-9a6d-8e858b4bf98a> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Tony_Medley ;
-    schema:dateCreated "2021-02-22T06:02:11-08:00"^^schema:Date ;
-    schema:publisher twssd:The_Larchmont_Chronicle ;
-    schema:reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_203f398c-f0a6-41f9-b821-930dbb140390> ;
-    schema:url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3675e144-420d-4848-b7c4-0bd514609b1c> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Amy_Nicholson ;
-    schema:dateCreated "2021-01-04T03:37:14-08:00"^^schema:Date ;
-    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> ;
-    schema:reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8131f886-44d5-473d-b684-230f4afeebb8> ;
-    schema:url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3abb5530-b8c5-4755-b814-18169fe7b77e> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:John_McDonald ;
-    schema:dateCreated "2021-01-31T18:14:33-08:00"^^schema:Date ;
-    schema:publisher twssd:Australian_Financial_Review ;
-    schema:reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_63929bcc-bad9-44ad-b366-e41d77ef43b3> ;
-    schema:url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4bdf66fe-9075-4cff-adc5-926c8acbfcbd> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Jake_Wilson ;
-    schema:dateCreated "2020-12-28T07:49:06-08:00"^^schema:Date ;
-    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> ;
-    schema:reviewBody "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a85f1106-a704-48ce-b8d2-8e3a99255f2e> ;
-    schema:url <https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5a321c02-f863-4adb-b16c-d759ff081cb3> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Eddie_Harrison ;
-    schema:dateCreated "2021-02-07T19:57:42-08:00"^^schema:Date ;
-    schema:publisher twssd:film-authority.com ;
-    schema:reviewBody "...a joyless dud, a bucket of sludge when we're crying out for a glass of water..." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c142f8db-be59-4bd9-80aa-2835ebd8f268> ;
-    schema:url <https://film-authority.com/2021/01/11/wonder-woman-1984> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_60f3e5ac-fb16-4c23-be26-a3076042a990> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:David_Bax ;
-    schema:dateCreated "2021-03-23T10:02:10-07:00"^^schema:Date ;
-    schema:publisher twssd:Battleship_Pretension ;
-    schema:reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c34b8648-0e9b-4433-bf40-88554eee8404> ;
-    schema:url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_63b8cb04-2229-46ee-a60a-7be9af88a6db> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_2b4b555c-6e14-4172-ae0e-46558899e135> a schema:Review,
         owl:NamedIndividual ;
     schema:author twssd:Sarah_Ward ;
     schema:dateCreated "2021-02-21T08:36:54-08:00"^^schema:Date ;
     schema:publisher twssd:Concrete_Playground ;
     schema:reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d0d145e8-9b6b-4daf-87c0-5549c72241cd> ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_22d66821-e53e-4b0b-bb69-b95d0fa2396b> ;
     schema:url <https://concreteplayground.com/sydney/event/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6712399d-09a7-442b-b427-abd6d4480472> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_2bbc9e44-85b2-4e71-afe8-b6f79b2c257a> a schema:Review,
         owl:NamedIndividual ;
     schema:author twssd:Stephen_Romei ;
     schema:dateCreated "2020-12-29T12:09:48-08:00"^^schema:Date ;
     schema:publisher twssd:The_Australian ;
     schema:reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_26355d08-165f-4e80-9db7-34b538991465> ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_7f02a2bc-961c-4f69-8271-caac7d16f359> ;
     schema:url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6f879847-a626-4bc8-8adb-43cedc21b318> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_335185d4-a2a2-4d51-8e6d-c1471772dda4> a schema:Review,
         owl:NamedIndividual ;
-    schema:author twssd:Eric_Marchen ;
-    schema:dateCreated "2021-02-17T02:36:51-08:00"^^schema:Date ;
-    schema:publisher twssd:Untitled_Movie_Podcast ;
-    schema:reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6c132113-cda4-492b-9728-e50a51c39386> ;
-    schema:url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> .
+    schema:author twssd:Nina_Garin ;
+    schema:dateCreated "2021-03-01T08:14:02-08:00"^^schema:Date ;
+    schema:publisher twssd:San_Diego_Union-Tribune ;
+    schema:reviewBody "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. " ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f09f6786-ec85-4a3b-8457-64b9e6a39120> ;
+    schema:url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_74e9e2d4-4864-4a57-b357-57a604e37415> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_428dc3a5-8ea3-40e8-b064-a6a71a91753f> a schema:Review,
         owl:NamedIndividual ;
-    schema:author twssd:Dan_Tabor ;
-    schema:dateCreated "2021-02-05T01:55:00-08:00"^^schema:Date ;
-    schema:publisher twssd:Phawker ;
-    schema:reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e938c88f-a3a4-4875-9730-763f0ba0bb32> ;
-    schema:url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot> .
+    schema:author twssd:David_Bax ;
+    schema:dateCreated "2021-03-23T10:02:10-07:00"^^schema:Date ;
+    schema:publisher twssd:Battleship_Pretension ;
+    schema:reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c9de3bd0-8169-4198-af5b-56a1fbb7a9e0> ;
+    schema:url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7a6ec0d7-0068-4654-88e2-5eb0467b636c> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_45beea65-27d1-4bfc-9d9a-3269aa43c8fd> a schema:Review,
         owl:NamedIndividual ;
     schema:author twssd:Rafer_Guzman ;
     schema:dateCreated "2021-01-04T04:59:29-08:00"^^schema:Date ;
     schema:publisher twssd:Newsday ;
     schema:reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6a872320-4732-4880-aae5-4dba3da72f36> ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_b2d20698-33fc-428d-b30f-da09e5eb672f> ;
     schema:url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_aca6cd98-c3bf-45dc-9786-b08b3067d1bc> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Jennifer_Ouellette ;
-    schema:dateCreated "2021-02-11T02:38:41-08:00"^^schema:Date ;
-    schema:publisher twssd:Ars_Technica ;
-    schema:reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2d7e3fba-b223-4ad5-942c-0d6c9ac79ae9> ;
-    schema:url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c1d132bb-eb79-43d3-940a-b7dca77a3c73> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Valerie_Kalfrin ;
-    schema:dateCreated "2021-03-20T08:54:50-07:00"^^schema:Date ;
-    schema:publisher twssd:Their_Own_League ;
-    schema:reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0da97cc4-a8e8-4483-a938-b98a3205875d> ;
-    schema:url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_df5e5f67-1cd6-4fb1-bb69-4aed270b62e4> a schema:Review,
-        owl:NamedIndividual ;
-    schema:author twssd:Sheri_Flanders ;
-    schema:dateCreated "2021-02-01T04:29:30-08:00"^^schema:Date ;
-    schema:publisher twssd:Chicago_Reader ;
-    schema:reviewBody "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_db2bfa9c-8e0b-4300-a634-1c1342f5af5e> ;
-    schema:url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> .
-
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e6602ba8-081f-4a50-bcac-8805ae32949b> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_47ddf233-af0b-481f-be93-94b4bbd9c3d9> a schema:Review,
         owl:NamedIndividual ;
     schema:author twssd:Mark_Jackson ;
     schema:dateCreated "2021-02-02T10:00:09-08:00"^^schema:Date ;
     schema:publisher twssd:Epoch_Times ;
     schema:reviewBody "\"Wonder Woman\" (2017) was one of the best superhero movies ever made. It was idealistic, classy, aesthetically pleasing, and romantic, and should've kicked off a fabulous franchise. Unfortunately the sequel is a major letdown." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_376861c0-e275-4531-9117-799eb98caff9> ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8c2e0e2d-0114-4af4-a8ea-d231c2686720> ;
     schema:url <https://www.theepochtimes.com/film-review-wonder-woman-1984-a-sequel-less-wonderful_3667828.html> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e9e98629-0288-4807-a05c-a12f6ebf34b8> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5afb0750-b1d9-4e7d-bde4-b8ad613dddd6> a schema:Review,
         owl:NamedIndividual ;
-    schema:author twssd:Kevin_Carr ;
-    schema:dateCreated "2021-04-03T14:11:59-07:00"^^schema:Date ;
-    schema:publisher twssd:Fat_Guys_at_the_Movies ;
-    schema:reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_5459982f-faba-4282-ab98-309b4911eee2> ;
-    schema:url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape> .
+    schema:author twssd:Dan_Tabor ;
+    schema:dateCreated "2021-02-05T01:55:00-08:00"^^schema:Date ;
+    schema:publisher twssd:Phawker ;
+    schema:reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_56b28bec-b2bd-4f8c-b7f1-dca4e244ce3f> ;
+    schema:url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ee2f1165-d4ab-41ae-b983-3dc67e47c12a> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5e7c28ea-35d8-404f-8007-36f4b89bf403> a schema:Review,
         owl:NamedIndividual ;
     schema:author twssd:Matt_Neal ;
     schema:dateCreated "2021-01-31T17:01:54-08:00"^^schema:Date ;
     schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/ABC_Radio_%28Australia%29> ;
     schema:reviewBody " After such a stirring debut, it's pains me to say that Wonder Woman 1984 isn't that wonderful." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_dc361cd7-cbdc-405a-b4be-8d28814a9823> ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a332681c-b435-4220-8e4d-7600fea6128f> ;
     schema:url <https://movies8mylife.blogspot.com/2021/02/wonder-woman-1984.html> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_b605f59c-ebe7-4c0e-bf69-820afadee5a5> a schema:WatchAction,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_73df9f57-8d4a-4ad2-a54f-54848283781e> a schema:Review,
         owl:NamedIndividual ;
-    schema:expectsAcceptanceOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_77cb36bc-fa1d-4184-9f98-db2259d54e96> ;
-    schema:target <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_3337e591-0c30-4759-a293-02d72af2d7ff> .
+    schema:author twssd:Tony_Medley ;
+    schema:dateCreated "2021-02-22T06:02:11-08:00"^^schema:Date ;
+    schema:publisher twssd:The_Larchmont_Chronicle ;
+    schema:reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_aa4f3013-2126-4fba-aa8b-69f3f127becc> ;
+    schema:url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_75e5f75d-5231-4874-ad2e-67d6b067146c> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Valerie_Kalfrin ;
+    schema:dateCreated "2021-03-20T08:54:50-07:00"^^schema:Date ;
+    schema:publisher twssd:Their_Own_League ;
+    schema:reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f69d7e62-4b06-422a-a32d-fc65f504d67e> ;
+    schema:url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_789f9728-2ece-4fac-8f39-1bac9be8f9c7> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Ian_Simmons ;
+    schema:dateCreated "2021-02-05T19:46:31-08:00"^^schema:Date ;
+    schema:publisher twssd:Kicking_the_Seat ;
+    schema:reviewBody "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_59021dfb-cfa9-4fb6-9c6f-640cead3b27f> ;
+    schema:url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_930cc62a-3e58-4da9-90be-79fb962fb7ab> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Avaryl_Halley ;
+    schema:dateCreated "2021-03-11T05:51:39-08:00"^^schema:Date ;
+    schema:publisher twssd:Movie_Bitches ;
+    schema:reviewBody "At least \"Justice League\" had at the decency to be short" ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_ac34394a-c975-4de4-b707-d102ce0c511f> ;
+    schema:url <https://youtu.be/75nDMuZMfLs> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_b5c15525-f3f1-46e6-b519-c5b5363430db> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Amy_Nicholson ;
+    schema:dateCreated "2021-01-04T03:37:14-08:00"^^schema:Date ;
+    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> ;
+    schema:reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f3e2c05f-2626-4920-ac3a-b4fe19b9cf1b> ;
+    schema:url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_bba3b4e7-797f-4ca7-a094-3dbae6d79572> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Sheri_Flanders ;
+    schema:dateCreated "2021-02-01T04:29:30-08:00"^^schema:Date ;
+    schema:publisher twssd:Chicago_Reader ;
+    schema:reviewBody "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_febd5f75-fd4b-4657-8a54-4d86592ef4a6> ;
+    schema:url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c67e8302-b31b-4f0a-8964-a217d8a9c5fb> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Eddie_Harrison ;
+    schema:dateCreated "2021-02-07T19:57:42-08:00"^^schema:Date ;
+    schema:publisher twssd:film-authority.com ;
+    schema:reviewBody "...a joyless dud, a bucket of sludge when we're crying out for a glass of water..." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2d45cab8-12e0-4874-9186-7a03d8d95bf9> ;
+    schema:url <https://film-authority.com/2021/01/11/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c75e8a79-83f3-4d0a-8188-ed7ced44b625> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:David_Sims ;
+    schema:dateCreated "2020-12-28T07:45:33-08:00"^^schema:Date ;
+    schema:publisher twssd:The_Atlantic ;
+    schema:reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_3039b7a2-8685-4205-b422-9319e38ef3e7> ;
+    schema:url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d6a8989d-aebc-4229-bdd4-c2361f87625e> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:John_McDonald ;
+    schema:dateCreated "2021-01-31T18:14:33-08:00"^^schema:Date ;
+    schema:publisher twssd:Australian_Financial_Review ;
+    schema:reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_51b003f6-0896-4c79-9bc2-9f315c451976> ;
+    schema:url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d7f0a3da-11b5-44fb-9a5a-b77b31466187> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Jennifer_Ouellette ;
+    schema:dateCreated "2021-02-11T02:38:41-08:00"^^schema:Date ;
+    schema:publisher twssd:Ars_Technica ;
+    schema:reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_ce3c3a86-af77-489e-8755-d54cbb8b8761> ;
+    schema:url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d923d404-efe7-429b-b27b-8796569489bb> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Kevin_Carr ;
+    schema:dateCreated "2021-04-03T14:11:59-07:00"^^schema:Date ;
+    schema:publisher twssd:Fat_Guys_at_the_Movies ;
+    schema:reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e9690d5c-b0cd-4509-bf26-c86a8cd62837> ;
+    schema:url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_dc7c4fc3-176e-4d46-8c33-db61aeb311ff> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Eric_Marchen ;
+    schema:dateCreated "2021-02-17T02:36:51-08:00"^^schema:Date ;
+    schema:publisher twssd:Untitled_Movie_Podcast ;
+    schema:reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d87ae6d0-e62d-4386-b0e2-c5b4b3e1cff2> ;
+    schema:url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e2dc6fb9-0f6c-4154-b19c-57fde54ae96e> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Andrew_Galdi ;
+    schema:dateCreated "2021-03-11T06:02:25-08:00"^^schema:Date ;
+    schema:publisher twssd:Movie_Bitches ;
+    schema:reviewBody "There were just such gross failures of filmmaking..." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_1fbde34b-7369-4437-9365-69568ab97c0a> ;
+    schema:url <https://youtu.be/75nDMuZMfLs> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ea534764-684a-4741-bb47-51668134bbfb> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Mark_Meszoros ;
+    schema:dateCreated "2021-02-13T23:57:56-08:00"^^schema:Date ;
+    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> ;
+    schema:reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8e52bf28-dd50-4636-b1a6-6462eb18574d> ;
+    schema:url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_fd827c93-cbd3-4b2d-b4a2-26c323d66e63> a schema:Review,
+        owl:NamedIndividual ;
+    schema:author twssd:Jake_Wilson ;
+    schema:dateCreated "2020-12-28T07:49:06-08:00"^^schema:Date ;
+    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> ;
+    schema:reviewBody "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel." ;
+    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_bd7f149f-22e1-4d1f-91f4-01149a4014be> ;
+    schema:url <https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_3a9b0211-1f62-4fed-bd97-d18d65272135> a schema:WatchAction,
+        owl:NamedIndividual ;
+    schema:expectsAcceptanceOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_d931db48-7080-456b-9efd-dc3ed00db7b4> ;
+    schema:target <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_0904a57c-09f2-420e-baa5-0ab198116015> .
 
 twssd:jayg_58 a schema:Person,
         owl:NamedIndividual ;
     schema:name "jayg_58" .
 
-twssd:showroom_1035f0db-861b-4a1c-a898-7894025671ec a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
-    twss:name "4D" .
-
-twssd:showroom_17e69fda-979f-4a5a-b2b0-13e1e07047c0 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
-    twss:name "4D" .
-
-twssd:showroom_30633358-d7cc-437d-8047-7c470a2bb875 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
-    twss:name "4D" .
-
-twssd:showroom_7baa845e-dc52-497c-a8aa-343b8818bd8d a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
-    twss:name "4D" .
-
-twssd:showroom_7cb08145-bd67-4523-b723-1c2ff5160858 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> ;
-    twss:name "Classic" .
-
-twssd:showroom_8d56bbe0-cdf8-424f-9c44-7266f1152299 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
-    twss:name "4D" .
-
-twssd:showroom_b90711fd-6b28-4b73-83e3-8ee82fe06384 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
-    twss:name "4D" .
-
-twssd:showroom_f491af3c-110c-42a3-b3be-15265cca969e a owl:NamedIndividual,
+twssd:showroom_1af11656-4b40-44af-adc4-ca3d859aa416 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
     twss:name "4D" .
 
-twssd:showroom_f7ee0a39-5304-406e-98db-60e4744e9d8e a owl:NamedIndividual,
+twssd:showroom_31176210-36b0-461b-80ac-2c1912e671db a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
+    twss:name "4D" .
+
+twssd:showroom_5a28d79b-bbed-4b9d-8b43-bca3f8e634ad a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
+    twss:name "4D" .
+
+twssd:showroom_7c5c21c4-e9aa-4064-ac1d-361dc10e209b a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
+    twss:name "4D" .
+
+twssd:showroom_96d3fc26-2d2a-4895-8b29-fe938a7e79e3 a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> ;
+    twss:name "Classic" .
+
+twssd:showroom_bdedff13-635f-4f64-b6f1-fa6f7ed870fd a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
+    twss:name "4D" .
+
+twssd:showroom_c0ff1923-d3c5-4f63-a6f6-dea856a717f7 a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
+    twss:name "4D" .
+
+twssd:showroom_ee8929d9-6006-4d32-bc1c-b979732a001d a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
+    twss:name "4D" .
+
+twssd:showroom_f285e584-83da-4968-bc2c-238150c81289 a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
     twss:name "4D" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> a owl:Ontology .
@@ -2735,7 +2739,7 @@ twss:name a owl:DatatypeProperty ;
         twssd:Kristen_Wiig,
         twssd:Pedro_Pascal,
         twssd:Robin_Wright ;
-    schema:aggregateRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_76fceb37-c0b5-46ba-b318-36b1251f4dc1> ;
+    schema:aggregateRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_a142fa80-9928-4177-af97-3cc50cc55fde> ;
     schema:countryOfOrigin "EE.UU." ;
     schema:description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
 \r
@@ -2745,12 +2749,12 @@ La trama de esta película es una gran misterio. El guión está basado en una h
     schema:genre "Acción",
         "Aventura",
         "Fantasía" ;
-    schema:hasPart <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_3f17a7fd-3acf-4c5f-bce2-a73bb41c5238> ;
-    schema:image <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_3b851d1e-5a8a-48d1-a62c-43b28f0de5e8> ;
+    schema:hasPart <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_35b9b7d9-566d-4234-9775-7ca1e73247c3> ;
+    schema:image <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_e89ca42a-3bba-41f5-82e8-27815c5d951d> ;
     schema:mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984> ;
     schema:name "Wonder Woman 1984" ;
     schema:productionCompany twssd:Warner_Bros._Pictures ;
-    schema:releasedEvent <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_01002525-f8b2-4cc1-ad10-082e2229d59d> .
+    schema:releasedEvent <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_25547f97-7679-49d2-9518-eb12a485502d> .
 
 schema:Clip a owl:Class ;
     rdfs:subClassOf schema:CreativeWork .
@@ -2866,7 +2870,7 @@ twssd:Walt_Dohrn a owl:NamedIndividual,
         twss:Person ;
     twss:name "Walt Dohrn" .
 
-twssd:showroom_bc1fd77e-c6f7-43d4-b2b5-6e62318a6303 a owl:NamedIndividual,
+twssd:showroom_9ea6e2c4-a638-4876-bc2a-46336eedf60a a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf twssd:CINEMA_CITY ;
     twss:name "SALA 4D" .
@@ -2954,7 +2958,7 @@ twssd:Warner_Bros._Pictures a schema:Organization,
         twss:Person ;
     twss:name "animación" .
 
-twssd:showroom_e938c6c9-93d8-49cb-9b91-feaeb444c8b8 a owl:NamedIndividual,
+twssd:showroom_fa3da2b4-bd1a-4360-bb10-ca78f045d965 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf twssd:CINEMA_CITY ;
     twss:name "SALA HD" .
@@ -3045,7 +3049,7 @@ twssd:Robin_Wright a schema:Person,
     schema:url <https://www.metacritic.com/person/robin-wright> ;
     twss:name "Robin Wright" .
 
-twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 a owl:NamedIndividual,
+twssd:showroom_69d2b0ec-de49-4395-929d-85a763782001 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
     twss:name "Classic" .
@@ -3066,15 +3070,15 @@ twssd:Patty_Jenkins a schema:Person,
         <https://www.metacritic.com/person/patty-jenkins> ;
     twss:name "Patty Jenkins" .
 
-twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
-    twss:name "Classic" .
-
-twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e a owl:NamedIndividual,
+twssd:showroom_2ad28d7f-2d7e-420a-b6c2-5fffe591ca8d a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf twssd:CINEMA_OCHO ;
     twss:name "SALA HD" .
+
+twssd:showroom_a47fcc88-f983-4e3f-8575-183d4c136a0d a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
+    twss:name "Classic" .
 
 twssd:Promising_young_woman a owl:NamedIndividual,
         twss:Movie ;
@@ -3155,8 +3159,8 @@ twssd:Wonder_Woman_1984 a schema:Movie,
         twssd:Pedro_Pascal,
         twssd:Robin_Wright ;
     schema:aggregateRating twssd:Tomatometer,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_87aa2f62-880b-41c3-86af-6432ca2e4dcd>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_b01bf5ba-6cd5-4e35-97cb-27203d58bb20> ;
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_26cbb993-f444-431a-8555-33730bef8c88>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_686435ca-ae2d-434c-be3b-6176ad5af72c> ;
     schema:author twssd:Patty_Jenkins ;
     schema:character "Antiope",
         "Barbara Minerva / Cheetah",
@@ -3168,11 +3172,11 @@ twssd:Wonder_Woman_1984 a schema:Movie,
         twssd:Geoff_Johns,
         twssd:Patty_Jenkins,
         twssd:William_Moulton_Marston,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_1d460420-b4ed-490f-9b01-3e04639ebce3>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_676b4538-55c4-45b8-a8df-68e7014fd1c0>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a0901e40-83a9-4487-9747-1f1bfa89add9>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a35f195b-29a0-46f1-b822-1a40052448f6>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_b4a907f3-a855-4fa3-84c1-0a1ba6358480> ;
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_7f06e0ba-5759-42f2-8b32-bbcc8532058c>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_99fd2de3-746e-4735-b5d8-e13d22556130>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_bc8763d6-c71d-4e35-ae25-a974c413e944>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_bd3de86e-e1d7-49f6-93cc-6ae38dfeb336>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_c5847960-0f1f-47dc-a36d-07bb83f151e6> ;
     schema:dateCreated "2017-09-13T08:24:15-07:00"^^schema:Date ;
     schema:dateModified "2021-05-09T21:02:19-07:00"^^schema:Date ;
     schema:datePublished "2020-12-16"^^schema:Date,
@@ -3195,30 +3199,30 @@ twssd:Wonder_Woman_1984 a schema:Movie,
     schema:productionCompany twssd:Warner_Bros._Pictures ;
     schema:publisher twssd:Warner_Bros._Pictures ;
     schema:review <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_00240a33-a036-463f-ad4c-f6b17b886896>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_09b1b22f-2aeb-4e6c-a6b7-fa87decfd62a>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0a44b512-1555-4281-9bde-568c8bb8c0cd>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_10125c42-3bb7-49fb-a878-cbde3763e035>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_11f670dd-ef39-43fd-8403-100ddcf484ae>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_18671ee0-40ea-469a-ba2c-4a9eca7bed24>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_1e32a381-1029-4d02-b6e0-55291b4130ab>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_28cadb89-e567-4bd4-9a6d-8e858b4bf98a>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3675e144-420d-4848-b7c4-0bd514609b1c>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3abb5530-b8c5-4755-b814-18169fe7b77e>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4bdf66fe-9075-4cff-adc5-926c8acbfcbd>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5a321c02-f863-4adb-b16c-d759ff081cb3>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_60f3e5ac-fb16-4c23-be26-a3076042a990>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_63b8cb04-2229-46ee-a60a-7be9af88a6db>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6712399d-09a7-442b-b427-abd6d4480472>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6f879847-a626-4bc8-8adb-43cedc21b318>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_74e9e2d4-4864-4a57-b357-57a604e37415>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7a6ec0d7-0068-4654-88e2-5eb0467b636c>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_aca6cd98-c3bf-45dc-9786-b08b3067d1bc>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c1d132bb-eb79-43d3-940a-b7dca77a3c73>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_df5e5f67-1cd6-4fb1-bb69-4aed270b62e4>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e6602ba8-081f-4a50-bcac-8805ae32949b>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e9e98629-0288-4807-a05c-a12f6ebf34b8>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ee2f1165-d4ab-41ae-b983-3dc67e47c12a> ;
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_05da74fb-4b19-4242-945a-1ef562b7c5c7>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_2b4b555c-6e14-4172-ae0e-46558899e135>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_2bbc9e44-85b2-4e71-afe8-b6f79b2c257a>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_335185d4-a2a2-4d51-8e6d-c1471772dda4>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_428dc3a5-8ea3-40e8-b064-a6a71a91753f>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_45beea65-27d1-4bfc-9d9a-3269aa43c8fd>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_47ddf233-af0b-481f-be93-94b4bbd9c3d9>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5afb0750-b1d9-4e7d-bde4-b8ad613dddd6>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5e7c28ea-35d8-404f-8007-36f4b89bf403>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_73df9f57-8d4a-4ad2-a54f-54848283781e>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_75e5f75d-5231-4874-ad2e-67d6b067146c>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_789f9728-2ece-4fac-8f39-1bac9be8f9c7>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_930cc62a-3e58-4da9-90be-79fb962fb7ab>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_b5c15525-f3f1-46e6-b519-c5b5363430db>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_bba3b4e7-797f-4ca7-a094-3dbae6d79572>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c67e8302-b31b-4f0a-8964-a217d8a9c5fb>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c75e8a79-83f3-4d0a-8188-ed7ced44b625>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d6a8989d-aebc-4229-bdd4-c2361f87625e>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d7f0a3da-11b5-44fb-9a5a-b77b31466187>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d923d404-efe7-429b-b27b-8796569489bb>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_dc7c4fc3-176e-4d46-8c33-db61aeb311ff>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e2dc6fb9-0f6c-4154-b19c-57fde54ae96e>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ea534764-684a-4741-bb47-51668134bbfb>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_fd827c93-cbd3-4b2d-b4a2-26c323d66e63> ;
     schema:trailer twssd:Stream_on_HBO_Max_for_a_Limited_Time,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> ;
     schema:url <https://www.imdb.com/title/tt7126948>,
@@ -3245,17 +3249,17 @@ twssd:Wonder_Woman_1984 a schema:Movie,
     twss:title "Mujer Maravilla 1984",
         "Wonder Woman 1984" .
 
-twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 a owl:NamedIndividual,
+twssd:showroom_7ebac982-f4b3-4b25-ae20-35fe14ae2dca a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
     twss:name "Classic" .
 
-twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 a owl:NamedIndividual,
+twssd:showroom_827687f1-e397-4613-93db-e7c395d856f7 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf twssd:CINEMA_ROCHA ;
     twss:name "SALA HD" .
 
-twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 a owl:NamedIndividual,
+twssd:showroom_e038b7d0-491b-4936-ad74-4662f5e19043 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
     twss:name "Classic" .
@@ -3263,7 +3267,7 @@ twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 a owl:NamedIndividual,
 schema:AggregateRating a owl:Class ;
     rdfs:subClassOf schema:Rating .
 
-twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 a owl:NamedIndividual,
+twssd:showroom_e63d328f-08b1-4e89-a855-bb044a615440 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
     twss:name "Classic" .
@@ -3318,19 +3322,19 @@ twssd:Trolls_2 a owl:NamedIndividual,
     twss:title "Trolls 2",
         "Trolls 2: Gira mundial" .
 
-twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
-    twss:name "Classic" .
-
-twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c a owl:NamedIndividual,
+twssd:showroom_0f954eca-3fe0-467c-99eb-f7bb2ae37811 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf twssd:CINEMA_PARADISO ;
     twss:name "SALA HD" .
 
-twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b a owl:NamedIndividual,
+twssd:showroom_44e256e6-b78a-4436-8d6d-f961361138d2 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
+    twss:name "Classic" .
+
+twssd:showroom_9bc3760e-41c1-496f-8e3f-076149e924e9 a owl:NamedIndividual,
+        twss:ShowRoom ;
+    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
     twss:name "Classic" .
 
 schema:Movie a owl:Class ;
@@ -3362,7 +3366,7 @@ twssd:Tom_and_Jerry a owl:NamedIndividual,
     twss:title "Tom and Jerry",
         "Tom y Jerry" .
 
-twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 a owl:NamedIndividual,
+twssd:showroom_6cbd67d6-d921-4458-af79-795a3a49df5b a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf twssd:CINEMA_SAN_MARTIN ;
     twss:name "SALA HD" .
@@ -3392,7 +3396,7 @@ twssd:Chaos_Walking a owl:NamedIndividual,
     twss:title "Caos: El Inicio",
         "Chaos Walking" .
 
-twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf a owl:NamedIndividual,
+twssd:showroom_4902ba15-a9ed-47b0-ac80-9751a66d2203 a owl:NamedIndividual,
         twss:ShowRoom ;
     twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
     twss:name "Classic" .
@@ -3452,9 +3456,9 @@ twssd:Godzilla_vs._Kong a owl:NamedIndividual,
     twss:title "Godzilla Vs. Kong",
         "Godzilla vs. Kong" .
 
-schema:CreativeWork a owl:Class .
-
 twss:ShowRoom a owl:Class .
+
+schema:CreativeWork a owl:Class .
 
 schema:Review a owl:Class ;
     rdfs:subClassOf schema:CreativeWork .

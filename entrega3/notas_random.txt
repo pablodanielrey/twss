@@ -830,15 +830,18 @@ analizando los datos veo que use schema:text y schema:description
 para la sinopsis de las películas. modifico los scripts para usar description.
 
 
+---
+
+
+funcionó!!!.
+asi que solo me queda completar los arhcivos de texto explicando un poco.
+y realizar la entrega.
+llegué nuevamente con lo justo en tiempo.
 
 
 
 
 
-
-
-
-ver duration!!
 
 
 
