@@ -69,4 +69,11 @@ protegé me lo muestra ok.
 
 
 
+me faltó leer el libro que subió casco al moodle.
+creo que me ubiera ayudado mucho en la solución de este tp. y la respuesta a varias dudas que me fueron surgiendo a medida del desarrollo.
+mas que nada como relacionar ontologías, patrones, etc.
+pero no llegué con el tiempo.
 
+la conclusión final del tp es que es un mundo apasionante.
+la representación del conocimiento y como unir ese conocimiento.
+y que me falta muchisimas pruebas e investigación para llegar a una solución que me convenza.
