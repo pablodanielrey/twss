@@ -5,6 +5,7 @@ import rdflib
 from urllib.parse import quote
 from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef
 
+
 def bind_schemas(g:Graph):
     g.bind('schema',Namespace('http://schema.org/'))
     g.bind("t", Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss.ttl#'))

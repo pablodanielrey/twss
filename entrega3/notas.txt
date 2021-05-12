@@ -40,7 +40,7 @@ igualmente me encontre con el dilema de como manejar esa situación.
 1 - puedo modificar la iri para uqe me la muestre protegé. pero estaría modificando una IRI!!! lo cual es una identificación de un recurso. no estaría bien.
 2 - puedo sacarle la iri y generar una interna mía. y agregar en una propiedad del individual que identifique la iri original. algo como owl:sameAs
 
-identificación de los mismos individuals. que criterios usar.
+identificación de los mismos individuals. que criterios usar. (hice una solución parcial y después la comenté porque no me convenció)
 y cuando? despues de procesar todo el grafo?
 se refiere a usar consultas sobre el grafo para poder asignar propieades de igualdad entre individuals. (owl:sameAs)
 ir recorreindo el grafo y usar criterios como (si es el mismo tipo, y si tiene el mismo name entonces asignar owl:sameAs)
@@ -73,6 +73,9 @@ me faltó leer el libro que subió casco al moodle.
 creo que me ubiera ayudado mucho en la solución de este tp. y la respuesta a varias dudas que me fueron surgiendo a medida del desarrollo.
 mas que nada como relacionar ontologías, patrones, etc.
 pero no llegué con el tiempo.
+pero claramente en la solución 1 no me dejó contento. por eso no la extendi mas.
+en las películas me muestra debajo de Movie, a wonder woman, ya que tiene las 2 types. schema:Movie, Movie
+aunque le haya definido owl:equivalentClass en la ontología.
 
 la conclusión final del tp es que es un mundo apasionante.
 la representación del conocimiento y como unir ese conocimiento.

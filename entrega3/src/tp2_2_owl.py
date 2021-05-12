@@ -51,7 +51,7 @@ def to_lean_graph(data_namespace, g:Graph):
         else:
             ''' no tiene nombre asi que genero un uuid '''
             for st, sp, so in g.triples((bn, RDF.type, None)):
-                prefix = str(so)
+                prefix = str(so).replace('http://schema.org/','')
                 break
             else:
                 prefix = None
