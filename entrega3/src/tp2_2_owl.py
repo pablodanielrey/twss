@@ -49,7 +49,12 @@ def to_lean_graph(data_namespace, g:Graph):
             break
         else:
             ''' no tiene nombre asi que genero un uuid '''
-            bnid = str(uuid.uuid4())
+            for st, sp, so in g.triples((bn, RDF.type, None)):
+                prefix = str(so)
+                break
+            else:
+                prefix = None
+            bnid = str(uuid.uuid4()) if not prefix else f"{prefix}_{str(uuid.uuid4())}"
 
         dbnid = data_namespace[bnid]
 
@@ -78,20 +83,22 @@ def mark_as_equal(g:Graph):
     data = {}
     for iri, sp, _type in g.triples((None, RDF.type, None)):
         for stt, spp, _name in g.triples((iri, schema.name, None)):
-            k = (_type,_name)
-            if k not in data:
-                data[k] = [iri]
-            else:
-                data[k].append(iri)
+            if _type not in data:
+                data[_type] = {}
+            if _name not in data[_type]:
+                data[_type][_name] = []
+            data[_type][_name].append(iri)
 
     for k in data:
-        if len(data[k]) <= 1:
-            continue
-        for i, iri in enumerate(data[k]):
-            if len(data[k]) > i+1:
-                iri2 = data[k][i+1]
-                g.add((iri, OWL.sameAs, iri2))
-                g.add((iri2, OWL.sameAs, iri))
+        for n in data[k]:
+            if len(data[k][n]) <= 1:
+                continue
+            for i, iri in enumerate(data[k][n]):
+                if len(data[k][n]) > i+1:
+                    iri2 = data[k][n][i+1]
+                    g.add((iri, OWL.sameAs, iri2))
+                    g.add((iri2, OWL.sameAs, iri))
+
 
 """
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -100,7 +107,7 @@ def mark_as_equal(g:Graph):
 /////////////////////////////////////////////////////////////////////////////////////////////
 
     VERIFICAR CON CASCO Y CON DIEGO SI ESTO ESTA OK !!!!
-    CREO QUE ESTARIA MAL MODIFICAR LAS IRIs!!
+    CREO QUE ESTARIA MAL MODIFICAR LAS IRIs solo para que protegé me lo muestre con nombre!!
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -128,18 +135,14 @@ def validate_iris_for_protege(g:Graph):
         niri = URIRef(str(s[:-1]))
         for st, sp, so in g.triples((s,None,None)):
             assert st == s
-            print(f'agregando {niri}')
             g.add((niri, sp, so))
-            print(f'Eliminanod {st}')
             g.remove((st, sp, so))
 
     for o in objects:
         niri = URIRef(str(o[:-1]))
         for st, sp, so in g.triples((None,None,o)):
             assert so == o
-            print(f'agregando {niri}')
             g.add((st, sp, niri))
-            print(f'Eliminanod {so}')
             g.remove((st, sp, so))
 
 
@@ -181,13 +184,16 @@ if __name__ == '__main__':
         g = Graph()
         bind_schemas(g)
         g.parse(data=djson_ld, format='json-ld', publicID=url)
+        
         validate_iris_for_protege(g)
+
+
+
         unionGraph = unionGraph + g
 
     data_namespace = Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/')
     to_lean_graph(data_namespace, unionGraph)
     add_named_individuals(unionGraph)
-
 
     mark_as_equal(unionGraph)
 

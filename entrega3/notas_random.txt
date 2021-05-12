@@ -590,13 +590,14 @@ tengo varias alternativas.
 1 - le hago percha el @id de ecartelera antes de procesar todo.
 esto generaría un blanknode para esta también y sería matcheada por la iri generada con el nombre en los pasos posteriores.
  pero me parece una solución específica a este caso y no correcta. debería buscar soluciones mas generales.
+ aunque esto lo que estaría significando que incorporo a esa película a mi ontología. uso una iri interna para identificar el recurso de la película.
 
-2 - validar de alguna forma que el grafo generado por el json-ld de cada fuente tenga iris válidas para sus recursos aunque sea.
+2 - validar de alguna forma que el grafo generado por el json-ld de cada fuente tenga iris válidas para protegé para sus recursos.
 no solucionaría el tema del merge, ya que si dejamos la iri como: https://www.ecartelera.com/peliculas/wonder-woman-1984
-va a ser distinto recurso que los otros wonder woman. pero creo que esto es lo mejor.
+va a ser distinto recurso que los otros wonder woman.
 (es la que voy a intentar realizar)
 
-resolvió el problema ok. pero me suena que no se puede realizar eso.
+resolvió el problema ok. pero me suena que no se puede realizar eso!!!
 lo deje comentado en el código como una función para verificar con diego y con casco.
 básicamente busco en sujetos y objetos si son referencias a iris y si tienen el / final se lo elimino.
 """
@@ -650,6 +651,32 @@ def validate_iris_for_protege(g:Graph):
 
 -----------------------------
 
+
+ahora se muestra ok todo en protegé.
+pero me arrepentí!!!. las iris deben ser internas a mi ontologia, si es la info que estoy exportando.
+asi que voy a modificar el código y vovler atras.
+algo parecido a la opción 1, pero lo voy a manejar en las tripletas.
+lo convierto a blank node primero y posteriormente se le va a asignar un nodo dentro de mi namespace de datos. (twssd)
+la iri anterior la almaceno dentro de ese grafo usando owl:sameAs asi no pierdo la lógica
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ahora se muestra todo en protegé.
 la única cosa que me falta hacer es identificar recursos identicos y marcarlos usanod owl:sameAs
 a ver si protegé me los identifica como el mismo recurso.
@@ -664,12 +691,46 @@ pero sigo sin entender todo lo que muestra protege.
 hay datos que todavía no entiendo bien como los interpreta y por que los muestra de determinada forma.
 por lo que veo en el archivo turtle es coeherente todo lo que se encuentra ahí.
 
+pero NO me gusta que la película exportada de ecartelera tenga la iri externa a mi ontología.
+asi que la voy a reemplazar por un identificador denro
+
+
+
 
 ---------------------------------
 
+errores que veo de protegé
+
+   INFO  22:31:01  [GitRepo] Git repository detected: /src/github/facu-infor/twss/.git
+   INFO  22:31:01  [GitRepo] On branch: master
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/embedUrl> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Stream_on_HBO_Max_for_a_Limited_Time> <https://www.imdb.com/video/imdb/vi3240214809>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/sameAs> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Robin_Wright> <https://www.rottentomatoes.com/celebrity/robin_wright>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/sameAs> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Patty_Jenkins> <https://www.rottentomatoes.com/celebrity/patty_jenkins>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/sameAs> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Connie_Nielsen> <https://www.rottentomatoes.com/celebrity/connie_nielsen>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/sameAs> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chris_Pine> <https://www.rottentomatoes.com/celebrity/christopher_pine>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/sameAs> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kristen_Wiig> <https://www.rottentomatoes.com/celebrity/kristen_wiig>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/sameAs> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gal_Gadot> <https://www.rottentomatoes.com/celebrity/gal-gadot>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/sameAs> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Pedro_Pascal> <https://www.rottentomatoes.com/celebrity/pedro_pascal>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/thumbnailUrl> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> <https://content.internetvideoarchive.com/content/hdphotos/13126/013126/013126_820x461_637413475681110755.jpg>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/thumbnailUrl> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Stream_on_HBO_Max_for_a_Limited_Time> <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  22:31:01  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/sameAs>=<http://schema.org/sameAs>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/contentUrl> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/a806be99-578d-4d34-b159-5adfe317a3b8> <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+   INFO  22:31:01  Applying 846 change(s) to patch ontology to reloaded ontology
 
 
 
+------------------
+
+cambie schema:sameAs 
+a object property y en los casos de uso de los datos que tengo parece que esta funcionando bien.
+
+   INFO  23:27:43  Loading ontology from file:/src/github/facu-infor/twss/entrega3/data/merged.ttl
+  ERROR  23:27:44  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/embedUrl> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Stream_on_HBO_Max_for_a_Limited_Time> <https://www.imdb.com/video/imdb/vi3240214809>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  23:27:44  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/thumbnailUrl> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> <https://content.internetvideoarchive.com/content/hdphotos/13126/013126/013126_820x461_637413475681110755.jpg>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  23:27:44  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/thumbnailUrl> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Stream_on_HBO_Max_for_a_Limited_Time> <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+  ERROR  23:27:44  Attempt to transform an axiom to correct misuse of properties failed. Property replacement: {<http://schema.org/embedUrl>=<http://schema.org/embedUrl>, <http://schema.org/thumbnailUrl>=<http://schema.org/thumbnailUrl>, <http://schema.org/contentUrl>=<http://schema.org/contentUrl>}, axiom: AnnotationAssertion(<http://schema.org/contentUrl> <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/c13915eb-bced-4e5e-97eb-e12ec3ac3cb1> <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg>), error: org.semanticweb.owlapi.model.IRI cannot be cast to org.semanticweb.owlapi.model.OWLLiteral
+   INFO  23:27:44  Finished loading file:/src/github/facu-infor/twss/entrega3/data/merged.ttl
+   INFO  23:27:44  [GitRepo] Git repository detected: /src/github/facu-infor/twss/.git
+   INFO  23:27:44  [GitRepo] On branch: master
 
 
 

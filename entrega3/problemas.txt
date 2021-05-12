@@ -8,11 +8,9 @@ validación de los datos consumidos en json-ld.
 validador de ontologías? 
 consultas sobre grafos armados para validar datos sobre fuentes ya validadas y confiables?
 
-
 mostrar datos no normalizados en protegé.
-no se si es correcto lo que hice con las iris de lo que no se mostraba.
-la / final no la toma protegé y con lógica.
-
+no se si es correcto modificar iris que te llegan de sitios de donde se consume la info.
+pero protegé no muestra nombre en el caso de que tenga / final en la iri!!
 
 identificación de los mismos individuals. que criterios usar.
 y cuando? despues de procesar todo el grafo?

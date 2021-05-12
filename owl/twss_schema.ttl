@@ -130,6 +130,12 @@
                                  rdfs:range <http://schema.org/Rating> .
 
 
+###  http://schema.org/sameAs
+<http://schema.org/sameAs> rdf:type owl:ObjectProperty ;
+                           rdfs:domain owl:Thing ;
+                           rdfs:range owl:Thing .
+
+
 ###  http://schema.org/thumbnail
 <http://schema.org/thumbnail> rdf:type owl:ObjectProperty ;
                               rdfs:domain <http://schema.org/ImageObject> ,
@@ -274,12 +280,6 @@
 <http://schema.org/reviewBody> rdf:type owl:DatatypeProperty ;
                                rdfs:domain <http://schema.org/Review> ;
                                rdfs:range xsd:string .
-
-
-###  http://schema.org/sameAs
-<http://schema.org/sameAs> rdf:type owl:DatatypeProperty ;
-                           rdfs:domain owl:Thing ;
-                           rdfs:range xsd:string .
 
 
 ###  http://schema.org/startDate
