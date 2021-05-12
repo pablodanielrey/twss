@@ -6,9 +6,9 @@ como la web semántica permite representar información desde múltiples fuentes
 tp1 exporatría en una ontología básica creada en protegé para experimentar la creación de ontologías simples cmo explicó casco en los videos.
 en este caso voy a leer el archivo json merge que ya está estructurado.
 esto me permite tener una idea de como es exportar datos estructurados de una base en formatos de la web semántica.
-los tomo como si fueran "mis" datos generados en un sistema. (salas cines funciones, etc)
+los tomo como si fueran "mis" datos generados en un sistema y exportarlos al mundo usando tecnologías de la web semántica. (salas cines funciones, etc)
 
-tp2 modificar los scrapers para manejar tripletas directamente, (o generar alguno simplificado ya que no tendría que manejar json-ld si no mas bien tripletas del grafo)
+tp2 modificar los scrapers para manejar tripletas directamente, (generar alguno simplificado ya que no tendría que manejar json-ld si no mas bien tripletas del grafo)
 analizar si es que me conviene usar la ontología creada anteriormente o extender alguna, usar alguna combinación de las mismas.
 la idea es experimentar un caso real sobre la web semántica donde se obtienen datos de múltiples ontologías.
 
@@ -27,10 +27,13 @@ pero quería la posibilidad de expresarla en hh:mm:ss
 veo que existe una ontología que es una recomendación para representar el tiempo.
 https://www.w3.org/TR/owl-time/
 la definición esta en : http://www.w3.org/2006/time#
+por ahora uso la solución simple que es representarla en un número dado en minutos.
 
 ----
-Ya tengo los datos de tp1 en ontología y sus individuals.
-ahora sigo con tp2 y la modificación del scraper.
+Ya tengo los datos de tp1 en ontología y sus individuals correctamente generados por el script.
+
+----
+sigo con tp2 y la modificación del scraper.
 
 idea, como comentó casco en el foro, esta bueno pensar en tripletas en vez de en clases.
 asi que voy a hacer la prueba de cargar los jsons-ld que responden los sitios a tripletas y manejarlos internamente en el scraper como tripletas.
@@ -47,7 +50,7 @@ genero un parser para ver si puedo parsear la info json-ld a tripletas.
 uso rdflib para testear.
 
 
-primer problema encontrado:
+primer problema encontrado (la librería rdflib y schema.org):
 
 
   File "/home/pablo/.local/lib/python3.9/site-packages/rdflib_jsonld/context.py", line 65, in subcontext
@@ -68,6 +71,7 @@ https://github.com/RDFLib/rdflib-jsonld/issues/84
 
 efectivamente trata de descargar el context de schema.org ya que el json-ld de origen lo lista como contexto.
 viendo el tráfico de red generado cuando ejecuto el script. veo que se comunica con schema.org
+usando tcpdump
 
     192.168.10.5.45910 > 172.217.172.78.80: Flags [P.], cksum 0x913d (correct), seq 1:213, ack 1, win 502, options [nop,nop,TS val 1128910949 ecr 556658059], length 212: HTTP, length: 212
 	GET / HTTP/1.1
@@ -98,10 +102,10 @@ curl -v -H "accept: application/ld+json" "http://schema.org"
 https://github.com/schemaorg/schemaorg/issues/2578
 
 
-el problema es generado por la cabecera link de shcema.org
+el problema es generado por la cabecera link de schema.org
 es parte de la especificación de json-ld 1.1 para manejar la negociación de contenido y de donde descargar la info, pero parece que las librerías todavia no lo han actualizado.
 asi que modifico HORRIBLEMENTE la librería como dicen en los issues de github para que carge del archivo local el contexto de schema.org
-
+y descargo el archivo del context (src/jsonldcontext.jsonld) para leerlo del filesystem.
 
 rdflib_jsonld/context.py
 
@@ -510,6 +514,7 @@ schema:embedUrl
 schema:contentUrl
 schema:thumbnailUrl
 schema:sameAs
+schema:character
 
 -------------
 
@@ -526,6 +531,157 @@ por cada blank node tenga alguna otra tripleta con schema:name
 si la tiene, uso el valor de name de esa tripleta para generar la iri resultante.
 como son tripletas ahora el tema de la deduplicación debería ser super simple (gracias casco!!) ya que las tripletas con las propiedades irían a la misma iri.
 lo pruebo.
+
+Funcionoooo!!!. ej:
+
+twssd:Chris_Silcox a schema:Person,
+        owl:NamedIndividual ;
+    schema:name "Chris Silcox" ;
+    schema:url <https://www.metacritic.com/person/chris-silcox> .
+
+
+pero asi también veo cosas como:
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> a schema:Organization,
+        owl:NamedIndividual ;
+    schema:name "FilmWeek (KPCC - NPR Los Angeles)" ;
+    schema:url <https://www.rottentomatoes.com/source-3509> .
+
+que es generado por el fuente:
+
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "FilmWeek (KPCC - NPR Los Angeles)",
+                    "url": "https://www.rottentomatoes.com/source-3509"
+                }
+
+o sea que hay que de alguna forma analizar los datos que se obtienen de los fuentes json-ld por validez y coherencia. (como se hace? mas que usar algun validador de ontología? es suficiente?)
+
+------------
+
+veo que funcionó bien,
+me hizo merge de las películas Wonder Woman 1984!!
+tengo a un solo individual todas las tripletas de las distintas fuentes de datos.
+(actores, reviews, imagenes, publishers, etc)
+
+pero tengo 2 películas wonder woman 1984.
+una con nombre, que es resultado del merge y del proceo anterior.
+y otra que sale de ecartelera que la exporta con @id.
+como tiene id en trutle es el iri de la película. asi que no es un blank node y no se genera el iri con el nombre como en los otros casos.
+
+ {
+        "@context": "http://schema.org",
+        "@type": "Movie",
+        "@id": "https://www.ecartelera.com/peliculas/wonder-woman-1984/",
+
+pero ese id no es válido para protegé!
+le tengo que sacar el / final y ahi si lo muestra.
+no sería una iri válida.
+
+convertido a turtle veo:
+
+<https://www.ecartelera.com/peliculas/wonder-woman-1984/> a schema:Movie ;
+    schema:actor [ a schema:Person ;
+            schema:mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig/> ;
+            schema:name "Kristen Wiig" ],
+
+  
+tengo varias alternativas.
+1 - le hago percha el @id de ecartelera antes de procesar todo.
+esto generaría un blanknode para esta también y sería matcheada por la iri generada con el nombre en los pasos posteriores.
+ pero me parece una solución específica a este caso y no correcta. debería buscar soluciones mas generales.
+
+2 - validar de alguna forma que el grafo generado por el json-ld de cada fuente tenga iris válidas para sus recursos aunque sea.
+no solucionaría el tema del merge, ya que si dejamos la iri como: https://www.ecartelera.com/peliculas/wonder-woman-1984
+va a ser distinto recurso que los otros wonder woman. pero creo que esto es lo mejor.
+(es la que voy a intentar realizar)
+
+resolvió el problema ok. pero me suena que no se puede realizar eso.
+lo deje comentado en el código como una función para verificar con diego y con casco.
+básicamente busco en sujetos y objetos si son referencias a iris y si tienen el / final se lo elimino.
+"""
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+    VERIFICAR CON CASCO Y CON DIEGO SI ESTO ESTA OK !!!!
+    CREO QUE ESTARIA MAL MODIFICAR LAS IRIs!!
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+"""
+def validate_iris_for_protege(g:Graph):
+    ''' 
+        hago una simple validación y cambio de iris 
+        para que protege me los muestre ok.
+        si termina en / le saco la /
+        NOTA: NO se si esto esta ok, ya que las iris no son urls para buscar cosas, si 
+        no son identificadores que no tienen mayor sentido que identificar!!
+    '''
+    subjects = set()
+    objects = set()
+    for st,sp,so in g:
+        if isinstance(st,URIRef) and str(st).endswith('/'):
+            subjects.add(st)
+
+        if isinstance(so,URIRef) and str(so).endswith('/'):
+            objects.add(so)
+        
+    for s in subjects:
+        niri = URIRef(str(s[:-1]))
+        for st, sp, so in g.triples((s,None,None)):
+            assert st == s
+            print(f'agregando {niri}')
+            g.add((niri, sp, so))
+            print(f'Eliminanod {st}')
+            g.remove((st, sp, so))
+
+    for o in objects:
+        niri = URIRef(str(o[:-1]))
+        for st, sp, so in g.triples((None,None,o)):
+            assert so == o
+            print(f'agregando {niri}')
+            g.add((st, sp, niri))
+            print(f'Eliminanod {so}')
+            g.remove((st, sp, so))
+
+-----------------------------
+
+ahora se muestra todo en protegé.
+la única cosa que me falta hacer es identificar recursos identicos y marcarlos usanod owl:sameAs
+a ver si protegé me los identifica como el mismo recurso.
+lo voy a probar usando el tipo y nombre.
+si un recurso tiene mismo tipo y mismo nombre lo voy a marcar como sameAs.
+
+------
+
+bueno funciono ok lo que quise hacer.
+veo que las instancias de los individuals de las 2 wonder woman fueron relacionadas por owl:sameAs
+pero sigo sin entender todo lo que muestra protege.
+hay datos que todavía no entiendo bien como los interpreta y por que los muestra de determinada forma.
+por lo que veo en el archivo turtle es coeherente todo lo que se encuentra ahí.
+
+
+---------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

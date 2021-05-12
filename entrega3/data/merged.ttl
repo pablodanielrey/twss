@@ -1,1549 +1,1417 @@
-@prefix : <http://schema.org/> .
+@prefix default1: <http://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-:actionPlatform a owl:DatatypeProperty ;
-    rdfs:domain :EntryPoint ;
+default1:actionPlatform a owl:DatatypeProperty ;
+    rdfs:domain default1:EntryPoint ;
     rdfs:range xsd:string .
 
-:actor a owl:ObjectProperty ;
-    rdfs:domain :Movie ;
-    rdfs:range :Person .
+default1:actor a owl:ObjectProperty ;
+    rdfs:domain default1:Movie ;
+    rdfs:range default1:Person .
 
-:actors a owl:ObjectProperty ;
-    rdfs:domain :Clip,
-        :Movie ;
-    rdfs:range :Person .
+default1:actors a owl:ObjectProperty ;
+    rdfs:domain default1:Clip,
+        default1:Movie ;
+    rdfs:range default1:Person .
 
-:aggregateRating a owl:ObjectProperty ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :AggregateRating .
+default1:aggregateRating a owl:ObjectProperty ;
+    rdfs:domain default1:CreativeWork ;
+    rdfs:range default1:AggregateRating .
 
-:author a owl:ObjectProperty ;
-    rdfs:domain :CreativeWork,
-        :Rating ;
-    rdfs:range :Organization,
-        :Person .
+default1:author a owl:ObjectProperty ;
+    rdfs:domain default1:CreativeWork,
+        default1:Rating ;
+    rdfs:range default1:Organization,
+        default1:Person .
 
-:availabilityStarts a owl:DatatypeProperty ;
-    rdfs:domain :Offer ;
+default1:availabilityStarts a owl:DatatypeProperty ;
+    rdfs:domain default1:Offer ;
     rdfs:range xsd:string .
 
-:bestRating a owl:DatatypeProperty ;
-    rdfs:domain :Rating ;
+default1:bestRating a owl:DatatypeProperty ;
+    rdfs:domain default1:Rating ;
     rdfs:range xsd:float,
         xsd:string .
 
-:category a owl:DatatypeProperty ;
-    rdfs:domain :Offer ;
+default1:category a owl:DatatypeProperty ;
+    rdfs:domain default1:Offer ;
     rdfs:range xsd:string .
 
-:contentRating a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:contentRating a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:string .
 
-:contentUrl a owl:DatatypeProperty ;
-    rdfs:domain :MediaObject ;
+default1:contentUrl a owl:DatatypeProperty ;
+    rdfs:domain default1:MediaObject ;
     rdfs:range xsd:string .
 
-:countryOfOrigin a owl:DatatypeProperty ;
-    rdfs:domain :Movie ;
+default1:countryOfOrigin a owl:DatatypeProperty ;
+    rdfs:domain default1:Movie ;
     rdfs:range xsd:string .
 
-:creator a owl:ObjectProperty ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :Organization,
-        :Person .
+default1:creator a owl:ObjectProperty ;
+    rdfs:domain default1:CreativeWork ;
+    rdfs:range default1:Organization,
+        default1:Person .
 
-:dateCreated a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:dateCreated a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:dateTime .
 
-:dateModified a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:dateModified a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:dateTime .
 
-:datePublished a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:datePublished a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:string ;
     rdfs:subPropertyOf owl:topDataProperty .
 
-:description a owl:DatatypeProperty ;
+default1:description a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-:director a owl:ObjectProperty ;
-    rdfs:domain :Movie ;
-    rdfs:range :Person ;
+default1:director a owl:ObjectProperty ;
+    rdfs:domain default1:Movie ;
+    rdfs:range default1:Person ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-:duration a owl:DatatypeProperty ;
-    rdfs:domain :Movie ;
+default1:duration a owl:DatatypeProperty ;
+    rdfs:domain default1:Movie ;
     rdfs:range xsd:decimal,
         xsd:string .
 
-:eligibleRegion a owl:ObjectProperty ;
-    rdfs:domain :Offer ;
-    rdfs:range :Place .
+default1:eligibleRegion a owl:ObjectProperty ;
+    rdfs:domain default1:Offer ;
+    rdfs:range default1:Place .
 
-:embedUrl a owl:DatatypeProperty ;
-    rdfs:domain :MediaObject ;
+default1:embedUrl a owl:DatatypeProperty ;
+    rdfs:domain default1:MediaObject ;
     rdfs:range xsd:string .
 
-:genre a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:genre a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:string .
 
-:hasPart a owl:ObjectProperty ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :CreativeWork .
+default1:hasPart a owl:ObjectProperty ;
+    rdfs:domain default1:CreativeWork ;
+    rdfs:range default1:CreativeWork .
 
-:image a owl:ObjectProperty ;
+default1:image a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
-    rdfs:range :ImageObject .
+    rdfs:range default1:ImageObject .
 
-:inLanguage a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:inLanguage a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:string .
 
-:itemReviewed a owl:ObjectProperty ;
-    rdfs:domain :AggregateRating,
-        :Review ;
+default1:itemReviewed a owl:ObjectProperty ;
+    rdfs:domain default1:AggregateRating,
+        default1:Review ;
     rdfs:range owl:Thing .
 
-:keywords a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:keywords a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:string .
 
-:location a owl:ObjectProperty ;
-    rdfs:domain :Action,
-        :Event,
-        :Organization ;
-    rdfs:range :Place .
+default1:location a owl:ObjectProperty ;
+    rdfs:domain default1:Action,
+        default1:Event,
+        default1:Organization ;
+    rdfs:range default1:Place .
 
-:mainEntityOfPage a owl:ObjectProperty ;
+default1:mainEntityOfPage a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
-    rdfs:range :CreativeWork ;
+    rdfs:range default1:CreativeWork ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-:name a owl:DatatypeProperty ;
+default1:name a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-:potentialAction a owl:ObjectProperty ;
+default1:potentialAction a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
-    rdfs:range :Action .
+    rdfs:range default1:Action .
 
-:productionCompany a owl:ObjectProperty ;
-    rdfs:domain :Movie ;
-    rdfs:range :Organization .
+default1:productionCompany a owl:ObjectProperty ;
+    rdfs:domain default1:Movie ;
+    rdfs:range default1:Organization .
 
-:publisher a owl:ObjectProperty ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :Organization,
-        :Person .
+default1:publisher a owl:ObjectProperty ;
+    rdfs:domain default1:CreativeWork ;
+    rdfs:range default1:Organization,
+        default1:Person .
 
-:ratingCount a owl:DatatypeProperty ;
-    rdfs:domain :AggregateRating ;
+default1:ratingCount a owl:DatatypeProperty ;
+    rdfs:domain default1:AggregateRating ;
     rdfs:range xsd:integer .
 
-:ratingValue a owl:DatatypeProperty ;
-    rdfs:domain :Rating ;
+default1:ratingValue a owl:DatatypeProperty ;
+    rdfs:domain default1:Rating ;
     rdfs:range xsd:float .
 
-:releasedEvent a owl:ObjectProperty ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :PublicationEvent .
+default1:releasedEvent a owl:ObjectProperty ;
+    rdfs:domain default1:CreativeWork ;
+    rdfs:range default1:PublicationEvent .
 
-:review a owl:ObjectProperty ;
-    rdfs:domain :CreativeWork ;
-    rdfs:range :Review .
+default1:review a owl:ObjectProperty ;
+    rdfs:domain default1:CreativeWork ;
+    rdfs:range default1:Review .
 
-:reviewBody a owl:DatatypeProperty ;
-    rdfs:domain :Review ;
+default1:reviewBody a owl:DatatypeProperty ;
+    rdfs:domain default1:Review ;
     rdfs:range xsd:string .
 
-:reviewRating a owl:ObjectProperty ;
-    rdfs:domain :Review ;
-    rdfs:range :Rating .
+default1:reviewRating a owl:ObjectProperty ;
+    rdfs:domain default1:Review ;
+    rdfs:range default1:Rating .
 
-:sameAs a owl:DatatypeProperty ;
+default1:sameAs a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-:startDate a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:startDate a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:dateTime .
 
-:thumbnail a owl:ObjectProperty ;
-    rdfs:domain :ImageObject,
-        :VideoObject ;
-    rdfs:range :ImageObject .
+default1:thumbnail a owl:ObjectProperty ;
+    rdfs:domain default1:ImageObject,
+        default1:VideoObject ;
+    rdfs:range default1:ImageObject .
 
-:thumbnailUrl a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:thumbnailUrl a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:string .
 
-:timeRequired a owl:DatatypeProperty ;
-    rdfs:domain :CreativeWork ;
+default1:timeRequired a owl:DatatypeProperty ;
+    rdfs:domain default1:CreativeWork ;
     rdfs:range xsd:string .
 
-:trailer a owl:ObjectProperty ;
-    rdfs:domain :Movie ;
-    rdfs:range :VideoObject .
+default1:trailer a owl:ObjectProperty ;
+    rdfs:domain default1:Movie ;
+    rdfs:range default1:VideoObject .
 
-:uploadDate a owl:DatatypeProperty ;
-    rdfs:domain :MediaObject ;
+default1:uploadDate a owl:DatatypeProperty ;
+    rdfs:domain default1:MediaObject ;
     rdfs:range xsd:dateTime .
 
-:url a owl:ObjectProperty ;
+default1:url a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range owl:Thing .
 
-:urlTemplate a owl:DatatypeProperty ;
-    rdfs:domain :EntryPoint ;
+default1:urlTemplate a owl:DatatypeProperty ;
+    rdfs:domain default1:EntryPoint ;
     rdfs:range xsd:string .
 
-:worstRating a owl:DatatypeProperty ;
-    rdfs:domain :Rating ;
+default1:worstRating a owl:DatatypeProperty ;
+    rdfs:domain default1:Rating ;
     rdfs:range xsd:float .
 
-twssd:0d6a964f-b6e7-45db-90fb-bc88481b68ae a :Movie,
-        owl:NamedIndividual ;
-    :actor twssd:215f4d33-1d8d-4dc7-8095-7f18672a6cd6,
-        twssd:4b473813-1677-48cf-a39c-c205fc046939,
-        twssd:56827e8e-5df5-468f-8a50-b2a80baa6274,
-        twssd:93c2afde-6847-4ef7-be6c-01692e66c563 ;
-    :aggregateRating twssd:2e28c8f0-9dab-488f-b492-4d33a8016a45 ;
-    :contentRating "PG-13" ;
-    :creator twssd:16bab90f-8f69-4074-81f8-d4746a2b35d8,
-        twssd:18d05278-cc92-4ee4-a260-cc78f7e75b56,
-        twssd:23b608e7-04bd-45d2-8a9c-bfac433ca606,
-        twssd:2f4ef863-a1f1-4d8e-823d-a26db9c92e7c,
-        twssd:710029b2-010a-4270-92fd-4637a4ba80b1,
-        twssd:7c34483f-0376-444b-bfe4-4e15529dc737,
-        twssd:95994489-091d-44bf-936d-06e725a9738b,
-        twssd:ac7bbee3-0467-4353-9093-2d46b8939f23,
-        twssd:aef9583e-48cd-4ea4-bb72-9b8a6205352e,
-        twssd:ced4ddc2-cf2d-42e8-97d9-ed0a4c49f955,
-        twssd:fab4c936-6557-4f57-b0fe-6378e7cc84f5 ;
-    :datePublished "2020-12-16"^^:Date ;
-    :description "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..." ;
-    :director twssd:6e7f47dc-809e-4cee-9187-ad6fb80236a8 ;
-    :duration "PT2H31M" ;
-    :genre "Action",
-        "Adventure",
-        "Fantasy" ;
-    :image <https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg> ;
-    :keywords "sequel,superhero,dc extended universe,dc comics,one woman army" ;
-    :name "Wonder Woman 1984" ;
-    :review twssd:f3914e97-cbc4-43c1-a743-2945509d39aa ;
-    :trailer twssd:ff137bf0-7f8c-4cd7-bb42-b54ff24a1d6c ;
-    :url <https://www.imdb.com/title/tt7126948/> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> a owl:Ontology .
 
-twssd:244ea917-f091-4516-86d3-d45720211423 a :Movie,
+default1:AdministrativeArea a owl:Class ;
+    rdfs:subClassOf default1:Place .
+
+default1:ConsumeAction a owl:Class ;
+    rdfs:subClassOf default1:Action .
+
+default1:Country a owl:Class ;
+    rdfs:subClassOf default1:AdministrativeArea .
+
+default1:WatchAction a owl:Class ;
+    rdfs:subClassOf default1:ConsumeAction .
+
+twssd:015b27cd-c4a2-431a-8318-cbf310b40255 a default1:CreativeWork,
         owl:NamedIndividual ;
-    :actors twssd:1d034a28-5742-469e-83b4-59849653cf46,
-        twssd:6c35ef39-ad60-4d72-b300-cabe5e9dc6ed,
-        twssd:8200418c-22de-41f4-b97f-9e0ea0592184,
-        twssd:9646b080-8c37-46f6-b613-08830dd77653,
-        twssd:b65ec930-6e31-43f8-b9cd-0f4d4c164dd5,
-        twssd:fc324277-31f0-4ce5-8469-ed67756a6fe7 ;
-    :aggregateRating twssd:3d07e3cc-f0d0-477e-8d20-5f62a57112fc ;
-    :author twssd:ec1f247f-b81e-423a-a5f2-732cb243b274 ;
-    :character "Antiope",
+    default1:url <https://www.imdb.com/title/tt7126948> .
+
+twssd:0f137eb4-605f-4529-a222-025273d9fced a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Mark_Meszoros ;
+    default1:dateCreated "2021-02-13T23:57:56-08:00"^^default1:Date ;
+    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> ;
+    default1:reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
+    default1:reviewRating twssd:2b88298d-e4f1-4e26-b4c6-be37a35cabd1 ;
+    default1:url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> .
+
+twssd:15e90fa2-4c6f-40ce-9db6-f5dc8894a26b a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:1a3da5c6-c6a2-4b83-81f3-d008f1bec0fd a default1:Clip,
+        owl:NamedIndividual ;
+    default1:description "trailer" ;
+    default1:potentialAction twssd:b22f0d5b-e0f3-40ec-8175-7314858fa49f ;
+    default1:timeRequired "PT2M24S" .
+
+twssd:1a4577c5-e2d2-4ec4-9201-d4a93958cf6e a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Sarah_Ward ;
+    default1:dateCreated "2021-02-21T08:36:54-08:00"^^default1:Date ;
+    default1:publisher twssd:Concrete_Playground ;
+    default1:reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
+    default1:reviewRating twssd:4e538370-8346-4ca6-90bf-c817f5646262 ;
+    default1:url <https://concreteplayground.com/sydney/event/wonder-woman-1984> .
+
+twssd:2225a6a5-d785-46cd-be6a-67d8caf04ede a default1:AggregateRating,
+        owl:NamedIndividual ;
+    default1:bestRating "10" ;
+    default1:ratingCount "20" ;
+    default1:ratingValue "7,6" ;
+    default1:worstRating "0" .
+
+twssd:24b9c0fc-d30a-41b9-8a6b-b0f6de06789c a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Eddie_Harrison ;
+    default1:dateCreated "2021-02-07T19:57:42-08:00"^^default1:Date ;
+    default1:publisher twssd:film-authority.com ;
+    default1:reviewBody "...a joyless dud, a bucket of sludge when we're crying out for a glass of water..." ;
+    default1:reviewRating twssd:e2249242-60ab-460d-bb51-306350646ea9 ;
+    default1:url <https://film-authority.com/2021/01/11/wonder-woman-1984> .
+
+twssd:2793c9fa-5897-4b27-adba-2ba7afb58bb3 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:27e203fb-d63f-4b59-a413-6ad464c33689 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Rafer_Guzman ;
+    default1:dateCreated "2021-01-04T04:59:29-08:00"^^default1:Date ;
+    default1:publisher twssd:Newsday ;
+    default1:reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
+    default1:reviewRating twssd:7d2e6dd9-6f05-4d6c-968e-17b6303f522f ;
+    default1:url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> .
+
+twssd:2b88298d-e4f1-4e26-b4c6-be37a35cabd1 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:35f0265d-b896-4b04-9a74-811f2a3c32d8 a default1:Organization,
+        owl:NamedIndividual ;
+    default1:url <https://www.imdb.com/company/co0728674> .
+
+twssd:360f440c-38fc-4b58-8183-c80c96df5836 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:John_McDonald ;
+    default1:dateCreated "2021-01-31T18:14:33-08:00"^^default1:Date ;
+    default1:publisher twssd:Australian_Financial_Review ;
+    default1:reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
+    default1:reviewRating twssd:5c1701bf-f713-42ef-991e-672007630eda ;
+    default1:url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984> .
+
+twssd:369acf85-d1df-484e-8cdb-bfd970c47a53 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Dan_Tabor ;
+    default1:dateCreated "2021-02-05T01:55:00-08:00"^^default1:Date ;
+    default1:publisher twssd:Phawker ;
+    default1:reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
+    default1:reviewRating twssd:2793c9fa-5897-4b27-adba-2ba7afb58bb3 ;
+    default1:url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot> .
+
+twssd:3ddbe695-67a8-4c13-b84e-8876996ed329 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+twssd:479b3e8b-9733-4c8e-a787-ee0b06a809c2 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Andrew_Galdi ;
+    default1:dateCreated "2021-03-11T06:02:25-08:00"^^default1:Date ;
+    default1:publisher twssd:Movie_Bitches ;
+    default1:reviewBody "There were just such gross failures of filmmaking..." ;
+    default1:reviewRating twssd:5d2514ba-9ebb-47cc-ba68-faedf72633f8 ;
+    default1:url <https://youtu.be/75nDMuZMfLs> .
+
+twssd:4bbfe17d-9e4a-4480-a00e-c338d229ada5 a default1:Organization,
+        owl:NamedIndividual ;
+    default1:url <https://www.imdb.com/company/co0038332> .
+
+twssd:4e369bb6-ca59-43e2-a42d-d1d310ffb022 a default1:Organization,
+        owl:NamedIndividual ;
+    default1:url <https://www.imdb.com/company/co0283444> .
+
+twssd:4e538370-8346-4ca6-90bf-c817f5646262 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+twssd:5385e43e-2464-45a2-8c06-3a9d96f20422 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:54c0301b-e13c-4c90-844e-88a8b9961aed a default1:Offer,
+        owl:NamedIndividual ;
+    default1:availabilityStarts "2019-12-08 22:30:37"^^default1:Date ;
+    default1:category "free" ;
+    default1:eligibleRegion twssd:ES .
+
+twssd:56cbb058-0694-4b3e-975f-259d2bdaf152 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Stephen_Romei ;
+    default1:dateCreated "2020-12-29T12:09:48-08:00"^^default1:Date ;
+    default1:publisher twssd:The_Australian ;
+    default1:reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
+    default1:reviewRating twssd:ae9a43fe-05c7-4664-8fb8-3410031775fc ;
+    default1:url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> .
+
+twssd:5c1701bf-f713-42ef-991e-672007630eda a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+twssd:5cca4187-cf89-4d14-a8dc-4d27211f4de1 a default1:ImageObject,
+        owl:NamedIndividual ;
+    default1:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
+
+twssd:5d2514ba-9ebb-47cc-ba68-faedf72633f8 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+twssd:658edd39-15a1-4a9b-8186-005dca268af1 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Mark_Jackson ;
+    default1:dateCreated "2021-02-02T10:00:09-08:00"^^default1:Date ;
+    default1:publisher twssd:Epoch_Times ;
+    default1:reviewBody "\"Wonder Woman\" (2017) was one of the best superhero movies ever made. It was idealistic, classy, aesthetically pleasing, and romantic, and should've kicked off a fabulous franchise. Unfortunately the sequel is a major letdown." ;
+    default1:reviewRating twssd:7bde47ab-52f4-4904-94fb-00da57ce734d ;
+    default1:url <https://www.theepochtimes.com/film-review-wonder-woman-1984-a-sequel-less-wonderful_3667828.html> .
+
+twssd:65ae5248-71e7-4669-98d1-bb2129e77ec0 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:6b7179f9-3acc-4f6e-8c5b-1a2577db2114 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:6c70479a-0733-4711-885b-dd2285052028 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Amy_Nicholson ;
+    default1:dateCreated "2021-01-04T03:37:14-08:00"^^default1:Date ;
+    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> ;
+    default1:reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
+    default1:reviewRating twssd:89887439-bb2c-4f11-8952-55cc5c3e5c85 ;
+    default1:url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo> .
+
+twssd:7a42c8b4-c91f-4bea-92dd-073787bbe6e7 a default1:AggregateRating,
+        owl:NamedIndividual ;
+    default1:bestRating "10.0" ;
+    default1:ratingCount 198912 ;
+    default1:ratingValue "5.4" ;
+    default1:worstRating "1.0" .
+
+twssd:7bde47ab-52f4-4904-94fb-00da57ce734d a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+twssd:7d2e6dd9-6f05-4d6c-968e-17b6303f522f a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:8040eaff-1a3a-4b71-a91d-3fe0b4e646a8 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Nina_Garin ;
+    default1:dateCreated "2021-03-01T08:14:02-08:00"^^default1:Date ;
+    default1:publisher twssd:San_Diego_Union-Tribune ;
+    default1:reviewBody "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. " ;
+    default1:reviewRating twssd:a3f0b822-249e-41c5-8d1c-c80d8c1a2d8b ;
+    default1:url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> .
+
+twssd:8446674d-cade-4ac4-8e19-467c3402cd51 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Jennifer_Ouellette ;
+    default1:dateCreated "2021-02-11T02:38:41-08:00"^^default1:Date ;
+    default1:publisher twssd:Ars_Technica ;
+    default1:reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
+    default1:reviewRating twssd:5385e43e-2464-45a2-8c06-3a9d96f20422 ;
+    default1:url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor> .
+
+twssd:846fdf09-2da8-40fc-ac45-efc850484d5b a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:87303d53-78f9-4a99-a1f9-fef38e182b10 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:89887439-bb2c-4f11-8952-55cc5c3e5c85 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:8a77bccc-262a-499a-bac5-7eee0dd906f5 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:8ae19836-92d7-4b07-915c-de62ae961364 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+twssd:9e9b8508-71a4-4edd-820e-dd2274025be9 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/ABC_Radio_%28Australia%29> a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "ABC Radio (Australia)" ;
+    default1:url <https://www.rottentomatoes.com/source-2397> .
+
+twssd:Alex_Delescu a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Alex Delescu" ;
+    default1:url <https://www.metacritic.com/person/alex-delescu> .
+
+twssd:Amr_Waked a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Amr Waked" ;
+    default1:url <https://www.metacritic.com/person/amr-waked> .
+
+twssd:Amreen_N._Yaqoob a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Amreen N. Yaqoob" ;
+    default1:url <https://www.metacritic.com/person/amreen-n-yaqoob> .
+
+twssd:Amy_Nicholson a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Amy Nicholson" ;
+    default1:url <https://www.rottentomatoes.com/critic/amy-nicholson> .
+
+twssd:Andrew_Galdi a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Andrew Galdi" ;
+    default1:url <https://www.rottentomatoes.com/critic/andrew-galdi> .
+
+twssd:Ars_Technica a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Ars Technica" ;
+    default1:url <https://www.rottentomatoes.com/source-2985> .
+
+twssd:Australian_Financial_Review a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Australian Financial Review" ;
+    default1:url <https://www.rottentomatoes.com/source-3199> .
+
+twssd:Avaryl_Halley a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Avaryl Halley" ;
+    default1:url <https://www.rottentomatoes.com/critic/avaryl-halley> .
+
+twssd:Battleship_Pretension a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Battleship Pretension" ;
+    default1:url <https://www.rottentomatoes.com/source-3090> .
+
+twssd:Bern_Collaco a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Bern Collaco" ;
+    default1:url <https://www.metacritic.com/person/bern-collaco> .
+
+twssd:Brian_Gill a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Brian Gill" ;
+    default1:url <https://www.rottentomatoes.com/critic/brian-gill> .
+
+twssd:Brittney_Aleah a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Brittney Aleah" ;
+    default1:url <https://www.metacritic.com/person/brittney-aleah> .
+
+twssd:Chicago_Reader a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Chicago Reader" ;
+    default1:url <https://www.rottentomatoes.com/source-66> .
+
+twssd:Chris_Silcox a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Chris Silcox" ;
+    default1:url <https://www.metacritic.com/person/chris-silcox> .
+
+twssd:Concrete_Playground a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Concrete Playground" ;
+    default1:url <https://www.rottentomatoes.com/source-2298> .
+
+twssd:Dan_Tabor a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Dan Tabor" ;
+    default1:url <https://www.rottentomatoes.com/critic/dan-tabor> .
+
+twssd:Dave_Callaham a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Dave Callaham" ;
+    default1:url <https://www.imdb.com/name/nm1709264> .
+
+twssd:David_Bax a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "David Bax" ;
+    default1:url <https://www.rottentomatoes.com/critic/david-bax> .
+
+twssd:David_Sims a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "David Sims" ;
+    default1:url <https://www.rottentomatoes.com/critic/david-sims> .
+
+twssd:Eddie_Harrison a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Eddie Harrison" ;
+    default1:url <https://www.rottentomatoes.com/critic/eddie-harrison> .
+
+twssd:Ella_Walker a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Ella Walker" ;
+    default1:url <https://www.metacritic.com/person/ella-walker> .
+
+twssd:Epoch_Times a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Epoch Times" ;
+    default1:url <https://www.rottentomatoes.com/source-2771> .
+
+twssd:Eric_Marchen a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Eric Marchen" ;
+    default1:url <https://www.rottentomatoes.com/critic/eric-marchen> .
+
+twssd:Fat_Guys_at_the_Movies a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Fat Guys at the Movies" ;
+    default1:url <https://www.rottentomatoes.com/source-2722> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "FilmWeek (KPCC - NPR Los Angeles)" ;
+    default1:url <https://www.rottentomatoes.com/source-3509> .
+
+twssd:Gabriella_Wilde a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Gabriella Wilde" ;
+    default1:url <https://www.metacritic.com/person/gabriella-wilde> .
+
+twssd:Geoff_Johns a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Geoff Johns" ;
+    default1:url <https://www.imdb.com/name/nm0424315> .
+
+twssd:Ian_Simmons a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Ian Simmons" ;
+    default1:url <https://www.rottentomatoes.com/critic/ian-simmons> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.> a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:jayg_58 ;
+    default1:dateCreated "2021-01-01"^^default1:Date ;
+    default1:inLanguage "English" ;
+    default1:itemReviewed twssd:015b27cd-c4a2-431a-8318-cbf310b40255 ;
+    default1:name "In quarantine, you'll buy anything." ;
+    default1:reviewBody "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours." ;
+    default1:reviewRating twssd:cb357ec6-0b71-4969-a67c-9ca055f81f8f .
+
+twssd:Jake_Wilson a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Jake Wilson" ;
+    default1:url <https://www.rottentomatoes.com/critic/jake-wilson> .
+
+twssd:Jamaal_Burcher a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Jamaal Burcher" ;
+    default1:url <https://www.metacritic.com/person/jamaal-burcher> .
+
+twssd:Jamal_Alkhaldi a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Jamal Alkhaldi" ;
+    default1:url <https://www.metacritic.com/person/jamal-alkhaldi> .
+
+twssd:Jeff_Moore a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Jeff Moore" ;
+    default1:url <https://www.metacritic.com/person/jeff-moore> .
+
+twssd:Jennifer_Ouellette a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Jennifer Ouellette" ;
+    default1:url <https://www.rottentomatoes.com/critic/jennifer-ouellette> .
+
+twssd:Joel_Morris a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Joel Morris" ;
+    default1:url <https://www.metacritic.com/person/joel-morris> .
+
+twssd:John_Gettier a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "John Gettier" ;
+    default1:url <https://www.metacritic.com/person/john-gettier> .
+
+twssd:John_McDonald a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "John McDonald" ;
+    default1:url <https://www.rottentomatoes.com/critic/john-mcdonald> .
+
+twssd:Jonathan_Ajayi a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Jonathan Ajayi" ;
+    default1:url <https://www.metacritic.com/person/jonathan-ajayi> .
+
+twssd:Julian_Ferro a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Julian Ferro" ;
+    default1:url <https://www.metacritic.com/person/julian-ferro> .
+
+twssd:Justin_Sisk a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Justin Sisk" ;
+    default1:url <https://www.metacritic.com/person/justin-sisk> .
+
+twssd:Kaila_Ingram a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Kaila Ingram" ;
+    default1:url <https://www.metacritic.com/person/kaila-ingram> .
+
+twssd:Kevin_Carr a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Kevin Carr" ;
+    default1:url <https://www.rottentomatoes.com/critic/kevin-carr> .
+
+twssd:Kicking_the_Seat a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Kicking the Seat" ;
+    default1:url <https://www.rottentomatoes.com/source-3892> .
+
+twssd:Kristoffer_Polaha a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Kristoffer Polaha" ;
+    default1:url <https://www.metacritic.com/person/kristoffer-polaha> .
+
+twssd:Lilly_Aspell a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Lilly Aspell" ;
+    default1:url <https://www.metacritic.com/person/lilly-aspell> .
+
+twssd:Lolita_Marie a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Lolita Marie" ;
+    default1:url <https://www.metacritic.com/person/lolita-marie> .
+
+twssd:Lynda_Carter a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Lynda Carter" ;
+    default1:url <https://www.metacritic.com/person/lynda-carter> .
+
+twssd:Lyon_Beckwith a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Lyon Beckwith" ;
+    default1:url <https://www.metacritic.com/person/lyon-beckwith> .
+
+twssd:Mad_About_Movies_Podcast a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Mad About Movies Podcast" ;
+    default1:url <https://www.rottentomatoes.com/source-3256> .
+
+twssd:Manoj_Anand a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Manoj Anand" ;
+    default1:url <https://www.metacritic.com/person/manoj-anand> .
+
+twssd:Marisol_Correa a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Marisol Correa" ;
+    default1:url <https://www.metacritic.com/person/marisol-correa> .
+
+twssd:Mark_Jackson a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Mark Jackson" ;
+    default1:url <https://www.rottentomatoes.com/critic/mark-jackson> .
+
+twssd:Mark_Meszoros a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Mark Meszoros" ;
+    default1:url <https://www.rottentomatoes.com/critic/mark-meszoros> .
+
+twssd:Marla_Aaron_Wapner a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Marla Aaron Wapner" ;
+    default1:url <https://www.metacritic.com/person/marla-aaron-wapner> .
+
+twssd:Matt_Neal a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Matt Neal" ;
+    default1:url <https://www.rottentomatoes.com/critic/matt-neal> .
+
+twssd:Monica_Haynes a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Monica Haynes" ;
+    default1:url <https://www.metacritic.com/person/monica-haynes> .
+
+twssd:Natasha_Rothwell a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Natasha Rothwell" ;
+    default1:url <https://www.metacritic.com/person/natasha-rothwell> .
+
+twssd:Newsday a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Newsday" ;
+    default1:url <https://www.rottentomatoes.com/source-338> .
+
+twssd:Nina_Garin a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Nina Garin" ;
+    default1:url <https://www.rottentomatoes.com/critic/nina-garin> .
+
+twssd:Oakley_Bull a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Oakley Bull" ;
+    default1:url <https://www.metacritic.com/person/oakley-bull> .
+
+twssd:Paul_Ron_Cruz a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Paul Ron Cruz" ;
+    default1:url <https://www.metacritic.com/person/paul-ron-cruz> .
+
+twssd:Penelope_Kapudija a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Penelope Kapudija" ;
+    default1:url <https://www.metacritic.com/person/penelope-kapudija> .
+
+twssd:Phawker a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Phawker" ;
+    default1:url <https://www.rottentomatoes.com/source-3631> .
+
+twssd:Rafer_Guzman a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Rafer Guzman" ;
+    default1:url <https://www.rottentomatoes.com/critic/rafer-guzman> .
+
+twssd:Ravi_Patel a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Ravi Patel" ;
+    default1:url <https://www.metacritic.com/person/ravi-patel> .
+
+twssd:Rick_Kelvin_Branch a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Rick Kelvin Branch" ;
+    default1:url <https://www.metacritic.com/person/rick-kelvin-branch> .
+
+twssd:San_Diego_Union-Tribune a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "San Diego Union-Tribune" ;
+    default1:url <https://www.rottentomatoes.com/source-503> .
+
+twssd:Sarah_Ward a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Sarah Ward" ;
+    default1:url <https://www.rottentomatoes.com/critic/sarah-ward> .
+
+twssd:Sheri_Flanders a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Sheri Flanders" ;
+    default1:url <https://www.rottentomatoes.com/critic/sheri-flanders> .
+
+twssd:Sia_Alipour a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Sia Alipour" ;
+    default1:url <https://www.metacritic.com/person/sia-alipour> .
+
+twssd:Sonia_Goswami a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Sonia Goswami" ;
+    default1:url <https://www.metacritic.com/person/sonia-goswami> .
+
+twssd:Spencer_Trinwith a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Spencer Trinwith" ;
+    default1:url <https://www.metacritic.com/person/spencer-trinwith> .
+
+twssd:Stephen_Romei a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Stephen Romei" ;
+    default1:url <https://www.rottentomatoes.com/critic/stephen-romei> .
+
+twssd:Stream_on_HBO_Max_for_a_Limited_Time a default1:VideoObject,
+        owl:NamedIndividual ;
+    default1:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
+    default1:embedUrl <https://www.imdb.com/video/imdb/vi3240214809> ;
+    default1:name "Stream on HBO Max for a Limited Time" ;
+    default1:thumbnail twssd:a806be99-578d-4d34-b159-5adfe317a3b8 ;
+    default1:thumbnailUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ;
+    default1:uploadDate "2020-12-07T01:51:07Z"^^default1:Date .
+
+twssd:Tessa_Bonham_Jones a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Tessa Bonham Jones" ;
+    default1:url <https://www.metacritic.com/person/tessa-bonham-jones> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "The Age (Australia)" ;
+    default1:url <https://www.rottentomatoes.com/source-2041> .
+
+twssd:The_Atlantic a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "The Atlantic" ;
+    default1:url <https://www.rottentomatoes.com/source-24> .
+
+twssd:The_Australian a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "The Australian" ;
+    default1:url <https://www.rottentomatoes.com/source-1964> .
+
+twssd:The_Larchmont_Chronicle a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "The Larchmont Chronicle" ;
+    default1:url <https://www.rottentomatoes.com/source-2992> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "The News-Herald (Willoughby, OH)" ;
+    default1:url <https://www.rottentomatoes.com/source-3916> .
+
+twssd:Their_Own_League a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Their Own League" ;
+    default1:url <https://www.rottentomatoes.com/source-3607> .
+
+twssd:Thomas_Clay_Strickland a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Thomas Clay Strickland" ;
+    default1:url <https://www.metacritic.com/person/thomas-clay-strickland> .
+
+twssd:Tomatometer a default1:AggregateRating,
+        owl:NamedIndividual ;
+    default1:bestRating "100" ;
+    default1:description "The Tomatometer rating – based on the published opinions of hundreds of film and television critics – is a trusted measurement of movie and TV programming quality for millions of moviegoers. It represents the percentage of professional critic reviews that are positive for a given film or television show." ;
+    default1:name "Tomatometer" ;
+    default1:ratingCount "426" ;
+    default1:ratingValue "59" ;
+    default1:reviewCount "426" ;
+    default1:worstRating "0" .
+
+twssd:Tony_Medley a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Tony Medley" ;
+    default1:url <https://www.rottentomatoes.com/critic/tony-medley> .
+
+twssd:Untitled_Movie_Podcast a default1:Organization,
+        owl:NamedIndividual ;
+    default1:name "Untitled Movie Podcast" ;
+    default1:url <https://www.rottentomatoes.com/source-3831> .
+
+twssd:Valerie_Kalfrin a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "Valerie Kalfrin" ;
+    default1:url <https://www.rottentomatoes.com/critic/valerie-kalfrin> .
+
+twssd:William_Moulton_Marston a default1:Person,
+        owl:NamedIndividual ;
+    default1:name "William Moulton Marston" ;
+    default1:url <https://www.imdb.com/name/nm0551376> .
+
+twssd:Wonder_Woman_1984 a default1:Movie,
+        owl:NamedIndividual ;
+    default1:actor twssd:Alex_Delescu,
+        twssd:Amr_Waked,
+        twssd:Amreen_N._Yaqoob,
+        twssd:Bern_Collaco,
+        twssd:Brittney_Aleah,
+        twssd:Chris_Pine,
+        twssd:Chris_Silcox,
+        twssd:Connie_Nielsen,
+        twssd:Ella_Walker,
+        twssd:Gabriella_Wilde,
+        twssd:Gal_Gadot,
+        twssd:Jamaal_Burcher,
+        twssd:Jamal_Alkhaldi,
+        twssd:Jeff_Moore,
+        twssd:Joel_Morris,
+        twssd:John_Gettier,
+        twssd:Jonathan_Ajayi,
+        twssd:Julian_Ferro,
+        twssd:Justin_Sisk,
+        twssd:Kaila_Ingram,
+        twssd:Kristen_Wiig,
+        twssd:Kristoffer_Polaha,
+        twssd:Lilly_Aspell,
+        twssd:Lolita_Marie,
+        twssd:Lynda_Carter,
+        twssd:Lyon_Beckwith,
+        twssd:Manoj_Anand,
+        twssd:Marisol_Correa,
+        twssd:Marla_Aaron_Wapner,
+        twssd:Monica_Haynes,
+        twssd:Natasha_Rothwell,
+        twssd:Oakley_Bull,
+        twssd:Paul_Ron_Cruz,
+        twssd:Pedro_Pascal,
+        twssd:Penelope_Kapudija,
+        twssd:Ravi_Patel,
+        twssd:Rick_Kelvin_Branch,
+        twssd:Robin_Wright,
+        twssd:Sia_Alipour,
+        twssd:Sonia_Goswami,
+        twssd:Spencer_Trinwith,
+        twssd:Tessa_Bonham_Jones,
+        twssd:Thomas_Clay_Strickland ;
+    default1:actors twssd:Chris_Pine,
+        twssd:Connie_Nielsen,
+        twssd:Gal_Gadot,
+        twssd:Kristen_Wiig,
+        twssd:Pedro_Pascal,
+        twssd:Robin_Wright ;
+    default1:aggregateRating twssd:7a42c8b4-c91f-4bea-92dd-073787bbe6e7,
+        twssd:Tomatometer,
+        twssd:bb62a4f7-8e82-48a3-855f-dfef8d848479 ;
+    default1:author twssd:Patty_Jenkins ;
+    default1:character "Antiope",
         "Barbara Minerva / Cheetah",
         "Diana Prince / Wonder Woman",
         "Hippolyta",
         "Steve Trevor" ;
-    :contentRating "PG-13" ;
-    :dateCreated "2017-09-13T08:24:15-07:00"^^:Date ;
-    :dateModified "2021-05-09T21:02:19-07:00"^^:Date ;
-    :director twssd:ea15579b-ec60-4ba8-a201-0632f8d21d76 ;
-    :genre "Action & Adventure",
-        "Science Fiction & Fantasy" ;
-    :image <https://resizing.flixster.com/m8G6eIbecl1KNYf1yd2lt2F5yX8=/740x380/v1.bjsyNTUxODM4O2o7MTg4Mzk7MTIwMDs0MTIyOzIzMTI> ;
-    :name "Wonder Woman 1984" ;
-    :productionCompany twssd:f30cf388-85b1-4621-bb65-2fcd601eb1a3 ;
-    :review twssd:1ac69c49-11ec-4aa0-b47f-0dc9bd20591b,
-        twssd:271614f3-d9bb-4c10-9870-dde458e253e0,
-        twssd:291a7b58-f81e-4a6d-bce9-6ade38501030,
-        twssd:2d7e4bd5-355d-4aee-a85e-1698a77e6d24,
-        twssd:3723eff1-f808-48e1-baec-da268ba8a2ac,
-        twssd:3891ddb0-de8a-402c-b339-391e8fe36735,
-        twssd:47806c8a-fd79-45ac-a563-06ae79555d08,
-        twssd:55bd8859-45aa-4cf8-b957-b3b3c637017b,
-        twssd:5902e6d8-9a92-47b1-b3f5-92b76a7a55ef,
-        twssd:70286e80-9385-4fee-abd6-c1a9f6609d67,
-        twssd:8a8da1f5-31c3-40b1-b9ec-d5e46856f521,
-        twssd:90119565-bf8f-4132-9b92-74bfb0c305e7,
-        twssd:91c35cd7-e95e-4098-8f78-bd39cdb603cc,
-        twssd:b28ea6b8-69bd-488a-9a8e-9c5d131b43cc,
-        twssd:b9384b38-a96c-49bf-9f37-60415a4f023d,
-        twssd:bddcf382-e1da-4ced-a8e1-a5c8fcb7cb81,
-        twssd:c7adb6f6-d0a3-4515-9325-68e7f9837326,
-        twssd:d0f141d2-acb8-4be2-af80-226144573c52,
-        twssd:d4491893-694c-4943-a17b-669ede8c4974,
-        twssd:dacac64c-07df-4687-8a4b-9f43c709f39f,
-        twssd:df0bca62-a06a-42c9-a4ac-8fa3d5ec114a,
-        twssd:e5c7027e-658b-4c96-807d-7efd59c96de5,
-        twssd:fd12ceb2-1396-4845-9103-e89075bd46f8,
-        twssd:ffe64d6d-24ee-4a75-8d0b-5c2727b14b07 ;
-    :url <https://www.rottentomatoes.com/m/wonder_woman_1984> .
-
-twssd:fef906a2-4875-4ef4-ad60-cfb76a918587 a :Movie,
-        owl:NamedIndividual ;
-    :actor twssd:047c0cb7-a75d-4c40-bf3c-0595db27cf92,
-        twssd:0577ebd2-0f9c-4229-8a71-a8fcf3a123fe,
-        twssd:15b3be5b-d49c-4fbf-b3fb-415d70b55f08,
-        twssd:1727a4f5-c33d-4cc0-9b3f-7e96380fa1c9,
-        twssd:1b35ee83-93b4-4339-82ef-5ba7e8c38d2e,
-        twssd:1bae26ec-136e-46bf-acf6-f19b7afa6ede,
-        twssd:1c4b7a68-76cb-47fa-937c-b7c789d7af91,
-        twssd:20b9f7d8-1222-4cce-b702-4e72e10aa454,
-        twssd:253e23dc-1a9c-469f-8ff3-064a2346c549,
-        twssd:275c6f58-903b-4ed5-afe9-13d26ce873b8,
-        twssd:319094b2-bbb7-477f-abec-b4ec347189f5,
-        twssd:346379a9-ec2f-4f7b-982f-613ec0e1f2d8,
-        twssd:3d4e0b11-2c09-4966-9fe9-1e8b15e4a5dd,
-        twssd:40b9ac96-d85a-4b3c-9b34-7484a63e7ff9,
-        twssd:444c70af-b0df-4ffe-8b35-791908908d13,
-        twssd:47d280b5-df12-4b26-8d33-4b0e9d0124d3,
-        twssd:49deafa2-f0e9-406b-b932-825274679907,
-        twssd:4bef720e-3b65-4a7d-8141-bbccff5a12b4,
-        twssd:54667c76-6c21-4b9b-abc9-1a0943be8deb,
-        twssd:54e16386-2a0e-404e-8a97-81a67e9e37a6,
-        twssd:56bcb938-220a-4e01-b05b-b0eff7f757c6,
-        twssd:61f433d1-308c-48bc-969f-a1b35ae93b26,
-        twssd:678f5737-d773-49b4-b9b2-2898484ae8f9,
-        twssd:6a3249fb-4ec3-490f-9940-395e4b17a578,
-        twssd:74d9e12e-d7ec-4832-8831-b64d92a57f9c,
-        twssd:82358ef3-bd1e-4947-bfa4-f48d73dec964,
-        twssd:8400dd71-ba35-45ff-bd2b-815329af2ab9,
-        twssd:89d4239b-b43d-4caf-8f8d-6625fb3c2958,
-        twssd:8aa73bbc-8a08-4813-b859-1713f0d5efa8,
-        twssd:9fd31642-996f-4776-b0b6-f66fbde66618,
-        twssd:a986da1c-4138-47ac-a7a1-be80c21e7263,
-        twssd:aeec76e9-596b-4371-b239-3bf17ad20c45,
-        twssd:b62e307c-3294-4517-9786-a1a092403d35,
-        twssd:baff691f-ac24-4c26-87a4-5f7ae3f07f44,
-        twssd:beb5320f-bc9b-4e3f-bd89-166fed4d506c,
-        twssd:ce45a5de-7160-4775-8cfa-5363f6ea79ab,
-        twssd:d0827f93-bb6b-47b2-9357-87115e9f0109,
-        twssd:d430a673-acb8-4712-ab39-cf7be587b5a5,
-        twssd:d86064b7-228f-41ac-b774-d139e6620f8e,
-        twssd:e3cb8059-7e5e-472b-9110-9df2e1cfeee2,
-        twssd:e3e2c3cc-a9b5-4644-b18d-7d705165d690,
-        twssd:f0b4e1de-9773-44a9-aa96-8be549a2037f,
-        twssd:fab9f7e4-ef9d-4303-b9a9-7fe914ee724a ;
-    :aggregateRating twssd:09fc578c-8d87-4eb2-9d47-ca8579a76973 ;
-    :contentRating "PG-13" ;
-    :datePublished "December 25, 2020"^^:Date ;
-    :description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
-    :director twssd:b4197e49-f723-424d-bf2c-9caecd1f48d3 ;
-    :duration "PT151M" ;
-    :genre "Action",
+    default1:contentRating "PG-13" ;
+    default1:creator twssd:35f0265d-b896-4b04-9a74-811f2a3c32d8,
+        twssd:4bbfe17d-9e4a-4480-a00e-c338d229ada5,
+        twssd:4e369bb6-ca59-43e2-a42d-d1d310ffb022,
+        twssd:Dave_Callaham,
+        twssd:Geoff_Johns,
+        twssd:Patty_Jenkins,
+        twssd:William_Moulton_Marston,
+        twssd:d0c9e31c-5d87-4650-a1fa-f5cfd6f7e24a,
+        twssd:d21ca886-1026-4d1a-9659-3ca003b92b3a ;
+    default1:dateCreated "2017-09-13T08:24:15-07:00"^^default1:Date ;
+    default1:dateModified "2021-05-09T21:02:19-07:00"^^default1:Date ;
+    default1:datePublished "2020-12-16"^^default1:Date,
+        "December 25, 2020"^^default1:Date ;
+    default1:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah.",
+        "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..." ;
+    default1:director twssd:Patty_Jenkins ;
+    default1:duration "PT151M",
+        "PT2H31M" ;
+    default1:genre "Action",
+        "Action & Adventure",
         "Adventure",
-        "Fantasy" ;
-    :image <https://static.metacritic.com/images/products/movies/4/9d1a4650bb42f43a0a781bfa70a7772d.jpg> ;
-    :name "Wonder Woman 1984" ;
-    :publisher twssd:7005a487-e5cb-4a8f-88c5-f3c6a7def76c ;
-    :trailer twssd:0b08b2ba-9962-48c3-b98d-5326c4278b52 ;
-    :url <https://www.metacritic.com/movie/wonder-woman-1984> .
+        "Fantasy",
+        "Science Fiction & Fantasy" ;
+    default1:image <https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg>,
+        <https://resizing.flixster.com/m8G6eIbecl1KNYf1yd2lt2F5yX8=/740x380/v1.bjsyNTUxODM4O2o7MTg4Mzk7MTIwMDs0MTIyOzIzMTI>,
+        <https://static.metacritic.com/images/products/movies/4/9d1a4650bb42f43a0a781bfa70a7772d.jpg> ;
+    default1:keywords "sequel,superhero,dc extended universe,dc comics,one woman army" ;
+    default1:name "Wonder Woman 1984" ;
+    default1:productionCompany twssd:Warner_Bros._Pictures ;
+    default1:publisher twssd:Warner_Bros._Pictures ;
+    default1:review twssd:0f137eb4-605f-4529-a222-025273d9fced,
+        twssd:1a4577c5-e2d2-4ec4-9201-d4a93958cf6e,
+        twssd:24b9c0fc-d30a-41b9-8a6b-b0f6de06789c,
+        twssd:27e203fb-d63f-4b59-a413-6ad464c33689,
+        twssd:360f440c-38fc-4b58-8183-c80c96df5836,
+        twssd:369acf85-d1df-484e-8cdb-bfd970c47a53,
+        twssd:479b3e8b-9733-4c8e-a787-ee0b06a809c2,
+        twssd:56cbb058-0694-4b3e-975f-259d2bdaf152,
+        twssd:658edd39-15a1-4a9b-8186-005dca268af1,
+        twssd:6c70479a-0733-4711-885b-dd2285052028,
+        twssd:8040eaff-1a3a-4b71-a91d-3fe0b4e646a8,
+        twssd:8446674d-cade-4ac4-8e19-467c3402cd51,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.>,
+        twssd:a14ad064-011c-4218-905b-112aa35d18c7,
+        twssd:ab9c29d0-ae84-41b0-9691-8d497138ddd5,
+        twssd:b9dd30de-6c86-433e-849f-1d52efb86316,
+        twssd:bcc09325-f0c4-400b-a5bd-e61b1283065a,
+        twssd:dd72aeed-9a1e-43a1-a1a6-0f82ef36eb3f,
+        twssd:e9d1424f-d3ba-4a9e-aff4-fdd1018f36f9,
+        twssd:eb3a4425-5481-43e8-abe5-201082c39ff4,
+        twssd:ee2856c7-fe7e-414c-8d2d-5625ffc175a6,
+        twssd:effe3b61-72bf-4598-aef2-ce65bb29e2a6,
+        twssd:f1a5d968-21eb-41d6-adf0-1d64aa022733,
+        twssd:fbd53f8d-0437-467a-bdeb-25337a93f35b,
+        twssd:fc51867b-57d7-4e03-b633-57e3af4e68d1 ;
+    default1:trailer twssd:Stream_on_HBO_Max_for_a_Limited_Time,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> ;
+    default1:url <https://www.imdb.com/title/tt7126948>,
+        <https://www.metacritic.com/movie/wonder-woman-1984>,
+        <https://www.rottentomatoes.com/m/wonder_woman_1984> ;
+    owl:sameAs <https://www.ecartelera.com/peliculas/wonder-woman-1984> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> a default1:VideoObject,
+        owl:NamedIndividual ;
+    default1:description "Video Clip of Wonder Woman 1984" ;
+    default1:name "Wonder Woman 1984 (Trailer 2)" ;
+    default1:thumbnailUrl <https://content.internetvideoarchive.com/content/hdphotos/13126/013126/013126_820x461_637413475681110755.jpg> ;
+    default1:uploadDate "2020-11-21 17:41:36"^^default1:Date .
+
+twssd:a14ad064-011c-4218-905b-112aa35d18c7 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Brian_Gill ;
+    default1:dateCreated "2021-02-10T06:48:34-08:00"^^default1:Date ;
+    default1:publisher twssd:Mad_About_Movies_Podcast ;
+    default1:reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
+    default1:reviewRating twssd:c98d4497-6f28-45f2-bf4c-e88ae985cc44 ;
+    default1:url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> .
+
+twssd:a3f0b822-249e-41c5-8d1c-c80d8c1a2d8b a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:a806be99-578d-4d34-b159-5adfe317a3b8 a default1:ImageObject,
+        owl:NamedIndividual ;
+    default1:contentUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> .
+
+twssd:ab9c29d0-ae84-41b0-9691-8d497138ddd5 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Eric_Marchen ;
+    default1:dateCreated "2021-02-17T02:36:51-08:00"^^default1:Date ;
+    default1:publisher twssd:Untitled_Movie_Podcast ;
+    default1:reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
+    default1:reviewRating twssd:3ddbe695-67a8-4c13-b84e-8876996ed329 ;
+    default1:url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> .
+
+twssd:ae9a43fe-05c7-4664-8fb8-3410031775fc a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
+
+twssd:b22f0d5b-e0f3-40ec-8175-7314858fa49f a default1:WatchAction,
+        owl:NamedIndividual ;
+    default1:expectsAcceptanceOf twssd:54c0301b-e13c-4c90-844e-88a8b9961aed ;
+    default1:target twssd:bb005016-fc4a-4ff6-872d-1f4709a75e57 .
+
+twssd:b907d4a4-23d0-4baa-a3a4-3c37f589b9d2 a default1:Rating,
+        owl:NamedIndividual ;
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
+
+twssd:b9dd30de-6c86-433e-849f-1d52efb86316 a default1:Review,
+        owl:NamedIndividual ;
+    default1:author twssd:Tony_Medley ;
+    default1:dateCreated "2021-02-22T06:02:11-08:00"^^default1:Date ;
+    default1:publisher twssd:The_Larchmont_Chronicle ;
+    default1:reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
+    default1:reviewRating twssd:8ae19836-92d7-4b07-915c-de62ae961364 ;
+    default1:url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> a owl:Ontology .
-
-:AdministrativeArea a owl:Class ;
-    rdfs:subClassOf :Place .
-
-:ConsumeAction a owl:Class ;
-    rdfs:subClassOf :Action .
-
-:WatchAction a owl:Class ;
-    rdfs:subClassOf :ConsumeAction .
-
-twssd:0038b054-4808-4b1f-bd81-5dbf7dec4e48 a :Person,
-        owl:NamedIndividual ;
-    :name "Andrew Galdi" ;
-    :url <https://www.rottentomatoes.com/critic/andrew-galdi> .
-
-twssd:02178c88-1951-4ea6-9e89-11fa2a6336d4 a :Person,
-        owl:NamedIndividual ;
-    :name "John McDonald" ;
-    :url <https://www.rottentomatoes.com/critic/john-mcdonald> .
-
-twssd:027c757a-b8c1-47b6-b492-5221c915193d a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:047c0cb7-a75d-4c40-bf3c-0595db27cf92 a :Person,
-        owl:NamedIndividual ;
-    :name "Alex Delescu" ;
-    :url <https://www.metacritic.com/person/alex-delescu> .
-
-twssd:04bbaa7b-7e3a-4264-a187-e2bd166eeeb7 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:0577ebd2-0f9c-4229-8a71-a8fcf3a123fe a :Person,
-        owl:NamedIndividual ;
-    :name "Lolita Marie" ;
-    :url <https://www.metacritic.com/person/lolita-marie> .
-
-twssd:05fca259-52ef-46d3-b9a5-61ff3214b921 a :Organization,
-        owl:NamedIndividual ;
-    :mainEntityOfPage <https://www.ecartelera.com/empresas/warner-bros/> ;
-    :name "Warner Bros. Pictures" .
-
-twssd:06889976-6190-4649-84e9-8323df2c142e a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
-
-twssd:087e36a3-bc16-4f7f-aa67-f2d190aa94fd a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:09d5ec5e-dfe3-43aa-a46c-65166aaebe5b a :Person,
-        owl:NamedIndividual ;
-    :name "Matt Neal" ;
-    :url <https://www.rottentomatoes.com/critic/matt-neal> .
-
-twssd:09fc578c-8d87-4eb2-9d47-ca8579a76973 a :AggregateRating,
-        owl:NamedIndividual ;
-    :bestRating "100" ;
-    :ratingCount "57" ;
-    :ratingValue "60" ;
-    :worstRating "0" .
-
-twssd:0b08b2ba-9962-48c3-b98d-5326c4278b52 a :VideoObject,
-        owl:NamedIndividual ;
-    :description "Video Clip of Wonder Woman 1984" ;
-    :name "Wonder Woman 1984 (Trailer 2)" ;
-    :thumbnailUrl <https://content.internetvideoarchive.com/content/hdphotos/13126/013126/013126_820x461_637413475681110755.jpg> ;
-    :uploadDate "2020-11-21 17:41:36"^^:Date .
-
-twssd:0eee448c-2112-44fa-8b64-adc335166d49 a :Person,
-        owl:NamedIndividual ;
-    :name "Eddie Harrison" ;
-    :url <https://www.rottentomatoes.com/critic/eddie-harrison> .
-
-twssd:0fe66cc0-7b4b-4584-8b39-f776823bb20b a :Organization,
-        owl:NamedIndividual ;
-    :name "FilmWeek (KPCC - NPR Los Angeles)" ;
-    :url <https://www.rottentomatoes.com/source-3509> .
-
-twssd:12e6907a-5ea3-46cb-92dd-92c20b7c6983 a :Person,
-        owl:NamedIndividual ;
-    :name "Brian Gill" ;
-    :url <https://www.rottentomatoes.com/critic/brian-gill> .
-
-twssd:15b3be5b-d49c-4fbf-b3fb-415d70b55f08 a :Person,
-        owl:NamedIndividual ;
-    :name "Oakley Bull" ;
-    :url <https://www.metacritic.com/person/oakley-bull> .
-
-twssd:16bab90f-8f69-4074-81f8-d4746a2b35d8 a :Person,
-        owl:NamedIndividual ;
-    :name "Geoff Johns" ;
-    :url <https://www.imdb.com/name/nm0424315/> .
-
-twssd:1727a4f5-c33d-4cc0-9b3f-7e96380fa1c9 a :Person,
-        owl:NamedIndividual ;
-    :name "Kaila Ingram" ;
-    :url <https://www.metacritic.com/person/kaila-ingram> .
-
-twssd:1782db10-4710-461c-8aef-984a9e2f37d4 a :Organization,
-        owl:NamedIndividual ;
-    :name "Australian Financial Review" ;
-    :url <https://www.rottentomatoes.com/source-3199> .
-
-twssd:18d05278-cc92-4ee4-a260-cc78f7e75b56 a :Organization,
-        owl:NamedIndividual ;
-    :url <https://www.imdb.com/company/co0728674/> .
-
-twssd:1ac69c49-11ec-4aa0-b47f-0dc9bd20591b a :Review,
-        owl:NamedIndividual ;
-    :author twssd:a76cfbc6-e608-49a8-9ff1-37fffc77d007 ;
-    :dateCreated "2021-03-20T08:54:50-07:00"^^:Date ;
-    :publisher twssd:79235cf4-29e0-409b-855e-d1ab62c5c2f0 ;
-    :reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
-    :reviewRating twssd:ead06728-b1d0-47d3-a4f9-8852594da2f8 ;
-    :url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984/> .
-
-twssd:1b35ee83-93b4-4339-82ef-5ba7e8c38d2e a :Person,
-        owl:NamedIndividual ;
-    :name "Jeff Moore" ;
-    :url <https://www.metacritic.com/person/jeff-moore> .
-
-twssd:1b8d6c6c-cdba-491b-b1c4-bd10cf1a1110 a :Clip,
-        owl:NamedIndividual ;
-    :description "trailer" ;
-    :potentialAction twssd:5d9ee576-60fd-408b-98f1-0e7f8c6b2e40 ;
-    :timeRequired "PT2M24S" .
-
-twssd:1bae26ec-136e-46bf-acf6-f19b7afa6ede a :Person,
-        owl:NamedIndividual ;
-    :name "Chris Silcox" ;
-    :url <https://www.metacritic.com/person/chris-silcox> .
-
-twssd:1c4b7a68-76cb-47fa-937c-b7c789d7af91 a :Person,
-        owl:NamedIndividual ;
-    :name "Connie Nielsen" ;
-    :url <https://www.metacritic.com/person/connie-nielsen> .
-
-twssd:1d034a28-5742-469e-83b4-59849653cf46 a :Person,
-        owl:NamedIndividual ;
-    :image <https://resizing.flixster.com/9Pu5qp5qfehIlclgv8tIbVPGlr0=/2938x3500/v1.cjs1MDM1NztqOzE4NzY1OzEyMDA7MjkzODszNTAw> ;
-    :name "Connie Nielsen" ;
-    :sameAs <https://www.rottentomatoes.com/celebrity/connie_nielsen> .
-
-twssd:1f0ba390-55a7-4cca-8b92-7eb33df4cf88 a :Person,
-        owl:NamedIndividual ;
-    :name "David Bax" ;
-    :url <https://www.rottentomatoes.com/critic/david-bax> .
-
-twssd:20b9f7d8-1222-4cce-b702-4e72e10aa454 a :Person,
-        owl:NamedIndividual ;
-    :name "Robin Wright" ;
-    :url <https://www.metacritic.com/person/robin-wright> .
-
-twssd:215f4d33-1d8d-4dc7-8095-7f18672a6cd6 a :Person,
-        owl:NamedIndividual ;
-    :name "Gal Gadot" ;
-    :url <https://www.imdb.com/name/nm2933757/> .
-
-twssd:231fc57a-ae30-48e1-b78b-d840767081b5 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:23b608e7-04bd-45d2-8a9c-bfac433ca606 a :Person,
-        owl:NamedIndividual ;
-    :name "William Moulton Marston" ;
-    :url <https://www.imdb.com/name/nm0551376/> .
-
-twssd:24a34b3c-3240-49e8-869d-61db8412e141 a :Person,
-        owl:NamedIndividual ;
-    :name "Amy Nicholson" ;
-    :url <https://www.rottentomatoes.com/critic/amy-nicholson> .
-
-twssd:253e23dc-1a9c-469f-8ff3-064a2346c549 a :Person,
-        owl:NamedIndividual ;
-    :name "Justin Sisk" ;
-    :url <https://www.metacritic.com/person/justin-sisk> .
-
-twssd:271614f3-d9bb-4c10-9870-dde458e253e0 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:38d8eb41-5f75-47d2-8e68-ae900a516ce4 ;
-    :dateCreated "2021-02-11T02:38:41-08:00"^^:Date ;
-    :publisher twssd:af318255-acaa-448f-aa1b-888e3ce6e4ec ;
-    :reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
-    :reviewRating twssd:5a6f249d-efdf-473c-b4bc-1af95e07dfb9 ;
-    :url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor/> .
-
-twssd:275c6f58-903b-4ed5-afe9-13d26ce873b8 a :Person,
-        owl:NamedIndividual ;
-    :name "Rick Kelvin Branch" ;
-    :url <https://www.metacritic.com/person/rick-kelvin-branch> .
-
-twssd:275f62d4-e3d2-44d8-a599-00d767d08603 a :Organization,
-        owl:NamedIndividual ;
-    :name "The Larchmont Chronicle" ;
-    :url <https://www.rottentomatoes.com/source-2992> .
-
-twssd:277703eb-629f-4e7a-be62-233941cc5e6a a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
-
-twssd:285ac1a1-5465-407d-b94d-8537909114f5 a :Country,
-        owl:NamedIndividual ;
-    :name "ES" .
-
-twssd:291a7b58-f81e-4a6d-bce9-6ade38501030 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:09d5ec5e-dfe3-43aa-a46c-65166aaebe5b ;
-    :dateCreated "2021-01-31T17:01:54-08:00"^^:Date ;
-    :publisher twssd:2d450f53-a556-4ced-9b0e-1c7d156f7ad6 ;
-    :reviewBody " After such a stirring debut, it's pains me to say that Wonder Woman 1984 isn't that wonderful." ;
-    :reviewRating twssd:dcfcdc0c-d13f-4e99-879a-7a84d3a4cd32 ;
-    :url <https://movies8mylife.blogspot.com/2021/02/wonder-woman-1984.html> .
-
-twssd:2d450f53-a556-4ced-9b0e-1c7d156f7ad6 a :Organization,
-        owl:NamedIndividual ;
-    :name "ABC Radio (Australia)" ;
-    :url <https://www.rottentomatoes.com/source-2397> .
-
-twssd:2d5980be-b815-45dc-8511-a30f25329691 a :Person,
-        owl:NamedIndividual ;
-    :mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine/> ;
-    :name "Chris Pine" .
-
-twssd:2d7e4bd5-355d-4aee-a85e-1698a77e6d24 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:9e9a6119-8710-4864-96b7-d4a1172dbf0d ;
-    :dateCreated "2021-02-05T19:46:31-08:00"^^:Date ;
-    :publisher twssd:9f65320c-ae83-4c15-89e3-3c86af8bab8b ;
-    :reviewBody "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here." ;
-    :reviewRating twssd:d1dea970-ee70-4fea-99a3-ed7fe5999bb3 ;
-    :url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> .
-
-twssd:2e28c8f0-9dab-488f-b492-4d33a8016a45 a :AggregateRating,
-        owl:NamedIndividual ;
-    :bestRating "10.0" ;
-    :ratingCount 198912 ;
-    :ratingValue "5.4" ;
-    :worstRating "1.0" .
-
-twssd:2f46e878-e425-4de7-80c9-56ac8cacd9f9 a :Person,
-        owl:NamedIndividual ;
-    :mainEntityOfPage <https://www.ecartelera.com/personas/patty-jenkins/> ;
-    :name "Patty Jenkins" .
-
-twssd:2f4ef863-a1f1-4d8e-823d-a26db9c92e7c a :Organization,
-        owl:NamedIndividual ;
-    :url <https://www.imdb.com/company/co0038332/> .
-
-twssd:319094b2-bbb7-477f-abec-b4ec347189f5 a :Person,
-        owl:NamedIndividual ;
-    :name "Manoj Anand" ;
-    :url <https://www.metacritic.com/person/manoj-anand> .
-
-twssd:3245ce09-1151-43c2-9be8-d846d8bf6602 a :ImageObject,
-        owl:NamedIndividual ;
-    :url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
-
-twssd:337910f9-4913-415f-83b3-1bc380284b98 a :Person,
-        owl:NamedIndividual ;
-    :name "Dan Tabor" ;
-    :url <https://www.rottentomatoes.com/critic/dan-tabor> .
-
-twssd:346379a9-ec2f-4f7b-982f-613ec0e1f2d8 a :Person,
-        owl:NamedIndividual ;
-    :name "John Gettier" ;
-    :url <https://www.metacritic.com/person/john-gettier> .
-
-twssd:35ade276-3219-47b9-bc85-65fc55b9eade a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:3674d229-0043-4db9-abfb-6193355a5002 a :Person,
-        owl:NamedIndividual ;
-    :name "jayg_58" .
-
-twssd:3723eff1-f808-48e1-baec-da268ba8a2ac a :Review,
-        owl:NamedIndividual ;
-    :author twssd:ded6eab0-9f25-4edc-add7-d81f9fed025a ;
-    :dateCreated "2021-01-04T04:59:29-08:00"^^:Date ;
-    :publisher twssd:73e9cbd9-0632-4fb5-aec2-13c4567181fe ;
-    :reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
-    :reviewRating twssd:231fc57a-ae30-48e1-b78b-d840767081b5 ;
-    :url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> .
-
-twssd:3891ddb0-de8a-402c-b339-391e8fe36735 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:0eee448c-2112-44fa-8b64-adc335166d49 ;
-    :dateCreated "2021-02-07T19:57:42-08:00"^^:Date ;
-    :publisher twssd:f58e44cc-eaa5-494a-a840-34dc6f573c25 ;
-    :reviewBody "...a joyless dud, a bucket of sludge when we're crying out for a glass of water..." ;
-    :reviewRating twssd:277703eb-629f-4e7a-be62-233941cc5e6a ;
-    :url <https://film-authority.com/2021/01/11/wonder-woman-1984/> .
-
-twssd:38959581-5ffe-4608-a881-23bbb1016a68 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
-
-twssd:38d8eb41-5f75-47d2-8e68-ae900a516ce4 a :Person,
-        owl:NamedIndividual ;
-    :name "Jennifer Ouellette" ;
-    :url <https://www.rottentomatoes.com/critic/jennifer-ouellette> .
-
-twssd:38fe74ae-77c5-4a44-a471-10c9a2dd2bea a :Person,
-        owl:NamedIndividual ;
-    :mainEntityOfPage <https://www.ecartelera.com/personas/connie-nielsen/> ;
-    :name "Connie Nielsen" .
-
-twssd:3923751b-d3f0-49c1-8cc4-c619593874a4 a :Person,
-        owl:NamedIndividual ;
-    :name "Sheri Flanders" ;
-    :url <https://www.rottentomatoes.com/critic/sheri-flanders> .
-
-twssd:3b68182c-d8bb-4866-8470-b26b0fb13e7d a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
-
-twssd:3c46cf4e-6a20-41b8-adcb-25ff94c95d3c a :Organization,
-        owl:NamedIndividual ;
-    :name "Fat Guys at the Movies" ;
-    :url <https://www.rottentomatoes.com/source-2722> .
-
-twssd:3d07e3cc-f0d0-477e-8d20-5f62a57112fc a :AggregateRating,
-        owl:NamedIndividual ;
-    :bestRating "100" ;
-    :description "The Tomatometer rating – based on the published opinions of hundreds of film and television critics – is a trusted measurement of movie and TV programming quality for millions of moviegoers. It represents the percentage of professional critic reviews that are positive for a given film or television show." ;
-    :name "Tomatometer" ;
-    :ratingCount "426" ;
-    :ratingValue "59" ;
-    :reviewCount "426" ;
-    :worstRating "0" .
-
-twssd:3d4e0b11-2c09-4966-9fe9-1e8b15e4a5dd a :Person,
-        owl:NamedIndividual ;
-    :name "Sonia Goswami" ;
-    :url <https://www.metacritic.com/person/sonia-goswami> .
-
-twssd:3dd9e9d8-5080-4c83-a92f-f75c67da1fcb a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "10" ;
-    :ratingValue "5" ;
-    :worstRating "1" .
-
-twssd:40b9ac96-d85a-4b3c-9b34-7484a63e7ff9 a :Person,
-        owl:NamedIndividual ;
-    :name "Lyon Beckwith" ;
-    :url <https://www.metacritic.com/person/lyon-beckwith> .
-
-twssd:42da2790-a3d3-46c4-8ec3-c8b94046f954 a :AggregateRating,
-        owl:NamedIndividual ;
-    :bestRating "10" ;
-    :ratingCount "20" ;
-    :ratingValue "7,6" ;
-    :worstRating "0" .
-
-twssd:444c70af-b0df-4ffe-8b35-791908908d13 a :Person,
-        owl:NamedIndividual ;
-    :name "Amr Waked" ;
-    :url <https://www.metacritic.com/person/amr-waked> .
-
-twssd:47806c8a-fd79-45ac-a563-06ae79555d08 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:337910f9-4913-415f-83b3-1bc380284b98 ;
-    :dateCreated "2021-02-05T01:55:00-08:00"^^:Date ;
-    :publisher twssd:f768bccd-fae4-41c6-bce2-0e5a868ff2de ;
-    :reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
-    :reviewRating twssd:d81a508a-101a-4718-8732-82b2e701ef89 ;
-    :url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot/> .
-
-twssd:47d280b5-df12-4b26-8d33-4b0e9d0124d3 a :Person,
-        owl:NamedIndividual ;
-    :name "Natasha Rothwell" ;
-    :url <https://www.metacritic.com/person/natasha-rothwell> .
-
-twssd:48728a16-e44f-400d-b35a-e402da883e8d a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:48d1204e-9df7-4cf1-b4ad-19a1545002b1 a :Person,
-        owl:NamedIndividual ;
-    :name "Nina Garin" ;
-    :url <https://www.rottentomatoes.com/critic/nina-garin> .
-
-twssd:4972cdc0-6cf8-4a00-8475-26c808a59a8e a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:49deafa2-f0e9-406b-b932-825274679907 a :Person,
-        owl:NamedIndividual ;
-    :name "Sia Alipour" ;
-    :url <https://www.metacritic.com/person/sia-alipour> .
-
-twssd:4b149b57-8808-4836-96b9-517ce21e8825 a :Person,
-        owl:NamedIndividual ;
-    :name "David Sims" ;
-    :url <https://www.rottentomatoes.com/critic/david-sims> .
-
-twssd:4b473813-1677-48cf-a39c-c205fc046939 a :Person,
-        owl:NamedIndividual ;
-    :name "Kristen Wiig" ;
-    :url <https://www.imdb.com/name/nm1325419/> .
-
-twssd:4bef720e-3b65-4a7d-8141-bbccff5a12b4 a :Person,
-        owl:NamedIndividual ;
-    :name "Monica Haynes" ;
-    :url <https://www.metacritic.com/person/monica-haynes> .
-
-twssd:4d449c8b-16c5-4108-ba4a-6caa3259d229 a :Organization,
-        owl:NamedIndividual ;
-    :name "Movie Bitches" ;
-    :url <https://www.rottentomatoes.com/source-3639> .
-
-twssd:4f9bb2f0-e73b-4094-830e-52dc167d16cd a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
-
-twssd:53974f88-e993-46f4-80a0-c8d6b7badb42 a :Person,
-        owl:NamedIndividual ;
-    :mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot/> ;
-    :name "Gal Gadot" .
-
-twssd:54667c76-6c21-4b9b-abc9-1a0943be8deb a :Person,
-        owl:NamedIndividual ;
-    :name "Julian Ferro" ;
-    :url <https://www.metacritic.com/person/julian-ferro> .
-
-twssd:54e16386-2a0e-404e-8a97-81a67e9e37a6 a :Person,
-        owl:NamedIndividual ;
-    :name "Ravi Patel" ;
-    :url <https://www.metacritic.com/person/ravi-patel> .
-
-twssd:55bd8859-45aa-4cf8-b957-b3b3c637017b a :Review,
-        owl:NamedIndividual ;
-    :author twssd:3923751b-d3f0-49c1-8cc4-c619593874a4 ;
-    :dateCreated "2021-02-01T04:29:30-08:00"^^:Date ;
-    :publisher twssd:a674ac35-95ba-4808-be68-055b63f5fdf9 ;
-    :reviewBody "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads." ;
-    :reviewRating twssd:48728a16-e44f-400d-b35a-e402da883e8d ;
-    :url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> .
-
-twssd:56827e8e-5df5-468f-8a50-b2a80baa6274 a :Person,
-        owl:NamedIndividual ;
-    :name "Pedro Pascal" ;
-    :url <https://www.imdb.com/name/nm0050959/> .
-
-twssd:56bcb938-220a-4e01-b05b-b0eff7f757c6 a :Person,
-        owl:NamedIndividual ;
-    :name "Brittney Aleah" ;
-    :url <https://www.metacritic.com/person/brittney-aleah> .
-
-twssd:5902e6d8-9a92-47b1-b3f5-92b76a7a55ef a :Review,
-        owl:NamedIndividual ;
-    :author twssd:5a9d0868-938a-4e6e-92e5-79520e97c4b1 ;
-    :dateCreated "2021-04-03T14:11:59-07:00"^^:Date ;
-    :publisher twssd:3c46cf4e-6a20-41b8-adcb-25ff94c95d3c ;
-    :reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
-    :reviewRating twssd:4972cdc0-6cf8-4a00-8475-26c808a59a8e ;
-    :url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape/> .
-
-twssd:5a6f249d-efdf-473c-b4bc-1af95e07dfb9 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:5a9d0868-938a-4e6e-92e5-79520e97c4b1 a :Person,
-        owl:NamedIndividual ;
-    :name "Kevin Carr" ;
-    :url <https://www.rottentomatoes.com/critic/kevin-carr> .
-
-twssd:5c541763-426f-49d4-8550-5bf109acdb35 a :Organization,
-        owl:NamedIndividual ;
-    :name "Concrete Playground" ;
-    :url <https://www.rottentomatoes.com/source-2298> .
-
-twssd:5d9ee576-60fd-408b-98f1-0e7f8c6b2e40 a :WatchAction,
-        owl:NamedIndividual ;
-    :expectsAcceptanceOf twssd:fa8a57c1-cb44-4320-b292-60448a31693a ;
-    :target twssd:c07ff8b3-b5b9-4d3c-96e7-f8bc91beb718 .
-
-twssd:5f07bb0f-ad3b-4822-b78d-22b7900618bd a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
-
-twssd:5f499a56-5bb1-456c-9a46-60dab78a066e a :Organization,
-        owl:NamedIndividual ;
-    :name "The Australian" ;
-    :url <https://www.rottentomatoes.com/source-1964> .
-
-twssd:61f433d1-308c-48bc-969f-a1b35ae93b26 a :Person,
-        owl:NamedIndividual ;
-    :name "Kristoffer Polaha" ;
-    :url <https://www.metacritic.com/person/kristoffer-polaha> .
-
-twssd:6376a4ea-e540-4694-8c5b-a30ad31fbfd9 a :Person,
-        owl:NamedIndividual ;
-    :name "Avaryl Halley" ;
-    :url <https://www.rottentomatoes.com/critic/avaryl-halley> .
-
-twssd:65d2a83e-2e90-420b-8661-29a6de73b9de a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:678f5737-d773-49b4-b9b2-2898484ae8f9 a :Person,
-        owl:NamedIndividual ;
-    :name "Amreen N. Yaqoob" ;
-    :url <https://www.metacritic.com/person/amreen-n-yaqoob> .
-
-twssd:69f7a9aa-f391-407b-9008-d535fd7cadf1 a :Person,
-        owl:NamedIndividual ;
-    :name "Mark Jackson" ;
-    :url <https://www.rottentomatoes.com/critic/mark-jackson> .
-
-twssd:6a3249fb-4ec3-490f-9940-395e4b17a578 a :Person,
-        owl:NamedIndividual ;
-    :name "Spencer Trinwith" ;
-    :url <https://www.metacritic.com/person/spencer-trinwith> .
-
-twssd:6a644c67-9e40-4817-93b6-b54e4465a115 a :Person,
-        owl:NamedIndividual ;
-    :mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig/> ;
-    :name "Kristen Wiig" .
-
-twssd:6bb64f5f-de5b-4d67-8fe2-3b0556ae5c5a a :Organization,
-        owl:NamedIndividual ;
-    :name "Mad About Movies Podcast" ;
-    :url <https://www.rottentomatoes.com/source-3256> .
-
-twssd:6c35ef39-ad60-4d72-b300-cabe5e9dc6ed a :Person,
-        owl:NamedIndividual ;
-    :image <https://resizing.flixster.com/uEke7o3H4ngITX7oLEYgZox9q2A=/220x196/v1.cjs0NDAwMDtqOzE4NzY1OzEyMDA7MjIwOzE5Ng> ;
-    :name "Pedro Pascal" ;
-    :sameAs <https://www.rottentomatoes.com/celebrity/pedro_pascal> .
-
-twssd:6e7f47dc-809e-4cee-9187-ad6fb80236a8 a :Person,
-        owl:NamedIndividual ;
-    :name "Patty Jenkins" ;
-    :url <https://www.imdb.com/name/nm0420941/> .
-
-twssd:7005a487-e5cb-4a8f-88c5-f3c6a7def76c a :Organization,
-        owl:NamedIndividual ;
-    :name "Warner Bros. Pictures" ;
-    :url <https://www.metacritic.com/company/warner-bros-pictures> .
-
-twssd:70286e80-9385-4fee-abd6-c1a9f6609d67 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:69f7a9aa-f391-407b-9008-d535fd7cadf1 ;
-    :dateCreated "2021-02-02T10:00:09-08:00"^^:Date ;
-    :publisher twssd:f888c10c-887b-4f07-be99-b57b63c0ecaa ;
-    :reviewBody "\"Wonder Woman\" (2017) was one of the best superhero movies ever made. It was idealistic, classy, aesthetically pleasing, and romantic, and should've kicked off a fabulous franchise. Unfortunately the sequel is a major letdown." ;
-    :reviewRating twssd:a5a6c5d8-0abd-4feb-91c3-b07996d65008 ;
-    :url <https://www.theepochtimes.com/film-review-wonder-woman-1984-a-sequel-less-wonderful_3667828.html> .
-
-twssd:710029b2-010a-4270-92fd-4637a4ba80b1 a :Organization,
-        owl:NamedIndividual ;
-    :url <https://www.imdb.com/company/co0028338/> .
-
-twssd:73ade194-a935-4b1f-8b96-0f11c47ec04a a :Organization,
-        owl:NamedIndividual ;
-    :name "Movie Bitches" ;
-    :url <https://www.rottentomatoes.com/source-3639> .
-
-twssd:73e9cbd9-0632-4fb5-aec2-13c4567181fe a :Organization,
-        owl:NamedIndividual ;
-    :name "Newsday" ;
-    :url <https://www.rottentomatoes.com/source-338> .
-
-twssd:74d9e12e-d7ec-4832-8831-b64d92a57f9c a :Person,
-        owl:NamedIndividual ;
-    :name "Marisol Correa" ;
-    :url <https://www.metacritic.com/person/marisol-correa> .
-
-twssd:79235cf4-29e0-409b-855e-d1ab62c5c2f0 a :Organization,
-        owl:NamedIndividual ;
-    :name "Their Own League" ;
-    :url <https://www.rottentomatoes.com/source-3607> .
-
-twssd:7c34483f-0376-444b-bfe4-4e15529dc737 a :Organization,
-        owl:NamedIndividual ;
-    :url <https://www.imdb.com/company/co0002663/> .
-
-twssd:8200418c-22de-41f4-b97f-9e0ea0592184 a :Person,
-        owl:NamedIndividual ;
-    :image <https://resizing.flixster.com/P6P3MFr8YZqj_iCOIh7GxeYrPLg=/2000x2083/v1.cjs0OTMxNjtqOzE4NzY1OzEyMDA7MjAwMDsyMDgz> ;
-    :name "Kristen Wiig" ;
-    :sameAs <https://www.rottentomatoes.com/celebrity/kristen_wiig> .
-
-twssd:82358ef3-bd1e-4947-bfa4-f48d73dec964 a :Person,
-        owl:NamedIndividual ;
-    :name "Penelope Kapudija" ;
-    :url <https://www.metacritic.com/person/penelope-kapudija> .
-
-twssd:8400dd71-ba35-45ff-bd2b-815329af2ab9 a :Person,
-        owl:NamedIndividual ;
-    :name "Lilly Aspell" ;
-    :url <https://www.metacritic.com/person/lilly-aspell> .
-
-twssd:85333419-e686-42b4-a314-27a4ed6f8041 a :Person,
-        owl:NamedIndividual ;
-    :name "Eric Marchen" ;
-    :url <https://www.rottentomatoes.com/critic/eric-marchen> .
-
-twssd:871f1172-5983-4542-ac16-8d375b36f141 a :CreativeWork,
-        owl:NamedIndividual ;
-    :url <https://www.imdb.com/title/tt7126948/> .
-
-twssd:89bea705-62b9-406f-a3a8-6c0813437512 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:89d4239b-b43d-4caf-8f8d-6625fb3c2958 a :Person,
-        owl:NamedIndividual ;
-    :name "Tessa Bonham Jones" ;
-    :url <https://www.metacritic.com/person/tessa-bonham-jones> .
-
-twssd:8a8da1f5-31c3-40b1-b9ec-d5e46856f521 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:dbf1e4e6-d49f-48b1-a8a5-97a49253bec2 ;
-    :dateCreated "2021-02-21T08:36:54-08:00"^^:Date ;
-    :publisher twssd:5c541763-426f-49d4-8550-5bf109acdb35 ;
-    :reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
-    :reviewRating twssd:4f9bb2f0-e73b-4094-830e-52dc167d16cd ;
-    :url <https://concreteplayground.com/sydney/event/wonder-woman-1984> .
-
-twssd:8aa73bbc-8a08-4813-b859-1713f0d5efa8 a :Person,
-        owl:NamedIndividual ;
-    :name "Jonathan Ajayi" ;
-    :url <https://www.metacritic.com/person/jonathan-ajayi> .
-
-twssd:8f39c312-6e7a-4ab3-86ff-a94ae47530a9 a :Organization,
-        owl:NamedIndividual ;
-    :name "Untitled Movie Podcast" ;
-    :url <https://www.rottentomatoes.com/source-3831> .
-
-twssd:8fdbedf6-fd94-4913-96a5-5e601dde1a9c a :Organization,
-        owl:NamedIndividual ;
-    :name "The News-Herald (Willoughby, OH)" ;
-    :url <https://www.rottentomatoes.com/source-3916> .
-
-twssd:90119565-bf8f-4132-9b92-74bfb0c305e7 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:0038b054-4808-4b1f-bd81-5dbf7dec4e48 ;
-    :dateCreated "2021-03-11T06:02:25-08:00"^^:Date ;
-    :publisher twssd:73ade194-a935-4b1f-8b96-0f11c47ec04a ;
-    :reviewBody "There were just such gross failures of filmmaking..." ;
-    :reviewRating twssd:985df777-aa4f-42ed-abc6-c845d619f566 ;
-    :url <https://youtu.be/75nDMuZMfLs> .
-
-twssd:91c35cd7-e95e-4098-8f78-bd39cdb603cc a :Review,
-        owl:NamedIndividual ;
-    :author twssd:1f0ba390-55a7-4cca-8b92-7eb33df4cf88 ;
-    :dateCreated "2021-03-23T10:02:10-07:00"^^:Date ;
-    :publisher twssd:a162c53f-6e96-4539-b739-9838797b1f03 ;
-    :reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
-    :reviewRating twssd:35ade276-3219-47b9-bc85-65fc55b9eade ;
-    :url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax/> .
-
-twssd:93c2afde-6847-4ef7-be6c-01692e66c563 a :Person,
-        owl:NamedIndividual ;
-    :name "Chris Pine" ;
-    :url <https://www.imdb.com/name/nm1517976/> .
-
-twssd:95994489-091d-44bf-936d-06e725a9738b a :Person,
-        owl:NamedIndividual ;
-    :name "Geoff Johns" ;
-    :url <https://www.imdb.com/name/nm0424315/> .
-
-twssd:9646b080-8c37-46f6-b613-08830dd77653 a :Person,
-        owl:NamedIndividual ;
-    :image <https://resizing.flixster.com/s5rTePWBzCqGE8uYUIYqS52D6JU=/1000x1500/v1.bjs3NDQ4MjY7ajsxODgxODsxMjAwOzEwMDA7MTUwMA> ;
-    :name "Robin Wright" ;
-    :sameAs <https://www.rottentomatoes.com/celebrity/robin_wright> .
-
-twssd:985df777-aa4f-42ed-abc6-c845d619f566 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
-
-twssd:9e9a6119-8710-4864-96b7-d4a1172dbf0d a :Person,
-        owl:NamedIndividual ;
-    :name "Ian Simmons" ;
-    :url <https://www.rottentomatoes.com/critic/ian-simmons> .
-
-twssd:9f65320c-ae83-4c15-89e3-3c86af8bab8b a :Organization,
-        owl:NamedIndividual ;
-    :name "Kicking the Seat" ;
-    :url <https://www.rottentomatoes.com/source-3892> .
-
-twssd:9fc5a513-2b7d-4f81-8bc1-ac66a6e9b686 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:9fd31642-996f-4776-b0b6-f66fbde66618 a :Person,
-        owl:NamedIndividual ;
-    :name "Marla Aaron Wapner" ;
-    :url <https://www.metacritic.com/person/marla-aaron-wapner> .
-
-twssd:a162c53f-6e96-4539-b739-9838797b1f03 a :Organization,
-        owl:NamedIndividual ;
-    :name "Battleship Pretension" ;
-    :url <https://www.rottentomatoes.com/source-3090> .
-
-twssd:a1c160ba-40b0-4268-a40b-8782a84d822e a :Organization,
-        owl:NamedIndividual ;
-    :name "The Age (Australia)" ;
-    :url <https://www.rottentomatoes.com/source-2041> .
-
-twssd:a5a6c5d8-0abd-4feb-91c3-b07996d65008 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
-
-twssd:a674ac35-95ba-4808-be68-055b63f5fdf9 a :Organization,
-        owl:NamedIndividual ;
-    :name "Chicago Reader" ;
-    :url <https://www.rottentomatoes.com/source-66> .
-
-twssd:a76cfbc6-e608-49a8-9ff1-37fffc77d007 a :Person,
-        owl:NamedIndividual ;
-    :name "Valerie Kalfrin" ;
-    :url <https://www.rottentomatoes.com/critic/valerie-kalfrin> .
-
-twssd:a986da1c-4138-47ac-a7a1-be80c21e7263 a :Person,
-        owl:NamedIndividual ;
-    :name "Gal Gadot" ;
-    :url <https://www.metacritic.com/person/gal-gadot> .
-
-twssd:abc933a2-3392-4150-b0fc-5a9446d5b557 a :Country,
-        owl:NamedIndividual ;
-    :name "ES" .
-
-twssd:ac7bbee3-0467-4353-9093-2d46b8939f23 a :Person,
-        owl:NamedIndividual ;
-    :name "Patty Jenkins" ;
-    :url <https://www.imdb.com/name/nm0420941/> .
-
-twssd:aeec76e9-596b-4371-b239-3bf17ad20c45 a :Person,
-        owl:NamedIndividual ;
-    :name "Kristen Wiig" ;
-    :url <https://www.metacritic.com/person/kristen-wiig> .
-
-twssd:aef9583e-48cd-4ea4-bb72-9b8a6205352e a :Person,
-        owl:NamedIndividual ;
-    :name "Dave Callaham" ;
-    :url <https://www.imdb.com/name/nm1709264/> .
-
-twssd:af318255-acaa-448f-aa1b-888e3ce6e4ec a :Organization,
-        owl:NamedIndividual ;
-    :name "Ars Technica" ;
-    :url <https://www.rottentomatoes.com/source-2985> .
-
-twssd:b28ea6b8-69bd-488a-9a8e-9c5d131b43cc a :Review,
-        owl:NamedIndividual ;
-    :author twssd:48d1204e-9df7-4cf1-b4ad-19a1545002b1 ;
-    :dateCreated "2021-03-01T08:14:02-08:00"^^:Date ;
-    :publisher twssd:e749e365-c995-46c7-a73c-e479f4c8ff64 ;
-    :reviewBody "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. " ;
-    :reviewRating twssd:89bea705-62b9-406f-a3a8-6c0813437512 ;
-    :url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> .
-
-twssd:b4197e49-f723-424d-bf2c-9caecd1f48d3 a :Person,
-        owl:NamedIndividual ;
-    :name "Patty Jenkins" ;
-    :url <https://www.metacritic.com/person/patty-jenkins> .
-
-twssd:b62e307c-3294-4517-9786-a1a092403d35 a :Person,
-        owl:NamedIndividual ;
-    :name "Ella Walker" ;
-    :url <https://www.metacritic.com/person/ella-walker> .
-
-twssd:b64a56bd-ea72-4fb1-941d-c8e9cbb4f0aa a :PublicationEvent,
-        owl:NamedIndividual ;
-    :location twssd:285ac1a1-5465-407d-b94d-8537909114f5 ;
-    :startDate "2020-12-18"^^:Date .
-
-twssd:b65ec930-6e31-43f8-b9cd-0f4d4c164dd5 a :Person,
-        owl:NamedIndividual ;
-    :image <https://resizing.flixster.com/kXDRe1jUWEU8UFkdf8JhRPMUG8s=/660x990/v1.bjs3NTYxMDQ7ajsxODgxODsxMjAwOzY2MDs5OTA> ;
-    :name "Chris Pine" ;
-    :sameAs <https://www.rottentomatoes.com/celebrity/christopher_pine> .
-
-twssd:b6ce862d-f273-45f6-81e4-88f81cfc9ee1 a :Rating,
-        owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:b6ecdd5e-794e-446d-88e6-00f03cfb8d15 a :Person,
-        owl:NamedIndividual ;
-    :name "Mark Meszoros" ;
-    :url <https://www.rottentomatoes.com/critic/mark-meszoros> .
-
-twssd:b9384b38-a96c-49bf-9f37-60415a4f023d a :Review,
-        owl:NamedIndividual ;
-    :author twssd:f189a9f7-426a-4386-b87b-7f4b17c2da68 ;
-    :dateCreated "2020-12-28T07:49:06-08:00"^^:Date ;
-    :publisher twssd:a1c160ba-40b0-4268-a40b-8782a84d822e ;
-    :reviewBody "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel." ;
-    :reviewRating twssd:65d2a83e-2e90-420b-8661-29a6de73b9de ;
-    :url <https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html> .
-
-twssd:baff691f-ac24-4c26-87a4-5f7ae3f07f44 a :Person,
-        owl:NamedIndividual ;
-    :name "Paul Ron Cruz" ;
-    :url <https://www.metacritic.com/person/paul-ron-cruz> .
-
-twssd:bddcf382-e1da-4ced-a8e1-a5c8fcb7cb81 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:02178c88-1951-4ea6-9e89-11fa2a6336d4 ;
-    :dateCreated "2021-01-31T18:14:33-08:00"^^:Date ;
-    :publisher twssd:1782db10-4710-461c-8aef-984a9e2f37d4 ;
-    :reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
-    :reviewRating twssd:3b68182c-d8bb-4866-8470-b26b0fb13e7d ;
-    :url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984/> .
-
-twssd:beb5320f-bc9b-4e3f-bd89-166fed4d506c a :Person,
-        owl:NamedIndividual ;
-    :name "Chris Pine" ;
-    :url <https://www.metacritic.com/person/chris-pine> .
-
-twssd:c07ff8b3-b5b9-4d3c-96e7-f8bc91beb718 a :EntryPoint,
+twssd:bb005016-fc4a-4ff6-872d-1f4709a75e57 a default1:EntryPoint,
         owl:NamedIndividual ;
-    :actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
+    default1:actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
         "http://schema.org/DesktopWebPlatform",
         "http://schema.org/IOSPlatform",
         "http://schema.org/MobileWebPlatform" ;
-    :inLanguage "es" ;
-    :urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" .
+    default1:inLanguage "es" ;
+    default1:urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" .
 
-twssd:c13e17fe-8901-45b0-a873-b25692843ac8 a :Organization,
+twssd:bb62a4f7-8e82-48a3-855f-dfef8d848479 a default1:AggregateRating,
         owl:NamedIndividual ;
-    :name "The Atlantic" ;
-    :url <https://www.rottentomatoes.com/source-24> .
+    default1:bestRating "100" ;
+    default1:ratingCount "57" ;
+    default1:ratingValue "60" ;
+    default1:worstRating "0" .
 
-twssd:c3299226-a093-4f39-9af8-abb18069c5cc a :Person,
+twssd:bcc09325-f0c4-400b-a5bd-e61b1283065a a default1:Review,
         owl:NamedIndividual ;
-    :name "Stephen Romei" ;
-    :url <https://www.rottentomatoes.com/critic/stephen-romei> .
+    default1:author twssd:Ian_Simmons ;
+    default1:dateCreated "2021-02-05T19:46:31-08:00"^^default1:Date ;
+    default1:publisher twssd:Kicking_the_Seat ;
+    default1:reviewBody "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here." ;
+    default1:reviewRating twssd:65ae5248-71e7-4669-98d1-bb2129e77ec0 ;
+    default1:url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> .
 
-twssd:c7adb6f6-d0a3-4515-9325-68e7f9837326 a :Review,
+twssd:c58192a4-2cbd-4072-84bd-82c6f22bd9d6 a default1:Rating,
         owl:NamedIndividual ;
-    :author twssd:12e6907a-5ea3-46cb-92dd-92c20b7c6983 ;
-    :dateCreated "2021-02-10T06:48:34-08:00"^^:Date ;
-    :publisher twssd:6bb64f5f-de5b-4d67-8fe2-3b0556ae5c5a ;
-    :reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
-    :reviewRating twssd:087e36a3-bc16-4f7f-aa67-f2d190aa94fd ;
-    :url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> .
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
 
-twssd:c855d529-af6f-4f4f-9c40-dd1146e317ea a :Person,
+twssd:c98d4497-6f28-45f2-bf4c-e88ae985cc44 a default1:Rating,
         owl:NamedIndividual ;
-    :mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal/> ;
-    :name "Pedro Pascal" .
+    default1:bestRating "1" ;
+    default1:ratingValue 1 ;
+    default1:worstRating "-1" .
 
-twssd:ce45a5de-7160-4775-8cfa-5363f6ea79ab a :Person,
+twssd:cb357ec6-0b71-4969-a67c-9ca055f81f8f a default1:Rating,
         owl:NamedIndividual ;
-    :name "Thomas Clay Strickland" ;
-    :url <https://www.metacritic.com/person/thomas-clay-strickland> .
+    default1:bestRating "10" ;
+    default1:ratingValue "5" ;
+    default1:worstRating "1" .
 
-twssd:ced4ddc2-cf2d-42e8-97d9-ed0a4c49f955 a :Person,
+twssd:d0c9e31c-5d87-4650-a1fa-f5cfd6f7e24a a default1:Organization,
         owl:NamedIndividual ;
-    :name "Patty Jenkins" ;
-    :url <https://www.imdb.com/name/nm0420941/> .
+    default1:url <https://www.imdb.com/company/co0002663> .
 
-twssd:d0827f93-bb6b-47b2-9357-87115e9f0109 a :Person,
+twssd:d21ca886-1026-4d1a-9659-3ca003b92b3a a default1:Organization,
         owl:NamedIndividual ;
-    :name "Pedro Pascal" ;
-    :url <https://www.metacritic.com/person/pedro-pascal> .
+    default1:url <https://www.imdb.com/company/co0028338> .
 
-twssd:d0f141d2-acb8-4be2-af80-226144573c52 a :Review,
+twssd:dd72aeed-9a1e-43a1-a1a6-0f82ef36eb3f a default1:Review,
         owl:NamedIndividual ;
-    :author twssd:85333419-e686-42b4-a314-27a4ed6f8041 ;
-    :dateCreated "2021-02-17T02:36:51-08:00"^^:Date ;
-    :publisher twssd:8f39c312-6e7a-4ab3-86ff-a94ae47530a9 ;
-    :reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
-    :reviewRating twssd:5f07bb0f-ad3b-4822-b78d-22b7900618bd ;
-    :url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> .
+    default1:author twssd:Jake_Wilson ;
+    default1:dateCreated "2020-12-28T07:49:06-08:00"^^default1:Date ;
+    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> ;
+    default1:reviewBody "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel." ;
+    default1:reviewRating twssd:6b7179f9-3acc-4f6e-8c5b-1a2577db2114 ;
+    default1:url <https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html> .
 
-twssd:d1dea970-ee70-4fea-99a3-ed7fe5999bb3 a :Rating,
+twssd:e2249242-60ab-460d-bb51-306350646ea9 a default1:Rating,
         owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
+    default1:bestRating "1" ;
+    default1:ratingValue -1 ;
+    default1:worstRating "-1" .
 
-twssd:d430a673-acb8-4712-ab39-cf7be587b5a5 a :Person,
+twssd:e9d1424f-d3ba-4a9e-aff4-fdd1018f36f9 a default1:Review,
         owl:NamedIndividual ;
-    :name "Joel Morris" ;
-    :url <https://www.metacritic.com/person/joel-morris> .
+    default1:author twssd:Avaryl_Halley ;
+    default1:dateCreated "2021-03-11T05:51:39-08:00"^^default1:Date ;
+    default1:publisher twssd:Movie_Bitches ;
+    default1:reviewBody "At least \"Justice League\" had at the decency to be short" ;
+    default1:reviewRating twssd:b907d4a4-23d0-4baa-a3a4-3c37f589b9d2 ;
+    default1:url <https://youtu.be/75nDMuZMfLs> .
 
-twssd:d4491893-694c-4943-a17b-669ede8c4974 a :Review,
+twssd:eb3a4425-5481-43e8-abe5-201082c39ff4 a default1:Review,
         owl:NamedIndividual ;
-    :author twssd:b6ecdd5e-794e-446d-88e6-00f03cfb8d15 ;
-    :dateCreated "2021-02-13T23:57:56-08:00"^^:Date ;
-    :publisher twssd:8fdbedf6-fd94-4913-96a5-5e601dde1a9c ;
-    :reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
-    :reviewRating twssd:9fc5a513-2b7d-4f81-8bc1-ac66a6e9b686 ;
-    :url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> .
+    default1:author twssd:Matt_Neal ;
+    default1:dateCreated "2021-01-31T17:01:54-08:00"^^default1:Date ;
+    default1:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/ABC_Radio_%28Australia%29> ;
+    default1:reviewBody " After such a stirring debut, it's pains me to say that Wonder Woman 1984 isn't that wonderful." ;
+    default1:reviewRating twssd:9e9b8508-71a4-4edd-820e-dd2274025be9 ;
+    default1:url <https://movies8mylife.blogspot.com/2021/02/wonder-woman-1984.html> .
 
-twssd:d5de8c47-c0f0-4361-bad7-670d4adb6f50 a :Person,
+twssd:ee2856c7-fe7e-414c-8d2d-5625ffc175a6 a default1:Review,
         owl:NamedIndividual ;
-    :name "Tony Medley" ;
-    :url <https://www.rottentomatoes.com/critic/tony-medley> .
+    default1:author twssd:Kevin_Carr ;
+    default1:dateCreated "2021-04-03T14:11:59-07:00"^^default1:Date ;
+    default1:publisher twssd:Fat_Guys_at_the_Movies ;
+    default1:reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
+    default1:reviewRating twssd:c58192a4-2cbd-4072-84bd-82c6f22bd9d6 ;
+    default1:url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape> .
 
-twssd:d81a508a-101a-4718-8732-82b2e701ef89 a :Rating,
+twssd:effe3b61-72bf-4598-aef2-ce65bb29e2a6 a default1:Review,
         owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
+    default1:author twssd:David_Bax ;
+    default1:dateCreated "2021-03-23T10:02:10-07:00"^^default1:Date ;
+    default1:publisher twssd:Battleship_Pretension ;
+    default1:reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
+    default1:reviewRating twssd:15e90fa2-4c6f-40ce-9db6-f5dc8894a26b ;
+    default1:url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax> .
 
-twssd:d86064b7-228f-41ac-b774-d139e6620f8e a :Person,
+twssd:f1a5d968-21eb-41d6-adf0-1d64aa022733 a default1:Review,
         owl:NamedIndividual ;
-    :name "Bern Collaco" ;
-    :url <https://www.metacritic.com/person/bern-collaco> .
+    default1:author twssd:David_Sims ;
+    default1:dateCreated "2020-12-28T07:45:33-08:00"^^default1:Date ;
+    default1:publisher twssd:The_Atlantic ;
+    default1:reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
+    default1:reviewRating twssd:846fdf09-2da8-40fc-ac45-efc850484d5b ;
+    default1:url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470> .
 
-twssd:dacac64c-07df-4687-8a4b-9f43c709f39f a :Review,
+twssd:fbd53f8d-0437-467a-bdeb-25337a93f35b a default1:Review,
         owl:NamedIndividual ;
-    :author twssd:d5de8c47-c0f0-4361-bad7-670d4adb6f50 ;
-    :dateCreated "2021-02-22T06:02:11-08:00"^^:Date ;
-    :publisher twssd:275f62d4-e3d2-44d8-a599-00d767d08603 ;
-    :reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
-    :reviewRating twssd:06889976-6190-4649-84e9-8323df2c142e ;
-    :url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> .
+    default1:author twssd:Sheri_Flanders ;
+    default1:dateCreated "2021-02-01T04:29:30-08:00"^^default1:Date ;
+    default1:publisher twssd:Chicago_Reader ;
+    default1:reviewBody "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads." ;
+    default1:reviewRating twssd:87303d53-78f9-4a99-a1f9-fef38e182b10 ;
+    default1:url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> .
 
-twssd:dbf1e4e6-d49f-48b1-a8a5-97a49253bec2 a :Person,
+twssd:fbfa7078-020b-4c01-a8c7-c0c4c6f33281 a default1:PublicationEvent,
         owl:NamedIndividual ;
-    :name "Sarah Ward" ;
-    :url <https://www.rottentomatoes.com/critic/sarah-ward> .
+    default1:location twssd:ES ;
+    default1:startDate "2020-12-18"^^default1:Date .
 
-twssd:dcfcdc0c-d13f-4e99-879a-7a84d3a4cd32 a :Rating,
+twssd:fc51867b-57d7-4e03-b633-57e3af4e68d1 a default1:Review,
         owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue -1 ;
-    :worstRating "-1" .
+    default1:author twssd:Valerie_Kalfrin ;
+    default1:dateCreated "2021-03-20T08:54:50-07:00"^^default1:Date ;
+    default1:publisher twssd:Their_Own_League ;
+    default1:reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
+    default1:reviewRating twssd:8a77bccc-262a-499a-bac5-7eee0dd906f5 ;
+    default1:url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984> .
 
-twssd:ded6eab0-9f25-4edc-add7-d81f9fed025a a :Person,
+twssd:film-authority.com a default1:Organization,
         owl:NamedIndividual ;
-    :name "Rafer Guzman" ;
-    :url <https://www.rottentomatoes.com/critic/rafer-guzman> .
+    default1:name "film-authority.com" ;
+    default1:url <https://www.rottentomatoes.com/source-3904> .
 
-twssd:df0bca62-a06a-42c9-a4ac-8fa3d5ec114a a :Review,
+twssd:jayg_58 a default1:Person,
         owl:NamedIndividual ;
-    :author twssd:c3299226-a093-4f39-9af8-abb18069c5cc ;
-    :dateCreated "2020-12-29T12:09:48-08:00"^^:Date ;
-    :publisher twssd:5f499a56-5bb1-456c-9a46-60dab78a066e ;
-    :reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
-    :reviewRating twssd:b6ce862d-f273-45f6-81e4-88f81cfc9ee1 ;
-    :url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> .
+    default1:name "jayg_58" .
 
-twssd:e3cb8059-7e5e-472b-9110-9df2e1cfeee2 a :Person,
-        owl:NamedIndividual ;
-    :name "Gabriella Wilde" ;
-    :url <https://www.metacritic.com/person/gabriella-wilde> .
+default1:Clip a owl:Class ;
+    rdfs:subClassOf default1:CreativeWork .
 
-twssd:e3e2c3cc-a9b5-4644-b18d-7d705165d690 a :Person,
-        owl:NamedIndividual ;
-    :name "Lynda Carter" ;
-    :url <https://www.metacritic.com/person/lynda-carter> .
+default1:Event a owl:Class .
 
-twssd:e5c7027e-658b-4c96-807d-7efd59c96de5 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:4b149b57-8808-4836-96b9-517ce21e8825 ;
-    :dateCreated "2020-12-28T07:45:33-08:00"^^:Date ;
-    :publisher twssd:c13e17fe-8901-45b0-a873-b25692843ac8 ;
-    :reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
-    :reviewRating twssd:027c757a-b8c1-47b6-b492-5221c915193d ;
-    :url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470/> .
+default1:PublicationEvent a owl:Class ;
+    rdfs:subClassOf default1:Event .
 
-twssd:e749e365-c995-46c7-a73c-e479f4c8ff64 a :Organization,
+twssd:ES a default1:Country,
         owl:NamedIndividual ;
-    :name "San Diego Union-Tribune" ;
-    :url <https://www.rottentomatoes.com/source-503> .
+    default1:name "ES" .
 
-twssd:ea15579b-ec60-4ba8-a201-0632f8d21d76 a :Person,
+twssd:Movie_Bitches a default1:Organization,
         owl:NamedIndividual ;
-    :name "Patty Jenkins" ;
-    :sameAs <https://www.rottentomatoes.com/celebrity/patty_jenkins> .
+    default1:name "Movie Bitches" ;
+    default1:url <https://www.rottentomatoes.com/source-3639> .
 
-twssd:ead06728-b1d0-47d3-a4f9-8852594da2f8 a :Rating,
+<https://www.ecartelera.com/peliculas/wonder-woman-1984> a default1:Movie,
         owl:NamedIndividual ;
-    :bestRating "1" ;
-    :ratingValue 1 ;
-    :worstRating "-1" .
-
-twssd:eb59158d-e33f-49dc-9c52-070559f2de94 a :Person,
-        owl:NamedIndividual ;
-    :mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright/> ;
-    :name "Robin Wright" .
-
-twssd:ec1f247f-b81e-423a-a5f2-732cb243b274 a :Person,
-        owl:NamedIndividual ;
-    :name "Patty Jenkins" ;
-    :sameAs <https://www.rottentomatoes.com/celebrity/patty_jenkins> .
-
-twssd:f0b4e1de-9773-44a9-aa96-8be549a2037f a :Person,
-        owl:NamedIndividual ;
-    :name "Jamal Alkhaldi" ;
-    :url <https://www.metacritic.com/person/jamal-alkhaldi> .
-
-twssd:f189a9f7-426a-4386-b87b-7f4b17c2da68 a :Person,
-        owl:NamedIndividual ;
-    :name "Jake Wilson" ;
-    :url <https://www.rottentomatoes.com/critic/jake-wilson> .
-
-twssd:f30cf388-85b1-4621-bb65-2fcd601eb1a3 a :Organization,
-        owl:NamedIndividual ;
-    :name "Warner Bros. Pictures" .
-
-twssd:f3914e97-cbc4-43c1-a743-2945509d39aa a :Review,
-        owl:NamedIndividual ;
-    :author twssd:3674d229-0043-4db9-abfb-6193355a5002 ;
-    :dateCreated "2021-01-01"^^:Date ;
-    :inLanguage "English" ;
-    :itemReviewed twssd:871f1172-5983-4542-ac16-8d375b36f141 ;
-    :name "In quarantine, you'll buy anything." ;
-    :reviewBody "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours." ;
-    :reviewRating twssd:3dd9e9d8-5080-4c83-a92f-f75c67da1fcb .
-
-twssd:f58e44cc-eaa5-494a-a840-34dc6f573c25 a :Organization,
-        owl:NamedIndividual ;
-    :name "film-authority.com" ;
-    :url <https://www.rottentomatoes.com/source-3904> .
-
-twssd:f6b8f909-aed0-4352-a8aa-4782ebea3ae4 a :ImageObject,
-        owl:NamedIndividual ;
-    :contentUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> .
-
-twssd:f768bccd-fae4-41c6-bce2-0e5a868ff2de a :Organization,
-        owl:NamedIndividual ;
-    :name "Phawker" ;
-    :url <https://www.rottentomatoes.com/source-3631> .
-
-twssd:f888c10c-887b-4f07-be99-b57b63c0ecaa a :Organization,
-        owl:NamedIndividual ;
-    :name "Epoch Times" ;
-    :url <https://www.rottentomatoes.com/source-2771> .
-
-twssd:fa8a57c1-cb44-4320-b292-60448a31693a a :Offer,
-        owl:NamedIndividual ;
-    :availabilityStarts "2019-12-08 22:30:37"^^:Date ;
-    :category "free" ;
-    :eligibleRegion twssd:abc933a2-3392-4150-b0fc-5a9446d5b557 .
-
-twssd:fab4c936-6557-4f57-b0fe-6378e7cc84f5 a :Organization,
-        owl:NamedIndividual ;
-    :url <https://www.imdb.com/company/co0283444/> .
-
-twssd:fab9f7e4-ef9d-4303-b9a9-7fe914ee724a a :Person,
-        owl:NamedIndividual ;
-    :name "Jamaal Burcher" ;
-    :url <https://www.metacritic.com/person/jamaal-burcher> .
-
-twssd:fc324277-31f0-4ce5-8469-ed67756a6fe7 a :Person,
-        owl:NamedIndividual ;
-    :image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
-    :name "Gal Gadot" ;
-    :sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> .
-
-twssd:fd12ceb2-1396-4845-9103-e89075bd46f8 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:6376a4ea-e540-4694-8c5b-a30ad31fbfd9 ;
-    :dateCreated "2021-03-11T05:51:39-08:00"^^:Date ;
-    :publisher twssd:4d449c8b-16c5-4108-ba4a-6caa3259d229 ;
-    :reviewBody "At least \"Justice League\" had at the decency to be short" ;
-    :reviewRating twssd:38959581-5ffe-4608-a881-23bbb1016a68 ;
-    :url <https://youtu.be/75nDMuZMfLs> .
-
-twssd:ff137bf0-7f8c-4cd7-bb42-b54ff24a1d6c a :VideoObject,
-        owl:NamedIndividual ;
-    :description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
-    :embedUrl <https://www.imdb.com/video/imdb/vi3240214809> ;
-    :name "Stream on HBO Max for a Limited Time" ;
-    :thumbnail twssd:f6b8f909-aed0-4352-a8aa-4782ebea3ae4 ;
-    :thumbnailUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ;
-    :uploadDate "2020-12-07T01:51:07Z"^^:Date .
-
-twssd:ffe64d6d-24ee-4a75-8d0b-5c2727b14b07 a :Review,
-        owl:NamedIndividual ;
-    :author twssd:24a34b3c-3240-49e8-869d-61db8412e141 ;
-    :dateCreated "2021-01-04T03:37:14-08:00"^^:Date ;
-    :publisher twssd:0fe66cc0-7b4b-4584-8b39-f776823bb20b ;
-    :reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
-    :reviewRating twssd:04bbaa7b-7e3a-4264-a187-e2bd166eeeb7 ;
-    :url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo/> .
-
-<https://www.ecartelera.com/peliculas/wonder-woman-1984/> a :Movie,
-        owl:NamedIndividual ;
-    :actor twssd:2d5980be-b815-45dc-8511-a30f25329691,
-        twssd:38fe74ae-77c5-4a44-a471-10c9a2dd2bea,
-        twssd:53974f88-e993-46f4-80a0-c8d6b7badb42,
-        twssd:6a644c67-9e40-4817-93b6-b54e4465a115,
-        twssd:c855d529-af6f-4f4f-9c40-dd1146e317ea,
-        twssd:eb59158d-e33f-49dc-9c52-070559f2de94 ;
-    :aggregateRating twssd:42da2790-a3d3-46c4-8ec3-c8b94046f954 ;
-    :countryOfOrigin "EE.UU." ;
-    :description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
+    default1:actor twssd:Chris_Pine,
+        twssd:Connie_Nielsen,
+        twssd:Gal_Gadot,
+        twssd:Kristen_Wiig,
+        twssd:Pedro_Pascal,
+        twssd:Robin_Wright ;
+    default1:aggregateRating twssd:2225a6a5-d785-46cd-be6a-67d8caf04ede ;
+    default1:countryOfOrigin "EE.UU." ;
+    default1:description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
 \r
 La trama de esta película es una gran misterio. El guión está basado en una historia escrita por Patty Jenkins, Geoff Johns (&#39;The Flash&#39;, &#39;Aquaman&#39;) y Dave Callaham (&#39;Zombieland: Mata y remata&#39;). Se espera que tenga protagonismo la tecnología y la vigilancia, teniendo en cuenta el título que hace referencia a la distopía de &#39;1984&#39; de George Orwell.""" ;
-    :director twssd:2f46e878-e425-4de7-80c9-56ac8cacd9f9 ;
-    :duration "PT2H31M" ;
-    :genre "Acción",
+    default1:director twssd:Patty_Jenkins ;
+    default1:duration "PT2H31M" ;
+    default1:genre "Acción",
         "Aventura",
         "Fantasía" ;
-    :hasPart twssd:1b8d6c6c-cdba-491b-b1c4-bd10cf1a1110 ;
-    :image twssd:3245ce09-1151-43c2-9be8-d846d8bf6602 ;
-    :mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984/> ;
-    :name "Wonder Woman 1984" ;
-    :productionCompany twssd:05fca259-52ef-46d3-b9a5-61ff3214b921 ;
-    :releasedEvent twssd:b64a56bd-ea72-4fb1-941d-c8e9cbb4f0aa .
+    default1:hasPart twssd:1a3da5c6-c6a2-4b83-81f3-d008f1bec0fd ;
+    default1:image twssd:5cca4187-cf89-4d14-a8dc-4d27211f4de1 ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984> ;
+    default1:name "Wonder Woman 1984" ;
+    default1:productionCompany twssd:Warner_Bros._Pictures ;
+    default1:releasedEvent twssd:fbfa7078-020b-4c01-a8c7-c0c4c6f33281 ;
+    owl:sameAs twssd:Wonder_Woman_1984 .
 
-:Clip a owl:Class ;
-    rdfs:subClassOf :CreativeWork .
+default1:Action a owl:Class .
 
-:Country a owl:Class ;
-    rdfs:subClassOf :AdministrativeArea .
+default1:EntryPoint a owl:Class ;
+    rdfs:subClassOf default1:Intangible .
 
-:Event a owl:Class .
+default1:Intangible a owl:Class .
 
-:PublicationEvent a owl:Class ;
-    rdfs:subClassOf :Event .
+default1:Place a owl:Class .
 
-:Action a owl:Class .
+twssd:Chris_Pine a default1:Person,
+        owl:NamedIndividual ;
+    default1:image <https://resizing.flixster.com/kXDRe1jUWEU8UFkdf8JhRPMUG8s=/660x990/v1.bjs3NTYxMDQ7ajsxODgxODsxMjAwOzY2MDs5OTA> ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine> ;
+    default1:name "Chris Pine" ;
+    default1:sameAs <https://www.rottentomatoes.com/celebrity/christopher_pine> ;
+    default1:url <https://www.imdb.com/name/nm1517976>,
+        <https://www.metacritic.com/person/chris-pine> .
 
-:EntryPoint a owl:Class ;
-    rdfs:subClassOf :Intangible .
+twssd:Connie_Nielsen a default1:Person,
+        owl:NamedIndividual ;
+    default1:image <https://resizing.flixster.com/9Pu5qp5qfehIlclgv8tIbVPGlr0=/2938x3500/v1.cjs1MDM1NztqOzE4NzY1OzEyMDA7MjkzODszNTAw> ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/personas/connie-nielsen> ;
+    default1:name "Connie Nielsen" ;
+    default1:sameAs <https://www.rottentomatoes.com/celebrity/connie_nielsen> ;
+    default1:url <https://www.metacritic.com/person/connie-nielsen> .
 
-:Intangible a owl:Class .
+twssd:Gal_Gadot a default1:Person,
+        owl:NamedIndividual ;
+    default1:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot> ;
+    default1:name "Gal Gadot" ;
+    default1:sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> ;
+    default1:url <https://www.imdb.com/name/nm2933757>,
+        <https://www.metacritic.com/person/gal-gadot> .
 
-:Place a owl:Class .
+twssd:Kristen_Wiig a default1:Person,
+        owl:NamedIndividual ;
+    default1:image <https://resizing.flixster.com/P6P3MFr8YZqj_iCOIh7GxeYrPLg=/2000x2083/v1.cjs0OTMxNjtqOzE4NzY1OzEyMDA7MjAwMDsyMDgz> ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig> ;
+    default1:name "Kristen Wiig" ;
+    default1:sameAs <https://www.rottentomatoes.com/celebrity/kristen_wiig> ;
+    default1:url <https://www.imdb.com/name/nm1325419>,
+        <https://www.metacritic.com/person/kristen-wiig> .
 
-:Offer a owl:Class ;
-    rdfs:subClassOf :Intangible .
+twssd:Pedro_Pascal a default1:Person,
+        owl:NamedIndividual ;
+    default1:image <https://resizing.flixster.com/uEke7o3H4ngITX7oLEYgZox9q2A=/220x196/v1.cjs0NDAwMDtqOzE4NzY1OzEyMDA7MjIwOzE5Ng> ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal> ;
+    default1:name "Pedro Pascal" ;
+    default1:sameAs <https://www.rottentomatoes.com/celebrity/pedro_pascal> ;
+    default1:url <https://www.imdb.com/name/nm0050959>,
+        <https://www.metacritic.com/person/pedro-pascal> .
 
-:VideoObject a owl:Class ;
-    rdfs:subClassOf :MediaObject .
+twssd:Robin_Wright a default1:Person,
+        owl:NamedIndividual ;
+    default1:image <https://resizing.flixster.com/s5rTePWBzCqGE8uYUIYqS52D6JU=/1000x1500/v1.bjs3NDQ4MjY7ajsxODgxODsxMjAwOzEwMDA7MTUwMA> ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright> ;
+    default1:name "Robin Wright" ;
+    default1:sameAs <https://www.rottentomatoes.com/celebrity/robin_wright> ;
+    default1:url <https://www.metacritic.com/person/robin-wright> .
 
-:ImageObject a owl:Class ;
-    rdfs:subClassOf :MediaObject .
+twssd:Warner_Bros._Pictures a default1:Organization,
+        owl:NamedIndividual ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/empresas/warner-bros> ;
+    default1:name "Warner Bros. Pictures" ;
+    default1:url <https://www.metacritic.com/company/warner-bros-pictures> .
 
-:MediaObject a owl:Class ;
-    rdfs:subClassOf :CreativeWork .
+default1:Offer a owl:Class ;
+    rdfs:subClassOf default1:Intangible .
 
-:AggregateRating a owl:Class ;
-    rdfs:subClassOf :Rating .
+default1:VideoObject a owl:Class ;
+    rdfs:subClassOf default1:MediaObject .
 
-:Movie a owl:Class ;
-    rdfs:subClassOf :CreativeWork .
+twssd:Patty_Jenkins a default1:Person,
+        owl:NamedIndividual ;
+    default1:mainEntityOfPage <https://www.ecartelera.com/personas/patty-jenkins> ;
+    default1:name "Patty Jenkins" ;
+    default1:sameAs <https://www.rottentomatoes.com/celebrity/patty_jenkins> ;
+    default1:url <https://www.imdb.com/name/nm0420941>,
+        <https://www.metacritic.com/person/patty-jenkins> .
 
-:CreativeWork a owl:Class .
+default1:ImageObject a owl:Class ;
+    rdfs:subClassOf default1:MediaObject .
 
-:Review a owl:Class ;
-    rdfs:subClassOf :CreativeWork .
+default1:MediaObject a owl:Class ;
+    rdfs:subClassOf default1:CreativeWork .
 
-:Rating a owl:Class ;
-    rdfs:subClassOf :Intangible .
+default1:AggregateRating a owl:Class ;
+    rdfs:subClassOf default1:Rating .
 
-:Organization a owl:Class .
+default1:Movie a owl:Class ;
+    rdfs:subClassOf default1:CreativeWork .
 
-:Person a owl:Class .
+default1:CreativeWork a owl:Class .
+
+default1:Review a owl:Class ;
+    rdfs:subClassOf default1:CreativeWork .
+
+default1:Rating a owl:Class ;
+    rdfs:subClassOf default1:Intangible .
+
+default1:Organization a owl:Class .
+
+default1:Person a owl:Class .
 

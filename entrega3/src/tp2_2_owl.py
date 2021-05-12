@@ -5,8 +5,9 @@ import rdflib
 import requests
 import extruct
 from w3lib.html import get_base_url
+from urllib.parse import quote
 
-from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode
+from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef
 from rdflib.term import URIRef
 from rdflib.extras.external_graph_libs import rdflib_to_networkx_multidigraph
 from rdflib.plugin import register, Parser
@@ -39,13 +40,20 @@ def to_lean_graph(data_namespace, g:Graph):
         if isinstance(s, BNode):
             blank_nodes.add(s)
 
+    schema = Namespace('http://schema.org/')
     for bn in blank_nodes:
+
         ''' genero una iri dentro del namespace de los individuals para el blank node '''
-        bnid = str(uuid.uuid4())
+        for st, sp, so in g.triples((bn,schema.name,None)):
+            bnid = quote(so.replace(' ','_'))
+            break
+        else:
+            ''' no tiene nombre asi que genero un uuid '''
+            bnid = str(uuid.uuid4())
+
         dbnid = data_namespace[bnid]
 
         ''' genero las tripletas con ese nuevo id y remuevo las tripletas anteriores '''
-
         for st,sp,so in g.triples((bn, None, None)):
             g.add((dbnid, sp, so))
             g.remove((st,sp,so))
@@ -60,6 +68,80 @@ def add_named_individuals(g:Graph):
     #for type in used_types:
     for s,p,o in g.triples((None, RDF.type, None)):
         g.add((s,RDF.type, OWL.NamedIndividual))    
+
+def mark_as_equal(g:Graph):
+    '''
+        analizo el grafo para ver si puedo identificar los recursos iguales.
+        el criterio que uso es rdf:type y schema:name
+    '''
+    schema = Namespace('http://schema.org/')
+    data = {}
+    for iri, sp, _type in g.triples((None, RDF.type, None)):
+        for stt, spp, _name in g.triples((iri, schema.name, None)):
+            k = (_type,_name)
+            if k not in data:
+                data[k] = [iri]
+            else:
+                data[k].append(iri)
+
+    for k in data:
+        if len(data[k]) <= 1:
+            continue
+        for i, iri in enumerate(data[k]):
+            if len(data[k]) > i+1:
+                iri2 = data[k][i+1]
+                g.add((iri, OWL.sameAs, iri2))
+                g.add((iri2, OWL.sameAs, iri))
+
+"""
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+    VERIFICAR CON CASCO Y CON DIEGO SI ESTO ESTA OK !!!!
+    CREO QUE ESTARIA MAL MODIFICAR LAS IRIs!!
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
+"""
+def validate_iris_for_protege(g:Graph):
+    ''' 
+        hago una simple validación y cambio de iris 
+        para que protege me los muestre ok.
+        si termina en / le saco la /
+        NOTA: NO se si esto esta ok, ya que las iris no son urls para buscar cosas, si 
+        no son identificadores que no tienen mayor sentido que identificar!!
+    '''
+    subjects = set()
+    objects = set()
+    for st,sp,so in g:
+        if isinstance(st,URIRef) and str(st).endswith('/'):
+            subjects.add(st)
+
+        if isinstance(so,URIRef) and str(so).endswith('/'):
+            objects.add(so)
+        
+    for s in subjects:
+        niri = URIRef(str(s[:-1]))
+        for st, sp, so in g.triples((s,None,None)):
+            assert st == s
+            print(f'agregando {niri}')
+            g.add((niri, sp, so))
+            print(f'Eliminanod {st}')
+            g.remove((st, sp, so))
+
+    for o in objects:
+        niri = URIRef(str(o[:-1]))
+        for st, sp, so in g.triples((None,None,o)):
+            assert so == o
+            print(f'agregando {niri}')
+            g.add((st, sp, niri))
+            print(f'Eliminanod {so}')
+            g.remove((st, sp, so))
+
 
 
 if __name__ == '__main__':
@@ -99,12 +181,18 @@ if __name__ == '__main__':
         g = Graph()
         bind_schemas(g)
         g.parse(data=djson_ld, format='json-ld', publicID=url)
+        validate_iris_for_protege(g)
         unionGraph = unionGraph + g
 
     data_namespace = Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/')
     to_lean_graph(data_namespace, unionGraph)
     add_named_individuals(unionGraph)
 
+
+    mark_as_equal(unionGraph)
+
+
+    ''' busco la ontología definida en protegé y le hago merge con los datos de los individuals arriba procesados '''
     gontology = Graph()
     with open('../owl/twss_schema.ttl', 'r') as f:
         gontology.parse(f, format='turtle')

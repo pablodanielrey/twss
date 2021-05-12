@@ -1,0 +1,24 @@
+problemas principales encontrados:
+
+
+blank nodes y collections exportadas por los sitios.
+
+
+validación de los datos consumidos en json-ld.
+validador de ontologías? 
+consultas sobre grafos armados para validar datos sobre fuentes ya validadas y confiables?
+
+
+mostrar datos no normalizados en protegé.
+no se si es correcto lo que hice con las iris de lo que no se mostraba.
+la / final no la toma protegé y con lógica.
+
+
+identificación de los mismos individuals. que criterios usar.
+y cuando? despues de procesar todo el grafo?
+
+
+protegé. no entiendo toda la info que muestra y NO muestra protegé.
+algunos individuals que muestra son de las referencias a iris externas que se obtiene de los jsons-ld.
+no se si eso es correcto. o que habría que hacer con esa información?.
+
