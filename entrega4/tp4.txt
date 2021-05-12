@@ -1,0 +1,69 @@
+
+TP 04: Linked Data (la web de datos)
+Objetivo pedagógico
+Utilizar adecuadamente URIs para referirnos a nuevos recursos o a recursos existentes. De esta manera conectamos nuestros modelos RDF a la web de datos. 
+
+Aprender a publicar en un archivo RDF un modelo de datos provisto, completándolo con y conectándolo al Linked data cloud (p.e. dbpedia).
+
+Aprender a construir una aplicación que, a partir de la URL de un recurso y haciendo follow your nose y dereferenciación, completa un conjunto de datos (modelo).  
+
+Requerimientos
+En esta práctica es recomendable que utilice un framework para manejo de modelos RDF, por ejemplo RDFlib para Python.
+
+Contexto
+En la práctica anterior construyó un modelo RDF que contenía la información de su base de datos (sobre películas y funciones) siguiendo los estándares de la web semántica. Luego, grabó (serializó) ese modelo en un archivo RDF/XML, n3, o ttl. A partir de ese archivo, cualquiera puede reconstruir su modelo sin mucho esfuerzo.
+
+En esta práctica vamos a conectar (manualmente) nuestro dataset a otro muy reconocido (Dbpedia).
+
+Tareas 
+Es muy probable que dbpedia tenga información respecto a los actores que actúan en las películas en su base de datos. Busque las URIs que usted crea adecuadas para referirse a cada uno. Si son muchos puede elegir 10 que le usted quiera. 
+
+Construya (a mano, o con Protegé) un archivo RDF (utilize serialización turtle al guardarlo) en el que incluya tripletas owl:sameAs vinculando los actores en su dataset con los correspondientes recursos en DBpedia. 
+
+Construya un programa de línea de comando que reciba como parámetro los nombres de dos archivos: 
+
+  un dataset como el que genero en los TP anteriores (formato turtle)
+  un dataset que solo incluye las tripletas owl:sameAs  (formato turtle)
+En programa escribirá (a la salida estandard) un nuevo dataset (en formato turtle) en el que se ha agregado información obtenida de dbpedia respecto a los actores para los que había vinculo. La información que debe agregar es: fecha de nacimiento, página wikipedia, y ocupaciones.
+
+Se espera que sea posible utilizar su programa de la siguiente manera (ejemplo Python):
+
+       python enriquecedor.py dataset-original.ttl  links.ttl > dataset-enriquecido.rdf
+
+Preguntas
+¿Qué requisitos debe cumplir el archivo dataset-original.ttl para que su programa funcione adecuadamente?
+
+¿Cree que funcionará si le damos como entrada el archivo generado por alguno de sus compañeros?
+
+¿Cómo efectuó la búsqueda de correspondencias entre su dataset y dbpedia?
+
+¿Se podría automatizar la búsqueda de correspondencias? ¿Cómo? ¿Con qué efectividad? 
+
+Le pedimos que incluya la información obtenida de dbpedia en el archivo resultante. Desde el punto de vista de alguien que va a utilizar su dataset, ¿era necesario incluir esa información o alcanzaba con solo proveer los links sameAs?
+
+Entrega
+Este ejercicio se entrega por la plataforma.
+
+Puede hacerse de manera individual o de a pares.
+
+Debe entregar cinco archivos
+
+El archivo "dataset-original.ttl" (formato Turtle) correspondiente al TP anterior .
+
+El archivo "links.ttl" con las tripletas owl:sameAs .
+
+El programa de línea de comando correspondiente al enriquecedor.
+
+Un archivo "dataset-enriquecido.ttl" que es el resultado de enriquecer el archivo original.
+
+Un archivo "respuestas.txt" en el que responde a las preguntas que se plantean anteriormente 
+
+Discusión y consultas
+Durante las dos semanas dedicadas al desarrollo de este trabajo discutiremos en un foro los desafíos que la tarea implica. Participar de esas discusiones es parte de la actividad y parte de la calificación del trabajo. 
+
+Evaluación
+Suficiente: El programa funciona correctamente sobre su propio archivo y lo enriquece de la manera solicitada. Participa de la discusión en el foro. 
+
+Muy bueno:  El programa funciona correctamente sobre su archivo y sobre los archivos generados por sus compañeros (si estos fueron generados correctamente). Para esto es importante que colaboren/discutan entre ustedes.
+
+

@@ -1,0 +1,103 @@
+bueno primero tengo que arreglar los problemas que tenía la entrega anterior.
+en principio verificar bien los datos que se tiene el archivo final mergeado.
+tomo la opción de la v2 que es mas simple en cuanto a ontologías voy a usar esa.
+
+armo un script que lea el dataset original y genere un archivo links.ttl
+con las personas que encuentra en el dataset.
+
+esto sirve como base para generar los sameAs
+
+
+---
+
+ahora pruebo con uno de los actores listados.
+
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ian_Simmons
+
+https://dbpedia.org/page/Ian_Simmons
+
+
+es otro ian simmons.
+que tema!!. analizar como si es el actor u otra persona.
+
+--
+
+
+por lo pronto voy a analizar el proceso que hizo ale en la teoría a ver si lo entendí bien.
+busco Tom Hanks.
+es una persona física asi que la url:
+
+https://dbpedia.org/resource/Tom_Hanks
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ curl -I https://dbpedia.org/resource/Tom_Hanks
+HTTP/2 303 
+date: Wed, 12 May 2021 22:27:43 GMT
+content-type: text/html; charset=UTF-8
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+location: http://dbpedia.org/page/Tom_Hanks
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ curl -I -H "Accept: text/turtle" https://dbpedia.org/resource/Tom_Hanks
+HTTP/2 303 
+date: Wed, 12 May 2021 22:28:06 GMT
+content-type: text/turtle
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+tcn: choice
+vary: negotiate,accept
+alternates: {"/data/Tom_Hanks.atom" 0.500000 {type application/atom+xml}}, {"/data/Tom_Hanks.jrdf" 0.600000 {type application/rdf+json}}, {"/data/Tom_Hanks.jsod" 0.500000 {type application/odata+json}}, {"/data/Tom_Hanks.json" 0.600000 {type application/json}}, {"/data/Tom_Hanks.jsonld" 0.500000 {type application/ld+json}}, {"/data/Tom_Hanks.n3" 0.800000 {type text/n3}}, {"/data/Tom_Hanks.nt" 0.800000 {type text/rdf+n3}}, {"/data/Tom_Hanks.ntriples" 0.500000 {type application/n-triples}}, {"/data/Tom_Hanks.ttl" 0.700000 {type text/turtle}}, {"/data/Tom_Hanks.xml" 0.950000 {type application/rdf+xml}}
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/resource/Tom_Hanks>; rel="timegate"
+location: http://dbpedia.org/data/Tom_Hanks.ttl
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+----
+
+o sea que con la librería resource podría obtener el turtle analizando las cabeceras de las respuestas del http.
+ahora también puedo usar el standard que explicó ale sobre que los datos sobre un recurso están en el namespace /data/
+
+o sea en este caso puedo pedir directamente: https://dbpedia.org/data/Tom_Hanks.ttl
+
+----
+
+tripletas a obtener:
+
+dbp:birthDate
+dbp:occupation
+
+los prefijos:
+@prefix dbp:	<http://dbpedia.org/property/> .
+
+
+la pagina de wikipedia es:
+
+foaf:isPrimaryTopicOf
+
+el namespace para foaf es: http://xmlns.com/foaf/0.1/
+
+
+---
+
+
+genere un script que toma las personas de la ontología y los busca en dbpedia. usnado el nombre como el enlace entre las 2.
+el nombre primero se cambian los espacios por _  y depuses de lo codifica para que sea una url válida.
+al consultar debpedia.org/data/Persona.ttl 
+se obtiene el turtle de la persona y es posible procesar las tripetas retornadas de forma simple.
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/download_persons_dbpedia.py 
+Procesando : data/dataset-original.ttl
+Buscando datos de  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Katsuyuki_Konishi
+Imprimiendo tripletas
+http://dbpedia.org/resource/Katsuyuki_Konishi http://dbpedia.org/property/birthDate 1973-04-21
+http://dbpedia.org/resource/Katsuyuki_Konishi http://dbpedia.org/property/occupation http://dbpedia.org/resource/Voice_acting_in_Japan
+http://dbpedia.org/resource/Katsuyuki_Konishi http://xmlns.com/foaf/0.1/isPrimaryTopicOf http://en.wikipedia.org/wiki/Katsuyuki_Konishi
+
+------
+
+
