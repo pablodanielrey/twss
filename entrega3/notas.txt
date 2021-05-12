@@ -1,0 +1,72 @@
+
+conclusiones del trabajo y de la forma que lo encaré.
+lo de ontologías y la forma de estructurarlas es un mundo muy complejo. que requiere práctica y análisis.
+donde me imagino que no existen soluciones ideales si no que se trabaja lo mejor que se puede. y esto puede cambiar día a día.
+
+las formas que protegé muestra las cosas, y como interpreta ciertas cosas me surgen dudas todavía que tengo que explorar.
+realizar ejemplos y analizar que es lo que muestra protegé y que es lo que traté de representar.
+no llegue a probar todo lo que querría para poder tomar desiciones correctas sobre como implementar ciertas cosas dentro de las ontologías.
+y que sea coherente lo que muestra protegé.
+
+otro tema principal que creo que me faltó análisis es con respecto a la ingesta de datos desde los sitios. info exportada en json-ld
+o sea que hay que de alguna forma analizar los datos que se obtienen de los fuentes json-ld por validez y coherencia. (como se hace? mas que usar algun validador de ontología?, es suficiente?)
+
+gran parte del desarrollo lo describí en notas_random.txt a media que me iba encontrando cosas.
+y como las soluciné.
+también algunas idas y vueltas con respecto a solcuiones implementadas que no me gustaron.
+
+los principales problemas que me encontré.
+
+blank nodes y collections exportadas por los sitios.
+los sitios exportan la info en forma de colecciones, lo que comentaba casco en el foro de que al usar una colección estarías diciendo que esos son "todos" 
+los elementos. lo que lo hace incoherente con la info que nosotros queremos representar que es un merge entre fuentes de datos
+asi que hay que convertir todas esas colecciones a referecias y generar nodos con iris de cada uno de los blank nodes.
+conclusión. evitar el uso de colecciones en nuestras ontologías.
+
+validación de los datos consumidos en json-ld.
+validador de ontologías? 
+consultas sobre grafos armados para validar datos sobre fuentes ya validadas y confiables?
+como valido los datos que obtengo de los sitios. por un lado usando algun validador de de la semántica de la ontología sobre los datos consumidos.
+antes de agregarlos a nuestros grafos.
+y por otro lado realizar validaciones sobre fuentes confiables de datos. por ejemplo si ponene que una organización es la productora de una película, poder validar 
+sobre una fuente de organizaciones que esa misma exista.
+
+mostrar datos en protegé.
+no se si es correcto modificar iris que te llegan de sitios de donde se consume la info.
+pero protegé no muestra nombre en el caso de que tenga / final en la iri!!
+una url con / final es válida, pero no creo que sea una iri válida. pero la librería no me tira errores y
+tiene dentor de las claes URIRef validación básica.
+igualmente me encontre con el dilema de como manejar esa situación.
+1 - puedo modificar la iri para uqe me la muestre protegé. pero estaría modificando una IRI!!! lo cual es una identificación de un recurso. no estaría bien.
+2 - puedo sacarle la iri y generar una interna mía. y agregar en una propiedad del individual que identifique la iri original. algo como owl:sameAs
+
+identificación de los mismos individuals. que criterios usar.
+y cuando? despues de procesar todo el grafo?
+se refiere a usar consultas sobre el grafo para poder asignar propieades de igualdad entre individuals. (owl:sameAs)
+ir recorreindo el grafo y usar criterios como (si es el mismo tipo, y si tiene el mismo name entonces asignar owl:sameAs)
+
+protegé. no entiendo toda la info que muestra y NO muestra protegé.
+algunos individuals que muestra son de las referencias a iris externas que se obtiene de los jsons-ld.
+no se si eso es correcto. o que habría que hacer con esa información?.
+son demasiados datos y no me dió el tiempo para ir analizando cada uno y contrastar con lo que muestra protegé.
+croe que requiere todavía mas trabajo en ese aspecto.
+
+como consultar los datos!!! para realizar las transformaciones de los grafos.
+es complejo ir atravezando por las tripletas sin ningún lenguaje de consulta.
+asumo que las clases que vienen hablan de esos lenguajes.
+
+en la versión 2 de la solución (schema extendida)
+no se si integrar toda la ontología en 1 solo archivo. o dejarla como importada desde un recurso web.
+puedo simplemente abrir los 2 archivos y hacer un merge como hice en la versión anterior de la solución.
+pero protegé me lo muestra correctamente y creo que la versión de importar es la que se haría en el mundo real.
+asi que la dejo asi.
+en resumen. queda dentro del archivo de individuals la ontología extendida. y esta importa la ontología original de la web.
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl> a owl:Ontology ;
+    owl:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> .
+
+protegé me lo muestra ok.
+
+
+
+

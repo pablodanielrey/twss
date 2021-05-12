@@ -1,22 +1,42 @@
 ¿Qué ventajas supone que hubiese obtenido si en los trabajos anteriores contaba con la información descrita en OWL?
 
+tendría exactamente las relaciones que manejan entre las entidades. y mediante algun tipo de verificación de ontología podría analizar si los
+datos que estoy obteniendo de las fuentes son correctos. y si los tipos usados son los correctos o en algun caso se está exportando información con el tipo incorrecto.
+
+
 ¿Qué ventajas tiene utilizar vocabularios existentes en lugar de crear los propios?
 
-al usar vocabularios existentes se mejora la compatibilidad que existe con la información de otros sitios, ej si todos usamos la clase Person de foaf
+No hay que realizar mucho proceso mental para analizar la jerarquía. si reusamos una jerarquía existente y probada simplemente es cuestión de extenderla con
+las clases y propieades que necesitemos en cada caso.
+también vocabularios existentes posiblemente estén mas probados ya que se creo para exportar información en un momento, con lo cual pueden estar ya mas refinados.
+tambien se mejora la compatibilidad que existe con la información de otros sitios, ej si todos usamos la clase Person de foaf
 para representar las personas de nuestra información, facilitamos la interpretación de esta misma por parte de herraminetas de análisis.
 Idealmente debería existir un solo vocabulario para cada uno de los dominios de aplicación.
 El problema de generar un vocabulario único para cada dominio, es que estos imponen ciertas restricciones semánticas, lo cual lo hace impráctico en el uso de situaciones para las cuales no estaba diseñado.
 
-
-Un ejemplo claro de esto es lo que ocurre con schema.org, donde el foco esta en estructurar la información pero sin imponer demasiadas restricciones semánticas, permitiendo que 
-se exporte al menos algún tipo de información.
-
-
-
 ¿Utilizó solamente clases y propiedades de un único vocabulario?
+
+en la solución 1 no, ya que cree mi propia ontología separada.
+en la solución 2 fue una mezcla de schema.org y propieades inventadas por mi.
+no use vocabularios como foaf, etc ya que las propieades adicionales que necesitaba eran muy pocas.
+la motivación de usar schmea.org fue que la mayoría de la información consumida venía estructurada usando ese formato.
 
 ¿Que impacto hubiese tenido al momento de almacenar la información obtenida el contar con un modelo como OWL?
 
+muchisimo mas simple el merge de los datos!!!.
+las consultas todavía tengo que mejorarlas, asumo que sparql se encarga de eso.
+pero simplifica muchísimo manejar la información en forma de tripletas. si es que provienen de múltiples fuentes de datos.
+
 ¿Qué diferencia hay entre utilizar un modelo de objetos para integrar la información que obtuvo (como hizo anteriormente) con utilizar tripletas?
 
+el merge fue muy simple ya que al venir en forma de tripletas, solo se hace una unión. no hace falta analizar la estrcutra del formato de origen.
+ej: 
+en un json las películas podrían venir dentro de 'movies'
+o dentro de 'películas'
+etc.
+en tripletas eso no pasa. una simple unión se tiene un merge de los grafos.
+
 ¿Cuán dificil es generar archivos OWL en otros formatos (por ejemplo N3, RDF/XML) a partir de la información que tiene? Y con su scrapper.
+
+usando la librería que usé (rdflib) es muy muy simple.
+solo al método serialize se le da el parámetro de la sintaxis a usar.

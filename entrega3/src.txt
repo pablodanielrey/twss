@@ -201,3 +201,11 @@ solo pongo la extendida e incluyo en su version web a la original.
 me pareció interesante contrastarlo con la solución 1. protegé me lo muestra correctamente.
 
 veo ok los individuals y sus propieades.
+
+---
+
+
+como notas finales iba a refiniar la solución, tratar de verificar las ontologías como comentó diego en el foro a andrés.
+y generar algún gráfico de las ontologías y los individuals.
+pero no llegué con el tiempo.
+

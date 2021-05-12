@@ -1,7 +1,0 @@
-
-ingesta de datos desde los sitios. info exportada en json-ld
-o sea que hay que de alguna forma analizar los datos que se obtienen de los fuentes json-ld por validez y coherencia. (como se hace? mas que usar algun validador de ontología?, es suficiente?)
-
----
-
-
