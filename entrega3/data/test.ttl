@@ -1,5 +1,0 @@
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-
-<http://schema.org/Movie> a owl:Class .
-
-<https://www.ecartelera.com/peliculas/wonder-woman-1984> a <http://schema.org/Movie> .

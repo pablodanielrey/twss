@@ -652,6 +652,59 @@ def validate_iris_for_protege(g:Graph):
 -----------------------------
 
 
+se muestra bien ahora en protegé. pero me hace mucho ruido eso lo de la modificación de la iri.
+
+
+--------------------
+
+armo un merger.py para mergear todos los grafos. los de ontologías y los de los individuals.
+defini una ontología que relaciona a las 2 que definí para cada uno de los "sistemas"
+twss.ttl
+donde se setean owl:equivalentClass y owl:equivalentProperty
+por ejemplo:
+
+schema:actor  owl:equivalentProperty twss:actor
+schema:actors owl:equivalentProperty twss:actor
+
+y clases
+
+schema:Person owl:equivalentClass twss:Person
+schema:Movie owl:equivalentClass twss:Movie
+
+etc
+
+
+FUNCIONAAA!!!.
+veo por ejemplo que la película que existía en los 2 tps. Wonder Woman 1984 
+fue mergeada completa.
+tiene las propieades correctas. 
+schema:actors
+schema:actor
+twss:actor
+y que por ejemplo Pedro Pascal, se encuentra como objeto en todas esas propieades.
+y la iri es el mismo individual Perdo Pascal.
+que tiene de nombre:
+twss:nombre
+schema:name 
+
+----------------------
+
+
+En resumen, creo que logré mis objetivos que eran.
+1 - generar una ontología y representar datos que tengo estructurados ya en un sistema interno
+2 - generar una ontología que se ajuste a alguna standrad de internet y consumir datos de otros sitios directamente sin pasar por modelos de clases, objetos, etc como lo comentaba diego.
+3 - realizar algun merge de ontologías y relacionarlas para representar lo que se haría en le mundo real.
+
+
+
+
+
+
+
+
+
+
+
 ahora se muestra ok todo en protegé.
 pero me arrepentí!!!. las iris deben ser internas a mi ontologia, si es la info que estoy exportando.
 asi que voy a modificar el código y vovler atras.
@@ -739,7 +792,18 @@ a object property y en los casos de uso de los datos que tengo parece que esta f
 
 
 
+-----------------------------
 
+
+teniendo las experiencias del procesamiento del tp2.
+hago merge como hice en la parte de tp2 de la ontología con los individuals.
+modifico el script tp1_2_owl.py 
+y escribo el resultado dentro de data/merged_tp1.ttl
+lo abro con protegé y lo veo perfecto.
+
+
+
+---------------------------------
 
 
 

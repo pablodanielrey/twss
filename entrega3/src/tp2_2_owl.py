@@ -29,6 +29,7 @@ def get_jsons(url):
 def bind_schemas(g:Graph):
     g.bind('schema',Namespace('http://schema.org/'))
     g.bind("twss", Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#'))
+    g.bind("twsss", Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl#'))
     g.bind("twssd", Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/'))
 
 
@@ -187,8 +188,6 @@ if __name__ == '__main__':
         
         validate_iris_for_protege(g)
 
-
-
         unionGraph = unionGraph + g
 
     data_namespace = Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/')
@@ -203,7 +202,7 @@ if __name__ == '__main__':
         gontology.parse(f, format='turtle')
 
     gfinal = gontology + unionGraph
-    with open('data/merged.ttl','w') as f:
+    with open('data/merged_tp2.ttl','w') as f:
         f.write(gfinal.serialize(format="turtle").decode("utf-8"))
 
     
