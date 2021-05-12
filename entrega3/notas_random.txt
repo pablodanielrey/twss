@@ -695,9 +695,150 @@ En resumen, creo que logré mis objetivos que eran.
 2 - generar una ontología que se ajuste a alguna standrad de internet y consumir datos de otros sitios directamente sin pasar por modelos de clases, objetos, etc como lo comentaba diego.
 3 - realizar algun merge de ontologías y relacionarlas para representar lo que se haría en le mundo real.
 
+en resumen.
+se tiene :
 
 
 
+----------------
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+
+
+tengo miedo de no haber cumplido con lo que el tp3 significa, asi que voy a realizar una variante.
+voy a generar otra ontología extendida de schema para que cubra los campos de mi ontología simple del tp1.
+y generar otro script tp1_2_owl_extended.py
+que cargue los datos del tp1 dentro de esa ontología extendida.
+
+
+genero las siguientes clases colgadas de la jerarquía de twss_schema.ttl
+
+Cinema
+ShowRoom
+Show
+
+y algunas propieades
+ahora genero el script que tome los datos de tp1 y los incluya en un grafo generado con esta ontología.
+-
+generé el archivo con la nueva ontología y me muestra correctamente los cines, las salas y los shows.
+pero si uso mi namespace de mi ontología no toma las películas y las personas de las ontologías importadas. me genera clases nuevas colgadas de thing.
+o sea:
+
+al usar:
+
+@prefix : <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl#> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl> a owl:Ontology ;
+    owl:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> .
+
+
+y generar los individuals:
+
+
+twssd:Los_Intrusos a owl:NamedIndividual,
+        :Movie ;
+    :actor twssd:Andrew_Ellis,
+        twssd:Ian_Kenny,
+        twssd:Jake_Curran,
+        twssd:Maisie_Williams,
+        ......
+        .....
+
+esa película la cuelga de owl:Thing. en vez de schema:Movie
+o sea la importación de ontologías no funciona como herencia de ontologías!!. owl:import no quiere decir que te importa todas las clases dentro de ese namespace.
+
+---
+
+modifico el script para usar las schemas correctas en las personas y las movies.
+
+-
+
+duda. no se en el caso de las synopsis si usar la propiedad ?
+abstract o text
+uso text
+
+tengo que agregar las propiedades que me faltan.
+
+schema:text
+twss:movie
+twss:movieFormat
+
+algo interesante!!!!! 
+definir una propieadad en una ontología pero usando el namespace de otra.
+ej:
+en twss_schema_extended defini:
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/text
+<http://schema.org/text> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain <http://schema.org/CreativeWork> ;
+                         rdfs:range xsd:string .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl#movieFormat
+:movieFormat rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Show ;
+             rdfs:range xsd:string .
+
+asi que si uso schema_extended para los datos (individuals) como contexto. PUEDO!! usar el namespace de 
+schema:text y no usar twss (como en el caso de la propiedad movieFormat) 
+en resumen.
+se pueden definir ontologías que agreguen funcionalidad a otras existentes dentro del mismo namespace de iris de la anterior!!!. me acaba de volar la cabeza con la posibilidades que brinda.
+
+
+
+--------
+
+
+ahora si tengo los datos del tp1 en un archivo turtle usando la ontología extendida. (creo que esto va mas en linea con lo que se pedía en el tp3)
+voy a modificar el script que unifica todo y realizar la versión 2 final de la solución.
+en este caso se mantiene todo dentro de una ontologia original y una extendida de esa misma.
+sin relación entre ontologías usanod owl:equivalentClass y owl:equivalentProperty
+
+<http://schema.org/actor> owl:equivalentProperty <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#actor> .
+<http://schema.org/actors> owl:equivalentProperty <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#actor> .
+<http://schema.org/director> owl:equivalentProperty <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#director> .
+<http://schema.org/name> owl:equivalentProperty <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#name> .
+<http://schema.org/Movie> owl:equivalentClass <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#Movie> .
+<http://schema.org/Person> owl:equivalentClass <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#Person> .
+
+
+-----
+
+
+bueno termine el script que mergea las 2 fuentes.
+merger_v2.py
+
+funciona bien, protegé me lee bien todos los datos y me muestra bien los individuals.
+también hizo merge correctamente de todos los datos. las películas están ok.
+
+---
+
+solo me falta agregar una propiedad que se me chispoteó y la estoy viendo.
+schema:character
+no la puedo definir como indica en schema.org porque los datos solo asocian strings y no Persons.
+así que la defino como dataproperty
+la defino en la schema original twss_schema.ttl
+
+----
+funcionó perfecto.
+
+analizando los datos veo que use schema:text y schema:description 
+para la sinopsis de las películas. modifico los scripts para usar description.
+
+
+
+
+
+
+
+
+
+
+ver duration!!
 
 
 

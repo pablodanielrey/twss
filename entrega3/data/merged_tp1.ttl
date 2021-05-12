@@ -1,1695 +1,1695 @@
+@prefix : <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix twss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl#> .
 @prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-twssd:show_001ae3da-83b7-4d37-abfd-d46912812e4b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_f7ee0a39-5304-406e-98db-60e4744e9d8e .
+twssd:show_00b46a4f-3458-4e79-bc03-a76b0310c9ad a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Trolls_2 ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:15" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
 
-twssd:show_017bff6a-ebfb-4935-b6c1-6acf8367f545 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
+twssd:show_0353e6f6-a117-4237-a34e-c20a39c5553a a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:15" ;
+    :showsIn twssd:showroom_01e0aeb7-c3c5-4ab7-bdcd-ff835d6c5584 .
 
-twssd:show_04f4db3e-ae28-42ba-a5f2-11ec2487351a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:45",
-        "18:15" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
+twssd:show_036b9ed3-2f12-4d4b-8ecb-89b20d6328ca a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Trolls_2 ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:15" ;
+    :showsIn twssd:showroom_7fec812a-4dc1-4dcf-a841-334570918316 .
 
-twssd:show_07c6209c-04e1-4024-8bbd-cd73f9d21932 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
+twssd:show_03997df9-b31d-43f2-967d-19bcee8417e0 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:40" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
 
-twssd:show_07d55005-e29b-44a3-81de-cc9054da2c45 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
+twssd:show_0a442e77-5655-4707-b96c-d9039872cf34 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:15" ;
+    :showsIn twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb .
+
+twssd:show_0e8d884c-503f-45f9-8368-5140b9563f71 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "14:00",
+        "17:00",
+        "19:50",
+        "22:40" ;
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
+
+twssd:show_11733d64-bae6-469b-9860-34da8d9063bd a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Trolls_2 ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:15" ;
+    :showsIn twssd:showroom_01e0aeb7-c3c5-4ab7-bdcd-ff835d6c5584 .
+
+twssd:show_185640dd-1111-4f54-8027-415c92d641cf a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:15" ;
+    :showsIn twssd:showroom_99a4c11b-840c-4399-b238-d00024dd1bed .
+
+twssd:show_1afa07ea-49e1-46e4-9004-eebff393e115 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:40" ;
+    :showsIn twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb .
+
+twssd:show_1c5570fd-00ce-47ac-b054-82f6a2ab14d9 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
         "18:50" ;
-    twss:showsIn twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 .
+    :showsIn twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb .
 
-twssd:show_08d6427e-e70e-412e-b3b9-e48a972b2e97 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
+twssd:show_2088ee4e-6677-4b2a-b145-7cfc5a52a8da a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Trolls_2 ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:15" ;
+    :showsIn twssd:showroom_99a4c11b-840c-4399-b238-d00024dd1bed .
 
-twssd:show_08da6ea5-083c-4fba-8f31-0c5b8640a01e a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:00",
-        "15:30",
-        "18:00",
-        "20:30",
+twssd:show_23fede6e-b711-4871-b094-c16e977e10ca a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Promising_young_woman ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:10" ;
+    :showsIn twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 .
+
+twssd:show_24c50cbb-33d5-4bc4-9841-8d448da7c613 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Wonder_Woman_1984 ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:50" ;
+    :showsIn twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb .
+
+twssd:show_250f5da3-9ed2-4c8d-a1ce-80778921c456 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:00" ;
+    :showsIn twssd:showroom_855902a9-9b70-4d35-a780-125a36e926ee .
+
+twssd:show_25e4e785-890a-4bf2-b290-7ed54964201e a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:15" ;
+    :showsIn twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 .
+
+twssd:show_2633d6f0-4891-4373-a847-20c53999df15 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:40" ;
+    :showsIn twssd:showroom_99a4c11b-840c-4399-b238-d00024dd1bed .
+
+twssd:show_28906edf-3576-4a3c-8a70-72f55a1ccc95 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Demon_Slayer_Mugen_Train ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "20:00" ;
+    :showsIn twssd:showroom_2f8fdbfd-aa03-4554-b5c0-191ec2ff4901 .
+
+twssd:show_2d667d9b-60c0-41e0-b2b7-2971ff04eefd a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:00" ;
+    :showsIn twssd:showroom_3b501513-eeab-4c8a-9b8b-8a897dc0b47a .
+
+twssd:show_2e864279-a227-49b2-ba02-912ceed17f63 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
+        "18:50" ;
+    :showsIn twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 .
+
+twssd:show_2fd6f7f1-5829-4119-aea8-3eeada3d5600 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:15" ;
+    :showsIn twssd:showroom_df47da43-a9e4-4f1e-998b-8e621420604b .
+
+twssd:show_31b0d907-a6bb-4721-9b90-e6ecf88aa2f6 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Wonder_Woman_1984 ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:50" ;
+    :showsIn twssd:showroom_99a4c11b-840c-4399-b238-d00024dd1bed .
+
+twssd:show_31f6aa16-5bf5-45d0-ad24-e6cce3a19683 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:La_noche_magica ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:40" ;
+    :showsIn twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb .
+
+twssd:show_3a1d3241-924e-4200-b722-59f30ff892ee a owl:NamedIndividual,
+        :Show ;
+    :movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "16:10" ;
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
+
+twssd:show_3b672215-1d21-4bf0-ac54-8d7c43607777 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "15:30",
         "23:00" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
 
-twssd:show_0a4e814a-30d0-4b5a-a5e4-510a746833ec a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
+twssd:show_3bfa8e22-9a9b-4a12-910f-a8f468128b1d a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_Y_Jerry ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "14:00",
+        "16:15",
+        "18:30" ;
+    :showsIn twssd:showroom_6954f526-ce29-4ece-91de-e7ede411734a .
 
-twssd:show_1064fd2f-b919-4d48-b18d-9ccf507e3509 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
+twssd:show_3c5d0631-a9c5-4662-9b15-33059314ddbf a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tenet ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "22:45" ;
+    :showsIn twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e .
 
-twssd:show_10a36919-5f2a-4069-89fb-23996f8b258d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
+twssd:show_3e546580-2bce-4d76-a2eb-cfe5361dc142 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "23:10" ;
+    :showsIn twssd:showroom_ac54a9ee-6224-4eec-b5e0-b4da0a2f0fc1 .
 
-twssd:show_119cc248-ffed-4b25-bb93-f566def5370c a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "22:15" ;
-    twss:showsIn twssd:showroom_e938c6c9-93d8-49cb-9b91-feaeb444c8b8 .
-
-twssd:show_15322464-fd57-40a9-b427-13a19dd75294 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
-
-twssd:show_1c26c917-c7b8-40ee-81e6-d07ffa3c1494 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_1e4483a5-1b30-4ef7-9dd3-71098d92c49d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tenet ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "22:45" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_1eda9fa9-0787-4323-b5f2-3e0e9782c9a6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
-
-twssd:show_1ff10ad8-f4b1-4f41-8694-cc7ad3e9409b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "16:45",
-        "19:45" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
-
-twssd:show_2051867a-cd08-4a03-8ba0-9e36a0d4902d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:El_silencio_del_cazador ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "22:20" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_2699a592-64de-48a9-a002-334925b81c00 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_2928497a-826e-43df-8616-d47c13ac6246 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
-
-twssd:show_2c36c126-60e0-48aa-84d5-f1ddb738222b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tenet ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:10" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_2c7bdb4f-5f07-43a0-84e9-4d1730490757 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "15:00",
-        "17:40",
-        "20:20" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_30538fe6-c148-4a3c-98eb-81baa75c6079 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_335e3142-263b-437f-a566-a46c2bed91c9 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_30633358-d7cc-437d-8047-7c470a2bb875 .
-
-twssd:show_38b08b3c-3657-4bae-a07c-89f95c7a9fd7 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "23:10" ;
-    twss:showsIn twssd:showroom_bc1fd77e-c6f7-43d4-b2b5-6e62318a6303 .
-
-twssd:show_38e61d37-4c08-4d67-ba98-f55d1e94a24f a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
-
-twssd:show_3b7cb904-573e-4a2c-9be8-234b12950062 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
-
-twssd:show_3d7e0ecd-7a57-4c95-af83-6e34660c3375 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad .
-
-twssd:show_3e5d65e8-17dc-4478-9e19-f0c140269f42 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "16:00" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_3ef5149b-a17a-456d-95e0-764e7a66e45f a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:00",
-        "18:00",
-        "20:30" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_41a7f78d-479e-4b11-949a-fdfcd539524d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_47acf41e-149a-4831-b6d6-a2b41bdb9bc0 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_490a3958-2c58-4eb3-bbf4-5c7e63ac5ff9 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:On_a_magical_night ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "14:00",
-        "18:00",
-        "20:00",
-        "22:00" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_4dc75d65-d2dc-4e00-9fda-1e9d305f45e6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_1035f0db-861b-4a1c-a898-7894025671ec .
-
-twssd:show_515f44d5-6199-40d6-aad3-e3a872fa3312 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:45",
-        "16:45",
-        "19:45" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_57b5f645-253c-4417-8864-d67aece8f643 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:La_noche_magica ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:40" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_583f1c14-9bc4-4326-b6d1-b8a5a7d906a1 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_8d56bbe0-cdf8-424f-9c44-7266f1152299 .
-
-twssd:show_593c1f5b-172a-4c1a-b75e-848fabf260a0 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:On_a_magical_night ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "19:50" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_5aca1192-a7c1-419a-aecd-2b05658bae53 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_b90711fd-6b28-4b73-83e3-8ee82fe06384 .
-
-twssd:show_5e2f28d0-6443-486a-9df3-a523efc7439f a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
-
-twssd:show_5f1527ac-6175-4af2-8e3e-09cab3dd9aef a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
-
-twssd:show_5f52b5b2-6a07-43eb-93b8-eafcdeffa4ec a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:El_Secreto_Del_Bosque ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "20:45",
-        "23:10" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_617e2f4e-ebb4-4dec-bbfb-7ca8b9635029 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_6392192c-90b3-4803-9dab-0a688108e88d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_658c167f-7fe8-4143-ab69-53d39f5557ad a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 .
-
-twssd:show_68811a5f-5239-460d-90d8-53055233e95b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
-
-twssd:show_6a02b583-dc67-47fa-9384-9f9219ee39d6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
-
-twssd:show_6a1b275b-439e-4306-88a7-5fc13429a4eb a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_Y_Jerry ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "14:00",
-        "18:25" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_6f97bf21-7ecc-49df-b97f-caf1d1eb7cbe a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_Y_Jerry ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:20",
-        "15:40",
-        "18:00" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_73a2d499-034d-486c-a0cd-71dada1c01a0 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
-
-twssd:show_7460c55a-fae7-4ecb-bfda-aada79369ffe a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_747358b7-7b9e-46f3-b9f1-448513dd27bc a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
-
-twssd:show_74963b69-935d-4b94-9b07-c4813cb691e1 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_773c5bc7-ff04-4851-ba20-48d0d9dcade6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:La_noche_magica ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:40" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_7997cc19-a10c-4d9a-9f15-cb2562fbadd9 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_7be5717f-8ad4-4826-87ef-14032653e2b6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
-
-twssd:show_7c0fffad-3755-47d5-8ef6-c83e483a2c6b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
-
-twssd:show_819528d2-f52a-419f-81cd-0986bc7b1e21 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:50" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
-
-twssd:show_842c6d30-b594-4c48-8051-04e9b9287ea6 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
-        "18:50" ;
-    twss:showsIn twssd:showroom_7cb08145-bd67-4523-b723-1c2ff5160858 .
-
-twssd:show_874f7452-d899-422b-ade5-3a7879ee5c4e a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_885cf155-6aba-40c2-af69-233446cccff1 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "15:30",
-        "23:00" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_8aca9574-3dc5-4e9f-9b31-f54466a5dc70 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 .
-
-twssd:show_8c39b5e7-9c0f-46c3-bb25-d0fa32d8d21a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Wonder_Woman_1984 ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_90b455db-2c19-40f3-8c49-3f0ef4d02d0a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:15",
+twssd:show_3f43a36b-ba8b-4a34-99b0-6c39e0e6d499 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:15",
         "15:40",
         "20:20",
         "22:50" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
+    :showsIn twssd:showroom_27735a3d-5b2b-49a5-9f9c-fde47b781548 .
 
-twssd:show_90c9aa73-0f56-4770-8a7a-370f18a03c0a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
+twssd:show_4411b147-2e8b-4639-abfc-e85bd5e2466c a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:40" ;
+    :showsIn twssd:showroom_2f8fdbfd-aa03-4554-b5c0-191ec2ff4901 .
 
-twssd:show_911f9205-9627-4df4-ac44-324093d8de31 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
+twssd:show_462ff784-4a23-49e3-843c-9cfb045c100e a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Wonder_Woman_1984 ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:50" ;
+    :showsIn twssd:showroom_2f8fdbfd-aa03-4554-b5c0-191ec2ff4901 .
+
+twssd:show_4daca455-6cda-4162-9c40-5da4cc8735f3 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
         "18:50" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
+    :showsIn twssd:showroom_01e0aeb7-c3c5-4ab7-bdcd-ff835d6c5584 .
 
-twssd:show_92b3fd4f-da30-48a5-9f5b-ffedf3750bf2 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Los_Intrusos ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "16:00",
-        "20:30" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
+twssd:show_4eadda86-e55e-4741-93ca-bd0bd8be8b32 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Trolls_2 ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:15" ;
+    :showsIn twssd:showroom_df47da43-a9e4-4f1e-998b-8e621420604b .
 
-twssd:show_96a990ce-7b14-4dc6-98c6-28797cc4078d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
+twssd:show_50406b82-696f-4609-8d55-2432f641fcd9 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
+        "18:50" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
 
-twssd:show_99090e3f-9c95-42c6-943c-12d955e4dcd7 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "13:15",
-        "15:40",
-        "18:10",
+twssd:show_5319889b-d8f7-479f-8dd1-55a3a596530e a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:00" ;
+    :showsIn twssd:showroom_e35c7f9f-3df5-48f3-aa36-cd9dbdf122a6 .
+
+twssd:show_5320850d-3e3c-4f6b-b785-572bc4569a56 a owl:NamedIndividual,
+        :Show ;
+    :movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "16:00" ;
+    :showsIn twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e .
+
+twssd:show_5b809238-54fb-4504-b85f-a166664704e2 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "13:45",
+        "22:45" ;
+    :showsIn twssd:showroom_27735a3d-5b2b-49a5-9f9c-fde47b781548 .
+
+twssd:show_5d855498-eabd-44db-acf8-dbb4df546441 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tenet ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:10" ;
+    :showsIn twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 .
+
+twssd:show_5fd0718f-94b0-41eb-a77a-13374cf29019 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:La_noche_magica ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "20:45",
+        "23:10" ;
+    :showsIn twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e .
+
+twssd:show_69163609-795c-4b3f-8d19-2e0a8fa08b96 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:40" ;
+    :showsIn twssd:showroom_7fec812a-4dc1-4dcf-a841-334570918316 .
+
+twssd:show_69362b5a-8687-4798-a22b-67e3598e5866 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:00",
+        "15:30",
+        "18:00",
         "20:30",
         "23:00" ;
-    twss:showsIn twssd:showroom_e938c6c9-93d8-49cb-9b91-feaeb444c8b8 .
+    :showsIn twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e .
 
-twssd:show_998c8ad1-0978-4ba9-a18d-fd635ab7c20d a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Promising_young_woman ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:10" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
+twssd:show_6b0103ef-f0c2-4cb2-8abf-397fe8bf424c a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Promising_young_woman ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:10" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
 
-twssd:show_9e6d693d-e5e9-4e08-941c-1b2b635cc1d5 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
+twssd:show_73409107-6acb-4daf-a22a-34cbecdb2313 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:15" ;
+    :showsIn twssd:showroom_7fec812a-4dc1-4dcf-a841-334570918316 .
+
+twssd:show_737b8fb9-d6ac-4dae-a8d6-ab66f9c49fbf a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
         "18:50" ;
-    twss:showsIn twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 .
+    :showsIn twssd:showroom_2f8fdbfd-aa03-4554-b5c0-191ec2ff4901 .
 
-twssd:show_9fb9c0df-9e15-4cca-adae-0b7e594d3f2b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:00",
-        "15:30",
-        "18:05",
-        "20:40" ;
-    twss:showsIn twssd:showroom_bc1fd77e-c6f7-43d4-b2b5-6e62318a6303 .
-
-twssd:show_ab8c5a1d-c86c-44bf-a8af-999522d829de a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_and_Jerry ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "16:10",
+twssd:show_73e6719d-a7ce-4bfe-b3eb-fd32e4c409f8 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
         "18:50" ;
-    twss:showsIn twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 .
+    :showsIn twssd:showroom_99a4c11b-840c-4399-b238-d00024dd1bed .
 
-twssd:show_ae1dc054-b548-4c9c-879c-4b3a3deb4ce4 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:La_noche_magica ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "20:45",
-        "23:10" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
+twssd:show_75ccee93-76f5-4efa-b6a7-c72cbc802a9c a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Wonder_Woman_1984 ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:50" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
 
-twssd:show_b7628914-90f5-433e-bb08-972d34ab7688 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "13:45",
-        "22:45" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
+twssd:show_7aa44a42-cb16-4d7e-b481-0fbb5243fdca a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "22:45" ;
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
 
-twssd:show_b9609950-6bba-4b8d-825b-c7b1ed544a70 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:00",
+twssd:show_7bb34495-7a9a-4241-a5bd-d591f9438f97 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Trolls_2 ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:15" ;
+    :showsIn twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb .
+
+twssd:show_8127c796-b99f-4bd0-9afa-15bde28a2ef0 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:15" ;
+    :showsIn twssd:showroom_2f8fdbfd-aa03-4554-b5c0-191ec2ff4901 .
+
+twssd:show_8372f0af-1709-45d6-aa7f-7fc96c705f0f a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
+        "18:50" ;
+    :showsIn twssd:showroom_d2609a6d-cc2f-40d8-bd00-e20604b2c07c .
+
+twssd:show_85362125-82a4-4b15-b546-cc988d8a5254 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:00" ;
+    :showsIn twssd:showroom_21c45038-b886-4fd5-9b93-d94c6139530d .
+
+twssd:show_86630c96-8a18-4484-8c8e-3ae406311321 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:00",
         "15:20",
         "17:50",
         "20:15",
         "22:30" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
+    :showsIn twssd:showroom_27735a3d-5b2b-49a5-9f9c-fde47b781548 .
 
-twssd:show_baff59bd-e5c9-4464-a1c7-bbb40a828ff5 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "23:00" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_bca1c3f6-cbdd-4274-8514-5f310e66b22c a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "18:05" ;
-    twss:showsIn twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e .
-
-twssd:show_c008286d-9257-4459-92df-61c1a8cbc5c7 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_17e69fda-979f-4a5a-b2b0-13e1e07047c0 .
-
-twssd:show_c8f44514-bdbe-49a3-a232-31dde8b2726a a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "22:45" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_c91e3bf7-83cb-4dda-9011-2bffc53c0f18 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "16:10" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
-
-twssd:show_caac4d13-2400-46a3-9832-72e704a821a2 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_ccb2c477-f2c4-4e16-aa36-bacf4efc74ed a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 .
-
-twssd:show_d246eb6d-0c7e-4846-be5b-61a75e1e7c77 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
-
-twssd:show_d2e2c436-6701-4f5f-b117-0199ab1ac53c a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_f491af3c-110c-42a3-b3be-15265cca969e .
-
-twssd:show_daadea09-77e9-409b-af8f-9f9967e699a7 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tom_Y_Jerry ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "14:00",
-        "16:15",
-        "18:30" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
-
-twssd:show_de902d92-24f3-4311-9269-b9d5d08f9316 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 .
-
-twssd:show_e058c21e-fbe6-4115-935e-8b682c1a23fc a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> ;
-    twss:showLanguage "SUBTITULADA" ;
-    twss:showTime "19:45" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
-
-twssd:show_e7851d3f-1f18-436b-bd35-71a05825bbd7 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Trolls_2 ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Español" ;
-    twss:showTime "17:15" ;
-    twss:showsIn twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 .
-
-twssd:show_e7e7bfff-cfa9-4459-8400-478e5f33806e a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "20:45",
+twssd:show_882b0bc2-c5d1-402e-9574-423845885590 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "20:45",
         "23:10" ;
-    twss:showsIn twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 .
+    :showsIn twssd:showroom_6954f526-ce29-4ece-91de-e7ede411734a .
 
-twssd:show_e87527e3-56df-492f-b6a7-36fdd107c7e5 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Tenet ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:10" ;
-    twss:showsIn twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf .
+twssd:show_88f90d8e-e27d-45b7-90b9-8ea8b9004101 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Demon_Slayer_Mugen_Train ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "20:00" ;
+    :showsIn twssd:showroom_7fec812a-4dc1-4dcf-a841-334570918316 .
 
-twssd:show_ecd4c3b9-e25c-471d-9732-81f9ad99241e a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:00",
-        "15:15",
-        "17:30" ;
-    twss:showsIn twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c .
+twssd:show_8c8cb18f-254f-4419-b9ee-1aa79ae28517 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Promising_young_woman ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:10" ;
+    :showsIn twssd:showroom_7fec812a-4dc1-4dcf-a841-334570918316 .
 
-twssd:show_eea882f5-4929-4a78-b64b-e70bcb890bd2 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Chaos_Walking ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "23:15" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
+twssd:show_8e0a8335-14ba-4065-972c-9f2164798ee8 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Wonder_Woman_1984 ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:50" ;
+    :showsIn twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 .
 
-twssd:show_f1fc0feb-86ec-4336-9560-edfe8d2e576b a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "13:10",
+twssd:show_8f148410-00f7-49a3-b1f0-2afefe2a67e3 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:40" ;
+    :showsIn twssd:showroom_df47da43-a9e4-4f1e-998b-8e621420604b .
+
+twssd:show_9146b3f0-bb7e-4e6a-b0b7-e85ee20b6dbb a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:10",
         "15:25",
         "17:45",
         "20:00" ;
-    twss:showsIn twssd:showroom_e938c6c9-93d8-49cb-9b91-feaeb444c8b8 .
+    :showsIn twssd:showroom_f861dbfa-d8c1-4958-9637-8338922c85ab .
 
-twssd:show_f5500846-622b-44ef-87f0-ae20852f0574 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showLanguage "CASTELLANO" ;
-    twss:showTime "14:00",
-        "17:00",
-        "19:50",
-        "22:40" ;
-    twss:showsIn twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 .
+twssd:show_921b0030-b140-41d2-9b94-5990f75cd377 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "23:00" ;
+    :showsIn twssd:showroom_6954f526-ce29-4ece-91de-e7ede411734a .
 
-twssd:show_f89664c8-8134-4ace-94ae-a50e02cc96aa a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:New_Mutants ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:40" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
+twssd:show_94ed64c4-4dbb-426b-b117-35160550098e a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Los_Intrusos ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "16:00",
+        "20:30" ;
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
 
-twssd:show_f8a1594d-b6c6-4745-9bd9-f021dcc0ae69 a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Godzilla_vs._Kong ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "22:00" ;
-    twss:showsIn twssd:showroom_7baa845e-dc52-497c-a8aa-343b8818bd8d .
+twssd:show_97c032f0-da5e-4dbd-9434-e80c7b378379 a owl:NamedIndividual,
+        :Show ;
+    :movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "19:45" ;
+    :showsIn twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e .
 
-twssd:show_ff956d9d-dbde-44b7-9fed-33318e0d57fd a owl:NamedIndividual,
-        twss:Show ;
-    twss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twss:showFormat "2D" ;
-    twss:showLanguage "Subtitulado" ;
-    twss:showTime "20:00" ;
-    twss:showsIn twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b .
+twssd:show_98adab46-3445-4bb8-874e-dacbd33e138d a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_Y_Jerry ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "14:00",
+        "18:25" ;
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
+
+twssd:show_9dd28977-2e40-47a2-ba9e-3abae043a44d a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
+        "18:50" ;
+    :showsIn twssd:showroom_7fec812a-4dc1-4dcf-a841-334570918316 .
+
+twssd:show_9efd73e2-7a82-49af-9c61-f6155427f3fa a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tenet ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:10" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
+
+twssd:show_9f76e3d1-340f-4efa-8ac8-596df8477507 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:45",
+        "16:45",
+        "19:45" ;
+    :showsIn twssd:showroom_6954f526-ce29-4ece-91de-e7ede411734a .
+
+twssd:show_a0426868-7bfd-4577-b38a-5c044515481b a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "22:15" ;
+    :showsIn twssd:showroom_f861dbfa-d8c1-4958-9637-8338922c85ab .
+
+twssd:show_a4d4fb39-0ae0-4f1e-9237-3890f8c57e28 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Promising_young_woman ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:10" ;
+    :showsIn twssd:showroom_2f8fdbfd-aa03-4554-b5c0-191ec2ff4901 .
+
+twssd:show_a7130a18-746d-45a4-ae9c-d0e0dda4e046 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "16:45",
+        "19:45" ;
+    :showsIn twssd:showroom_27735a3d-5b2b-49a5-9f9c-fde47b781548 .
+
+twssd:show_a8ddc964-bd9e-4bff-85ed-62f0b6494f1e a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "23:15" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
+
+twssd:show_a9a64a96-52a7-41ed-b0f1-15f86a05ca16 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Chaos_Walking ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:45",
+        "18:15" ;
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
+
+twssd:show_abca6af1-8990-4d38-8fe6-2fd7dc8b81b5 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:On_a_magical_night ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "14:00",
+        "18:00",
+        "20:00",
+        "22:00" ;
+    :showsIn twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e .
+
+twssd:show_ad7b7c42-68b9-4669-8bdd-107e8b01fd8c a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "15:00",
+        "17:40",
+        "20:20" ;
+    :showsIn twssd:showroom_6954f526-ce29-4ece-91de-e7ede411734a .
+
+twssd:show_afba2a39-1ec4-417b-9da4-5365078bf4e7 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Promising_young_woman ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:10" ;
+    :showsIn twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb .
+
+twssd:show_b0c1e9a8-6cb0-409a-91c5-befa1c5ce7b5 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:00" ;
+    :showsIn twssd:showroom_d9ba1795-9816-4e24-b933-84c9ec4131a8 .
+
+twssd:show_b19cd096-6f0d-4d6a-a9c0-04e85f5ca99a a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Demon_Slayer_Mugen_Train ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "20:00" ;
+    :showsIn twssd:showroom_99a4c11b-840c-4399-b238-d00024dd1bed .
+
+twssd:show_b27be48a-c718-4d88-9356-b1ebf6079ea5 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_and_Jerry ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "16:10",
+        "18:50" ;
+    :showsIn twssd:showroom_df47da43-a9e4-4f1e-998b-8e621420604b .
+
+twssd:show_b69e2269-1454-4dad-8324-207e8f1b8b33 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:40" ;
+    :showsIn twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 .
+
+twssd:show_b73c24ad-7f11-4d87-9c8a-34812bb4fcbd a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:On_a_magical_night ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "19:50" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
+
+twssd:show_b83afaa4-8214-4d9a-b008-70a7ec7260c9 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Demon_Slayer_Mugen_Train ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "20:00" ;
+    :showsIn twssd:showroom_01e0aeb7-c3c5-4ab7-bdcd-ff835d6c5584 .
+
+twssd:show_b8685758-b5a3-466c-825a-4ce90b68c7eb a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Demon_Slayer_Mugen_Train ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "20:00" ;
+    :showsIn twssd:showroom_df47da43-a9e4-4f1e-998b-8e621420604b .
+
+twssd:show_c67540cf-2c8d-466d-9c80-fbb48f5d5d80 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Demon_Slayer_Mugen_Train ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "20:00" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
+
+twssd:show_ced9398a-9f79-42d7-bb21-6615d1a692ea a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "18:05" ;
+    :showsIn twssd:showroom_27735a3d-5b2b-49a5-9f9c-fde47b781548 .
+
+twssd:show_d2b3840e-e87e-4280-8815-565211dafb24 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:El_Secreto_Del_Bosque ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "20:45",
+        "23:10" ;
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
+
+twssd:show_d3ca5827-6f0a-48cb-8208-de85a6973a4e a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:La_noche_magica ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:40" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
+
+twssd:show_db66ef82-1032-40c4-916c-ff1103170fd1 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Promising_young_woman ;
+    :showLanguage "SUBTITULADA" ;
+    :showTime "13:15",
+        "15:40",
+        "18:10",
+        "20:30",
+        "23:00" ;
+    :showsIn twssd:showroom_f861dbfa-d8c1-4958-9637-8338922c85ab .
+
+twssd:show_df34f2ea-61d8-401d-8889-d6adcceeb1ba a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Trolls_2 ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:15" ;
+    :showsIn twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 .
+
+twssd:show_df8510d0-ebf0-4b96-8d1c-f68c942c2a3a a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Demon_Slayer_Mugen_Train ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "20:00" ;
+    :showsIn twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 .
+
+twssd:show_e6a8a4fa-c929-429e-b976-d5e6bf669154 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:New_Mutants ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:00",
+        "18:00",
+        "20:30" ;
+    :showsIn twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 .
+
+twssd:show_eba3f863-9fad-4a4a-8e34-a83ed21fd0d3 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Trolls_2 ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "17:15" ;
+    :showsIn twssd:showroom_2f8fdbfd-aa03-4554-b5c0-191ec2ff4901 .
+
+twssd:show_ed08921c-1801-476d-b07c-2a4003bd63eb a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:El_silencio_del_cazador ;
+    :showFormat "2D" ;
+    :showLanguage "Español" ;
+    :showTime "22:20" ;
+    :showsIn twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 .
+
+twssd:show_ee07d667-b348-4c46-b1d4-f350e6360eba a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Tom_Y_Jerry ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:20",
+        "15:40",
+        "18:00" ;
+    :showsIn twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e .
+
+twssd:show_ee4bb95d-79b4-44b6-86e9-fef11e5a6787 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:00" ;
+    :showsIn twssd:showroom_e3387d79-3032-4d6d-ac9d-ecceca457cc5 .
+
+twssd:show_f5e748fb-b419-4bd1-9b6a-dfe729226a6c a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Wonder_Woman_1984 ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "22:10" ;
+    :showsIn twssd:showroom_6954f526-ce29-4ece-91de-e7ede411734a .
+
+twssd:show_f6064e06-e935-4f29-b88d-96176e23e325 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:00" ;
+    :showsIn twssd:showroom_ef4771fd-c94d-4238-a889-6ba1e3518c2d .
+
+twssd:show_f65b4e4f-7efa-4e69-82c6-d03ee0961c17 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:00",
+        "15:15",
+        "17:30" ;
+    :showsIn twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e .
+
+twssd:show_fd01e22d-e293-445c-8321-a22d10a34ccf a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "22:00" ;
+    :showsIn twssd:showroom_71af0ff2-5f7e-4018-8099-9fd2309d5fc4 .
+
+twssd:show_fd2f3714-65c8-4825-837f-0c2b5f796883 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Godzilla_vs._Kong ;
+    :showLanguage "CASTELLANO" ;
+    :showTime "13:00",
+        "15:30",
+        "18:05",
+        "20:40" ;
+    :showsIn twssd:showroom_ac54a9ee-6224-4eec-b5e0-b4da0a2f0fc1 .
+
+twssd:show_fd6963f9-3d8d-4590-a800-2db8875a21d3 a owl:NamedIndividual,
+        :Show ;
+    :movie twssd:Demon_Slayer_Mugen_Train ;
+    :showFormat "2D" ;
+    :showLanguage "Subtitulado" ;
+    :showTime "20:00" ;
+    :showsIn twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_simple.ttl> a owl:Ontology .
 
-twss:actor a owl:ObjectProperty ;
+:actor a owl:ObjectProperty ;
     rdfs:label "Actor de la película" ;
-    rdfs:domain twss:Movie ;
-    rdfs:range twss:Person .
+    rdfs:domain :Movie ;
+    rdfs:range :Person .
 
-twss:countryOfOrigin a owl:DatatypeProperty ;
+:countryOfOrigin a owl:DatatypeProperty ;
     rdfs:label "País de origen" ;
-    rdfs:domain twss:Movie,
-        twss:Person ;
+    rdfs:domain :Movie,
+        :Person ;
     rdfs:range xsd:string ;
     rdfs:subPropertyOf owl:topDataProperty .
 
-twss:director a owl:ObjectProperty ;
+:director a owl:ObjectProperty ;
     rdfs:label "Director de la película" ;
-    rdfs:domain twss:Movie ;
-    rdfs:range twss:Person .
+    rdfs:domain :Movie ;
+    rdfs:range :Person .
 
-twss:durationInMinutes a owl:DatatypeProperty ;
+:durationInMinutes a owl:DatatypeProperty ;
     rdfs:label "Duración en minutos" ;
-    rdfs:domain twss:Movie ;
+    rdfs:domain :Movie ;
     rdfs:range xsd:decimal .
 
-twss:genre a owl:DatatypeProperty ;
+:genre a owl:DatatypeProperty ;
     rdfs:label "Género de la película" ;
-    rdfs:domain twss:Movie ;
+    rdfs:domain :Movie ;
     rdfs:range xsd:string .
 
-twss:isPartOf a owl:ObjectProperty ;
+:isPartOf a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range owl:Thing .
 
-twss:language a owl:DatatypeProperty ;
+:language a owl:DatatypeProperty ;
     rdfs:label "Lenguaje original de la película" ;
-    rdfs:domain twss:Movie ;
+    rdfs:domain :Movie ;
     rdfs:range xsd:string .
 
-twss:movie a owl:ObjectProperty ;
+:movie a owl:ObjectProperty ;
     rdfs:label "Película que se reproduce" ;
-    rdfs:domain twss:Show ;
-    rdfs:range twss:Movie .
+    rdfs:domain :Show ;
+    rdfs:range :Movie .
 
-twss:movieRating a owl:DatatypeProperty ;
+:movieRating a owl:DatatypeProperty ;
     rdfs:label "Rating de la película" ;
-    rdfs:domain twss:Movie ;
+    rdfs:domain :Movie ;
     rdfs:range xsd:string .
 
-twss:name a owl:DatatypeProperty ;
+:name a owl:DatatypeProperty ;
     rdfs:label "Nombre" ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-twss:showFormat a owl:DatatypeProperty ;
+:showFormat a owl:DatatypeProperty ;
     rdfs:label "Formato de reproducción de la película" ;
-    rdfs:domain twss:Show ;
+    rdfs:domain :Show ;
     rdfs:range xsd:string .
 
-twss:showLanguage a owl:DatatypeProperty ;
+:showLanguage a owl:DatatypeProperty ;
     rdfs:label "Lenguaje de reproducción de la película" ;
-    rdfs:domain twss:Show ;
+    rdfs:domain :Show ;
     rdfs:range xsd:string .
 
-twss:showTime a owl:DatatypeProperty ;
+:showTime a owl:DatatypeProperty ;
     rdfs:label "Horario de reproducción de la película" ;
-    rdfs:domain twss:Show .
+    rdfs:domain :Show .
 
-twss:showsIn a owl:ObjectProperty ;
-    rdfs:domain twss:Show ;
-    rdfs:range twss:ShowRoom .
+:showsIn a owl:ObjectProperty ;
+    rdfs:domain :Show ;
+    rdfs:range :ShowRoom .
 
-twss:synopsis a owl:DatatypeProperty ;
+:synopsis a owl:DatatypeProperty ;
     rdfs:label "Sinopsis de la película" ;
-    rdfs:domain twss:Movie ;
+    rdfs:domain :Movie ;
     rdfs:range xsd:string .
 
-twss:title a owl:DatatypeProperty ;
+:title a owl:DatatypeProperty ;
     rdfs:label "Título de la película" ;
-    rdfs:domain twss:Movie ;
+    rdfs:domain :Movie ;
     rdfs:range xsd:string .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Óscar Jaenada" .
+        :Person ;
+    :name "Óscar Jaenada" .
 
 twssd:Aaron_Taylor-Johnson a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Aaron Taylor-Johnson" .
+        :Person ;
+    :name "Aaron Taylor-Johnson" .
 
 twssd:Adam_Brody a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Adam Brody" .
+        :Person ;
+    :name "Adam Brody" .
 
 twssd:Adam_Wingard a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Adam Wingard" .
+        :Person ;
+    :name "Adam Wingard" .
 
 twssd:Akari_Kito a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Akari Kito" .
+        :Person ;
+    :name "Akari Kito" .
 
 twssd:Alberto_Ammann a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Alberto Ammann" .
+        :Person ;
+    :name "Alberto Ammann" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Alexander Skarsgård" .
+        :Person ;
+    :name "Alexander Skarsgård" .
 
 twssd:Alice_Braga a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Alice Braga" .
+        :Person ;
+    :name "Alice Braga" .
 
 twssd:Alison_Brie a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Alison Brie" .
+        :Person ;
+    :name "Alison Brie" .
 
 twssd:Andrew_Ellis a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Andrew Ellis" .
+        :Person ;
+    :name "Andrew Ellis" .
 
 twssd:Anna_Kendrick a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Anna Kendrick" .
+        :Person ;
+    :name "Anna Kendrick" .
 
 twssd:Anthony_Ramos a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Anthony Ramos" .
+        :Person ;
+    :name "Anthony Ramos" .
 
 twssd:Antonio_Banderas a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Antonio Banderas" .
+        :Person ;
+    :name "Antonio Banderas" .
 
 twssd:Anya_Taylor-Joy a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Anya Taylor-Joy" .
+        :Person ;
+    :name "Anya Taylor-Joy" .
 
 twssd:Awkwafina a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Awkwafina" .
+        :Person ;
+    :name "Awkwafina" .
 
 twssd:Benjamin_Biolay a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Benjamin Biolay" .
+        :Person ;
+    :name "Benjamin Biolay" .
 
 twssd:Blu_Hunt a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Blu Hunt" .
+        :Person ;
+    :name "Blu Hunt" .
 
 twssd:Bo_Burnham a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Bo Burnham" .
+        :Person ;
+    :name "Bo Burnham" .
 
 twssd:Bobby_Cannavale a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Bobby Cannavale" .
+        :Person ;
+    :name "Bobby Cannavale" .
 
 twssd:Brian_Tyree_Henry a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Brian Tyree Henry" .
+        :Person ;
+    :name "Brian Tyree Henry" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/C%C3%A9sar_Bord%C3%B3n> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "César Bordón" .
+        :Person ;
+    :name "César Bordón" .
 
 twssd:CINEMA_OCHO a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "CINEMA OCHO" .
+        :Cinema ;
+    :name "CINEMA OCHO" .
 
 twssd:CINEMA_PARADISO a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "CINEMA PARADISO" .
+        :Cinema ;
+    :name "CINEMA PARADISO" .
 
 twssd:CINEMA_ROCHA a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "CINEMA ROCHA" .
+        :Cinema ;
+    :name "CINEMA ROCHA" .
 
 twssd:CINEMA_SAN_MARTIN a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "CINEMA SAN MARTIN" .
+        :Cinema ;
+    :name "CINEMA SAN MARTIN" .
 
 twssd:Camille_Cottin a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Camille Cottin" .
+        :Person ;
+    :name "Camille Cottin" .
 
 twssd:Carey_Mulligan a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Carey Mulligan" .
+        :Person ;
+    :name "Carey Mulligan" .
 
 twssd:Carlos_Lopez_Estrada a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Carlos Lopez Estrada" .
+        :Person ;
+    :name "Carlos Lopez Estrada" .
 
 twssd:Carole_Bouquet a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Carole Bouquet" .
+        :Person ;
+    :name "Carole Bouquet" .
 
 twssd:Chance_the_Rapper a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Chance the Rapper" .
+        :Person ;
+    :name "Chance the Rapper" .
 
 twssd:Charlie_Heaton a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Charlie Heaton" .
+        :Person ;
+    :name "Charlie Heaton" .
 
 twssd:Chiara_Mastroianni a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Chiara Mastroianni" .
+        :Person ;
+    :name "Chiara Mastroianni" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chlo%C3%AB_Grace_Moretz> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Chloë Grace Moretz" .
+        :Person ;
+    :name "Chloë Grace Moretz" .
 
 twssd:Chris_Pine a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Chris Pine" .
+        :Person ;
+    :name "Chris Pine" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Christophe Honoré" .
+        :Person ;
+    :name "Christophe Honoré" .
 
 twssd:Christopher_Mintz-Plasse a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Christopher Mintz-Plasse" .
+        :Person ;
+    :name "Christopher Mintz-Plasse" .
 
 twssd:Christopher_Nolan a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Christopher Nolan" .
+        :Person ;
+    :name "Christopher Nolan" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Maipú" .
+        :Cinema ;
+    :name "Cinépolis Maipú" .
 
 twssd:Clancy_Brown a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Clancy Brown" .
+        :Person ;
+    :name "Clancy Brown" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clemence_Po%C3%A9sy> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Clemence Poésy" .
+        :Person ;
+    :name "Clemence Poésy" .
 
 twssd:Connie_Britton a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Connie Britton" .
+        :Person ;
+    :name "Connie Britton" .
 
 twssd:Connie_Nielsen a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Connie Nielsen" .
+        :Person ;
+    :name "Connie Nielsen" .
 
 twssd:Cynthia_Erivo a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Cynthia Erivo" .
+        :Person ;
+    :name "Cynthia Erivo" .
 
 twssd:Daisy_Ridley a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Daisy Ridley" .
+        :Person ;
+    :name "Daisy Ridley" .
 
 twssd:Daniel_Dae_Kim a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Daniel Dae Kim" .
+        :Person ;
+    :name "Daniel Dae Kim" .
 
 twssd:David_Oyelowo a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "David Oyelowo" .
+        :Person ;
+    :name "David Oyelowo" .
 
 twssd:David_P_Smith a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "David P Smith" .
+        :Person ;
+    :name "David P Smith" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Demi%C3%A1n_Bichir> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Demián Bichir" .
+        :Person ;
+    :name "Demián Bichir" .
 
 twssd:Demian_Bichir a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Demian Bichir" .
+        :Person ;
+    :name "Demian Bichir" .
 
 twssd:Dennis_Mojen a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Dennis Mojen" .
+        :Person ;
+    :name "Dennis Mojen" .
 
 twssd:Diego_Peretti a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Diego Peretti" .
+        :Person ;
+    :name "Diego Peretti" .
 
 twssd:Dimple_Kapadia a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Dimple Kapadia" .
+        :Person ;
+    :name "Dimple Kapadia" .
 
 twssd:Don_Hall a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Don Hall" .
+        :Person ;
+    :name "Don Hall" .
 
 twssd:Doug_Liman a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Doug Liman" .
+        :Person ;
+    :name "Doug Liman" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Eiza González" .
+        :Person ;
+    :name "Eiza González" .
 
 twssd:El_Secreto_Del_Bosque a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Sahil_Shroff,
+        :Movie ;
+    :actor twssd:Sahil_Shroff,
         twssd:Subrat_Dutta,
         twssd:Vanessa_Curry ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Vikram_Jayakumar ;
-    twss:durationInMinutes 87 ;
-    twss:genre "Terror" ;
-    twss:language "Inglés" ;
-    twss:movieRating "P-13" ;
-    twss:synopsis "Mientras disfrutan de una escapada romántica en la India salvaje, una pareja de Los Angeles accidentalmente es testigo del exorcismo de una niña de 11 años a la cual intentarán rescatar." ;
-    twss:title "El Secreto Del Bosque" .
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Vikram_Jayakumar ;
+    :durationInMinutes 87 ;
+    :genre "Terror" ;
+    :language "Inglés" ;
+    :movieRating "P-13" ;
+    :synopsis "Mientras disfrutan de una escapada romántica en la India salvaje, una pareja de Los Angeles accidentalmente es testigo del exorcismo de una niña de 11 años a la cual intentarán rescatar." ;
+    :title "El Secreto Del Bosque" .
 
 twssd:El_silencio_del_cazador a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Alberto_Ammann,
+        :Movie ;
+    :actor twssd:Alberto_Ammann,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/C%C3%A9sar_Bord%C3%B3n>,
         twssd:Mercedes_Burgos,
         twssd:Mora_Recalde,
         twssd:Pablo_Echarri ;
-    twss:countryOfOrigin "Argentina" ;
-    twss:director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mart%C3%ADn_Desalvo> ;
-    twss:durationInMinutes 103 ;
-    twss:genre "Drama",
+    :countryOfOrigin "Argentina" ;
+    :director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mart%C3%ADn_Desalvo> ;
+    :durationInMinutes 103 ;
+    :genre "Drama",
         "Thriller" ;
-    twss:movieRating "P13R" ;
-    twss:synopsis "Guzmán trabaja en un parque nacional con un grupo pequeño pero comprometido de guardas en alerta, ante la aparición de un animal salvaje que acecha desde la selva. Sara, esposa de Guzmán, es una médica dedicada a la comunidad local. Entre ellos se encuentra un amigo de la infancia de ambos y expareja de Sara. Los celos, las cuestiones no saldadas y las relaciones de poder enfrentarán a los tres hasta llegar a un desenlace sin tregua." ;
-    twss:title "El silencio del cazador" .
+    :movieRating "P13R" ;
+    :synopsis "Guzmán trabaja en un parque nacional con un grupo pequeño pero comprometido de guardas en alerta, ante la aparición de un animal salvaje que acecha desde la selva. Sara, esposa de Guzmán, es una médica dedicada a la comunidad local. Entre ellos se encuentra un amigo de la infancia de ambos y expareja de Sara. Los celos, las cuestiones no saldadas y las relaciones de poder enfrentarán a los tres hasta llegar a un desenlace sin tregua." ;
+    :title "El silencio del cazador" .
 
 twssd:Elizabeth_Debicki a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Elizabeth Debicki" .
+        :Person ;
+    :name "Elizabeth Debicki" .
 
 twssd:Emerald_Fennell a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Emerald Fennell" .
+        :Person ;
+    :name "Emerald Fennell" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emilia_Sch%C3%BCle> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Emilia Schüle" .
+        :Person ;
+    :name "Emilia Schüle" .
 
 twssd:Esteban_Bigliardi a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Esteban Bigliardi" .
+        :Person ;
+    :name "Esteban Bigliardi" .
 
 twssd:Flula_Borg a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Flula Borg" .
+        :Person ;
+    :name "Flula Borg" .
 
 twssd:Frank_Welker a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Frank Welker" .
+        :Person ;
+    :name "Frank Welker" .
 
 twssd:Gabriella_Wilde a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Gabriella Wilde" .
+        :Person ;
+    :name "Gabriella Wilde" .
 
 twssd:Gal_Gadot a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Gal Gadot" .
+        :Person ;
+    :name "Gal Gadot" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gast%C3%B3n_Portal> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Gastón Portal" .
+        :Person ;
+    :name "Gastón Portal" .
 
 twssd:Happy_Anderson a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Happy Anderson" .
+        :Person ;
+    :name "Happy Anderson" .
 
 twssd:Harrison_Arevalo a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Harrison Arevalo" .
+        :Person ;
+    :name "Harrison Arevalo" .
 
 twssd:Haruo_Sotozaki a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Haruo Sotozaki" .
+        :Person ;
+    :name "Haruo Sotozaki" .
 
 twssd:Heiner_Lauterbach a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Heiner Lauterbach" .
+        :Person ;
+    :name "Heiner Lauterbach" .
 
 twssd:Henry_Zaga a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Henry Zaga" .
+        :Person ;
+    :name "Henry Zaga" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Hern%C3%A1n_Jim%C3%A9nez> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Hernán Jiménez" .
+        :Person ;
+    :name "Hernán Jiménez" .
 
 twssd:Himesh_Patel a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Himesh Patel" .
+        :Person ;
+    :name "Himesh Patel" .
 
 twssd:Hiro_Shimono a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Hiro Shimono" .
+        :Person ;
+    :name "Hiro Shimono" .
 
 twssd:Ian_Kenny a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Ian Kenny" .
+        :Person ;
+    :name "Ian Kenny" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Isabela_Pal%C3%B3poli> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Isabela Palópoli" .
+        :Person ;
+    :name "Isabela Palópoli" .
 
 twssd:Jake_Curran a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Jake Curran" .
+        :Person ;
+    :name "Jake Curran" .
 
 twssd:James_Corden a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "James Corden" .
+        :Person ;
+    :name "James Corden" .
 
 twssd:Jamie_Dornan a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Jamie Dornan" .
+        :Person ;
+    :name "Jamie Dornan" .
 
 twssd:Jeffrey_Corazzini a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Jeffrey Corazzini" .
+        :Person ;
+    :name "Jeffrey Corazzini" .
 
 twssd:Jennifer_Coolidge a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Jennifer Coolidge" .
+        :Person ;
+    :name "Jennifer Coolidge" .
 
 twssd:Jessica_Henwick a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Jessica Henwick" .
+        :Person ;
+    :name "Jessica Henwick" .
 
 twssd:John_David_Washington a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "John David Washington" .
+        :Person ;
+    :name "John David Washington" .
 
 twssd:John_David_Washington_Kenneth_Branagh a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "John David Washington Kenneth Branagh" .
+        :Person ;
+    :name "John David Washington Kenneth Branagh" .
 
 twssd:Josh_Boone a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Josh Boone" .
+        :Person ;
+    :name "Josh Boone" .
 
 twssd:Julian_Dennison a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Julian Dennison" .
+        :Person ;
+    :name "Julian Dennison" .
 
 twssd:Julius_Berg a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Julius Berg" .
+        :Person ;
+    :name "Julius Berg" .
 
 twssd:June_Foray a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "June Foray" .
+        :Person ;
+    :name "June Foray" .
 
 twssd:Justin_Timberlake a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Justin Timberlake" .
+        :Person ;
+    :name "Justin Timberlake" .
 
 twssd:Karan_Soni a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Karan Soni" .
+        :Person ;
+    :name "Karan Soni" .
 
 twssd:Katsuyuki_Konishi a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Katsuyuki Konishi" .
+        :Person ;
+    :name "Katsuyuki Konishi" .
 
 twssd:Kelly_Marie_Tran a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Kelly Marie Tran" .
+        :Person ;
+    :name "Kelly Marie Tran" .
 
 twssd:Ken_Duken a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Ken Duken" .
+        :Person ;
+    :name "Ken Duken" .
 
 twssd:Kenichi_Suzumura a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Kenichi Suzumura" .
+        :Person ;
+    :name "Kenichi Suzumura" .
 
 twssd:Kenneth_Branagh a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Kenneth Branagh" .
+        :Person ;
+    :name "Kenneth Branagh" .
 
 twssd:Kristen_Wiig a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Kristen Wiig" .
+        :Person ;
+    :name "Kristen Wiig" .
 
 twssd:Kunal_Nayyar a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Kunal Nayyar" .
+        :Person ;
+    :name "Kunal Nayyar" .
 
 twssd:Kurt_Sutter a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Kurt Sutter" .
+        :Person ;
+    :name "Kurt Sutter" .
 
 twssd:Kyle_Chandler a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Kyle Chandler" .
+        :Person ;
+    :name "Kyle Chandler" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Dennis_Mojen,
+        :Movie ;
+    :actor twssd:Dennis_Mojen,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emilia_Sch%C3%BCle>,
         twssd:Heiner_Lauterbach,
         twssd:Ken_Duken,
         twssd:Michael_Gwisdek,
         twssd:Nikolai_Kinski,
         twssd:Wilfried_Hochholdinger ;
-    twss:countryOfOrigin "Alemania" ;
-    twss:director twssd:Martin_Schreier ;
-    twss:durationInMinutes 127 ;
-    twss:genre "Drama romantico" ;
-    twss:language "Aleman" ;
-    twss:movieRating "ATP" ;
-    twss:synopsis "Durante el verano de 1961, Emil comienza a trabajar como extra en los famosos estudios de cine Babelsberg. Durante el rodaje de una superproducción, se enamora de la bailarina francesa llamada Milou. Cuando por fin conquista a Milou, el rodaje se cancela repentinamente y son obligados a separarse ya que El Muro de Berlín es levantado en agosto de ese año. Años más tarde, Emil trazará un atrevido y arriesgado plan para lograr que el rodaje continúe y reencontrarse con Milou." ;
-    twss:title "La Fabrica De Sueños" .
+    :countryOfOrigin "Alemania" ;
+    :director twssd:Martin_Schreier ;
+    :durationInMinutes 127 ;
+    :genre "Drama romantico" ;
+    :language "Aleman" ;
+    :movieRating "ATP" ;
+    :synopsis "Durante el verano de 1961, Emil comienza a trabajar como extra en los famosos estudios de cine Babelsberg. Durante el rodaje de una superproducción, se enamora de la bailarina francesa llamada Milou. Cuando por fin conquista a Milou, el rodaje se cancela repentinamente y son obligados a separarse ya que El Muro de Berlín es levantado en agosto de ese año. Años más tarde, Emil trazará un atrevido y arriesgado plan para lograr que el rodaje continúe y reencontrarse con Milou." ;
+    :title "La Fabrica De Sueños" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laura_L%C3%B3pez_Moyano> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Laura López Moyano" .
+        :Person ;
+    :name "Laura López Moyano" .
 
 twssd:Laverne_Cox a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Laverne Cox" .
+        :Person ;
+    :name "Laverne Cox" .
 
 twssd:Lil_Rel_Howery a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Lil Rel Howery" .
+        :Person ;
+    :name "Lil Rel Howery" .
 
 twssd:Los_Intrusos a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Andrew_Ellis,
+        :Movie ;
+    :actor twssd:Andrew_Ellis,
         twssd:Ian_Kenny,
         twssd:Jake_Curran,
         twssd:Maisie_Williams,
         twssd:Rita_Tushingham,
         twssd:Stacha_Hicks,
         twssd:Sylvester_McCoy ;
-    twss:countryOfOrigin "Francia",
+    :countryOfOrigin "Francia",
         "Reino Unido" ;
-    twss:director twssd:Julius_Berg ;
-    twss:durationInMinutes 92 ;
-    twss:genre "Terror" ;
-    twss:language "Inglés" ;
-    twss:movieRating "P-16" ;
-    twss:synopsis "Inglaterra rural, principios de los noventa: los amigos de la infancia Nathan y Terry son inducidos por el sociópata local para robar a los Huggins, un médico anciano y su esposa. La novia de Nathan, Mary, está totalmente en contra del plan, pero al cabo de unas horas se encuentra en el caserón, al lado de la caja fuerte del sótano y de una panda de individuos, a cual más sospechoso." ;
-    twss:title "Los Intrusos" .
+    :director twssd:Julius_Berg ;
+    :durationInMinutes 92 ;
+    :genre "Terror" ;
+    :language "Inglés" ;
+    :movieRating "P-16" ;
+    :synopsis "Inglaterra rural, principios de los noventa: los amigos de la infancia Nathan y Terry son inducidos por el sociópata local para robar a los Huggins, un médico anciano y su esposa. La novia de Nathan, Mary, está totalmente en contra del plan, pero al cabo de unas horas se encuentra en el caserón, al lado de la caja fuerte del sótano y de una panda de individuos, a cual más sospechoso." ;
+    :title "Los Intrusos" .
 
 twssd:Mads_Mikkelsen a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Mads Mikkelsen" .
+        :Person ;
+    :name "Mads Mikkelsen" .
 
 twssd:Marie-Christine_Adam a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Marie-Christine Adam" .
+        :Person ;
+    :name "Marie-Christine Adam" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mart%C3%ADn_Desalvo> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Martín Desalvo" .
+        :Person ;
+    :name "Martín Desalvo" .
 
 twssd:Martin_Donovan a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Martin Donovan" .
+        :Person ;
+    :name "Martin Donovan" .
 
 twssd:Martin_Schreier a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Martin Schreier" .
+        :Person ;
+    :name "Martin Schreier" .
 
 twssd:Max_Greenfield a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Max Greenfield" .
+        :Person ;
+    :name "Max Greenfield" .
 
 twssd:Mel_Blanc a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Mel Blanc" .
+        :Person ;
+    :name "Mel Blanc" .
 
 twssd:Mercedes_Burgos a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Mercedes Burgos" .
+        :Person ;
+    :name "Mercedes Burgos" .
 
 twssd:Michael_Caine a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Michael Caine" .
+        :Person ;
+    :name "Michael Caine" .
 
 twssd:Michael_Gwisdek a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Michael Gwisdek" .
+        :Person ;
+    :name "Michael Gwisdek" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Pe%C3%B1a> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Michael Peña" .
+        :Person ;
+    :name "Michael Peña" .
 
 twssd:Mickey_Gilmore a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Mickey Gilmore" .
+        :Person ;
+    :name "Mickey Gilmore" .
 
 twssd:Millie_Bobby_Brown a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Millie Bobby Brown" .
+        :Person ;
+    :name "Millie Bobby Brown" .
 
 twssd:Molly_Shannon a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Molly Shannon" .
+        :Person ;
+    :name "Molly Shannon" .
 
 twssd:Mora_Recalde a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Mora Recalde" .
+        :Person ;
+    :name "Mora Recalde" .
 
 twssd:Natalia_Oreiro a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Natalia Oreiro" .
+        :Person ;
+    :name "Natalia Oreiro" .
 
 twssd:Natasha_Rothwell a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Natasha Rothwell" .
+        :Person ;
+    :name "Natasha Rothwell" .
 
 twssd:Natsuki_Hanae a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Natsuki Hanae" .
+        :Person ;
+    :name "Natsuki Hanae" .
 
 twssd:Nick_Jonas a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Nick Jonas" .
+        :Person ;
+    :name "Nick Jonas" .
 
 twssd:Nicky_Jam a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Nicky Jam" .
+        :Person ;
+    :name "Nicky Jam" .
 
 twssd:Nikolai_Kinski a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Nikolai Kinski" .
+        :Person ;
+    :name "Nikolai Kinski" .
 
 twssd:Oakley_Bull a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Oakley Bull" .
+        :Person ;
+    :name "Oakley Bull" .
 
 twssd:Pablo_Echarri a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Pablo Echarri" .
+        :Person ;
+    :name "Pablo Echarri" .
 
 twssd:Pablo_Rago a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Pablo Rago" .
+        :Person ;
+    :name "Pablo Rago" .
 
 twssd:Patty_Jenkins a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Patty Jenkins" .
+        :Person ;
+    :name "Patty Jenkins" .
 
 twssd:Paul_Briggs a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Paul Briggs" .
+        :Person ;
+    :name "Paul Briggs" .
 
 twssd:Pedro_Pascal a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Pedro Pascal" .
+        :Person ;
+    :name "Pedro Pascal" .
 
 twssd:Ravi_Patel a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Ravi Patel" .
+        :Person ;
+    :name "Ravi Patel" .
 
 twssd:Ray_McKinnon a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Ray McKinnon" .
+        :Person ;
+    :name "Ray McKinnon" .
 
 twssd:Rebecca_Hall a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Rebecca Hall" .
+        :Person ;
+    :name "Rebecca Hall" .
 
 twssd:Rita_Tushingham a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Rita Tushingham" .
+        :Person ;
+    :name "Rita Tushingham" .
 
 twssd:Robert_Pattinson a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Robert Pattinson" .
+        :Person ;
+    :name "Robert Pattinson" .
 
 twssd:Robin_Wright a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Robin Wright" .
+        :Person ;
+    :name "Robin Wright" .
 
 twssd:Rosario_Dawson a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Rosario Dawson" .
+        :Person ;
+    :name "Rosario Dawson" .
 
 twssd:Sahil_Shroff a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Sahil Shroff" .
+        :Person ;
+    :name "Sahil Shroff" .
 
 twssd:Sam_Richardson a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Sam Richardson" .
+        :Person ;
+    :name "Sam Richardson" .
 
 twssd:Sam_Rockwell a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Sam Rockwell" .
+        :Person ;
+    :name "Sam Rockwell" .
 
 twssd:Saori_Hayami a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Saori Hayami" .
+        :Person ;
+    :name "Saori Hayami" .
 
 twssd:Satoshi_Hino a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Satoshi Hino" .
+        :Person ;
+    :name "Satoshi Hino" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Tony_Cervone ;
-    twss:durationInMinutes 94 ;
-    twss:genre "Acción, Aventuras" ;
-    twss:language "Español" ;
-    twss:movieRating "ATP" ;
-    twss:synopsis """Película animada sobre el dibujito Scooby-Doo que sigue a un perro Gran Danés y sus 4 amigos: Fred, Daphne, Vilma y Shaggy quienes juntos viajan por el mundo resolviendo misterios relacionados con fantasmas y otras fuerzas sobrenaturales.-\r
+        :Movie ;
+    :actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Tony_Cervone ;
+    :durationInMinutes 94 ;
+    :genre "Acción, Aventuras" ;
+    :language "Español" ;
+    :movieRating "ATP" ;
+    :synopsis """Película animada sobre el dibujito Scooby-Doo que sigue a un perro Gran Danés y sus 4 amigos: Fred, Daphne, Vilma y Shaggy quienes juntos viajan por el mundo resolviendo misterios relacionados con fantasmas y otras fuerzas sobrenaturales.-\r
 Scooby! revela cómo se conocieron los amigos de toda la vida Scooby y Shaggy, y cómo se unieron con los jóvenes detectives Fred, Velma y Daphne para formar Mystery Inc. Ahora, con cientos de casos resueltos y aventuras compartidas, Scooby y la pandilla se enfrentan al misterio más desafiante de todos los tiempos: una trama para liberar Cerberus, el perro fantasma, sobre el mundo. Mientras compiten para detener este "perrocalipsis" global, la pandilla descubre que Scooby tiene un legado secreto y un gran y épico destino que nadie imaginaba.""" ;
-    twss:title "Scooby!" .
+    :title "Scooby!" .
 
 twssd:Shun_Oguri a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Shun Oguri" .
+        :Person ;
+    :name "Shun Oguri" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/St%C3%A9phane_Roger> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Stéphane Roger" .
+        :Person ;
+    :name "Stéphane Roger" .
 
 twssd:Stacha_Hicks a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Stacha Hicks" .
+        :Person ;
+    :name "Stacha Hicks" .
 
 twssd:Subrat_Dutta a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Subrat Dutta" .
+        :Person ;
+    :name "Subrat Dutta" .
 
 twssd:Sylvester_McCoy a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Sylvester McCoy" .
+        :Person ;
+    :name "Sylvester McCoy" .
 
 twssd:T-Pain a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "T-Pain" .
+        :Person ;
+    :name "T-Pain" .
 
 twssd:Takahiro_Sakurai a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Takahiro Sakurai" .
+        :Person ;
+    :name "Takahiro Sakurai" .
 
 twssd:Thomas_Kee a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Thomas Kee" .
+        :Person ;
+    :name "Thomas Kee" .
 
 twssd:Tom_Holland a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Tom Holland" .
+        :Person ;
+    :name "Tom Holland" .
 
 twssd:Tomokazu_Seki a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Tomokazu Seki" .
+        :Person ;
+    :name "Tomokazu Seki" .
 
 twssd:Tony_Cervone a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Tony Cervone" .
+        :Person ;
+    :name "Tony Cervone" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:David_P_Smith,
+        :Movie ;
+    :actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:David_P_Smith,
         twssd:Walt_Dohrn ;
-    twss:durationInMinutes 91 ;
-    twss:genre "Animación" ;
-    twss:language "Español" ;
-    twss:movieRating "ATP" ;
-    twss:synopsis "En una aventura que les llevará más allá de todo lo que habían conocido, Poppy y Branch descubren que su tribu de Trolls es solo una de las seis que existen, que el resto están repartidas en seis reinos y consagradas a seis tipos distintos de música: funk, country, tecno, clásica, pop y rock. La reina Bárbara, miembro de la realeza del hard rock, y su padre, el Rey Metal, quieren acabar con el resto de géneros musicales e imponer el reinado del rock. Con el destino del mundo en juego, Poppy y Branch, junto con el resto de la pandilla - Grandullón, Chanelle, Satén, Cooper y Guy Diamante-, visitarán los demás reinos para unir a los Trolls contra los planes de Barb de eclipsarlos a todos." ;
-    twss:title "Trolls 2: World Tour" .
+    :durationInMinutes 91 ;
+    :genre "Animación" ;
+    :language "Español" ;
+    :movieRating "ATP" ;
+    :synopsis "En una aventura que les llevará más allá de todo lo que habían conocido, Poppy y Branch descubren que su tribu de Trolls es solo una de las seis que existen, que el resto están repartidas en seis reinos y consagradas a seis tipos distintos de música: funk, country, tecno, clásica, pop y rock. La reina Bárbara, miembro de la realeza del hard rock, y su padre, el Rey Metal, quieren acabar con el resto de géneros musicales e imponer el reinado del rock. Con el destino del mundo en juego, Poppy y Branch, junto con el resto de la pandilla - Grandullón, Chanelle, Satén, Cooper y Guy Diamante-, visitarán los demás reinos para unir a los Trolls contra los planes de Barb de eclipsarlos a todos." ;
+    :title "Trolls 2: World Tour" .
 
 twssd:Vanessa_Curry a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Vanessa Curry" .
+        :Person ;
+    :name "Vanessa Curry" .
 
 twssd:Vikram_Jayakumar a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Vikram Jayakumar" .
+        :Person ;
+    :name "Vikram Jayakumar" .
 
 twssd:Vincent_Lacoste a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Vincent Lacoste" .
+        :Person ;
+    :name "Vincent Lacoste" .
 
 twssd:Wilfried_Hochholdinger a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Wilfried Hochholdinger" .
+        :Person ;
+    :name "Wilfried Hochholdinger" .
 
 twssd:William_Hanna a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "William Hanna" .
+        :Person ;
+    :name "William Hanna" .
 
 twssd:Yoshitsugu_Matsuoka a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Yoshitsugu Matsuoka" .
+        :Person ;
+    :name "Yoshitsugu Matsuoka" .
 
-twssd:showroom_1035f0db-861b-4a1c-a898-7894025671ec a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
-    twss:name "4D" .
+twssd:showroom_21c45038-b886-4fd5-9b93-d94c6139530d a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
+    :name "4D" .
 
-twssd:showroom_17e69fda-979f-4a5a-b2b0-13e1e07047c0 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
-    twss:name "4D" .
+twssd:showroom_3b501513-eeab-4c8a-9b8b-8a897dc0b47a a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
+    :name "4D" .
 
-twssd:showroom_30633358-d7cc-437d-8047-7c470a2bb875 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
-    twss:name "4D" .
+twssd:showroom_71af0ff2-5f7e-4018-8099-9fd2309d5fc4 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
+    :name "4D" .
 
-twssd:showroom_7baa845e-dc52-497c-a8aa-343b8818bd8d a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
-    twss:name "4D" .
+twssd:showroom_855902a9-9b70-4d35-a780-125a36e926ee a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
+    :name "4D" .
 
-twssd:showroom_7cb08145-bd67-4523-b723-1c2ff5160858 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> ;
-    twss:name "Classic" .
+twssd:showroom_d2609a6d-cc2f-40d8-bd00-e20604b2c07c a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> ;
+    :name "Classic" .
 
-twssd:showroom_8d56bbe0-cdf8-424f-9c44-7266f1152299 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
-    twss:name "4D" .
+twssd:showroom_d9ba1795-9816-4e24-b933-84c9ec4131a8 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
+    :name "4D" .
 
-twssd:showroom_b90711fd-6b28-4b73-83e3-8ee82fe06384 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
-    twss:name "4D" .
+twssd:showroom_e3387d79-3032-4d6d-ac9d-ecceca457cc5 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
+    :name "4D" .
 
-twssd:showroom_f491af3c-110c-42a3-b3be-15265cca969e a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
-    twss:name "4D" .
+twssd:showroom_e35c7f9f-3df5-48f3-aa36-cd9dbdf122a6 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
+    :name "4D" .
 
-twssd:showroom_f7ee0a39-5304-406e-98db-60e4744e9d8e a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
-    twss:name "4D" .
+twssd:showroom_ef4771fd-c94d-4238-a889-6ba1e3518c2d a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
+    :name "4D" .
 
 twssd:CINEMA_CITY a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "CINEMA CITY" .
+        :Cinema ;
+    :name "CINEMA CITY" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Avellaneda" .
+        :Cinema ;
+    :name "Cinépolis Avellaneda" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Luján" .
+        :Cinema ;
+    :name "Cinépolis Luján" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Mendoza" .
+        :Cinema ;
+    :name "Cinépolis Mendoza" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Merlo" .
+        :Cinema ;
+    :name "Cinépolis Merlo" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Neuquén" .
+        :Cinema ;
+    :name "Cinépolis Neuquén" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Pilar" .
+        :Cinema ;
+    :name "Cinépolis Pilar" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Recoleta" .
+        :Cinema ;
+    :name "Cinépolis Recoleta" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> a owl:NamedIndividual,
-        twss:Cinema ;
-    twss:name "Cinépolis Rosario" .
+        :Cinema ;
+    :name "Cinépolis Rosario" .
 
 twssd:Maisie_Williams a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Maisie Williams" .
+        :Person ;
+    :name "Maisie Williams" .
 
 twssd:On_a_magical_night a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Benjamin_Biolay,
+        :Movie ;
+    :actor twssd:Benjamin_Biolay,
         twssd:Camille_Cottin,
         twssd:Carole_Bouquet,
         twssd:Chiara_Mastroianni,
@@ -1697,53 +1697,53 @@ twssd:On_a_magical_night a owl:NamedIndividual,
         twssd:Marie-Christine_Adam,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/St%C3%A9phane_Roger>,
         twssd:Vincent_Lacoste ;
-    twss:countryOfOrigin "Francia" ;
-    twss:director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> ;
-    twss:durationInMinutes 87 ;
-    twss:genre "Comedia",
+    :countryOfOrigin "Francia" ;
+    :director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> ;
+    :durationInMinutes 87 ;
+    :genre "Comedia",
         "Comedia dramática" ;
-    twss:language "Francés" ;
-    twss:movieRating "P-13" ;
-    twss:synopsis "Tras 20 años de matrimonio, Maria decide dejarlo todo atrás y empezar una nueva vida. El primer paso es hospedarse en la habitación 212 de un hotel próximo a la casa en la que vivía junto a su familia. Con el paso del tiempo, comienza a preguntarse si ha tomado la decisión correcta." ;
-    twss:title "Habitacion 212",
+    :language "Francés" ;
+    :movieRating "P-13" ;
+    :synopsis "Tras 20 años de matrimonio, Maria decide dejarlo todo atrás y empezar una nueva vida. El primer paso es hospedarse en la habitación 212 de un hotel próximo a la casa en la que vivía junto a su familia. Con el paso del tiempo, comienza a preguntarse si ha tomado la decisión correcta." ;
+    :title "Habitacion 212",
         "On a magical night" .
 
 twssd:Tim_Story a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Tim Story" .
+        :Person ;
+    :name "Tim Story" .
 
 twssd:Walt_Dohrn a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "Walt Dohrn" .
+        :Person ;
+    :name "Walt Dohrn" .
 
-twssd:showroom_bc1fd77e-c6f7-43d4-b2b5-6e62318a6303 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf twssd:CINEMA_CITY ;
-    twss:name "SALA 4D" .
+twssd:showroom_ac54a9ee-6224-4eec-b5e0-b4da0a2f0fc1 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf twssd:CINEMA_CITY ;
+    :name "SALA 4D" .
 
 twssd:La_noche_magica a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Diego_Peretti,
+        :Movie ;
+    :actor twssd:Diego_Peretti,
         twssd:Esteban_Bigliardi,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Hern%C3%A1n_Jim%C3%A9nez>,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Isabela_Pal%C3%B3poli>,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laura_L%C3%B3pez_Moyano>,
         twssd:Natalia_Oreiro,
         twssd:Pablo_Rago ;
-    twss:countryOfOrigin "Argentina" ;
-    twss:director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gast%C3%B3n_Portal> ;
-    twss:durationInMinutes 98 ;
-    twss:genre "Comedia",
+    :countryOfOrigin "Argentina" ;
+    :director <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gast%C3%B3n_Portal> ;
+    :durationInMinutes 98 ;
+    :genre "Comedia",
         "Thriller" ;
-    twss:language "Español" ;
-    twss:movieRating "P-16" ;
-    twss:synopsis "La Noche Mágica, la película protagonizada por Natalia Oreiro y Diego Peretti, llega a los cines argentinos el 11 de marzo.El film, una innovadora comedia dramática con ritmo y suspenso de thriller, dirigida por Gastón Portal, cuenta también con las actuaciones de Pablo Rago y Esteban Bigliardi. Está producida por Aeroplano.La Noche Mágica transcurre durante Nochebuena en una casa en San Isidro. Kira (Natalia Oreiro) y su amante Cachete (Pablo Rago), se encuentran en el dormitorio cuando oyen llegar a Juan (Esteban Bigliardi), el marido de Kira. Pero cuando Cachete se esconde en el balcón, se encuentra con algo peor; NICOLA (Diego Peretti), un excéntrico ladrón que, como Papa Noel lleva una barba blanca y un gorro rojo, ha venido a robar el domicilio. Nicola procede a esposar a todos los presentes pero el atraco se complica cuando se encuentra con Alicia, la pequeña hija del matrimonio, quien apenas lo ve le extiende una lista de deseos…Una producción de Aeroplano, en coproducción con World Media (Uruguay), DirecTV, Diego Kolankowsky y Silvia Rodriguez; en asociación con Welavit, RBS, Film Suez, Ketama, TeDigoQue y Dk Entertainment." ;
-    twss:title "La Noche Magica",
+    :language "Español" ;
+    :movieRating "P-16" ;
+    :synopsis "La Noche Mágica, la película protagonizada por Natalia Oreiro y Diego Peretti, llega a los cines argentinos el 11 de marzo.El film, una innovadora comedia dramática con ritmo y suspenso de thriller, dirigida por Gastón Portal, cuenta también con las actuaciones de Pablo Rago y Esteban Bigliardi. Está producida por Aeroplano.La Noche Mágica transcurre durante Nochebuena en una casa en San Isidro. Kira (Natalia Oreiro) y su amante Cachete (Pablo Rago), se encuentran en el dormitorio cuando oyen llegar a Juan (Esteban Bigliardi), el marido de Kira. Pero cuando Cachete se esconde en el balcón, se encuentra con algo peor; NICOLA (Diego Peretti), un excéntrico ladrón que, como Papa Noel lleva una barba blanca y un gorro rojo, ha venido a robar el domicilio. Nicola procede a esposar a todos los presentes pero el atraco se complica cuando se encuentra con Alicia, la pequeña hija del matrimonio, quien apenas lo ve le extiende una lista de deseos…Una producción de Aeroplano, en coproducción con World Media (Uruguay), DirecTV, Diego Kolankowsky y Silvia Rodriguez; en asociación con Welavit, RBS, Film Suez, Ketama, TeDigoQue y Dk Entertainment." ;
+    :title "La Noche Magica",
         "La noche magica" .
 
 twssd:Tenet a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Aaron_Taylor-Johnson,
+        :Movie ;
+    :actor twssd:Aaron_Taylor-Johnson,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clemence_Po%C3%A9sy>,
         twssd:Dimple_Kapadia,
         twssd:Elizabeth_Debicki,
@@ -1754,75 +1754,75 @@ twssd:Tenet a owl:NamedIndividual,
         twssd:Martin_Donovan,
         twssd:Michael_Caine,
         twssd:Robert_Pattinson ;
-    twss:countryOfOrigin "Estados Unidos",
+    :countryOfOrigin "Estados Unidos",
         "Reino Unido" ;
-    twss:director twssd:Christopher_Nolan ;
-    twss:durationInMinutes 155 ;
-    twss:genre "Acción",
+    :director twssd:Christopher_Nolan ;
+    :durationInMinutes 155 ;
+    :genre "Acción",
         "Ciencia Ficción",
         "Thriller" ;
-    twss:language "Inglés" ;
-    twss:movieRating "P-13" ;
-    twss:synopsis "Armado solamente con una palabra, Tenet, el protagonista deberá luchar por la supervivencia del mundo entero y evitar la Tercera Guerra Mundial, en una historia de espionaje internacional. La misión se desplegará más allá del tiempo real. No son viajes en el tiempo, es inversión." ;
-    twss:title "Tenet" .
+    :language "Inglés" ;
+    :movieRating "P-13" ;
+    :synopsis "Armado solamente con una palabra, Tenet, el protagonista deberá luchar por la supervivencia del mundo entero y evitar la Tercera Guerra Mundial, en una historia de espionaje internacional. La misión se desplegará más allá del tiempo real. No son viajes en el tiempo, es inversión." ;
+    :title "Tenet" .
 
 twssd:Tom_Y_Jerry a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Tim_Story ;
-    twss:durationInMinutes 101 ;
-    twss:genre "Animación" ;
-    twss:language "Inglés" ;
-    twss:movieRating "ATP" ;
-    twss:synopsis """Película del clásico dibujo animado de Tom y Jerry que mezcla live-action con animación. \r
+        :Movie ;
+    :actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> ;
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Tim_Story ;
+    :durationInMinutes 101 ;
+    :genre "Animación" ;
+    :language "Inglés" ;
+    :movieRating "ATP" ;
+    :synopsis """Película del clásico dibujo animado de Tom y Jerry que mezcla live-action con animación. \r
 Jerry se muda al hotel más lujoso de Nueva York justo antes del "casamiento del siglo"; la coordinadora de la ceremonia, desesperada, no tiene más opción que contratar a Tom para eliminar a Jerry. Esto desata una batalla entre gato y ratón que amenaza con destruir la carrera de la coordinadora, la ceremonia e incluso quizás el hotel mismo.\r
 Pero pronto surge un problema más grave: un empleado ambicioso y diabólico que conspira contra los tres.""" ;
-    twss:title "Tom Y Jerry" .
+    :title "Tom Y Jerry" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/animaci%C3%B3n> a owl:NamedIndividual,
-        twss:Person ;
-    twss:name "animación" .
+        :Person ;
+    :name "animación" .
 
-twssd:showroom_e938c6c9-93d8-49cb-9b91-feaeb444c8b8 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf twssd:CINEMA_CITY ;
-    twss:name "SALA HD" .
+twssd:showroom_f861dbfa-d8c1-4958-9637-8338922c85ab a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf twssd:CINEMA_CITY ;
+    :name "SALA HD" .
 
 twssd:Raya_Y_El_Ultimo_Dragon a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Awkwafina,
+        :Movie ;
+    :actor twssd:Awkwafina,
         twssd:Daniel_Dae_Kim,
         twssd:Kelly_Marie_Tran ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Carlos_Lopez_Estrada,
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Carlos_Lopez_Estrada,
         twssd:Don_Hall,
         twssd:Paul_Briggs ;
-    twss:durationInMinutes 114 ;
-    twss:genre "Animación" ;
-    twss:language "Español" ;
-    twss:movieRating "ATP" ;
-    twss:synopsis "Ambientada en el sudeste asiático, la cinta sigue la historia de Raya, una niña de un gran espíritu aventurero que vive en un reino llamado Kumandra. Este lejano y recóndito territorio está habitado por una civilización milenaria. Cinco son los clanes que forman esta tierra conocida como la del dragón y Raya, con el objetivo de devolver el equilibrio a su tierra, será la encargada de encontrar al último de los dragones en la mayor aventura de su vida." ;
-    twss:title "Raya Y El Ultimo Dragon" .
+    :durationInMinutes 114 ;
+    :genre "Animación" ;
+    :language "Español" ;
+    :movieRating "ATP" ;
+    :synopsis "Ambientada en el sudeste asiático, la cinta sigue la historia de Raya, una niña de un gran espíritu aventurero que vive en un reino llamado Kumandra. Este lejano y recóndito territorio está habitado por una civilización milenaria. Cinco son los clanes que forman esta tierra conocida como la del dragón y Raya, con el objetivo de devolver el equilibrio a su tierra, será la encargada de encontrar al último de los dragones en la mayor aventura de su vida." ;
+    :title "Raya Y El Ultimo Dragon" .
 
-twssd:showroom_08d019a6-f81d-47ff-bf2d-9a125036abf9 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
-    twss:name "Classic" .
+twssd:showroom_01e0aeb7-c3c5-4ab7-bdcd-ff835d6c5584 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> ;
+    :name "Classic" .
 
-twssd:showroom_233ad42c-ba42-448d-b9b0-9552b90b26ad a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
-    twss:name "Classic" .
+twssd:showroom_27735a3d-5b2b-49a5-9f9c-fde47b781548 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf twssd:CINEMA_OCHO ;
+    :name "SALA HD" .
 
-twssd:showroom_5c9416e1-c3ac-4398-b66a-7c924487e13e a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf twssd:CINEMA_OCHO ;
-    twss:name "SALA HD" .
+twssd:showroom_df47da43-a9e4-4f1e-998b-8e621420604b a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> ;
+    :name "Classic" .
 
 twssd:Promising_young_woman a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Adam_Brody,
+        :Movie ;
+    :actor twssd:Adam_Brody,
         twssd:Alison_Brie,
         twssd:Bo_Burnham,
         twssd:Carey_Mulligan,
@@ -1834,21 +1834,21 @@ twssd:Promising_young_woman a owl:NamedIndividual,
         twssd:Max_Greenfield,
         twssd:Molly_Shannon,
         twssd:Sam_Richardson ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Emerald_Fennell ;
-    twss:durationInMinutes 117 ;
-    twss:genre "Crimen",
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Emerald_Fennell ;
+    :durationInMinutes 117 ;
+    :genre "Crimen",
         "Drama",
         "Thriller" ;
-    twss:language "Inglés" ;
-    twss:movieRating "ATP" ;
-    twss:synopsis "De la innovadora directora Emerald Fennell (Killing Eve) llega una deliciosa nueva visión sobre la venganza. Todos dicen que Cassie (Carey Mulligan) era una prometedora mujer joven...hasta que un misterioso suceso abruptamente descarrilló su futuro. Pero nada en la vida de Cassie es lo que aparenta ser: ella es pícaramente inteligente, atormentadoramente astuta y vive una secreta doble vida por la noche. Ahora, un encuentro inesperado está a punto de darle a Cassie la posibilidad de reparar los errores del pasado en esta fascinante y totalmente divertida historia." ;
-    twss:title "Hermosa Venganza",
+    :language "Inglés" ;
+    :movieRating "ATP" ;
+    :synopsis "De la innovadora directora Emerald Fennell (Killing Eve) llega una deliciosa nueva visión sobre la venganza. Todos dicen que Cassie (Carey Mulligan) era una prometedora mujer joven...hasta que un misterioso suceso abruptamente descarrilló su futuro. Pero nada en la vida de Cassie es lo que aparenta ser: ella es pícaramente inteligente, atormentadoramente astuta y vive una secreta doble vida por la noche. Ahora, un encuentro inesperado está a punto de darle a Cassie la posibilidad de reparar los errores del pasado en esta fascinante y totalmente divertida historia." ;
+    :title "Hermosa Venganza",
         "Promising young woman" .
 
 twssd:Wonder_Woman_1984 a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Chris_Pine,
+        :Movie ;
+    :actor twssd:Chris_Pine,
         twssd:Connie_Nielsen,
         twssd:Gabriella_Wilde,
         twssd:Gal_Gadot,
@@ -1858,40 +1858,40 @@ twssd:Wonder_Woman_1984 a owl:NamedIndividual,
         twssd:Pedro_Pascal,
         twssd:Ravi_Patel,
         twssd:Robin_Wright ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Patty_Jenkins ;
-    twss:durationInMinutes 151 ;
-    twss:genre "Acción",
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Patty_Jenkins ;
+    :durationInMinutes 151 ;
+    :genre "Acción",
         "Ciencia Ficción" ;
-    twss:language "Inglés" ;
-    twss:movieRating "P-13" ;
-    twss:synopsis "Ambientada en los años 80s. El mayor deseo de Diana Prince parece ser tener devuelta a Steve Trevor. Esto inexplicablemente parece haberse convertido en realidad, pero la enfrentará a dos nuevos villanos: Max Lord y Cheetah" ;
-    twss:title "Mujer Maravilla 1984",
+    :language "Inglés" ;
+    :movieRating "P-13" ;
+    :synopsis "Ambientada en los años 80s. El mayor deseo de Diana Prince parece ser tener devuelta a Steve Trevor. Esto inexplicablemente parece haberse convertido en realidad, pero la enfrentará a dos nuevos villanos: Max Lord y Cheetah" ;
+    :title "Mujer Maravilla 1984",
         "Wonder Woman 1984" .
 
-twssd:showroom_9f67d382-7d17-4220-ad56-58648856b193 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
-    twss:name "Classic" .
+twssd:showroom_6954f526-ce29-4ece-91de-e7ede411734a a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf twssd:CINEMA_ROCHA ;
+    :name "SALA HD" .
 
-twssd:showroom_d562c2f1-5419-41fa-857c-0315ac2dfb97 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf twssd:CINEMA_ROCHA ;
-    twss:name "SALA HD" .
+twssd:showroom_7fec812a-4dc1-4dcf-a841-334570918316 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> ;
+    :name "Classic" .
 
-twssd:showroom_d642f4b2-4604-47f2-870b-232cae679b21 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
-    twss:name "Classic" .
+twssd:showroom_99a4c11b-840c-4399-b238-d00024dd1bed a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> ;
+    :name "Classic" .
 
-twssd:showroom_4ac80925-f697-4163-b548-cd354f5ae791 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
-    twss:name "Classic" .
+twssd:showroom_2f8fdbfd-aa03-4554-b5c0-191ec2ff4901 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> ;
+    :name "Classic" .
 
 twssd:Demon_Slayer_Mugen_Train a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Akari_Kito,
+        :Movie ;
+    :actor twssd:Akari_Kito,
         twssd:Hiro_Shimono,
         twssd:Katsuyuki_Konishi,
         twssd:Kenichi_Suzumura,
@@ -1901,21 +1901,21 @@ twssd:Demon_Slayer_Mugen_Train a owl:NamedIndividual,
         twssd:Takahiro_Sakurai,
         twssd:Tomokazu_Seki,
         twssd:Yoshitsugu_Matsuoka ;
-    twss:countryOfOrigin "Japón" ;
-    twss:director twssd:Haruo_Sotozaki ;
-    twss:durationInMinutes 120 ;
-    twss:genre "Acción",
+    :countryOfOrigin "Japón" ;
+    :director twssd:Haruo_Sotozaki ;
+    :durationInMinutes 120 ;
+    :genre "Acción",
         "Animación",
         "Aventura",
         "Drama",
         "Fantasía" ;
-    twss:movieRating "N/A" ;
-    twss:synopsis "Demon Slayer: Mugen Train cuenta la historia de Tanjiro Kamado, Kyoujurou Rengoku y sus amigos de la Compañía de Cazadores de Demonios (Demon Slayer Corps). Juntos, se unen con uno de los mejores espadachines de la compañía, Kyojuro Rengoku, para investigar una misteriosa serie de desapariciones que han ocurrido dentro del “Tren Infinito”. Poco saben que Enmu, uno de los miembros de las Doce Lunas Demoníacas, también está a bordo y les ha preparado una trampa." ;
-    twss:title "Demon Slayer Mugen Train" .
+    :movieRating "N/A" ;
+    :synopsis "Demon Slayer: Mugen Train cuenta la historia de Tanjiro Kamado, Kyoujurou Rengoku y sus amigos de la Compañía de Cazadores de Demonios (Demon Slayer Corps). Juntos, se unen con uno de los mejores espadachines de la compañía, Kyojuro Rengoku, para investigar una misteriosa serie de desapariciones que han ocurrido dentro del “Tren Infinito”. Poco saben que Enmu, uno de los miembros de las Doce Lunas Demoníacas, también está a bordo y les ha preparado una trampa." ;
+    :title "Demon Slayer Mugen Train" .
 
 twssd:Trolls_2 a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Anna_Kendrick,
+        :Movie ;
+    :actor twssd:Anna_Kendrick,
         twssd:Anthony_Ramos,
         twssd:Chance_the_Rapper,
         twssd:Flula_Borg,
@@ -1925,38 +1925,38 @@ twssd:Trolls_2 a owl:NamedIndividual,
         twssd:Karan_Soni,
         twssd:Kunal_Nayyar,
         twssd:Sam_Rockwell ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Walt_Dohrn ;
-    twss:durationInMinutes 90 ;
-    twss:genre "Animación",
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Walt_Dohrn ;
+    :durationInMinutes 90 ;
+    :genre "Animación",
         "Aventura",
         "Comedia",
         "Familia",
         "Fantasía",
         "Música" ;
-    twss:movieRating "N/A" ;
-    twss:synopsis "En una aventura que les llevará más allá de todo lo que habían conocido, Poppy y Branch descubren que su tribu de Trolls es solo una de las seis que existen, que el resto están repartidas en seis reinos y consagradas a seis tipos distintos de música: funk, country, tecno, clásica, pop y rock. La reina Bárbara, miembro de la realeza del hard rock, y su padre, el Rey Metal, quieren acabar con el resto de géneros musicales e imponer el reinado del rock. Con el destino del mundo en juego, Poppy y Branch, junto con el resto de la pandilla — Grandullón, Chanelle, Satén, Cooper y Guy Diamante—, visitarán los demás reinos para unir a los Trolls contra los planes de Barb de eclipsarlos a todos." ;
-    twss:title "Trolls 2",
+    :movieRating "N/A" ;
+    :synopsis "En una aventura que les llevará más allá de todo lo que habían conocido, Poppy y Branch descubren que su tribu de Trolls es solo una de las seis que existen, que el resto están repartidas en seis reinos y consagradas a seis tipos distintos de música: funk, country, tecno, clásica, pop y rock. La reina Bárbara, miembro de la realeza del hard rock, y su padre, el Rey Metal, quieren acabar con el resto de géneros musicales e imponer el reinado del rock. Con el destino del mundo en juego, Poppy y Branch, junto con el resto de la pandilla — Grandullón, Chanelle, Satén, Cooper y Guy Diamante—, visitarán los demás reinos para unir a los Trolls contra los planes de Barb de eclipsarlos a todos." ;
+    :title "Trolls 2",
         "Trolls 2: Gira mundial" .
 
-twssd:showroom_65abf4bb-52c6-4440-b9ba-f2f6397ee001 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
-    twss:name "Classic" .
+twssd:showroom_b46a9003-d4c2-4635-aa2a-29ec2f6e49bb a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> ;
+    :name "Classic" .
 
-twssd:showroom_6d82ba59-3ab1-4881-9f76-4c807ddc9f7c a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf twssd:CINEMA_PARADISO ;
-    twss:name "SALA HD" .
+twssd:showroom_c17b0374-f207-4086-9445-0023f2a92202 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
+    :name "Classic" .
 
-twssd:showroom_d1d0eb40-61e2-4c32-80e6-54e0abf4684b a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> ;
-    twss:name "Classic" .
+twssd:showroom_fe72b712-7b97-4012-93ad-82e2fa5a5a8e a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf twssd:CINEMA_PARADISO ;
+    :name "SALA HD" .
 
 twssd:Tom_and_Jerry a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Bobby_Cannavale,
+        :Movie ;
+    :actor twssd:Bobby_Cannavale,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chlo%C3%AB_Grace_Moretz>,
         twssd:Frank_Welker,
         twssd:June_Foray,
@@ -1966,27 +1966,27 @@ twssd:Tom_and_Jerry a owl:NamedIndividual,
         twssd:Nicky_Jam,
         twssd:T-Pain,
         twssd:William_Hanna ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Tim_Story ;
-    twss:durationInMinutes 101 ;
-    twss:genre "Acción",
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Tim_Story ;
+    :durationInMinutes 101 ;
+    :genre "Acción",
         "Animación",
         "Aventura",
         "Comedia",
         "Familia" ;
-    twss:movieRating "ATP" ;
-    twss:synopsis "Tom el gato y Jerry el ratón son expulsados de su casa y se trasladan a un elegante hotel de Nueva York, donde una empleada descuidada llamada Kayla perderá su trabajo si no puede desalojar a Jerry antes de una boda de clase alta en el hotel. ¿Su solución? Contratar a Tom para deshacerse del molesto ratón." ;
-    twss:title "Tom and Jerry",
+    :movieRating "ATP" ;
+    :synopsis "Tom el gato y Jerry el ratón son expulsados de su casa y se trasladan a un elegante hotel de Nueva York, donde una empleada descuidada llamada Kayla perderá su trabajo si no puede desalojar a Jerry antes de una boda de clase alta en el hotel. ¿Su solución? Contratar a Tom para deshacerse del molesto ratón." ;
+    :title "Tom and Jerry",
         "Tom y Jerry" .
 
-twssd:showroom_e502ee56-86a9-499b-8136-e6fd8d2ca593 a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf twssd:CINEMA_SAN_MARTIN ;
-    twss:name "SALA HD" .
+twssd:showroom_7a48eec4-1c02-4f6a-8c92-44442af85b23 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf twssd:CINEMA_SAN_MARTIN ;
+    :name "SALA HD" .
 
 twssd:Chaos_Walking a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada>,
+        :Movie ;
+    :actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada>,
         twssd:Cynthia_Erivo,
         twssd:Daisy_Ridley,
         twssd:David_Oyelowo,
@@ -1996,27 +1996,27 @@ twssd:Chaos_Walking a owl:NamedIndividual,
         twssd:Nick_Jonas,
         twssd:Ray_McKinnon,
         twssd:Tom_Holland ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Doug_Liman ;
-    twss:durationInMinutes 110 ;
-    twss:genre "Acción",
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Doug_Liman ;
+    :durationInMinutes 110 ;
+    :genre "Acción",
         "Aventura",
         "Ciencia Ficción",
         "Thriller" ;
-    twss:language "Inglés" ;
-    twss:movieRating "P-13" ;
-    twss:synopsis "En un futuro no muy lejano, en un mundo donde las mujeres han desaparecido y los hombres han sido afectados por “el ruido” – una fuerza que exhibe todos sus pensamientos – Todd Hewitt (Tom Holland) se encuentra con Viola (Daisy Ridley), una joven misteriosa que ha aterrizado en su planeta. Con Viola bajo riesgo, Todd jura protegerla y ponerla fuera de peligro. Para salvarla Todd tendrá que controlar su “ruido”, descubrir su propia fuerza y desbloquear todos los obscuros secretos que guarda su planeta y su comunidad.Del director de Identidad Desconocida (The Bourne Identity) y Al Filo del Mañana (Edge of Tomorrow), basada en la novela bestseller, El Cuchillo en la Mano del escritor Patrick Ness. Tom Holland y Daisy Ridely protagonizan junto con David Oyelowo, Nick Jonas, Mads Mikkelsen y Demián Bichir. Caos: El Inicio (Chaos Walking) llegará a los cines en 2021." ;
-    twss:title "Caos: El Inicio",
+    :language "Inglés" ;
+    :movieRating "P-13" ;
+    :synopsis "En un futuro no muy lejano, en un mundo donde las mujeres han desaparecido y los hombres han sido afectados por “el ruido” – una fuerza que exhibe todos sus pensamientos – Todd Hewitt (Tom Holland) se encuentra con Viola (Daisy Ridley), una joven misteriosa que ha aterrizado en su planeta. Con Viola bajo riesgo, Todd jura protegerla y ponerla fuera de peligro. Para salvarla Todd tendrá que controlar su “ruido”, descubrir su propia fuerza y desbloquear todos los obscuros secretos que guarda su planeta y su comunidad.Del director de Identidad Desconocida (The Bourne Identity) y Al Filo del Mañana (Edge of Tomorrow), basada en la novela bestseller, El Cuchillo en la Mano del escritor Patrick Ness. Tom Holland y Daisy Ridely protagonizan junto con David Oyelowo, Nick Jonas, Mads Mikkelsen y Demián Bichir. Caos: El Inicio (Chaos Walking) llegará a los cines en 2021." ;
+    :title "Caos: El Inicio",
         "Chaos Walking" .
 
-twssd:showroom_ba29e2ff-1a7a-4d79-af01-e15b24b70caf a owl:NamedIndividual,
-        twss:ShowRoom ;
-    twss:isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
-    twss:name "Classic" .
+twssd:showroom_408f72ed-7aed-4c16-8f66-7a6aecf51d01 a owl:NamedIndividual,
+        :ShowRoom ;
+    :isPartOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> ;
+    :name "Classic" .
 
 twssd:New_Mutants a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor twssd:Alice_Braga,
+        :Movie ;
+    :actor twssd:Alice_Braga,
         twssd:Antonio_Banderas,
         twssd:Anya_Taylor-Joy,
         twssd:Blu_Hunt,
@@ -2028,25 +2028,25 @@ twssd:New_Mutants a owl:NamedIndividual,
         twssd:Mickey_Gilmore,
         twssd:Rosario_Dawson,
         twssd:Thomas_Kee ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Josh_Boone ;
-    twss:durationInMinutes 98 ;
-    twss:genre "Acción",
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Josh_Boone ;
+    :durationInMinutes 98 ;
+    :genre "Acción",
         "Ciencia Ficción",
         "Comedia",
         "Terror" ;
-    twss:language "Inglés" ;
-    twss:movieRating "P-13" ;
-    twss:synopsis """Encerrados contra su voluntad en una institución secreta, 5 jóvenes mutantes descubren sus poderosas habilidades. Están bajo el estudio y análisis de la Doctora Cecilia Reyes quién tiene como objetivo curarlos.\r
+    :language "Inglés" ;
+    :movieRating "P-13" ;
+    :synopsis """Encerrados contra su voluntad en una institución secreta, 5 jóvenes mutantes descubren sus poderosas habilidades. Están bajo el estudio y análisis de la Doctora Cecilia Reyes quién tiene como objetivo curarlos.\r
 Wolfsbane, Cannonball, Magik, Mirage y Sunspot deberán enfrentar sus miedos, poderes y peligros que los rodean para intentar escapar a su pasado y salvarse a si mismos.""" ;
-    twss:title "Los Nuevos Mutantes",
+    :title "Los Nuevos Mutantes",
         "New Mutants" .
 
-twss:Cinema a owl:Class .
+:Cinema a owl:Class .
 
 twssd:Godzilla_vs._Kong a owl:NamedIndividual,
-        twss:Movie ;
-    twss:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>,
+        :Movie ;
+    :actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>,
         twssd:Brian_Tyree_Henry,
         twssd:Demian_Bichir,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez>,
@@ -2056,24 +2056,24 @@ twssd:Godzilla_vs._Kong a owl:NamedIndividual,
         twssd:Millie_Bobby_Brown,
         twssd:Rebecca_Hall,
         twssd:Shun_Oguri ;
-    twss:countryOfOrigin "Estados Unidos" ;
-    twss:director twssd:Adam_Wingard ;
-    twss:durationInMinutes 117 ;
-    twss:genre "Acción",
+    :countryOfOrigin "Estados Unidos" ;
+    :director twssd:Adam_Wingard ;
+    :durationInMinutes 117 ;
+    :genre "Acción",
         "Aventura",
         "Ciencia Ficción",
         "Thriller" ;
-    twss:language "Inglés" ;
-    twss:movieRating "P-13" ;
-    twss:synopsis "Godzilla y Kong, dos de las fuerzas más poderosas de un planeta habitado por todo tipo de aterradoras criaturas, se enfrentan en un espectacular combate que sacude los cimientos de la humanidad. Monarch (Kyle Chandler) se embarca en una misión de alto riesgo y pone rumbo hacia territorios inexplorados para descubrir los orígenes de estos dos titanes, en un último esfuerzo por tratar de salvar a dos bestias que parecen tener las horas contadas sobre la faz de la Tierra." ;
-    twss:title "Godzilla Vs. Kong",
+    :language "Inglés" ;
+    :movieRating "P-13" ;
+    :synopsis "Godzilla y Kong, dos de las fuerzas más poderosas de un planeta habitado por todo tipo de aterradoras criaturas, se enfrentan en un espectacular combate que sacude los cimientos de la humanidad. Monarch (Kyle Chandler) se embarca en una misión de alto riesgo y pone rumbo hacia territorios inexplorados para descubrir los orígenes de estos dos titanes, en un último esfuerzo por tratar de salvar a dos bestias que parecen tener las horas contadas sobre la faz de la Tierra." ;
+    :title "Godzilla Vs. Kong",
         "Godzilla vs. Kong" .
 
-twss:ShowRoom a owl:Class .
+:ShowRoom a owl:Class .
 
-twss:Movie a owl:Class .
+:Movie a owl:Class .
 
-twss:Show a owl:Class .
+:Show a owl:Class .
 
-twss:Person a owl:Class .
+:Person a owl:Class .
 

@@ -20,3 +20,15 @@ protegé. no entiendo toda la info que muestra y NO muestra protegé.
 algunos individuals que muestra son de las referencias a iris externas que se obtiene de los jsons-ld.
 no se si eso es correcto. o que habría que hacer con esa información?.
 
+
+como consultar los datos!!! para realizar las transformaciones de los grafos.
+es complejo ir atravezando por las tripletas sin ningún lenguaje de consulta.
+
+
+en la versión 2 de la solución (schema extendida)
+no se si integrar toda la ontología en 1 solo archivo. o dejarla como importada desde un recurso web.
+puedo simplemente abrir los 2 archivos y hacer un merge como hice en la versión anterior de la solución.
+pero protegé me lo muestra correctamente y creo que la versión de importar es la que se haría en el mundo real.
+asi que la dejo asi.
+
+

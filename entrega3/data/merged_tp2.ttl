@@ -1,218 +1,222 @@
+@prefix : <http://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
 @prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-schema:actionPlatform a owl:DatatypeProperty ;
-    rdfs:domain schema:EntryPoint ;
+:actionPlatform a owl:DatatypeProperty ;
+    rdfs:domain :EntryPoint ;
     rdfs:range xsd:string .
 
-schema:actor a owl:ObjectProperty ;
-    rdfs:domain schema:Movie ;
-    rdfs:range schema:Person .
+:actor a owl:ObjectProperty ;
+    rdfs:domain :Movie ;
+    rdfs:range :Person .
 
-schema:actors a owl:ObjectProperty ;
-    rdfs:domain schema:Clip,
-        schema:Movie ;
-    rdfs:range schema:Person .
+:actors a owl:ObjectProperty ;
+    rdfs:domain :Clip,
+        :Movie ;
+    rdfs:range :Person .
 
-schema:aggregateRating a owl:ObjectProperty ;
-    rdfs:domain schema:CreativeWork ;
-    rdfs:range schema:AggregateRating .
+:aggregateRating a owl:ObjectProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :AggregateRating .
 
-schema:author a owl:ObjectProperty ;
-    rdfs:domain schema:CreativeWork,
-        schema:Rating ;
-    rdfs:range schema:Organization,
-        schema:Person .
+:author a owl:ObjectProperty ;
+    rdfs:domain :CreativeWork,
+        :Rating ;
+    rdfs:range :Organization,
+        :Person .
 
-schema:availabilityStarts a owl:DatatypeProperty ;
-    rdfs:domain schema:Offer ;
+:availabilityStarts a owl:DatatypeProperty ;
+    rdfs:domain :Offer ;
     rdfs:range xsd:string .
 
-schema:bestRating a owl:DatatypeProperty ;
-    rdfs:domain schema:Rating ;
+:bestRating a owl:DatatypeProperty ;
+    rdfs:domain :Rating ;
     rdfs:range xsd:float,
         xsd:string .
 
-schema:category a owl:DatatypeProperty ;
-    rdfs:domain schema:Offer ;
+:category a owl:DatatypeProperty ;
+    rdfs:domain :Offer ;
     rdfs:range xsd:string .
 
-schema:contentRating a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:character a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
 
-schema:contentUrl a owl:DatatypeProperty ;
-    rdfs:domain schema:MediaObject ;
+:contentRating a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
 
-schema:countryOfOrigin a owl:DatatypeProperty ;
-    rdfs:domain schema:Movie ;
+:contentUrl a owl:DatatypeProperty ;
+    rdfs:domain :MediaObject ;
     rdfs:range xsd:string .
 
-schema:creator a owl:ObjectProperty ;
-    rdfs:domain schema:CreativeWork ;
-    rdfs:range schema:Organization,
-        schema:Person .
+:countryOfOrigin a owl:DatatypeProperty ;
+    rdfs:domain :Movie ;
+    rdfs:range xsd:string .
 
-schema:dateCreated a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:creator a owl:ObjectProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :Organization,
+        :Person .
+
+:dateCreated a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:dateTime .
 
-schema:dateModified a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:dateModified a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:dateTime .
 
-schema:datePublished a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:datePublished a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:string ;
     rdfs:subPropertyOf owl:topDataProperty .
 
-schema:description a owl:DatatypeProperty ;
+:description a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-schema:director a owl:ObjectProperty ;
-    rdfs:domain schema:Movie ;
-    rdfs:range schema:Person ;
+:director a owl:ObjectProperty ;
+    rdfs:domain :Movie ;
+    rdfs:range :Person ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-schema:duration a owl:DatatypeProperty ;
-    rdfs:domain schema:Movie ;
+:duration a owl:DatatypeProperty ;
+    rdfs:domain :Movie ;
     rdfs:range xsd:decimal,
         xsd:string .
 
-schema:eligibleRegion a owl:ObjectProperty ;
-    rdfs:domain schema:Offer ;
-    rdfs:range schema:Place .
+:eligibleRegion a owl:ObjectProperty ;
+    rdfs:domain :Offer ;
+    rdfs:range :Place .
 
-schema:embedUrl a owl:DatatypeProperty ;
-    rdfs:domain schema:MediaObject ;
+:embedUrl a owl:DatatypeProperty ;
+    rdfs:domain :MediaObject ;
     rdfs:range xsd:string .
 
-schema:genre a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:genre a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
 
-schema:hasPart a owl:ObjectProperty ;
-    rdfs:domain schema:CreativeWork ;
-    rdfs:range schema:CreativeWork .
+:hasPart a owl:ObjectProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :CreativeWork .
 
-schema:image a owl:ObjectProperty ;
+:image a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
-    rdfs:range schema:ImageObject .
+    rdfs:range :ImageObject .
 
-schema:inLanguage a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:inLanguage a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
 
-schema:itemReviewed a owl:ObjectProperty ;
-    rdfs:domain schema:AggregateRating,
-        schema:Review ;
+:itemReviewed a owl:ObjectProperty ;
+    rdfs:domain :AggregateRating,
+        :Review ;
     rdfs:range owl:Thing .
 
-schema:keywords a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:keywords a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
 
-schema:location a owl:ObjectProperty ;
-    rdfs:domain schema:Action,
-        schema:Event,
-        schema:Organization ;
-    rdfs:range schema:Place .
+:location a owl:ObjectProperty ;
+    rdfs:domain :Action,
+        :Event,
+        :Organization ;
+    rdfs:range :Place .
 
-schema:mainEntityOfPage a owl:ObjectProperty ;
+:mainEntityOfPage a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
-    rdfs:range schema:CreativeWork ;
+    rdfs:range :CreativeWork ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-schema:name a owl:DatatypeProperty ;
+:name a owl:DatatypeProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range xsd:string .
 
-schema:potentialAction a owl:ObjectProperty ;
+:potentialAction a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
-    rdfs:range schema:Action .
+    rdfs:range :Action .
 
-schema:productionCompany a owl:ObjectProperty ;
-    rdfs:domain schema:Movie ;
-    rdfs:range schema:Organization .
+:productionCompany a owl:ObjectProperty ;
+    rdfs:domain :Movie ;
+    rdfs:range :Organization .
 
-schema:publisher a owl:ObjectProperty ;
-    rdfs:domain schema:CreativeWork ;
-    rdfs:range schema:Organization,
-        schema:Person .
+:publisher a owl:ObjectProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :Organization,
+        :Person .
 
-schema:ratingCount a owl:DatatypeProperty ;
-    rdfs:domain schema:AggregateRating ;
+:ratingCount a owl:DatatypeProperty ;
+    rdfs:domain :AggregateRating ;
     rdfs:range xsd:integer .
 
-schema:ratingValue a owl:DatatypeProperty ;
-    rdfs:domain schema:Rating ;
+:ratingValue a owl:DatatypeProperty ;
+    rdfs:domain :Rating ;
     rdfs:range xsd:float .
 
-schema:releasedEvent a owl:ObjectProperty ;
-    rdfs:domain schema:CreativeWork ;
-    rdfs:range schema:PublicationEvent .
+:releasedEvent a owl:ObjectProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :PublicationEvent .
 
-schema:review a owl:ObjectProperty ;
-    rdfs:domain schema:CreativeWork ;
-    rdfs:range schema:Review .
+:review a owl:ObjectProperty ;
+    rdfs:domain :CreativeWork ;
+    rdfs:range :Review .
 
-schema:reviewBody a owl:DatatypeProperty ;
-    rdfs:domain schema:Review ;
+:reviewBody a owl:DatatypeProperty ;
+    rdfs:domain :Review ;
     rdfs:range xsd:string .
 
-schema:reviewRating a owl:ObjectProperty ;
-    rdfs:domain schema:Review ;
-    rdfs:range schema:Rating .
+:reviewRating a owl:ObjectProperty ;
+    rdfs:domain :Review ;
+    rdfs:range :Rating .
 
-schema:sameAs a owl:ObjectProperty ;
+:sameAs a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range owl:Thing .
 
-schema:startDate a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:startDate a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:dateTime .
 
-schema:thumbnail a owl:ObjectProperty ;
-    rdfs:domain schema:ImageObject,
-        schema:VideoObject ;
-    rdfs:range schema:ImageObject .
+:thumbnail a owl:ObjectProperty ;
+    rdfs:domain :ImageObject,
+        :VideoObject ;
+    rdfs:range :ImageObject .
 
-schema:thumbnailUrl a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:thumbnailUrl a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
 
-schema:timeRequired a owl:DatatypeProperty ;
-    rdfs:domain schema:CreativeWork ;
+:timeRequired a owl:DatatypeProperty ;
+    rdfs:domain :CreativeWork ;
     rdfs:range xsd:string .
 
-schema:trailer a owl:ObjectProperty ;
-    rdfs:domain schema:Movie ;
-    rdfs:range schema:VideoObject .
+:trailer a owl:ObjectProperty ;
+    rdfs:domain :Movie ;
+    rdfs:range :VideoObject .
 
-schema:uploadDate a owl:DatatypeProperty ;
-    rdfs:domain schema:MediaObject ;
+:uploadDate a owl:DatatypeProperty ;
+    rdfs:domain :MediaObject ;
     rdfs:range xsd:dateTime .
 
-schema:url a owl:ObjectProperty ;
+:url a owl:ObjectProperty ;
     rdfs:domain owl:Thing ;
     rdfs:range owl:Thing .
 
-schema:urlTemplate a owl:DatatypeProperty ;
-    rdfs:domain schema:EntryPoint ;
+:urlTemplate a owl:DatatypeProperty ;
+    rdfs:domain :EntryPoint ;
     rdfs:range xsd:string .
 
-schema:worstRating a owl:DatatypeProperty ;
-    rdfs:domain schema:Rating ;
+:worstRating a owl:DatatypeProperty ;
+    rdfs:domain :Rating ;
     rdfs:range xsd:float .
 
-twssd:Wonder_Woman_1984 a schema:Movie,
+twssd:Wonder_Woman_1984 a :Movie,
         owl:NamedIndividual ;
-    schema:actor twssd:Alex_Delescu,
+    :actor twssd:Alex_Delescu,
         twssd:Amr_Waked,
         twssd:Amreen_N._Yaqoob,
         twssd:Bern_Collaco,
@@ -255,1161 +259,1161 @@ twssd:Wonder_Woman_1984 a schema:Movie,
         twssd:Spencer_Trinwith,
         twssd:Tessa_Bonham_Jones,
         twssd:Thomas_Clay_Strickland ;
-    schema:actors twssd:Chris_Pine,
+    :actors twssd:Chris_Pine,
         twssd:Connie_Nielsen,
         twssd:Gal_Gadot,
         twssd:Kristen_Wiig,
         twssd:Pedro_Pascal,
         twssd:Robin_Wright ;
-    schema:aggregateRating twssd:Tomatometer,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_87aa2f62-880b-41c3-86af-6432ca2e4dcd>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_b01bf5ba-6cd5-4e35-97cb-27203d58bb20> ;
-    schema:author twssd:Patty_Jenkins ;
-    schema:character "Antiope",
+    :aggregateRating twssd:Tomatometer,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_cea34e45-ee16-4b88-b003-2ee2d73fd9d2>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_fd23e922-7623-4281-9af1-22acad8394f7> ;
+    :author twssd:Patty_Jenkins ;
+    :character "Antiope",
         "Barbara Minerva / Cheetah",
         "Diana Prince / Wonder Woman",
         "Hippolyta",
         "Steve Trevor" ;
-    schema:contentRating "PG-13" ;
-    schema:creator twssd:Dave_Callaham,
+    :contentRating "PG-13" ;
+    :creator twssd:Dave_Callaham,
         twssd:Geoff_Johns,
         twssd:Patty_Jenkins,
         twssd:William_Moulton_Marston,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_1d460420-b4ed-490f-9b01-3e04639ebce3>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_676b4538-55c4-45b8-a8df-68e7014fd1c0>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a0901e40-83a9-4487-9747-1f1bfa89add9>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a35f195b-29a0-46f1-b822-1a40052448f6>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_b4a907f3-a855-4fa3-84c1-0a1ba6358480> ;
-    schema:dateCreated "2017-09-13T08:24:15-07:00"^^schema:Date ;
-    schema:dateModified "2021-05-09T21:02:19-07:00"^^schema:Date ;
-    schema:datePublished "2020-12-16"^^schema:Date,
-        "December 25, 2020"^^schema:Date ;
-    schema:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah.",
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_85dde8e9-25b9-4bca-9d95-c0977c4183df>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_9697cebe-0f33-4b9d-9434-19e54a55e2d2>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_bfc23d97-42d4-47b0-872b-405b9efc61d5>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_cce9607f-b45e-4a0b-aa0a-9f5b746d5862>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_ea5b5c8f-af39-4d17-b8e3-73660028c7e0> ;
+    :dateCreated "2017-09-13T08:24:15-07:00"^^:Date ;
+    :dateModified "2021-05-09T21:02:19-07:00"^^:Date ;
+    :datePublished "2020-12-16"^^:Date,
+        "December 25, 2020"^^:Date ;
+    :description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah.",
         "Wonder Woman 1984 is a movie starring Gal Gadot, Chris Pine, and Kristen Wiig. Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient..." ;
-    schema:director twssd:Patty_Jenkins ;
-    schema:duration "PT151M",
+    :director twssd:Patty_Jenkins ;
+    :duration "PT151M",
         "PT2H31M" ;
-    schema:genre "Action",
+    :genre "Action",
         "Action & Adventure",
         "Adventure",
         "Fantasy",
         "Science Fiction & Fantasy" ;
-    schema:image <https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg>,
+    :image <https://m.media-amazon.com/images/M/MV5BYTlhNzJjYzYtNGU3My00ZDI5LTgzZDUtYzllYjU1ZmU0YTgwXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg>,
         <https://resizing.flixster.com/m8G6eIbecl1KNYf1yd2lt2F5yX8=/740x380/v1.bjsyNTUxODM4O2o7MTg4Mzk7MTIwMDs0MTIyOzIzMTI>,
         <https://static.metacritic.com/images/products/movies/4/9d1a4650bb42f43a0a781bfa70a7772d.jpg> ;
-    schema:keywords "sequel,superhero,dc extended universe,dc comics,one woman army" ;
-    schema:name "Wonder Woman 1984" ;
-    schema:productionCompany twssd:Warner_Bros._Pictures ;
-    schema:publisher twssd:Warner_Bros._Pictures ;
-    schema:review <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_00240a33-a036-463f-ad4c-f6b17b886896>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_09b1b22f-2aeb-4e6c-a6b7-fa87decfd62a>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0a44b512-1555-4281-9bde-568c8bb8c0cd>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_10125c42-3bb7-49fb-a878-cbde3763e035>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_11f670dd-ef39-43fd-8403-100ddcf484ae>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_18671ee0-40ea-469a-ba2c-4a9eca7bed24>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_1e32a381-1029-4d02-b6e0-55291b4130ab>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_28cadb89-e567-4bd4-9a6d-8e858b4bf98a>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3675e144-420d-4848-b7c4-0bd514609b1c>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3abb5530-b8c5-4755-b814-18169fe7b77e>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4bdf66fe-9075-4cff-adc5-926c8acbfcbd>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5a321c02-f863-4adb-b16c-d759ff081cb3>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_60f3e5ac-fb16-4c23-be26-a3076042a990>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_63b8cb04-2229-46ee-a60a-7be9af88a6db>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6712399d-09a7-442b-b427-abd6d4480472>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6f879847-a626-4bc8-8adb-43cedc21b318>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_74e9e2d4-4864-4a57-b357-57a604e37415>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7a6ec0d7-0068-4654-88e2-5eb0467b636c>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_aca6cd98-c3bf-45dc-9786-b08b3067d1bc>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c1d132bb-eb79-43d3-940a-b7dca77a3c73>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_df5e5f67-1cd6-4fb1-bb69-4aed270b62e4>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e6602ba8-081f-4a50-bcac-8805ae32949b>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e9e98629-0288-4807-a05c-a12f6ebf34b8>,
-        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ee2f1165-d4ab-41ae-b983-3dc67e47c12a> ;
-    schema:trailer twssd:Stream_on_HBO_Max_for_a_Limited_Time,
+    :keywords "sequel,superhero,dc extended universe,dc comics,one woman army" ;
+    :name "Wonder Woman 1984" ;
+    :productionCompany twssd:Warner_Bros._Pictures ;
+    :publisher twssd:Warner_Bros._Pictures ;
+    :review <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_077daea9-5d4a-45c5-b398-b6eb3bafa780>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_153395eb-1d87-4382-afc8-649dbe447b7a>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_203446c4-a822-4353-9722-601449f9321c>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_36e6cb3c-90c6-462b-9943-e16d7ce8c0cb>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4b620090-2fc0-49f2-96e2-a48b73bb05d1>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4ef8a264-678d-46e4-9338-d7feb64de934>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5a7fdcb3-323a-4a87-9250-5c111c95be46>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5df862de-8166-42aa-9178-21684df98f46>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6cb86683-556a-46bd-8736-4dd3fa5065c8>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6d8c8c6b-41e0-4bab-9ae0-d85cf4b910fe>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7dd53960-d808-41df-a1dc-14b59882223b>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_8433497b-7c43-49d8-b77c-b268e097e56b>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_9156c46b-7bd8-4864-95af-b415e4f598b7>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_97922841-d7d0-41b1-8820-b59289aff230>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_9e2621d4-053a-4337-932a-8dd608bd803b>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_9f9dc1c7-6697-4b55-87b5-eaf693e12ea9>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_a8b3fe1d-4621-41e5-b987-4897e743c328>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_b6829e6b-4752-4cb3-9de4-2eb80e2a12aa>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c2ca7776-366d-423d-8b8f-03b111e3a3e9>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c6997126-aabc-44ce-84f7-4cf8eeea2808>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c8c63d3b-10f2-4ac9-9af3-40a0b8967c6d>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d89b356a-fe5b-4223-a26c-f4632f7d3538>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e7d98a46-c9c7-4123-bf51-a573cef7c406>,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ffc1b6cb-156e-4bbf-aa5a-f72c9235c40b> ;
+    :trailer twssd:Stream_on_HBO_Max_for_a_Limited_Time,
         <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> ;
-    schema:url <https://www.imdb.com/title/tt7126948>,
+    :url <https://www.imdb.com/title/tt7126948>,
         <https://www.metacritic.com/movie/wonder-woman-1984>,
         <https://www.rottentomatoes.com/m/wonder_woman_1984> .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> a owl:Ontology .
 
-schema:AdministrativeArea a owl:Class ;
-    rdfs:subClassOf schema:Place .
+:AdministrativeArea a owl:Class ;
+    rdfs:subClassOf :Place .
 
-schema:ConsumeAction a owl:Class ;
-    rdfs:subClassOf schema:Action .
+:ConsumeAction a owl:Class ;
+    rdfs:subClassOf :Action .
 
-schema:Country a owl:Class ;
-    rdfs:subClassOf schema:AdministrativeArea .
+:Country a owl:Class ;
+    rdfs:subClassOf :AdministrativeArea .
 
-schema:WatchAction a owl:Class ;
-    rdfs:subClassOf schema:ConsumeAction .
+:WatchAction a owl:Class ;
+    rdfs:subClassOf :ConsumeAction .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/ABC_Radio_%28Australia%29> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/ABC_Radio_%28Australia%29> a :Organization,
         owl:NamedIndividual ;
-    schema:name "ABC Radio (Australia)" ;
-    schema:url <https://www.rottentomatoes.com/source-2397> .
+    :name "ABC Radio (Australia)" ;
+    :url <https://www.rottentomatoes.com/source-2397> .
 
-twssd:Alex_Delescu a schema:Person,
+twssd:Alex_Delescu a :Person,
         owl:NamedIndividual ;
-    schema:name "Alex Delescu" ;
-    schema:url <https://www.metacritic.com/person/alex-delescu> .
+    :name "Alex Delescu" ;
+    :url <https://www.metacritic.com/person/alex-delescu> .
 
-twssd:Amr_Waked a schema:Person,
+twssd:Amr_Waked a :Person,
         owl:NamedIndividual ;
-    schema:name "Amr Waked" ;
-    schema:url <https://www.metacritic.com/person/amr-waked> .
+    :name "Amr Waked" ;
+    :url <https://www.metacritic.com/person/amr-waked> .
 
-twssd:Amreen_N._Yaqoob a schema:Person,
+twssd:Amreen_N._Yaqoob a :Person,
         owl:NamedIndividual ;
-    schema:name "Amreen N. Yaqoob" ;
-    schema:url <https://www.metacritic.com/person/amreen-n-yaqoob> .
+    :name "Amreen N. Yaqoob" ;
+    :url <https://www.metacritic.com/person/amreen-n-yaqoob> .
 
-twssd:Amy_Nicholson a schema:Person,
+twssd:Amy_Nicholson a :Person,
         owl:NamedIndividual ;
-    schema:name "Amy Nicholson" ;
-    schema:url <https://www.rottentomatoes.com/critic/amy-nicholson> .
+    :name "Amy Nicholson" ;
+    :url <https://www.rottentomatoes.com/critic/amy-nicholson> .
 
-twssd:Andrew_Galdi a schema:Person,
+twssd:Andrew_Galdi a :Person,
         owl:NamedIndividual ;
-    schema:name "Andrew Galdi" ;
-    schema:url <https://www.rottentomatoes.com/critic/andrew-galdi> .
+    :name "Andrew Galdi" ;
+    :url <https://www.rottentomatoes.com/critic/andrew-galdi> .
 
-twssd:Ars_Technica a schema:Organization,
+twssd:Ars_Technica a :Organization,
         owl:NamedIndividual ;
-    schema:name "Ars Technica" ;
-    schema:url <https://www.rottentomatoes.com/source-2985> .
+    :name "Ars Technica" ;
+    :url <https://www.rottentomatoes.com/source-2985> .
 
-twssd:Australian_Financial_Review a schema:Organization,
+twssd:Australian_Financial_Review a :Organization,
         owl:NamedIndividual ;
-    schema:name "Australian Financial Review" ;
-    schema:url <https://www.rottentomatoes.com/source-3199> .
+    :name "Australian Financial Review" ;
+    :url <https://www.rottentomatoes.com/source-3199> .
 
-twssd:Avaryl_Halley a schema:Person,
+twssd:Avaryl_Halley a :Person,
         owl:NamedIndividual ;
-    schema:name "Avaryl Halley" ;
-    schema:url <https://www.rottentomatoes.com/critic/avaryl-halley> .
+    :name "Avaryl Halley" ;
+    :url <https://www.rottentomatoes.com/critic/avaryl-halley> .
 
-twssd:Battleship_Pretension a schema:Organization,
+twssd:Battleship_Pretension a :Organization,
         owl:NamedIndividual ;
-    schema:name "Battleship Pretension" ;
-    schema:url <https://www.rottentomatoes.com/source-3090> .
+    :name "Battleship Pretension" ;
+    :url <https://www.rottentomatoes.com/source-3090> .
 
-twssd:Bern_Collaco a schema:Person,
+twssd:Bern_Collaco a :Person,
         owl:NamedIndividual ;
-    schema:name "Bern Collaco" ;
-    schema:url <https://www.metacritic.com/person/bern-collaco> .
+    :name "Bern Collaco" ;
+    :url <https://www.metacritic.com/person/bern-collaco> .
 
-twssd:Brian_Gill a schema:Person,
+twssd:Brian_Gill a :Person,
         owl:NamedIndividual ;
-    schema:name "Brian Gill" ;
-    schema:url <https://www.rottentomatoes.com/critic/brian-gill> .
+    :name "Brian Gill" ;
+    :url <https://www.rottentomatoes.com/critic/brian-gill> .
 
-twssd:Brittney_Aleah a schema:Person,
+twssd:Brittney_Aleah a :Person,
         owl:NamedIndividual ;
-    schema:name "Brittney Aleah" ;
-    schema:url <https://www.metacritic.com/person/brittney-aleah> .
+    :name "Brittney Aleah" ;
+    :url <https://www.metacritic.com/person/brittney-aleah> .
 
-twssd:Chicago_Reader a schema:Organization,
+twssd:Chicago_Reader a :Organization,
         owl:NamedIndividual ;
-    schema:name "Chicago Reader" ;
-    schema:url <https://www.rottentomatoes.com/source-66> .
+    :name "Chicago Reader" ;
+    :url <https://www.rottentomatoes.com/source-66> .
 
-twssd:Chris_Silcox a schema:Person,
+twssd:Chris_Silcox a :Person,
         owl:NamedIndividual ;
-    schema:name "Chris Silcox" ;
-    schema:url <https://www.metacritic.com/person/chris-silcox> .
+    :name "Chris Silcox" ;
+    :url <https://www.metacritic.com/person/chris-silcox> .
 
-twssd:Concrete_Playground a schema:Organization,
+twssd:Concrete_Playground a :Organization,
         owl:NamedIndividual ;
-    schema:name "Concrete Playground" ;
-    schema:url <https://www.rottentomatoes.com/source-2298> .
+    :name "Concrete Playground" ;
+    :url <https://www.rottentomatoes.com/source-2298> .
 
-twssd:Dan_Tabor a schema:Person,
+twssd:Dan_Tabor a :Person,
         owl:NamedIndividual ;
-    schema:name "Dan Tabor" ;
-    schema:url <https://www.rottentomatoes.com/critic/dan-tabor> .
+    :name "Dan Tabor" ;
+    :url <https://www.rottentomatoes.com/critic/dan-tabor> .
 
-twssd:Dave_Callaham a schema:Person,
+twssd:Dave_Callaham a :Person,
         owl:NamedIndividual ;
-    schema:name "Dave Callaham" ;
-    schema:url <https://www.imdb.com/name/nm1709264> .
+    :name "Dave Callaham" ;
+    :url <https://www.imdb.com/name/nm1709264> .
 
-twssd:David_Bax a schema:Person,
+twssd:David_Bax a :Person,
         owl:NamedIndividual ;
-    schema:name "David Bax" ;
-    schema:url <https://www.rottentomatoes.com/critic/david-bax> .
+    :name "David Bax" ;
+    :url <https://www.rottentomatoes.com/critic/david-bax> .
 
-twssd:David_Sims a schema:Person,
+twssd:David_Sims a :Person,
         owl:NamedIndividual ;
-    schema:name "David Sims" ;
-    schema:url <https://www.rottentomatoes.com/critic/david-sims> .
+    :name "David Sims" ;
+    :url <https://www.rottentomatoes.com/critic/david-sims> .
 
-twssd:Eddie_Harrison a schema:Person,
+twssd:Eddie_Harrison a :Person,
         owl:NamedIndividual ;
-    schema:name "Eddie Harrison" ;
-    schema:url <https://www.rottentomatoes.com/critic/eddie-harrison> .
+    :name "Eddie Harrison" ;
+    :url <https://www.rottentomatoes.com/critic/eddie-harrison> .
 
-twssd:Ella_Walker a schema:Person,
+twssd:Ella_Walker a :Person,
         owl:NamedIndividual ;
-    schema:name "Ella Walker" ;
-    schema:url <https://www.metacritic.com/person/ella-walker> .
+    :name "Ella Walker" ;
+    :url <https://www.metacritic.com/person/ella-walker> .
 
-twssd:Epoch_Times a schema:Organization,
+twssd:Epoch_Times a :Organization,
         owl:NamedIndividual ;
-    schema:name "Epoch Times" ;
-    schema:url <https://www.rottentomatoes.com/source-2771> .
+    :name "Epoch Times" ;
+    :url <https://www.rottentomatoes.com/source-2771> .
 
-twssd:Eric_Marchen a schema:Person,
+twssd:Eric_Marchen a :Person,
         owl:NamedIndividual ;
-    schema:name "Eric Marchen" ;
-    schema:url <https://www.rottentomatoes.com/critic/eric-marchen> .
+    :name "Eric Marchen" ;
+    :url <https://www.rottentomatoes.com/critic/eric-marchen> .
 
-twssd:Fat_Guys_at_the_Movies a schema:Organization,
+twssd:Fat_Guys_at_the_Movies a :Organization,
         owl:NamedIndividual ;
-    schema:name "Fat Guys at the Movies" ;
-    schema:url <https://www.rottentomatoes.com/source-2722> .
+    :name "Fat Guys at the Movies" ;
+    :url <https://www.rottentomatoes.com/source-2722> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> a :Organization,
         owl:NamedIndividual ;
-    schema:name "FilmWeek (KPCC - NPR Los Angeles)" ;
-    schema:url <https://www.rottentomatoes.com/source-3509> .
+    :name "FilmWeek (KPCC - NPR Los Angeles)" ;
+    :url <https://www.rottentomatoes.com/source-3509> .
 
-twssd:Gabriella_Wilde a schema:Person,
+twssd:Gabriella_Wilde a :Person,
         owl:NamedIndividual ;
-    schema:name "Gabriella Wilde" ;
-    schema:url <https://www.metacritic.com/person/gabriella-wilde> .
+    :name "Gabriella Wilde" ;
+    :url <https://www.metacritic.com/person/gabriella-wilde> .
 
-twssd:Geoff_Johns a schema:Person,
+twssd:Geoff_Johns a :Person,
         owl:NamedIndividual ;
-    schema:name "Geoff Johns" ;
-    schema:url <https://www.imdb.com/name/nm0424315> .
+    :name "Geoff Johns" ;
+    :url <https://www.imdb.com/name/nm0424315> .
 
-twssd:Ian_Simmons a schema:Person,
+twssd:Ian_Simmons a :Person,
         owl:NamedIndividual ;
-    schema:name "Ian Simmons" ;
-    schema:url <https://www.rottentomatoes.com/critic/ian-simmons> .
+    :name "Ian Simmons" ;
+    :url <https://www.rottentomatoes.com/critic/ian-simmons> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/In_quarantine%2C_you%27ll_buy_anything.> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:jayg_58 ;
-    schema:dateCreated "2021-01-01"^^schema:Date ;
-    schema:inLanguage "English" ;
-    schema:itemReviewed <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_d6a2aeb2-209c-4717-b5ad-637a70f7e4ed> ;
-    schema:name "In quarantine, you'll buy anything." ;
-    schema:reviewBody "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2c15738d-2777-4912-8958-85285dc5c007> .
+    :author twssd:jayg_58 ;
+    :dateCreated "2021-01-01"^^:Date ;
+    :inLanguage "English" ;
+    :itemReviewed <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_d0326eeb-b092-4b5a-b9d0-7f334f8ddb41> ;
+    :name "In quarantine, you'll buy anything." ;
+    :reviewBody "Very colorful, lots of money spent. Kristin Wiig was a masterpiece of miscasting. She wasn't funny; she wasn't scary, but great costume. The whole plot was a vehicle to resurrect Chris Pine, but there was no real chemistry between them. It made the lines of endearment quite awkward and the embraces seemed forced. All the usual tropes: WW loses some of her powers, so there can be suspense; she plays Spiderman and holds two vehicles apart. Just nothing new and Gad Gadot proves again that she's a glamour model and poses well. She can't act. Still - entertainment in a vacuum of good movies, so watch it and be distracted for TWO AND A HALF hours." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_b4c6b4d9-2d3e-4991-bd92-a291a8649e4a> .
 
-twssd:Jake_Wilson a schema:Person,
+twssd:Jake_Wilson a :Person,
         owl:NamedIndividual ;
-    schema:name "Jake Wilson" ;
-    schema:url <https://www.rottentomatoes.com/critic/jake-wilson> .
+    :name "Jake Wilson" ;
+    :url <https://www.rottentomatoes.com/critic/jake-wilson> .
 
-twssd:Jamaal_Burcher a schema:Person,
+twssd:Jamaal_Burcher a :Person,
         owl:NamedIndividual ;
-    schema:name "Jamaal Burcher" ;
-    schema:url <https://www.metacritic.com/person/jamaal-burcher> .
+    :name "Jamaal Burcher" ;
+    :url <https://www.metacritic.com/person/jamaal-burcher> .
 
-twssd:Jamal_Alkhaldi a schema:Person,
+twssd:Jamal_Alkhaldi a :Person,
         owl:NamedIndividual ;
-    schema:name "Jamal Alkhaldi" ;
-    schema:url <https://www.metacritic.com/person/jamal-alkhaldi> .
+    :name "Jamal Alkhaldi" ;
+    :url <https://www.metacritic.com/person/jamal-alkhaldi> .
 
-twssd:Jeff_Moore a schema:Person,
+twssd:Jeff_Moore a :Person,
         owl:NamedIndividual ;
-    schema:name "Jeff Moore" ;
-    schema:url <https://www.metacritic.com/person/jeff-moore> .
+    :name "Jeff Moore" ;
+    :url <https://www.metacritic.com/person/jeff-moore> .
 
-twssd:Jennifer_Ouellette a schema:Person,
+twssd:Jennifer_Ouellette a :Person,
         owl:NamedIndividual ;
-    schema:name "Jennifer Ouellette" ;
-    schema:url <https://www.rottentomatoes.com/critic/jennifer-ouellette> .
+    :name "Jennifer Ouellette" ;
+    :url <https://www.rottentomatoes.com/critic/jennifer-ouellette> .
 
-twssd:Joel_Morris a schema:Person,
+twssd:Joel_Morris a :Person,
         owl:NamedIndividual ;
-    schema:name "Joel Morris" ;
-    schema:url <https://www.metacritic.com/person/joel-morris> .
+    :name "Joel Morris" ;
+    :url <https://www.metacritic.com/person/joel-morris> .
 
-twssd:John_Gettier a schema:Person,
+twssd:John_Gettier a :Person,
         owl:NamedIndividual ;
-    schema:name "John Gettier" ;
-    schema:url <https://www.metacritic.com/person/john-gettier> .
+    :name "John Gettier" ;
+    :url <https://www.metacritic.com/person/john-gettier> .
 
-twssd:John_McDonald a schema:Person,
+twssd:John_McDonald a :Person,
         owl:NamedIndividual ;
-    schema:name "John McDonald" ;
-    schema:url <https://www.rottentomatoes.com/critic/john-mcdonald> .
+    :name "John McDonald" ;
+    :url <https://www.rottentomatoes.com/critic/john-mcdonald> .
 
-twssd:Jonathan_Ajayi a schema:Person,
+twssd:Jonathan_Ajayi a :Person,
         owl:NamedIndividual ;
-    schema:name "Jonathan Ajayi" ;
-    schema:url <https://www.metacritic.com/person/jonathan-ajayi> .
+    :name "Jonathan Ajayi" ;
+    :url <https://www.metacritic.com/person/jonathan-ajayi> .
 
-twssd:Julian_Ferro a schema:Person,
+twssd:Julian_Ferro a :Person,
         owl:NamedIndividual ;
-    schema:name "Julian Ferro" ;
-    schema:url <https://www.metacritic.com/person/julian-ferro> .
+    :name "Julian Ferro" ;
+    :url <https://www.metacritic.com/person/julian-ferro> .
 
-twssd:Justin_Sisk a schema:Person,
+twssd:Justin_Sisk a :Person,
         owl:NamedIndividual ;
-    schema:name "Justin Sisk" ;
-    schema:url <https://www.metacritic.com/person/justin-sisk> .
+    :name "Justin Sisk" ;
+    :url <https://www.metacritic.com/person/justin-sisk> .
 
-twssd:Kaila_Ingram a schema:Person,
+twssd:Kaila_Ingram a :Person,
         owl:NamedIndividual ;
-    schema:name "Kaila Ingram" ;
-    schema:url <https://www.metacritic.com/person/kaila-ingram> .
+    :name "Kaila Ingram" ;
+    :url <https://www.metacritic.com/person/kaila-ingram> .
 
-twssd:Kevin_Carr a schema:Person,
+twssd:Kevin_Carr a :Person,
         owl:NamedIndividual ;
-    schema:name "Kevin Carr" ;
-    schema:url <https://www.rottentomatoes.com/critic/kevin-carr> .
+    :name "Kevin Carr" ;
+    :url <https://www.rottentomatoes.com/critic/kevin-carr> .
 
-twssd:Kicking_the_Seat a schema:Organization,
+twssd:Kicking_the_Seat a :Organization,
         owl:NamedIndividual ;
-    schema:name "Kicking the Seat" ;
-    schema:url <https://www.rottentomatoes.com/source-3892> .
+    :name "Kicking the Seat" ;
+    :url <https://www.rottentomatoes.com/source-3892> .
 
-twssd:Kristoffer_Polaha a schema:Person,
+twssd:Kristoffer_Polaha a :Person,
         owl:NamedIndividual ;
-    schema:name "Kristoffer Polaha" ;
-    schema:url <https://www.metacritic.com/person/kristoffer-polaha> .
+    :name "Kristoffer Polaha" ;
+    :url <https://www.metacritic.com/person/kristoffer-polaha> .
 
-twssd:Lilly_Aspell a schema:Person,
+twssd:Lilly_Aspell a :Person,
         owl:NamedIndividual ;
-    schema:name "Lilly Aspell" ;
-    schema:url <https://www.metacritic.com/person/lilly-aspell> .
+    :name "Lilly Aspell" ;
+    :url <https://www.metacritic.com/person/lilly-aspell> .
 
-twssd:Lolita_Marie a schema:Person,
+twssd:Lolita_Marie a :Person,
         owl:NamedIndividual ;
-    schema:name "Lolita Marie" ;
-    schema:url <https://www.metacritic.com/person/lolita-marie> .
+    :name "Lolita Marie" ;
+    :url <https://www.metacritic.com/person/lolita-marie> .
 
-twssd:Lynda_Carter a schema:Person,
+twssd:Lynda_Carter a :Person,
         owl:NamedIndividual ;
-    schema:name "Lynda Carter" ;
-    schema:url <https://www.metacritic.com/person/lynda-carter> .
+    :name "Lynda Carter" ;
+    :url <https://www.metacritic.com/person/lynda-carter> .
 
-twssd:Lyon_Beckwith a schema:Person,
+twssd:Lyon_Beckwith a :Person,
         owl:NamedIndividual ;
-    schema:name "Lyon Beckwith" ;
-    schema:url <https://www.metacritic.com/person/lyon-beckwith> .
+    :name "Lyon Beckwith" ;
+    :url <https://www.metacritic.com/person/lyon-beckwith> .
 
-twssd:Mad_About_Movies_Podcast a schema:Organization,
+twssd:Mad_About_Movies_Podcast a :Organization,
         owl:NamedIndividual ;
-    schema:name "Mad About Movies Podcast" ;
-    schema:url <https://www.rottentomatoes.com/source-3256> .
+    :name "Mad About Movies Podcast" ;
+    :url <https://www.rottentomatoes.com/source-3256> .
 
-twssd:Manoj_Anand a schema:Person,
+twssd:Manoj_Anand a :Person,
         owl:NamedIndividual ;
-    schema:name "Manoj Anand" ;
-    schema:url <https://www.metacritic.com/person/manoj-anand> .
+    :name "Manoj Anand" ;
+    :url <https://www.metacritic.com/person/manoj-anand> .
 
-twssd:Marisol_Correa a schema:Person,
+twssd:Marisol_Correa a :Person,
         owl:NamedIndividual ;
-    schema:name "Marisol Correa" ;
-    schema:url <https://www.metacritic.com/person/marisol-correa> .
+    :name "Marisol Correa" ;
+    :url <https://www.metacritic.com/person/marisol-correa> .
 
-twssd:Mark_Jackson a schema:Person,
+twssd:Mark_Jackson a :Person,
         owl:NamedIndividual ;
-    schema:name "Mark Jackson" ;
-    schema:url <https://www.rottentomatoes.com/critic/mark-jackson> .
+    :name "Mark Jackson" ;
+    :url <https://www.rottentomatoes.com/critic/mark-jackson> .
 
-twssd:Mark_Meszoros a schema:Person,
+twssd:Mark_Meszoros a :Person,
         owl:NamedIndividual ;
-    schema:name "Mark Meszoros" ;
-    schema:url <https://www.rottentomatoes.com/critic/mark-meszoros> .
+    :name "Mark Meszoros" ;
+    :url <https://www.rottentomatoes.com/critic/mark-meszoros> .
 
-twssd:Marla_Aaron_Wapner a schema:Person,
+twssd:Marla_Aaron_Wapner a :Person,
         owl:NamedIndividual ;
-    schema:name "Marla Aaron Wapner" ;
-    schema:url <https://www.metacritic.com/person/marla-aaron-wapner> .
+    :name "Marla Aaron Wapner" ;
+    :url <https://www.metacritic.com/person/marla-aaron-wapner> .
 
-twssd:Matt_Neal a schema:Person,
+twssd:Matt_Neal a :Person,
         owl:NamedIndividual ;
-    schema:name "Matt Neal" ;
-    schema:url <https://www.rottentomatoes.com/critic/matt-neal> .
+    :name "Matt Neal" ;
+    :url <https://www.rottentomatoes.com/critic/matt-neal> .
 
-twssd:Monica_Haynes a schema:Person,
+twssd:Monica_Haynes a :Person,
         owl:NamedIndividual ;
-    schema:name "Monica Haynes" ;
-    schema:url <https://www.metacritic.com/person/monica-haynes> .
+    :name "Monica Haynes" ;
+    :url <https://www.metacritic.com/person/monica-haynes> .
 
-twssd:Natasha_Rothwell a schema:Person,
+twssd:Natasha_Rothwell a :Person,
         owl:NamedIndividual ;
-    schema:name "Natasha Rothwell" ;
-    schema:url <https://www.metacritic.com/person/natasha-rothwell> .
+    :name "Natasha Rothwell" ;
+    :url <https://www.metacritic.com/person/natasha-rothwell> .
 
-twssd:Newsday a schema:Organization,
+twssd:Newsday a :Organization,
         owl:NamedIndividual ;
-    schema:name "Newsday" ;
-    schema:url <https://www.rottentomatoes.com/source-338> .
+    :name "Newsday" ;
+    :url <https://www.rottentomatoes.com/source-338> .
 
-twssd:Nina_Garin a schema:Person,
+twssd:Nina_Garin a :Person,
         owl:NamedIndividual ;
-    schema:name "Nina Garin" ;
-    schema:url <https://www.rottentomatoes.com/critic/nina-garin> .
+    :name "Nina Garin" ;
+    :url <https://www.rottentomatoes.com/critic/nina-garin> .
 
-twssd:Oakley_Bull a schema:Person,
+twssd:Oakley_Bull a :Person,
         owl:NamedIndividual ;
-    schema:name "Oakley Bull" ;
-    schema:url <https://www.metacritic.com/person/oakley-bull> .
+    :name "Oakley Bull" ;
+    :url <https://www.metacritic.com/person/oakley-bull> .
 
-twssd:Paul_Ron_Cruz a schema:Person,
+twssd:Paul_Ron_Cruz a :Person,
         owl:NamedIndividual ;
-    schema:name "Paul Ron Cruz" ;
-    schema:url <https://www.metacritic.com/person/paul-ron-cruz> .
+    :name "Paul Ron Cruz" ;
+    :url <https://www.metacritic.com/person/paul-ron-cruz> .
 
-twssd:Penelope_Kapudija a schema:Person,
+twssd:Penelope_Kapudija a :Person,
         owl:NamedIndividual ;
-    schema:name "Penelope Kapudija" ;
-    schema:url <https://www.metacritic.com/person/penelope-kapudija> .
+    :name "Penelope Kapudija" ;
+    :url <https://www.metacritic.com/person/penelope-kapudija> .
 
-twssd:Phawker a schema:Organization,
+twssd:Phawker a :Organization,
         owl:NamedIndividual ;
-    schema:name "Phawker" ;
-    schema:url <https://www.rottentomatoes.com/source-3631> .
+    :name "Phawker" ;
+    :url <https://www.rottentomatoes.com/source-3631> .
 
-twssd:Rafer_Guzman a schema:Person,
+twssd:Rafer_Guzman a :Person,
         owl:NamedIndividual ;
-    schema:name "Rafer Guzman" ;
-    schema:url <https://www.rottentomatoes.com/critic/rafer-guzman> .
+    :name "Rafer Guzman" ;
+    :url <https://www.rottentomatoes.com/critic/rafer-guzman> .
 
-twssd:Ravi_Patel a schema:Person,
+twssd:Ravi_Patel a :Person,
         owl:NamedIndividual ;
-    schema:name "Ravi Patel" ;
-    schema:url <https://www.metacritic.com/person/ravi-patel> .
+    :name "Ravi Patel" ;
+    :url <https://www.metacritic.com/person/ravi-patel> .
 
-twssd:Rick_Kelvin_Branch a schema:Person,
+twssd:Rick_Kelvin_Branch a :Person,
         owl:NamedIndividual ;
-    schema:name "Rick Kelvin Branch" ;
-    schema:url <https://www.metacritic.com/person/rick-kelvin-branch> .
+    :name "Rick Kelvin Branch" ;
+    :url <https://www.metacritic.com/person/rick-kelvin-branch> .
 
-twssd:San_Diego_Union-Tribune a schema:Organization,
+twssd:San_Diego_Union-Tribune a :Organization,
         owl:NamedIndividual ;
-    schema:name "San Diego Union-Tribune" ;
-    schema:url <https://www.rottentomatoes.com/source-503> .
+    :name "San Diego Union-Tribune" ;
+    :url <https://www.rottentomatoes.com/source-503> .
 
-twssd:Sarah_Ward a schema:Person,
+twssd:Sarah_Ward a :Person,
         owl:NamedIndividual ;
-    schema:name "Sarah Ward" ;
-    schema:url <https://www.rottentomatoes.com/critic/sarah-ward> .
+    :name "Sarah Ward" ;
+    :url <https://www.rottentomatoes.com/critic/sarah-ward> .
 
-twssd:Sheri_Flanders a schema:Person,
+twssd:Sheri_Flanders a :Person,
         owl:NamedIndividual ;
-    schema:name "Sheri Flanders" ;
-    schema:url <https://www.rottentomatoes.com/critic/sheri-flanders> .
+    :name "Sheri Flanders" ;
+    :url <https://www.rottentomatoes.com/critic/sheri-flanders> .
 
-twssd:Sia_Alipour a schema:Person,
+twssd:Sia_Alipour a :Person,
         owl:NamedIndividual ;
-    schema:name "Sia Alipour" ;
-    schema:url <https://www.metacritic.com/person/sia-alipour> .
+    :name "Sia Alipour" ;
+    :url <https://www.metacritic.com/person/sia-alipour> .
 
-twssd:Sonia_Goswami a schema:Person,
+twssd:Sonia_Goswami a :Person,
         owl:NamedIndividual ;
-    schema:name "Sonia Goswami" ;
-    schema:url <https://www.metacritic.com/person/sonia-goswami> .
+    :name "Sonia Goswami" ;
+    :url <https://www.metacritic.com/person/sonia-goswami> .
 
-twssd:Spencer_Trinwith a schema:Person,
+twssd:Spencer_Trinwith a :Person,
         owl:NamedIndividual ;
-    schema:name "Spencer Trinwith" ;
-    schema:url <https://www.metacritic.com/person/spencer-trinwith> .
+    :name "Spencer Trinwith" ;
+    :url <https://www.metacritic.com/person/spencer-trinwith> .
 
-twssd:Stephen_Romei a schema:Person,
+twssd:Stephen_Romei a :Person,
         owl:NamedIndividual ;
-    schema:name "Stephen Romei" ;
-    schema:url <https://www.rottentomatoes.com/critic/stephen-romei> .
+    :name "Stephen Romei" ;
+    :url <https://www.rottentomatoes.com/critic/stephen-romei> .
 
-twssd:Stream_on_HBO_Max_for_a_Limited_Time a schema:VideoObject,
+twssd:Stream_on_HBO_Max_for_a_Limited_Time a :VideoObject,
         owl:NamedIndividual ;
-    schema:description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
-    schema:embedUrl <https://www.imdb.com/video/imdb/vi3240214809> ;
-    schema:name "Stream on HBO Max for a Limited Time" ;
-    schema:thumbnail <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_bbff3153-9310-4e81-9203-34c6dce7450e> ;
-    schema:thumbnailUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ;
-    schema:uploadDate "2020-12-07T01:51:07Z"^^schema:Date .
+    :description "Fast forward to the 1980s as Wonder Woman’s next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah." ;
+    :embedUrl <https://www.imdb.com/video/imdb/vi3240214809> ;
+    :name "Stream on HBO Max for a Limited Time" ;
+    :thumbnail <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_27edad2f-2896-4dfc-a12a-8a511d5058ef> ;
+    :thumbnailUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> ;
+    :uploadDate "2020-12-07T01:51:07Z"^^:Date .
 
-twssd:Tessa_Bonham_Jones a schema:Person,
+twssd:Tessa_Bonham_Jones a :Person,
         owl:NamedIndividual ;
-    schema:name "Tessa Bonham Jones" ;
-    schema:url <https://www.metacritic.com/person/tessa-bonham-jones> .
+    :name "Tessa Bonham Jones" ;
+    :url <https://www.metacritic.com/person/tessa-bonham-jones> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> a :Organization,
         owl:NamedIndividual ;
-    schema:name "The Age (Australia)" ;
-    schema:url <https://www.rottentomatoes.com/source-2041> .
+    :name "The Age (Australia)" ;
+    :url <https://www.rottentomatoes.com/source-2041> .
 
-twssd:The_Atlantic a schema:Organization,
+twssd:The_Atlantic a :Organization,
         owl:NamedIndividual ;
-    schema:name "The Atlantic" ;
-    schema:url <https://www.rottentomatoes.com/source-24> .
+    :name "The Atlantic" ;
+    :url <https://www.rottentomatoes.com/source-24> .
 
-twssd:The_Australian a schema:Organization,
+twssd:The_Australian a :Organization,
         owl:NamedIndividual ;
-    schema:name "The Australian" ;
-    schema:url <https://www.rottentomatoes.com/source-1964> .
+    :name "The Australian" ;
+    :url <https://www.rottentomatoes.com/source-1964> .
 
-twssd:The_Larchmont_Chronicle a schema:Organization,
+twssd:The_Larchmont_Chronicle a :Organization,
         owl:NamedIndividual ;
-    schema:name "The Larchmont Chronicle" ;
-    schema:url <https://www.rottentomatoes.com/source-2992> .
+    :name "The Larchmont Chronicle" ;
+    :url <https://www.rottentomatoes.com/source-2992> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> a :Organization,
         owl:NamedIndividual ;
-    schema:name "The News-Herald (Willoughby, OH)" ;
-    schema:url <https://www.rottentomatoes.com/source-3916> .
+    :name "The News-Herald (Willoughby, OH)" ;
+    :url <https://www.rottentomatoes.com/source-3916> .
 
-twssd:Their_Own_League a schema:Organization,
+twssd:Their_Own_League a :Organization,
         owl:NamedIndividual ;
-    schema:name "Their Own League" ;
-    schema:url <https://www.rottentomatoes.com/source-3607> .
+    :name "Their Own League" ;
+    :url <https://www.rottentomatoes.com/source-3607> .
 
-twssd:Thomas_Clay_Strickland a schema:Person,
+twssd:Thomas_Clay_Strickland a :Person,
         owl:NamedIndividual ;
-    schema:name "Thomas Clay Strickland" ;
-    schema:url <https://www.metacritic.com/person/thomas-clay-strickland> .
+    :name "Thomas Clay Strickland" ;
+    :url <https://www.metacritic.com/person/thomas-clay-strickland> .
 
-twssd:Tomatometer a schema:AggregateRating,
+twssd:Tomatometer a :AggregateRating,
         owl:NamedIndividual ;
-    schema:bestRating "100" ;
-    schema:description "The Tomatometer rating – based on the published opinions of hundreds of film and television critics – is a trusted measurement of movie and TV programming quality for millions of moviegoers. It represents the percentage of professional critic reviews that are positive for a given film or television show." ;
-    schema:name "Tomatometer" ;
-    schema:ratingCount "426" ;
-    schema:ratingValue "59" ;
-    schema:reviewCount "426" ;
-    schema:worstRating "0" .
+    :bestRating "100" ;
+    :description "The Tomatometer rating – based on the published opinions of hundreds of film and television critics – is a trusted measurement of movie and TV programming quality for millions of moviegoers. It represents the percentage of professional critic reviews that are positive for a given film or television show." ;
+    :name "Tomatometer" ;
+    :ratingCount "426" ;
+    :ratingValue "59" ;
+    :reviewCount "426" ;
+    :worstRating "0" .
 
-twssd:Tony_Medley a schema:Person,
+twssd:Tony_Medley a :Person,
         owl:NamedIndividual ;
-    schema:name "Tony Medley" ;
-    schema:url <https://www.rottentomatoes.com/critic/tony-medley> .
+    :name "Tony Medley" ;
+    :url <https://www.rottentomatoes.com/critic/tony-medley> .
 
-twssd:Untitled_Movie_Podcast a schema:Organization,
+twssd:Untitled_Movie_Podcast a :Organization,
         owl:NamedIndividual ;
-    schema:name "Untitled Movie Podcast" ;
-    schema:url <https://www.rottentomatoes.com/source-3831> .
+    :name "Untitled Movie Podcast" ;
+    :url <https://www.rottentomatoes.com/source-3831> .
 
-twssd:Valerie_Kalfrin a schema:Person,
+twssd:Valerie_Kalfrin a :Person,
         owl:NamedIndividual ;
-    schema:name "Valerie Kalfrin" ;
-    schema:url <https://www.rottentomatoes.com/critic/valerie-kalfrin> .
+    :name "Valerie Kalfrin" ;
+    :url <https://www.rottentomatoes.com/critic/valerie-kalfrin> .
 
-twssd:William_Moulton_Marston a schema:Person,
+twssd:William_Moulton_Marston a :Person,
         owl:NamedIndividual ;
-    schema:name "William Moulton Marston" ;
-    schema:url <https://www.imdb.com/name/nm0551376> .
+    :name "William Moulton Marston" ;
+    :url <https://www.imdb.com/name/nm0551376> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> a schema:VideoObject,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wonder_Woman_1984_%28Trailer_2%29> a :VideoObject,
         owl:NamedIndividual ;
-    schema:description "Video Clip of Wonder Woman 1984" ;
-    schema:name "Wonder Woman 1984 (Trailer 2)" ;
-    schema:thumbnailUrl <https://content.internetvideoarchive.com/content/hdphotos/13126/013126/013126_820x461_637413475681110755.jpg> ;
-    schema:uploadDate "2020-11-21 17:41:36"^^schema:Date .
+    :description "Video Clip of Wonder Woman 1984" ;
+    :name "Wonder Woman 1984 (Trailer 2)" ;
+    :thumbnailUrl <https://content.internetvideoarchive.com/content/hdphotos/13126/013126/013126_820x461_637413475681110755.jpg> ;
+    :uploadDate "2020-11-21 17:41:36"^^:Date .
 
-twssd:film-authority.com a schema:Organization,
+twssd:film-authority.com a :Organization,
         owl:NamedIndividual ;
-    schema:name "film-authority.com" ;
-    schema:url <https://www.rottentomatoes.com/source-3904> .
+    :name "film-authority.com" ;
+    :url <https://www.rottentomatoes.com/source-3904> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_76fceb37-c0b5-46ba-b318-36b1251f4dc1> a schema:AggregateRating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_1652ad46-e709-4839-8708-ae9805686703> a :AggregateRating,
         owl:NamedIndividual ;
-    schema:bestRating "10" ;
-    schema:ratingCount "20" ;
-    schema:ratingValue "7,6" ;
-    schema:worstRating "0" .
+    :bestRating "10" ;
+    :ratingCount "20" ;
+    :ratingValue "7,6" ;
+    :worstRating "0" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_87aa2f62-880b-41c3-86af-6432ca2e4dcd> a schema:AggregateRating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_cea34e45-ee16-4b88-b003-2ee2d73fd9d2> a :AggregateRating,
         owl:NamedIndividual ;
-    schema:bestRating "10.0" ;
-    schema:ratingCount 198912 ;
-    schema:ratingValue "5.4" ;
-    schema:worstRating "1.0" .
+    :bestRating "10.0" ;
+    :ratingCount 198912 ;
+    :ratingValue "5.4" ;
+    :worstRating "1.0" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_b01bf5ba-6cd5-4e35-97cb-27203d58bb20> a schema:AggregateRating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_fd23e922-7623-4281-9af1-22acad8394f7> a :AggregateRating,
         owl:NamedIndividual ;
-    schema:bestRating "100" ;
-    schema:ratingCount "57" ;
-    schema:ratingValue "60" ;
-    schema:worstRating "0" .
+    :bestRating "100" ;
+    :ratingCount "57" ;
+    :ratingValue "60" ;
+    :worstRating "0" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_3f17a7fd-3acf-4c5f-bce2-a73bb41c5238> a schema:Clip,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_75262474-da43-416d-9409-ce45233e39f7> a :Clip,
         owl:NamedIndividual ;
-    schema:description "trailer" ;
-    schema:potentialAction <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_b605f59c-ebe7-4c0e-bf69-820afadee5a5> ;
-    schema:timeRequired "PT2M24S" .
+    :description "trailer" ;
+    :potentialAction <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_531442a5-3eb1-4241-86ab-6a8932f22c16> ;
+    :timeRequired "PT2M24S" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_d6a2aeb2-209c-4717-b5ad-637a70f7e4ed> a schema:CreativeWork,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/CreativeWork_d0326eeb-b092-4b5a-b9d0-7f334f8ddb41> a :CreativeWork,
         owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/title/tt7126948> .
+    :url <https://www.imdb.com/title/tt7126948> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_3337e591-0c30-4759-a293-02d72af2d7ff> a schema:EntryPoint,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_590d79b3-7579-4b20-a2f0-0ed0c8705743> a :EntryPoint,
         owl:NamedIndividual ;
-    schema:actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
+    :actionPlatform "http://schema.googleapis.com/GoogleVideoCast",
         "http://schema.org/DesktopWebPlatform",
         "http://schema.org/IOSPlatform",
         "http://schema.org/MobileWebPlatform" ;
-    schema:inLanguage "es" ;
-    schema:urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" .
+    :inLanguage "es" ;
+    :urlTemplate "https://www.ecartelera.com/videos/trailer-espanol-wonder-woman-1984/" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_3b851d1e-5a8a-48d1-a62c-43b28f0de5e8> a schema:ImageObject,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_27edad2f-2896-4dfc-a12a-8a511d5058ef> a :ImageObject,
         owl:NamedIndividual ;
-    schema:url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
+    :contentUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_bbff3153-9310-4e81-9203-34c6dce7450e> a schema:ImageObject,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_75a57343-16ec-41ce-a962-954e8714f943> a :ImageObject,
         owl:NamedIndividual ;
-    schema:contentUrl <https://m.media-amazon.com/images/M/MV5BZjQ0NGM2NGMtMDE1Yi00YzQyLWI1ZWYtMmQ2OWEzZTA5YjEyXkEyXkFqcGdeQWRvb2xpbmhk._V1_.jpg> .
+    :url <https://img.ecartelera.com/carteles/13100/13170/009_p.jpg> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_77cb36bc-fa1d-4184-9f98-db2259d54e96> a schema:Offer,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_5023d0cb-4c34-45ce-90e1-13263b8389db> a :Offer,
         owl:NamedIndividual ;
-    schema:availabilityStarts "2019-12-08 22:30:37"^^schema:Date ;
-    schema:category "free" ;
-    schema:eligibleRegion twssd:ES .
+    :availabilityStarts "2019-12-08 22:30:37"^^:Date ;
+    :category "free" ;
+    :eligibleRegion twssd:ES .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_1d460420-b4ed-490f-9b01-3e04639ebce3> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_85dde8e9-25b9-4bca-9d95-c0977c4183df> a :Organization,
         owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/company/co0728674> .
+    :url <https://www.imdb.com/company/co0728674> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_676b4538-55c4-45b8-a8df-68e7014fd1c0> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_9697cebe-0f33-4b9d-9434-19e54a55e2d2> a :Organization,
         owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/company/co0028338> .
+    :url <https://www.imdb.com/company/co0038332> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a0901e40-83a9-4487-9747-1f1bfa89add9> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_bfc23d97-42d4-47b0-872b-405b9efc61d5> a :Organization,
         owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/company/co0283444> .
+    :url <https://www.imdb.com/company/co0283444> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_a35f195b-29a0-46f1-b822-1a40052448f6> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_cce9607f-b45e-4a0b-aa0a-9f5b746d5862> a :Organization,
         owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/company/co0038332> .
+    :url <https://www.imdb.com/company/co0002663> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_b4a907f3-a855-4fa3-84c1-0a1ba6358480> a schema:Organization,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Organization_ea5b5c8f-af39-4d17-b8e3-73660028c7e0> a :Organization,
         owl:NamedIndividual ;
-    schema:url <https://www.imdb.com/company/co0002663> .
+    :url <https://www.imdb.com/company/co0028338> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_01002525-f8b2-4cc1-ad10-082e2229d59d> a schema:PublicationEvent,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_0039e433-2c01-460e-9715-1467379749bd> a :PublicationEvent,
         owl:NamedIndividual ;
-    schema:location twssd:ES ;
-    schema:startDate "2020-12-18"^^schema:Date .
+    :location twssd:ES ;
+    :startDate "2020-12-18"^^:Date .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0544aaea-77dc-42a3-82b5-ab589630462d> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0ed209f7-44e1-4d3a-868d-0f78185dec66> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0da97cc4-a8e8-4483-a938-b98a3205875d> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0f41590b-e9d5-40a8-ab34-2581ce68a29a> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_203f398c-f0a6-41f9-b821-930dbb140390> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_115db03f-8eb3-4e38-b3be-def3ba970e37> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_26355d08-165f-4e80-9db7-34b538991465> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_1708b3c5-4fb5-449d-aee3-4c2d81cdfdf4> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2c15738d-2777-4912-8958-85285dc5c007> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_19744289-acca-46bb-a106-376280c82686> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "10" ;
-    schema:ratingValue "5" ;
-    schema:worstRating "1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2d7e3fba-b223-4ad5-942c-0d6c9ac79ae9> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_201887bc-7f8a-41a4-bd07-a9f510a0460e> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_376861c0-e275-4531-9117-799eb98caff9> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_348d91c2-7b00-432d-bf5a-d1ee295594ce> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_5459982f-faba-4282-ab98-309b4911eee2> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_3fd201ea-6c25-4989-a73f-ecf8a537c12a> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_63929bcc-bad9-44ad-b366-e41d77ef43b3> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_5c7a9878-cfcc-4575-b8ba-9fab23c0dc2c> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6a872320-4732-4880-aae5-4dba3da72f36> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6afee78b-76d7-49a8-9d88-fb511393cf39> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6c132113-cda4-492b-9728-e50a51c39386> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_754acfd6-a5e5-4c08-a29f-ed15065e1dfb> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6ee3fc29-06a3-4a81-904c-0752f04cf0f7> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8b38ed0d-6263-4956-a138-c967867de075> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6f791d7d-92b3-4a35-8fce-61da5e40cb58> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_9425a00d-ee89-48c8-88ab-d44ce97bc007> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8131f886-44d5-473d-b684-230f4afeebb8> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_9ce27111-c943-4db9-8b8f-e6755e0b5fca> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_855538e1-4a24-4628-908b-dd5b43b5bceb> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_ab9e4078-025b-4ca5-951a-96b9d1617f05> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a85f1106-a704-48ce-b8d2-8e3a99255f2e> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_b4c6b4d9-2d3e-4991-bd92-a291a8649e4a> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "10" ;
+    :ratingValue "5" ;
+    :worstRating "1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c142f8db-be59-4bd9-80aa-2835ebd8f268> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_b8c2a580-9dcf-4c6b-9321-f73d77f4a6b6> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c34b8648-0e9b-4433-bf40-88554eee8404> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d339e0bc-8df6-450e-9e2e-67a3707a3f6e> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_cf3a5c08-f682-4e9c-97a3-39fd29d903d7> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d355be06-bf9b-45e9-9f48-96596960c3cc> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d0d145e8-9b6b-4daf-87c0-5549c72241cd> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d8b35146-a234-4201-8ab7-0d00d5240306> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue -1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_db2bfa9c-8e0b-4300-a634-1c1342f5af5e> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f4e23844-ac05-4532-85f7-9e51b833d86a> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_dc361cd7-cbdc-405a-b4be-8d28814a9823> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f5810165-2fb3-4c15-a8e3-59d63ec5f36d> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e938c88f-a3a4-4875-9730-763f0ba0bb32> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f8fa3dc2-f647-4205-8eba-3b47c0a2a91a> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e9dd66b3-68ca-4025-965d-43e7e62dda48> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_fa9bf5e2-4ea3-4718-bef0-2dc2002b8d09> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue -1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_eab14ca3-e459-45e8-8174-742be3cf01c5> a schema:Rating,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_fd071536-d399-4a4d-8270-031b6dde9d23> a :Rating,
         owl:NamedIndividual ;
-    schema:bestRating "1" ;
-    schema:ratingValue 1 ;
-    schema:worstRating "-1" .
+    :bestRating "1" ;
+    :ratingValue 1 ;
+    :worstRating "-1" .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_00240a33-a036-463f-ad4c-f6b17b886896> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_077daea9-5d4a-45c5-b398-b6eb3bafa780> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Andrew_Galdi ;
-    schema:dateCreated "2021-03-11T06:02:25-08:00"^^schema:Date ;
-    schema:publisher twssd:Movie_Bitches ;
-    schema:reviewBody "There were just such gross failures of filmmaking..." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e9dd66b3-68ca-4025-965d-43e7e62dda48> ;
-    schema:url <https://youtu.be/75nDMuZMfLs> .
+    :author twssd:Sarah_Ward ;
+    :dateCreated "2021-02-21T08:36:54-08:00"^^:Date ;
+    :publisher twssd:Concrete_Playground ;
+    :reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_201887bc-7f8a-41a4-bd07-a9f510a0460e> ;
+    :url <https://concreteplayground.com/sydney/event/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_09b1b22f-2aeb-4e6c-a6b7-fa87decfd62a> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_153395eb-1d87-4382-afc8-649dbe447b7a> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Ian_Simmons ;
-    schema:dateCreated "2021-02-05T19:46:31-08:00"^^schema:Date ;
-    schema:publisher twssd:Kicking_the_Seat ;
-    schema:reviewBody "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0544aaea-77dc-42a3-82b5-ab589630462d> ;
-    schema:url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> .
+    :author twssd:Nina_Garin ;
+    :dateCreated "2021-03-01T08:14:02-08:00"^^:Date ;
+    :publisher twssd:San_Diego_Union-Tribune ;
+    :reviewBody "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. " ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_ab9e4078-025b-4ca5-951a-96b9d1617f05> ;
+    :url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_0a44b512-1555-4281-9bde-568c8bb8c0cd> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_203446c4-a822-4353-9722-601449f9321c> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Nina_Garin ;
-    schema:dateCreated "2021-03-01T08:14:02-08:00"^^schema:Date ;
-    schema:publisher twssd:San_Diego_Union-Tribune ;
-    schema:reviewBody "Gadot is so skilled at bringing vulnerability to her battles - whether it's a physical fight with Maxwell Lord or an internal struggle about giving up the one thing she's ever desired. She embodies a true superhero, one who is inclusive and noble. " ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_eab14ca3-e459-45e8-8174-742be3cf01c5> ;
-    schema:url <https://www.sandiegouniontribune.com/entertainment/movies/story/2020-12-24/wonder-woman-1984> .
+    :author twssd:Mark_Meszoros ;
+    :dateCreated "2021-02-13T23:57:56-08:00"^^:Date ;
+    :publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> ;
+    :reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_1708b3c5-4fb5-449d-aee3-4c2d81cdfdf4> ;
+    :url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_10125c42-3bb7-49fb-a878-cbde3763e035> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_36e6cb3c-90c6-462b-9943-e16d7ce8c0cb> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Avaryl_Halley ;
-    schema:dateCreated "2021-03-11T05:51:39-08:00"^^schema:Date ;
-    schema:publisher twssd:Movie_Bitches ;
-    schema:reviewBody "At least \"Justice League\" had at the decency to be short" ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6f791d7d-92b3-4a35-8fce-61da5e40cb58> ;
-    schema:url <https://youtu.be/75nDMuZMfLs> .
+    :author twssd:Jake_Wilson ;
+    :dateCreated "2020-12-28T07:49:06-08:00"^^:Date ;
+    :publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> ;
+    :reviewBody "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_3fd201ea-6c25-4989-a73f-ecf8a537c12a> ;
+    :url <https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_11f670dd-ef39-43fd-8403-100ddcf484ae> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4b620090-2fc0-49f2-96e2-a48b73bb05d1> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Brian_Gill ;
-    schema:dateCreated "2021-02-10T06:48:34-08:00"^^schema:Date ;
-    schema:publisher twssd:Mad_About_Movies_Podcast ;
-    schema:reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_cf3a5c08-f682-4e9c-97a3-39fd29d903d7> ;
-    schema:url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> .
+    :author twssd:David_Sims ;
+    :dateCreated "2020-12-28T07:45:33-08:00"^^:Date ;
+    :publisher twssd:The_Atlantic ;
+    :reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_9425a00d-ee89-48c8-88ab-d44ce97bc007> ;
+    :url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_18671ee0-40ea-469a-ba2c-4a9eca7bed24> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4ef8a264-678d-46e4-9338-d7feb64de934> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Mark_Meszoros ;
-    schema:dateCreated "2021-02-13T23:57:56-08:00"^^schema:Date ;
-    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_News-Herald_%28Willoughby%2C_OH%29> ;
-    schema:reviewBody "There are plenty of good times to be had as we pick back up with Gal Gadot's Wonder Woman/Diana Prince six-plus decades after the World War I-set first tale." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_855538e1-4a24-4628-908b-dd5b43b5bceb> ;
-    schema:url <https://www.news-herald.com/entertainment/movie-reviews/wonder-woman-1984-overdoes-it-but-what-made-first-movie-successful-alive-and-well-in/article_a0eed67e-453e-11eb-9aae-8774f60e37ce.html> .
+    :author twssd:Mark_Jackson ;
+    :dateCreated "2021-02-02T10:00:09-08:00"^^:Date ;
+    :publisher twssd:Epoch_Times ;
+    :reviewBody "\"Wonder Woman\" (2017) was one of the best superhero movies ever made. It was idealistic, classy, aesthetically pleasing, and romantic, and should've kicked off a fabulous franchise. Unfortunately the sequel is a major letdown." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d8b35146-a234-4201-8ab7-0d00d5240306> ;
+    :url <https://www.theepochtimes.com/film-review-wonder-woman-1984-a-sequel-less-wonderful_3667828.html> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_1e32a381-1029-4d02-b6e0-55291b4130ab> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5a7fdcb3-323a-4a87-9250-5c111c95be46> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:David_Sims ;
-    schema:dateCreated "2020-12-28T07:45:33-08:00"^^schema:Date ;
-    schema:publisher twssd:The_Atlantic ;
-    schema:reviewBody "It's a refreshingly silly and airy adventure focused on the emotions of one character, Wonder Woman (played by Gal Gadot), and a charming end to a tiring year of cinema." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6ee3fc29-06a3-4a81-904c-0752f04cf0f7> ;
-    schema:url <https://www.theatlantic.com/culture/archive/2020/12/wonder-woman-1984-movie-review/617470> .
+    :author twssd:Andrew_Galdi ;
+    :dateCreated "2021-03-11T06:02:25-08:00"^^:Date ;
+    :publisher twssd:Movie_Bitches ;
+    :reviewBody "There were just such gross failures of filmmaking..." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_b8c2a580-9dcf-4c6b-9321-f73d77f4a6b6> ;
+    :url <https://youtu.be/75nDMuZMfLs> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_28cadb89-e567-4bd4-9a6d-8e858b4bf98a> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5df862de-8166-42aa-9178-21684df98f46> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Tony_Medley ;
-    schema:dateCreated "2021-02-22T06:02:11-08:00"^^schema:Date ;
-    schema:publisher twssd:The_Larchmont_Chronicle ;
-    schema:reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_203f398c-f0a6-41f9-b821-930dbb140390> ;
-    schema:url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> .
+    :author twssd:Sheri_Flanders ;
+    :dateCreated "2021-02-01T04:29:30-08:00"^^:Date ;
+    :publisher twssd:Chicago_Reader ;
+    :reviewBody "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6afee78b-76d7-49a8-9d88-fb511393cf39> ;
+    :url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3675e144-420d-4848-b7c4-0bd514609b1c> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6cb86683-556a-46bd-8736-4dd3fa5065c8> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Amy_Nicholson ;
-    schema:dateCreated "2021-01-04T03:37:14-08:00"^^schema:Date ;
-    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> ;
-    schema:reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8131f886-44d5-473d-b684-230f4afeebb8> ;
-    schema:url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo> .
+    :author twssd:Dan_Tabor ;
+    :dateCreated "2021-02-05T01:55:00-08:00"^^:Date ;
+    :publisher twssd:Phawker ;
+    :reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_fa9bf5e2-4ea3-4718-bef0-2dc2002b8d09> ;
+    :url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_3abb5530-b8c5-4755-b814-18169fe7b77e> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6d8c8c6b-41e0-4bab-9ae0-d85cf4b910fe> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:John_McDonald ;
-    schema:dateCreated "2021-01-31T18:14:33-08:00"^^schema:Date ;
-    schema:publisher twssd:Australian_Financial_Review ;
-    schema:reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_63929bcc-bad9-44ad-b366-e41d77ef43b3> ;
-    schema:url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984> .
+    :author twssd:David_Bax ;
+    :dateCreated "2021-03-23T10:02:10-07:00"^^:Date ;
+    :publisher twssd:Battleship_Pretension ;
+    :reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_fd071536-d399-4a4d-8270-031b6dde9d23> ;
+    :url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_4bdf66fe-9075-4cff-adc5-926c8acbfcbd> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7dd53960-d808-41df-a1dc-14b59882223b> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Jake_Wilson ;
-    schema:dateCreated "2020-12-28T07:49:06-08:00"^^schema:Date ;
-    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/The_Age_%28Australia%29> ;
-    schema:reviewBody "Gadot as Wonder Woman -- or Diana Prince, as she's more commonly known -- may be the single best piece of casting in a superhero role since Christopher Reeve first donned the cape and spandex of the Man of Steel." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_a85f1106-a704-48ce-b8d2-8e3a99255f2e> ;
-    schema:url <https://www.theage.com.au/culture/movies/wonder-woman-1984-gal-gadot-soars-in-a-plot-that-doesn-t-aim-high-20201216-p56o4z.html> .
+    :author twssd:Stephen_Romei ;
+    :dateCreated "2020-12-29T12:09:48-08:00"^^:Date ;
+    :publisher twssd:The_Australian ;
+    :reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f5810165-2fb3-4c15-a8e3-59d63ec5f36d> ;
+    :url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_5a321c02-f863-4adb-b16c-d759ff081cb3> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_8433497b-7c43-49d8-b77c-b268e097e56b> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Eddie_Harrison ;
-    schema:dateCreated "2021-02-07T19:57:42-08:00"^^schema:Date ;
-    schema:publisher twssd:film-authority.com ;
-    schema:reviewBody "...a joyless dud, a bucket of sludge when we're crying out for a glass of water..." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c142f8db-be59-4bd9-80aa-2835ebd8f268> ;
-    schema:url <https://film-authority.com/2021/01/11/wonder-woman-1984> .
+    :author twssd:Avaryl_Halley ;
+    :dateCreated "2021-03-11T05:51:39-08:00"^^:Date ;
+    :publisher twssd:Movie_Bitches ;
+    :reviewBody "At least \"Justice League\" had at the decency to be short" ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_19744289-acca-46bb-a106-376280c82686> ;
+    :url <https://youtu.be/75nDMuZMfLs> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_60f3e5ac-fb16-4c23-be26-a3076042a990> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_9156c46b-7bd8-4864-95af-b415e4f598b7> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:David_Bax ;
-    schema:dateCreated "2021-03-23T10:02:10-07:00"^^schema:Date ;
-    schema:publisher twssd:Battleship_Pretension ;
-    schema:reviewBody "Where too many directors of these types of films use their visual effects budget to imagine new levels of destruction, Jenkins would rather show us the novel beauty of an invisible jet soaring through a sky full of fireworks." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_c34b8648-0e9b-4433-bf40-88554eee8404> ;
-    schema:url <https://battleshippretension.com/wonder-woman-1984-go-ahead-and-jump-by-david-bax> .
+    :author twssd:Eric_Marchen ;
+    :dateCreated "2021-02-17T02:36:51-08:00"^^:Date ;
+    :publisher twssd:Untitled_Movie_Podcast ;
+    :reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_348d91c2-7b00-432d-bf5a-d1ee295594ce> ;
+    :url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_63b8cb04-2229-46ee-a60a-7be9af88a6db> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_97922841-d7d0-41b1-8820-b59289aff230> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Sarah_Ward ;
-    schema:dateCreated "2021-02-21T08:36:54-08:00"^^schema:Date ;
-    schema:publisher twssd:Concrete_Playground ;
-    schema:reviewBody "Wonder Woman 1984 doesn't spin the most complicated story, but it's so repetitive and meandering across its 151-minute running time that it's needlessly bulky, muddled and weighed down." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d0d145e8-9b6b-4daf-87c0-5549c72241cd> ;
-    schema:url <https://concreteplayground.com/sydney/event/wonder-woman-1984> .
+    :author twssd:Ian_Simmons ;
+    :dateCreated "2021-02-05T19:46:31-08:00"^^:Date ;
+    :publisher twssd:Kicking_the_Seat ;
+    :reviewBody "I'm not usually a fan of the \"multiple villain\" thing, but I thought it was handled pretty well here." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_5c7a9878-cfcc-4575-b8ba-9fab23c0dc2c> ;
+    :url <https://kickseat.com/podcast/ep623-when-you-wish-upon-a-sequel-wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6712399d-09a7-442b-b427-abd6d4480472> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_9e2621d4-053a-4337-932a-8dd608bd803b> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Stephen_Romei ;
-    schema:dateCreated "2020-12-29T12:09:48-08:00"^^schema:Date ;
-    schema:publisher twssd:The_Australian ;
-    schema:reviewBody "I assume there will be a sequel to this sequel. If so, no complaint from me, especially if Wiig and Pascal are in it. " ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_26355d08-165f-4e80-9db7-34b538991465> ;
-    schema:url <https://www.theaustralian.com.au/arts/review/wonder-woman-a-superhero-for-these-unpredictable-times/news-story/07c2cdcdf7699c36c2fa44d8e003acb8> .
+    :author twssd:Valerie_Kalfrin ;
+    :dateCreated "2021-03-20T08:54:50-07:00"^^:Date ;
+    :publisher twssd:Their_Own_League ;
+    :reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f4e23844-ac05-4532-85f7-9e51b833d86a> ;
+    :url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_6f879847-a626-4bc8-8adb-43cedc21b318> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_9f9dc1c7-6697-4b55-87b5-eaf693e12ea9> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Eric_Marchen ;
-    schema:dateCreated "2021-02-17T02:36:51-08:00"^^schema:Date ;
-    schema:publisher twssd:Untitled_Movie_Podcast ;
-    schema:reviewBody "Feels like this would be better suited for an episode of TV than a 2.5 hour film." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6c132113-cda4-492b-9728-e50a51c39386> ;
-    schema:url <https://untitledmoviepodcast.com/reviews/2020/12/27/wonder-woman-1984> .
+    :author twssd:John_McDonald ;
+    :dateCreated "2021-01-31T18:14:33-08:00"^^:Date ;
+    :publisher twssd:Australian_Financial_Review ;
+    :reviewBody "One wonders how many more films will confirm the cast-iron law that every new Hollywood movie is really about Donald Trump?" ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d339e0bc-8df6-450e-9e2e-67a3707a3f6e> ;
+    :url <https://www.johnmcdonald.net.au/2021/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_74e9e2d4-4864-4a57-b357-57a604e37415> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_a8b3fe1d-4621-41e5-b987-4897e743c328> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Dan_Tabor ;
-    schema:dateCreated "2021-02-05T01:55:00-08:00"^^schema:Date ;
-    schema:publisher twssd:Phawker ;
-    schema:reviewBody "WW84 is a near perfect superhero film that outshines the original with its infectious sense of joy and optimism and nuanced deconstruction of the power of truth and how that can be a tool of good or evil. " ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_e938c88f-a3a4-4875-9730-763f0ba0bb32> ;
-    schema:url <http://www.phawker.com/2020/12/23/cinema-waiting-for-gadot> .
+    :author twssd:Amy_Nicholson ;
+    :dateCreated "2021-01-04T03:37:14-08:00"^^:Date ;
+    :publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/FilmWeek_%28KPCC_-_NPR_Los_Angeles%29> ;
+    :reviewBody "Very sweet and very fun. I think some of the stunts are a little bit dumb, but I had a lot of watching this." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_9ce27111-c943-4db9-8b8f-e6755e0b5fca> ;
+    :url <https://www.scpr.org/programs/filmweek/2020/12/23/66369/filmweek-wonder-woman-1984-soul-promising-young-wo> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_7a6ec0d7-0068-4654-88e2-5eb0467b636c> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_b6829e6b-4752-4cb3-9de4-2eb80e2a12aa> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Rafer_Guzman ;
-    schema:dateCreated "2021-01-04T04:59:29-08:00"^^schema:Date ;
-    schema:publisher twssd:Newsday ;
-    schema:reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_6a872320-4732-4880-aae5-4dba3da72f36> ;
-    schema:url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> .
+    :author twssd:Kevin_Carr ;
+    :dateCreated "2021-04-03T14:11:59-07:00"^^:Date ;
+    :publisher twssd:Fat_Guys_at_the_Movies ;
+    :reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_115db03f-8eb3-4e38-b3be-def3ba970e37> ;
+    :url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_aca6cd98-c3bf-45dc-9786-b08b3067d1bc> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c2ca7776-366d-423d-8b8f-03b111e3a3e9> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Jennifer_Ouellette ;
-    schema:dateCreated "2021-02-11T02:38:41-08:00"^^schema:Date ;
-    schema:publisher twssd:Ars_Technica ;
-    schema:reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_2d7e3fba-b223-4ad5-942c-0d6c9ac79ae9> ;
-    schema:url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor> .
+    :author twssd:Eddie_Harrison ;
+    :dateCreated "2021-02-07T19:57:42-08:00"^^:Date ;
+    :publisher twssd:film-authority.com ;
+    :reviewBody "...a joyless dud, a bucket of sludge when we're crying out for a glass of water..." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_754acfd6-a5e5-4c08-a29f-ed15065e1dfb> ;
+    :url <https://film-authority.com/2021/01/11/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c1d132bb-eb79-43d3-940a-b7dca77a3c73> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c6997126-aabc-44ce-84f7-4cf8eeea2808> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Valerie_Kalfrin ;
-    schema:dateCreated "2021-03-20T08:54:50-07:00"^^schema:Date ;
-    schema:publisher twssd:Their_Own_League ;
-    schema:reviewBody "With its message of kindness and empathy, \"Wonder Woman 1984\" offers a soothing balm in a pandemic-weary year, even if getting there is a muddled journey." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0da97cc4-a8e8-4483-a938-b98a3205875d> ;
-    schema:url <https://intheirownleague.com/2020/12/29/review-wonder-woman-1984> .
+    :author twssd:Rafer_Guzman ;
+    :dateCreated "2021-01-04T04:59:29-08:00"^^:Date ;
+    :publisher twssd:Newsday ;
+    :reviewBody " A serviceable sequel, elevated by its radiant leading lady and an over-the-top villain." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_8b38ed0d-6263-4956-a138-c967867de075> ;
+    :url <https://www.newsday.com/entertainment/movies/wonder-woman-1984-review-1.50099436> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_df5e5f67-1cd6-4fb1-bb69-4aed270b62e4> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_c8c63d3b-10f2-4ac9-9af3-40a0b8967c6d> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Sheri_Flanders ;
-    schema:dateCreated "2021-02-01T04:29:30-08:00"^^schema:Date ;
-    schema:publisher twssd:Chicago_Reader ;
-    schema:reviewBody "Wonder Woman 1984 is a technicolor, lighthearted romp through the era of Jazzercise, big hair, and even bigger shoulder pads." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_db2bfa9c-8e0b-4300-a634-1c1342f5af5e> ;
-    schema:url <https://www.chicagoreader.com/chicago/wonder-woman-1984/Film?oid=85354160> .
+    :author twssd:Matt_Neal ;
+    :dateCreated "2021-01-31T17:01:54-08:00"^^:Date ;
+    :publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/ABC_Radio_%28Australia%29> ;
+    :reviewBody " After such a stirring debut, it's pains me to say that Wonder Woman 1984 isn't that wonderful." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_d355be06-bf9b-45e9-9f48-96596960c3cc> ;
+    :url <https://movies8mylife.blogspot.com/2021/02/wonder-woman-1984.html> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e6602ba8-081f-4a50-bcac-8805ae32949b> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_d89b356a-fe5b-4223-a26c-f4632f7d3538> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Mark_Jackson ;
-    schema:dateCreated "2021-02-02T10:00:09-08:00"^^schema:Date ;
-    schema:publisher twssd:Epoch_Times ;
-    schema:reviewBody "\"Wonder Woman\" (2017) was one of the best superhero movies ever made. It was idealistic, classy, aesthetically pleasing, and romantic, and should've kicked off a fabulous franchise. Unfortunately the sequel is a major letdown." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_376861c0-e275-4531-9117-799eb98caff9> ;
-    schema:url <https://www.theepochtimes.com/film-review-wonder-woman-1984-a-sequel-less-wonderful_3667828.html> .
+    :author twssd:Tony_Medley ;
+    :dateCreated "2021-02-22T06:02:11-08:00"^^:Date ;
+    :publisher twssd:The_Larchmont_Chronicle ;
+    :reviewBody "It is even more absurd than the first one that grossly distorted history. Gal Gadot's delivery makes Tony Curtis', \"Yonda Lies Da Castle of My Fodda,\" seem Shakespearean." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0f41590b-e9d5-40a8-ab34-2581ce68a29a> ;
+    :url <http://www.tonymedley.com/2020/Wonder_Woman_1984.htm> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e9e98629-0288-4807-a05c-a12f6ebf34b8> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_e7d98a46-c9c7-4123-bf51-a573cef7c406> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Kevin_Carr ;
-    schema:dateCreated "2021-04-03T14:11:59-07:00"^^schema:Date ;
-    schema:publisher twssd:Fat_Guys_at_the_Movies ;
-    schema:reviewBody "It's a fun movie, and it's got a lot of fun action in it. If you can get past the goofiness, it works." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_5459982f-faba-4282-ab98-309b4911eee2> ;
-    schema:url <http://www.fatguysatthemovies.com/episode-728-lizard-vs-ape> .
+    :author twssd:Brian_Gill ;
+    :dateCreated "2021-02-10T06:48:34-08:00"^^:Date ;
+    :publisher twssd:Mad_About_Movies_Podcast ;
+    :reviewBody "I have sorely missed this sort of big budget popcorn flick through this never-ending pandemic and Wonder Woman succeeds in filling that gap, though only by the slimmest of margins. " ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_0ed209f7-44e1-4d3a-868d-0f78185dec66> ;
+    :url <http://madaboutmoviespodcast.com/episodes/2020/12/29/wonder-woman-1984> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ee2f1165-d4ab-41ae-b983-3dc67e47c12a> a schema:Review,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Review_ffc1b6cb-156e-4bbf-aa5a-f72c9235c40b> a :Review,
         owl:NamedIndividual ;
-    schema:author twssd:Matt_Neal ;
-    schema:dateCreated "2021-01-31T17:01:54-08:00"^^schema:Date ;
-    schema:publisher <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/ABC_Radio_%28Australia%29> ;
-    schema:reviewBody " After such a stirring debut, it's pains me to say that Wonder Woman 1984 isn't that wonderful." ;
-    schema:reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_dc361cd7-cbdc-405a-b4be-8d28814a9823> ;
-    schema:url <https://movies8mylife.blogspot.com/2021/02/wonder-woman-1984.html> .
+    :author twssd:Jennifer_Ouellette ;
+    :dateCreated "2021-02-11T02:38:41-08:00"^^:Date ;
+    :publisher twssd:Ars_Technica ;
+    :reviewBody "While Wonder Woman 1984 still has a bit of the old magic, and its leads all turn in terrific performances, the film is hampered by a frequently nonsensical plot, extraneous showy action sequences, and it's way too heavy-handed with the moralizing." ;
+    :reviewRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Rating_f8fa3dc2-f647-4205-8eba-3b47c0a2a91a> ;
+    :url <https://arstechnica.com/gaming/2020/12/wonder-woman-1984-is-fun-but-doesnt-quite-capture-magic-of-its-predecessor> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_b605f59c-ebe7-4c0e-bf69-820afadee5a5> a schema:WatchAction,
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/WatchAction_531442a5-3eb1-4241-86ab-6a8932f22c16> a :WatchAction,
         owl:NamedIndividual ;
-    schema:expectsAcceptanceOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_77cb36bc-fa1d-4184-9f98-db2259d54e96> ;
-    schema:target <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_3337e591-0c30-4759-a293-02d72af2d7ff> .
+    :expectsAcceptanceOf <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Offer_5023d0cb-4c34-45ce-90e1-13263b8389db> ;
+    :target <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/EntryPoint_590d79b3-7579-4b20-a2f0-0ed0c8705743> .
 
-twssd:jayg_58 a schema:Person,
+twssd:jayg_58 a :Person,
         owl:NamedIndividual ;
-    schema:name "jayg_58" .
+    :name "jayg_58" .
 
-<https://www.ecartelera.com/peliculas/wonder-woman-1984> a schema:Movie,
+<https://www.ecartelera.com/peliculas/wonder-woman-1984> a :Movie,
         owl:NamedIndividual ;
-    schema:actor twssd:Chris_Pine,
+    :actor twssd:Chris_Pine,
         twssd:Connie_Nielsen,
         twssd:Gal_Gadot,
         twssd:Kristen_Wiig,
         twssd:Pedro_Pascal,
         twssd:Robin_Wright ;
-    schema:aggregateRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_76fceb37-c0b5-46ba-b318-36b1251f4dc1> ;
-    schema:countryOfOrigin "EE.UU." ;
-    schema:description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
+    :aggregateRating <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/AggregateRating_1652ad46-e709-4839-8708-ae9805686703> ;
+    :countryOfOrigin "EE.UU." ;
+    :description """&#39;Wonder Woman 1984&#39; llegará a la pantalla grande el próximo 5 de junio de 2020, de nuevo con la actriz israelí Gal Gadot en el papel de la Mujer Maravilla y Patty Jenkins detrás de las cámaras. La secuela de &#39;Wonder Woman&#39; contará además con el regreso de Chris Pine (&#39;Star Trek. Más allá&#39;) como Steve Trevor. La película sigue a Diana en su vida durante los años 80 en Estados Unidos. En esta ocasión, Diana se enfrentará a nuevos enemigos. Su principal antagonista es la arqueóloga británica Barbara Minerva, que será interpretada por Kristen Wigg (&#39;Cazafantasmas&#39;). La científica tiene un alter ego, la villana Cheetah que tiene una fuerza y agilidad sobrehumanas. Otro enemigo a tener en cuenta será el empresario Maxwel Lord, interpretado por Pedro Pascal (&#39;The Mandalorian&#39;). Este personaje es un arrogante con la habilidad de manipular a otros a su antojo. En los cómics, Max Lord tiene poderes mentales. También aparecen en esta cinta las guerreras amazonas Antiope (Robin Wright) y la Reina Hippolyta (Connie Nielsen).\r
 \r
 La trama de esta película es una gran misterio. El guión está basado en una historia escrita por Patty Jenkins, Geoff Johns (&#39;The Flash&#39;, &#39;Aquaman&#39;) y Dave Callaham (&#39;Zombieland: Mata y remata&#39;). Se espera que tenga protagonismo la tecnología y la vigilancia, teniendo en cuenta el título que hace referencia a la distopía de &#39;1984&#39; de George Orwell.""" ;
-    schema:director twssd:Patty_Jenkins ;
-    schema:duration "PT2H31M" ;
-    schema:genre "Acción",
+    :director twssd:Patty_Jenkins ;
+    :duration "PT2H31M" ;
+    :genre "Acción",
         "Aventura",
         "Fantasía" ;
-    schema:hasPart <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_3f17a7fd-3acf-4c5f-bce2-a73bb41c5238> ;
-    schema:image <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_3b851d1e-5a8a-48d1-a62c-43b28f0de5e8> ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984> ;
-    schema:name "Wonder Woman 1984" ;
-    schema:productionCompany twssd:Warner_Bros._Pictures ;
-    schema:releasedEvent <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_01002525-f8b2-4cc1-ad10-082e2229d59d> .
+    :hasPart <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/Clip_75262474-da43-416d-9409-ce45233e39f7> ;
+    :image <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/ImageObject_75a57343-16ec-41ce-a962-954e8714f943> ;
+    :mainEntityOfPage <https://www.ecartelera.com/peliculas/wonder-woman-1984> ;
+    :name "Wonder Woman 1984" ;
+    :productionCompany twssd:Warner_Bros._Pictures ;
+    :releasedEvent <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/http://schema.org/PublicationEvent_0039e433-2c01-460e-9715-1467379749bd> .
 
-schema:Clip a owl:Class ;
-    rdfs:subClassOf schema:CreativeWork .
+:Clip a owl:Class ;
+    rdfs:subClassOf :CreativeWork .
 
-schema:Event a owl:Class .
+:Event a owl:Class .
 
-schema:PublicationEvent a owl:Class ;
-    rdfs:subClassOf schema:Event .
+:PublicationEvent a owl:Class ;
+    rdfs:subClassOf :Event .
 
-twssd:ES a schema:Country,
+twssd:ES a :Country,
         owl:NamedIndividual ;
-    schema:name "ES" .
+    :name "ES" .
 
-twssd:Movie_Bitches a schema:Organization,
+twssd:Movie_Bitches a :Organization,
         owl:NamedIndividual ;
-    schema:name "Movie Bitches" ;
-    schema:url <https://www.rottentomatoes.com/source-3639> .
+    :name "Movie Bitches" ;
+    :url <https://www.rottentomatoes.com/source-3639> .
 
-schema:Action a owl:Class .
+:Action a owl:Class .
 
-schema:EntryPoint a owl:Class ;
-    rdfs:subClassOf schema:Intangible .
+:EntryPoint a owl:Class ;
+    rdfs:subClassOf :Intangible .
 
-schema:Intangible a owl:Class .
+:Intangible a owl:Class .
 
-schema:Place a owl:Class .
+:Place a owl:Class .
 
-twssd:Chris_Pine a schema:Person,
+twssd:Chris_Pine a :Person,
         owl:NamedIndividual ;
-    schema:image <https://resizing.flixster.com/kXDRe1jUWEU8UFkdf8JhRPMUG8s=/660x990/v1.bjs3NTYxMDQ7ajsxODgxODsxMjAwOzY2MDs5OTA> ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine> ;
-    schema:name "Chris Pine" ;
-    schema:sameAs <https://www.rottentomatoes.com/celebrity/christopher_pine> ;
-    schema:url <https://www.imdb.com/name/nm1517976>,
+    :image <https://resizing.flixster.com/kXDRe1jUWEU8UFkdf8JhRPMUG8s=/660x990/v1.bjs3NTYxMDQ7ajsxODgxODsxMjAwOzY2MDs5OTA> ;
+    :mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine> ;
+    :name "Chris Pine" ;
+    :sameAs <https://www.rottentomatoes.com/celebrity/christopher_pine> ;
+    :url <https://www.imdb.com/name/nm1517976>,
         <https://www.metacritic.com/person/chris-pine> .
 
-twssd:Connie_Nielsen a schema:Person,
+twssd:Connie_Nielsen a :Person,
         owl:NamedIndividual ;
-    schema:image <https://resizing.flixster.com/9Pu5qp5qfehIlclgv8tIbVPGlr0=/2938x3500/v1.cjs1MDM1NztqOzE4NzY1OzEyMDA7MjkzODszNTAw> ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/personas/connie-nielsen> ;
-    schema:name "Connie Nielsen" ;
-    schema:sameAs <https://www.rottentomatoes.com/celebrity/connie_nielsen> ;
-    schema:url <https://www.metacritic.com/person/connie-nielsen> .
+    :image <https://resizing.flixster.com/9Pu5qp5qfehIlclgv8tIbVPGlr0=/2938x3500/v1.cjs1MDM1NztqOzE4NzY1OzEyMDA7MjkzODszNTAw> ;
+    :mainEntityOfPage <https://www.ecartelera.com/personas/connie-nielsen> ;
+    :name "Connie Nielsen" ;
+    :sameAs <https://www.rottentomatoes.com/celebrity/connie_nielsen> ;
+    :url <https://www.metacritic.com/person/connie-nielsen> .
 
-twssd:Gal_Gadot a schema:Person,
+twssd:Gal_Gadot a :Person,
         owl:NamedIndividual ;
-    schema:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot> ;
-    schema:name "Gal Gadot" ;
-    schema:sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> ;
-    schema:url <https://www.imdb.com/name/nm2933757>,
+    :image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
+    :mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot> ;
+    :name "Gal Gadot" ;
+    :sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> ;
+    :url <https://www.imdb.com/name/nm2933757>,
         <https://www.metacritic.com/person/gal-gadot> .
 
-twssd:Kristen_Wiig a schema:Person,
+twssd:Kristen_Wiig a :Person,
         owl:NamedIndividual ;
-    schema:image <https://resizing.flixster.com/P6P3MFr8YZqj_iCOIh7GxeYrPLg=/2000x2083/v1.cjs0OTMxNjtqOzE4NzY1OzEyMDA7MjAwMDsyMDgz> ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig> ;
-    schema:name "Kristen Wiig" ;
-    schema:sameAs <https://www.rottentomatoes.com/celebrity/kristen_wiig> ;
-    schema:url <https://www.imdb.com/name/nm1325419>,
+    :image <https://resizing.flixster.com/P6P3MFr8YZqj_iCOIh7GxeYrPLg=/2000x2083/v1.cjs0OTMxNjtqOzE4NzY1OzEyMDA7MjAwMDsyMDgz> ;
+    :mainEntityOfPage <https://www.ecartelera.com/personas/kristen-wiig> ;
+    :name "Kristen Wiig" ;
+    :sameAs <https://www.rottentomatoes.com/celebrity/kristen_wiig> ;
+    :url <https://www.imdb.com/name/nm1325419>,
         <https://www.metacritic.com/person/kristen-wiig> .
 
-twssd:Pedro_Pascal a schema:Person,
+twssd:Pedro_Pascal a :Person,
         owl:NamedIndividual ;
-    schema:image <https://resizing.flixster.com/uEke7o3H4ngITX7oLEYgZox9q2A=/220x196/v1.cjs0NDAwMDtqOzE4NzY1OzEyMDA7MjIwOzE5Ng> ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal> ;
-    schema:name "Pedro Pascal" ;
-    schema:sameAs <https://www.rottentomatoes.com/celebrity/pedro_pascal> ;
-    schema:url <https://www.imdb.com/name/nm0050959>,
+    :image <https://resizing.flixster.com/uEke7o3H4ngITX7oLEYgZox9q2A=/220x196/v1.cjs0NDAwMDtqOzE4NzY1OzEyMDA7MjIwOzE5Ng> ;
+    :mainEntityOfPage <https://www.ecartelera.com/personas/pedro-pascal> ;
+    :name "Pedro Pascal" ;
+    :sameAs <https://www.rottentomatoes.com/celebrity/pedro_pascal> ;
+    :url <https://www.imdb.com/name/nm0050959>,
         <https://www.metacritic.com/person/pedro-pascal> .
 
-twssd:Robin_Wright a schema:Person,
+twssd:Robin_Wright a :Person,
         owl:NamedIndividual ;
-    schema:image <https://resizing.flixster.com/s5rTePWBzCqGE8uYUIYqS52D6JU=/1000x1500/v1.bjs3NDQ4MjY7ajsxODgxODsxMjAwOzEwMDA7MTUwMA> ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright> ;
-    schema:name "Robin Wright" ;
-    schema:sameAs <https://www.rottentomatoes.com/celebrity/robin_wright> ;
-    schema:url <https://www.metacritic.com/person/robin-wright> .
+    :image <https://resizing.flixster.com/s5rTePWBzCqGE8uYUIYqS52D6JU=/1000x1500/v1.bjs3NDQ4MjY7ajsxODgxODsxMjAwOzEwMDA7MTUwMA> ;
+    :mainEntityOfPage <https://www.ecartelera.com/personas/robin-wright> ;
+    :name "Robin Wright" ;
+    :sameAs <https://www.rottentomatoes.com/celebrity/robin_wright> ;
+    :url <https://www.metacritic.com/person/robin-wright> .
 
-twssd:Warner_Bros._Pictures a schema:Organization,
+twssd:Warner_Bros._Pictures a :Organization,
         owl:NamedIndividual ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/empresas/warner-bros> ;
-    schema:name "Warner Bros. Pictures" ;
-    schema:url <https://www.metacritic.com/company/warner-bros-pictures> .
+    :mainEntityOfPage <https://www.ecartelera.com/empresas/warner-bros> ;
+    :name "Warner Bros. Pictures" ;
+    :url <https://www.metacritic.com/company/warner-bros-pictures> .
 
-schema:Offer a owl:Class ;
-    rdfs:subClassOf schema:Intangible .
+:Offer a owl:Class ;
+    rdfs:subClassOf :Intangible .
 
-schema:VideoObject a owl:Class ;
-    rdfs:subClassOf schema:MediaObject .
+:VideoObject a owl:Class ;
+    rdfs:subClassOf :MediaObject .
 
-twssd:Patty_Jenkins a schema:Person,
+twssd:Patty_Jenkins a :Person,
         owl:NamedIndividual ;
-    schema:mainEntityOfPage <https://www.ecartelera.com/personas/patty-jenkins> ;
-    schema:name "Patty Jenkins" ;
-    schema:sameAs <https://www.rottentomatoes.com/celebrity/patty_jenkins> ;
-    schema:url <https://www.imdb.com/name/nm0420941>,
+    :mainEntityOfPage <https://www.ecartelera.com/personas/patty-jenkins> ;
+    :name "Patty Jenkins" ;
+    :sameAs <https://www.rottentomatoes.com/celebrity/patty_jenkins> ;
+    :url <https://www.imdb.com/name/nm0420941>,
         <https://www.metacritic.com/person/patty-jenkins> .
 
-schema:ImageObject a owl:Class ;
-    rdfs:subClassOf schema:MediaObject .
+:ImageObject a owl:Class ;
+    rdfs:subClassOf :MediaObject .
 
-schema:MediaObject a owl:Class ;
-    rdfs:subClassOf schema:CreativeWork .
+:MediaObject a owl:Class ;
+    rdfs:subClassOf :CreativeWork .
 
-schema:AggregateRating a owl:Class ;
-    rdfs:subClassOf schema:Rating .
+:AggregateRating a owl:Class ;
+    rdfs:subClassOf :Rating .
 
-schema:Movie a owl:Class ;
-    rdfs:subClassOf schema:CreativeWork .
+:Movie a owl:Class ;
+    rdfs:subClassOf :CreativeWork .
 
-schema:CreativeWork a owl:Class .
+:CreativeWork a owl:Class .
 
-schema:Review a owl:Class ;
-    rdfs:subClassOf schema:CreativeWork .
+:Review a owl:Class ;
+    rdfs:subClassOf :CreativeWork .
 
-schema:Rating a owl:Class ;
-    rdfs:subClassOf schema:Intangible .
+:Rating a owl:Class ;
+    rdfs:subClassOf :Intangible .
 
-schema:Organization a owl:Class .
+:Organization a owl:Class .
 
-schema:Person a owl:Class .
+:Person a owl:Class .
 

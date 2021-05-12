@@ -184,6 +184,12 @@
                              rdfs:range xsd:string .
 
 
+###  http://schema.org/character
+<http://schema.org/character> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/CreativeWork> ;
+                              rdfs:range xsd:string .
+
+
 ###  http://schema.org/contentRating
 <http://schema.org/contentRating> rdf:type owl:DatatypeProperty ;
                                   rdfs:domain <http://schema.org/CreativeWork> ;
