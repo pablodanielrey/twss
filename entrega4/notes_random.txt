@@ -101,3 +101,108 @@ http://dbpedia.org/resource/Katsuyuki_Konishi http://xmlns.com/foaf/0.1/isPrimar
 ------
 
 
+Ale aclaró en el foro que hayq ue hacer el procesamiento de las redirecciones.
+por lo que las urls de los recursos de dbpedia al tratarse de entidades físicas es /resource/
+
+genero un script parcial para ver si resuelve el procesamiento de redirecciones.
+con por ejemplo la url de la persona:
+http://dbpedia.org/resource/Katsuyuki_Konishi
+
+
+
+para debuggear el proceso chequeo con curl.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I -H 'Accept: text/turtle'  https://dbpedia.org/resource/Katsuyuki_Konishi
+HTTP/2 303 
+date: Thu, 13 May 2021 16:48:58 GMT
+content-type: text/turtle
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+tcn: choice
+vary: negotiate,accept
+alternates: {"/data/Katsuyuki_Konishi.atom" 0.500000 {type application/atom+xml}}, {"/data/Katsuyuki_Konishi.jrdf" 0.600000 {type application/rdf+json}}, {"/data/Katsuyuki_Konishi.jsod" 0.500000 {type application/odata+json}}, {"/data/Katsuyuki_Konishi.json" 0.600000 {type application/json}}, {"/data/Katsuyuki_Konishi.jsonld" 0.500000 {type application/ld+json}}, {"/data/Katsuyuki_Konishi.n3" 0.800000 {type text/n3}}, {"/data/Katsuyuki_Konishi.nt" 0.800000 {type text/rdf+n3}}, {"/data/Katsuyuki_Konishi.ntriples" 0.500000 {type application/n-triples}}, {"/data/Katsuyuki_Konishi.ttl" 0.700000 {type text/turtle}}, {"/data/Katsuyuki_Konishi.xml" 0.950000 {type application/rdf+xml}}
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/resource/Katsuyuki_Konishi>; rel="timegate"
+location: http://dbpedia.org/data/Katsuyuki_Konishi.ttl
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+
+y me retonra los siguientes contenidos alternativos.
+
+
+{
+    "/data/Katsuyuki_Konishi.atom" 0.500000 {type application/atom+xml
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.jrdf" 0.600000 {type application/rdf+json
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.jsod" 0.500000 {type application/odata+json
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.json" 0.600000 {type application/json
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.jsonld" 0.500000 {type application/ld+json
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.n3" 0.800000 {type text/n3
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.nt" 0.800000 {type text/rdf+n3
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.ntriples" 0.500000 {type application/n-triples
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.ttl" 0.700000 {type text/turtle
+    }
+},
+{
+    "/data/Katsuyuki_Konishi.xml" 0.950000 {type application/rdf+xml
+    }
+}
+
+por lo que deberia obtener esa cabecera y matchear por le content-type que necesito.
+en el caso de que se corresponda con text/turtle
+obtengo el link a acceeder. en este caso.
+
+/data/Katsuyuki_Konishi.ttl
+
+-----
+
+
+igualmente leo aca que el header Alternates ha sido abandonado.
+parece que dbpedia lo usa.
+me baso en ese header para obtener las urls alternativas.
+
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation
+
+----
+
+
+ahi cree un script que analiza el requerimiento y sigue las redirecciones.
+tira la url que asocia el servidor con el content type text/turtle.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ python3 entrega4/src/process_redirections_to_turtle.py https://dbpedia.org/resource/Katsuyuki_Konishi
+/data/Katsuyuki_Konishi.ttl
+pablo@xiaomi:/src/github/facu-infor/twss$ python3 entrega4/src/process_redirections_to_turtle.py https://dbpedia.org/resource/Katsuyuki
+/data/Katsuyuki.ttl
+pablo@xiaomi:/src/github/facu-infor/twss$ python3 entrega4/src/process_redirections_to_turtle.py https://dbpedia.org/resource/Katsu
+/data/Katsu.ttl
+pablo@xiaomi:/src/github/facu-infor/twss$ python3 entrega4/src/process_redirections_to_turtle.py https://dbpedia.org/resource/alg_32
+/data/alg_32.ttl
+pablo@xiaomi:/src/github/facu-infor/twss$ 
+
+veo que siempre redirije ciegamente a la url /resource/
+
