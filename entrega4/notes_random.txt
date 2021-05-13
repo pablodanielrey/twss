@@ -206,3 +206,126 @@ pablo@xiaomi:/src/github/facu-infor/twss$
 
 veo que siempre redirije ciegamente a la url /resource/
 
+-------------------
+
+
+ahora igualmente me doy cuenta que la cabecera alternates no hacía falta.
+veo que location redirige al contenido correctamente.
+y ya tiene en cuenta con location la redirección de http a https.
+
+modifico el script, queda mucho mas simple.
+no uso expresiones regulares.
+
+-----------------
+
+después de desarrollar el script veo que las redirecciones están directamente en el header Location:
+con lo cual podemos decirle a requests que siga las redirecciones y nos va a obtener el turtle directamente.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I -H 'Accept: text/turtle'  https://dbpedia.org/resource/Katsuyuki_Konishi
+HTTP/2 303 
+date: Thu, 13 May 2021 19:15:39 GMT
+content-type: text/turtle
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+tcn: choice
+vary: negotiate,accept
+alternates: {"/data/Katsuyuki_Konishi.atom" 0.500000 {type application/atom+xml}}, {"/data/Katsuyuki_Konishi.jrdf" 0.600000 {type application/rdf+json}}, {"/data/Katsuyuki_Konishi.jsod" 0.500000 {type application/odata+json}}, {"/data/Katsuyuki_Konishi.json" 0.600000 {type application/json}}, {"/data/Katsuyuki_Konishi.jsonld" 0.500000 {type application/ld+json}}, {"/data/Katsuyuki_Konishi.n3" 0.800000 {type text/n3}}, {"/data/Katsuyuki_Konishi.nt" 0.800000 {type text/rdf+n3}}, {"/data/Katsuyuki_Konishi.ntriples" 0.500000 {type application/n-triples}}, {"/data/Katsuyuki_Konishi.ttl" 0.700000 {type text/turtle}}, {"/data/Katsuyuki_Konishi.xml" 0.950000 {type application/rdf+xml}}
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/resource/Katsuyuki_Konishi>; rel="timegate"
+location: http://dbpedia.org/data/Katsuyuki_Konishi.ttl
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+-----
+
+pablo@xiaomi:/src/github/facu-infor/twss$ python3 entrega4/src/process_redirections_to_turtle.py http://dbpedia.org/resource/Katsuyuki
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix wikipedia-en:   <http://en.wikipedia.org/wiki/> .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+wikipedia-en:Katsuyuki  foaf:primaryTopic       dbr:Katsuyuki .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix wikidata:       <http://www.wikidata.org/entity/> .
+dbr:Katsuyuki   rdf:type        wikidata:Q82799 .
+@prefix yago:   <http://dbpedia.org/class/yago/> .
+dbr:Katsuyuki   rdf:type        yago:LanguageUnit106284225 ,
+                yago:Name106333653 ,
+                wikidata:Q202444 ,
+                yago:Relation100031921 ,
+                yago:Part113809207 .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+dbr:Katsuyuki   rdf:type        dbo:Name .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+dbr:Katsuyuki   rdf:type        owl:Thing ,
+                yago:Abstraction100002137 ,
+                dbo:GivenName ,
+                yago:FirstName106337307 .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+dbr:Katsuyuki   rdfs:label      "Katsuyuki"@en ;
+        foaf:name       "Katsuyuki"@en ;
+        foaf:isPrimaryTopicOf   wikipedia-en:Katsuyuki .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix dbc:    <http://dbpedia.org/resource/Category:> .
+dbr:Katsuyuki   dct:subject     dbc:Japanese_masculine_given_names ;
+        owl:sameAs      wikidata:Q6378245 ,
+                <https://global.dbpedia.org/id/4pHR2> ,
+                dbr:Katsuyuki .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+dbr:Katsuyuki   prov:wasDerivedFrom     <http://en.wikipedia.org/wiki/Katsuyuki?oldid=941729380&ns=0> .
+@prefix dbp:    <http://dbpedia.org/property/> .
+dbr:Katsuyuki   dbp:origin      "Japanese"@en ;
+        dbp:meaning     "Different meanings depending on the kanji used"@en ;
+        dbp:gender      "Male"@en ;
+        dbp:name        "Katsuyuki"@en ;
+        dbo:wikiPageID  36156911 ;
+        dbo:wikiPageRevisionID  941729380 ;
+        dbo:wikiPageWikiLink    dbr:Katsuyuki_Masuchi ,
+                dbr:Katsuyuki_Tanamura ,
+                dbr:Katsuyuki_Abe ,
+                dbr:Katsuyuki_Aihara ,
+                dbr:Katsuyuki_Dobashi ,
+                dbr:Katsuyuki_Kawachi ,
+                dbr:Katsuyuki_Hiranaka ,
+                dbr:Katsuyuki_Sakai ,
+                dbr:Katsuyuki_Miyazawa ,
+                <http://dbpedia.org/resource/Katsuyuki_Kond\u014D> ,
+                dbr:Katsuyuki_Saito ,
+                dbr:Katsuyuki_Kiyomiya ,
+                dbr:Katsuyuki_Minami ,
+                dbr:Katsuyuki_Nakasuga ,
+                dbr:Katsuyuki_Konishi ,
+                dbr:Katsuyuki_Kawai ,
+                dbr:Katsuyuki_Itakura ,
+                dbr:Katsuyuki_Hirano ,
+                dbr:Katsuyuki_Murai ,
+                dbr:Kanji ,
+                dbc:Japanese_masculine_given_names ,
+                dbr:Katsuyuki_Miyajima .
+@prefix dbt:    <http://dbpedia.org/resource/Template:> .
+dbr:Katsuyuki   dbp:wikiPageUsesTemplate        dbt:Nihongo2 ,
+                dbt:Given_name ,
+                dbt:Nihongo ,
+                dbt:Infobox_given_name .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+dbr:Katsuyuki   dbo:wikiPageLength      "2219"^^xsd:nonNegativeInteger ;
+        dbo:wikiPageDisambiguates       dbr:Katsuyuki_Kiyomiya ,
+                dbr:Katsuyuki_Itakura ,
+                dbr:Katsuyuki_Dobashi ,
+                dbr:Katsuyuki_Murai ,
+                dbr:Katsuyuki_Kawachi ,
+                dbr:Katsuyuki_Aihara ,
+                dbr:Katsuyuki_Sakai ,
+                dbr:Katsuyuki_Miyazawa ,
+                dbr:Katsuyuki_Abe ,
+                dbr:Katsuyuki_Saito ,
+                dbr:Katsuyuki_Miyajima ,
+                dbr:Katsuyuki_Nakasuga ,
+                <http://dbpedia.org/resource/Katsuyuki_Kond\u014D> ,
+                dbr:Katsuyuki_Tanamura ,
+                dbr:Katsuyuki_Masuchi ,
+                dbr:Katsuyuki_Hiranaka ,
+                dbr:Katsuyuki_Konishi ,
+                dbr:Katsuyuki_Kawai ,
+                dbr:Katsuyuki_Hirano ,
+                dbr:Katsuyuki_Minami ;
+        dbo:meaning     "Different meanings depending on thekanjiused" .
+
