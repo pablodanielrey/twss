@@ -329,3 +329,98 @@ dbr:Katsuyuki   dbo:wikiPageLength      "2219"^^xsd:nonNegativeInteger ;
                 dbr:Katsuyuki_Minami ;
         dbo:meaning     "Different meanings depending on thekanjiused" .
 
+---
+
+bueno es muy simple el script que hay que realizar.
+voy a consultarle a casco y a diego a ver si hace falta algo mas.
+
+
+----
+
+implemento la parte de leer los 2 ttls y consutlar el turtle a partir del sameAs.
+para simplificar la generación del turtle armo un script que tome las personas y les asigne el owl:sameAs 
+con la url de /resource/ de dbpedia.
+
+ahi termine el script.
+generate_sameAs.py
+
+----
+
+ahora probando una de las personas cuando accedo a :
+
+https://dbpedia.org/resource/Aaron%20Taylor-Johnson
+
+veo que redirije a la página de la persona y dice que no existe el recurso.
+The requested entity is unknown)
+
+me da curiosidad ver si dbpedia tira algo en http cuando se consulta el recurso original.
+
+
+-----
+
+retorna la redirección al /data/ 
+y el /data/ tira error de consulta sparql!!!!
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ curl -I -H 'Accept: text/turtle' https://dbpedia.org/resource/Aaron%20Taylor-Johnson
+HTTP/2 303 
+date: Thu, 13 May 2021 20:41:26 GMT
+content-type: text/turtle
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+tcn: choice
+vary: negotiate,accept
+alternates: {"/data/Aaron%20Taylor-Johnson.atom" 0.500000 {type application/atom+xml}}, {"/data/Aaron%20Taylor-Johnson.jrdf" 0.600000 {type application/rdf+json}}, {"/data/Aaron%20Taylor-Johnson.jsod" 0.500000 {type application/odata+json}}, {"/data/Aaron%20Taylor-Johnson.json" 0.600000 {type application/json}}, {"/data/Aaron%20Taylor-Johnson.jsonld" 0.500000 {type application/ld+json}}, {"/data/Aaron%20Taylor-Johnson.n3" 0.800000 {type text/n3}}, {"/data/Aaron%20Taylor-Johnson.nt" 0.800000 {type text/rdf+n3}}, {"/data/Aaron%20Taylor-Johnson.ntriples" 0.500000 {type application/n-triples}}, {"/data/Aaron%20Taylor-Johnson.ttl" 0.700000 {type text/turtle}}, {"/data/Aaron%20Taylor-Johnson.xml" 0.950000 {type application/rdf+xml}}
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/resource/Aaron%20Taylor-Johnson>; rel="timegate"
+location: http://dbpedia.org/data/Aaron%20Taylor-Johnson.ttl
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+
+----
+
+https://dbpedia.org/data/Aaron%20Taylor-Johnson.ttl
+
+Virtuoso 37000 Error SP030: SPARQL compiler, line 4: syntax error at '<' before 'local:'
+
+SPARQL query:
+define output:format "HTTP+TTL text/turtle" 
+#output-format:text/turtle
+define input:default-graph-uri <http://dbpedia.org>
+prefix owl: <http://www.w3.org/2002/07/owl#> CONSTRUCT { <local:/resource/Aaron Taylor-Johnson> `sql:dbp_replace (?p1)` `sql:dbp_replace (?o1)` . `sql:dbp_replace (?s2)` `sql:dbp_replace (?p2)` <local:/resource/Aaron Taylor-Johnson> . <local:/resource/Aaron Taylor-Johnson> owl:sameAs <http://dbpedia.org/resource/Aaron Taylor-Johnson> . } WHERE { { <http://dbpedia.org/resource/Aaron Taylor-Johnson> ?p1 ?o1 } UNION { ?s2 ?p2 <http://dbpedia.org/resource/Aaron Taylor-Johnson> } }
+
+
+uooouuu. hasta te da la consulta!!!.
+me suena a que si existe alguna versión de sql injection en sparql aca se puede aplicar!!!. problema de seguriadad!!!.
+
+
+-------------------
+
+
+siguiendo con el ejercicio.
+entiendo que dbpedia.org realiza consultas sparql con lo que le pongamos como parámetro después de /data/
+y si. al consutlar el data tira 400 si no existe el recurso.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ curl -I -H 'Accept: text/turtle' https://dbpedia.org/data/Aaron%20Taylor-Johnson
+HTTP/2 400 
+date: Thu, 13 May 2021 20:48:57 GMT
+content-type: text/plain
+content-length: 672
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ 
+
+-----
+
+o sea que puedo detectar las peronas que existen en base al nombre.
+
+----
+
+
+
+
+
+
