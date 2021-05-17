@@ -1,0 +1,56 @@
+
+
+iris escapadas vs iris sin escapar.
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>
+es igual? a :
+twssd:Alexander_Skarsgård
+
+
+
+---
+propiedades equivalentes definidas en distintos espacios de nombres.
+https://dbpedia.org/ontology/birthDate
+https://dbpedia.org/property/birthDate
+para que lo hacen?, cual es el sentido?.
+creo que es un resutlado de la consulta sparql, y no como se definiría la ontología normalmente.
+las dbpedia.org/property veo que los valores ya están desreferenciados.
+lo consulté en el foro igual a ver si es así.
+
+
+----
+exportar iris externas en nuestros datasets/convertir a iris y propiedades internas.
+lo consulté en el foro también.
+obtener los datos asociados y exportarlos usando las mismas iris dentro de mi owl final?. ej:
+
+twws:Antonio_Banderas  owl:sameAs  dbr:recurso_de_dbpedia .
+dbr: recurso_de_dbpedia     dbo:occupation  dbr:funcion_de_dbpedia .
+dbr:funcion_de_dbpedia      dbo:title       "Actor, producer, director"@en .
+
+esto sería sin cambiar las iris que obtengo. pero escribiéndolo en mi owl final para poder indicar que obtuve esa información.
+solo me hace ruido el exportar información que no corresponde a mi namespace en mis datos. pero creo que sería la correcta para
+no duplicar información y promover usar todos las mismas iris.
+
+o convertir las iris a iris internas de mi ontología, generar propieades para representar esa info y exportarlo de esa forma en mi owl final?. ej:
+
+twws:Antonio_Banderas         twss:occupation       "Actor, producer, director"@en .
+
+esta me hace ruido con respecto a que estaría generando propiedades para representar la misma info que ya está disponible. y duplicando propieades. 
+
+-----------
+
+cuando guardo la wiki en mi owl, uso foaf:isPrimaryTopicOf
+la misma propiedad que tiene definido en la ontología de dbpedia.
+ya que asocia:
+Thing --> Document
+lo cual sigue funcionando para mi ontología.
+así que reuso esa propiedad y no defino ninguna nueva mía.
+
+http://xmlns.com/foaf/spec/#term_isPrimaryTopicOf
+Property: foaf:isPrimaryTopicOf
+is primary topic of - A document that this thing is the primary topic of.
+Status:	stable
+Domain:	having this property implies being a Thing
+Range:	every value of this property is a Document
+Inverse Functional Property	
+
+

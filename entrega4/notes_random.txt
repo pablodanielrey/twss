@@ -417,10 +417,334 @@ pablo@xiaomi:/src/github/facu-infor/twss/entrega4$
 
 o sea que puedo detectar las peronas que existen en base al nombre.
 
+
+https://dbpedia.org/page/Paul_Briggs
+fijarse que se tiene 
+dbo:wikiPageDisambiguates
+dbo:wikiPageWikiLink
+
+
 ----
 
 
+ya teniendo una idea de que es lo necesario para consultar dbpedia y seguir las redirecciones,
+primero me voy a asegurar la entrega, asi que armo el archivo links a mano y testeo a ver que pueda obtener todo.
+
+tengo el prototipo funcionando.
+tengo que extraer las tripletas de los datos que necesito pero me surge una duda:
+
+tengo 2 propiedades iguales:
+
+https://dbpedia.org/ontology/birthDate
+https://dbpedia.org/property/birthDate
+
+una que viene de la ontología y otro de las propieadades de dbpedia.
+la version de la propiedad no se encuentra en formato turtle.
+
+pablo@xiaomi:~$ curl -H 'Accept: text/turtle' https://dbpedia.org/property/birthDate
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>406 Not Acceptable</title>
+</head><body>
+<h1>406 Not Acceptable</h1>
+<p>An appropriate representation of the requested resource birthDate could not be found on this server.</p>
+Available variant(s):
+<ul>
+<li><a href="birthDate">birthDate</a> , type text/html, charset UTF-8</li>
+</ul>
+</body></html>
+
+pablo@xiaomi:~$ curl -I -H 'Accept: text/turtle' https://dbpedia.org/property/birthDate
+HTTP/2 406 
+date: Mon, 17 May 2021 17:59:58 GMT
+content-type: text/html; charset=UTF-8
+content-length: 371
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+alternates: {"birthDate" 1 {type text/html} {charset UTF-8} {length 12096}}
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:~$ 
+
+
+-----------------
+
+
+la version de la ontología teóricamente se encuentra en turtle.
+pero no me la deja obtener.
+
+pablo@xiaomi:~$ curl -I -H 'Accept: text/turtle' https://dbpedia.org/ontology/birthDate
+HTTP/2 303 
+date: Mon, 17 May 2021 18:00:34 GMT
+content-type: text/turtle
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+location: http://dbpedia.org/data3/birthDate.ttl
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+
+pablo@xiaomi:~$ curl -I -H 'Accept: text/turtle' http://dbpedia.org/data3/birthDate.ttl
+HTTP/1.1 303 See Other
+Server: nginx/1.18.0
+Date: Mon, 17 May 2021 18:01:21 GMT
+Content-Type: text/html
+Content-Length: 153
+Connection: keep-alive
+Location: https://dbpedia.org/data3/birthDate.ttl
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: HEAD, GET, POST, OPTIONS
+Access-Control-Allow-Headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+
+pablo@xiaomi:~$ curl -I https://dbpedia.org/data3/birthDate.ttl
+HTTP/2 200 
+date: Mon, 17 May 2021 18:02:56 GMT
+content-type: text/turtle; charset=UTF-8
+content-length: 1676
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+x-sparql-default-graph: http://dbpedia.org/resource/classes#
+content-disposition: filename=sparql_2021-05-17_18-02-58Z.ttl
+expires: Mon, 24 May 2021 18:02:56 GMT
+cache-control: max-age=604800
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+accept-ranges: bytes
+
+pablo@xiaomi:~$ curl https://dbpedia.org/data3/birthDate.ttl
+@prefix ns0:	<http://open.vocab.org/terms/> .
+@prefix dbo:	<http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/>	ns0:defines	dbo:birthDate .
+<http://dbpedia.org/ontology/data/definitions.ttl>	ns0:describes	dbo:birthDate .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+dbo:birthDate	rdf:type	owl:FunctionalProperty ,
+		rdf:Property ,
+		owl:DatatypeProperty .
+@prefix wikidata:	<http://www.wikidata.org/entity/> .
+dbo:birthDate	owl:equivalentProperty	wikidata:P569 .
+@prefix schema:	<http://schema.org/> .
+dbo:birthDate	owl:equivalentProperty	schema:birthDate .
+@prefix ns6:	<https://d-nb.info/standards/elementset/gnd#> .
+dbo:birthDate	owl:equivalentProperty	ns6:dateOfBirth .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+dbo:birthDate	rdfs:label	"date de naissance"@fr ,
+		"\u099C\u09A8\u09CD\u09AE\u09A6\u09BF\u09A8"@bn ,
+		"d\u00E1ta breithe"@ga ,
+		"data de naixement"@ca ,
+		"birth date"@en ,
+		"\u751F\u5E74\u6708\u65E5"@ja ,
+		"\u03B7\u03BC\u03B5\u03C1\u03BF\u03BC\u03B7\u03BD\u03AF\u03B1_\u03B3\u03AD\u03BD\u03BD\u03B7\u03C3\u03B7\u03C2"@el ,
+		"data urodzenia"@pl ,
+		"Geburtsdatum"@de ,
+		"geboortedatum"@nl ;
+	rdfs:domain	dbo:Person .
+@prefix xsd:	<http://www.w3.org/2001/XMLSchema#> .
+dbo:birthDate	rdfs:range	xsd:date ;
+	rdfs:isDefinedBy	dbo: .
+@prefix wdrs:	<http://www.w3.org/2007/05/powder-s#> .
+dbo:birthDate	wdrs:describedby	<http://dbpedia.org/ontology/data/definitions.ttl> ;
+	owl:sameAs	dbo:birthDate .
+@prefix prov:	<http://www.w3.org/ns/prov#> .
+@prefix ns11:	<http://mappings.dbpedia.org/index.php/OntologyProperty:> .
+dbo:birthDate	prov:wasDerivedFrom	ns11:birthDate .
+
+
+no entiendo por que están definidas las mismas propieades en distintos espacios de nombres.
+consulto al foro.
+
+----
+
+
+me esta funcionado el obtener los datos asociados.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/entrega.py  > /tmp/p.ttl
+
+me deja para Alexander_Skarsgård
+
+twssd:Alexander_Skarsgård ns2:birthDate "1976-08-25"^^xsd:date ;
+    ns2:occupation dbr:Alexander_Skarsgård__PersonFunction__1 ;
+    ns1:sameAs dbr:Alexander_Skarsgård .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> a schema:Person,
+        ns1:NamedIndividual ;
+    schema:name "Alexander Skarsgård" .
+
+veo que se obtiene la ocupacion y la fecha de cumpleaños pero se asocian al mismo o distinto individual?
+no se como se trata el tema de escapar la iri. si es equivalnete a escribirla en utf8?
+
+---
+
+analizo por ejemplo a Antonio Banderas.
+me tira la ocupación:
+https://dbpedia.org/resource/Antonio_Banderas__PersonFunction__1
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ curl -I -H 'Accept: text/turtle' https://dbpedia.org/resource/Antonio_Banderas__PersonFunction__1
+HTTP/2 303 
+date: Mon, 17 May 2021 20:54:29 GMT
+content-type: text/turtle
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+tcn: choice
+vary: negotiate,accept
+alternates: {"/data/Antonio_Banderas__PersonFunction__1.atom" 0.500000 {type application/atom+xml}}, {"/data/Antonio_Banderas__PersonFunction__1.jrdf" 0.600000 {type application/rdf+json}}, {"/data/Antonio_Banderas__PersonFunction__1.jsod" 0.500000 {type application/odata+json}}, {"/data/Antonio_Banderas__PersonFunction__1.json" 0.600000 {type application/json}}, {"/data/Antonio_Banderas__PersonFunction__1.jsonld" 0.500000 {type application/ld+json}}, {"/data/Antonio_Banderas__PersonFunction__1.n3" 0.800000 {type text/n3}}, {"/data/Antonio_Banderas__PersonFunction__1.nt" 0.800000 {type text/rdf+n3}}, {"/data/Antonio_Banderas__PersonFunction__1.ntriples" 0.500000 {type application/n-triples}}, {"/data/Antonio_Banderas__PersonFunction__1.ttl" 0.700000 {type text/turtle}}, {"/data/Antonio_Banderas__PersonFunction__1.xml" 0.950000 {type application/rdf+xml}}
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/resource/Antonio_Banderas__PersonFunction__1>; rel="timegate"
+location: http://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.ttl
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ curl -I -H 'accept: text/turtle' http://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.ttl
+HTTP/1.1 303 See Other
+Server: nginx/1.18.0
+Date: Mon, 17 May 2021 20:55:08 GMT
+Content-Type: text/html
+Content-Length: 153
+Connection: keep-alive
+Location: https://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.ttl
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: HEAD, GET, POST, OPTIONS
+Access-Control-Allow-Headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ curl -I -H 'accept: text/turtle' https://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.ttl
+HTTP/2 200 
+date: Mon, 17 May 2021 20:55:16 GMT
+content-type: text/turtle; charset=UTF-8
+content-length: 507
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+expires: Mon, 24 May 2021 20:55:16 GMT
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.xml>; rel="alternate"; type="application/rdf+xml"; title="Structured Descriptor Document (RDF/XML format)", <http://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.n3>; rel="alternate"; type="text/n3"; title="Structured Descriptor Document (N3/Turtle format)", <http://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.json>; rel="alternate"; type="application/json"; title="Structured Descriptor Document (RDF/JSON format)", <http://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.atom>; rel="alternate"; type="application/atom+xml"; title="OData (Atom+Feed format)", <http://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.jsod>; rel="alternate"; type="application/odata+json"; title="OData (JSON format)", <http://dbpedia.org/page/Antonio_Banderas__PersonFunction__1>; rel="alternate"; type="text/html"; title="XHTML+RDFa", <http://dbpedia.org/resource/Antonio_Banderas__PersonFunction__1>; rel="http://xmlns.com/foaf/0.1/primaryTopic", <http://dbpedia.org/resource/Antonio_Banderas__PersonFunction__1>; rev="describedby", <http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.ttl>; rel="timegate"
+x-sparql-default-graph: http://dbpedia.org
+content-disposition: filename=sparql_2021-05-17_20-55-19Z.ttl
+cache-control: max-age=604800
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+accept-ranges: bytes
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ curl -H 'accept: text/turtle' https://dbpedia.org/data/Antonio_Banderas__PersonFunction__1.ttl
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix dbr:    <http://dbpedia.org/resource/> .
+dbr:Antonio_Banderas    dbo:occupation  dbr:Antonio_Banderas__PersonFunction__1 .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+dbr:Antonio_Banderas__PersonFunction__1 rdf:type        dbo:PersonFunction .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+dbr:Antonio_Banderas__PersonFunction__1 rdf:type        owl:Thing ;
+        owl:sameAs      dbr:Antonio_Banderas__PersonFunction__1 ;
+        dbo:title       "Actor, producer, director"@en .
+
+
+veo que para desreferenciar estos datos debería chequear que sea :
+dbo:PersonFunction
+dbo:title <--- datos requeridos
+
+-----
+
+también ahi veo la relación entre dbo:occupation y dbp:occupation
+
+
+....	dbo:occupation	dbr:Antonio_Banderas__PersonFunction__1 .
+....    dbp:occupation	"Actor, producer, director"@en ;
+
+en el caso de object properties ya están desreferenciadas las propieades. asumo que es un tema de que generan los datos asociados al los .ttl
+usando consultas sparql y ya las desreferencian ahí. (o sea no es que se defina normalmente la ontología así)
+
+----
+
+tomé la opción mas compleja y desreferencio la iri de la ocupación.
+creo que es a lo que se refería ale cuando decía que tenemos que desreferenciar todo.
+
+twssd:Antonio_Banderas a schema:Person,
+        ns1:NamedIndividual ;
+    dbo:birthDate "1960-08-10"^^xsd:date ;
+    dbo:title "Actor, producer, director"@en ;
+    schema:name "Antonio Banderas" ;
+    ns1:sameAs dbr:Antonio_Banderas .
+
+andubo ok. me trajo dbo:title de la ocupación y la asigné al iri de mi dominio.
+después tengo que hacer la traslación de las propiedades de dbpedia a propieades definidas dentro de mi ontología.
 
 
 
+------
+
+para el caso de la wifi veo que se puede obtener usando la propiedad. foaf:primaryTopic
+
+@prefix wikipedia-en:	<http://en.wikipedia.org/wiki/> .
+wikipedia-en:Antonio_Banderas	foaf:primaryTopic	dbr:Antonio_Banderas .
+
+o también puedo usar la inversa:
+
+@prefix wikipedia-en:	<http://en.wikipedia.org/wiki/> .
+dbr:Antonio_Banderas foaf:isPrimaryTopicOf	wikipedia-en:Antonio_Banderas .
+
+para mi es mas simple usar la inversa.
+
+
+perfecto, adapté el script y funcionó.
+
+twssd:Antonio_Banderas a schema:Person,
+        ns1:NamedIndividual ;
+    dbo:birthDate "1960-08-10"^^xsd:date ;
+    dbo:title "Actor, producer, director"@en ;
+    schema:name "Antonio Banderas" ;
+    ns1:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
+
+
+no desreferencio la wifi porque no trae ninguna info en turtle.
+
+pablo@xiaomi:~$ curl -I -H 'accept: text/turtle' https://en.wikipedia.org/wiki/Antonio_Banderas
+HTTP/2 200 
+date: Mon, 17 May 2021 07:19:04 GMT
+vary: Accept-Encoding,Cookie,Authorization
+server: ATS/8.0.8
+x-content-type-options: nosniff
+p3p: CP="See https://en.wikipedia.org/wiki/Special:CentralAutoLogin/P3P for more info."
+content-language: en
+x-request-id: 5cc877c5-3123-48ff-8a54-d1304bcc4842
+last-modified: Sun, 16 May 2021 06:48:33 GMT
+content-type: text/html; charset=UTF-8
+age: 54535
+x-cache: cp1085 miss, cp1079 hit/25
+x-cache-status: hit-front
+server-timing: cache;desc="hit-front", host;desc="cp1079"
+strict-transport-security: max-age=106384710; includeSubDomains; preload
+report-to: { "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+nel: { "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction": 0.0}
+permissions-policy: interest-cohort=()
+set-cookie: WMF-Last-Access=17-May-2021;Path=/;HttpOnly;secure;Expires=Fri, 18 Jun 2021 12:00:00 GMT
+set-cookie: WMF-Last-Access-Global=17-May-2021;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Fri, 18 Jun 2021 12:00:00 GMT
+x-client-ip: 191.84.252.51
+cache-control: private, s-maxage=0, max-age=0, must-revalidate
+set-cookie: GeoIP=AR:B:La_Plata:-34.93:-57.95:v4; Path=/; secure; Domain=.wikipedia.org
+accept-ranges: bytes
+content-length: 270885
+
+
+
+---------------------------
+
+
+consulta par el foro!!!! 
+tenemos las siguientes definiciones en turtle:
+
+dbo:birthDate rdfs:domain	dbo:Person .
+
+dbo:Person	owl:equivalentClass	schema:Person .
+
+twssd:Person rdfs:type schema:Person .
+
+como la semántica de equivalentClass no es igual a sameAs (como explicó ale en el foro) entonces no se puede usar la propiedad para dominio = twssd:Person
+asi que genero una nueva.
+
+consultaría la foro si en el caso de tener sameAs si se podría usar la misma propiedad.
+
+referencias:
+https://www.w3.org/TR/rdf-schema/#ch_domain
+https://www.w3.org/TR/owl2-syntax/#Equivalent_Data_Properties
 
