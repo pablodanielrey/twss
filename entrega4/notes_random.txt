@@ -730,7 +730,7 @@ content-length: 270885
 ---------------------------
 
 
-consulta par el foro!!!! 
+consulta par el foro!!!! acordarme!!!.
 tenemos las siguientes definiciones en turtle:
 
 dbo:birthDate rdfs:domain	dbo:Person .
@@ -742,9 +742,13 @@ twssd:Person rdfs:type schema:Person .
 como la semántica de equivalentClass no es igual a sameAs (como explicó ale en el foro) entonces no se puede usar la propiedad para dominio = twssd:Person
 asi que genero una nueva.
 
-consultaría la foro si en el caso de tener sameAs si se podría usar la misma propiedad.
+consultaría la foro si en el caso de tener sameAs si se podría usar la misma propiedad?
 
 referencias:
 https://www.w3.org/TR/rdf-schema/#ch_domain
 https://www.w3.org/TR/owl2-syntax/#Equivalent_Data_Properties
+
+
+-------
+
 

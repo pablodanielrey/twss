@@ -14,6 +14,7 @@ def get_schemas():
         'schema': Namespace('http://schema.org/'),
         'twss': Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl#'),
         'twsse': Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl#'),
+        'twsse2': Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended2.ttl#'),
         'twssd': Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/'),
         'dbr': Namespace('http://dbpedia.org/resource/'),
         'dbo': Namespace('http://dbpedia.org/ontology/'),
@@ -42,8 +43,8 @@ def to_graph(data):
     return gaux
 
 def get_triples_to_add(gaux):
-    dbo = Namespace('http://dbpedia.org/ontology/')
-    foaf = Namespace('http://xmlns.com/foaf/0.1/')
+    dbo = get_schemas()['dbo']
+    foaf = get_schemas()['foaf']
     triples = []
 
     ''' data properties '''
@@ -62,16 +63,49 @@ def get_triples_to_add(gaux):
 
     return triples
 
-def change_subjects(subject, triples):
-    ''' aplico las tripletas al subject correcto '''
+
+def occupation_to_my_ontology(schema, triple):
+    ''' 
+        defino una opcupación como un blank node y se la asigno a la persona
+    '''
+    (st, sp, so) = triple
+    o = BNode(f'occupation_{str(uuid.uuid4())}')
+    return [
+        (o, RDF.type, schema.Occupation),
+        (o, schema.name, so),
+        (st, schema.hasOccupation, o)
+    ]
+
+def birth_to_my_ontology(schema, triple):
+    ''' solo cambio a usar la propiedad de mi ontología '''
+    (st, sp, so) = triple
+    return [(st, schema.birthDate, so)]
+
+def change_to_my_ontology(subject, triples):
+    ''' 
+        aplico las tripletas al subject correcto y reemplazo las propieades por las correctas a mi ontología 
+    '''
+    dbo = get_schemas()['dbo']
+    t = get_schemas()['twsse2']
+    properties_map = {
+        dbo.title: occupation_to_my_ontology,
+        dbo.birthDate: birth_to_my_ontology
+    }
     rtriples = []
     for st,sp,so in triples:
-        rtriples.append((subject, sp, so))
+        ''' cambio el subject y cambio la propiedad '''
+        if sp in properties_map:
+            func = properties_map[sp]
+            to_add = func(t, (subject,sp,so))
+        else:
+            to_add = [(subject, sp, so)]
+        rtriples.extend(to_add)
     return rtriples
 
 def derreference_occupation(occupation):
+    ''' accede a la iri que representa la ocupación y obtiene las tripletas que son el título '''
     turtle = dereference_resource(occupation)
-    dbo = Namespace('http://dbpedia.org/ontology/')
+    dbo = get_schemas()['dbo']
     gaux = Graph()
     gaux.parse(data=turtle, format='turtle')
     for titles in gaux.triples((None, dbo.title, None)):
@@ -103,7 +137,7 @@ if __name__ == '__main__':
             data = dereference_resource(iri)
             gaux = to_graph(data)
             triples = get_triples_to_add(gaux)
-            for stt,spp,soo in change_subjects(st, triples):
+            for stt,spp,soo in change_to_my_ontology(st, triples):
                 g.add((stt,spp,soo))
             break
 

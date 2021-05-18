@@ -39,7 +39,7 @@ esta me hace ruido con respecto a que estaría generando propiedades para repres
 -----------
 
 cuando guardo la wiki en mi owl, uso foaf:isPrimaryTopicOf
-la misma propiedad que tiene definido en la ontología de dbpedia.
+la misma propiedad que tiene definido el individual en la ontología de dbpedia.
 ya que asocia:
 Thing --> Document
 lo cual sigue funcionando para mi ontología.
@@ -52,5 +52,8 @@ Status:	stable
 Domain:	having this property implies being a Thing
 Range:	every value of this property is a Document
 Inverse Functional Property	
+
+
+----
 
 
