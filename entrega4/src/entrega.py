@@ -58,7 +58,7 @@ def get_triples_to_add(gaux):
     for p in properties:
         for st, sp, so in gaux.triples((None, p, None)):
             oiri = str(so)
-            print(oiri)
+            #print(oiri)
             triples2 = derreference_occupation(oiri)
             triples.extend(triples2)
 
@@ -142,7 +142,6 @@ if __name__ == '__main__':
 
     for st,sp,so in g.triples((None, OWL.sameAs, None)):
         if 'dbpedia' in str(so):
-            print(f'Accediendo a {so}')
             iri = str(so)
             data = dereference_resource(iri)
             gaux = to_graph(data)

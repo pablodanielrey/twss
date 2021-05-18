@@ -62,7 +62,6 @@ algunas temas complejos de la definición de la ontología de dbpedia.
 las ocupaciones en algunos casos 
 
 
-
 ----
 
 otro tema de con el lenguaje de consulta que me da rdflib 
