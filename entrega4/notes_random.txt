@@ -794,3 +794,222 @@ twssd:Antonio_Banderas a schema:Person,
 
 -------------
 
+bueno ahi descomente para que se genere para todos los actores de links.
+y veo que tira un error con la única ocupación distinta. la de Chris Pine.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/entrega.py 
+Accediendo a http://dbpedia.org/resource/Millie_Bobby_Brown
+http://dbpedia.org/resource/Millie_Bobby_Brown__PersonFunction__1
+Accediendo a http://dbpedia.org/resource/Rebecca_Hall
+http://dbpedia.org/resource/Rebecca_Hall__PersonFunction__1
+Accediendo a http://dbpedia.org/resource/Charlie_Heaton
+http://dbpedia.org/resource/Charlie_Heaton__PersonFunction__1
+Accediendo a http://dbpedia.org/resource/Elizabeth_Debicki
+http://dbpedia.org/resource/Elizabeth_Debicki__PersonFunction__1
+Accediendo a http://dbpedia.org/resource/Antonio_Banderas
+http://dbpedia.org/resource/Antonio_Banderas__PersonFunction__1
+Accediendo a http://dbpedia.org/resource/Chris_Pine
+http://dbpedia.org/resource/Chris_Pine__PersonFunction__1
+http://dbpedia.org/resource/Film_Actor
+Traceback (most recent call last):
+  File "/src/github/facu-infor/twss/entrega4/src/entrega.py", line 144, in <module>
+    triples = get_triples_to_add(gaux)
+  File "/src/github/facu-infor/twss/entrega4/src/entrega.py", line 63, in get_triples_to_add
+    triples.extend(triples2)
+TypeError: 'NoneType' object is not iterable
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ 
+
+
+debo debuggear para analizar por que Film_Actor tira error.
+
+
+------
+
+veo a ver que retorna Film_Actor
+sigo toda la cadena de redirecciones.
+
+pablo@xiaomi:~$ curl -H 'Accept: text/turtle' -I http://dbpedia.org/resource/Film_Actor
+HTTP/1.1 303 See Other
+Server: nginx/1.18.0
+Date: Tue, 18 May 2021 14:29:22 GMT
+Content-Type: text/html
+Content-Length: 153
+Connection: keep-alive
+Location: https://dbpedia.org/resource/Film_Actor
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: HEAD, GET, POST, OPTIONS
+Access-Control-Allow-Headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:~$ curl -H 'Accept: text/turtle' -I https://dbpedia.org/resource/Film_Actor
+HTTP/2 303 
+date: Tue, 18 May 2021 14:29:40 GMT
+content-type: text/turtle
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+tcn: choice
+vary: negotiate,accept
+alternates: {"/data/Film_Actor.atom" 0.500000 {type application/atom+xml}}, {"/data/Film_Actor.jrdf" 0.600000 {type application/rdf+json}}, {"/data/Film_Actor.jsod" 0.500000 {type application/odata+json}}, {"/data/Film_Actor.json" 0.600000 {type application/json}}, {"/data/Film_Actor.jsonld" 0.500000 {type application/ld+json}}, {"/data/Film_Actor.n3" 0.800000 {type text/n3}}, {"/data/Film_Actor.nt" 0.800000 {type text/rdf+n3}}, {"/data/Film_Actor.ntriples" 0.500000 {type application/n-triples}}, {"/data/Film_Actor.ttl" 0.700000 {type text/turtle}}, {"/data/Film_Actor.xml" 0.950000 {type application/rdf+xml}}
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/resource/Film_Actor>; rel="timegate"
+location: http://dbpedia.org/data/Film_Actor.ttl
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:~$ curl -H 'Accept: text/turtle' -I http://dbpedia.org/data/Film_Actor.ttl
+HTTP/1.1 303 See Other
+Server: nginx/1.18.0
+Date: Tue, 18 May 2021 14:29:56 GMT
+Content-Type: text/html
+Content-Length: 153
+Connection: keep-alive
+Location: https://dbpedia.org/data/Film_Actor.ttl
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: HEAD, GET, POST, OPTIONS
+Access-Control-Allow-Headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:~$ curl -H 'Accept: text/turtle' -I https://dbpedia.org/data/Film_Actor.ttl
+HTTP/2 200 
+date: Tue, 18 May 2021 14:30:05 GMT
+content-type: text/turtle; charset=UTF-8
+content-length: 2896
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+expires: Tue, 25 May 2021 14:30:05 GMT
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.org/data/Film_Actor.xml>; rel="alternate"; type="application/rdf+xml"; title="Structured Descriptor Document (RDF/XML format)", <http://dbpedia.org/data/Film_Actor.n3>; rel="alternate"; type="text/n3"; title="Structured Descriptor Document (N3/Turtle format)", <http://dbpedia.org/data/Film_Actor.json>; rel="alternate"; type="application/json"; title="Structured Descriptor Document (RDF/JSON format)", <http://dbpedia.org/data/Film_Actor.atom>; rel="alternate"; type="application/atom+xml"; title="OData (Atom+Feed format)", <http://dbpedia.org/data/Film_Actor.jsod>; rel="alternate"; type="application/odata+json"; title="OData (JSON format)", <http://dbpedia.org/page/Film_Actor>; rel="alternate"; type="text/html"; title="XHTML+RDFa", <http://dbpedia.org/resource/Film_Actor>; rel="http://xmlns.com/foaf/0.1/primaryTopic", <http://dbpedia.org/resource/Film_Actor>; rev="describedby", <http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/data/Film_Actor.ttl>; rel="timegate"
+x-sparql-default-graph: http://dbpedia.org
+content-disposition: filename=sparql_2021-05-18_14-03-01Z.ttl
+cache-control: max-age=604800
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+accept-ranges: bytes
+
+me retorna un turtle ok.
+per veo que en ese dataset no me define dbo:title
+si no que define rdfs:label
+
+dbr:Film_Actor	rdf:type	dbo:PersonFunction .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+dbr:Film_Actor	rdfs:label	"Film Actor"@en ;
+
+
+cuando en otros turtles si indica la ocupación con dbo:title
+
+pablo@xiaomi:~$ curl -H 'accept: text/turtle' https://dbpedia.org/data/Robert_Pattinson__PersonFunction__1.ttl
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+@prefix dbo:	<http://dbpedia.org/ontology/> .
+dbr:Robert_Pattinson__PersonFunction__1	rdf:type	dbo:PersonFunction .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+dbr:Robert_Pattinson__PersonFunction__1	rdf:type	owl:Thing ;
+	owl:sameAs	dbr:Robert_Pattinson__PersonFunction__1 ;
+	dbo:title	"Actor"@en .
+dbr:Robert_Pattinson	dbo:occupation	dbr:Robert_Pattinson__PersonFunction__1 .
+
+
+ajusto el script para tomar también de rdfs:label
+
+funcionó bien. asi que saque las ocupaciones teniendo en cuenta las 2 propieadades.
+dbo:title
+rdfs:label
+
+----
+
+pero algo raro me dejo en Chris_Pine el rdfs:label.
+mmm algún error tengo.
+
+twssd:Chris_Pine a schema:Person,
+        ns1:NamedIndividual ;
+    rdfs:label "Film Actor"@en ;
+    schema:image <https://resizing.flixster.com/kXDRe1jUWEU8UFkdf8JhRPMUG8s=/660x990/v1.bjs3NTYxMDQ7ajsxODgxODsxMjAwOzY2MDs5OTA> ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine> ;
+    schema:name "Chris Pine" ;
+    schema:sameAs <https://www.rottentomatoes.com/celebrity/christopher_pine> ;
+    schema:url <https://www.imdb.com/name/nm1517976>,
+        <https://www.metacritic.com/person/chris-pine> ;
+    ns1:sameAs dbr:Chris_Pine ;
+    foaf:isPrimaryTopicOf wiki:Chris_Pine ;
+    twsse2:birthDate "1980-08-26"^^xsd:date ;
+    twsse2:hasOccupation [ a twsse2:Occupation ;
+            twsse2:name "Film Actor" ] .
+
+twssd:Gal_Gadot a schema:Person,
+        ns1:NamedIndividual ;
+    schema:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot> ;
+    schema:name "Gal Gadot" ;
+    schema:sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> ;
+    schema:url <https://www.imdb.com/name/nm2933757>,
+        <https://www.metacritic.com/person/gal-gadot> ;
+    ns1:sameAs dbr:Gal_Gadot ;
+    foaf:isPrimaryTopicOf wiki:Gal_Gadot ;
+    twsse2:birthDate "1985-04-30"^^xsd:date ;
+    twsse2:hasOccupation [ a twsse2:Occupation ;
+            twsse2:name "Miss Israel2004" ],
+        [ a twsse2:Occupation ;
+            twsse2:name "model" ],
+        [ a twsse2:Occupation ;
+            twsse2:name "Actress" ] .
+
+
+----
+
+la función de Chris_Pine esta ok. con el title.
+
+pablo@xiaomi:~$ curl -H 'accept: text/turtle' https://dbpedia.org/data/Chris_Pine__PersonFunction__1.ttl
+@prefix dbo:	<http://dbpedia.org/ontology/> .
+@prefix dbr:	<http://dbpedia.org/resource/> .
+dbr:Chris_Pine	dbo:occupation	dbr:Chris_Pine__PersonFunction__1 .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+dbr:Chris_Pine__PersonFunction__1	rdf:type	owl:Thing ,
+		dbo:PersonFunction ;
+	owl:sameAs	dbr:Chris_Pine__PersonFunction__1 ;
+	dbo:title	"Film Actor"@en .
+
+
+ahora me fijo el recurso de Chris_Pine como persona:
+
+
+        dbo:occupation  dbr:Chris_Pine__PersonFunction__1 ,
+                dbr:Film_Actor .
+
+ahi esta. esta definido con 2 ocupaciones. una de las cuales solo tiene un rdfs:Label y no tiene dbo:title
+cambio el codigo para que vaya por cada una de las opcupaciones desreferenciadas obteniendo los titles. lo demás lo ignore.
+
+----
+
+funcionó perfecto.
+
+twssd:Chris_Pine a schema:Person,
+        ns1:NamedIndividual ;
+    schema:image <https://resizing.flixster.com/kXDRe1jUWEU8UFkdf8JhRPMUG8s=/660x990/v1.bjs3NTYxMDQ7ajsxODgxODsxMjAwOzY2MDs5OTA> ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine> ;
+    schema:name "Chris Pine" ;
+    schema:sameAs <https://www.rottentomatoes.com/celebrity/christopher_pine> ;
+    schema:url <https://www.imdb.com/name/nm1517976>,
+        <https://www.metacritic.com/person/chris-pine> ;
+    ns1:sameAs dbr:Chris_Pine ;
+    foaf:isPrimaryTopicOf wiki:Chris_Pine ;
+    twsse2:birthDate "1980-08-26"^^xsd:date ;
+    twsse2:hasOccupation [ a twsse2:Occupation ;
+            twsse2:name "Film Actor" ] .
+
+twssd:Gal_Gadot a schema:Person,
+        ns1:NamedIndividual ;
+    schema:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
+    schema:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot> ;
+    schema:name "Gal Gadot" ;
+    schema:sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> ;
+    schema:url <https://www.imdb.com/name/nm2933757>,
+        <https://www.metacritic.com/person/gal-gadot> ;
+    ns1:sameAs dbr:Gal_Gadot ;
+    foaf:isPrimaryTopicOf wiki:Gal_Gadot ;
+    twsse2:birthDate "1985-04-30"^^xsd:date ;
+    twsse2:hasOccupation [ a twsse2:Occupation ;
+            twsse2:name "Actress" ],
+        [ a twsse2:Occupation ;
+            twsse2:name "model" ],
+        [ a twsse2:Occupation ;
+            twsse2:name "Miss Israel2004" ] .
+
+

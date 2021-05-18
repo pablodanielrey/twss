@@ -58,6 +58,7 @@ def get_triples_to_add(gaux):
     for p in properties:
         for st, sp, so in gaux.triples((None, p, None)):
             oiri = str(so)
+            print(oiri)
             triples2 = derreference_occupation(oiri)
             triples.extend(triples2)
 
@@ -112,8 +113,15 @@ def derreference_occupation(occupation):
     dbo = get_schemas()['dbo']
     gaux = Graph()
     gaux.parse(data=turtle, format='turtle')
-    for titles in gaux.triples((None, dbo.title, None)):
-        return (titles,)
+
+    triples = []
+
+    ''' me aseguro de que lo referenciado sea dbo:PersonFunction '''
+    for st, sp, so in gaux.triples((None, RDF.type, dbo.PersonFunction)):
+        for titles in gaux.triples((st, dbo.title, None)):
+            triples.append(titles)
+
+    return triples
 
 
 if __name__ == '__main__':
@@ -133,17 +141,16 @@ if __name__ == '__main__':
             g.parse(f, format='turtle')
 
     for st,sp,so in g.triples((None, OWL.sameAs, None)):
-        if 'Antonio_Banderas' not in str(st):
-            continue
+        #if 'Antonio_Banderas' not in str(st):
+        #    continue
         if 'dbpedia' in str(so):
-            #print(f'Accediendo a {so}')
+            print(f'Accediendo a {so}')
             iri = str(so)
             data = dereference_resource(iri)
             gaux = to_graph(data)
             triples = get_triples_to_add(gaux)
             for stt,spp,soo in change_to_my_ontology(st, triples):
                 g.add((stt,spp,soo))
-            break
 
     ''' la salida del script debe ser stdout así que imprimo todas las tripletas del grafo '''
     g.serialize(sys.stdout.buffer, format='turtle')

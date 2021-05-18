@@ -58,3 +58,5 @@ Inverse Functional Property
 ----
 
 
+algunas temas complejos de la definición de la ontología de dbpedia.
+las ocupaciones en algunos casos 
