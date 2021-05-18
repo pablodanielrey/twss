@@ -1,18 +1,28 @@
+@prefix : <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#> .
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix wiki: <http://en.wikipedia.org/wiki/> .
+
 @prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
 @prefix twsss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#> .
-@prefix wiki: <http://en.wikipedia.org/wiki/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> .
 
-twssd:Alexander_Skarsgård schema:birthDate "1976-08-25"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ] ;
-    owl:sameAs dbr:Alexander_Skarsgård ;
-    foaf:isPrimaryTopicOf wiki:Alexander_Skarsgård .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> a owl:Ontology .
+
+
+
+
+
+#############################################
+#  Individuals
+################################################
 
 twssd:show_03116052-ac3c-445e-9d59-45364b71eb67 a owl:NamedIndividual,
         twsss:Show ;
@@ -753,7 +763,6 @@ twssd:show_feb085e7-1e6d-4422-ac21-d02bd5872274 a owl:NamedIndividual,
     twsss:movieFormat "2D" ;
     twsss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> a owl:Ontology .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada> a schema:Person,
         owl:NamedIndividual ;
@@ -856,16 +865,7 @@ twssd:Anthony_Ramos a schema:Person,
 
 twssd:Antonio_Banderas a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "1960-08-10"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
-        [ a schema:Occupation ;
-            schema:name "producer" ],
-        [ a schema:Occupation ;
-            schema:name "director" ] ;
-    schema:name "Antonio Banderas" ;
-    owl:sameAs dbr:Antonio_Banderas ;
-    foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
+    schema:name "Antonio Banderas" .
 
 twssd:Anya_Taylor-Joy a schema:Person,
         owl:NamedIndividual ;
@@ -972,14 +972,7 @@ twssd:Chance_the_Rapper a schema:Person,
 
 twssd:Charlie_Heaton a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "1994-02-06"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
-        [ a schema:Occupation ;
-            schema:name "musician" ] ;
-    schema:name "Charlie Heaton" ;
-    owl:sameAs dbr:Charlie_Heaton ;
-    foaf:isPrimaryTopicOf wiki:Charlie_Heaton .
+    schema:name "Charlie Heaton" .
 
 twssd:Chiara_Mastroianni a schema:Person,
         owl:NamedIndividual ;
@@ -1151,12 +1144,7 @@ twssd:El_silencio_del_cazador a schema:Movie,
 
 twssd:Elizabeth_Debicki a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "1990-08-24"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ] ;
-    schema:name "Elizabeth Debicki" ;
-    owl:sameAs dbr:Elizabeth_Debicki ;
-    foaf:isPrimaryTopicOf wiki:Elizabeth_Debicki .
+    schema:name "Elizabeth Debicki" .
 
 twssd:Ella_Walker a schema:Person,
         owl:NamedIndividual ;
@@ -1345,12 +1333,7 @@ twssd:Joel_Morris a schema:Person,
 
 twssd:John_David_Washington a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "1984-07-28"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ] ;
-    schema:name "John David Washington" ;
-    owl:sameAs dbr:John_David_Washington ;
-    foaf:isPrimaryTopicOf wiki:John_David_Washington .
+    schema:name "John David Washington" .
 
 twssd:John_David_Washington_Kenneth_Branagh a schema:Person,
         owl:NamedIndividual ;
@@ -1611,12 +1594,7 @@ twssd:Mickey_Gilmore a schema:Person,
 
 twssd:Millie_Bobby_Brown a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "2004-02-19"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ] ;
-    schema:name "Millie Bobby Brown" ;
-    owl:sameAs dbr:Millie_Bobby_Brown ;
-    foaf:isPrimaryTopicOf wiki:Millie_Bobby_Brown .
+    schema:name "Millie Bobby Brown" .
 
 twssd:Molly_Shannon a schema:Person,
         owl:NamedIndividual ;
@@ -1895,12 +1873,7 @@ twssd:Ray_McKinnon a schema:Person,
 
 twssd:Rebecca_Hall a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "1982-05-03"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ] ;
-    schema:name "Rebecca Hall" ;
-    owl:sameAs dbr:Rebecca_Hall ;
-    foaf:isPrimaryTopicOf wiki:Rebecca_Hall .
+    schema:name "Rebecca Hall" .
 
 twssd:Review_0462d72a-dcfe-4df3-9e97-e00a003a9c19 a schema:Review,
         owl:NamedIndividual ;
@@ -2129,12 +2102,7 @@ twssd:Rita_Tushingham a schema:Person,
 
 twssd:Robert_Pattinson a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "1986-05-13"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ] ;
-    schema:name "Robert Pattinson" ;
-    owl:sameAs dbr:Robert_Pattinson ;
-    foaf:isPrimaryTopicOf wiki:Robert_Pattinson .
+    schema:name "Robert Pattinson" .
 
 twssd:Rosario_Dawson a schema:Person,
         owl:NamedIndividual ;
@@ -2434,6 +2402,7 @@ twssd:showroom_f17b045f-489a-441f-b9b3-1e498b79c411 a owl:NamedIndividual,
     schema:name "4D" ;
     twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> .
 
+
 <https://www.ecartelera.com/peliculas/wonder-woman-1984> a schema:Movie,
         owl:NamedIndividual ;
     schema:actor twssd:Chris_Pine,
@@ -2544,17 +2513,12 @@ twssd:showroom_cd3b8237-6cb5-4cbd-8c19-c9300662dce1 a owl:NamedIndividual,
 
 twssd:Chris_Pine a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "1980-08-26"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Film Actor" ] ;
     schema:image <https://resizing.flixster.com/kXDRe1jUWEU8UFkdf8JhRPMUG8s=/660x990/v1.bjs3NTYxMDQ7ajsxODgxODsxMjAwOzY2MDs5OTA> ;
     schema:mainEntityOfPage <https://www.ecartelera.com/personas/chris-pine> ;
     schema:name "Chris Pine" ;
     schema:sameAs <https://www.rottentomatoes.com/celebrity/christopher_pine> ;
     schema:url <https://www.imdb.com/name/nm1517976>,
-        <https://www.metacritic.com/person/chris-pine> ;
-    owl:sameAs dbr:Chris_Pine ;
-    foaf:isPrimaryTopicOf wiki:Chris_Pine .
+        <https://www.metacritic.com/person/chris-pine> .
 
 twssd:Connie_Nielsen a schema:Person,
         owl:NamedIndividual ;
@@ -2566,21 +2530,12 @@ twssd:Connie_Nielsen a schema:Person,
 
 twssd:Gal_Gadot a schema:Person,
         owl:NamedIndividual ;
-    schema:birthDate "1985-04-30"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "model" ],
-        [ a schema:Occupation ;
-            schema:name "Miss Israel2004" ],
-        [ a schema:Occupation ;
-            schema:name "Actress" ] ;
     schema:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
     schema:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot> ;
     schema:name "Gal Gadot" ;
     schema:sameAs <https://www.rottentomatoes.com/celebrity/gal-gadot> ;
     schema:url <https://www.imdb.com/name/nm2933757>,
-        <https://www.metacritic.com/person/gal-gadot> ;
-    owl:sameAs dbr:Gal_Gadot ;
-    foaf:isPrimaryTopicOf wiki:Gal_Gadot .
+        <https://www.metacritic.com/person/gal-gadot> .
 
 twssd:Kristen_Wiig a schema:Person,
         owl:NamedIndividual ;
@@ -3050,9 +3005,6 @@ Wolfsbane, Cannonball, Magik, Mirage y Sunspot deberán enfrentar sus miedos, po
     schema:name "Los Nuevos Mutantes",
         "New Mutants" .
 
-twsss:Cinema a owl:Class ;
-    rdfs:subClassOf schema:CivicStructure .
-
 twssd:Godzilla_vs._Kong a schema:Movie,
         owl:NamedIndividual ;
     schema:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>,
@@ -3077,4 +3029,5 @@ twssd:Godzilla_vs._Kong a schema:Movie,
     schema:inLanguage "Inglés" ;
     schema:name "Godzilla Vs. Kong",
         "Godzilla vs. Kong" .
+
 

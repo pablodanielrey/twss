@@ -1,15 +1,15 @@
-@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 
-twssd:John_David_Washington ns1:sameAs dbr:John_David_Washington .
-twssd:Robert_Pattinson ns1:sameAs dbr:Robert_Pattinson .
-twssd:Elizabeth_Debicki ns1:sameAs dbr:Elizabeth_Debicki .
-twssd:Alexander_Skarsgård ns1:sameAs dbr:Alexander_Skarsgård .
-twssd:Millie_Bobby_Brown ns1:sameAs dbr:Millie_Bobby_Brown .
-twssd:Rebecca_Hall ns1:sameAs dbr:Rebecca_Hall .
-twssd:Charlie_Heaton ns1:sameAs dbr:Charlie_Heaton .
-twssd:Antonio_Banderas ns1:sameAs dbr:Antonio_Banderas .
-twssd:Gal_Gadot ns1:sameAs dbr:Gal_Gadot .
-twssd:Chris_Pine ns1:sameAs dbr:Chris_Pine .
+twssd:John_David_Washington owl:sameAs dbr:John_David_Washington .
+twssd:Robert_Pattinson owl:sameAs dbr:Robert_Pattinson .
+twssd:Elizabeth_Debicki owl:sameAs dbr:Elizabeth_Debicki .
+twssd:Alexander_Skarsgård owl:sameAs dbr:Alexander_Skarsgård .
+twssd:Millie_Bobby_Brown owl:sameAs dbr:Millie_Bobby_Brown .
+twssd:Rebecca_Hall owl:sameAs dbr:Rebecca_Hall .
+twssd:Charlie_Heaton owl:sameAs dbr:Charlie_Heaton .
+twssd:Antonio_Banderas owl:sameAs dbr:Antonio_Banderas .
+twssd:Gal_Gadot owl:sameAs dbr:Gal_Gadot .
+twssd:Chris_Pine owl:sameAs dbr:Chris_Pine .
 

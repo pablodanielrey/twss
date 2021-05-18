@@ -1178,3 +1178,42 @@ asi es mas simple para alejandro y diego corregir.
 
 modifico el script nuevamente para tomar solo 2 parámetros. ya que ahora la ontología está actualizada y solo es una.
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> a owl:Ontology .
+
+
+y limpie el dataset original porque tenía una mezcla de definiciones de clases y propieades y definiciones de individuals.
+deje solamente los individuals.
+porque me hacía cosas raras. me redefinía cosas en protegé.
+
+-----
+
+al sacarle las definiciones de clases y de propieades dentor del archivo de dataset-original.ttl
+me hizo plano la jerarquía!!.
+claramente no la toma automáticamente desde la url que define esa ontología protegé.
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> a owl:Ontology .
+
+no va y la lee.
+queda vacía la ontología dentro de protegé.
+asi que agrego twss_final.ttl al archivo dataset-original.ttl
+asi debería quedar completa la ontología y levantarla correctamente protegé.
+seguramente eso fue mi problema desde el principio y problemas con el tp anterior también.
+
+---------------
+
+
+antes que eso voy a probar hacer lo siguiente.
+en el dataset-original.ttl voy a definir como que se estuviera definiendo una ontología donde se almacenan los datos solamente.
+y esta importa la ontología que tiene las clases  y propieades.
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> a owl:Ontology ;
+            owl:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> .
+
+a ver si eso funciona ok para protegé?.
+
+---
+
+NO FUNCIONO!!.
+hace cualquier cosa protegé.
+asi que vuelvo a mi idea original.
+tomo y agrego la definición de las clases y propieades de la ontología dentor del archivo dataset-original.ttl
+

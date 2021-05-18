@@ -19,7 +19,8 @@ def get_schemas():
         'dbr': Namespace('http://dbpedia.org/resource/'),
         'dbo': Namespace('http://dbpedia.org/ontology/'),
         'wiki': Namespace('http://en.wikipedia.org/wiki/'),
-        'foaf': Namespace('http://xmlns.com/foaf/0.1/')
+        'foaf': Namespace('http://xmlns.com/foaf/0.1/'),
+        'owl': Namespace('http://www.w3.org/2002/07/owl#')
     }
     return schemas
 
@@ -129,8 +130,7 @@ if __name__ == '__main__':
     ''' tomo los archivos por linea de comandos '''
     files_to_merge = [
         sys.argv[1],
-        sys.argv[2],
-        sys.argv[3]
+        sys.argv[2]
     ]
 
     g = Graph()
