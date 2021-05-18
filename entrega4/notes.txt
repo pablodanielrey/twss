@@ -60,3 +60,17 @@ Inverse Functional Property
 
 algunas temas complejos de la definición de la ontología de dbpedia.
 las ocupaciones en algunos casos 
+
+
+
+----
+
+otro tema de con el lenguaje de consulta que me da rdflib 
+analizar en que namespace esta el objeto de una tripleta.
+lo estoy analizando por string, pero me parece medio feo.
+ej:
+
+    for st,sp,so in g.triples((None, OWL.sameAs, None)):
+        if 'dbpedia' in str(so):
+            print(f'Accediendo a {so}')
+            iri = str(so)

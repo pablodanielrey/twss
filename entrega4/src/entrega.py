@@ -141,8 +141,6 @@ if __name__ == '__main__':
             g.parse(f, format='turtle')
 
     for st,sp,so in g.triples((None, OWL.sameAs, None)):
-        #if 'Antonio_Banderas' not in str(st):
-        #    continue
         if 'dbpedia' in str(so):
             print(f'Accediendo a {so}')
             iri = str(so)
