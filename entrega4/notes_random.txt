@@ -1225,3 +1225,14 @@ pablo@xiaomi:/src/github/facu-infor/twss/entrega4/src$ python3 entrega.py ../dat
 todo perfecto generado.
 así que era mas simple así.
 
+-----
+
+tengo el tema de que las iris no se escapan para procesarse.
+o sea que 
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>
+no es igual a :
+twssd:Alexander_Skarsgård
+
+por lo que veo.
+asi que tengo que modificar el código para que lo maneje correctamente
