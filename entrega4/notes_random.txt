@@ -751,4 +751,46 @@ https://www.w3.org/TR/owl2-syntax/#Equivalent_Data_Properties
 
 -------
 
+implemente las transformaciones de propiedades de la ontología de dbpedia 
+a mi ontología.
+
+dbo:birthDate --> twsse2:birthDate
+dbo:occupation --> blank node + asignación de occupation.
+
+
+ej:
+
+twssd:Antonio_Banderas a schema:Person,
+        ns1:NamedIndividual ;
+    schema:name "Antonio Banderas" ;
+    ns1:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas ;
+    twsse2:birthDate "1960-08-10"^^xsd:date ;
+    twsse2:hasOccupation [ a twsse2:Occupation ;
+            twsse2:name "Actor, producer, director"@en ] .
+
+ahora voy a separar las ocupaciones por ,
+asi tengo varias asignaciones como debería ser.
+
+
+----
+
+después de modificar el script me genera perfecto las ocupaciones.
+
+
+twssd:Antonio_Banderas a schema:Person,
+        ns1:NamedIndividual ;
+    schema:name "Antonio Banderas" ;
+    ns1:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas ;
+    twsse2:birthDate "1960-08-10"^^xsd:date ;
+    twsse2:hasOccupation [ a twsse2:Occupation ;
+            twsse2:name "director" ],
+        [ a twsse2:Occupation ;
+            twsse2:name "producer" ],
+        [ a twsse2:Occupation ;
+            twsse2:name "Actor" ] .
+
+
+-------------
 

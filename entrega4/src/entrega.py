@@ -7,7 +7,7 @@ import extruct
 from w3lib.html import get_base_url
 from urllib.parse import quote
 
-from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef
+from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef, Literal
 
 def get_schemas():
     schemas = {
@@ -66,15 +66,19 @@ def get_triples_to_add(gaux):
 
 def occupation_to_my_ontology(schema, triple):
     ''' 
-        defino una opcupación como un blank node y se la asigno a la persona
+        defino una opcupación como un blank node y se la asigno a la persona.
+        genero una ocupación por cada nombre definido.
     '''
     (st, sp, so) = triple
-    o = BNode(f'occupation_{str(uuid.uuid4())}')
-    return [
-        (o, RDF.type, schema.Occupation),
-        (o, schema.name, so),
-        (st, schema.hasOccupation, o)
-    ]
+    triples = []
+    for o_name in str(so).split(','):
+        o = BNode(f'occupation_{str(uuid.uuid4())}')
+        triples.extend([
+            (o, RDF.type, schema.Occupation),
+            (o, schema.name, Literal(o_name.strip())), 
+            (st, schema.hasOccupation, o)
+        ])
+    return triples
 
 def birth_to_my_ontology(schema, triple):
     ''' solo cambio a usar la propiedad de mi ontología '''
