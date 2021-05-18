@@ -1217,3 +1217,11 @@ hace cualquier cosa protegé.
 asi que vuelvo a mi idea original.
 tomo y agrego la definición de las clases y propieades de la ontología dentor del archivo dataset-original.ttl
 
+ahora protegé me lo lee correctamente, las clases tienen la hernecia que deberían tener, etc.
+ejecuto por última vez nuevamente el script a ver si genera todo ok.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4/src$ python3 entrega.py ../data/dataset-original.ttl ../data/links.ttl > ../data/dataset-enriquecido.ttl
+
+todo perfecto generado.
+así que era mas simple así.
+

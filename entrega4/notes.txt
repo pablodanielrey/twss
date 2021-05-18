@@ -1,12 +1,3 @@
-
-
-iris escapadas vs iris sin escapar.
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>
-es igual? a :
-twssd:Alexander_Skarsgård
-
-
-
 ---
 propiedades equivalentes definidas en distintos espacios de nombres.
 https://dbpedia.org/ontology/birthDate
@@ -44,7 +35,7 @@ la misma propiedad que tiene definido el individual en la ontología de dbpedia.
 ya que asocia:
 Thing --> Document
 lo cual sigue funcionando para mi ontología.
-así que reuso esa propiedad y no defino ninguna nueva mía.
+así que reuso esa propiedad y no defino ninguna nueva.
 
 http://xmlns.com/foaf/spec/#term_isPrimaryTopicOf
 Property: foaf:isPrimaryTopicOf
@@ -58,7 +49,7 @@ Inverse Functional Property
 
 otro tema que me resulta medio raro a medida que se hacen cosas mas avanzadas, 
 el lenguaje de consulta que me da rdflib 
-analizar en que namespace esta el objeto de una tripleta.
+analizar en que namespace esta el objeto de una tripleta?.
 lo estoy analizando por string, al fin y al cabo son iris.
 ej:
 
@@ -131,6 +122,15 @@ no tuve que modificar prácticamente nada. fue super simple unificar las ontolog
 
 -----
 
+una cosa que me quedó dando vueltas en la cabeza es si las iris escapadas son iguales a la iris en utf8
 
+iris escapadas vs iris sin escapar.
 
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>
+es igual? a :
+twssd:Alexander_Skarsgård
 
+para protegé no son iguales!!!.
+o sea que las iris no llevan ningún tipo de tratamiento evidentemente de escape antes de ser interpretadas. son interpretadas textualmente.
+
+-----
