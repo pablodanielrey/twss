@@ -34,7 +34,8 @@ o convertir las iris a iris internas de mi ontología, generar propieades para r
 
 twws:Antonio_Banderas         twss:occupation       "Actor, producer, director"@en .
 
-esta me hace ruido con respecto a que estaría generando propiedades para representar la misma info que ya está disponible. y duplicando propieades. 
+esta me hace ruido con respecto a que estaría generando propiedades para representar la misma info que ya está disponible. y duplicando propieades.
+es la que uso en este tp igualmente.
 
 -----------
 
