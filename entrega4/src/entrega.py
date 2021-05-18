@@ -91,7 +91,7 @@ def change_to_my_ontology(subject, triples):
         aplico las tripletas al subject correcto y reemplazo las propieades por las correctas a mi ontología 
     '''
     dbo = get_schemas()['dbo']
-    t = get_schemas()['twsse2']
+    schema = get_schemas()['schema']
     properties_map = {
         dbo.title: occupation_to_my_ontology,
         dbo.birthDate: birth_to_my_ontology
@@ -101,7 +101,7 @@ def change_to_my_ontology(subject, triples):
         ''' cambio el subject y cambio la propiedad '''
         if sp in properties_map:
             func = properties_map[sp]
-            to_add = func(t, (subject,sp,so))
+            to_add = func(schema, (subject,sp,so))
         else:
             to_add = [(subject, sp, so)]
         rtriples.extend(to_add)
@@ -129,7 +129,8 @@ if __name__ == '__main__':
     ''' tomo los archivos por linea de comandos '''
     files_to_merge = [
         sys.argv[1],
-        sys.argv[2]
+        sys.argv[2],
+        sys.argv[3]
     ]
 
     g = Graph()

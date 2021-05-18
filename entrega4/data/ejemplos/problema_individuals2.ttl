@@ -1,0 +1,27 @@
+
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+@prefix twsss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl#> .
+@prefix wiki: <http://en.wikipedia.org/wiki/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended2.ttl> a ns1:Ontology ;
+    ns1:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl> .
+
+
+twssd:Antonio_Banderas a schema:Person,
+        ns1:NamedIndividual ;
+    schema:birthDate "1960-08-10"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "director" ] ;
+    schema:name "Antonio Banderas" ;
+    ns1:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas .

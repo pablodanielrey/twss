@@ -54,22 +54,83 @@ Domain:	having this property implies being a Thing
 Range:	every value of this property is a Document
 Inverse Functional Property	
 
-
 ----
 
-
-algunas temas complejos de la definición de la ontología de dbpedia.
-las ocupaciones en algunos casos 
-
-
-----
-
-otro tema de con el lenguaje de consulta que me da rdflib 
+otro tema que me resulta medio raro a medida que se hacen cosas mas avanzadas, 
+el lenguaje de consulta que me da rdflib 
 analizar en que namespace esta el objeto de una tripleta.
-lo estoy analizando por string, pero me parece medio feo.
+lo estoy analizando por string, al fin y al cabo son iris.
 ej:
 
     for st,sp,so in g.triples((None, OWL.sameAs, None)):
         if 'dbpedia' in str(so):
             print(f'Accediendo a {so}')
             iri = str(so)
+
+
+----
+
+
+como extendí mi ontología anterior para definir las propieades y clases que me faltaban agrego un parámetro 
+para que se una con lo requerido del ejercicio
+asi que para ejecutar el ejercicio tendría:
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4/src$ python3 entrega.py ../../owl/twss_schema_extended2.ttl ../data/dataset-original.ttl ../data/links.ttl > ../data/dataset-enriquecido.ttl
+
+funciona bien pero no me muestra como individuals a las ocupaciones que están en el turtle generadas como blank nodes.
+
+-----
+
+dejo toda la ontología final dentro de twss_final.ttl
+asi queda un poco mas claro para ale y diego para corregir.
+y acomodo el dataset-original.ttl para que use esa ontología y no la cadena de extensiones que hice en el tp anterior.
+
+por lo que queda solo como clases y propiedades específicas del namespace del github. (para indicar que son extensiones que no están definidas en schema.org)
+
+:Cinema rdf:type owl:Class ;
+        rdfs:subClassOf <http://schema.org/CivicStructure> .
+
+
+:Show rdf:type owl:Class ;
+      rdfs:subClassOf <http://schema.org/Event> .
+
+
+:ShowRoom rdf:type owl:Class ;
+          rdfs:subClassOf <http://schema.org/Place> .
+
+
+
+:movieFormat rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Show ;
+             rdfs:range xsd:string .
+
+
+:cinema rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain :ShowRoom ;
+        rdfs:range :Cinema .
+
+
+:movie rdf:type owl:ObjectProperty ;
+       rdfs:domain :Show ;
+       rdfs:range <http://schema.org/Movie> .
+
+
+:showRoom rdf:type owl:ObjectProperty ;
+          rdfs:domain :Show ;
+          rdfs:range :ShowRoom .
+
+
+
+y todas las demas como clases y propieades del namespace http://schema.org
+
+-----
+
+Al realizar estas transformaciones de schemas y prefijos se ve la importancia de definir un namespace distinto para los individuals.
+no tuve que modificar prácticamente nada. fue super simple unificar las ontologías en una sola.
+
+-----
+
+
+
+

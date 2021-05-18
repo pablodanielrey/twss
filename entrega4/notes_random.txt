@@ -1029,3 +1029,152 @@ ya tengo cerrada la entrega.
 
 ----
 
+pruebo generar el dataset final.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4/src$ python3 entrega.py ../data/dataset-original.ttl ../data/links.ttl > ../data/dataset-enriquecido.ttl
+
+----
+
+pero protegé me los muestra mal a los resultados.
+me muestra un 
+owl:Thing 
+    Occupation <--- iri = https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended2.ttl#Occupation
+    schema:Intangible
+        schema:Occupation       <-- http://schema.org/Occupation
+
+
+cuando nunca yo uso Occupation dentro de mi espacio de nomrbes de la ontología!!
+el problema viene dado de rdbflib cuando me genera los types de las ocupaciones en mi dataset final.
+
+@prefix : <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended2.ttl#> .
+
+
+twssd:Alexander_Skarsgård ns1:sameAs dbr:Alexander_Skarsgård ;
+    foaf:isPrimaryTopicOf wiki:Alexander_Skarsgård ;
+    :birthDate "1976-08-25"^^xsd:date ;
+    :hasOccupation [ a :Occupation ;
+            :name "Actor" ] .
+
+o sea no usa el prefijo schema:Occupation!!! si no que el prefijo :
+
+encontré el problema!!: para generar las ocupaciones en el código yo uso:
+
+
+change_to_my_ontology(subject, triples)
+       occupation_to_my_ontology(schema, triple)
+
+                o = BNode(f'occupation_{str(uuid.uuid4())}')
+                triples.extend([
+                    (o, RDF.type, schema.Occupation),
+                    (o, schema.name, Literal(o_name.strip())), 
+                    (st, schema.hasOccupation, o)
+                ])
+
+le estaba pasando mal el namespaces. ahora si usa namespace schema:Occupation
+
+---
+
+ahora no me muestra individuals del tipo schema:Occupation
+aunque en el dataset final tenga:
+
+twssd:Antonio_Banderas a schema:Person,
+        ns1:NamedIndividual ;
+    schema:birthDate "1960-08-10"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "director" ] ;
+    schema:name "Antonio Banderas" ;
+    ns1:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
+
+
+
+
+-----
+
+pruebo generar un archivo de ejemplo para leerlo con protegé a ver si lo interpreta ok.
+
+este ejemplo no muestra ok los individuals de Occupation.
+si me muestra ok a Banderas, pero no los Occupation.
+me muestra como nodos autogenerados dentro de Banderas solamente
+asi que algo raro está haciendo con las ontologías y las importaciones que evidentemente no se manejar.
+
+
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+@prefix twsss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl#> .
+@prefix wiki: <http://en.wikipedia.org/wiki/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended2.ttl> a ns1:Ontology ;
+    ns1:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> a ns1:Ontology .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended.ttl> a ns1:Ontology ;
+    ns1:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema.ttl> .
+
+
+
+twssd:Antonio_Banderas a schema:Person,
+        ns1:NamedIndividual ;
+    schema:birthDate "1960-08-10"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "director" ] ;
+    schema:name "Antonio Banderas" ;
+    ns1:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
+
+
+----
+
+voy a intentar generar una ontología unificada final (lo que debería haber hecho en el trabajo anterior, pero 
+me gustaba probar con las importaciones de ontologías).
+
+la cree como twss_final.ttl
+y protegé la carga perfecto, con todos las data porperties y las object properties
+pruebo cargar el ejemplo usando esa ontología a ver si me lo carga
+
+
+y no hay caso.
+usando esa ontología, para el invididual de Antonio_Banderas
+NO me muestra las occupations como individuals!!.
+
+twssd:Antonio_Banderas a schema:Person,
+        owl:NamedIndividual ;
+    schema:birthDate "1960-08-10"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "director" ] ;
+    schema:name "Antonio Banderas" ;
+    owl:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
+
+
+o sea esos blank nodes NO me los muestra como individuals. 
+si los veo con ids autogenerados cuando analizo Antonio_Banderas, pero no como instancias de schema:Occupation
+cuando voy a ver esa funcionalidad dentro de protegé.
+
+-------
+
+modifico el dataset original para usar la ontología unificada twss_final.ttl.
+asi es mas simple para alejandro y diego corregir.
+
+-----
+
+modifico el script nuevamente para tomar solo 2 parámetros. ya que ahora la ontología está actualizada y solo es una.
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> a owl:Ontology .
