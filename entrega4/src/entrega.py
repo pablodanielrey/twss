@@ -125,15 +125,24 @@ def derreference_occupation(occupation):
 
 
 if __name__ == '__main__':
+
+    ''' tomo los archivos por linea de comandos '''
+    files_to_merge = [
+        sys.argv[1],
+        sys.argv[2]
+    ]
+
     g = Graph()
     bind_schemas(g)
     schemas = get_schemas()
     schema = schemas['schema']
 
+    """
     files_to_merge = [
         'data/dataset-original.ttl',
         'data/links.ttl'
     ]
+    """
 
     for dfile in files_to_merge:
         #print(f'Procesando : {dfile}')

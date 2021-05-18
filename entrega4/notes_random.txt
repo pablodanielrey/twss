@@ -1013,3 +1013,19 @@ twssd:Gal_Gadot a schema:Person,
             twsse2:name "Miss Israel2004" ] .
 
 
+-----
+
+modifico para que tome los archvios por linea de compando.
+y pruebo la ejecución.
+debería tirar a stdout solo el turtle completo.
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/entrega.py ./data/dataset-original.ttl ./data/links.ttl 
+Y
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4/src$ python3 entrega.py ../data/dataset-original.ttl ../data/links.ttl 
+
+funcionó perfecto.
+ya tengo cerrada la entrega.
+
+----
+
