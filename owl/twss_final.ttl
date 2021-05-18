@@ -1,0 +1,529 @@
+@prefix : <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix wiki: <http://en.wikipedia.org/wiki/> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+@base <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> rdf:type owl:Ontology .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/hasOccupation
+<http://schema.org/hasOccupation> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://schema.org/Person> ;
+                                  rdfs:range <http://schema.org/Occupation> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/birthDate
+<http://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/Person> ;
+                              rdfs:range xsd:dateTime .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Occupation
+<http://schema.org/Occupation> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/Intangible> .
+
+
+
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://schema.org/actor
+<http://schema.org/actor> rdf:type owl:ObjectProperty ;
+                          rdfs:domain <http://schema.org/Movie> ;
+                          rdfs:range <http://schema.org/Person> .
+
+
+###  http://schema.org/actors
+<http://schema.org/actors> rdf:type owl:ObjectProperty ;
+                           rdfs:domain <http://schema.org/Clip> ,
+                                       <http://schema.org/Movie> ;
+                           rdfs:range <http://schema.org/Person> .
+
+
+###  http://schema.org/aggregateRating
+<http://schema.org/aggregateRating> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://schema.org/CreativeWork> ;
+                                    rdfs:range <http://schema.org/AggregateRating> .
+
+
+###  http://schema.org/author
+<http://schema.org/author> rdf:type owl:ObjectProperty ;
+                           rdfs:domain <http://schema.org/CreativeWork> ,
+                                       <http://schema.org/Rating> ;
+                           rdfs:range <http://schema.org/Organization> ,
+                                      <http://schema.org/Person> .
+
+
+###  http://schema.org/creator
+<http://schema.org/creator> rdf:type owl:ObjectProperty ;
+                            rdfs:domain <http://schema.org/CreativeWork> ;
+                            rdfs:range <http://schema.org/Organization> ,
+                                       <http://schema.org/Person> .
+
+
+###  http://schema.org/director
+<http://schema.org/director> rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdfs:domain <http://schema.org/Movie> ;
+                             rdfs:range <http://schema.org/Person> .
+
+
+###  http://schema.org/eligibleRegion
+<http://schema.org/eligibleRegion> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://schema.org/Offer> ;
+                                   rdfs:range <http://schema.org/Place> .
+
+
+###  http://schema.org/hasPart
+<http://schema.org/hasPart> rdf:type owl:ObjectProperty ;
+                            rdfs:domain <http://schema.org/CreativeWork> ;
+                            rdfs:range <http://schema.org/CreativeWork> .
+
+
+###  http://schema.org/image
+<http://schema.org/image> rdf:type owl:ObjectProperty ;
+                          rdfs:domain owl:Thing ;
+                          rdfs:range <http://schema.org/ImageObject> .
+
+
+###  http://schema.org/itemReviewed
+<http://schema.org/itemReviewed> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://schema.org/AggregateRating> ,
+                                             <http://schema.org/Review> ;
+                                 rdfs:range owl:Thing .
+
+
+###  http://schema.org/location
+<http://schema.org/location> rdf:type owl:ObjectProperty ;
+                             rdfs:domain <http://schema.org/Action> ,
+                                         <http://schema.org/Event> ,
+                                         <http://schema.org/Organization> ;
+                             rdfs:range <http://schema.org/Place> .
+
+
+###  http://schema.org/mainEntityOfPage
+<http://schema.org/mainEntityOfPage> rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                     rdfs:domain owl:Thing ;
+                                     rdfs:range <http://schema.org/CreativeWork> .
+
+
+###  http://schema.org/potentialAction
+<http://schema.org/potentialAction> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain owl:Thing ;
+                                    rdfs:range <http://schema.org/Action> .
+
+
+###  http://schema.org/productionCompany
+<http://schema.org/productionCompany> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://schema.org/Movie> ;
+                                      rdfs:range <http://schema.org/Organization> .
+
+
+###  http://schema.org/publisher
+<http://schema.org/publisher> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <http://schema.org/CreativeWork> ;
+                              rdfs:range <http://schema.org/Organization> ,
+                                         <http://schema.org/Person> .
+
+
+###  http://schema.org/releasedEvent
+<http://schema.org/releasedEvent> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://schema.org/CreativeWork> ;
+                                  rdfs:range <http://schema.org/PublicationEvent> .
+
+
+###  http://schema.org/review
+<http://schema.org/review> rdf:type owl:ObjectProperty ;
+                           rdfs:domain <http://schema.org/CreativeWork> ;
+                           rdfs:range <http://schema.org/Review> .
+
+
+###  http://schema.org/reviewRating
+<http://schema.org/reviewRating> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <http://schema.org/Review> ;
+                                 rdfs:range <http://schema.org/Rating> .
+
+
+###  http://schema.org/sameAs
+<http://schema.org/sameAs> rdf:type owl:ObjectProperty ;
+                           rdfs:domain owl:Thing ;
+                           rdfs:range owl:Thing .
+
+
+###  http://schema.org/thumbnail
+<http://schema.org/thumbnail> rdf:type owl:ObjectProperty ;
+                              rdfs:domain <http://schema.org/ImageObject> ,
+                                          <http://schema.org/VideoObject> ;
+                              rdfs:range <http://schema.org/ImageObject> .
+
+
+###  http://schema.org/trailer
+<http://schema.org/trailer> rdf:type owl:ObjectProperty ;
+                            rdfs:domain <http://schema.org/Movie> ;
+                            rdfs:range <http://schema.org/VideoObject> .
+
+
+###  http://schema.org/url
+<http://schema.org/url> rdf:type owl:ObjectProperty ;
+                        rdfs:domain owl:Thing ;
+                        rdfs:range owl:Thing .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/actionPlatform
+<http://schema.org/actionPlatform> rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain <http://schema.org/EntryPoint> ;
+                                   rdfs:range xsd:string .
+
+
+###  http://schema.org/availabilityStarts
+<http://schema.org/availabilityStarts> rdf:type owl:DatatypeProperty ;
+                                       rdfs:domain <http://schema.org/Offer> ;
+                                       rdfs:range xsd:string .
+
+
+###  http://schema.org/bestRating
+<http://schema.org/bestRating> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/Rating> ;
+                               rdfs:range xsd:float ,
+                                          xsd:string .
+
+
+###  http://schema.org/category
+<http://schema.org/category> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <http://schema.org/Offer> ;
+                             rdfs:range xsd:string .
+
+
+###  http://schema.org/character
+<http://schema.org/character> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/CreativeWork> ;
+                              rdfs:range xsd:string .
+
+
+###  http://schema.org/contentRating
+<http://schema.org/contentRating> rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain <http://schema.org/CreativeWork> ;
+                                  rdfs:range xsd:string .
+
+
+###  http://schema.org/contentUrl
+<http://schema.org/contentUrl> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/MediaObject> ;
+                               rdfs:range xsd:string .
+
+
+###  http://schema.org/countryOfOrigin
+<http://schema.org/countryOfOrigin> rdf:type owl:DatatypeProperty ;
+                                    rdfs:domain <http://schema.org/Movie> ;
+                                    rdfs:range xsd:string .
+
+
+###  http://schema.org/dateCreated
+<http://schema.org/dateCreated> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <http://schema.org/CreativeWork> ;
+                                rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/dateModified
+<http://schema.org/dateModified> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://schema.org/CreativeWork> ;
+                                 rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/datePublished
+<http://schema.org/datePublished> rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                  rdfs:domain <http://schema.org/CreativeWork> ;
+                                  rdfs:range xsd:string .
+
+
+###  http://schema.org/description
+<http://schema.org/description> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain owl:Thing ;
+                                rdfs:range xsd:string .
+
+
+###  http://schema.org/duration
+<http://schema.org/duration> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <http://schema.org/Movie> ;
+                             rdfs:range xsd:decimal ,
+                                        xsd:string .
+
+
+###  http://schema.org/embedUrl
+<http://schema.org/embedUrl> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <http://schema.org/MediaObject> ;
+                             rdfs:range xsd:string .
+
+
+###  http://schema.org/genre
+<http://schema.org/genre> rdf:type owl:DatatypeProperty ;
+                          rdfs:domain <http://schema.org/CreativeWork> ;
+                          rdfs:range xsd:string .
+
+
+###  http://schema.org/inLanguage
+<http://schema.org/inLanguage> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/CreativeWork> ;
+                               rdfs:range xsd:string .
+
+
+###  http://schema.org/keywords
+<http://schema.org/keywords> rdf:type owl:DatatypeProperty ;
+                             rdfs:domain <http://schema.org/CreativeWork> ;
+                             rdfs:range xsd:string .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range xsd:string .
+
+
+###  http://schema.org/ratingCount
+<http://schema.org/ratingCount> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <http://schema.org/AggregateRating> ;
+                                rdfs:range xsd:integer .
+
+
+###  http://schema.org/ratingValue
+<http://schema.org/ratingValue> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <http://schema.org/Rating> ;
+                                rdfs:range xsd:float .
+
+
+###  http://schema.org/reviewBody
+<http://schema.org/reviewBody> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/Review> ;
+                               rdfs:range xsd:string .
+
+
+###  http://schema.org/startDate
+<http://schema.org/startDate> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/CreativeWork> ;
+                              rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/thumbnailUrl
+<http://schema.org/thumbnailUrl> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://schema.org/CreativeWork> ;
+                                 rdfs:range xsd:string .
+
+
+###  http://schema.org/timeRequired
+<http://schema.org/timeRequired> rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain <http://schema.org/CreativeWork> ;
+                                 rdfs:range xsd:string .
+
+
+###  http://schema.org/uploadDate
+<http://schema.org/uploadDate> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/MediaObject> ;
+                               rdfs:range xsd:dateTime .
+
+
+###  http://schema.org/urlTemplate
+<http://schema.org/urlTemplate> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <http://schema.org/EntryPoint> ;
+                                rdfs:range xsd:string .
+
+
+###  http://schema.org/worstRating
+<http://schema.org/worstRating> rdf:type owl:DatatypeProperty ;
+                                rdfs:domain <http://schema.org/Rating> ;
+                                rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/Action
+<http://schema.org/Action> rdf:type owl:Class .
+
+
+###  http://schema.org/AdministrativeArea
+<http://schema.org/AdministrativeArea> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://schema.org/Place> .
+
+
+###  http://schema.org/AggregateRating
+<http://schema.org/AggregateRating> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://schema.org/Rating> .
+
+
+###  http://schema.org/Clip
+<http://schema.org/Clip> rdf:type owl:Class ;
+                         rdfs:subClassOf <http://schema.org/CreativeWork> .
+
+
+###  http://schema.org/ConsumeAction
+<http://schema.org/ConsumeAction> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://schema.org/Action> .
+
+
+###  http://schema.org/Country
+<http://schema.org/Country> rdf:type owl:Class ;
+                            rdfs:subClassOf <http://schema.org/AdministrativeArea> .
+
+
+###  http://schema.org/CreativeWork
+<http://schema.org/CreativeWork> rdf:type owl:Class .
+
+
+###  http://schema.org/EntryPoint
+<http://schema.org/EntryPoint> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/Intangible> .
+
+
+###  http://schema.org/Event
+<http://schema.org/Event> rdf:type owl:Class .
+
+
+###  http://schema.org/ImageObject
+<http://schema.org/ImageObject> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/MediaObject> .
+
+
+###  http://schema.org/Intangible
+<http://schema.org/Intangible> rdf:type owl:Class .
+
+
+###  http://schema.org/MediaObject
+<http://schema.org/MediaObject> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/CreativeWork> .
+
+
+###  http://schema.org/Movie
+<http://schema.org/Movie> rdf:type owl:Class ;
+                          rdfs:subClassOf <http://schema.org/CreativeWork> .
+
+
+###  http://schema.org/Offer
+<http://schema.org/Offer> rdf:type owl:Class ;
+                          rdfs:subClassOf <http://schema.org/Intangible> .
+
+
+###  http://schema.org/Organization
+<http://schema.org/Organization> rdf:type owl:Class .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class .
+
+
+###  http://schema.org/Place
+<http://schema.org/Place> rdf:type owl:Class .
+
+
+###  http://schema.org/PublicationEvent
+<http://schema.org/PublicationEvent> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://schema.org/Event> .
+
+
+###  http://schema.org/Rating
+<http://schema.org/Rating> rdf:type owl:Class ;
+                           rdfs:subClassOf <http://schema.org/Intangible> .
+
+
+###  http://schema.org/Review
+<http://schema.org/Review> rdf:type owl:Class ;
+                           rdfs:subClassOf <http://schema.org/CreativeWork> .
+
+
+###  http://schema.org/VideoObject
+<http://schema.org/VideoObject> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/MediaObject> .
+
+
+###  http://schema.org/WatchAction
+<http://schema.org/WatchAction> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/ConsumeAction> .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+
+#################################################################
+#    Object Properties
+#################################################################
+
+:cinema rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain :ShowRoom ;
+        rdfs:range :Cinema .
+
+
+:movie rdf:type owl:ObjectProperty ;
+       rdfs:domain :Show ;
+       rdfs:range <http://schema.org/Movie> .
+
+
+:showRoom rdf:type owl:ObjectProperty ;
+          rdfs:domain :Show ;
+          rdfs:range :ShowRoom .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://schema.org/text
+<http://schema.org/text> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain <http://schema.org/CreativeWork> ;
+                         rdfs:range xsd:string .
+
+
+:movieFormat rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Show ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://schema.org/CivicStructure
+<http://schema.org/CivicStructure> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/Place> .
+
+
+:Cinema rdf:type owl:Class ;
+        rdfs:subClassOf <http://schema.org/CivicStructure> .
+
+
+:Show rdf:type owl:Class ;
+      rdfs:subClassOf <http://schema.org/Event> .
+
+
+:ShowRoom rdf:type owl:Class ;
+          rdfs:subClassOf <http://schema.org/Place> .
+
+
+
