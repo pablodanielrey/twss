@@ -106,7 +106,6 @@ if __name__ == '__main__':
         with open(dfile,'r') as f:
             g.parse(f, format='turtle')
 
-
     """
         tripletas a obtener
             dbp:birthDate

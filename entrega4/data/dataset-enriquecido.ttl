@@ -230,12 +230,6 @@ schema:worstRating a owl:DatatypeProperty ;
     rdfs:domain schema:Rating ;
     rdfs:range xsd:float .
 
-twssd:Alexander_Skarsgård schema:birthDate "1976-08-25"^^xsd:date ;
-    schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ] ;
-    owl:sameAs dbr:Alexander_Skarsgård ;
-    foaf:isPrimaryTopicOf wiki:Alexander_Skarsgård .
-
 twssd:show_03116052-ac3c-445e-9d59-45364b71eb67 a owl:NamedIndividual,
         twsss:Show ;
     schema:startDate "13:20",
@@ -1066,7 +1060,12 @@ twssd:Alex_Delescu a schema:Person,
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> a schema:Person,
         owl:NamedIndividual ;
-    schema:name "Alexander Skarsgård" .
+    schema:birthDate "1976-08-25"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ] ;
+    schema:name "Alexander Skarsgård" ;
+    owl:sameAs dbr:Alexander_Skarsgård ;
+    foaf:isPrimaryTopicOf wiki:Alexander_Skarsgård .
 
 twssd:Alice_Braga a schema:Person,
         owl:NamedIndividual ;
@@ -1114,9 +1113,9 @@ twssd:Antonio_Banderas a schema:Person,
     schema:hasOccupation [ a schema:Occupation ;
             schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "director" ] ;
+            schema:name "Actor" ] ;
     schema:name "Antonio Banderas" ;
     owl:sameAs dbr:Antonio_Banderas ;
     foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
@@ -1228,9 +1227,9 @@ twssd:Charlie_Heaton a schema:Person,
         owl:NamedIndividual ;
     schema:birthDate "1994-02-06"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "musician" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "musician" ] ;
     schema:name "Charlie Heaton" ;
     owl:sameAs dbr:Charlie_Heaton ;
     foaf:isPrimaryTopicOf wiki:Charlie_Heaton .
@@ -2835,9 +2834,9 @@ twssd:Gal_Gadot a schema:Person,
         owl:NamedIndividual ;
     schema:birthDate "1985-04-30"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
             schema:name "Miss Israel2004" ],
+        [ a schema:Occupation ;
+            schema:name "Actress" ],
         [ a schema:Occupation ;
             schema:name "model" ] ;
     schema:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;

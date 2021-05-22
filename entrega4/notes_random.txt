@@ -672,7 +672,7 @@ después tengo que hacer la traslación de las propiedades de dbpedia a propiead
 
 ------
 
-para el caso de la wifi veo que se puede obtener usando la propiedad. foaf:primaryTopic
+para el caso de la wiki veo que se puede obtener usando la propiedad. foaf:primaryTopic
 
 @prefix wikipedia-en:	<http://en.wikipedia.org/wiki/> .
 wikipedia-en:Antonio_Banderas	foaf:primaryTopic	dbr:Antonio_Banderas .
@@ -696,7 +696,7 @@ twssd:Antonio_Banderas a schema:Person,
     foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
 
 
-no desreferencio la wifi porque no trae ninguna info en turtle.
+no desreferencio la wiki porque no trae ninguna info en turtle.
 
 pablo@xiaomi:~$ curl -I -H 'accept: text/turtle' https://en.wikipedia.org/wiki/Antonio_Banderas
 HTTP/2 200 
@@ -739,8 +739,9 @@ dbo:Person	owl:equivalentClass	schema:Person .
 
 twssd:Person rdfs:type schema:Person .
 
-como la semántica de equivalentClass no es igual a sameAs (como explicó ale en el foro) entonces no se puede usar la propiedad para dominio = twssd:Person
-asi que genero una nueva.
+como la semántica de equivalentClass no es igual a sameAs (como explicó ale en el foro, equivalent = mismo confjunto de invididuos, sameAs = igual semántica también además de los individuos) 
+entonces si uso equivalentClass no se transportaría la semántica, o sea, no se puede inferir que dbo:birhtDate va a tener de dominio twssd:Person solo por estar definida con dominio dbo:Person?
+asi que genero una nueva propiedad, y no reuso dbo:birhtDate
 
 consultaría la foro si en el caso de tener sameAs si se podría usar la misma propiedad?
 
@@ -770,7 +771,7 @@ twssd:Antonio_Banderas a schema:Person,
             twsse2:name "Actor, producer, director"@en ] .
 
 ahora voy a separar las ocupaciones por ,
-asi tengo varias asignaciones como debería ser.
+asi tengo varias asignaciones usando hasOccupation como debería ser.
 
 
 ----
@@ -891,7 +892,6 @@ dbr:Film_Actor	rdf:type	dbo:PersonFunction .
 @prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
 dbr:Film_Actor	rdfs:label	"Film Actor"@en ;
 
-
 cuando en otros turtles si indica la ocupación con dbo:title
 
 pablo@xiaomi:~$ curl -H 'accept: text/turtle' https://dbpedia.org/data/Robert_Pattinson__PersonFunction__1.ttl
@@ -974,7 +974,7 @@ ahora me fijo el recurso de Chris_Pine como persona:
                 dbr:Film_Actor .
 
 ahi esta. esta definido con 2 ocupaciones. una de las cuales solo tiene un rdfs:Label y no tiene dbo:title
-cambio el codigo para que vaya por cada una de las opcupaciones desreferenciadas obteniendo los titles. lo demás lo ignore.
+cambio el código para que solo tenga en cuenta las ocupaciones que tengan dbo:title. lo demás lo ignoro.
 
 ----
 
@@ -1036,14 +1036,14 @@ pablo@xiaomi:/src/github/facu-infor/twss/entrega4/src$ python3 entrega.py ../dat
 ----
 
 pero protegé me los muestra mal a los resultados.
-me muestra un 
+me muestra  
 owl:Thing 
     Occupation <--- iri = https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended2.ttl#Occupation
     schema:Intangible
         schema:Occupation       <-- http://schema.org/Occupation
 
 
-cuando nunca yo uso Occupation dentro de mi espacio de nomrbes de la ontología!!
+cuando nunca yo uso Occupation pelado dentro de mi espacio de nombres de la ontología!!
 el problema viene dado de rdbflib cuando me genera los types de las ocupaciones en mi dataset final.
 
 @prefix : <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_schema_extended2.ttl#> .
@@ -1092,14 +1092,13 @@ twssd:Antonio_Banderas a schema:Person,
 
 
 
-
 -----
 
 pruebo generar un archivo de ejemplo para leerlo con protegé a ver si lo interpreta ok.
 
 este ejemplo no muestra ok los individuals de Occupation.
 si me muestra ok a Banderas, pero no los Occupation.
-me muestra como nodos autogenerados dentro de Banderas solamente
+me muestra como blank nodes autogenerados dentro de Banderas solamente, pero no en la lista de individuals por tipo schema:Occupation
 asi que algo raro está haciendo con las ontologías y las importaciones que evidentemente no se manejar.
 
 
@@ -1146,8 +1145,9 @@ la cree como twss_final.ttl
 y protegé la carga perfecto, con todos las data porperties y las object properties
 pruebo cargar el ejemplo usando esa ontología a ver si me lo carga
 
+---
 
-y no hay caso.
+no hay caso.
 usando esa ontología, para el invididual de Antonio_Banderas
 NO me muestra las occupations como individuals!!.
 
@@ -1188,13 +1188,14 @@ porque me hacía cosas raras. me redefinía cosas en protegé.
 
 al sacarle las definiciones de clases y de propieades dentor del archivo de dataset-original.ttl
 me hizo plano la jerarquía!!.
-claramente no la toma automáticamente desde la url que define esa ontología protegé.
+claramente no la toma automáticamente protegé desde la url que define esa ontología.
+o sea si en el dataset-original.ttl dejo solo la linea :
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> a owl:Ontology .
 
 no va y la lee.
-queda vacía la ontología dentro de protegé.
-asi que agrego twss_final.ttl al archivo dataset-original.ttl
+queda vacía la ontología dentro de protegé. y me genera una jerarquía plana a medida que va leyendo los individuals.
+asi que agrego twss_final.ttl (ontología) al archivo dataset-original.ttl (individuals)
 asi debería quedar completa la ontología y levantarla correctamente protegé.
 seguramente eso fue mi problema desde el principio y problemas con el tp anterior también.
 
@@ -1202,8 +1203,8 @@ seguramente eso fue mi problema desde el principio y problemas con el tp anterio
 
 
 antes que eso voy a probar hacer lo siguiente.
-en el dataset-original.ttl voy a definir como que se estuviera definiendo una ontología donde se almacenan los datos solamente.
-y esta importa la ontología que tiene las clases  y propieades.
+en el dataset-original.ttl voy a definir como que se estuviera definiendo una ontología para los datos solamente.
+y esta importa la ontología que tiene las clases y propieades.
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> a owl:Ontology ;
             owl:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> .
@@ -1213,26 +1214,47 @@ a ver si eso funciona ok para protegé?.
 ---
 
 NO FUNCIONO!!.
-hace cualquier cosa protegé.
+hace cualquier cosa. jajaaj. 
 asi que vuelvo a mi idea original.
 tomo y agrego la definición de las clases y propieades de la ontología dentor del archivo dataset-original.ttl
 
-ahora protegé me lo lee correctamente, las clases tienen la hernecia que deberían tener, etc.
+ahora protegé me lo lee correctamente, las clases tienen la herencia que deberían tener, etc.
 ejecuto por última vez nuevamente el script a ver si genera todo ok.
 
 pablo@xiaomi:/src/github/facu-infor/twss/entrega4/src$ python3 entrega.py ../data/dataset-original.ttl ../data/links.ttl > ../data/dataset-enriquecido.ttl
 
 todo perfecto generado.
 así que era mas simple así.
+igualmente con mas tiempo voy a hacer pruebas de herencia de ontologías, etc. croe que me falta aprender bien eso, tenerlo mas claro por ese lado.
 
 -----
 
-tengo el tema de que las iris no se escapan para procesarse.
+pregunta para el foro!!!.
+tengo el tema de que las iris no se "escapan" para procesarse.
 o sea que 
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>
 no es igual a :
-twssd:Alexander_Skarsgård
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsgård>
 
-por lo que veo.
-asi que tengo que modificar el código para que lo maneje correctamente
+tiene sentido con lo que comentaba diego y ale que las iris es un texto, no tiene mas sentido que una identificación unívoca para el recurso.
+o sea que no se haría ningún procesamiento para la misma. 
+
+asi que tengo que modificar el código para no se maneje por la iri que le asigne yo en mi dataset, si no que de ese tipo saque la propiedad name, y eso use 
+como recurso a consultar dbpedia.
+justo tenía casi el mismo algoritmo que usa dbpedia para asignar una iri a un actor.
+
+----
+
+resulta que no tuve que modificar nada ya que claramente es un tema de iris y de recursos.
+solo cambie la iri del recurso mío en links.ttl y listo, se genera claramente a la iri correcta.
+
+cambie:
+twssd:Alexander_Skarsgård owl:sameAs dbr:Alexander_Skarsgård .
+
+por
+
+twssd:Alexander_Skarsg%C3%A5rd owl:sameAs dbr:Alexander_Skarsgård .
+
+---
+
