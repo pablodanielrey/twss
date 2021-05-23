@@ -1,0 +1,78 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+@prefix wiki: <http://en.wikipedia.org/wiki/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> schema:birthDate "1976-08-25"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ] ;
+    owl:sameAs dbr:Alexander_Skarsgård ;
+    foaf:isPrimaryTopicOf wiki:Alexander_Skarsgård .
+
+twssd:Antonio_Banderas schema:birthDate "1960-08-10"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "director" ],
+        [ a schema:Occupation ;
+            schema:name "producer" ] ;
+    owl:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
+
+twssd:Charlie_Heaton schema:birthDate "1994-02-06"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "musician" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ] ;
+    owl:sameAs dbr:Charlie_Heaton ;
+    foaf:isPrimaryTopicOf wiki:Charlie_Heaton .
+
+twssd:Chris_Pine schema:birthDate "1980-08-26"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Film Actor" ] ;
+    owl:sameAs dbr:Chris_Pine ;
+    foaf:isPrimaryTopicOf wiki:Chris_Pine .
+
+twssd:Elizabeth_Debicki schema:birthDate "1990-08-24"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actress" ] ;
+    owl:sameAs dbr:Elizabeth_Debicki ;
+    foaf:isPrimaryTopicOf wiki:Elizabeth_Debicki .
+
+twssd:Gal_Gadot schema:birthDate "1985-04-30"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actress" ],
+        [ a schema:Occupation ;
+            schema:name "model" ],
+        [ a schema:Occupation ;
+            schema:name "Miss Israel2004" ] ;
+    owl:sameAs dbr:Gal_Gadot ;
+    foaf:isPrimaryTopicOf wiki:Gal_Gadot .
+
+twssd:John_David_Washington schema:birthDate "1984-07-28"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ] ;
+    owl:sameAs dbr:John_David_Washington ;
+    foaf:isPrimaryTopicOf wiki:John_David_Washington .
+
+twssd:Millie_Bobby_Brown schema:birthDate "2004-02-19"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actress" ] ;
+    owl:sameAs dbr:Millie_Bobby_Brown ;
+    foaf:isPrimaryTopicOf wiki:Millie_Bobby_Brown .
+
+twssd:Rebecca_Hall schema:birthDate "1982-05-03"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actress" ] ;
+    owl:sameAs dbr:Rebecca_Hall ;
+    foaf:isPrimaryTopicOf wiki:Rebecca_Hall .
+
+twssd:Robert_Pattinson schema:birthDate "1986-05-13"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ] ;
+    owl:sameAs dbr:Robert_Pattinson ;
+    foaf:isPrimaryTopicOf wiki:Robert_Pattinson .
+

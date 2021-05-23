@@ -125,6 +125,44 @@ def derreference_occupation(occupation):
     return triples
 
 
+'''
+    ////////////////////////////////////// estas funciones son para agregar la compatibildiad con las demas ontologias //////////////////////////////
+'''
+
+
+def __get_type(g:Graph, subject):
+    return [so for (st, sp, so) in g.triples((subject, RDF.type, None))]
+
+def agregar_mi_ontologia(g:Graph):
+    ''' agrega mi ontología al grago importando desde la ontologia primaria. '''
+    my_ontology = URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl')
+
+    for st, sp, so in g.triples((None, RDF.type, OWL.Ontology)):
+        g.add((st, OWL.imports, my_ontology))
+        return
+
+
+def verify_pregunta2(g:Graph, st, sp):
+    ''' 
+        verifica si la propiedad a asociar tiene dentor del grafo el dominio correcto, en caso contrario se lo agrega 
+        tambien busca todas las ontologías definidas dentor del grafo y les importa la mía (donde están definidas las propieades agregar por el script)
+    '''
+    agregar_mi_ontologia(g)
+    _types = __get_type(g, st)
+    for stt,spp,soo in g.triples((sp, RDFS.domain, None)):
+        if soo in _types:
+            _types.remove(soo)
+
+    for _t in _types:
+        ''' agrego los tipos que no estaban en el dominio de la propiead '''
+        g.add((sp, RDFS.domain, _t))
+
+
+'''
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+'''
+
+
 if __name__ == '__main__':
 
     ''' tomo los archivos por linea de comandos '''
@@ -150,6 +188,11 @@ if __name__ == '__main__':
         with open(dfile,'r') as f:
             g.parse(f, format='turtle')
 
+    '''
+        tomo las iris de los recursos de dbpedia
+        las desreferencio y obtengo las tripletas que me interesan de dbpedia
+        cambio esas tripletas para que se ajusten a mi ontología y se asocien con la iri de mi individual.
+    '''
     for st,sp,so in g.triples((None, OWL.sameAs, None)):
         if 'dbpedia' in str(so):
             iri = str(so)
@@ -157,6 +200,7 @@ if __name__ == '__main__':
             gaux = to_graph(data)
             triples = get_triples_to_add(gaux)
             for stt,spp,soo in change_to_my_ontology(st, triples):
+                verify_pregunta2(g, stt, spp)
                 g.add((stt,spp,soo))
 
     ''' la salida del script debe ser stdout así que imprimo todas las tripletas del grafo '''

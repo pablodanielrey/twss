@@ -1258,3 +1258,209 @@ twssd:Alexander_Skarsg%C3%A5rd owl:sameAs dbr:Alexander_Skarsgård .
 
 ---
 
+funcionó. ahora solo me muestra el actor con el iri mío sin escapar y me trajo las propiedaes a esa individual.
+
+
+---
+
+ahora descargo unos dataset de los chicos en el foro para ver si con esos links funciona correctamente.
+pruebo con el dataset de leonel franco mandarino
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/entrega.py ./data/datasets-externos/leonel_franco_mandarino/dataset-original.ttl ./data/datasets-externos/leonel_franco_mandarino/links.ttl  > ./data/datasets-externos/leonel_franco_mandarino/dataset-enriquecido.ttl
+
+funcionó!!!!. sin ninguna modificación.
+pusieron muchos actores en links.ttl, no se si todos funcionan y/o están verificados.
+pero mi script no tira error y generó un dataset-enriquecido.ttl por lo que veo correcto.
+busco un actor al azar y veo que esta ok:
+
+twss1:BobOdenkirk a ns1:Actor ;
+    ns1:Name "Bob Odenkirk" ;
+    schema:birthDate "1962-10-22"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "comedian" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "writer" ],
+        [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "director" ] ;
+    owl:sameAs dbr:Bob_Odenkirk ;
+    foaf:isPrimaryTopicOf wiki:Bob_Odenkirk .
+
+veo que solo tiene el nombre y después las propiedades de dbpedia.
+me fijo otro actor que tenga mas datos en el dataset-original.
+ej: ChrisPine
+
+:ChrisPine a ns1:Actor ;
+    ns1:Name "Chris Pine" ;
+    ns1:thumbnail :ChrisPine_img ;
+    :url "https://www.rottentomatoes.com/celebrity/christopher_pine"^^xsd:anyUri .
+
+y me fijo el resultado en dataset-enriqucido.ttl
+
+twss1:ChrisPine a ns1:Actor ;
+    ns1:Name "Chris Pine" ;
+    ns1:thumbnail twss1:ChrisPine_img ;
+    schema:birthDate "1980-08-26"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Film Actor" ] ;
+    owl:sameAs dbr:Chris_Pine ;
+    foaf:isPrimaryTopicOf wiki:Chris_Pine ;
+    twss1:url "https://www.rottentomatoes.com/celebrity/christopher_pine"^^xsd:anyUri .
+
+perfecto, manduvo la url y el thumbnail.
+asi que funciona bien mi script.
+
+-----------
+
+y también pruebo con el dataset de martín moschettoni
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/entrega.py ./data/datasets-externos/martin_moschettoni/dataset_original.ttl ./data/datasets-externos/martin_moschettoni/links.ttl > ./data/datasets-externos/martin_moschettoni/dataset_enriquecido.ttl
+
+funcino con el de martin!!.
+por ejemplo justo eligieron a chris pine tambien que yo tuve problemas y lo parseo bien.
+
+:Chris_Pine a owl:NamedIndividual,
+        ns1:Person ;
+    schema:birthDate "1980-08-26"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Film Actor" ] ;
+    owl:sameAs <https://dbpedia.org/resource/Chris_Pine> ;
+    foaf:isPrimaryTopicOf wiki:Chris_Pine ;
+    :image "https://resizing.flixster.com/lUzaa-oO0RKNt3ekbqvlU5RPqR8=/660x990/v1.bjs3NTYxMDQ7ajsxODc3MzsxMjAwOzY2MDs5OTA" ;
+    :mainEntityOfPage "https://www.ecartelera.com/personas/chris-pine/" ;
+    :name "Chris Pine" ;
+    :sameAs "https://www.rottentomatoes.com/celebrity/christopher_pine" ;
+    :url "https://www.metacritic.com/person/chris-pine",
+        "www.imdb.com/name/nm1517976/" .
+
+
+---
+
+analizando bien los datasets resultantes veo que yo uso propiedades y tipos que no están definidos en los datasets de los chicos.
+por lo que queda incoherente el dataset final.
+se me ocurren las siguientes soluciones:
+
+1 - incluír mi ontología (que define las propieades nuevas que uso) 
+y en el caso de que sea necesario, agregar tripletas que definan dominios/rangos adicionales a esas propieades dentor del dataset-enriquecido.ttl 
+
+en el caso del dataset de martin debería haber funcionado de una, pero el problema es que el usa https://  y yo en mi ontología uso http:// 
+asi que si es necesario modificar el dominio de la propiedad para agregarlo
+
+
+###  http://schema.org/birthDate
+schema:birthDate rdfs:domain ns1:Person .
+
+donde ns1 es el prefijo de su ontología. en este caso https://schema.org/
+
+
+2 - reusar las propieades de dbpedia, pero también, dentro del dataset final hace falta redefinirles el dominio y rango para los tipos correctos.
+
+
+
+---
+
+voy a tratar primero de solucionar usando mis propiedades definidas en mi ontología.
+modifico el script para que agregue los dominios/rangos correctos detectados.
+
+cree una función verify_pregunta2 que agregaría los dominios correctos a las propiedades.
+ejecuto y verifico.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/entrega.py ./data/datasets-externos/martin_moschettoni/dataset_original.ttl ./data/datasets-externos/martin_moschettoni/links.ttl > ./data/datasets-externos/martin_moschettoni/dataset-enriquecido.ttl
+
+FUNCIONA!!!!.
+me importó mi ontología donde defino las propieades.
+y definió correctamnete el dominio.
+
+
+<https://gitlab.com/Lorylan/web-semantica/-/raw/master/Entrega%203/Movie_model.ttl> a owl:Ontology ;
+    owl:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> .
+
+
+schema:birthDate rdfs:domain owl:NamedIndividual,
+        ns1:Person .
+
+
+lo cargué en protegé y me lo leyó correctamente!!!!. vamoooossss.
+
+
+pruebo ahroa con el dataset de leonel.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/entrega.py ./data/datasets-externos/leonel_franco_mandarino/dataset-original.ttl ./data/datasets-externos/leonel_franco_mandarino/links.ttl  > ./data/datasets-externos/leonel_franco_mandarino/dataset-enriquecido.ttl
+
+
+<https://raw.githubusercontent.com/Skydler/practica-web-semantica/main/TP3-OWL/data/movie.ttl> a owl:Ontology ;
+    owl:imports ns1:,
+        ns3:2019-02-19,
+        <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl>,
+        ns4: .
+
+
+schema:birthDate rdfs:domain ns1:Actor .
+
+funciono!!!!!
+me agrego correctamente los dominios, importó mi ontología, etc.
+
+
+
+----
+
+ahora me pongo a responder las preguntas que proponen en el tp4.
+en la primer pregunta se me ocurre, y si no tiene nada el dataset-origina.ttl?? 
+no debería ocurrir ningun problema, solo se definiría el dataset-enriquecido.ttl con las tripletas obtendidas desde dbpedia y son las iris de mis individuals definidas en links.ttl
+faltaría indicar la ontología de referencia mía.
+
+lo corro y cierro los ojos.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega4$ python3 src/entrega.py ./data/ejemplo-dataset-nulo/dataset-original.ttl ./data/ejemplo-dataset-nulo/links.ttl > dataset-enriquecido.ttl
+
+funciono!!!. 
+tal cual lo pronosticado me definio los individuals solo con las tripletas obtendias de dbpedia.
+y también claramente no se sabe de donde sale la ontología que definen los tipos y propiedades.
+y algo que ahora me doy cuenta viendo los datos es que los individuals ahi no tienen tipo. o sea que los rangos de las propieadades estarían incorrectos.
+
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+@prefix wiki: <http://en.wikipedia.org/wiki/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> schema:birthDate "1976-08-25"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ] ;
+    owl:sameAs dbr:Alexander_Skarsgård ;
+    foaf:isPrimaryTopicOf wiki:Alexander_Skarsgård .
+
+twssd:Antonio_Banderas schema:birthDate "1960-08-10"^^xsd:date ;
+    schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "director" ],
+        [ a schema:Occupation ;
+            schema:name "producer" ] ;
+    owl:sameAs dbr:Antonio_Banderas ;
+    foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
+
+
+en resumen, para que el resultado sea aunque sea correcto mínimamente dataset-original.ttl deberia tener:
+1 - la ontología de donde buscar los tipos y las propieades
+2 - al menos los tipos de los individuals definidos en links.ttl
+
+como alternativa a requerir el punto 2 (definir los tipos de los individuals), podría modificar el script para
+que en el caso de asignar algo a una iri. ej: iri1 hasOcurrpation blank_node
+iri1 busco si tiene tipo (rdf:type) si no lo tiene definido en el grafo, asumo que es un schema:Actor y agrego esa tripleta:
+
+iri1 rdf:type schema:Actor
+
+con esa modificiación al script, no tendríamos que requerir que las iris1 tengan tipo. (o sea el punto 2 ya no es necesario)
+
+--
+
+como es simple, modifico el script para que lo realice y hago la prueba de nuevo.
+lo hago en una función adicional para que sea algo accesorio.
+
+

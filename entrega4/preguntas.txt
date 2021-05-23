@@ -1,0 +1,44 @@
+Preguntas
+¿Qué requisitos debe cumplir el archivo dataset-original.ttl para que su programa funcione adecuadamente?
+
+en principio solo debería tener la inclusión de la ontología donde se definen los tipos y properties.
+y las tripletas que definen los rfd:type de los iris definidos en links.ttl
+solo para que tenga coherencia el dataset-enriquecido.ttl resultante.
+
+dicho esto, todas estas cosas pueden ser generadas en el script si es que no se encuentran, con esta modificación no es necesario que dataset-original.ttl tenga absolutamente nada.
+puede ser un archivo en blanco. (describo en notes_random.txt)
+
+----
+
+¿Cree que funcionará si le damos como entrada el archivo generado por alguno de sus compañeros?
+
+si funciona con las modificaciones realizadas al script después de probar con el dataset de otros compañeros.
+
+---
+
+¿Cómo efectuó la búsqueda de correspondencias entre su dataset y dbpedia?
+
+me basé solamente en la info de links.ttl. o sea como se marcan 2 iris con sameAs se toma "ciegamente" que esas iris hablan del mismo recurso.
+tomé los datos requeridos y generé las tripletas asociadas.
+
+---
+
+¿Se podría automatizar la búsqueda de correspondencias? ¿Cómo? ¿Con qué efectividad? 
+
+en el caso del ejemplo si, se podría automatizar hasta cierto grado.
+por ejemplo en mi caso justo usé un algoritmo de generación de la iri del actor que parece que es coherente con lo que hace dbpedia al consultar /resource/...
+tomo el nombre, convierto los espacios en _. 
+al consultar eso mismo en dbpedia.org/resource/Nombre_Actor
+termino con el turtle correcto después de las redirecciones. 
+para hacerlo mas robusto se podría analizar las propiedades que tiene ese turtle retornado.
+ej: 
+si tiene ocupación actor,
+si tenemos en nuestra ontología mas datos del individual tratar de cruzar algo con lo que encontramos en dbpedia, ej url de wiki, 
+películas en las que actuó ese actor, etc.
+
+si me encontré con algunos casos de que la persona no era la misma, y en esos casos no tenía profesión "Actor" dentro de la info de dbpedia.
+también la encontré con url dbpedia.org/resource/Nombre_Actor_(actor) en vez de Nombre_Actor
+
+---
+
+Le pedimos que incluya la información obtenida de dbpedia en el archivo resultante. Desde el punto de vista de alguien que va a utilizar su dataset, ¿era necesario incluir esa información o alcanzaba con solo proveer los links sameAs?
