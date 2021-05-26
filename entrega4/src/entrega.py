@@ -134,8 +134,13 @@ def __get_type(g:Graph, subject):
     return [so for (st, sp, so) in g.triples((subject, RDF.type, None))]
 
 def agregar_mi_ontologia(g:Graph):
-    ''' agrega mi ontología al grago importando desde la ontologia primaria. '''
     my_ontology = URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl')
+
+    ''' controlo que ya no exista mi ontologia dentro del grafo '''
+    for st, sp, so in g.triples((my_ontology, RDF.type, OWL.Ontology)):
+        return
+
+    ''' agrega mi ontología al grago importando desde la ontologia primaria. '''
 
     for st, sp, so in g.triples((None, RDF.type, OWL.Ontology)):
         g.add((st, OWL.imports, my_ontology))

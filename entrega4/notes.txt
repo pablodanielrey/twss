@@ -132,5 +132,24 @@ twssd:Alexander_Skarsgård
 
 para protegé no son iguales!!!.
 o sea que las iris no llevan ningún tipo de tratamiento evidentemente de escape antes de ser interpretadas. son interpretadas textualmente.
-
+así que modifico links.ttl para apuntar al recurso con el nombre en utf8 que es la misma iri de mi individuals.
 -----
+
+
+como conclusión final del trabajo me llevo lo siguiente:
+
+1 - reusar todo lo posible de otras ontologías, simplifica un poco el merge de datos y la interpretación al no tener cosas repetidas en distintas propiedades y tipos.
+de hacerlo de nuevo lo haría de esa forma.
+
+2 - no existe solución correcta, y a una consigna simple existen multitud de soluciones e implementaciones distintas que no se me habían ocurrido. y todo los scripts que he realizado
+en todas las entregas me dan sensación de ser un prototipo para entender el problema y no una solución completa. en todas las entregas me tomaría unos 15 días mas como mínimo para mejorar el código y hacerlo mas robusto, mas correcto, etc.
+
+3 - aunque el objetivo del tp sea analizar el proceso de "follow your nose" y entender como ir desreferenciando recursos que tegnan presencia en la web.
+seguir tratabajando con las ontologías ayuda a entender un poco mas la forma de organizarlas, pros y contras de cada una de las opciones.
+por ejemplo en este caso traté de realizar lo contrario del tp anterior (que me dió la sensación de que no estaba correcto). en vez de importar ontologías separadas, definir todo en una.
+
+4 - todavía me faltan hacer miles de pruebas para entender bien como funcionan las reglas de inferencia. no hice pruebas con herramientas de chequeo de las ontologías, y esto 
+por ahi podría ayudarme a entender las consecuencias de lo que desarrollamos dentro de una web semántica. o sea mi solución, que impacto tiene? y que define para otros datasets?
+ej el poner una propiedad como equivalente, que implica para otros datasets?.   schema:author sameAs dbo:author 
+la primera vez que me pude dar una idea de la mala solución que implementé (deifnir mis propieadeas por sobre reutilizar con rango y dominio redefinido las de dbpedia) fue cuando traté de unir los datasets de los demas grupos!.
+

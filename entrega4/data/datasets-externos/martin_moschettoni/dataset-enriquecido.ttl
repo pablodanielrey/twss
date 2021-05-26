@@ -781,11 +781,11 @@ ns1:workPresented a owl:ObjectProperty ;
         ns1:Person ;
     schema:birthDate "1985-04-30"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "model" ],
+        [ a schema:Occupation ;
             schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "Miss Israel2004" ],
-        [ a schema:Occupation ;
-            schema:name "model" ] ;
+            schema:name "Miss Israel2004" ] ;
     owl:sameAs <https://dbpedia.org/resource/Gal_Gadot> ;
     foaf:isPrimaryTopicOf wiki:Gal_Gadot ;
     :image "https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA" ;
@@ -879,13 +879,13 @@ ns1:workPresented a owl:ObjectProperty ;
         ns1:Person ;
     schema:birthDate "1973-08-22"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
             schema:name "writer" ],
         [ a schema:Occupation ;
             schema:name "voice actress" ],
         [ a schema:Occupation ;
             schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "Actress" ],
         [ a schema:Occupation ;
             schema:name "comedian" ] ;
     owl:sameAs <https://dbpedia.org/resource/Kristen_Wiig> ;

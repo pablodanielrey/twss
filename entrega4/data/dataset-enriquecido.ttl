@@ -41,7 +41,8 @@ schema:bestRating a owl:DatatypeProperty ;
         xsd:string .
 
 schema:birthDate a owl:DatatypeProperty ;
-    rdfs:domain schema:Person ;
+    rdfs:domain schema:Person,
+        owl:NamedIndividual ;
     rdfs:range xsd:dateTime .
 
 schema:category a owl:DatatypeProperty ;
@@ -109,7 +110,8 @@ schema:genre a owl:DatatypeProperty ;
     rdfs:range xsd:string .
 
 schema:hasOccupation a owl:ObjectProperty ;
-    rdfs:domain schema:Person ;
+    rdfs:domain schema:Person,
+        owl:NamedIndividual ;
     rdfs:range schema:Occupation .
 
 schema:hasPart a owl:ObjectProperty ;
@@ -145,7 +147,8 @@ schema:mainEntityOfPage a owl:ObjectProperty ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
 schema:name a owl:DatatypeProperty ;
-    rdfs:domain owl:Thing ;
+    rdfs:domain schema:Occupation,
+        owl:Thing ;
     rdfs:range xsd:string .
 
 schema:potentialAction a owl:ObjectProperty ;
@@ -229,6 +232,9 @@ schema:urlTemplate a owl:DatatypeProperty ;
 schema:worstRating a owl:DatatypeProperty ;
     rdfs:domain schema:Rating ;
     rdfs:range xsd:float .
+
+foaf:isPrimaryTopicOf rdfs:domain schema:Person,
+        owl:NamedIndividual .
 
 twssd:show_03116052-ac3c-445e-9d59-45364b71eb67 a owl:NamedIndividual,
         twsss:Show ;
@@ -1111,11 +1117,11 @@ twssd:Antonio_Banderas a schema:Person,
         owl:NamedIndividual ;
     schema:birthDate "1960-08-10"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "producer" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "producer" ] ;
     schema:name "Antonio Banderas" ;
     owl:sameAs dbr:Antonio_Banderas ;
     foaf:isPrimaryTopicOf wiki:Antonio_Banderas .
@@ -2834,11 +2840,11 @@ twssd:Gal_Gadot a schema:Person,
         owl:NamedIndividual ;
     schema:birthDate "1985-04-30"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "model" ],
+        [ a schema:Occupation ;
             schema:name "Miss Israel2004" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
-            schema:name "model" ] ;
+            schema:name "Actress" ] ;
     schema:image <https://resizing.flixster.com/QUtKfz3anQMHFQQruCGKVWbv1Kc=/633x704/v1.cjs0Mjc1NjtwOzE4NzY1OzEyMDA7NjMzOzcwNA> ;
     schema:mainEntityOfPage <https://www.ecartelera.com/personas/gal-gadot> ;
     schema:name "Gal Gadot" ;
@@ -3338,9 +3344,6 @@ Wolfsbane, Cannonball, Magik, Mirage y Sunspot deberán enfrentar sus miedos, po
 twsss:Cinema a owl:Class ;
     rdfs:subClassOf schema:CivicStructure .
 
-schema:Occupation a owl:Class ;
-    rdfs:subClassOf schema:Intangible .
-
 twssd:Godzilla_vs._Kong a schema:Movie,
         owl:NamedIndividual ;
     schema:actor <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd>,
@@ -3365,6 +3368,9 @@ twssd:Godzilla_vs._Kong a schema:Movie,
     schema:inLanguage "Inglés" ;
     schema:name "Godzilla Vs. Kong",
         "Godzilla vs. Kong" .
+
+schema:Occupation a owl:Class ;
+    rdfs:subClassOf schema:Intangible .
 
 twsss:ShowRoom a owl:Class ;
     rdfs:subClassOf schema:Place .

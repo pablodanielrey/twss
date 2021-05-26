@@ -2164,9 +2164,9 @@ twss1:AliceBraga a ns1:Actor ;
     ns1:Name "Alice Braga" ;
     schema:birthDate "1983-04-15"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "producer" ],
+            schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ] ;
+            schema:name "producer" ] ;
     owl:sameAs dbr:Alice_Braga ;
     foaf:isPrimaryTopicOf wiki:Alice_Braga .
 
@@ -2200,11 +2200,11 @@ twss1:AmyMadigan a ns1:Actor ;
     ns1:Name "Amy Madigan" ;
     schema:birthDate "1950-09-11"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "singer" ],
+        [ a schema:Occupation ;
             schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
-            schema:name "singer" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Amy_Madigan ;
     foaf:isPrimaryTopicOf wiki:Amy_Madigan .
 
@@ -2224,9 +2224,9 @@ twss1:AnaIsabelle a ns1:Actor ;
     schema:hasOccupation [ a schema:Occupation ;
             schema:name "actress" ],
         [ a schema:Occupation ;
-            schema:name "entrepreneur" ],
-        [ a schema:Occupation ;
             schema:name "Singer" ],
+        [ a schema:Occupation ;
+            schema:name "entrepreneur" ],
         [ a schema:Occupation ;
             schema:name "dancer" ] ;
     owl:sameAs dbr:Ana_Isabelle ;
@@ -2295,11 +2295,11 @@ twss1:AngelinaJolie a ns1:Actor ;
     ns1:Name "Angelina Jolie" ;
     schema:birthDate "1975-06-04"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "filmmaker" ],
+            schema:name "humanitarian" ],
         [ a schema:Occupation ;
             schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "humanitarian" ] ;
+            schema:name "filmmaker" ] ;
     owl:sameAs dbr:Angelina_Jolie ;
     foaf:isPrimaryTopicOf wiki:Angelina_Jolie .
 
@@ -2525,9 +2525,9 @@ twss1:AyaEndo a ns1:Actor ;
     ns1:Name "Aya Endo" ;
     schema:birthDate "1980-02-17"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "narrator" ],
+            schema:name "Voice actress" ],
         [ a schema:Occupation ;
-            schema:name "Voice actress" ] ;
+            schema:name "narrator" ] ;
     owl:sameAs dbr:Aya_Endō ;
     foaf:isPrimaryTopicOf wiki:Aya_Endō .
 
@@ -2544,9 +2544,9 @@ twss1:BashirSalahuddin a ns1:Actor ;
     ns1:Name "Bashir Salahuddin" ;
     schema:birthDate "1976-07-06"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Writer" ],
-        [ a schema:Occupation ;
             schema:name "Comedian" ],
+        [ a schema:Occupation ;
+            schema:name "Writer" ],
         [ a schema:Occupation ;
             schema:name "Actor" ] ;
     owl:sameAs dbr:Bashir_Salahuddin ;
@@ -2627,15 +2627,15 @@ twss1:BobOdenkirk a ns1:Actor ;
     ns1:Name "Bob Odenkirk" ;
     schema:birthDate "1962-10-22"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "director" ],
-        [ a schema:Occupation ;
-            schema:name "producer" ],
-        [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "writer" ],
         [ a schema:Occupation ;
             schema:name "comedian" ],
         [ a schema:Occupation ;
-            schema:name "writer" ] ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "director" ] ;
     owl:sameAs dbr:Bob_Odenkirk ;
     foaf:isPrimaryTopicOf wiki:Bob_Odenkirk .
 
@@ -2698,9 +2698,9 @@ twss1:CaryElwes a ns1:Actor ;
     schema:hasOccupation [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "" ],
+            schema:name "writer" ],
         [ a schema:Occupation ;
-            schema:name "writer" ] ;
+            schema:name "" ] ;
     owl:sameAs dbr:Cary_Elwes ;
     foaf:isPrimaryTopicOf wiki:Cary_Elwes .
 
@@ -2719,13 +2719,13 @@ twss1:CatherineDeneuve a ns1:Actor ;
     ns1:Name "Catherine Deneuve" ;
     schema:birthDate "1943-10-22"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "model" ],
-        [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
             schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "film producer" ] ;
+            schema:name "model" ],
+        [ a schema:Occupation ;
+            schema:name "film producer" ],
+        [ a schema:Occupation ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Catherine_Deneuve ;
     foaf:isPrimaryTopicOf wiki:Catherine_Deneuve .
 
@@ -2756,11 +2756,11 @@ twss1:ChanningTatum a ns1:Actor ;
     ns1:Name "Channing Tatum" ;
     schema:birthDate "1980-04-26"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "dancer" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "dancer" ] ;
     owl:sameAs dbr:Channing_Tatum ;
     foaf:isPrimaryTopicOf wiki:Channing_Tatum .
 
@@ -2779,9 +2779,9 @@ twss1:CharlieHeaton a ns1:Actor ;
     ns1:Name "Charlie Heaton" ;
     schema:birthDate "1994-02-06"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "musician" ],
         [ a schema:Occupation ;
-            schema:name "musician" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Charlie_Heaton ;
     foaf:isPrimaryTopicOf wiki:Charlie_Heaton .
 
@@ -2789,9 +2789,9 @@ twss1:CharlizeTheron a ns1:Actor ;
     ns1:Name "Charlize Theron" ;
     schema:birthDate "1975-08-07"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Charlize_Theron ;
     foaf:isPrimaryTopicOf wiki:Charlize_Theron .
 
@@ -2906,9 +2906,9 @@ twss1:ClemencePoesy a ns1:Actor ;
     ns1:thumbnail twss1:ClemencePoesy_img ;
     schema:birthDate "1982-10-30"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "model" ],
         [ a schema:Occupation ;
-            schema:name "model" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Clémence_Poésy ;
     foaf:isPrimaryTopicOf wiki:Clémence_Poésy ;
     twss1:url "https://www.rottentomatoes.com/celebrity/clemence-poesy"^^xsd:anyUri .
@@ -2991,11 +2991,11 @@ twss1:DaisukeNamikawa a ns1:Actor ;
     ns1:Name "Daisuke Namikawa" ;
     schema:birthDate "1976-04-02"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
             schema:name "voice actor" ],
         [ a schema:Occupation ;
-            schema:name "singer" ],
-        [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "singer" ] ;
     owl:sameAs dbr:Daisuke_Namikawa ;
     foaf:isPrimaryTopicOf wiki:Daisuke_Namikawa .
 
@@ -3036,9 +3036,9 @@ twss1:DaphneRubin_Vega a ns1:Actor ;
     ns1:Name "Daphne Rubin-Vega" ;
     schema:birthDate "1969-11-18"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Dancer" ],
-        [ a schema:Occupation ;
             schema:name "actress" ],
+        [ a schema:Occupation ;
+            schema:name "Dancer" ],
         [ a schema:Occupation ;
             schema:name "singer-songwriter" ] ;
     owl:sameAs dbr:Daphne_Rubin-Vega ;
@@ -3177,11 +3177,11 @@ twss1:DenzelWashington a ns1:Actor ;
     ns1:Name "Denzel Washington" ;
     schema:birthDate "1954-12-28"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "director" ],
-        [ a schema:Occupation ;
             schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "director" ] ;
     owl:sameAs dbr:Denzel_Washington ;
     foaf:isPrimaryTopicOf wiki:Denzel_Washington .
 
@@ -3237,11 +3237,11 @@ twss1:DomhnallGleeson a ns1:Actor ;
     ns1:Name "Domhnall Gleeson" ;
     schema:birthDate "1983-05-12"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
-        [ a schema:Occupation ;
             schema:name "screenwriter" ],
         [ a schema:Occupation ;
-            schema:name "director" ] ;
+            schema:name "director" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Domhnall_Gleeson ;
     foaf:isPrimaryTopicOf wiki:Domhnall_Gleeson .
 
@@ -3259,13 +3259,13 @@ twss1:DonCheadle a ns1:Actor ;
     schema:hasOccupation [ a schema:Occupation ;
             schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ],
-        [ a schema:Occupation ;
             schema:name "writer" ],
+        [ a schema:Occupation ;
+            schema:name "author" ],
         [ a schema:Occupation ;
             schema:name "film producer" ],
         [ a schema:Occupation ;
-            schema:name "author" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Don_Cheadle ;
     foaf:isPrimaryTopicOf wiki:Don_Cheadle .
 
@@ -3276,11 +3276,11 @@ twss1:DwayneJohnson a ns1:Actor ;
     ns1:Name "Dwayne Johnson" ;
     schema:birthDate "1972-05-02"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "businessman" ],
-        [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "businessman" ] ;
     owl:sameAs dbr:Dwayne_Johnson ;
     foaf:isPrimaryTopicOf wiki:Dwayne_Johnson .
 
@@ -3296,9 +3296,9 @@ twss1:EdHarris a ns1:Actor ;
         [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "director" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "director" ] ;
     owl:sameAs dbr:Ed_Harris ;
     foaf:isPrimaryTopicOf wiki:Ed_Harris .
 
@@ -3921,11 +3921,11 @@ twss1:EmmaThompson a ns1:Actor ;
     ns1:Name "Emma Thompson" ;
     schema:birthDate "1959-04-15"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "author" ],
-        [ a schema:Occupation ;
             schema:name "comedian" ],
         [ a schema:Occupation ;
             schema:name "Actress" ],
+        [ a schema:Occupation ;
+            schema:name "author" ],
         [ a schema:Occupation ;
             schema:name "screenwriter" ],
         [ a schema:Occupation ;
@@ -3937,9 +3937,9 @@ twss1:EmmanuelleSeigner a ns1:Actor ;
     ns1:Name "Emmanuelle Seigner" ;
     schema:birthDate "1966-06-22"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "singer" ],
-        [ a schema:Occupation ;
             schema:name "Actress" ],
+        [ a schema:Occupation ;
+            schema:name "singer" ],
         [ a schema:Occupation ;
             schema:name "model" ] ;
     owl:sameAs dbr:Emmanuelle_Seigner ;
@@ -4031,9 +4031,9 @@ twss1:EricBauza a ns1:Actor ;
     schema:hasOccupation [ a schema:Occupation ;
             schema:name "Voice actor" ],
         [ a schema:Occupation ;
-            schema:name "stand-up comedian" ],
+            schema:name "animation artist" ],
         [ a schema:Occupation ;
-            schema:name "animation artist" ] ;
+            schema:name "stand-up comedian" ] ;
     owl:sameAs dbr:Eric_Bauza ;
     foaf:isPrimaryTopicOf wiki:Eric_Bauza .
 
@@ -4130,13 +4130,13 @@ twss1:EthanHawke a ns1:Actor ;
     ns1:Name "Ethan Hawke" ;
     schema:birthDate "1970-11-06"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "novelist" ],
+            schema:name "screenwriter" ],
         [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "screenwriter" ],
+            schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "director" ] ;
+            schema:name "novelist" ] ;
     owl:sameAs dbr:Ethan_Hawke ;
     foaf:isPrimaryTopicOf wiki:Ethan_Hawke .
 
@@ -4185,9 +4185,9 @@ twss1:FionaDourif a ns1:Actor ;
     ns1:Name "Fiona Dourif" ;
     schema:birthDate "1981-10-30"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Fiona_Dourif ;
     foaf:isPrimaryTopicOf wiki:Fiona_Dourif ;
     twss1:url "https://www.metacritic.com/person/fiona-dourif"^^xsd:anyUri .
@@ -4208,13 +4208,13 @@ twss1:FrankWelker a ns1:Actor ;
     ns1:Name "Frank Welker" ;
     schema:birthDate "1946-03-12"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "stand-up comedian" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "impressionist" ],
+            schema:name "stand-up comedian" ],
         [ a schema:Occupation ;
             schema:name "voice actor" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "impressionist" ] ;
     owl:sameAs dbr:Frank_Welker ;
     foaf:isPrimaryTopicOf wiki:Frank_Welker .
 
@@ -4226,9 +4226,9 @@ twss1:GabriellaWilde a ns1:Actor ;
     ns1:Name "Gabriella Wilde" ;
     schema:birthDate "1989-04-08"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "model" ],
+            schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ] ;
+            schema:name "model" ] ;
     owl:sameAs dbr:Gabriella_Wilde ;
     foaf:isPrimaryTopicOf wiki:Gabriella_Wilde ;
     twss1:url "https://www.metacritic.com/person/gabriella-wilde"^^xsd:anyUri .
@@ -4271,13 +4271,13 @@ twss1:GigiLeung a ns1:Actor ;
     ns1:Name "Gigi Leung" ;
     schema:birthDate "1976-03-25"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "actress" ],
-        [ a schema:Occupation ;
-            schema:name "Singer" ],
-        [ a schema:Occupation ;
             schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "songwriter" ] ;
+            schema:name "actress" ],
+        [ a schema:Occupation ;
+            schema:name "songwriter" ],
+        [ a schema:Occupation ;
+            schema:name "Singer" ] ;
     owl:sameAs dbr:Gigi_Leung ;
     foaf:isPrimaryTopicOf wiki:Gigi_Leung .
 
@@ -4285,11 +4285,11 @@ twss1:GlenPowell a ns1:Actor ;
     ns1:Name "Glen Powell" ;
     schema:birthDate "1988-10-21"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "writer" ],
+        [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "producer" ],
-        [ a schema:Occupation ;
-            schema:name "writer" ] ;
+            schema:name "producer" ] ;
     owl:sameAs dbr:Glen_Powell ;
     foaf:isPrimaryTopicOf wiki:Glen_Powell .
 
@@ -4583,9 +4583,9 @@ twss1:HarukaTomatsu a ns1:Actor ;
     ns1:Name "Haruka Tomatsu" ;
     schema:birthDate "1990-02-04"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "singer" ],
-        [ a schema:Occupation ;
             schema:name "voice actress" ],
+        [ a schema:Occupation ;
+            schema:name "singer" ],
         [ a schema:Occupation ;
             schema:name "Actress" ] ;
     owl:sameAs dbr:Haruka_Tomatsu ;
@@ -4638,9 +4638,9 @@ twss1:HiroShimono a ns1:Actor ;
     ns1:Name "Hiro Shimono" ;
     schema:birthDate "1980-04-21"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Voice actor" ],
+            schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "singer" ] ;
+            schema:name "Voice actor" ] ;
     owl:sameAs dbr:Hiro_Shimono ;
     foaf:isPrimaryTopicOf wiki:Hiro_Shimono .
 
@@ -4694,9 +4694,9 @@ twss1:IngridOlerinskaya a ns1:Actor ;
     ns1:Name "Ingrid Olerinskaya" ;
     schema:birthDate "1992-03-14"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "model" ],
+            schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ] ;
+            schema:name "model" ] ;
     owl:sameAs dbr:Ingrid_Olerinskaya ;
     foaf:isPrimaryTopicOf wiki:Ingrid_Olerinskaya .
 
@@ -4718,9 +4718,9 @@ twss1:IsabelaMerced a ns1:Actor ;
     ns1:Name "Isabela Merced" ;
     schema:birthDate "2001-07-10"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "singer" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Isabela_Moner ;
     foaf:isPrimaryTopicOf wiki:Isabela_Moner .
 
@@ -4745,11 +4745,11 @@ twss1:IvoUukkivi a ns1:Actor ;
     ns1:Name "Ivo Uukkivi" ;
     schema:birthDate "1965-10-11"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
             schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "television producer" ],
-        [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "television producer" ] ;
     owl:sameAs dbr:Ivo_Uukkivi ;
     foaf:isPrimaryTopicOf wiki:Ivo_Uukkivi ;
     twss1:url "https://www.metacritic.com/person/ivo-uukkivi"^^xsd:anyUri .
@@ -4764,13 +4764,13 @@ twss1:JackWhitehall a ns1:Actor ;
     ns1:Name "Jack Whitehall" ;
     schema:birthDate "1988-07-07"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "presenter" ],
-        [ a schema:Occupation ;
-            schema:name "actor" ],
+            schema:name "writer" ],
         [ a schema:Occupation ;
             schema:name "Comedian" ],
         [ a schema:Occupation ;
-            schema:name "writer" ] ;
+            schema:name "actor" ],
+        [ a schema:Occupation ;
+            schema:name "presenter" ] ;
     owl:sameAs dbr:Jack_Whitehall ;
     foaf:isPrimaryTopicOf wiki:Jack_Whitehall .
 
@@ -4786,9 +4786,9 @@ twss1:JakeGyllenhaal a ns1:Actor ;
     ns1:Name "Jake Gyllenhaal" ;
     schema:birthDate "1980-12-19"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "film producer" ],
         [ a schema:Occupation ;
-            schema:name "film producer" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Jake_Gyllenhaal ;
     foaf:isPrimaryTopicOf wiki:Jake_Gyllenhaal .
 
@@ -4816,13 +4816,13 @@ twss1:JamesCorden a ns1:Actor ;
     ns1:Name "James Corden" ;
     schema:birthDate "1978-08-22"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "comedian" ],
+        [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "writer" ],
         [ a schema:Occupation ;
-            schema:name "television host" ],
-        [ a schema:Occupation ;
-            schema:name "comedian" ] ;
+            schema:name "television host" ] ;
     owl:sameAs dbr:James_Corden ;
     foaf:isPrimaryTopicOf wiki:James_Corden .
 
@@ -4834,11 +4834,11 @@ twss1:JamesJordan a ns1:Actor ;
 twss1:JamieDemetriou a ns1:Actor ;
     ns1:Name "Jamie Demetriou" ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "screenwriter" ],
-        [ a schema:Occupation ;
             schema:name "Comedian" ],
         [ a schema:Occupation ;
-            schema:name "actor" ] ;
+            schema:name "actor" ],
+        [ a schema:Occupation ;
+            schema:name "screenwriter" ] ;
     owl:sameAs dbr:Jamie_Demetriou ;
     foaf:isPrimaryTopicOf wiki:Jamie_Demetriou .
 
@@ -4846,15 +4846,15 @@ twss1:JaneLynch a ns1:Actor ;
     ns1:Name "Jane Lynch" ;
     schema:birthDate "1960-07-14"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
             schema:name "voice actress" ],
+        [ a schema:Occupation ;
+            schema:name "comedian" ],
         [ a schema:Occupation ;
             schema:name "author" ],
         [ a schema:Occupation ;
             schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "comedian" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Jane_Lynch ;
     foaf:isPrimaryTopicOf wiki:Jane_Lynch .
 
@@ -4867,13 +4867,13 @@ twss1:JaredLeto a ns1:Actor ;
     ns1:Name "Jared Leto" ;
     schema:birthDate "1971-12-26"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "singer" ],
-        [ a schema:Occupation ;
-            schema:name "songwriter" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "songwriter" ],
+        [ a schema:Occupation ;
+            schema:name "singer" ] ;
     owl:sameAs dbr:Jared_Leto ;
     foaf:isPrimaryTopicOf wiki:Jared_Leto .
 
@@ -4909,9 +4909,9 @@ twss1:JeffBergman a ns1:Actor ;
     ns1:Name "Jeff Bergman" ;
     schema:birthDate "1960-07-10"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "comedian" ],
-        [ a schema:Occupation ;
             schema:name "Voice actor" ],
+        [ a schema:Occupation ;
+            schema:name "comedian" ],
         [ a schema:Occupation ;
             schema:name "impressionist" ] ;
     owl:sameAs dbr:Jeff_Bergman ;
@@ -5011,9 +5011,9 @@ twss1:JoeKeery a ns1:Actor ;
     ns1:Name "Joe Keery" ;
     schema:birthDate "1992-04-24"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "musician" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "musician" ] ;
     owl:sameAs dbr:Joe_Keery ;
     foaf:isPrimaryTopicOf wiki:Joe_Keery .
 
@@ -5021,13 +5021,13 @@ twss1:JoeTaslim a ns1:Actor ;
     ns1:Name "Joe Taslim" ;
     schema:birthDate "1981-06-23"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Martial artist" ],
-        [ a schema:Occupation ;
-            schema:name "Model" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "Athlete" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "Martial artist" ],
+        [ a schema:Occupation ;
+            schema:name "Model" ] ;
     owl:sameAs dbr:Joe_Taslim ;
     foaf:isPrimaryTopicOf wiki:Joe_Taslim .
 
@@ -5049,11 +5049,11 @@ twss1:JohnCena a ns1:Actor ;
     ns1:Name "John Cena" ;
     schema:birthDate "1977-04-23"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Professional wrestler" ],
+            schema:name "television presenter" ],
         [ a schema:Occupation ;
             schema:name "actor" ],
         [ a schema:Occupation ;
-            schema:name "television presenter" ] ;
+            schema:name "Professional wrestler" ] ;
     owl:sameAs dbr:John_Cena ;
     foaf:isPrimaryTopicOf wiki:John_Cena .
 
@@ -5187,13 +5187,13 @@ twss1:JulietteBinoche a ns1:Actor ;
     ns1:Name "Juliette Binoche" ;
     schema:birthDate "1964-03-09"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "human rights campaigner" ],
+            schema:name "Actress" ],
+        [ a schema:Occupation ;
+            schema:name "dancer" ],
         [ a schema:Occupation ;
             schema:name "artist" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
-            schema:name "dancer" ] ;
+            schema:name "human rights campaigner" ] ;
     owl:sameAs dbr:Juliette_Binoche ;
     foaf:isPrimaryTopicOf wiki:Juliette_Binoche .
 
@@ -5274,9 +5274,9 @@ twss1:KenichiSuzumura a ns1:Actor ;
     ns1:Name "Kenichi Suzumura" ;
     schema:birthDate "1974-09-12"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "singer" ],
+            schema:name "Voice actor" ],
         [ a schema:Occupation ;
-            schema:name "Voice actor" ] ;
+            schema:name "singer" ] ;
     owl:sameAs dbr:Kenichi_Suzumura ;
     foaf:isPrimaryTopicOf wiki:Kenichi_Suzumura .
 
@@ -5285,13 +5285,13 @@ twss1:KennethBranagh a ns1:Actor ;
     ns1:thumbnail twss1:KennethBranagh_img ;
     schema:birthDate "1960-12-10"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "writer" ],
+        [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "director" ],
-        [ a schema:Occupation ;
-            schema:name "writer" ] ;
+            schema:name "director" ] ;
     owl:sameAs dbr:Kenneth_Branagh ;
     foaf:isPrimaryTopicOf wiki:Kenneth_Branagh ;
     twss1:url "https://www.rottentomatoes.com/celebrity/kenneth_branagh"^^xsd:anyUri .
@@ -5341,9 +5341,9 @@ twss1:KonstantinKhabenskiy a ns1:Actor ;
     ns1:Name "Konstantin Khabenskiy" ;
     schema:birthDate "1972-01-11"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor • Director • Philanthropist" ],
+            schema:name "People's Artist of Russia(2012)" ],
         [ a schema:Occupation ;
-            schema:name "People's Artist of Russia(2012)" ] ;
+            schema:name "Actor • Director • Philanthropist" ] ;
     owl:sameAs dbr:Konstantin_Khabensky ;
     foaf:isPrimaryTopicOf wiki:Konstantin_Khabensky .
 
@@ -5357,13 +5357,13 @@ twss1:KristenWiig a ns1:Actor ;
     ns1:thumbnail twss1:KristenWiig_img ;
     schema:birthDate "1973-08-22"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "voice actress" ],
+            schema:name "Actress" ],
         [ a schema:Occupation ;
             schema:name "writer" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
             schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "voice actress" ],
         [ a schema:Occupation ;
             schema:name "comedian" ] ;
     owl:sameAs dbr:Kristen_Wiig ;
@@ -5500,17 +5500,17 @@ twss1:Lin_ManuelMiranda a ns1:Actor ;
     ns1:Name "Lin-Manuel Miranda" ;
     schema:birthDate "1980-01-16"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "producer" ],
-        [ a schema:Occupation ;
-            schema:name "Composer" ],
-        [ a schema:Occupation ;
-            schema:name "lyricist" ],
-        [ a schema:Occupation ;
-            schema:name "singer" ],
+            schema:name "playwright" ],
         [ a schema:Occupation ;
             schema:name "actor" ],
         [ a schema:Occupation ;
-            schema:name "playwright" ] ;
+            schema:name "Composer" ],
+        [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
+            schema:name "lyricist" ],
+        [ a schema:Occupation ;
+            schema:name "singer" ] ;
     owl:sameAs dbr:Lin-Manuel_Miranda ;
     foaf:isPrimaryTopicOf wiki:Lin-Manuel_Miranda .
 
@@ -5615,17 +5615,17 @@ twss1:Ludacris a ns1:Actor ;
     ns1:Name "Ludacris" ;
     schema:birthDate "1977-09-11"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "actor" ],
+            schema:name "songwriter" ],
+        [ a schema:Occupation ;
+            schema:name "Rapper" ],
         [ a schema:Occupation ;
             schema:name "philanthropist" ],
         [ a schema:Occupation ;
-            schema:name "entrepreneur" ],
-        [ a schema:Occupation ;
             schema:name "record executive" ],
         [ a schema:Occupation ;
-            schema:name "songwriter" ],
+            schema:name "entrepreneur" ],
         [ a schema:Occupation ;
-            schema:name "Rapper" ] ;
+            schema:name "actor" ] ;
     owl:sameAs dbr:Ludacris ;
     foaf:isPrimaryTopicOf wiki:Ludacris .
 
@@ -5658,13 +5658,13 @@ twss1:LyndaCarter a ns1:Actor ;
     ns1:Name "Lynda Carter" ;
     schema:birthDate "1951-07-24"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "beauty pageant titleholder" ],
+        [ a schema:Occupation ;
+            schema:name "songwriter" ],
         [ a schema:Occupation ;
             schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "beauty pageant titleholder" ],
-        [ a schema:Occupation ;
-            schema:name "songwriter" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Lynda_Carter ;
     foaf:isPrimaryTopicOf wiki:Lynda_Carter ;
     twss1:url "https://www.metacritic.com/person/lynda-carter"^^xsd:anyUri .
@@ -5680,9 +5680,9 @@ twss1:MaisieWilliams a ns1:Actor ;
     ns1:Name "Maisie Williams" ;
     schema:birthDate "1997-04-15"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "internet entrepreneur" ],
         [ a schema:Occupation ;
-            schema:name "internet entrepreneur" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Maisie_Williams ;
     foaf:isPrimaryTopicOf wiki:Maisie_Williams .
 
@@ -5718,9 +5718,9 @@ twss1:MargotRobbie a ns1:Actor ;
     ns1:Name "Margot Robbie" ;
     schema:birthDate "1990-07-02"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Margot_Robbie ;
     foaf:isPrimaryTopicOf wiki:Margot_Robbie .
 
@@ -5793,13 +5793,13 @@ twss1:MathieuAmalric a ns1:Actor ;
     ns1:Name "Mathieu Amalric" ;
     schema:birthDate "1965-10-25"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "screenwriter" ],
-        [ a schema:Occupation ;
-            schema:name "producer" ],
-        [ a schema:Occupation ;
             schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "screenwriter" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "producer" ] ;
     owl:sameAs dbr:Mathieu_Amalric ;
     foaf:isPrimaryTopicOf wiki:Mathieu_Amalric .
 
@@ -5842,9 +5842,9 @@ twss1:MelBlanc a ns1:Actor ;
     ns1:Name "Mel Blanc" ;
     schema:birthDate "1908-05-30"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Voice actor" ],
+            schema:name "radio personality" ],
         [ a schema:Occupation ;
-            schema:name "radio personality" ] ;
+            schema:name "Voice actor" ] ;
     owl:sameAs dbr:Mel_Blanc ;
     foaf:isPrimaryTopicOf wiki:Mel_Blanc .
 
@@ -5862,17 +5862,17 @@ twss1:MelvilPoupaud a ns1:Actor ;
     ns1:Name "Melvil Poupaud" ;
     schema:birthDate "1973-01-26"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
-        [ a schema:Occupation ;
-            schema:name "film director" ],
+            schema:name "composer" ],
         [ a schema:Occupation ;
             schema:name "screenwriter" ],
         [ a schema:Occupation ;
-            schema:name "composer" ],
-        [ a schema:Occupation ;
             schema:name "cinematographer" ],
         [ a schema:Occupation ;
-            schema:name "film editor" ] ;
+            schema:name "film editor" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "film director" ] ;
     owl:sameAs dbr:Melvil_Poupaud ;
     foaf:isPrimaryTopicOf wiki:Melvil_Poupaud .
 
@@ -6352,9 +6352,9 @@ twss1:NathalieEmmanuel a ns1:Actor ;
     ns1:Name "Nathalie Emmanuel" ;
     schema:birthDate "1989-03-02"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "model" ],
+            schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ] ;
+            schema:name "model" ] ;
     owl:sameAs dbr:Nathalie_Emmanuel ;
     foaf:isPrimaryTopicOf wiki:Nathalie_Emmanuel .
 
@@ -6424,11 +6424,11 @@ twss1:NicolasCage a ns1:Actor ;
     ns1:Name "Nicolas Cage" ;
     schema:birthDate "1964-01-07"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "filmmaker" ],
+            schema:name "" ],
         [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "" ] ;
+            schema:name "filmmaker" ] ;
     owl:sameAs dbr:Nicolas_Cage ;
     foaf:isPrimaryTopicOf wiki:Nicolas_Cage .
 
@@ -6474,9 +6474,9 @@ twss1:OrlandoBloom a ns1:Actor ;
     ns1:Name "Orlando Bloom" ;
     schema:birthDate "1977-01-13"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "UNICEF ambassador" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "UNICEF ambassador" ] ;
     owl:sameAs dbr:Orlando_Bloom ;
     foaf:isPrimaryTopicOf wiki:Orlando_Bloom .
 
@@ -6632,9 +6632,9 @@ twss1:PeterDinklage a ns1:Actor ;
     ns1:Name "Peter Dinklage" ;
     schema:birthDate "1969-06-11"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Peter_Dinklage ;
     foaf:isPrimaryTopicOf wiki:Peter_Dinklage .
 
@@ -6659,15 +6659,15 @@ twss1:PostMalone a ns1:Actor ;
     ns1:Name "Post Malone" ;
     schema:birthDate "1995-07-04"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "songwriter" ],
+            schema:name "Rapper" ],
         [ a schema:Occupation ;
             schema:name "" ],
         [ a schema:Occupation ;
-            schema:name "record producer" ],
-        [ a schema:Occupation ;
             schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "Rapper" ] ;
+            schema:name "songwriter" ],
+        [ a schema:Occupation ;
+            schema:name "record producer" ] ;
     owl:sameAs dbr:Post_Malone ;
     foaf:isPrimaryTopicOf wiki:Post_Malone .
 
@@ -6694,9 +6694,9 @@ twss1:RachelZegler a ns1:Actor ;
     schema:hasOccupation [ a schema:Occupation ;
             schema:name "Singer" ],
         [ a schema:Occupation ;
-            schema:name "YouTuber" ],
+            schema:name "actress" ],
         [ a schema:Occupation ;
-            schema:name "actress" ] ;
+            schema:name "YouTuber" ] ;
     owl:sameAs dbr:Rachel_Zegler ;
     foaf:isPrimaryTopicOf wiki:Rachel_Zegler .
 
@@ -6708,9 +6708,9 @@ twss1:RalphFiennes a ns1:Actor ;
     ns1:Name "Ralph Fiennes" ;
     schema:birthDate "1962-12-22"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
-        [ a schema:Occupation ;
             schema:name "director" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "producer" ] ;
     owl:sameAs dbr:Ralph_Fiennes ;
@@ -6776,9 +6776,9 @@ twss1:RhysDarby a ns1:Actor ;
     ns1:Name "Rhys Darby" ;
     schema:birthDate "1974-03-21"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "comedian" ],
-        [ a schema:Occupation ;
             schema:name "Actor" ],
+        [ a schema:Occupation ;
+            schema:name "comedian" ],
         [ a schema:Occupation ;
             schema:name "voice actor" ] ;
     owl:sameAs dbr:Rhys_Darby ;
@@ -6813,11 +6813,11 @@ twss1:RitaMoreno a ns1:Actor ;
     ns1:Name "Rita Moreno" ;
     schema:birthDate "1931-12-11"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "dancer" ],
-        [ a schema:Occupation ;
             schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ] ;
+            schema:name "Actress" ],
+        [ a schema:Occupation ;
+            schema:name "dancer" ] ;
     owl:sameAs dbr:Rita_Moreno ;
     foaf:isPrimaryTopicOf wiki:Rita_Moreno .
 
@@ -6841,9 +6841,9 @@ twss1:RobertDowneyJr a ns1:Actor ;
     ns1:Name "Robert Downey Jr." ;
     schema:birthDate "1965-04-04"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "producer" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "producer" ] ;
     owl:sameAs <http://dbpedia.org/resource/Robert_Downey_Jr.> ;
     foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Robert_Downey_Jr.> .
 
@@ -6865,9 +6865,9 @@ twss1:RobinWright a ns1:Actor ;
     ns1:thumbnail twss1:RobinWright_img ;
     schema:birthDate "1966-04-08"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "director" ],
+            schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ] ;
+            schema:name "director" ] ;
     owl:sameAs dbr:Robin_Wright ;
     foaf:isPrimaryTopicOf wiki:Robin_Wright ;
     twss1:url "https://www.rottentomatoes.com/celebrity/robin_wright"^^xsd:anyUri .
@@ -6919,15 +6919,15 @@ twss1:SamNeill a ns1:Actor ;
     ns1:Name "Sam Neill" ;
     schema:birthDate "1947-09-14"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "director" ],
-        [ a schema:Occupation ;
             schema:name "vineyard proprietor" ],
+        [ a schema:Occupation ;
+            schema:name "producer" ],
         [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "writer" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "director" ] ;
     owl:sameAs dbr:Sam_Neill ;
     foaf:isPrimaryTopicOf wiki:Sam_Neill .
 
@@ -6935,9 +6935,9 @@ twss1:SamaraWeaving a ns1:Actor ;
     ns1:Name "Samara Weaving" ;
     schema:birthDate "1992-02-23"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "model" ],
+            schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ] ;
+            schema:name "model" ] ;
     owl:sameAs dbr:Samara_Weaving ;
     foaf:isPrimaryTopicOf wiki:Samara_Weaving .
 
@@ -6987,9 +6987,9 @@ twss1:ScarlettJohansson a ns1:Actor ;
     ns1:Name "Scarlett Johansson" ;
     schema:birthDate "1984-11-22"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "singer" ],
+            schema:name "Actress" ],
         [ a schema:Occupation ;
-            schema:name "Actress" ] ;
+            schema:name "singer" ] ;
     owl:sameAs dbr:Scarlett_Johansson ;
     foaf:isPrimaryTopicOf wiki:Scarlett_Johansson .
 
@@ -7003,13 +7003,13 @@ twss1:ScottEastwood a ns1:Actor ;
     ns1:Name "Scott Eastwood" ;
     schema:birthDate "1986-03-21"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "model" ],
+            schema:name "director" ],
+        [ a schema:Occupation ;
+            schema:name "producer" ],
         [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "director" ],
-        [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "model" ] ;
     owl:sameAs dbr:Scott_Eastwood ;
     foaf:isPrimaryTopicOf wiki:Scott_Eastwood .
 
@@ -7036,9 +7036,9 @@ twss1:ShunOguri a ns1:Actor ;
     ns1:Name "Shun Oguri" ;
     schema:birthDate "1982-12-26"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "voice actor" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "voice actor" ] ;
     owl:sameAs dbr:Shun_Oguri ;
     foaf:isPrimaryTopicOf wiki:Shun_Oguri .
 
@@ -7179,9 +7179,9 @@ twss1:TadanobuAsano a ns1:Actor ;
     ns1:Name "Tadanobu Asano" ;
     schema:birthDate "1973-11-27"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "musician" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "musician" ] ;
     owl:sameAs dbr:Tadanobu_Asano ;
     foaf:isPrimaryTopicOf wiki:Tadanobu_Asano .
 
@@ -7192,15 +7192,15 @@ twss1:TaikaWaititi a ns1:Actor ;
     ns1:Name "Taika Waititi" ;
     schema:birthDate "1975-08-16"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "actor" ],
+            schema:name "Director" ],
         [ a schema:Occupation ;
             schema:name "producer" ],
         [ a schema:Occupation ;
             schema:name "comedian" ],
         [ a schema:Occupation ;
-            schema:name "writer" ],
+            schema:name "actor" ],
         [ a schema:Occupation ;
-            schema:name "Director" ] ;
+            schema:name "writer" ] ;
     owl:sameAs dbr:Taika_Waititi ;
     foaf:isPrimaryTopicOf wiki:Taika_Waititi .
 
@@ -7208,9 +7208,9 @@ twss1:TakahiroSakurai a ns1:Actor ;
     ns1:Name "Takahiro Sakurai" ;
     schema:birthDate "1974-06-13"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Voice actor" ],
+            schema:name "narrator" ],
         [ a schema:Occupation ;
-            schema:name "narrator" ] ;
+            schema:name "Voice actor" ] ;
     owl:sameAs dbr:Takahiro_Sakurai ;
     foaf:isPrimaryTopicOf wiki:Takahiro_Sakurai .
 
@@ -7218,9 +7218,9 @@ twss1:TakehitoKoyasu a ns1:Actor ;
     ns1:Name "Takehito Koyasu" ;
     schema:birthDate "1967-05-05"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "narrator" ],
+            schema:name "Voice actor" ],
         [ a schema:Occupation ;
-            schema:name "Voice actor" ] ;
+            schema:name "narrator" ] ;
     owl:sameAs dbr:Takehito_Koyasu ;
     foaf:isPrimaryTopicOf wiki:Takehito_Koyasu .
 
@@ -7568,11 +7568,11 @@ twss1:TomHardy a ns1:Actor ;
     ns1:Name "Tom Hardy" ;
     schema:birthDate "1977-09-15"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
-        [ a schema:Occupation ;
             schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "model" ] ;
+            schema:name "model" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Tom_Hardy ;
     foaf:isPrimaryTopicOf wiki:Tom_Hardy .
 
@@ -7660,9 +7660,9 @@ twss1:TonyTodd a ns1:Actor ;
     schema:hasOccupation [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
-            schema:name "voice actor" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "voice actor" ] ;
     owl:sameAs dbr:Tony_Todd ;
     foaf:isPrimaryTopicOf wiki:Tony_Todd .
 
@@ -7687,21 +7687,21 @@ twss1:TyreseGibson a ns1:Actor ;
     ns1:Name "Tyrese Gibson" ;
     schema:birthDate "1978-12-30"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "rapper" ],
+        [ a schema:Occupation ;
             schema:name "Singer" ],
-        [ a schema:Occupation ;
-            schema:name "songwriter" ],
-        [ a schema:Occupation ;
-            schema:name "VJ" ],
         [ a schema:Occupation ;
             schema:name "author" ],
         [ a schema:Occupation ;
-            schema:name "model" ],
+            schema:name "actor" ],
         [ a schema:Occupation ;
             schema:name "screenwriter" ],
         [ a schema:Occupation ;
-            schema:name "rapper" ],
+            schema:name "VJ" ],
         [ a schema:Occupation ;
-            schema:name "actor" ] ;
+            schema:name "songwriter" ],
+        [ a schema:Occupation ;
+            schema:name "model" ] ;
     owl:sameAs dbr:Tyrese_Gibson ;
     foaf:isPrimaryTopicOf wiki:Tyrese_Gibson .
 
@@ -7723,11 +7723,11 @@ twss1:UtkarshAmbudkar a ns1:Actor ;
     ns1:Name "Utkarsh Ambudkar" ;
     schema:birthDate "1983-12-08"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "singer" ],
+            schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "rapper" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "singer" ] ;
     owl:sameAs dbr:Utkarsh_Ambudkar ;
     foaf:isPrimaryTopicOf wiki:Utkarsh_Ambudkar .
 
@@ -7753,11 +7753,11 @@ twss1:VeraFarmiga a ns1:Actor ;
     ns1:Name "Vera Farmiga" ;
     schema:birthDate "1973-08-06"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
             schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Vera_Farmiga ;
     foaf:isPrimaryTopicOf wiki:Vera_Farmiga .
 
@@ -7775,13 +7775,13 @@ twss1:VinDiesel a ns1:Actor ;
     ns1:Name "Vin Diesel" ;
     schema:birthDate "1967-07-18"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "director" ],
+            schema:name "screenwriter" ],
         [ a schema:Occupation ;
             schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "screenwriter" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Vin_Diesel ;
     foaf:isPrimaryTopicOf wiki:Vin_Diesel .
 
@@ -7919,17 +7919,17 @@ twss1:WilliamHanna a ns1:Actor ;
     ns1:Name "William Hanna" ;
     schema:birthDate "1910-07-14"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
+            schema:name "producer" ],
+        [ a schema:Occupation ;
             schema:name "Animator" ],
         [ a schema:Occupation ;
             schema:name "voice actor" ],
         [ a schema:Occupation ;
-            schema:name "cartoonist" ],
-        [ a schema:Occupation ;
-            schema:name "producer" ],
-        [ a schema:Occupation ;
             schema:name "director" ],
         [ a schema:Occupation ;
-            schema:name "musician" ] ;
+            schema:name "musician" ],
+        [ a schema:Occupation ;
+            schema:name "cartoonist" ] ;
     owl:sameAs dbr:William_Hanna ;
     foaf:isPrimaryTopicOf wiki:William_Hanna .
 
@@ -7937,9 +7937,9 @@ twss1:WilliamHurt a ns1:Actor ;
     ns1:Name "William Hurt" ;
     schema:birthDate "1950-03-20"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "" ],
         [ a schema:Occupation ;
-            schema:name "" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:William_Hurt ;
     foaf:isPrimaryTopicOf wiki:William_Hurt .
 
@@ -8223,9 +8223,9 @@ twss1:WoodyHarrelson a ns1:Actor ;
     ns1:Name "Woody Harrelson" ;
     schema:birthDate "1961-07-23"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "playwright" ],
         [ a schema:Occupation ;
-            schema:name "playwright" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Woody_Harrelson ;
     foaf:isPrimaryTopicOf wiki:Woody_Harrelson .
 
@@ -8455,13 +8455,13 @@ twss1:ChristopherLee a ns1:Actor ;
     ns1:Name "Christopher Lee" ;
     schema:birthDate "1922-05-27"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "" ],
-        [ a schema:Occupation ;
             schema:name "author" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "" ] ;
     owl:sameAs dbr:Christopher_Lee ;
     foaf:isPrimaryTopicOf wiki:Christopher_Lee .
 
@@ -8498,9 +8498,9 @@ twss1:EizaGonzalez a ns1:Actor ;
     ns1:Name "Eiza González" ;
     schema:birthDate "1990-01-30"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
+            schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "singer" ] ;
+            schema:name "Actress" ] ;
     owl:sameAs dbr:Eiza_González ;
     foaf:isPrimaryTopicOf wiki:Eiza_González .
 
@@ -8536,9 +8536,9 @@ twss1:JeanDujardin a ns1:Actor ;
     ns1:Name "Jean Dujardin" ;
     schema:birthDate "1972-06-19"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
-        [ a schema:Occupation ;
             schema:name "television director" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "comedian" ] ;
     owl:sameAs dbr:Jean_Dujardin ;
@@ -8595,9 +8595,9 @@ twss1:RyanReynolds a ns1:Actor ;
     schema:hasOccupation [ a schema:Occupation ;
             schema:name "entrepreneur" ],
         [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "film producer" ],
         [ a schema:Occupation ;
-            schema:name "film producer" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:Ryan_Reynolds ;
     foaf:isPrimaryTopicOf wiki:Ryan_Reynolds .
 
@@ -8687,9 +8687,9 @@ twss1:JohnRhys_Davies a ns1:Actor ;
     ns1:Name "John Rhys-Davies" ;
     schema:birthDate "1944-05-05"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actor" ],
+            schema:name "voice actor" ],
         [ a schema:Occupation ;
-            schema:name "voice actor" ] ;
+            schema:name "Actor" ] ;
     owl:sameAs dbr:John_Rhys-Davies ;
     foaf:isPrimaryTopicOf wiki:John_Rhys-Davies .
 
@@ -8697,13 +8697,13 @@ twss1:LivTyler a ns1:Actor ;
     ns1:Name "Liv Tyler" ;
     schema:birthDate "1977-07-01"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "Actress" ],
-        [ a schema:Occupation ;
-            schema:name "model" ],
+            schema:name "producer" ],
         [ a schema:Occupation ;
             schema:name "singer" ],
         [ a schema:Occupation ;
-            schema:name "producer" ] ;
+            schema:name "Actress" ],
+        [ a schema:Occupation ;
+            schema:name "model" ] ;
     owl:sameAs dbr:Liv_Tyler ;
     foaf:isPrimaryTopicOf wiki:Liv_Tyler .
 
@@ -8723,13 +8723,13 @@ twss1:SeanAstin a ns1:Actor ;
     ns1:Name "Sean Astin" ;
     schema:birthDate "1971-02-25"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "voice actor" ],
+            schema:name "director" ],
+        [ a schema:Occupation ;
+            schema:name "Actor" ],
         [ a schema:Occupation ;
             schema:name "producer" ],
         [ a schema:Occupation ;
-            schema:name "director" ],
-        [ a schema:Occupation ;
-            schema:name "Actor" ] ;
+            schema:name "voice actor" ] ;
     owl:sameAs dbr:Sean_Astin ;
     foaf:isPrimaryTopicOf wiki:Sean_Astin .
 
@@ -8740,17 +8740,17 @@ twss1:ViggoMortensen a ns1:Actor ;
     ns1:Name "Viggo Mortensen" ;
     schema:birthDate "1958-10-20"^^xsd:date ;
     schema:hasOccupation [ a schema:Occupation ;
-            schema:name "painter" ],
-        [ a schema:Occupation ;
-            schema:name "author" ],
-        [ a schema:Occupation ;
             schema:name "musician" ],
         [ a schema:Occupation ;
             schema:name "Actor" ],
         [ a schema:Occupation ;
+            schema:name "poet" ],
+        [ a schema:Occupation ;
+            schema:name "author" ],
+        [ a schema:Occupation ;
             schema:name "photographer" ],
         [ a schema:Occupation ;
-            schema:name "poet" ] ;
+            schema:name "painter" ] ;
     owl:sameAs dbr:Viggo_Mortensen ;
     foaf:isPrimaryTopicOf wiki:Viggo_Mortensen .
 

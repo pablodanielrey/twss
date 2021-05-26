@@ -1,0 +1,19 @@
+para ejecutar el script con los datos propuestos en el tp.
+
+cd entrega4
+python3 src/entrega.py ./data/dataset-original.ttl ./data/links.ttl > ./data/dataset-enriquecido.ttl 
+
+
+para ejecutarlo con los datasets de los chicos que postearon sus datos en el foro.
+
+cd  entrega4
+python3 src/entrega.py ./data/datasets-externos/leonel_franco_mandarino/dataset-original.ttl ./data/datasets-externos/leonel_franco_mandarino/links.ttl > ./data/datasets-externos/leonel_franco_mandarino/dataset-enriquecido.ttl
+
+(ojo!!! tarda una vida porque los chicos agregaron muchas personas al links.ttl)
+
+---
+
+cd entrega4
+python3 src/entrega.py ./data/datasets-externos/martin_moschettoni/dataset_original.ttl ./data/datasets-externos/martin_moschettoni/links.ttl > ./data/datasets-externos/martin_moschettoni/dataset-enriquecido.ttl
+
+

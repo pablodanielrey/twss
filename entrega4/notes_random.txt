@@ -1457,10 +1457,43 @@ iri1 busco si tiene tipo (rdf:type) si no lo tiene definido en el grafo, asumo q
 iri1 rdf:type schema:Actor
 
 con esa modificiación al script, no tendríamos que requerir que las iris1 tengan tipo. (o sea el punto 2 ya no es necesario)
-
+no tengo tiempo de modificarlo ya que veo que estoy atrasado 10 horas en la entrega. pensé que se entregaba hoy.
+cierro y genero la entrega.
 --
 
-como es simple, modifico el script para que lo realice y hago la prueba de nuevo.
-lo hago en una función adicional para que sea algo accesorio.
+
+al correr el script para verificar la entrega me doy cuenta que con las ultimas modificaciones me improta mi ontología sobre mi ontología.
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> a owl:Ontology ;
+    owl:imports <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> .
+
+y el protegé tira error.
+modifico el script.
+
+def agregar_mi_ontologia(g:Graph):
+    ''' agrega mi ontología al grago importando desde la ontologia primaria. '''
+    my_ontology = URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl')
+
+    for st, sp, so in g.triples((None, RDF.type, OWL.Ontology)):
+        g.add((st, OWL.imports, my_ontology))
+        return
+
+voy a controloar que no exista ya mi ontología como tripleta.
+
+def agregar_mi_ontologia(g:Graph):
+    my_ontology = URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl')
+
+    ''' controlo que ya no exista mi ontologia dentro del grafo '''
+    for st, sp, so in g.triples((my_ontology, RDF.type, OWL.Ontology)):
+        return
+
+    ''' agrega mi ontología al grago importando desde la ontologia primaria. '''
+
+    for st, sp, so in g.triples((None, RDF.type, OWL.Ontology)):
+        g.add((st, OWL.imports, my_ontology))
+        return
+
+listo. podría también chequear a ver si esta improada, etc pero en este caso no es necesario.
+para algo mas general si sería necesario.
 
 
