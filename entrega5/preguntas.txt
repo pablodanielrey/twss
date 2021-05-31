@@ -72,6 +72,8 @@ pablo@xiaomi:/src/github/facu-infor/twss$ curl http://mappings.dbpedia.org/serve
 http://mappings.dbpedia.org/server/ontology/classes/
 
 
+---
+
 Ejercicio 2: Explorar el endpoint Sparql de dbpedia
 Con la siguiente consulta sparql que obtiene todas las propiedades en dbpedia para la UNLP, explore la funcionalidad del editor de queries Sparql de dbpedia.
 
@@ -87,6 +89,141 @@ Los prefijos de namespaces ya definidos (link de arriba a la derecha)
 (opcional) El editor de queries iSparql (link de arriba a la derecha) 
 Responda:
 
-1 . En la pantalla que muestra resultados de queries en HTML, ¿qué pasa cuando hace click en una URI que pertenece al dominio dbpedia.org? ¿qué pasa si la URI está afuera? ¿A que cree que se debe la diferencia en comportamiento? (recuerde que la clickear la URI estamos dereferenciando el recurso, como discutimos en la clase respecto a Linked Data)
+1 . En la pantalla que muestra resultados de queries en HTML, ¿qué pasa cuando hace click en una URI que pertenece al dominio dbpedia.org? 
+¿qué pasa si la URI está afuera? 
+¿A que cree que se debe la diferencia en comportamiento? (recuerde que la clickear la URI estamos dereferenciando el recurso, como discutimos en la clase respecto a Linked Data)
 
  
+ en este caso hace falta analizar 2 tipos de iris.
+ por un lado tenemos las propiedades resultantes de la consulta, y por otro lado tenemos las iris de los objetos (o sea el valor)
+ todos aplicados al recurso de la Universidad dentro de dbpedia.
+ la descripción del proceso de chequeo se encuentra en notes_random.txt para no llenar este documento de mucha info accesoria.
+
+ para el caso de las iris de las propieades.
+ las iris internas de dbpedia.org, tenemos que tienen presencia web. al desreferenciar sus iris llegamos a datos que contienen una representación para una máquina.
+ en las iris de las propieadades de otros dominios no siempre pasa esto. por lo que analizo el caso normal es que NO pase esto. que no sean desreferenciables.
+
+ para el caso de los objetos pasa algo similar:
+ para los objetos que son iris, las internas a dbpedia tienen presencia web y se pueden desreferenciar.
+ para otros objetos no siempre es el caso, 
+ http://viaf.org/viaf/146084247 si tiene.
+ http://rdf.freebase.com/ns/m.07_yzv no tiene.
+
+ en resumen, todo lo referenciado dentro de dbpedia parece que tiene presencia web y puede ser interpertado por una máquina.
+ lo demás no siempre, y el caso general es que no lo sea, por una u otra razón. (expiran los dominios y no los renuevan, nunca los registraron o las iris usadas no son directamente desrefereciables, si no que publican la ontología en una mas general, etc)
+
+---
+
+la url de la interface de consulta iSparql
+https://dbpedia.org/isparql/
+
+está mejor para alquien que no sabe sparql. ya que tenes listbox que te agregan al texto varios constructs de sparql
+ej te arma el template de la consulta select.
+
+
+
+
+----
+
+Ejercicio 3: Realizar consultas Sparql en dbpedia
+Para cada caso reporte la consulta sparql correspondiente y el resultado de la misma. En las consultas, de preferencia al uso de clases y propiedades en la ontología de dbpedia (dbo) 
+
+a) Obtener a los escritores que hayan nacido en una ciudad de Argentina. 
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s dbo:birthPlace dbr:Argentina .
+                ?s rdf:type dbo:Writer .
+			}
+
+otra respuesta podría ser (pero en notes_random.txt explico por que no la elegí)
+
+SELECT DISTINCT ?s
+			WHERE
+        {
+			?s ?p ?o .
+            ?o rdf:type dbo:Book .
+            ?o dbo:author ?s .
+            ?s dbo:birthPlace ?c .
+            ?c dbo:country dbr:Argentina .
+        }
+
+
+
+b) Obtener a los escritores que hayan nacido en una ciudad de Uruguay.
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s dbo:birthPlace dbr:Uruguay .
+                ?s rdf:type dbo:Writer .
+			}
+
+por lo que veo dbpedia infiere siempre cuando tiene la info de la ciudad. le pone también la info del país 
+en birthPlace.
+
+
+c) Utilizando el keyword filter (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay 
+
+asumiendo que las consultas de arriba están ok entonces la versión con filter sería.
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s dbo:birthPlace ?pais .
+                ?s rdf:type dbo:Writer .
+                filter (?pais = dbr:Argentina || ?pais = dbr:Uruguay) .
+			}
+
+
+d) Utilizando el keyword union (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s rdf:type dbo:Writer .
+                { ?s dbo:birthPlace dbr:Argentina . }
+                UNION 
+                { ?s dbo:birthPlace dbr:Uruguay .}
+			}
+
+
+e) ¿Qué diferencia hay entre c y d? ¿En cual se deben recuperar/analizar menor número de tripletas?
+
+asumo que la union analiza mayor número de tripletas.
+si pensamos que  para obtener la union de los conjuntos hay que procesar los 2 conjuntos primero.
+en pseudocódigo:
+
+c1 = for autor in autores if autor dbo:birthPlace dbr:Argentina
+c2 = for autor in autores if autor dbo:birthPlace dbr:Uruguay
+c3 = c1 + c2
+
+entonces se procesaría el dataset de autores 2 veces. (la variable ?s)
+
+para el caso del filter el if va adentro del "for"
+
+c3 = for autor in autores if autor dbo:birthPlace or autor dbo:birthPlace
+
+en este caso se recorre solamente 1 vez el dataset de autores.
+
+
+
+f) ¿Cuantos empleados tiene la compañía mas grande en dbpedia, y en que país está ubicada? (obtenga la lista de todas las compañías y los países donde están ubicadas ordenada de forma descendiente por numero de empleados)
+
+http://dbpedia.org/resource/Eureka_Forbes ---> 5000000
+
+SELECT DISTINCT ?s ?l ?n
+			WHERE
+			{
+                ?s rdf:type dbo:Company .
+                ?s dbo:location ?l .
+                ?l rdf:type dbo:Country .
+                OPTIONAL
+                {
+                ?s dbo:numberOfEmployees ?n
+                }
+			}
+            order by desc(?n)
+
+totalmente una sorpresa!!.

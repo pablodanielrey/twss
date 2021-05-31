@@ -31,6 +31,7 @@ usando protegé no me quedaron claras estas cosas, claramente porque no lo se us
 también permitiría analizar un poco patrones de diseño de ontologías.
 parecido a los patrones de diseño del paradigma orientado a objetos.
 casco publicó un link a material sobre eso en el foro.
+https://patterns.dataincubator.org/book/
 que profundidad de ontología usar? usar subclases o usar composición?, etc.
 
 ---
@@ -80,4 +81,677 @@ select ?property ?object where {
 Explore:
 
 Los distintos formatos para los resultados
+1 . En la pantalla que muestra resultados de queries en HTML, ¿qué pasa cuando hace click en una URI que pertenece al dominio dbpedia.org? 
+¿qué pasa si la URI está afuera? 
+¿A que cree que se debe la diferencia en comportamiento? (recuerde que la clickear la URI estamos dereferenciando el recurso, como discutimos en la clase respecto a Linked Data)
+
+para el caso de las propiedades. tomo como ejemplo algunas internas a dbpedia y otras externas a dbpedia.
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://www.w3.org/2000/01/rdf-schema#label
+http://xmlns.com/foaf/0.1/name
+http://purl.org/dc/terms/subject
+http://www.w3.org/2002/07/owl#sameAs
+http://www.w3.org/ns/prov#wasDerivedFrom
+
+
+http://dbpedia.org/ontology/wikiPageWikiLink
+http://dbpedia.org/property/name
+
+si consulto la propiedad name por ejemplo primero me redirecciona a la iri con https. y después me responde con un html con una descripción para humanos de la propiedad.
+en esa respuesta se ve que las cabeceras te dan la url del recurso en distintos formatos (entre ellos turtle). (que también tiene una redirección a la iri de https)
+por ej describo bien el camino.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://dbpedia.org/property/name
+HTTP/1.1 303 See Other
+Server: nginx/1.18.0
+Date: Mon, 31 May 2021 14:03:08 GMT
+Content-Type: text/html
+Content-Length: 153
+Connection: keep-alive
+Location: https://dbpedia.org/property/name
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: HEAD, GET, POST, OPTIONS
+Access-Control-Allow-Headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I https://dbpedia.org/property/name
+HTTP/2 200 
+date: Mon, 31 May 2021 14:03:16 GMT
+content-type: text/html; charset=UTF-8
+content-length: 11893
+vary: Accept-Encoding
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+expires: Mon, 07 Jun 2021 14:03:16 GMT
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license", <http://dbpedia.org/data4/name.rdf>; rel="alternate"; type="application/rdf+xml"; title="Structured Descriptor Document (RDF/XML format)", <http://dbpedia.org/data4/name.n3>; rel="alternate"; type="text/n3"; title="Structured Descriptor Document (N3 format)", <http://dbpedia.org/data4/name.ttl>; rel="alternate"; type="text/turtle"; title="Structured Descriptor Document (Turtle format)", <http://dbpedia.org/data4/name.json>; rel="alternate"; type="application/json"; title="Structured Descriptor Document (RDF/JSON format)", <http://dbpedia.org/data4/name.atom>; rel="alternate"; type="application/atom+xml"; title="OData (Atom+Feed format)", <http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=DESCRIBE%20%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2Fname%3E&format=text%2Fcsv>; rel="alternate"; type="text/csv"; title="Structured Descriptor Document (CSV format)", <http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=DESCRIBE%20%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2Fname%3E&format=text%2Fcxml>; rel="alternate"; type="text/cxml"; title="Structured Descriptor Document (CXML format)", <http://dbpedia.org/data4/name.ntriples>; rel="alternate"; type="text/plain"; title="Structured Descriptor Document (N-Triples format)", <http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=DESCRIBE%20%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2Fname%3E&format=application%2Fmicrodata%2Bjson>; rel="alternate"; type="application/microdata+json"; title="Structured Descriptor Document (Microdata/JSON format)", <http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=DESCRIBE%20%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2Fname%3E&format=text%2Fhtml>; rel="alternate"; type="text/html"; title="Structured Descriptor Document (Microdata/HTML format)", <http://dbpedia.org/sparql?default-graph-uri=http%3A%2F%2Fdbpedia.org&query=DESCRIBE%20%3Chttp%3A%2F%2Fdbpedia.org%2Fproperty%2Fname%3E&format=application%2Fld%2Bjson>; rel="alternate"; type="application/ld+json"; title="Structured Descriptor Document (JSON-LD format)", <http://dbpedia.org/property/name>; rel="http://xmlns.com/foaf/0.1/primaryTopic", <http://dbpedia.org/property/name>; rev="describedby", <http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/property/name>; rel="timegate"
+cache-control: max-age=604800
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+accept-ranges: bytes
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://dbpedia.org/data4/name.ttl
+HTTP/1.1 303 See Other
+Server: nginx/1.18.0
+Date: Mon, 31 May 2021 14:03:30 GMT
+Content-Type: text/html
+Content-Length: 153
+Connection: keep-alive
+Location: https://dbpedia.org/data4/name.ttl
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: HEAD, GET, POST, OPTIONS
+Access-Control-Allow-Headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I https://dbpedia.org/data4/name.ttl
+HTTP/2 200 
+date: Mon, 31 May 2021 14:03:36 GMT
+content-type: text/turtle; charset=UTF-8
+content-length: 306
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+x-sparql-default-graph: http://dbpedia.org
+content-disposition: filename=sparql_2021-05-31_14-01-47Z.ttl
+expires: Mon, 07 Jun 2021 14:03:36 GMT
+cache-control: max-age=604800
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+accept-ranges: bytes
+
+
+
+por ejemplo si requerimos el turtle de la iri de la propiedad sin analizar la cabecera link de la respuesta vemos:
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept: text/turtle' https://dbpedia.org/property/name
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>406 Not Acceptable</title>
+</head><body>
+<h1>406 Not Acceptable</h1>
+<p>An appropriate representation of the requested resource name could not be found on this server.</p>
+Available variant(s):
+<ul>
+<li><a href="name">name</a> , type text/html, charset UTF-8</li>
+</ul>
+</body></html>
+
+------
+
+ahora analicemos que pasa con una propiedad externa, ej:
+
+http://www.georss.org/georss/point
+
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://www.georss.org/georss/point
+HTTP/1.1 200 OK
+Server: openresty
+Date: Mon, 31 May 2021 14:06:38 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+X-Adblock-Key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_I6k/NpDijLD71zgmVmqDBczFx9clwPdVGeqWdd7JgieT8eIERejv3Lk7tCORlQffHJ1kVBS18YI6RJmhm6+Dhw==
+
+no hay redirección de nada. veo si pidiendo el content type turtle me responde distinto.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' -I http://www.georss.org/georss/point
+HTTP/1.1 200 OK
+Server: openresty
+Date: Mon, 31 May 2021 14:07:09 GMT
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+X-Adblock-Key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBANDrp2lz7AOmADaN8tA50LsWcjLFyQFcb/P2Txc58oYOeILb3vBw7J6f4pamkAQVSQuqYsKx3YzdUHCvbVZvFUsCAwEAAQ==_I6k/NpDijLD71zgmVmqDBczFx9clwPdVGeqWdd7JgieT8eIERejv3Lk7tCORlQffHJ1kVBS18YI6RJmhm6+Dhw==
+
+tampoco hay redirección.
+analizo la respuesta de ese sitio.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' http://www.georss.org/georss/point
+
+es un html que en este caso no describe nada, y no tiene contenido asociado a la propiedad. es una página que indica que el dominio está en venta.
+por lo que no sería una iri desreferenciable!.
+el recurso no tiene presencia en la web.
+
+---
+
+otra propiedad externa:
+
+http://www.w3.org/2000/01/rdf-schema#label
+
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://www.w3.org/2000/01/rdf-schema#label
+HTTP/1.1 200 OK
+date: Mon, 31 May 2021 14:14:27 GMT
+content-location: rdf-schema.ttl
+vary: negotiate,accept,accept-charset,upgrade-insecure-requests
+tcn: choice
+access-control-allow-credentials: true
+access-control-allow-methods: GET, HEAD, OPTIONS
+access-control-allow-headers: Link, Location, Content-Type, Accept, Vary
+access-control-expose-headers: Location, Link, Vary, Last-Modified, ETag, Allow, Content-Length, Accept
+access-control-allow-origin: *
+last-modified: Tue, 25 Feb 2014 02:53:20 GMT
+etag: "ee4-4f33230d4a800;586929c6c2725"
+accept-ranges: bytes
+content-length: 3812
+cache-control: max-age=21600
+expires: Mon, 31 May 2021 20:14:27 GMT
+access-control-allow-origin: *
+content-type: text/turtle; charset=utf-8
+x-backend: www-mirrors
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl http://www.w3.org/2000/01/rdf-schema#label
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3.org/2000/01/rdf-schema#> a owl:Ontology ;
+	dc:title "The RDF Schema vocabulary (RDFS)" .
+
+...
+....
+
+en este caso aunque no explicite el content type que requiero ya me tira el turtle.
+o sea que este recurso es desreferenciable y tiene presencia en la web.
+
+-----
+
+otra propiedad, por ejemplo lo de foaf.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl http://xmlns.com/foaf/0.1/name
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>303 See Other</title>
+</head><body>
+<h1>See Other</h1>
+<p>The answer to your request is located <a href="http://xmlns.com/foaf/spec/">here</a>.</p>
+<hr>
+<address>Apache/2.4.7 (Ubuntu) Server at xmlns.com Port 80</address>
+</body></html>
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://xmlns.com/foaf/0.1/name
+HTTP/1.1 303 See Other
+Date: Mon, 31 May 2021 14:08:19 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Access-Control-Allow-Origin: *
+Location: http://xmlns.com/foaf/spec/
+Content-Type: text/html; charset=iso-8859-1
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://xmlns.com/foaf/spec/
+HTTP/1.1 200 OK
+Date: Mon, 31 May 2021 14:08:32 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Last-Modified: Tue, 14 Jan 2014 19:54:30 GMT
+ETag: "3672a-4eff38f801066"
+Accept-Ranges: bytes
+Content-Length: 223018
+Vary: Accept-Encoding
+Content-Type: text/html
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl http://xmlns.com/foaf/spec/
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:foaf="http://xmlns.com/foaf/0.1/"
+xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+
+esto es un recurso html, la descripción para humanos.
+por lo que veo en este caso la página de foaf DICE explícitamente que se puede obtener mediante content negociation usando la uri del namespace. http://xmlns.com/foaf/0.1/
+
+pero no me lo restá resolviendo mediante content negociation
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' -I http://xmlns.com/foaf/0.1/
+HTTP/1.1 200 OK
+Date: Mon, 31 May 2021 14:42:16 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Access-Control-Allow-Origin: *
+Last-Modified: Sun, 23 Jan 2011 19:42:36 GMT
+ETag: "2e12b-49a88af74aad6"
+Accept-Ranges: bytes
+Content-Length: 188715
+Vary: Accept-Encoding
+Content-Type: text/html
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' http://xmlns.com/foaf/0.1/
+
+esto me retorna un html tal cual dice en el content-type.
+
+
+por lo que la propiedad name de foaf no tiene presencia en la web.
+o no es desreferenciable.
+
+----
+
+para le caso de los objetos, las iris que representan recursos pasa algo similar que con la de las propiedades.
+recursos internos a dbpedia tienen representación para pc desreferenciable.
+recrusos externos no siempre.
+
+ej con el recurso interno a dbpedia 
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I https://dbpedia.org/resource/Buenos_Aires_Province
+HTTP/2 303 
+date: Mon, 31 May 2021 15:08:54 GMT
+content-type: text/html; charset=UTF-8
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+location: http://dbpedia.org/page/Buenos_Aires_Province
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' -I https://dbpedia.org/resource/Buenos_Aires_Province
+HTTP/2 303 
+date: Mon, 31 May 2021 15:09:18 GMT
+content-type: text/turtle
+content-length: 0
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+tcn: choice
+vary: negotiate,accept
+alternates: {"/data/Buenos_Aires_Province.atom" 0.500000 {type application/atom+xml}}, {"/data/Buenos_Aires_Province.jrdf" 0.600000 {type application/rdf+json}}, {"/data/Buenos_Aires_Province.jsod" 0.500000 {type application/odata+json}}, {"/data/Buenos_Aires_Province.json" 0.600000 {type application/json}}, {"/data/Buenos_Aires_Province.jsonld" 0.500000 {type application/ld+json}}, {"/data/Buenos_Aires_Province.n3" 0.800000 {type text/n3}}, {"/data/Buenos_Aires_Province.nt" 0.800000 {type text/rdf+n3}}, {"/data/Buenos_Aires_Province.ntriples" 0.500000 {type application/n-triples}}, {"/data/Buenos_Aires_Province.ttl" 0.700000 {type text/turtle}}, {"/data/Buenos_Aires_Province.xml" 0.950000 {type application/rdf+xml}}
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/resource/Buenos_Aires_Province>; rel="timegate"
+location: http://dbpedia.org/data/Buenos_Aires_Province.ttl
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' -I https://dbpedia.org/data/Buenos_Aires_Province.ttl
+HTTP/2 200 
+date: Mon, 31 May 2021 15:09:54 GMT
+content-type: text/turtle; charset=UTF-8
+content-length: 277174
+server: Virtuoso/08.03.3319 (Linux) x86_64-centos_6-linux-glibc2.12  VDB
+expires: Mon, 07 Jun 2021 15:09:54 GMT
+link: <http://creativecommons.org/licenses/by-sa/3.0/>;rel="license",<http://dbpedia.org/data/Buenos_Aires_Province.xml>; rel="alternate"; type="application/rdf+xml"; title="Structured Descriptor Document (RDF/XML format)", <http://dbpedia.org/data/Buenos_Aires_Province.n3>; rel="alternate"; type="text/n3"; title="Structured Descriptor Document (N3/Turtle format)", <http://dbpedia.org/data/Buenos_Aires_Province.json>; rel="alternate"; type="application/json"; title="Structured Descriptor Document (RDF/JSON format)", <http://dbpedia.org/data/Buenos_Aires_Province.atom>; rel="alternate"; type="application/atom+xml"; title="OData (Atom+Feed format)", <http://dbpedia.org/data/Buenos_Aires_Province.jsod>; rel="alternate"; type="application/odata+json"; title="OData (JSON format)", <http://dbpedia.org/page/Buenos_Aires_Province>; rel="alternate"; type="text/html"; title="XHTML+RDFa", <http://dbpedia.org/resource/Buenos_Aires_Province>; rel="http://xmlns.com/foaf/0.1/primaryTopic", <http://dbpedia.org/resource/Buenos_Aires_Province>; rev="describedby", <http://dbpedia.mementodepot.org/timegate/http://dbpedia.org/data/Buenos_Aires_Province.ttl>; rel="timegate"
+x-sparql-default-graph: http://dbpedia.org
+content-disposition: filename=sparql_2021-05-31_15-09-54Z.ttl
+cache-control: max-age=604800
+access-control-allow-credentials: true
+access-control-allow-methods: HEAD, GET, POST, OPTIONS
+access-control-allow-headers: Depth,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Accept-Encoding
+accept-ranges: bytes
+
+esto me retorna un turtle.
+
+---
+
+para un objeto externo a dbpedia.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://viaf.org/viaf/146084247
+HTTP/1.1 303 See Other
+Server: Apache-Coyote/1.1
+Location: https://viaf.org/viaf/146084247/
+Content-Type: text/plain
+Content-Length: 43
+Date: Mon, 31 May 2021 15:11:50 GMT
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I https://viaf.org/viaf/146084247
+HTTP/1.1 303 See Other
+Server: Apache-Coyote/1.1
+Location: https://viaf.org/viaf/146084247/
+Content-Type: text/plain
+Content-Length: 43
+Date: Mon, 31 May 2021 15:11:56 GMT
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I https://viaf.org/viaf/146084247/
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+srwRequestMethod: HEAD
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+X-FRAME-OPTIONS: SAMEORIGIN
+X-Content-Security-Policy: allow self
+Content-Location: viaf.html
+Cache-Control: max-age=604800
+Expires: Mon, 07 Jun 2021 15:12:10 GMT
+Content-Type: text/html;charset=ISO-8859-1
+Content-Length: 0
+Date: Mon, 31 May 2021 15:12:10 GMT
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept: text/turtle' -I https://viaf.org/viaf/146084247/
+HTTP/1.1 200 OK
+Server: Apache-Coyote/1.1
+srwRequestMethod: HEAD
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET
+X-FRAME-OPTIONS: SAMEORIGIN
+X-Content-Security-Policy: allow self
+Cache-Control: max-age=604800
+Expires: Mon, 07 Jun 2021 15:12:24 GMT
+Content-Type: text/xml;charset=ISO-8859-1
+Content-Length: 0
+Date: Mon, 31 May 2021 15:12:23 GMT
+
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept: text/turtle' https://viaf.org/viaf/146084247/
+
+<?xml version="1.0"  encoding="UTF-8"?> 
+<?xml-stylesheet type="text/xsl" href="/viaf/xsl/searchRetrieveResponse_en.xsl"?>
+<ns1:VIAFCluster xmlns="http://viaf.org/viaf/terms#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:void="http://rdfs.org/ns/void#" xmlns:ns1="http://viaf.org/viaf/terms#"><ns1:viafID>146084247</ns1:viafID><ns1:Document about="http://viaf.org/viaf/146084247/"><ns1:inDataset resource="http://viaf.org/viaf/data"/><ns1:primaryTopic resource="http://viaf.org/viaf/146084247"/></ns1:Document><ns1:nameType>Corporate</ns1:nameType><ns1:sources><ns1:source nsid="A000189928">RERO|A000189928</ns1:source><ns1:source nsid="987007269238505171">J9U|987007269238505171</ns1:source><ns1:source nsid="n50078155">LC|n  50078155</ns1:source><ns1:source nsid="FRBNF123217697">BNF|12321769</ns1:source><ns1:source nsid="http://d-nb.info/gnd/35897-6">DNB|000358975</ns1:source><ns1:source nsid="0000000459043590">ISNI|000000
+
+en este caso me retorna un xml. que puede ser interpertado por una máquina, pero no corresponde con el content-type requerido.
+igualmente en este caso sería desreferenciable y tendría presencia.
+
+----
+
+en otro caos no se encuentra.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://rdf.freebase.com/ns/m.07_yzv
+HTTP/1.1 404 Not Found
+Date: Mon, 31 May 2021 15:40:14 GMT
+Content-Type: text/html; charset=UTF-8
+Server: ghs
+Content-Length: 1572
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+
+
+----
+
+Ejercicio 3: Realizar consultas Sparql en dbpedia
+Para cada caso reporte la consulta sparql correspondiente y el resultado de la misma. En las consultas, de preferencia al uso de clases y propiedades en la ontología de dbpedia (dbo) 
+
+a) Obtener a los escritores que hayan nacido en una ciudad de Argentina. 
+
+inicio a consultar algunas cosas para ver que me trae.
+analizo por ejemplo a borjes. https://dbpedia.org/page/Jorge_Luis_Borges
+
+SELECT DISTINCT ?p ?o
+			WHERE
+			{
+			dbr:Jorge_Luis_Borges ?p ?o .
+			}
+
+
+
+veo algunas cosas que puedo usar como filtro.
+
+dbp:occupation == Writer
+dbo:birthPlace = dbr:Argentina, dbr:Buenos_Aires
+dbp:nationality = dbr:Argentines ---> pero pueden ser naturalizados, asi que esto no lo tendría en cuenta.
+rdf:type = yago:*writer --> pero es de otro dataset asi que no lo tengo en cuenta.
+rdf:type = dbo:Writer
+
+dbo:author --> dbr:* --> rdf:type = dbo:Book, dbo:WrittenWork
+dbo:writer --> dbr:* --> rdf:type = dbo:Work
+dbp:author --> dbr:* --> rdf:type = dbo:WrittenWork
+dbp:writer --> dbr:* --> rdf:type = dbo:WrittenWork
+
+o sea por un lado debemos obtener las personas que sean escritores.
+
+SELECT DISTINCT ?s ?p
+			WHERE
+			{
+			?s ?p ?o.
+                        ?o rdf:type dbo:WrittenWork
+			}
+esto tira autores de cosas escritas pero que pueden ser páginas de wikipedia, etc.
+asi que no va, me parece que la consulta está orientado a obras literarias.
+
+SELECT DISTINCT ?s ?p ?o ?c
+			WHERE
+			{
+			?s ?p ?o .
+?o rdf:type dbo:Book .
+?s dbo:birthPlace dbr:Argentina .
+			}            
+
+lo puedo expandir con ciudades que pertenecen a argentina y veo que abarca mas datos.
+
+SELECT DISTINCT ?s ?p ?o ?c
+			WHERE
+			{
+			?s ?p ?o .
+?o rdf:type dbo:Book .
+?s dbo:birthPlace ?c .
+?c dbo:country dbr:Argentina .
+
+			}
+
+
+tengo que restringirlo a que sea autor de la obra si no me trae personas relacionadas igual que no son 
+los autores.
+
+SELECT DISTINCT ?s ?p ?o ?c
+			WHERE
+			{
+			?s ?p ?o .
+?o rdf:type dbo:Book .
+?o dbo:author ?s .
+?s dbo:birthPlace ?c .
+?c dbo:country dbr:Argentina .
+
+			}
+
+desambiguo a los autores. y agrego la posiilidad de que no exista la ciudad si no que el pais.
+
+SELECT DISTINCT ?s 
+			WHERE
+{
+    		?s ?p ?o .
+    ?o rdf:type dbo:Book .
+    ?o dbo:author ?s .
+    { 
+        ?s dbo:birthPlace ?c .
+        ?c dbo:country dbr:Argentina .
+    } UNION {
+        ?s dbo:birthPlace dbr:Argentina
+    }
+}
+
+
+me da la misma cantidad de autores, inclusive si consulto solo que hayan nacido en argentina, sin involucrar la ciudad.
+pero no me gusta el resultado. son muy pocos.
+asi que reformulo la consulta para analizar un poco otros resultados.
+
+la mas trivial:
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+    ?s dbo:birthPlace dbr:Argentina .
+    ?s rdf:type dbo:Writer .
+			}
+
+esta me gusta mas ya que abarca a mayores resultados sin especificar la ciudad.
+ej:
+http://dbpedia.org/resource/Betina_Gonzalez
+es escritora, que según la info nació en el AMBA.
+Betina González (Villa Ballester, 1972) es una escritora argentina, primera mujer en ganar el Premio Tusquets de Novela.​ (es)
+pero en la info de dbpedia solo se indica que nació en argentina.
+
+
+---
+b) Obtener a los escritores que hayan nacido en una ciudad de Uruguay.
+
+es lo mismo, que haya nacido en Uruguay ya implica que nació en una ciudad de uruguay.
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s dbo:birthPlace dbr:Uruguay .
+                ?s rdf:type dbo:Writer .
+			}
+
+por lo que veo dbpedia infiere siempre cuando tiene la info de la ciudad. le pone también la info del país 
+en birthPlace.
+
+
+---
+
+c) Utilizando el keyword filter (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en 
+una ciudad de Argentina o de Uruguay 
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+    ?s dbo:birthPlace ?pais .
+    ?s rdf:type dbo:Writer .
+    filter (?pais = dbr:Argentina || ?pais = dbr:Uruguay) .
+			}
+
+--
+
+d) Utilizando el keyword union (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s rdf:type dbo:Writer .
+                { ?s dbo:birthPlace dbr:Argentina . }
+                UNION 
+                { ?s dbo:birthPlace dbr:Uruguay .}
+			}
+
+
+--
+
+e) ¿Qué diferencia hay entre c y d? ¿En cual se deben recuperar/analizar menor número de tripletas?
+
+asumo que la union analiza mayor número de tripletas.
+si pensamos que  para obtener la union de los conjuntos hay que procesar los 2 conjuntos primero.
+en pseudocódigo:
+
+c1 = for autor in autores if autor dbo:birthPlace dbr:Argentina
+c2 = for autor in autores if autor dbo:birthPlace dbr:Uruguay
+c3 = c1 + c2
+
+entonces se procesaría el dataset de autores 2 veces. (la variable ?s)
+
+para el caso del filter el if va adentro del "for"
+
+c3 = for autor in autores if autor dbo:birthPlace or autor dbo:birthPlace
+
+en este caso se recorre solamente 1 vez el dataset de autores.
+
+---
+
+
+
+f) ¿Cuantos empleados tiene la compañía mas grande en dbpedia, y en que país está ubicada? 
+(obtenga la lista de todas las compañías y los países donde están ubicadas ordenada de forma descendiente 
+por numero de empleados)
+
+
+primero analizo como se obtienen las comañías. asumo que es rdf:type dbo:Company
+efectivamente:
+
+rdfs:label	
+        company (en)
+        Unternehmen (de)
+        empresa (es)
+        empresa (pt)
+
+asi que filtro primero por eso:
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+?s rdf:type dbo:Company .
+}
+
+agrego la ubicación
+
+SELECT DISTINCT ?s ?l
+			WHERE
+			{
+?s rdf:type dbo:Company .
+?s dbo:location ?l .
+
+			}
+
+
+analizo propieades en dbpedia y ver:
+http://dbpedia.org/ontology/numberOfEmployees
+
+asi que formulo nuevamente la consulta:
+
+SELECT DISTINCT ?s ?l ?n
+			WHERE
+			{
+                ?s rdf:type dbo:Company .
+                ?s dbo:location ?l .
+                OPTIONAL
+                {
+                ?s dbo:numberOfEmployees ?n .
+                }
+			}
+
+veo que esta consulta me trae distintas cantidades de empleados para distintas ubicaciones de la misma empresa.
+asi que tengo que agregarlas.
+analizando el capítulo del libro que habla de agregaciones (6.3.2.1) - Segunda Edición!.
+
+SELECT DISTINCT ?s SUM(?n) as ?empleados
+			WHERE
+			{
+                ?s rdf:type dbo:Company .
+                ?s dbo:location ?l .
+                OPTIONAL
+                {
+                ?s dbo:numberOfEmployees ?n
+                }
+			}
+            GROUP BY ?s
+
+
+ahora trato de ordenar esa lista.
+
+SELECT DISTINCT ?s SUM(?n) as ?empleados
+			WHERE
+			{
+                ?s rdf:type dbo:Company .
+                ?s dbo:location ?l .
+                OPTIONAL
+                {
+                ?s dbo:numberOfEmployees ?n
+                }
+			}
+            GROUP BY ?s
+            order by desc(?empleados)
+
+funcionó.
+me ordenó en forma descendente la cantidad de empleados.
+pero veo algo raro. me da: https://dbpedia.org/page/Eureka_Forbes 
+como la mayor empresa.
+me imaginaba google, amazon, etc.
+analizando un poco veo que eureka forbes tiene dbo:location
+dbr:Maharashtra
+dbr:India
+dbr:Mumbai
+
+a ver si me está agregando esas 3 ubicaciones?. porque mumbai -> Maharashtra -> India
+o sea es una ciudad de un estado de un pais. no se debería estar agregando.
+
+ejecuto la consulta usando :
+
+SELECT DISTINCT ?s ?l ?n
+			WHERE
+			{
+                ?s rdf:type dbo:Company .
+                ?s dbo:location ?l .
+                OPTIONAL
+                {
+                ?s dbo:numberOfEmployees ?n
+                }
+			}
+            order by desc(?n)
+
+y veo que efectivamente me muestra 3 veces eureka.
+y cada una con 5000000 empleados.
+si corro la consulta agregada entonces me muestra 15000000 empleados.
+efectivamente estoy agregando algo que no debería.
+
+el patrón se repite para todas las empresas. así que elimino la agregación de los empleados ya que no es necesaria.
+y agrego que las ubicaciones sean paises.
+
+SELECT DISTINCT ?s ?l ?n
+			WHERE
+			{
+                ?s rdf:type dbo:Company .
+                ?s dbo:location ?l .
+                ?l rdf:type dbo:Country .
+                OPTIONAL
+                {
+                ?s dbo:numberOfEmployees ?n
+                }
+			}
+            order by desc(?n)
+
+            
 

@@ -92,7 +92,10 @@ Enriquezca la información de su base de conocimiento obteniendo por cada person
 ¿Es suficiente utilizar el nombre?
 ¿Necesita utilizar mas características para asegurar que el concepto de Wikidata (DBpedia) sea la persona que usted desea buscar?
 ¿Para otros tipos de recursos que tengan algo como nombre o título, piensa que alcanzaría esa estrategia?
-Defina y agregue a su base de conocimiento la object property wasDirectedByOscarWinner que relaciona a una actriz/actor de su base de conocimiento con otra persona si: a) la primera actuó en una película dirigida por la segunda, y b) la segunda recibió un premio Oscar (en cualquier categoría). Utilice Wikidata/DBPedia para obtener la información.  Muestre la consulta que utilizó para eso.
+Defina y agregue a su base de conocimiento la object property wasDirectedByOscarWinner que relaciona a una actriz/actor de su base de conocimiento con otra persona si:
+a) la primera actuó en una película dirigida por la segunda, y 
+b) la segunda recibió un premio Oscar (en cualquier categoría). 
+Utilice Wikidata/DBPedia para obtener la información.  Muestre la consulta que utilizó para eso.
 En este ejercicio vamos a enriquecer la información que fue generando a lo largo de la asignatura relacionada al cine. La idea es que utilice consultas SPARQL sobre Wikidata y DBpedia para enriquecer sus bases de conocimiento (los archivos .ttl) que con los resultados de esas consultas.
 
 En comparación con el TP anterior (donde enriqueció en base a dereferenciación de URLs), ¿Qué diferencias, ventajas y desventajas le encuentra al uso de SPARQL?.   Si utilizó alguna librería específica comente brevemente las ventajas que encontró, y cómo le ayudo en su solución. 
