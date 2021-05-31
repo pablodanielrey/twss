@@ -128,6 +128,9 @@ ej te arma el template de la consulta select.
 Ejercicio 3: Realizar consultas Sparql en dbpedia
 Para cada caso reporte la consulta sparql correspondiente y el resultado de la misma. En las consultas, de preferencia al uso de clases y propiedades en la ontología de dbpedia (dbo) 
 
+PARA LAS RESPUESTAS DE LAS CONSULTAS, APROVECHO QUE PUEDO EXPORTARLO A SCV Y LAS DEJO DENTRO DE LA ENTREGA.
+dentro de la carpeta respuestas/
+
 a) Obtener a los escritores que hayan nacido en una ciudad de Argentina. 
 
 SELECT DISTINCT ?s

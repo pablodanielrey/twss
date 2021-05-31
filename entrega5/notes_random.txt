@@ -755,3 +755,5 @@ SELECT DISTINCT ?s ?l ?n
 
 lo opcional es para obtener tambien las empresas que no tiene dbpedia registrado ningún empleado.
 que estén al final del listado.
+
+
