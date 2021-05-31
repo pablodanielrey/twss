@@ -54,12 +54,23 @@ dbr:Uruguay
 
 6. ¿cuál es la diferencia entre las propiedades definidas en dbo: y las propiedades definidas en dbp:? 
 
-dbo = ontología
-dbp = propiedades
+dbo = propiedades extraídas mediante el mapping definido a la ontología de dbpedia
+dbp = propiedades extraídas mediante el procesamiento raw de los infoboxes.
 
 7.  ¿Cuantas clases y cuantas propiedades tiene la ontología de dbpedia de acuerdo a lo reportado en el artículo?
 
+320 clases y 1650 propiedades según el artículo.
+aunque en un chequeo muy rápido se ve que existen varias mas. unos 780 href donde casi todos corresponden con una clase de la ontología.
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl http://mappings.dbpedia.org/server/ontology/classes/ | grep href | wc
+    780    9072  157832
+
+
+
 8. ¿En que URL puedo ver el listado completo de Clases en la ontología de dbpedia?  
+
+http://mappings.dbpedia.org/server/ontology/classes/
+
 
 Ejercicio 2: Explorar el endpoint Sparql de dbpedia
 Con la siguiente consulta sparql que obtiene todas las propiedades en dbpedia para la UNLP, explore la funcionalidad del editor de queries Sparql de dbpedia.

@@ -2,15 +2,15 @@ inicio el análisis del tp.
 no me pude conectar a la teoría por problemas en el laburo pero ya vi todos los videos.
 
 super super super interesante el tema de la inferencia y sparql como lenguaje de consulta.
-sparql y el motor de inferencia era lo que faltaba para poder realizar pruebas mas simples y evaluar los efectos de esas alternativas de implementación sobre una web semántica en general.
+sparql y el motor de inferencia era lo que faltaba para poder realizar pruebas simples y evaluar los efectos de esas alternativas de implementación sobre una web semántica en general.
 
 por ejemplo algunas de mis dudas principales todavía son:
-1 - veneficios/desventajas de armar una ontología completa por sobre reusar conceptos y hacer merge de ontologías existentes.
-2 - efectos de la inferencia sobre el grafo mergeado de varias ontologías
-3 - ventajas y desventajas de particionar nuestra ontología en dominios de aplicación a una solución específica. (ej: como lo que vimos en el tp1 y tp2. al mergear la info podríamos haber estructurado de distinta forma las ontologías que creamos) 
+1 - veneficios/desventajas de armar una ontología completa independiente por sobre reusar conceptos y hacer merge de ontologías existentes.
+2 - efectos de la inferencia sobre el grafo mergeado de varias ontologías, por ejemplo cambiar el rango de una propiedad para abarcar mas clases, y analizar esos efectos en todo el grafo mergeado.
+3 - ventajas y desventajas de particionar nuestra ontología en dominios especificos a una solución. (ej: como lo que vimos en el tp1 y tp2. al mergear la info podríamos haber estructurado de distinta forma las ontologías que creamos) 
 por ejemplo: 
-ontología tp1
-ontologia tp2 
+ontología tp1 - solo con los conceptos manejados en tp1
+ontologia tp2 - solo con los conceptos manejados en tp2
 ontología tp3 = merge entre las 2 ontologías anteriores y usar sameAs, equivalentProperty, equivalentClass, etc para linkear conceptos repetidos de las ontologías anteriores.
 
 otra posible solución
@@ -18,15 +18,20 @@ ontologia tp1
 extensión ontologia tp1 para abarcar conceptos de tp2
 extensión ontología tp2 para abrcar conceptos tp3
 
-armar en mismo archivo? o armarlo en distintos archivos y usar owl:import ?
+también, efectos de :
+armar en mismo archivo, modificandolo y llevando distintas versiones del mismo, cada una con cambios incrementales? 
+o armarlo en distintos archivos y usar owl:import a cada extensión de la ontología?
 etc.
 
-usando sparql e inferencia podemos ver los resultados que tiene una solución o la otra. si generan efectos no deseados (la inferencia), etc.
+usando sparql e inferencia podemos ver los resultados que tiene una solución o la otra. si generan efectos no deseados usando inferencia, etc.
+usando protegé no me quedaron claras estas cosas, claramente porque no lo se usar correctamente y me falta práctica.
 
 ---
 
-parecido a los patrones de diseño del paradigma orientado a objetos, analizar patrones de diseños de ontologías.
+también permitiría analizar un poco patrones de diseño de ontologías.
+parecido a los patrones de diseño del paradigma orientado a objetos.
 casco publicó un link a material sobre eso en el foro.
+que profundidad de ontología usar? usar subclases o usar composición?, etc.
 
 ---
 
@@ -39,5 +44,33 @@ https://recyt.fecyt.es/index.php/ThinkEPI/article/view/thinkepi.2018.31
 
 ALUCINANTE el artículo!!. lo dejo como material dentro del tp.
 y casi que responde a las consultas básicas del tp y aclara las diferencias entre los 2 proyectos!.
+
+el artículo que pasó diego en el foro para el trabajo esta bueno. es medio pesado con las estadísticas pero da un panorama muchisimo mas completo de lo que es dbpedia.
+
+----
+
+después de leer todo lo de dbpedia me quedó otro sabor sobre lo que pensaba de dbpedia.
+me gusta mucho que haya sido pensado como una ontología universal. por lo que entendí, si bien se centra en el procesamiento de los datos de wikipedia, la clave fue realizar los mapeos 
+de los datos de wikipedia con una ontología pensada y estrucutrada para representar los conceptos independientemente de como estén estructurados en wikipedia.
+y me gustó también inferir propiedades y características mediante extractores NLP para tratar de representarlos con clases y propieades de la ontología. 
+El ejemplo del asignar género a la persona linkeada en base a la cantidad de veces que se usa she, he dentro del artículo de wikipedia, etc.
+
+estoy pensando que en este momento invertiría lo que hice en el tp2, (usar schema.org como ontología), y pasar a usar dbpedia como la ontología base. que además ya tiene equivalencias definidas a las clases de schema.org.
+use schema.org debido a que la info retornada de las fuentes está en json-ld usando "clases" de schema.org, pero podría usar inferencia para obtener la clase equivalente en la ontología de dbpedia,
+y almacenarla de esa forma en mis datos. es un paso mas, pero creo que con todas las herraminetas que aprendimos es trivial realizarlo y tendría almacenado los datos de forma mas genérica y compatible con el mundo.
+
+a lo sumo almacenar la info con las 2 clases.
+    rdf:type schema:Person
+    rdf:type dbo:Person
+
+la primera la obtengo de los datos exportados por las fuentes de las pelis.
+la segunda la obtendría de la inferencia sobre la ontología.
+
+---
+
+igual me falta leer sobre wikidata así que sigo analizando las cosas.
+ahora a ver el punto sparql de dbpedia.
+
+---
 
 
