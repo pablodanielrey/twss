@@ -74,3 +74,10 @@ ahora a ver el punto sparql de dbpedia.
 ---
 
 
+select ?property ?object where {
+ dbr:National_University_of_La_Plata ?property ?object.
+}
+Explore:
+
+Los distintos formatos para los resultados
+
