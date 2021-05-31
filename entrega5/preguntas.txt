@@ -1,0 +1,81 @@
+-------------- dbpedia ---------------
+
+Lea el artículo y responda:
+
+1. ¿Qué es dbpedia?
+
+un proyecto que se generó para estructurar la información que existe en wikipedia. 
+la idea del proyecto es formalizar mediante una ontología la información publicada. 
+sacando textualmente del artículo que publicaron en el foro.
+"la disponibilidad de conjuntos de datos estructurados que formalizan y estructuran dicho conocimiento supone una herramienta de incalculable valor"
+la ontología está pensada como una ontología universal, no está basada en la estructura de wikipedia.
+
+2. ¿De donde sale la información disponible en dbpedia?
+
+dbpedia la scrapea de wikipedia mediante bots automáticos, que corren cada cierto tiempo.
+y la información adaptada por la comunidad de dbpedia a su ontología.
+existen distintos tipos de mapeo automático que se realiza.
+mapeo del infobox - extracción basada en mapeos manuales.
+extracción del infobox automática - cuando no existe el mapeo anterior, se trata de automáticamente extraer de forma autormática.
+extracción de características - características específicas como las coordenadas geográficas, etc.
+extracción estadística - basada en procesamiento del lenguaje natural.
+
+3. ¿Que partes de los artículos de Wikipedia se transforman en tripletas?
+
+en mayor medida los infobox. ya que contienen información un poco mas estructurada.
+y algunas otras partes de los artículos mediante los extractores NLP.
+
+4. ¿Cual es el esquema de URIs que utiliza dbpedia? 
+
+hasta el 2011 solo el namespace principal era http://dbpedia.org/
+http://dbpedia.org/resource/
+http://dbpedia.org/property/
+http://dbpedia.org/ontology/
+y para el namespace resource usa el título del artículo de wikipedia en inglés para la iri del recurso.
+posteriormente se incorporó los namespaces localizados.
+que almacenan la info localizada + un dataset estandarizado (en inglés)
+http://<lang>.dbpedia.org/resource/
+http://<lang>.dbpedia.org/property/
+y la parte estandarizada para la cual existen versiones en inglés de la wiki.
+para todos estos namespaces la iri del recurso al que se asocian los datos están representados en un término agnóstico del lenguaje dentro de
+http://dbpedia.org/resource/
+
+5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en dbpedia? ¿Cuál sería para Argentina? ¿Y para Uruguay? (exprese su respuesta aprovechando el prefijo dbr:  para referirse a http://dbpedia.org/resource/)
+
+se toma la url del artículo de wikipedia y se usa esa url dentro del espacio de nombres http://dbpedia.org/resource/
+después de buscar en wikipedia:
+
+https://es.wikipedia.org/wiki/Uruguay
+https://en.wikipedia.org/wiki/National_University_of_La_Plata
+
+dbr:National_University_of_La_Plata
+dbr:Uruguay
+
+
+6. ¿cuál es la diferencia entre las propiedades definidas en dbo: y las propiedades definidas en dbp:? 
+
+dbo = ontología
+dbp = propiedades
+
+7.  ¿Cuantas clases y cuantas propiedades tiene la ontología de dbpedia de acuerdo a lo reportado en el artículo?
+
+8. ¿En que URL puedo ver el listado completo de Clases en la ontología de dbpedia?  
+
+Ejercicio 2: Explorar el endpoint Sparql de dbpedia
+Con la siguiente consulta sparql que obtiene todas las propiedades en dbpedia para la UNLP, explore la funcionalidad del editor de queries Sparql de dbpedia.
+
+ El editor de queries se encuentra disponible en http://dbpedia.org/sparql
+
+select ?property ?object where {
+ dbr:National_University_of_La_Plata ?property ?object.
+}
+Explore:
+
+Los distintos formatos para los resultados
+Los prefijos de namespaces ya definidos (link de arriba a la derecha)
+(opcional) El editor de queries iSparql (link de arriba a la derecha) 
+Responda:
+
+1 . En la pantalla que muestra resultados de queries en HTML, ¿qué pasa cuando hace click en una URI que pertenece al dominio dbpedia.org? ¿qué pasa si la URI está afuera? ¿A que cree que se debe la diferencia en comportamiento? (recuerde que la clickear la URI estamos dereferenciando el recurso, como discutimos en la clase respecto a Linked Data)
+
+ 

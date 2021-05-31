@@ -1,0 +1,43 @@
+inicio el análisis del tp.
+no me pude conectar a la teoría por problemas en el laburo pero ya vi todos los videos.
+
+super super super interesante el tema de la inferencia y sparql como lenguaje de consulta.
+sparql y el motor de inferencia era lo que faltaba para poder realizar pruebas mas simples y evaluar los efectos de esas alternativas de implementación sobre una web semántica en general.
+
+por ejemplo algunas de mis dudas principales todavía son:
+1 - veneficios/desventajas de armar una ontología completa por sobre reusar conceptos y hacer merge de ontologías existentes.
+2 - efectos de la inferencia sobre el grafo mergeado de varias ontologías
+3 - ventajas y desventajas de particionar nuestra ontología en dominios de aplicación a una solución específica. (ej: como lo que vimos en el tp1 y tp2. al mergear la info podríamos haber estructurado de distinta forma las ontologías que creamos) 
+por ejemplo: 
+ontología tp1
+ontologia tp2 
+ontología tp3 = merge entre las 2 ontologías anteriores y usar sameAs, equivalentProperty, equivalentClass, etc para linkear conceptos repetidos de las ontologías anteriores.
+
+otra posible solución
+ontologia tp1
+extensión ontologia tp1 para abarcar conceptos de tp2
+extensión ontología tp2 para abrcar conceptos tp3
+
+armar en mismo archivo? o armarlo en distintos archivos y usar owl:import ?
+etc.
+
+usando sparql e inferencia podemos ver los resultados que tiene una solución o la otra. si generan efectos no deseados (la inferencia), etc.
+
+---
+
+parecido a los patrones de diseño del paradigma orientado a objetos, analizar patrones de diseños de ontologías.
+casco publicó un link a material sobre eso en el foro.
+
+---
+
+
+material publicado por leonel sobre wikidata y dbpedia.
+
+https://recyt.fecyt.es/index.php/ThinkEPI/article/view/thinkepi.2018.31
+
+---
+
+ALUCINANTE el artículo!!. lo dejo como material dentro del tp.
+y casi que responde a las consultas básicas del tp y aclara las diferencias entre los 2 proyectos!.
+
+

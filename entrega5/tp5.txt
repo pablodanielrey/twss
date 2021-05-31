@@ -1,0 +1,113 @@
+TP 5 - Sparql
+Objetivo pedagógico
+Utilizar Sparql para realizar consultas variadas en DBpedia. 
+
+Requerimientos
+Para este trabajo se requiere:
+
+Conexión a Internet para poder acceder al endpoint de DBpedia.
+Como referencia para este trabajo, utilice el capítulo 6 (en particular de la sección 6.3 en adelante) del libro "Developers guide to the semantic web"
+
+Ejercicio 1: ¿Qué es dbpedia?
+El siguiente articulo ofrece un panorama general de los aspectos más importantes de dbpedia http://svn.aksw.org/papers/2013/SWJ_DBpedia/public.pdf
+
+Lea el artículo y responda:
+
+1. ¿Qué es dbpedia?
+
+2. ¿De donde sale la información disponible en dbpedia?
+
+3. ¿Que partes de los artículos de Wikipedia se transforman en tripletas?
+
+4. ¿Cual es el esquema de URIs que utiliza dbpedia? 
+
+5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en dbpedia? ¿Cuál sería para Argentina? ¿Y para Uruguay? (exprese su respuesta aprovechando el prefijo dbr:  para referirse a http://dbpedia.org/resource/)
+
+6. ¿cuál es la diferencia entre las propiedades definidas en dbo: y las propiedades definidas en dbp:? 
+
+7.  ¿Cuantas clases y cuantas propiedades tiene la ontología de dbpedia de acuerdo a lo reportado en el artículo?
+
+8. ¿En que URL puedo ver el listado completo de Clases en la ontología de dbpedia?  
+
+Ejercicio 2: Explorar el endpoint Sparql de dbpedia
+Con la siguiente consulta sparql que obtiene todas las propiedades en dbpedia para la UNLP, explore la funcionalidad del editor de queries Sparql de dbpedia.
+
+ El editor de queries se encuentra disponible en http://dbpedia.org/sparql
+
+select ?property ?object where {
+ dbr:National_University_of_La_Plata ?property ?object.
+}
+Explore:
+
+Los distintos formatos para los resultados
+Los prefijos de namespaces ya definidos (link de arriba a la derecha)
+(opcional) El editor de queries iSparql (link de arriba a la derecha) 
+Responda:
+
+1 . En la pantalla que muestra resultados de queries en HTML, ¿qué pasa cuando hace click en una URI que pertenece al dominio dbpedia.org? ¿qué pasa si la URI está afuera? ¿A que cree que se debe la diferencia en comportamiento? (recuerde que la clickear la URI estamos dereferenciando el recurso, como discutimos en la clase respecto a Linked Data)
+
+ 
+
+Ejercicio 3: Realizar consultas Sparql en dbpedia
+Para cada caso reporte la consulta sparql correspondiente y el resultado de la misma. En las consultas, de preferencia al uso de clases y propiedades en la ontología de dbpedia (dbo) 
+
+a) Obtener a los escritores que hayan nacido en una ciudad de Argentina. 
+
+b) Obtener a los escritores que hayan nacido en una ciudad de Uruguay.
+
+c) Utilizando el keyword filter (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay 
+
+d) Utilizando el keyword union (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay
+
+e) ¿Qué diferencia hay entre c y d? ¿En cual se deben recuperar/analizar menor número de tripletas?
+
+f) ¿Cuantos empleados tiene la compañía mas grande en dbpedia, y en que país está ubicada? (obtenga la lista de todas las compañías y los países donde están ubicadas ordenada de forma descendiente por numero de empleados)
+
+
+
+Ejercicio 4: Llegó Wikidata
+Acceda al sitio oficial del proyecto Wikidata: https://www.wikidata.org y leyendo la documentación responda las siguientes preguntas.
+
+1. ¿Qué es wikidata?
+
+2. ¿De donde sale la información disponible en Wikidata?
+
+3. ¿Que partes de los artículos de Wikipedia se transforman en tripletas?
+
+4. ¿Cual es el esquema de URIs que utiliza Wikidata? 
+
+5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en Wikidata? 
+
+6. ¿Que diferencias y similitudes encuentra con DBpedia?
+
+7. Adapte las queries que construyo en los puntos c y d del ejercicio anterior en el endpoint de Wikidata. (https://query.wikidata.org). ¿Obtuvo resultados diferentes? Si la respuesta es si, ¿a que se deben?
+
+
+
+Ejercicio 5: Enriqueciendo información con Web of Data
+En este ejercicio vamos a enriquecer la información que fue generando a lo largo de la asignatura relacionada al cine. La idea es que utilice consultas SPARQL sobre Wikidata y DBpedia para enriquecer sus bases de conocimiento (los archivos .ttl) con los resultados de esas consultas.
+
+Enriquezca la información de su base de conocimiento obteniendo por cada persona (teniendo en cuenta la clase que utilizó para modelar personas) todas las tripletas que posee wikidata y DBpedia respecto a las mismas. Puede comenzar utilizando una consulta con las personas que poseen el mismo nombre. Por ejemplo, si su base de conocimiento incluye a "Keanu Reeves", detecte en Wikidata (y DBpedia en otra consulta) aquellos recursos que posean como nombre el valor "Keanu Reeves" y todas las tripletas en las que ese recurso sea el sujeto. Documente la/s consulta/s SPARQL que utilizó a tal fin.  En relación a esto, responda:
+
+¿Es suficiente utilizar el nombre?
+¿Necesita utilizar mas características para asegurar que el concepto de Wikidata (DBpedia) sea la persona que usted desea buscar?
+¿Para otros tipos de recursos que tengan algo como nombre o título, piensa que alcanzaría esa estrategia?
+Defina y agregue a su base de conocimiento la object property wasDirectedByOscarWinner que relaciona a una actriz/actor de su base de conocimiento con otra persona si: a) la primera actuó en una película dirigida por la segunda, y b) la segunda recibió un premio Oscar (en cualquier categoría). Utilice Wikidata/DBPedia para obtener la información.  Muestre la consulta que utilizó para eso.
+En este ejercicio vamos a enriquecer la información que fue generando a lo largo de la asignatura relacionada al cine. La idea es que utilice consultas SPARQL sobre Wikidata y DBpedia para enriquecer sus bases de conocimiento (los archivos .ttl) que con los resultados de esas consultas.
+
+En comparación con el TP anterior (donde enriqueció en base a dereferenciación de URLs), ¿Qué diferencias, ventajas y desventajas le encuentra al uso de SPARQL?.   Si utilizó alguna librería específica comente brevemente las ventajas que encontró, y cómo le ayudo en su solución. 
+
+Entrega
+ Este ejercicio se entrega por esta plataforma.
+
+ Puede hacerse de manera individual o de a pares.
+
+Discusión y consultas
+
+Durante las semanas dedicadas al desarrollo de este trabajo discutiremos en un foro los desafíos que la tarea implica. Participar de esas discusiones es parte de la actividad y parte de la calificación del trabajo. 
+
+Evaluación
+ Suficiente: Responde correctamente a las preguntas 1-5 del ejercicio 1, resuelve correctamente las consultas a y b del ejercicio 3, 1-5 del ejercicio 4, y resuelve correctamente los puntos 1 y 2 del ejercicio 5.  Participa activamente del foro.
+
+ Muy bueno: Responde correctamente a todas las preguntas y resuelve correctamente todas las consultas. 
+
