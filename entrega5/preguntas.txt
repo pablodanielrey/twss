@@ -54,8 +54,8 @@ dbr:Uruguay
 
 6. ¿cuál es la diferencia entre las propiedades definidas en dbo: y las propiedades definidas en dbp:? 
 
-dbo = propiedades extraídas mediante el mapping definido a la ontología de dbpedia
-dbp = propiedades extraídas mediante el procesamiento raw de los infoboxes.
+dbo = propiedades extraídas mediante el mapping definido a la ontología de dbpedia - mucho mas confiables!!!
+dbp = propiedades extraídas mediante el procesamiento raw de los infoboxes. - menos confiables
 
 7.  ¿Cuantas clases y cuantas propiedades tiene la ontología de dbpedia de acuerdo a lo reportado en el artículo?
 
@@ -212,6 +212,7 @@ en este caso se recorre solamente 1 vez el dataset de autores.
 f) ¿Cuantos empleados tiene la compañía mas grande en dbpedia, y en que país está ubicada? (obtenga la lista de todas las compañías y los países donde están ubicadas ordenada de forma descendiente por numero de empleados)
 
 http://dbpedia.org/resource/Eureka_Forbes ---> 5000000
+totalmente una sorpresa!!.
 
 SELECT DISTINCT ?s ?l ?n
 			WHERE
@@ -226,4 +227,5 @@ SELECT DISTINCT ?s ?l ?n
 			}
             order by desc(?n)
 
-totalmente una sorpresa!!.
+esto funciona ya que evidenemente dbpedia infiere siempre el pais y genera la tripleta para location siempre con el país.
+asi que si consulto por paises anda bien.

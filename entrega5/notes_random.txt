@@ -33,6 +33,7 @@ parecido a los patrones de diseño del paradigma orientado a objetos.
 casco publicó un link a material sobre eso en el foro.
 https://patterns.dataincubator.org/book/
 que profundidad de ontología usar? usar subclases o usar composición?, etc.
+y ver rápidamente los resultados de esos patrones de diseño. si general algún efecto no deseado. etc.
 
 ---
 
@@ -65,7 +66,7 @@ a lo sumo almacenar la info con las 2 clases.
     rdf:type dbo:Person
 
 la primera la obtengo de los datos exportados por las fuentes de las pelis.
-la segunda la obtendría de la inferencia sobre la ontología.
+la segunda la obtendría de la inferencia sobre la ontología de dbpedia.
 
 ---
 
@@ -263,6 +264,7 @@ pablo@xiaomi:/src/github/facu-infor/twss$ curl http://xmlns.com/foaf/0.1/name
 <hr>
 <address>Apache/2.4.7 (Ubuntu) Server at xmlns.com Port 80</address>
 </body></html>
+
 pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://xmlns.com/foaf/0.1/name
 HTTP/1.1 303 See Other
 Date: Mon, 31 May 2021 14:08:19 GMT
@@ -313,9 +315,7 @@ pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' http://xm
 
 esto me retorna un html tal cual dice en el content-type.
 
-
-por lo que la propiedad name de foaf no tiene presencia en la web.
-o no es desreferenciable.
+lo consulté en el foro a ver si puedo asumir que eso igualmente tiene presencia en la web y es desreferenciable.
 
 ----
 
@@ -430,7 +430,7 @@ igualmente en este caso sería desreferenciable y tendría presencia.
 
 ----
 
-en otro caos no se encuentra.
+en otro caos no se encuentra nada. no sería desreferenciable.
 
 pablo@xiaomi:/src/github/facu-infor/twss$ curl -I http://rdf.freebase.com/ns/m.07_yzv
 HTTP/1.1 404 Not Found
@@ -492,7 +492,7 @@ SELECT DISTINCT ?s ?p ?o ?c
 ?s dbo:birthPlace dbr:Argentina .
 			}            
 
-lo puedo expandir con ciudades que pertenecen a argentina y veo que abarca mas datos.
+lo puedo expandir con ciudades que pertenecen a argentina.
 
 SELECT DISTINCT ?s ?p ?o ?c
 			WHERE
@@ -519,7 +519,7 @@ SELECT DISTINCT ?s ?p ?o ?c
 
 			}
 
-desambiguo a los autores. y agrego la posiilidad de que no exista la ciudad si no que el pais.
+desambiguo a los autores. y chequeo por pais ya que no en todos los casos tengo la ciudad en la que nacieron.
 
 SELECT DISTINCT ?s 
 			WHERE
@@ -613,15 +613,14 @@ c2 = for autor in autores if autor dbo:birthPlace dbr:Uruguay
 c3 = c1 + c2
 
 entonces se procesaría el dataset de autores 2 veces. (la variable ?s)
-
 para el caso del filter el if va adentro del "for"
 
-c3 = for autor in autores if autor dbo:birthPlace or autor dbo:birthPlace
+c3 = for autor in autores if autor dbo:birthPlace dbr:Argentina or autor dbo:birthPlace dbr:Uruguay
 
 en este caso se recorre solamente 1 vez el dataset de autores.
+pero esto es una suposición. tengo que buscar algún motor que me permita explorar como realiza la consulta el mismo motor y que optimizaciones hace.
 
 ---
-
 
 
 f) ¿Cuantos empleados tiene la compañía mas grande en dbpedia, y en que país está ubicada? 
@@ -753,5 +752,6 @@ SELECT DISTINCT ?s ?l ?n
 			}
             order by desc(?n)
 
-            
 
+lo opcional es para obtener tambien las empresas que no tiene dbpedia registrado ningún empleado.
+que estén al final del listado.
