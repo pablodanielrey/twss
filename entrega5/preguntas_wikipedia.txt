@@ -1,0 +1,72 @@
+Ejercicio 4: Llegó Wikidata
+Acceda al sitio oficial del proyecto Wikidata: https://www.wikidata.org y leyendo la documentación responda las siguientes preguntas.
+
+1. ¿Qué es wikidata?
+
+wikidata es un proyecto colaborativo que tiene como objetivo almacenar los datos estructurados de los proyectos asociados con wikimedia (wikipedia, etc)
+usa licencias libres así permite que se pueda reusar la información por parte de otros proyectos externos a wikimedia.
+lo aclara en la documentación, de que wikidata NO es solamente una base para almacenar los artículos de wikipedia de forma estructurada, si no mas bien a la inversa.
+wikidata sirve a wikipedia para obtener datos de una forma estructurada para incluír dentro de artículos. ej las infoboxes.
+es mas similar a wikicommons que a wikipedia.
+
+2. ¿De donde sale la información disponible en Wikidata?
+
+es editada colaborativamente por la gente. editores de wikidata. 
+también se usan bots para generar contenido dentro de wikidata. por ejemplo para generar links entre wikis, etiquetas, 
+fuentes y/o referencias.
+Casi todas las sentencias en wikidata deben tener una fuente, salvo que sea conocimiento común (da el ejemplo del planeta tierra), 
+o cuando la misma sentencia es su propia referencia (da el ejemplo del autor de los juegos del hambre)
+
+
+3. ¿Que partes de los artículos de Wikipedia se transforman en tripletas?
+
+wikidata inicialmente fue un hub centralizador de links entre lenguajes de artículos de wikis.
+por esto cada artículo de wikipedia tiene un item de wikidata (no así a la inversa)
+
+
+
+
+4. ¿Cual es el esquema de URIs que utiliza Wikidata? 
+
+http://www.wikidata.org/wiki/Qxxxxx  donde xxxxx es un número.
+http://www.wikidata.org/wiki/Pxxxxx  donde xxxxx es un número.
+
+
+fuente: https://meta.wikimedia.org/wiki/Wikidata/Notes/URI_scheme
+
+5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en Wikidata? 
+
+todo el análisis para encontrar las respuestas a esta pregunta están descriptos en notes_random.txt.
+pero básicamente encontré 3 respuestas para la pregunta:
+
+- La página de wikipedia del recurso tiene un link en la sección de tools (panel izquierdo) llamado "Wikidata item"
+https://www.wikidata.org/wiki/Special:EntityPage/Q784171
+ahi se puede obtener el número qid generado para el recurso en cuestión. con ese número armamos la url:
+http://www.wikidata.org/wiki/Qxxxxxx
+
+- Otra opción es : También dentro de ese mismo panel izquierdo, tenemos una opción que es: Page information.
+dentro de la cual se indica el número de item wikidata.
+Wikidata item ID	Q784171
+con lo cual la url sería:
+http://www.wikidata.org/wiki/Q784171
+
+- La ultima que encontré y para mi la mejor es consultar la base estructurada usando sparql por el dato que necesitamos.
+el concepto principal es usar los sitelinks para encontrar la entidad principal del recurso.
+
+select ?o where {
+      <https://es.wikipedia.org/wiki/Universidad_Nacional_de_La_Plata> schema:about ?o
+  }
+
+el resultado es :
+
+http://www.wikidata.org/wiki/Q784171
+
+
+6. ¿Que diferencias y similitudes encuentra con DBpedia?
+
+
+
+
+7. Adapte las queries que construyo en los puntos c y d del ejercicio anterior en el endpoint de Wikidata. (https://query.wikidata.org). ¿Obtuvo resultados diferentes? Si la respuesta es si, ¿a que se deben?
+
+

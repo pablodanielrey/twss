@@ -1,0 +1,6 @@
+
+https://meta.wikimedia.org/wiki/Wikidata/Notes/URI_scheme
+https://meta.wikimedia.org/wiki/Wikidata/Notes/DBpedia_and_Wikidata
+
+http://www.semantic-web-journal.net/system/files/swj1462.pdf
+https://blog.reputationx.com/wikidata

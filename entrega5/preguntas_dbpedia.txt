@@ -28,6 +28,7 @@ y algunas otras partes de los artículos mediante los extractores NLP.
 4. ¿Cual es el esquema de URIs que utiliza dbpedia? 
 
 hasta el 2011 solo el namespace principal era http://dbpedia.org/
+tenemos los siguientes namespaces definidos.
 http://dbpedia.org/resource/
 http://dbpedia.org/property/
 http://dbpedia.org/ontology/
@@ -39,6 +40,9 @@ http://<lang>.dbpedia.org/property/
 y la parte estandarizada para la cual existen versiones en inglés de la wiki.
 para todos estos namespaces la iri del recurso al que se asocian los datos están representados en un término agnóstico del lenguaje dentro de
 http://dbpedia.org/resource/
+
+también existe una explicación dentro de las uris de wikidata.
+
 
 5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en dbpedia? ¿Cuál sería para Argentina? ¿Y para Uruguay? (exprese su respuesta aprovechando el prefijo dbr:  para referirse a http://dbpedia.org/resource/)
 

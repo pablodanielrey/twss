@@ -756,4 +756,346 @@ SELECT DISTINCT ?s ?l ?n
 lo opcional es para obtener tambien las empresas que no tiene dbpedia registrado ningún empleado.
 que estén al final del listado.
 
+-------------------
+-------------------
+-------------------
+-----
 
+arranco con la parte de wikidata.
+https://www.wikidata.org/wiki/Wikidata:Introduction
+
+
+---
+
+después de leer miles de artículos no encuentro bien donde están definidos los aspectos técnicos de wikidata y el manejo interno.
+como los artículos que existen para dbpedia, no veo nada similar para wikidata.
+
+en la documentación encuentro que existen bots que generan información dentro de la wikidata.
+y editores de wikidata. pero no la conversión automática de wikipedia --> wikidata.
+
+solo que fue un proyecto creado inicialmente para mantener de forma estructurada los links entre las wikis multilenguaje, 
+así que cada vez que se crea un artículo en wikipedia se crea el correspondiente Q.
+y que fue creciendo para darle una base estructurada a todos los proyectos wikimedia.
+
+----
+
+me creo una cuenta dentro de wikidata para analizar como es la creación del contenido.
+tiene una estructura distinta de la wikipedia y tiene mucha documentación asociada.
+mediante los asistentes no veo simple lo que necesito.
+
+----
+
+uso la misma cuenta para acceder a la wikipedia y tratar de ingresar algún artículo ahi.
+no veo forma de incluir información a wikidata a partir de wikipedia.
+los editores de wiki me permiten generar una página, insertar referencias, enlaces, 
+imágnenes, etc. pero no veo en el editor gráfico info sobre wikidata.
+explícitamente que se transforma de esa info en wikidata.
+
+---
+
+de todo lo que estuve leyendo asumo que todo lo que es infobox sale de wikidata.
+y esa es la forma de incluir esos datos dentro de los artículos de wikipedia.
+pruebo editar la página de la universidad y veo :
+
+{{short description|Public research university in Argentina}}
+{{Coord|34|54|46.69|S|57|57|04.88|W|type:edu|display=title}}
+{{Infobox university
+| name              = La Plata National University
+| native_name       = ''Universidad Nacional de La Plata''
+| image             = UNLP Logo.jpg
+| image_size        = 180px
+| image_alt         = 
+| caption           = Seal of the National University of La Plata
+| latin_name        = 
+| motto             = {{lang|la|Pro scientia et patria}} ([[Latin]])
+| motto_lang        = 
+| mottoeng          = For science and the fatherland
+.....
+....
+...
+
+lo que no me define es si eso sale de la wikidata o esta editado dentro de wikipedia.
+hubiera esperado algo como:
+
+{{Infobox university qid=Q784171}}
+
+de ahi podría haber inferido que la info está cargada en wikidata y se exporta a wikipedia.
+pero con lo que veo así como está no puedo inferir nada. a lo sumo lo contrario.
+que se carga mediante un template de infobox de valores dentro de wikipedia y ahi le asigno valores (basicamente la sintaxis de arriba)
+y eso se inserta automáticamente en el Q784171 correspondiente generado para la página. o sea se generan las tripletas correspondientes y eso
+va a parar a wikidata. 
+ahora si este es el proceso entonces no me cuadra que cada sentencia en wikidata tiene una referencia, es requerido por wikidata por lo que averigué.
+para indicar que una sentencia es verificada.
+
+voy a seguir investigando. para mi me suena que es a la inversa: wikidata ---> wikipedia
+es lo lógico.
+
+---
+
+hago algunas consutlas sparql para analizar un poco la cosa. a ver si puedo identificar algo.
+
+select distinct ?s ?p
+  where {
+     ?s ?p wd:Q784171
+  } limit 10000
+
+pero todo el tema de las iris con Q hacen dificil entenderlo.
+la idea es analizar también a la vez si puedo identificar mas del proceso 
+
+wikipedia ---> wikidata
+
+y también la parte identificación del Qnumber a partir de la url de la wiki. una de las preguntas que tenemos que responder.
+
+primer idea es hacer una consulta a wikidata sparql usando como parámetro la url de la wiki.
+en algún lado de wikidata tiene que haber alguna tripleta :
+
+Q784171 wikiurl National_University_of_La_Plata
+
+estoy pensando en el concepto de wikilink o intrawiki link etc.
+eso seguro es la propiedad que estoy buscando.
+
+--
+
+Wikilink (Q58494516)
+hyperlink between pages of the same Wikimedia wiki
+
+----
+
+select distinct ?o
+  where {
+     wd:Q784171 wd:Q58494516 ?o
+  } limit 100
+
+
+nada de nada. no me respondió ningún resultado.
+
+---
+
+viendo la consulta, me acabo de dar cuenta que puse a la inversa en la consulta general de arriba!!.
+el sujeto es la universidad y el objeto tiene que ser la url de la wiki.
+pruebo de nuevo a ver que veo!!.
+
+select distinct ?p ?o
+  where {
+     wd:Q784171 ?p ?o
+  } limit 10000
+
+
+JOOOOOOOOOOOOOOOO. datos, queridos datos que entiendo un poco mas. no solo statements como la consulta anterior.
+claro anteriormente lo que estaba consultando es que statements tienen a la univerisad como objeto.
+por el esquema de datos de wikidata van a ser solo sentencias.
+
+--
+
+referencia:
+https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format#Full_list_of_prefixes
+
+ PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+ PREFIX wd: <http://www.wikidata.org/entity/>
+ PREFIX wdtn: <http://www.wikidata.org/prop/direct-normalized/>
+ PREFIX p: <http://www.wikidata.org/prop/>
+ PREFIX wds: <http://www.wikidata.org/entity/statement/>
+
+.----
+
+buscando en google.
+
+How do I link wikidata to Wikipedia?
+From a Wikipedia page, you can go to the link "Wikidata item", using "Tools" in the side pane (in the left), to see and edit it. Also in Tools, there is another link to "page information", where is "Wikidata item ID", that contains the QID (for example: Q171 or "None").
+
+pero siempre hay info no técnica. quiero saber la propiedad que linkea la wiki con la entidad Q de wikidata.
+obvio sin leerme todo la info de wikidata jajaj.
+
+---
+
+si una página en wikipedia si o si tiene si Qnumber en wikidata.
+para ver cual es la propiedad que los asocia entonces se me ocurrió
+listas todas las propieades ordenadas en forma ascendente.
+
+la wiki mas chica va a tener la menos cantidad de esas propiedades, pero va a tener seguro la propiedad que asocia la pagina en wikipedia con la entidad de wikidata.
+
+select distinct SUM(?p) as ?propieades
+  where {
+     ?s ?p ?o
+  } order by asc(?propieades) .
+ limit 10 .
+
+tiro error por todas partes. acomodo la sintaxis
+
+select (SUM(?p) as ?propieades)
+  where {
+     ?s ?p ?o
+  } order by asc(?propieades)
+   limit 10
+
+obvio como no podía ser de otra forma. tomar todas las tripletas tardaría años!!.
+
+SPARQL-QUERY: queryStr=select (SUM(?p) as ?propieades)
+  where {
+     ?s ?p ?o
+  } order by asc(?propieades)
+   limit 10
+
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.bigdata.rdf.sail.webapp.BigdataServlet.submitApiTask(BigdataServlet.java:292)
+	at com.bigdata.rdf.sail.webapp.QueryServlet.doSparqlQuery(QueryServlet.java:678)
+	at com.bigdata.rdf.sail.webapp.QueryServlet.doGet(QueryServlet.java:290)
+	at com.bigdata.rdf.sail.webapp.RESTServlet.doGet(RESTServlet.java:240)
+	at com.bigdata.rdf.sail.webapp.MultiTenancyServlet.doGet(MultiTenancyServlet.java:273)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:865)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1655)
+	at org.wikidata.query.rdf.blazegraph.throttling.ThrottlingFi
+
+
+---
+
+de nuevo en google.
+
+Sitelinks (also known as interwiki links or interlanguage links) are special links that contain a site and a title, and go from individual items in Wikidata to pages on other Wikimedia sites such as Wikipedia, Wikisource and Wikivoyage.
+
+https://www.wikidata.org/wiki/Help:Sitelinks
+
+como indica el artículo el punto central para mi tiene que ser el Q entity de wikidata. de la entidad de la universidad.
+
+
+----
+
+
+analizando los ejemplos que tira el sparql de wikidata veo uno que me puede servir:
+
+#Returns a list of Wikidata items for a given list of Wikipedia article names
+#List of Wikipedia article names (lemma) is like "WIKIPEDIA ARTICLE NAME"@LANGUAGE CODE with de for German, en for English, etc.
+#Language version and project is defined in schema:isPartOF with de.wikipedia.org for German Wikipedia, es.wikivoyage for Spanish Wikivoyage, etc.
+
+SELECT ?lemma ?item WHERE {
+  VALUES ?lemma {
+    "Wikipedia"@de
+    "Wikidata"@de
+    "Berlin"@de
+    "Technische Universität Berlin"@de
+  }
+  ?sitelink schema:about ?item;
+    schema:isPartOf <https://de.wikipedia.org/>;
+    schema:name ?lemma.
+}
+
+por lo que veo usa schema:name para el nombre del artículo en la wikipedia!!!!!!!
+joooooooooooooooooooooooo y yo buscando una propiedad Pnnnnn
+ahora si que me terminé de marear.
+los prefijos (https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format#Full_list_of_prefixes) indican:
+
+PREFIX schema: <http://schema.org/>
+
+whhaattt!!! wikidata usa schmema.org/name para asociar a la entidad wikidata con la página wikipedia??????????????
+
+me parece que estoy entendiendo mal.
+lo pruebo:
+
+select ?s where {
+    ?s schema:name "National_University_of_La_Plata"@en .
+  }
+
+nadaaa. obvio.
+
+select ?s where {
+    ?s schema:name "National University of La Plata"@en .
+  }
+
+yes. me trae el subject!!!.
+
+<https://en.wikipedia.org/wiki/National_University_of_La_Plata>
+
+ahora si hago lo contrario.
+
+
+select ?s ?p where {
+    ?s ?p <https://en.wikipedia.org/wiki/National_University_of_La_Plata>
+  }
+
+no me había avivado de usarlo como objeto asi directamente con <> como si fuera una iri!!
+nada no me trajo nada
+para ver si es tema de sintaxis me fijo la inversa, debería traer aunque sea la tripleta schema:name .... anterior.
+
+select ?s ?p where {
+    <https://en.wikipedia.org/wiki/National_University_of_La_Plata> ?p ?s
+  }
+
+resultado!!!
+
+wd:Q784171	schema:about
+en	schema:inLanguage
+schema:Article	rdf:type
+National University of La Plata	schema:name
+<https://en.wikipedia.org/>	schema:isPartOf
+
+
+ahora entonces veo que la propiedad que asocia el Qnumber con la iri de la universidad es schema:about
+
+select ?s where {
+      ?s schema:about wd:Q784171
+  }
+
+
+bingooooo!!!
+
+<https://ar.wikipedia.org/wiki/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D9%84%D8%A7_%D8%A8%D9%84%D8%A7%D8%AA%D8%A7_%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9>
+<https://arz.wikipedia.org/wiki/%D8%AC%D8%A7%D9%85%D8%B9%D8%A9_%D9%84%D8%A7%D8%A8%D9%84%D8%A7%D8%AA%D8%A7_%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D9%87>
+<https://az.wikipedia.org/wiki/La_Plata_Milli_Universiteti>
+<https://de.wikipedia.org/wiki/Universidad_Nacional_de_La_Plata>
+<https://en.wikipedia.org/wiki/National_University_of_La_Plata>
+<https://eo.wikipedia.org/wiki/Nacia_Universitato_La_Plata>
+<https://es.wikinews.org/wiki/Categor%C3%AD
+
+
+en resumen.
+despues de tanto hacer pruebas y marearme la propiedad que representa los sitelinks es schema:about
+genera la estrella que muestra en el gráfico de sitelinks.
+en realidad es la inversa a la propiedad que buscaba, pero la que me resuelve mas directo lo que quiero hacer
+
+la pregunta del trabajo es: 
+
+
+5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en Wikidata? 
+
+el recurso correspondiente podría inferirlo haciendo la consulta sparql siguiente:
+
+url = url del articulo de wikipedia.
+select ?q where {
+   <url> schema:about ?q 
+}
+
+en particular en nuestro caso tendríamos.
+
+select ?p where {
+      <https://es.wikipedia.org/wiki/Universidad_Nacional_de_La_Plata> schema:about ?p
+  }
+
+jooooo tengo aunque sea un resultado!!!!, me siento mucho mas realizado, jajaja mas que decir. anda a la interface que te da la wikipedia y ahi te da los datos. 
+
+TOTALMENTE loco!! pense que la propiedad, que yo identifico como principal, en la que se basa toda la creación de la wikidata iba a ser de un prefijo interno a wikidata y no un prefijo como schema.org!!!.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--- 
+nota p143 es importado de wikimedia.
