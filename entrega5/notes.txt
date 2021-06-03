@@ -4,3 +4,12 @@ https://meta.wikimedia.org/wiki/Wikidata/Notes/DBpedia_and_Wikidata
 
 http://www.semantic-web-journal.net/system/files/swj1462.pdf
 https://blog.reputationx.com/wikidata
+
+
+
+
+
+
+el editor de sparql de wikidata es muy superior al de dbpedia.
+con ejemplos. mas interactivo.
+hasta tiene una parte donde seleccionas y te da el ejemplo en código. varias alternativas de lenguajes. etc
