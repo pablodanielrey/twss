@@ -1079,15 +1079,262 @@ TOTALMENTE loco!! pense que la propiedad, que yo identifico como principal, en l
 
 ---
 
+espero que todo el análisis esté bien. voy a arrancar a hacer las consultas y lo voy a reever a todo con algunos días de que me quede en la cabeza.
+a ver si identifico errores.
+
+----
 
 
+6. ¿Que diferencias y similitudes encuentra con DBpedia?
+
+tirando ideas de lo que se me ocurre ahora con la info analizada.
+
+primero dbpedia tiene una ontología creada para representar mas conceptos del mundo real.
+como si definieramos la ontología pensando en el mundo y no en como está estructurado internamente esa información a nivel de sistema.
+o sea que en las transfromaciones de wikipedia ---> dbpedia  se pierden conceptos internos de como está estructurado. 
+
+wikidata tiene una ontología creada para representar conceptos internos de los proyectos wikimedia.
+todo el tema de las sentencias, que tienen referencias para evaluar si está verificado o no una afirmación, ayuda a tener datos del mundo real y representar esa info pero lo veo mas que lo diseñaron
+con el objetivo de poder saber internamente que tripletas estarían mas verificadas que otras. Es mas, lo ponen como una restricción en la carga de las sentencias dentro de wikidata.
+la estructura de links con nodo central, que linkea todas las wikipedias de los distintos lenguajes a la entidad de wikidata, también es un ejemplo de una estructura que mas que 
+representar conocimiento, soluciona un problema real interno de links entre las distintas wikis. (mas pensado en la estructura del grafo) 
+son mas aspectos pensados para estructurar la información, mas que pensado para ser entendido por humanos directamente.
+
+igual entro en conflicto un poco cuando pienso en que algo de eso tiene dbpedia, ya que por ejemplo
+usa distintos prefijos para representar información diseñada (dbo) e información obtenida mediante los extractores sin tener un mapeo definido (dbp)
+igualmente dbpedia está represendando conceptos mas del mundo real, una "seguridad" de la veracidad de esa información. mas que un concepto de como estructurar la información internamente.
+o sea en este caso el grafo es el mismo.
+
+algo ---> dbo:Pesona ---> persona
+          dbp:Person ---> persona
+
+la estructura del grafo no cambia. solo que dbo y dbp permiten asociar esa "seguridad" que le damos al dato.
+en cambio en la wikidata si.
+
+wiki_es ----> sameAs ----> wiki_en
+wiki_en ----> sameAs ----> wiki_de
+wiki_es ----> sameAs ----> wiki_de
+....
+
+no es la misma estructura que inventar una entidad central (la Qnumber de wikidata) para linkearlas a todas:
+
+entidad ---> sameAs ----> wiki_en
+entidad ---> sameAs ----> wiki_es
+entidad ---> sameAs ----> wiki_de
 
 
+encuentro analogías locas que se me ocurren de otras materias que estoy cursando, 
+por ejemplo wikidata me hace acordar mas a el metamodelo de UML (MOF) sirve para estructurar y definir exactamente el modelo UML y como modelar.
+y dbpedia lo veo mas como el modelo en UML en si. 
+uno es mas abstracto y el otro se acerca mas al mundo real (en este caso el dominio del problema).
 
 
+---
+
+otra diferencia que se me ocurre es en el proceso de modelado de la ontología.
+wikidata dijeron hagamos algo que se pueda adaptar a todas las situaciones sin tener que cambiar la ontología.
+justamente la definición que para cada propiedad y entidad de la ontología le asignen un Pnúmero y Qnúmero, ya te indica que es un concepto abstracto.
+Q111 será perro
+Q122 será gato
+Q113 será clase de animal domesticable
+....
+con esto sea el concepto que tengan que representar, saben que usando esa ontología y vocabulario lo van a poder hacer. no tienen que pensar en cada concepto que quieren representar apriori.
+
+en cambio en dbpedia los conceptos son parte del mundo.
+ej: dbo:birthPlace, dbo:author, etc son exactamente conceptos del mundo real, con dominio y rangos mas definidos!!.
+un autor a priori fue diseñado para ser una persona y aplicarse a cosas que puedan tener autoría.
+para representar un nuevo concepto no contemplado dentro de la ontología debemos modificar si o si la ontología, extenderla, etc.
+
+claramente los Q y los P son conceptos mas abstractos que dbo:autor y dbo:birthPlace. sin modificar la ontología se pueden extender.
+solo hace falta de "crear una instancia" de un P y asignarle un número fijo y listo. eso pasa a ser un concepto adicional antes no representado. la clave aca es NO modificar la definición de la ontología.
+pasaría a ser una especie de invidividual, que su iri puede representar a su vez un concepto que relaciona otros individuals, o los clasifica, etc.
+no se si lo estoy poniendo bien en palabras, pero básicamente todo se resume a, uno es mas abstracto y el otro es mas concreto.
+
+----
+
+la forma mas clara que lo puedo expresar es.
+dbpedia se concentra en representar conocimiento
+wikidata se concentra además de representar conocimiento, en la forma de representarlo.
+
+--
+
+esto igual lo pense sin siquiera ver dominio y rangos, ni la ontología en croncreto de wikidata. todo lo que me encontré es info sobre como ir generando visualmente los datos dentro de wikipedia y wikidata.
+me está volviendo loco, busco y busco y no puedo encontrar en ningún lado un turtle de la ontología de wikidata. jajaa.
+todo es páginas y páginas de texto escrito y links entre si.
+como lo de schema.org que en vez de tener una ontología clara escrita en máquina, tenemos páginas que explican lo que significan esos conceptos, la estructura, etc pero todo para humanos.
+
+--
+
+por ahi este análisis es totalmente erróneo y cambie con el tiempo a medida que vaya invesigando mas de wikidata, pero es la primer sensación que me da cuando leí la documentación de wikipedia y los artículos de dbpedia.
+y el proceso que necesité para entender las estructuras/ontologías de cada uno de los proyectos. claramente apurado leyendo lo menos posible para entender un concepto debido a los tiempos.
+voy a hacer las consultas a ver si me queda mas claro como maneja todo wikidata. así que por ahora solo es una anotación.
+
+----
+
+croe que encontré oro!!!.
+https://homepages.dcc.ufmg.br/~laender/material/gdw2015-EGK+2014.pdf
+
+In spite of all this, Wikidata has hardly been used in the semantic web community
+so far. The simple reason is that, until recently, the data was not available in RDF. To
+change this, we have developed RDF encodings for Wikidata, implemented a tool for
+creating file exports, and set up a site where the results are published. Regular RDF
+dumps of the data can now be found at http://tools.wmflabs.org/wikidata-exports/rdf/. This
+paper describes the design underlying these exports and introduces the new datasets:
+– In Section 2, we introduce the data model of Wikidata, which governs the structure
+of the content that we want to export.
 
 
+lo bajo como material y lo leo.
 
+
+-----
+
+ME QUIERO MATAR!!!.
+
+Site links are exported using the schema.org property about to associate a Wikipedia
+page URL with its Wikidata item, and the schema.org property inLanguage to define the
+BCP 47 language code of a Wikipedia page. Table 2 (bottom) gives an example
+
+aca estaba!!!. leyendo material y buscando por google podría haberme evitado bastantes pruebas!!.
+
+---
+
+
+entendiendo un poco mas encuentro de forma simple lo que me va a ayudar un poco mas.
+
+https://www.wikidata.org/wiki/Wikidata:RDF
+https://www.wikidata.org/wiki/Wikidata:Database_download#RDF_dumps
+https://www.mediawiki.org/wiki/Wikibase/Indexing/RDF_Dump_Format
+https://dumps.wikimedia.org/wikidatawiki/entities/ <----- al fin!!!
+
+mmm aunque ahora que lo analizo solo están los lexemas. mmmm lexemasss??
+y el completo pesa 80GB!!! 
+
+
+ahora pensando en el tema.
+en el pdf que baje ultimo me dicen que las urls de wikidata soportan content negociation.
+y de estos lexemas tengo los prefijos. lo que concluyo que un rdf de la ontología debería poder obtenerlo de los prefijos.
+como hicimos en nuestros ejemplos de los tps.
+ej:
+
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+debería poder consultar http://www.wikidata.org/entity/
+aceptando y text/turtle y mediante todo lo que explicó casco en la teoría tendría que llegar a algo que 
+se asemeje a una ontología para ese prefijo. no? 
+pruebo.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5/material$ curl -I http://www.wikidata.org/entity/
+HTTP/1.1 301 TLS Redirect
+Date: Thu, 03 Jun 2021 16:57:37 GMT
+Server: Varnish
+X-Varnish: 1073661091
+X-Cache: cp1079 int
+X-Cache-Status: int-front
+Server-Timing: cache;desc="int-front", host;desc="cp1079"
+Permissions-Policy: interest-cohort=()
+Set-Cookie: WMF-Last-Access=03-Jun-2021;Path=/;HttpOnly;secure;Expires=Mon, 05 Jul 2021 12:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=03-Jun-2021;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon, 05 Jul 2021 12:00:00 GMT
+X-Client-IP: 191.83.209.88
+Location: https://www.wikidata.org/entity/
+Content-Length: 0
+Connection: keep-alive
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5/material$ curl -H 'accept:text/turtle' -I http://www.wikidata.org/entity/
+HTTP/1.1 301 TLS Redirect
+Date: Thu, 03 Jun 2021 16:57:53 GMT
+Server: Varnish
+X-Varnish: 1049914519
+X-Cache: cp1079 int
+X-Cache-Status: int-front
+Server-Timing: cache;desc="int-front", host;desc="cp1079"
+Permissions-Policy: interest-cohort=()
+Set-Cookie: WMF-Last-Access=03-Jun-2021;Path=/;HttpOnly;secure;Expires=Mon, 05 Jul 2021 12:00:00 GMT
+Set-Cookie: WMF-Last-Access-Global=03-Jun-2021;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon, 05 Jul 2021 12:00:00 GMT
+X-Client-IP: 191.83.209.88
+Location: https://www.wikidata.org/entity/
+Content-Length: 0
+Connection: keep-alive
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' -I https://www.wikidata.org/entity/
+HTTP/2 303 
+date: Thu, 03 Jun 2021 17:04:56 GMT
+server: mw1267.eqiad.wmnet
+location: https://www.wikidata.org/wiki/Special:EntityData/
+content-length: 256
+content-type: text/html; charset=iso-8859-1
+age: 0
+x-cache: cp1081 miss, cp1083 pass
+x-cache-status: pass
+server-timing: cache;desc="pass", host;desc="cp1083"
+strict-transport-security: max-age=106384710; includeSubDomains; preload
+report-to: { "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+nel: { "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction": 0.0}
+permissions-policy: interest-cohort=()
+set-cookie: WMF-Last-Access=03-Jun-2021;Path=/;HttpOnly;secure;Expires=Mon, 05 Jul 2021 12:00:00 GMT
+set-cookie: WMF-Last-Access-Global=03-Jun-2021;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon, 05 Jul 2021 12:00:00 GMT
+x-client-ip: 191.83.209.88
+set-cookie: GeoIP=AR:B:La_Plata:-34.93:-57.95:v4; Path=/; secure; Domain=.wikidata.org
+
+pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' -I https://www.wikidata.org/wiki/Special:EntityData/
+HTTP/2 200 
+date: Thu, 03 Jun 2021 17:05:18 GMT
+server: mw1320.eqiad.wmnet
+x-content-type-options: nosniff
+p3p: CP="See https://www.wikidata.org/wiki/Special:CentralAutoLogin/P3P for more info."
+content-language: en
+x-frame-options: DENY
+vary: Accept-Encoding,Cookie,Authorization
+expires: Thu, 01 Jan 1970 00:00:00 GMT
+pragma: no-cache
+content-type: text/html; charset=UTF-8
+age: 0
+x-cache: cp1089 miss, cp1083 pass
+x-cache-status: pass
+server-timing: cache;desc="pass", host;desc="cp1083"
+strict-transport-security: max-age=106384710; includeSubDomains; preload
+report-to: { "group": "wm_nel", "max_age": 86400, "endpoints": [{ "url": "https://intake-logging.wikimedia.org/v1/events?stream=w3c.reportingapi.network_error&schema_uri=/w3c/reportingapi/network_error/1.0.0" }] }
+nel: { "report_to": "wm_nel", "max_age": 86400, "failure_fraction": 0.05, "success_fraction": 0.0}
+permissions-policy: interest-cohort=()
+set-cookie: WMF-Last-Access=03-Jun-2021;Path=/;HttpOnly;secure;Expires=Mon, 05 Jul 2021 12:00:00 GMT
+set-cookie: WMF-Last-Access-Global=03-Jun-2021;Path=/;Domain=.wikidata.org;HttpOnly;secure;Expires=Mon, 05 Jul 2021 12:00:00 GMT
+x-client-ip: 191.83.209.88
+cache-control: private, s-maxage=0, max-age=0, must-revalidate
+set-cookie: GeoIP=AR:B:La_Plata:-34.93:-57.95:v4; Path=/; secure; Domain=.wikidata.org
+accept-ranges: bytes
+
+
+como me retorna 200 entonces me fijo si ese contentido me retorna algo parecido a un turtle.
+no no.
+y chequeo lo que explicó casco en el foro, por ahí a veces está incluído en el html mismo un link especificando el contenido en rdf, como en foaf.
+y veo que si. pero a una entidad en particular!!! no a la ontología de ese prefijo!!
+
+https://www.wikidata.org/wiki/Special:EntityData/
+
+contenido: 
+
+Entity Data
+Jump to navigationJump to search
+This page provides a linked data interface to entity values. Please provide the entity ID in the URL, using subpage syntax.
+
+Content negotiation applies based on you client's Accept header. This means that the entity data will be provided in the format preferred by your client. For a web browser, this will be HTML, causing your browser to be redirected to the regular entity page.
+You can explicitly request a specific data format by adding the appropriate file extension to the entity ID: Q23.json will return data in the JSON format, Q23.ttl will return RDF/Turtle, and so on. Supported formats are: json, php, n3, ttl, nt, rdf, jsonld, html.
+For more information about this special page, read Wikibase/EntityData.
+
+Return to Wikidata:Main Page.
+
+----
+
+es como el huevo y la gallina. no quiero una entidad, quiero la ontología que define como definimos la entidad!!.
+la class!!! el rdf:type.
+jajaj 
+
+un poco esto es a lo que me refería cuando pensaba de las diferencias entre dbpedia y wikidata.
+wikidata es demasiado abstracto.
+ya veo que investigando mas encuentro que la ontología de wikidata es una entidad en si!!! jajajja 
+mi cabeza se siente como cuando vió la película inceptión la primera vez.
+
+----
 
 
 
