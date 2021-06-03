@@ -66,7 +66,30 @@ http://www.wikidata.org/wiki/Q784171
 
 
 
-
 7. Adapte las queries que construyo en los puntos c y d del ejercicio anterior en el endpoint de Wikidata. (https://query.wikidata.org). ¿Obtuvo resultados diferentes? Si la respuesta es si, ¿a que se deben?
 
 
+c - Utilizando el keyword filter (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay 
+
+SELECT DISTINCT ?per
+	WHERE
+			{
+               ?per p:P106 ?s .
+               ?s ps:P106 wd:Q36180 .
+               ?per wdt:P19 ?pais .
+               filter (?pais = wd:Q414 || ?pais = wd:Q77) .
+			}
+
+
+d) Utilizando el keyword union (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay 
+
+
+SELECT DISTINCT ?per
+	WHERE
+	{
+        ?per p:P106 ?s .
+        ?s ps:P106 wd:Q36180 .
+        { ?per wdt:P19 wd:WQ414 . }
+        UNION
+        { ?per wdt:P19 wd:Q77 . }
+	}

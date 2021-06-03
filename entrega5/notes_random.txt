@@ -1331,10 +1331,293 @@ jajaj
 
 un poco esto es a lo que me refería cuando pensaba de las diferencias entre dbpedia y wikidata.
 wikidata es demasiado abstracto.
-ya veo que investigando mas encuentro que la ontología de wikidata es una entidad en si!!! jajajja 
+ya veo que investigando mas encuentro que la ontología de wikidata es una entidad en si!!!
 mi cabeza se siente como cuando vió la película inceptión la primera vez.
 
 ----
+
+
+arranco a hacer las consutlas y despues vuelvo sobre las preuntas de teoría.
+
+
+7. Adapte las queries que construyo en los puntos c y d del ejercicio anterior en el endpoint de Wikidata. (https://query.wikidata.org). ¿Obtuvo resultados diferentes? Si la respuesta es si, ¿a que se deben?
+
+c -  la consulta que tenía para dbpedia.
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s dbo:birthPlace ?pais .
+                ?s rdf:type dbo:Writer .
+                filter (?pais = dbr:Argentina || ?pais = dbr:Uruguay) .
+			}
+
+
+la adapto textualmente pero usando las propieades de wikidata que me encuentro en el endpoint de sparql.
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s wdt:P19 ?pais .
+                ?s rdf:type wd:Q36180 .
+                filter (?pais = wd:Q414 || ?pais = wd:Q77) .
+			}
+
+
+P19 = place of birth
+Q36180 = person who uses written words ...
+Q414 = Argentina
+Q77 = Uruguay
+
+claramente no me retorna nada de nada.
+ya que la estructura de wikidata es distinta.
+asumo que tiene algo onda una sentencia armada que dice 
+
+persona --> statement ---> pais 
+                           referencia
+        --> statement ---> escritor 
+                           referencia
+
+voy a investigar como hice con schema:about para tratar de identificar la estructura que pararece en wikidata
+
+
+SELECT DISTINCT ?s ?p
+			WHERE
+			{
+                ?s wdt:P19 ?p .
+			}
+            limit 10
+
+ wd:Q72871	 wd:Q16
+ wd:Q92679	 wd:Q16
+ wd:Q92996	 wd:Q16
+ wd:Q186042	 wd:Q16
+ wd:Q209102	 wd:Q15
+
+mmmm efectivamente entonces Q16 = Canada y los demas son personas. asi que se puede obtener directamente
+el problema entonces es el rdf:type que no debe estar asociado asi. no debe usar rdf:type. 
+a ver obtengo todas las tripletas para wd:Q16 a ver como define el type.
+
+SELECT DISTINCT ?p ?o
+			WHERE
+			{
+                wd:Q16 ?p ?o .
+			}
+            limit 10
+
+schema:description	дзяржава ў Паўночнай Амерыцы
+schema:description	stat sovran fl-Amerka ta’ Fuq
+rdf:type	wdno:P3075
+schema:description	उत्तर अमेरिकाको देश    
+
+si si usa rdf:type para definir el tipo de entidad.
+
+analizo a ver si alguna tripleta tiene a escritor como sujeto primero.
+
+SELECT DISTINCT ?p ?o
+			WHERE
+			{
+                wd:Q36180 ?p ?o .
+			}
+            limit 10
+
+schema:description	nebonan a skrif
+schema:description	mestê
+rdfs:label	escritor
+rdfs:label	schrijver
+rdfs:label	作家
+rdfs:label	writer
+rdfs:label	scríbhneoir
+rdfs:label	scrittore
+rdfs:label	escritor
+
+
+copado. tengo si los datos de la entidad escritor. 
+ahora veo lo inverso, que tipo de entidades relacionan escritores. chan chan. serán sentencias?
+
+SELECT DISTINCT ?s ?p
+			WHERE
+			{
+                ?s ?p wd:Q36180 .
+			}
+            limit 10
+
+wds:q1868-33C22E5B-1754-45DB-86DD-A629690EF913	ps:P106
+wds:Q42-663C6872-388F-4024-995A-BC3C1C0E57C6	ps:P106
+wds:Q1058-b781d2ba-45b3-a044-ca7d-76df042e1869	ps:P106
+wds:Q1151-44DC241E-A4B1-4B0C-A662-7FBC3BFD88E1	ps:P106
+wds:Q501-A1597288-D3C5-4D56-B8E7-5924DEBBCB12	ps:P106
+wds:Q747-705D3730-CFB1-4127-ADD1-98F58119734F	ps:P106
+
+SIII. veo que mas o menos estoy entendiendo el equema de datos de wikidata.
+wds = prefijo de sentencias.
+
+ahora quiero analizar la estructura de una de las sentencias por ejemplo.
+
+SELECT DISTINCT ?p ?o
+			WHERE
+			{
+                wds:q1868-33C22E5B-1754-45DB-86DD-A629690EF913 ?p ?o .
+			}
+            limit 10
+
+
+wikibase:rank	wikibase:NormalRank
+rdf:type	wikibase:BestRank
+ps:P106	 wd:Q36180            
+
+ahora solo tendría que ver a ver si las personas se asocian directamente con sentencias.
+
+
+SELECT DISTINCT ?s ?p
+			WHERE
+			{
+                ?s ?p wds:q1868-33C22E5B-1754-45DB-86DD-A629690EF913 .
+			}
+            limit 10
+
+wd:Q1868	p:P106
+
+efectivamente.
+wd:Q1868 ---> una persona
+p:P106 -----> ocupación.
+
+
+entonces en base a ese análisis, el grafo que estoy consultando seria algo así:
+
+persona --> p:P106 (ocupación) --> sentencia (wds:q1868-33C22E5B-1754-45DB-86DD-A629690EF913) --> p:P106	(ocupación) -----> wd:Q36180 (escritor)
+
+
+SELECT DISTINCT ?per
+			WHERE
+			{
+                ?per p:P106 ?s .
+                ?s p:P106 wd:Q36180 .
+			}
+            limit 10
+
+
+mmmmmmmmmmmmmmmmm algo raro hay porque no me trae nada!!!.
+
+despues de pruebas y pruebas me acabo de dar cuenta del prefix!!!!
+P106 está en 2 prefijos.
+ PREFIX ps: <http://www.wikidata.org/prop/statement/>
+ PREFIX p: <http://www.wikidata.org/prop/>
+
+
+ajusto la consulta.
+
+
+SELECT DISTINCT ?per
+			WHERE
+			{
+                ?per p:P106 ?s .
+                ?s ps:P106 wd:Q36180 .
+			}
+            limit 10
+
+
+siiii perfecto. eso me trae personas que tienen de ocupación escritores!!.
+
+por lo que podría adaptar la consulta original a :
+
+
+SELECT DISTINCT ?per
+			WHERE
+			{
+               ?per p:P106 ?s .
+               ?s ps:P106 wd:Q36180 .
+               ?per wdt:P19 ?pais .
+               filter (?pais = wd:Q414 || ?pais = wd:Q77) .
+			}
+            limit 10
+
+yessss me trae escritores argentines y uruguayes.
+
+ahora la consulta para ver con el pais sin el limit a ver cuantos son.
+
+SELECT DISTINCT ?per ?pais
+			WHERE
+			{
+               ?per p:P106 ?s .
+               ?s ps:P106 wd:Q36180 .
+               ?per wdt:P19 ?pais .
+               filter (?pais = wd:Q414 || ?pais = wd:Q77) .
+			}
+
+
+me trajo 271 resultados.
+la dejo para que responda a la adapación de la pregunta original.
+
+SELECT DISTINCT ?per
+	WHERE
+			{
+               ?per p:P106 ?s .
+               ?s ps:P106 wd:Q36180 .
+               ?per wdt:P19 ?pais .
+               filter (?pais = wd:Q414 || ?pais = wd:Q77) .
+			}
+
+
+--
+bien ahora analizo el tema de la misma consulta pero usando union
+
+d) Utilizando el keyword union (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay
+
+
+la consulta original que había realizado para dbpedia es :
+
+SELECT DISTINCT ?s
+			WHERE
+			{
+                ?s rdf:type dbo:Writer .
+                { ?s dbo:birthPlace dbr:Argentina . }
+                UNION 
+                { ?s dbo:birthPlace dbr:Uruguay .}
+			}
+
+
+entonces la adaptación sería muy parecida.
+
+SELECT DISTINCT ?per
+	WHERE
+	{
+        ?per p:P106 ?s .
+        ?s ps:P106 wd:Q36180 .
+        { ?per wdt:P19 wd:WQ414 . }
+        UNION
+        { ?per wdt:P19 wd:Q77 . }
+	}
+
+me da 229 escritores???!!! menos resultados!!.
+
+vuelvo a correr la consulta del filter para ver si me tira ok los resultados?.
+
+SELECT DISTINCT ?per
+	WHERE
+			{
+               ?per p:P106 ?s .
+               ?s ps:P106 wd:Q36180 .
+               ?per wdt:P19 ?pais .
+               filter (?pais = wd:Q414 || ?pais = wd:Q77) .
+			}
+
+me responde 271 resultados.
+ahora vuelvo a correr la consulta del union y no me responde nada de nada!! mmm.
+
+---
+
+espere unos minutos y volví a correr la consulta con union y veo que ahora si me tira resultados!!! 
+pero solo 229
+
+
+descargue los 2 resultados y los guarde como csv en la parte de respuestas.
+igual quiero analizar por que este me trae 42 escritores menos!!!.
+
+
+
+
+
 
 
 
