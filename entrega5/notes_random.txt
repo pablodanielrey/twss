@@ -1615,6 +1615,25 @@ descargue los 2 resultados y los guarde como csv en la parte de respuestas.
 igual quiero analizar por que este me trae 42 escritores menos!!!.
 
 
+---
+
+ME quiero matar de nuevo!!!.
+tenía error de sintaxis. le puse una W en argentina.
+
+SELECT DISTINCT ?per
+	WHERE
+	{
+        ?per p:P106 ?s .
+        ?s ps:P106 wd:Q36180 .
+        { ?per wdt:P19 wd:Q414 . }
+        UNION
+        { ?per wdt:P19 wd:Q77 . }
+	}
+
+ahora si me da ok 271 escritores correctamente!!!
+
+
+
 
 
 

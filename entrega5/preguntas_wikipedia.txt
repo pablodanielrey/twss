@@ -83,13 +83,12 @@ SELECT DISTINCT ?per
 
 d) Utilizando el keyword union (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay 
 
-
 SELECT DISTINCT ?per
 	WHERE
 	{
         ?per p:P106 ?s .
         ?s ps:P106 wd:Q36180 .
-        { ?per wdt:P19 wd:WQ414 . }
+        { ?per wdt:P19 wd:Q414 . }
         UNION
         { ?per wdt:P19 wd:Q77 . }
 	}
