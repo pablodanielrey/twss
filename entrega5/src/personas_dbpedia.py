@@ -22,6 +22,11 @@ def get_schemas():
     }
     return schemas
 
+def bind_schemas(g:Graph):
+    for s, n in get_schemas().items():
+        g.bind(s,n)
+
+
 def get_persons_names(g:Graph, schema:Namespace):
     names = []
     for s,p,o in g.triples((None, RDF.type, schema['Person'])):
@@ -86,6 +91,7 @@ if __name__ == '__main__':
         subjects[my_subject] = local_subjects
 
     gdata = Graph()
+    bind_schemas(gdata)
 
     #sql.setReturnFormat(RDFXML)
     for my_subject, external_subjects in subjects.items():
