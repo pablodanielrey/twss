@@ -3019,4 +3019,240 @@ entidades externas encontradas set()
 ...
 
 no encuentra nada de nada.
+bueno voy a cambiar de estrategia.
+voy a elegir una persona y realizar un filtro que funcione para esa persona.
+y sobre eso iterar.
+
+---
+
+persona: Daisy Ridley
+
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Daisy Ridley
+entidades externas encontradas set()
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Daisy_Ridley'): set()}
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+
+no anduvo. ja. a ver el filtro como lo codifique.
+
+--
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Daisy Ridley
+entidades externas encontradas {'http://www.wikidata.org/entity/Q16738674'}
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Daisy_Ridley'): {'http://www.wikidata.org/entity/Q16738674'}}
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+corregí y veo que funciona. no tenia el id de imdb.
+asi que lo saco com filtro.
+
+--
+
+corro nuevamente. y veo que:
+
+obteniendo Dennis Mojen
+entidades externas encontradas set()
+
+asi que analizo esa entidad a ver que me falta.
+---
+
+tiene occupation = actor.
+asumía que subclass of era true para la clase misma.
+
+P279 <--- subclass of.
+https://www.wikidata.org/wiki/Q33999
+
+
+OTRA NOTA!!!. al definir la ontología de wikidata con propiedades internas en vez de las aceptadas como
+por ejemplo rdfs:subClassOf tenemos que algunas cosas no son inferidas!!. o sea no tienen la misma semántica que las propiedades de RDF.
+algo que no se si estoy interpretando bien. por ahi tendría que consultarlo en el foro.
+lo anoto para tenerlo en la cabeza.
+
+----
+
+
+bueno investigué un poco las subconsultas de sparql.
+termino armando algun tipo de consulta para procesar el grafo de ocupaciones actor.
+y subclases de ocupaciones actor.
+
+            sql.setQuery("""
+                select distinct ?s
+                    where {
+                        { ?s rdfs:label \"""" + name + """\"@en . }
+                        UNION
+                        { ?s rdfs:label \"""" + name + """\"@es . }
+                        ?s p:P106 ?sen1 .                                   # ocupacion
+                        {
+                            select ?sen1 
+                            where {
+                                { 
+                                    ?sen1 ps:P106 wd:Q33999 .       # actor
+                                }
+                                UNION 
+                                {
+                                    ?sen1 ps:P106 ?occ .            # ocupaciones subclase de actor.
+                                    ?occ p:P279 ?sen2 .
+                                    ?sen2 ps:P279 wd:Q33999 .
+                                }
+                            }
+                        }
+                    }
+            """)
+
+ejecuto el scritp.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo James Corden
+entidades externas encontradas {'http://www.wikidata.org/entity/Q767499'}
+obteniendo Haruo Sotozaki
+entidades externas encontradas set()
+obteniendo June Foray
+entidades externas encontradas {'http://www.wikidata.org/entity/Q241646'}
+obteniendo Walt Dohrn
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2713565'}
+obteniendo Saori Hayami
+entidades externas encontradas {'http://www.wikidata.org/entity/Q1153079'}
+obteniendo Camille Cottin
+entidades externas encontradas {'http://www.wikidata.org/entity/Q16535251'}
+obteniendo Isabela Palópoli
+entidades externas encontradas set()
+obteniendo Anya Taylor-Joy
+entidades externas encontradas {'http://www.wikidata.org/entity/Q20882479'}
+obteniendo Alberto Ammann
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2595437'}
+obteniendo Martin Donovan
+entidades externas encontradas {'http://www.wikidata.org/entity/Q61867559', 'http://www.wikidata.org/entity/Q726130'}
+obteniendo Emilia Schüle
+entidades externas encontradas {'http://www.wikidata.org/entity/Q87594'}
+obteniendo Emerald Fennell
+entidades externas encontradas {'http://www.wikidata.org/entity/Q16207879'}
+obteniendo Nicky Jam
+entidades externas encontradas set()
+obteniendo Hiro Shimono
+entidades externas encontradas set()
+obteniendo Christopher Mintz-Plasse
+entidades externas encontradas {'http://www.wikidata.org/entity/Q440956'}
+obteniendo Daniel Dae Kim
+entidades externas encontradas {'http://www.wikidata.org/entity/Q299700'}
+obteniendo Paul Ron Cruz
+entidades externas encontradas set()
+obteniendo Rosario Dawson
+entidades externas encontradas {'http://www.wikidata.org/entity/Q228692'}
+obteniendo Sia Alipour
+entidades externas encontradas {'http://www.wikidata.org/entity/Q81823145'}
+obteniendo Clemence Poésy
+entidades externas encontradas set()
+obteniendo Kunal Nayyar
+entidades externas encontradas {'http://www.wikidata.org/entity/Q310375'}
+obteniendo Lynda Carter
+entidades externas encontradas {'http://www.wikidata.org/entity/Q242903'}
+obteniendo Sheri Flanders
+entidades externas encontradas set()
+obteniendo Marie-Christine Adam
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2724026'}
+obteniendo John McDonald
+entidades externas encontradas set()
+obteniendo Jeff Moore
+entidades externas encontradas set()
+obteniendo Ian Simmons
+entidades externas encontradas set()
+obteniendo Justin Timberlake
+entidades externas encontradas {'http://www.wikidata.org/entity/Q43432'}
+obteniendo Clancy Brown
+entidades externas encontradas {'http://www.wikidata.org/entity/Q4488'}
+obteniendo Demian Bichir
+entidades externas encontradas set()
+obteniendo Andrew Ellis
+entidades externas encontradas {'http://www.wikidata.org/entity/Q17417465'}
+obteniendo Henry Zaga
+entidades externas encontradas {'http://www.wikidata.org/entity/Q30998289'}
+obteniendo Jamal Alkhaldi
+entidades externas encontradas set()
+obteniendo Amreen N. Yaqoob
+entidades externas encontradas set()
+obteniendo Jonathan Ajayi
+entidades externas encontradas set()
+obteniendo Lolita Marie
+entidades externas encontradas set()
+obteniendo Jake Curran
+ERROR:root:HTTP Error 429: Too Many Requests
+Traceback (most recent call last):
+  File "/src/github/facu-infor/twss/entrega5/src/personas_wikidata.py", line 119, in <module>
+    results = sql.query().convert()
+  File "/home/pablo/.local/lib/python3.9/site-packages/SPARQLWrapper/Wrapper.py", line 1107, in query
+    return QueryResult(self._query())
+  File "/home/pablo/.local/lib/python3.9/site-packages/SPARQLWrapper/Wrapper.py", line 1087, in _query
+    raise e
+  File "/home/pablo/.local/lib/python3.9/site-packages/SPARQLWrapper/Wrapper.py", line 1073, in _query
+    response = urlopener(request)
+  File "/usr/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+obteniendo Monica Haynes
+entidades externas encontradas set()
+obteniendo Valerie Kalfrin
+entidades externas encontradas set()
+obteniendo Carlos Lopez Estrada
+entidades externas encontradas set()
+obteniendo Marla Aaron Wapner
+entidades externas encontradas set()
+obteniendo Frank Welker
+entidades externas encontradas {'http://www.wikidata.org/entity/Q296577'}
+obteniendo Chiara Mastroianni
+^CTraceback (most recent call last):
+  File "/usr/lib/python3.9/encodings/idna.py", line 147, in encode
+    def encode(self, input, errors='strict'):
+KeyboardInterrupt
+
+
+---
+
+pefecto veo algunas cosas.
+esta ok el filtro no tira error.
+algunas personas no encuentra nada. y en otras personas si encuentra mas de 1 recurso.
+ahi tengo que ver la unicidad entonces.
+
+y me tiró el error de too many requests.
+asi que lo que primero voy a hacer es procesar el backoff protocol.
+
+algo como:
+
+
+        except urllib.error.HTTPError as he: 
+            delay = delay * delay
+
+
+--
+
+listo lo implemente.
+disparo el script a ver si no tira mas error y procesa todas las entidades.
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Thomas Clay Strickland
+entidades externas encontradas set()
+obteniendo Pablo Rago
+entidades externas encontradas {'http://www.wikidata.org/entity/Q3290318'}
+obteniendo Benjamin Biolay
+entidades externas encontradas {'http://www.wikidata.org/entity/Q182991'}
+obteniendo Óscar Jaenada
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2066366'}
+obteniendo T-Pain
+entidades externas encontradas set()
+obteniendo Bern Collaco
+entidades externas encon
+....
+
 

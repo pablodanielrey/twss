@@ -46,3 +46,16 @@ y es complejo detectar si estás dejando afuera resultados o no.
 ---
 
 
+
+obteniendo Dennis Mojen
+tiene occupation = actor.
+asumía que subclass of era true para la clase misma.
+
+P279 <--- subclass of.
+https://www.wikidata.org/wiki/Q33999
+
+
+OTRA NOTA!!!. al definir la ontología de wikidata con propiedades internas en vez de las aceptadas como
+por ejemplo rdfs:subClassOf tenemos que algunas cosas no son inferidas!!. o sea no tienen la misma semántica que las propiedades de RDF.
+algo que no se si estoy interpretando bien. por ahi tendría que consultarlo en el foro.
+lo anoto para tenerlo en la cabeza.

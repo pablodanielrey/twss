@@ -1,5 +1,7 @@
 import logging
 import sys
+import urllib
+import time
 import json
 from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef, Literal
 
@@ -62,6 +64,7 @@ if __name__ == '__main__':
     schema = sch['schema']
     names = get_persons_names(g, schema)
 
+    delay = 2
     subjects = {}
 
     sql = get_wikidata_endpoint()
@@ -69,26 +72,40 @@ if __name__ == '__main__':
     for my_subject, name in names:
 
         try:
-
             local_subjects = set()
 
             #Q33999 = actor
             #P279 = subclase
             #P106 = ocupación
 
+            """
+                imdb
+                        ?s p:P345 ?sen1 .
+                        ?sen1 ps:P345 ?imdb .
+            """
+
             print(f'obteniendo {name}')
             sql.setQuery("""
                 select distinct ?s
                     where {
-                        ?s p:P345 ?sen1 .
-                        ?sen1 ps:P345 ?imdb .
-                        ?s p:P106 ?sen1 .
-                        ?sen1 ps:P106 ?occ .
-                        ?occ p:P279 ?sen2 .
-                        ?sen2 ps:P279 wd:Q33999 .
                         { ?s rdfs:label \"""" + name + """\"@en . }
                         UNION
                         { ?s rdfs:label \"""" + name + """\"@es . }
+                        ?s p:P106 ?sen1 .                                   # ocupacion
+                        {
+                            select ?sen1 
+                            where {
+                                { 
+                                    ?sen1 ps:P106 wd:Q33999 .       # actor
+                                }
+                                UNION 
+                                {
+                                    ?sen1 ps:P106 ?occ .            # ocupaciones subclase de actor.
+                                    ?occ p:P279 ?sen2 .
+                                    ?sen2 ps:P279 wd:Q33999 .
+                                }
+                            }
+                        }
                     }
             """)
 
@@ -102,6 +119,11 @@ if __name__ == '__main__':
             #        }
             #""")
 
+            try:
+                time.sleep(delay)
+            except Exception as e1:
+                pass
+
             results = sql.query().convert()
             for result in results["results"]["bindings"]:
                 subject = result['s']['value']
@@ -109,6 +131,9 @@ if __name__ == '__main__':
             
             print(f'entidades externas encontradas {local_subjects}')
             subjects[my_subject] = local_subjects
+
+        except urllib.error.HTTPError as he: 
+            delay = delay * delay
 
         except Exception as e:
             logging.exception(e)
