@@ -1,7 +1,12 @@
 Ejercicio 5: Enriqueciendo información con Web of Data
 En este ejercicio vamos a enriquecer la información que fue generando a lo largo de la asignatura relacionada al cine. La idea es que utilice consultas SPARQL sobre Wikidata y DBpedia para enriquecer sus bases de conocimiento (los archivos .ttl) con los resultados de esas consultas.
 
-Enriquezca la información de su base de conocimiento obteniendo por cada persona (teniendo en cuenta la clase que utilizó para modelar personas) todas las tripletas que posee wikidata y DBpedia respecto a las mismas. Puede comenzar utilizando una consulta con las personas que poseen el mismo nombre. Por ejemplo, si su base de conocimiento incluye a "Keanu Reeves", detecte en Wikidata (y DBpedia en otra consulta) aquellos recursos que posean como nombre el valor "Keanu Reeves" y todas las tripletas en las que ese recurso sea el sujeto. Documente la/s consulta/s SPARQL que utilizó a tal fin.  En relación a esto, responda:
+Enriquezca la información de su base de conocimiento obteniendo por cada persona (teniendo en cuenta la clase que utilizó para modelar personas) todas las tripletas que posee wikidata y DBpedia respecto a las mismas. 
+Puede comenzar utilizando una consulta con las personas que poseen el mismo nombre. Por ejemplo, si su base de conocimiento incluye a "Keanu Reeves", detecte en Wikidata (y DBpedia en otra consulta) aquellos recursos que posean como nombre 
+el valor "Keanu Reeves" y todas las tripletas en las que ese recurso sea el sujeto. Documente la/s consulta/s SPARQL que utilizó a tal fin.  En relación a esto, responda:
+
+
+
 
 ¿Es suficiente utilizar el nombre?
 

@@ -13,3 +13,36 @@ https://blog.reputationx.com/wikidata
 el editor de sparql de wikidata es muy superior al de dbpedia.
 con ejemplos. mas interactivo.
 hasta tiene una parte donde seleccionas y te da el ejemplo en código. varias alternativas de lenguajes. etc
+
+
+
+---
+
+similitudes con los scrapers del tp1 en el sentido de que 
+es necesario aplicar cierto "tuneo" a las consutlas de cada uno de los datasets para encontrar la información que se requiere.
+como en el tp1 era necesario adaptar nuestros scrapers a cada página consultada para obtener los datos que requeríamos, en el caso de sparql y 
+unificar fuentes de datos es necesario adaptar las consultas en base a los datasets y la estructura de grafo que manejan.
+
+pensamiento random, como son bases de datos colaborativas y abiertas, 
+se nos da la posibilidad de redireccionar el esfuerzo que aplicamos a mejorar los datasets en vez de en tunear los scripts para encontrar sobre información ya existente.
+o sea diseñar los scripts en base a la ontología existente correcta, y si algún recurso no cumple con esa estructura o le falta información, en vez de tunear el script para que encuentre 
+esa información, tunear el dataset para que este mas completo.
+
+otro pensamiento random que me lo anterior,
+posibilitamos la optimización de ese proceso ya que existen mas personas con conocimientos de tunear los datasets a personas con conocimientos de 
+desarrollo y consulta de los mismos.
+todo wikimedia por lo menos te da editores gráficos para tunear esos datasets, es la primer info que te dan. por sobre info técnica.
+
+---
+
+las consultas que diseñamos para resolver un problema podrían cambiar con el tiempo.
+por ejemplo para seleccionar ciertas personas no tienen imdb id. pero a futuro podrían tenerlo si alguien se los carga.
+https://www.wikidata.org/wiki/Q1142853
+https://www.wikidata.org/wiki/Q11665869
+entonces si filtramos por quien tenga imdb id hoy sería una solución ya que trae una sola persona, a futuro podría no serlo!!.
+un poco me hace pensar de nuevo en los desafíos que tiene consultar bases con datos abiertos y colaborativos. están constantemente cambiando.
+y es complejo detectar si estás dejando afuera resultados o no.
+
+---
+
+

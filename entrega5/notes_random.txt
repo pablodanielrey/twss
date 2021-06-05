@@ -2275,13 +2275,748 @@ agrego un bind_schemas par que quede un poquito mas legible el turtle de dbpedia
 
 --
 
+ahora arranco con lo de wikidata para las personas de mi dataset.
+voy a investigar un poco antes de hacer lo mismo que para dbpedia.
+
+bueno el endpoint de wikidata es mucho mas completo con la parte de ejemplos.
+y justo veo un ejemplo:
+
+#Contemporary Indian actresses
+SELECT ?item ?itemLabel ?itemDescription (SAMPLE(?img) AS ?image) (SAMPLE(?dob) AS ?dob) ?sl
+WHERE {
+  ?item wdt:P106 wd:Q33999 ;
+          wdt:P27 wd:Q668 ;
+          wdt:P21 wd:Q6581072 .
+  MINUS { ?item wdt:P570 [] }
+  OPTIONAL { ?item wdt:P18 ?img }
+  OPTIONAL { ?item wdt:P569 ?dob } 
+  OPTIONAL { ?item wikibase:sitelinks ?sl } 
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en"}
+} GROUP BY ?item ?itemLabel ?itemDescription ?sl
+ORDER BY DESC(?sl)
+
+está la parte de ocupaciones de los actores.
+wdt:P106 wd:Q33999
+
+y veo algo interesante para volver sobre las consultas anteriores que puede llegar a servir.
+wdt:P27 wd:Q668
+P27 - country of citizenship
+
+---
+
+bueno sigo con el sistema.
+ahora según lo que recuerdo de dbpedia, 
+Paul_Briggs
+tenía en el infobox ocupación pero como texto. asi que no debería tener ese P106
+con lo cual testeando por esa propiedad no voy a tener todos los actores tampoco.
+voy a chequear a ver.
+
+no lo encuentra!!!. no existe el recurso.
+
+http://wikidata.org/wiki/Paul_Briggs
+
+chequeo en wikipedia a ver como era la cosa.
+
+https://en.wikipedia.org/wiki/Paul_Briggs
+
+perfecto veo que wikipedia tenia asociado a 3 Paul_Brigss, por eso no tengo esa entidad en wikidata.
+asi que chequeo a ver la versión (animator)
+
+https://en.wikipedia.org/wiki/Paul_Briggs_(animator)
+https://www.wikidata.org/wiki/Q20974031
+
+perfecto asi que chequeo las tripletas que tiene Q20974031
+
+select distinct ?p ?o
+where {
+  wd:Q20974031 ?p ?o .
+  }
+
+los primeros resultados me traen P106!!!!
+
+
+Q266569 <--- animador
+
+chequeo solo las ocupaciones.
+
+select distinct ?o
+where {
+  wd:Q20974031 wdt:P106 ?o .
+  }
+
+
+ wd:Q266569 <--- animador 
+ wd:Q2405480 <-- voice actor
+ wd:Q2526255 <-- film director
+ wd:Q20002503 <-- story artist
+
+
+aca me despistó!!!. de acuerdo al infobox que la info en la wikipedia está en texto!! y no como link a
+las ocupaciones!!.
+mmm se me ocurre que no haya páginas para las ocupaciones dentro de wikipedia entonces no va generar links?
+mmm falso.
+
+https://en.wikipedia.org/wiki/Story_artist
+
+---
+
+sigo analizando un poco.
+tiene notable_work = P800
+https://www.wikidata.org/wiki/Property:P800
+
+asociado a uno de los works por ejemplo.
+https://www.wikidata.org/wiki/Q171300
+
+que tiene genre =  P136
+https://www.wikidata.org/wiki/Property:P136
+
+y esos géneros de works tienen film.
+por ejemplo:
+https://www.wikidata.org/wiki/Q663106
+https://www.wikidata.org/wiki/Q842256
+
+es una instancia (P31) https://www.wikidata.org/wiki/Property:P31 
+de :
+https://www.wikidata.org/wiki/Q201658
 
 
 
+con lo cual podría consultar algo asi con este grafo.
+
+persona --> notable work (wdt:P800) --> * ---> genre (p:P136) ---> * ---> instance of (p:P31) ---> Q201658
+
+con esto tendría todas las personas que tienen trabajos notables que son instancias de film genre
+
+o sea podría ser una opción también para clasificar a todos los actores o directores.
+algo como:
+
+select distinct ?per ?work
+where {
+  wd:Q20974031 wdt:P800 ?work .
+  ?work p:P136 ?genre .
+  ?genre p:P31 wd:Q201658 .
+  }
+
+no me retorno nada.
+asi que voy a ir analizando la consulta paso por paso.
+
+select distinct ?per ?work
+where {
+  wd:Q20974031 wdt:P800 ?work .
+  }
+
+  me trae trabajos.
+
+ wd:Q171300
+ wd:Q246283
+ wd:Q13091172
+ wd:Q15270647
 
 
+asi que :
+
+select distinct ?per ?work ?genre
+where {
+  wd:Q20974031 wdt:P800 ?work .
+  ?work p:P136 ?genre .
+  }
+
+me trae sentencias.
+ wd:Q246283	wds:Q246283-51FCEBD8-26D0-4203-96E0-51B66FB27969
+ wd:Q246283	wds:Q246283-750b3162-4bac-cb41-d775-417fe8e15a27
+ wd:Q246283	wds:Q246283-9F7D5EB4-8856-4EAC-9E7B-985E96E80AE0
+ wd:Q246283	wds:Q246283-B9514402-8CB2-4188-8527-6235677B7E61
+ wd:Q246283	wds:Q246283-C1076063-F741-42BA-AA8E-F573BF98026E
+ wd:Q246283	wds:Q246283-c494b31f-4300-d10e-6015-94519a6a3035
+....
+
+busco una de esas sentencias para ver como se relacionan con "instance of"
+ej: wds:Q246283-E3276301-0C49-422A-9F8F-BD75F5252E51
+
+select distinct ?p ?o
+where {
+  wds:Q246283-E3276301-0C49-422A-9F8F-BD75F5252E51 ?p ?o .
+  }
+
+ps:P136	 wd:Q859369
+wikibase:rank	wikibase:NormalRank
+rdf:type	wikibase:BestRank
+prov:wasDerivedFrom	wdref:fa278ebfc458360e5aed63d5058cca83c46134f1
+
+que nabo!!! acabo de darme cuenta.
+las propieades tienen 2 prefijos para la misma propiedad.
+una para sentencias y otra para objetos.
+o sea 
+p:P136 ---> a sentencias desde objetos
+ps:P136 ---> a objetos desde sentencias
+
+a ver lo pruebo.
 
 
+select distinct ?per ?o
+where {
+  wd:Q20974031 wdt:P800 ?work .
+  ?work p:P136 ?sen1 .
+  ?sen1 ps:P136 ?o .
+  }
+
+perfecto me trajo objetos.
+aplico el mismo razonamiento.
+el objeto va a estar relacionado con una sentencia mediante prefijo p:
+y esa sentencia va a estar relacionada con el objeto que quiero usando prefijo ps:
+
+a ver:
+
+select distinct ?per ?genre ?sen2
+where {
+  wd:Q20974031 wdt:P800 ?work .
+  ?work p:P136 ?sen1 .
+  ?sen1 ps:P136 ?genre .
+  ?genre p:P31 ?sen2 .
+  }
+
+ wd:Q157394	wds:Q157394-2CA08C8F-D8DA-47E0-A37A-16CEA7847B42
+ wd:Q842256	wds:Q842256-704715B5-209C-4A25-86CF-CCACFE68E83C
+ wd:Q860626	wds:Q860626-650d41d6-461e-80f8-2b28-49230090c9d4
+ wd:Q860626	wds:Q860626-c2183936-47a7-ed6d-57e7-5e4ec2db468c
+ wd:Q860626	wds:Q860626-D3A68788-CE28-40E0-B079-CE5E389227E0
+
+perfecto!! trajo sentencias!!. a ver entonces pruebo lo siguiente.
+
+select distinct ?per ?genre ?o
+where {
+  wd:Q20974031 wdt:P800 ?work .
+  ?work p:P136 ?sen1 .
+  ?sen1 ps:P136 ?genre .
+  ?genre p:P31 ?sen2 .
+  ?sen2 ps:P31 ?o .
+  }
+
+genial!!! trajo objetos!!
+
+ wd:Q157394	 wd:Q201658
+ wd:Q157443	 wd:Q201658
+ wd:Q188473	 wd:Q201658
+ wd:Q319221	 wd:Q201658
+
+y objetos trajo!! JOOOOOOOOOOOOOOOO
+asi que pruebo la siguiente consulta.
 
 
+select distinct ?per ?genre ?o
+where {
+  wd:Q20974031 wdt:P800 ?work .
+  ?work p:P136 ?sen1 .
+  ?sen1 ps:P136 ?genre .
+  ?genre p:P31 ?sen2 .
+  ?sen2 ps:P31 wd:Q201658 .
+  }
+
+
+geniallll. hago una prueba a ver si podría tener otro actor de mi dataset que cumpla lo mismo.
+a ver por ejemplo :
+https://en.wikipedia.org/wiki/Daisy_Ridley
+https://www.wikidata.org/wiki/Q16738674
+
+select distinct ?per ?genre ?o
+where {
+  wd:Q16738674 wdt:P800 ?work .
+  ?work p:P136 ?sen1 .
+  ?sen1 ps:P136 ?genre .
+  ?genre p:P31 ?sen2 .
+  ?sen2 ps:P31 wd:Q201658 .
+  }
+
+mmmmm no me trajo nada. no lo puedo aplicar en general a mi consulta a este grafo.
+a ver que diferencia hay. seguro no tiene notable work asi.
+
+claro. no tiene notable work P800.
+pero veo que tiene "imdb id"
+
+todas cosas a tener en cuenta.
+
+----
+
+y también se me ocurre que los que tengan IMDB id serían personas relacionadas con la industria del cine.
+
+https://www.wikidata.org/wiki/Property:P345
+
+es una consulta mucho mas pequeña y eficiente.
+pruebo un ejemplo.
+
+select distinct ?imdb
+where {
+  wd:Q16738674 p:P345 ?imdb .
+  }
+
+retorna sentencias como es de esperar. 
+asi que desreferencio esa sentencia.
+
+select distinct ?imdb
+where {
+  wd:Q16738674 p:P345 ?sen1 .
+  ?sen1 ps:P345 ?imdb .
+  }
+
+
+perfecto!!! funcionó!!.
+asi que podría poner eso como filtro simple.
+voy a hacer la prueba con un script!! a ver si puedo filtrar bien con las personas que tengo en mi dataset.
+
+---
+
+con el servicio de wikipedia es demasiado simple generar scripts de testeo para tunear.
+en la pestaá Code del endpoint tenemos el ejemplo codificado en el lenguaje que querramos. jaja.
+genero un archivo de ejemplo para testear la idea de lo de imdb.
+
+esta consulta me da todos los humanos que tienen id en imdb.
+
+select distinct ?s
+    where {
+        ?s p:P31 ?sen2 .
+        ?sen2 ps:P31 wd:Q5 .
+        ?s p:P345 ?sen1 .
+        ?sen1 ps:P345 ?imdb .
+    }
+
+
+para mi esa es la que va.
+voy a filtrar por nombre de mis personas y lo de imdb. creo que es la mas eficiente.
+
+---
+
+
+veo que el name de la persona wikidata la representa usando rdfs:label
+así que voy a filtrar por eso.
+fijándome en los prefijos de wikidata veo:
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+---
+
+testeo el script una prueba:
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Satoshi Hino
+entidades externas encontradas set()
+obteniendo Hernán Jiménez
+entidades externas encontradas set()
+obteniendo Mercedes Burgos
+entidades externas encontradas set()
+obteniendo Max Greenfield
+entidades externas encontradas set()
+obteniendo Matt Neal
+entidades externas encontradas set()
+obteniendo Amy Nicholson
+entidades externas encontradas set()
+obteniendo Rita Tushingham
+Traceback (most recent call last):
+  File "/src/github/facu-infor/twss/entrega5/src/personas_wikidata.py", line 89, in <module>
+    results = sql.query().convert()
+  File "/home/pablo/.local/lib/python3.9/site-packages/SPARQLWrapper/Wrapper.py", line 1107, in query
+    return QueryResult(self._query())
+  File "/home/pablo/.local/lib/python3.9/site-packages/SPARQLWrapper/Wrapper.py", line 1087, in _query
+    raise e
+  File "/home/pablo/.local/lib/python3.9/site-packages/SPARQLWrapper/Wrapper.py", line 1073, in _query
+    response = urlopener(request)
+  File "/usr/lib/python3.9/urllib/request.py", line 214, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.9/urllib/request.py", line 523, in open
+    response = meth(req, response)
+  File "/usr/lib/python3.9/urllib/request.py", line 632, in http_response
+    response = self.parent.error(
+  File "/usr/lib/python3.9/urllib/request.py", line 561, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 494, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.9/urllib/request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+
+obvio!!! wikidata usa chequeo de requests!!!.
+o sea que no le puedo tirar miles de requests por segundo.
+
+igual no me trajo nada asi que tengo que probarlo mediante el endpoint a ver que onda.
+
+select distinct ?s
+                where {
+                    ?s rdfs:label "Satoshi Hino" .
+                }
+
+nada de nada.
+
+select distinct ?s
+                where {
+                    ?s rdfs:label "Satoshi Hino"@en .
+                }
+
+
+ wd:Q1142853
+ wd:Q11665869
+
+jajaja me trajo 2. y los 2!!! son relacionados con la industria del cine!!!
+murphy en su máxima expresión.
+además uno si tiene imdb y el otro no!!! el director no tiene id de imdb.
+
+me hace pensar un aspecto de consultar bases colaborativas y abiertas, lo anoto en notes.txt así no me olvido.
+
+las consultas que diseñamos para resolver un problema podrían cambiar con el tiempo.
+por ejemplo para seleccionar ciertas personas no tienen imdb id. pero a futuro podrían tenerlo si alguien se los carga.
+https://www.wikidata.org/wiki/Q1142853
+https://www.wikidata.org/wiki/Q11665869
+entonces si filtramos por quien tenga imdb id hoy sería una solución ya que trae una sola persona, a futuro podría no serlo!!. 
+(hoy sería un filtro válido para generar resultados únicos, pero a futuro no lo sería)
+un poco me hace pensar de nuevo en los desafíos que tiene consultar bases con datos abiertos y colaborativos. están constantemente cambiando.
+y es complejo detectar si estás dejando afuera resultados o no.
+
+---
+
+ahora veo que el label dería estar en inglés pero se me ocurre el ejemplo de anotio banderas.
+
+select distinct ?s
+                where {
+                    ?s rdfs:label "Antonio Banderas"@es .
+                }
+
+retorna, pero 
+
+select distinct ?s
+                where {
+                    ?s rdfs:label "Antonio Banderas"@en .
+                }
+
+no retorna nada!!.
+estoy en un problema, como se que lenguaje está el label sin analizar el género de la persona.
+
+ahora si consulto las tripletas del recuro veo que esta asociado varios labels con todos Antonio Banderas!!!
+select distinct ?l
+                where {
+                    wd:Q41548 rdfs:label ?l  .
+                }
+
+y si me fijo en la página de antonio banderas de la wikidata veo que tiene asociado un label en ingles!!.
+
+MURPHYYY de nuevo.
+
+Label English	 --- Antonio José Banderas
+
+mi diiooossss nada puede ser simple no? jajaj. el único que tiene José es el de @en.
+---
+
+podría usar schema:about refiriendome a la página de wikipedia pero no me gusta nada.
+voy a ir por le nombre = rdfs:label.
+y voy a poner 2 idiomas opcionales. inglés y español.
+o sea:
+
+select distinct ?s
+                where {
+                  ?s rdfs:label ?label .
+                  FILTER (?label = "Antonio Banderas"@en || ?label = "Antonio Banderas"@es)
+                }
+
+tarda una vida en wikidata esa consulta.
+voy a probar poniéndole que sea un humano.
+
+select distinct ?s
+                where {
+                  ?s p:P31 ?sen2 .
+                  ?sen2 ps:P31 wd:Q5 .
+                  ?s rdfs:label ?label .
+                  FILTER (?label = "Antonio Banderas"@en || ?label = "Antonio Banderas"@es)
+                }
+
+na sigue igual tardando una vida.
+voy a probar con la versión de union ya que un solo label retorna muy rápido.
+para mi existe algún tipo de índice asociado a los labels.  
+por eso en este caso aunque existan 2 conjuntos y la union entre ellos, cada conjunto sale al toque debido a que 
+solo tiene un filtro fijo. y no mediante FILTER dentro de la consulta.
+internamente el motor lo resuelve distinto. usará indice para la consulta simple pero no para la del FILTER.
+
+select distinct ?s
+                where {
+                  { ?s rdfs:label "Antonio Banderas"@en . }
+                  UNION {
+                    ?s rdfs:label "Antonio Banderas"@es .
+                  }
+                }
+
+la resolvió al toque.
+asi que voy a ir por esa versión. la de UNION con los 2 labels.
+
+---
+
+pruebo con otro nombre a ver que onda.
+
+
+select distinct ?s
+                where {
+                  { ?s rdfs:label "Daisy Ridley"@en . }
+                  UNION {
+                    ?s rdfs:label "Daisy Ridley"@es .
+                  }
+                }
+
+ wd:Q16738674
+
+ perfecto. funca. asi que modifico el script.                
+
+-----
+
+ejecuto el script a ver que onda.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Gabriella Wilde
+entidades externas encontradas {'http://www.wikidata.org/entity/Q371860'}
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gabriella_Wilde'): {'http://www.wikidata.org/entity/Q371860'}}
+
+perfecto funciona.
+
+----
+
+conclusión, me parece que en wikidata SI vamos a poder filtrar por ocupaciones correctamente dentro
+de la consulta sparql y no procesarlas a mano.
+
+---
+
+ahora voy a intentar solucionar lo del límite de requests.
+la idea es usar algo como lo que hace tcp, exponential backoff.
+inicio con un delay entre los requests, en el caso de obtener 
+Error 429: Rate limit exceeded
+incremento exponencialmente el delay entre requests.
+voy a llegar a un equilibrio donde voy a poner consultar el endpoint sin problemas de error.
+
+---
+
+trato de ejecutar el script para que me tire error de nuevo y analizar el error.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Paul Briggs
+entidades externas encontradas {'http://www.wikidata.org/entity/Q112322', 'http://www.wikidata.org/entity/Q18105637', 'http://www.wikidata.org/entity/Q100760030', 'http://www.wikidata.org/entity/Q20974031', 'http://www.wikidata.org/entity/Q56824526', 'http://www.wikidata.org/entity/Q100760028'}
+obteniendo Mora Recalde
+entidades externas encontradas set()
+obteniendo Esteban Bigliardi
+entidades externas encontradas {'http://www.wikidata.org/entity/Q27949870'}
+obteniendo Tom Holland
+entidades externas encontradas {'http://www.wikidata.org/entity/Q7816215', 'http://www.wikidata.org/entity/Q18641463', 'http://www.wikidata.org/entity/Q2023710', 'http://www.wikidata.org/entity/Q100804600', 'http://www.wikidata.org/entity/Q7816214', 'http://www.wikidata.org/entity/Q1340923', 'http://www.wikidata.org/entity/Q438753', 'http://www.wikidata.org/entity/Q16104458', 'http://www.wikidata.org/entity/Q1236243', 'http://www.wikidata.org/entity/Q79619130'}
+obteniendo John David Washington Kenneth Branagh
+entidades externas encontradas set()
+obteniendo Millie Bobby Brown
+entidades externas encontradas {'http://www.wikidata.org/entity/Q25936414'}
+obteniendo Demian Bichir
+entidades externas encontradas set()
+obteniendo Sia Alipour
+entidades externas encontradas {'http://www.wikidata.org/entity/Q81823145'}
+obteniendo Tomokazu Seki
+entidades externas encontradas {'http://www.wikidata.org/entity/Q284401'}
+obteniendo Wilfried Hochholdinger
+entidades externas encontradas {'http://www.wikidata.org/entity/Q89486'}
+obteniendo Tessa Bonham Jones
+entidades externas encontradas set()
+obteniendo Ken Duken
+entidades externas encontradas {'http://www.wikidata.org/entity/Q68084'}
+obteniendo Alexander Skarsgård
+entidades externas encontradas {'http://www.wikidata.org/entity/Q310637'}
+obteniendo Stéphane Roger
+entidades externas encontradas {'http://www.wikidata.org/entity/Q82317725'}
+obteniendo Gabriella Wilde
+entidades externas encontradas {'http://www.wikidata.org/entity/Q371860'}
+obteniendo Emerald Fennell
+entidades externas encontradas {'http://www.wikidata.org/entity/Q16207879'}
+obteniendo Pablo Rago
+entidades externas encontradas {'http://www.wikidata.org/entity/Q3290318'}
+obteniendo Rafer Guzman
+entidades externas encontradas set()
+obteniendo Michael Caine
+entidades externas encontradas {'http://www.wikidata.org/entity/Q104152305', 'http://www.wikidata.org/entity/Q20811846', 'http://www.wikidata.org/entity/Q123351', 'http://www.wikidata.org/entity/Q28052331', 'http://www.wikidata.org/entity/Q16197877', 'http://www.wikidata.org/entity/Q104152551', 'http://www.wikidata.org/entity/Q2567679'}
+obteniendo David Sims
+entidades externas encontradas {'http://www.wikidata.org/entity/Q5239820', 'http://www.wikidata.org/entity/Q3703336', 'http://www.wikidata.org/entity/Q96337189', 'http://www.wikidata.org/entity/Q5239821', 'http://www.wikidata.org/entity/Q5239818', 'http://www.wikidata.org/entity/Q5239819', 'http://www.wikidata.org/entity/Q92479124'}
+obteniendo Christopher Nolan
+entidades externas encontradas {'http://www.wikidata.org/entity/Q87393107', 'http://www.wikidata.org/entity/Q25191', 'http://www.wikidata.org/entity/Q2375756', 'http://www.wikidata.org/entity/Q224912'}
+obteniendo Tim Story
+entidades externas encontradas {'http://www.wikidata.org/entity/Q3528698', 'http://www.wikidata.org/entity/Q1502497', 'http://www.wikidata.org/entity/Q2005037'}
+obteniendo Chris Pine
+entidades externas encontradas {'http://www.wikidata.org/entity/Q23466'}
+obteniendo Camille Cottin
+entidades externas encontradas {'http://www.wikidata.org/entity/Q1029156', 'http://www.wikidata.org/entity/Q16535251', 'http://www.wikidata.org/entity/Q16033360'}
+obteniendo Alberto Ammann
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2595437'}
+obteniendo Emilia Schüle
+entidades externas encontradas {'http://www.wikidata.org/entity/Q87594'}
+obteniendo Mark Jackson
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2373878', 'http://www.wikidata.org/entity/Q18630834', 'http://www.wikidata.org/entity/Q100818001', 'http://www.wikidata.org/entity/Q91760142', 'http://www.wikidata.org/entity/Q47091776', 'http://www.wikidata.org/entity/Q99578229', 'http://www.wikidata.org/entity/Q51955088', 'http://www.wikidata.org/entity/Q18607352', 'http://www.wikidata.org/entity/Q62470147', 'http://www.wikidata.org/entity/Q87121062', 'http://www.wikidata.org/entity/Q6768216', 'http://www.wikidata.org/entity/Q17386098', 'http://www.wikidata.org/entity/Q75218867', 'http://www.wikidata.org/entity/Q6768218', 'http://www.wikidata.org/entity/Q1900155', 'http://www.wikidata.org/entity/Q100983055', 'http://www.wikidata.org/entity/Q29643047', 'http://www.wikidata.org/entity/Q6768215', 'http://www.wikidata.org/entity/Q1342300', 'http://www.wikidata.org/entity/Q6768217', 'http://www.wikidata.org/entity/Q6768221'}
+obteniendo Molly Shannon
+entidades externas encontradas {'http://www.wikidata.org/entity/Q239145'}
+obteniendo Gal Gadot
+entidades externas encontradas {'http://www.wikidata.org/entity/Q185654', 'http://www.wikidata.org/entity/Q65964963'}
+obteniendo Carlos Lopez Estrada
+entidades externas encontradas set()
+obteniendo Isabela Palópoli
+entidades externas encontradas set()
+obteniendo Dave Callaham
+entidades externas encontradas set()
+obteniendo Lynda Carter
+entidades externas encontradas {'http://www.wikidata.org/entity/Q242903'}
+obteniendo Amr Waked
+entidades externas encontradas {'http://www.wikidata.org/entity/Q602231'}
+obteniendo Amreen N. Yaqoob
+entidades externas encontradas set()
+obteniendo Andrew Ellis
+entidades externas encontradas {'http://www.wikidata.org/entity/Q4756893', 'http://www.wikidata.org/entity/Q17417465', 'http://www.wikidata.org/entity/Q525682', 'http://www.wikidata.org/entity/Q103026469', 'http://www.wikidata.org/entity/Q21165178', 'http://www.wikidata.org/entity/Q90522237', 'http://www.wikidata.org/entity/Q98766785', 'http://www.wikidata.org/entity/Q4756891', 'http://www.wikidata.org/entity/Q96885189', 'http://www.wikidata.org/entity/Q504581', 'http://www.wikidata.org/entity/Q75642629', 'http://www.wikidata.org/entity/Q75791830', 'http://www.wikidata.org/entity/Q4756892'}
+obteniendo Chloë Grace Moretz
+entidades externas encontradas {'http://www.wikidata.org/entity/Q4509'}
+obteniendo Joel Morris
+entidades externas encontradas {'http://www.wikidata.org/entity/Q6213762', 'http://www.wikidata.org/entity/Q98077616'}
+obteniendo Martin Schreier
+entidades externas encontradas {'http://www.wikidata.org/entity/Q43536128'}
+obteniendo Doug Liman
+entidades externas encontradas {'http://www.wikidata.org/entity/Q349339'}
+obteniendo Sam Richardson
+entidades externas encontradas {'http://www.wikidata.org/entity/Q7408069', 'http://www.wikidata.org/entity/Q24050468', 'http://www.wikidata.org/entity/Q42531667', 'http://www.wikidata.org/entity/Q100913694'}
+obteniendo Sarah Ward
+entidades externas encontradas {'http://www.wikidata.org/entity/Q76271084', 'http://www.wikidata.org/entity/Q75891739', 'http://www.wikidata.org/entity/Q91478177', 'http://www.wikidata.org/entity/Q76247402', 'http://www.wikidata.org/entity/Q89330474', 'http://www.wikidata.org/entity/Q96243173', 'http://www.wikidata.org/entity/Q28439911', 'http://www.wikidata.org/entity/Q104828572', 'http://www.wikidata.org/entity/Q104843495', 'http://www.wikidata.org/entity/Q22910723', 'http://www.wikidata.org/entity/Q76166639', 'http://www.wikidata.org/entity/Q18528126', 'http://www.wikidata.org/entity/Q7422880', 'http://www.wikidata.org/entity/Q75423884', 'http://www.wikidata.org/entity/Q75373846', 'http://www.wikidata.org/entity/Q75917375', 'http://www.wikidata.org/entity/Q104143672', 'http://www.wikidata.org/entity/Q57156786'}
+
+...
+
+obviamente murphy de nuevo.
+no me está tirando error!!!.
+asi que lo corto para seguir el desarrollo.
+--
+
+
+ahora veo que efectivamente para algunos me detectó varias entitdades.
+asi que voy a tratar de aplicar lo del filtro de la ocupación analizado anteriormente.
+
+primero analizar con el id de imdb a ver si la zafo con ese filtro simple.
+
+        ?s p:P345 ?sen1 .
+        ?sen1 ps:P345 ?imdb .
+
+sql.setQuery("""
+    select distinct ?s
+        where {
+            ?s p:P345 ?sen1 .
+            ?sen1 ps:P345 ?imdb .                        
+            { ?s rdfs:label \"""" + name + """\"@en . }
+            UNION
+            { ?s rdfs:label \"""" + name + """\"@es . }
+        }
+""")
+
+lo pruebo.
+
+--
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Happy Anderson
+entidades externas encontradas {'http://www.wikidata.org/entity/Q24883904'}
+obteniendo Himesh Patel
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2835788'}
+obteniendo Jessica Henwick
+entidades externas encontradas {'http://www.wikidata.org/entity/Q6187270'}
+obteniendo Emerald Fennell
+entidades externas encontradas {'http://www.wikidata.org/entity/Q16207879'}
+obteniendo Robin Wright
+entidades externas encontradas {'http://www.wikidata.org/entity/Q272972', 'http://www.wikidata.org/entity/Q7352889'}
+obteniendo Kristoffer Polaha
+entidades externas encontradas {'http://www.wikidata.org/entity/Q726708'}
+obteniendo Oakley Bull
+entidades externas encontradas {'http://www.wikidata.org/entity/Q70535485'}
+obteniendo Blu Hunt
+entidades externas encontradas {'http://www.wikidata.org/entity/Q35569582'}
+obteniendo animación
+
+ya lo corto porque en el caso de Robin Wright me encontró 2 entidades.
+y son distintas personas porque tienen distintas fechas de nacimiento.
+una es una periodista.
+asi que voy a intentar chequear la ocupación entonces. no es suficiente con imdb.
+
+
+---
+
+
+pensando en que Daisy Ridley
+no tenía notable work entonces no es posible usar la consulta que chequea esos trabajos.
+voy a ir por el lado del filtro de occupation.
+P106
+y aplicar la misma lógica de las sentencias.
+
+select distinct ?occ
+where {
+  wd:Q16738674 p:P106 ?sen1 .
+  ?sen1 ps:P106 ?occ .
+  }
+
+ wd:Q177220
+ wd:Q10800557
+ wd:Q33999
+
+ asi que tengo las ocupaciones correctamnete.
+
+ puedo probar con subclase de actor.
+
+https://www.wikidata.org/wiki/Property:P279
+https://www.wikidata.org/wiki/Q33999
+
+select distinct ?occ ?o
+where {
+  wd:Q16738674 p:P106 ?sen1 .
+  ?sen1 ps:P106 ?occ .
+  ?occ p:P279 ?sen2 .
+  ?sen2 ps:P279 wd:Q33999 .
+  }
+
+
+ wd:Q10800557
+
+ perfecto, trajo la ocupación de actris.
+
+---
+
+añado esos filtros a la consulta y disparo el script.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Emerald Fennell
+entidades externas encontradas set()
+obteniendo Chance the Rapper
+entidades externas encontradas set()
+obteniendo Amy Nicholson
+entidades externas encontradas set()
+obteniendo Kenneth Branagh
+entidades externas encontradas set()
+obteniendo Paul Ron Cruz
+entidades externas encontradas set()
+obteniendo Stéphane Roger
+entidades externas encontradas set()
+obteniendo Michael Gwisdek
+entidades externas encontradas set()
+obteniendo Eddie Harrison
+entidades externas encontradas set()
+obteniendo Antonio Banderas
+entidades externas encontradas set()
+obteniendo John Gettier
+entidades externas encontradas set()
+obteniendo Michael Caine
+entidades externas encontradas set()
+obteniendo Robert Pattinson
+entidades externas encontradas set()
+obteniendo Valerie Kalfrin
+entidades externas encontradas set()
+obteniendo Kristen Wiig
+entidades externas encontradas set()
+obteniendo Eric Marchen
+entidades externas encontradas set()
+obteniendo Rita Tushingham
+entidades externas encontradas set()
+obteniendo Satoshi Hino
+entidades externas encontradas set()
+obteniendo Camille Cottin
+entidades externas encontradas set()
+obteniendo Esteban Bigliardi
+entidades externas encontradas set()
+
+...
+
+no encuentra nada de nada.
 
