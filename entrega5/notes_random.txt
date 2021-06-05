@@ -3255,4 +3255,168 @@ obteniendo Bern Collaco
 entidades externas encon
 ....
 
+mientras miro como sigue consultando el script, se me viene a la cabeza que
+el proceso de desarrollo de esto estoy analizando un poquito que hice en las respuestas inciales.
+y veo que a media que el desarrollo avanza veo cada vez mas que lo que hice está incompleto.
+supociciones que tenía en ciertos niveles terminan siendo no ciertas a medida que avanzamos y análisis del 
+problema y de los datasets.
+esto depende también en gran parte, el análisis de datos sobre el universo esperado de respuestas.
+tener los actores para comparar lo que me debería responder las consultas, y el estar practicamente seguro de que
+casi todas esas personas, están de alguna forma representadas dentro del dataset que estoy consultando, implica que puedo
+analizar la calidad de mi consulta.
+
+me imagino que en el mundo real nosotros hacemos consultas para obtener datos para cruzar. 
+y de las cuales NO sabemos si nos está respondiendo todos los datos que necesitamos.
+es un contraste completo entre dos tipos de datasets.
+
+1 - datasets internos definidos por un universo limitado. donde tenemos mas o menos control de los datos que ingresan.
+y podemos cruzar y comparar
+2 - datasets abiertos como los que estamos procesando. donde los datos y la estructura de esos datos varían constantemente.
+
+esto referido a la seguridad de cuan completo es la respuesta obtenida en base a la consulta generada.
+
+lo anoto para acordarme en notes.txt
+
+---
+
+
+corregí el backoff asi que ejecuto nuevamente el script.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Jonathan Ajayi
+entidades externas encontradas set()
+obteniendo Martín Desalvo
+entidades externas encontradas set()
+obteniendo Don Hall
+entidades externas encontradas {'http://www.wikidata.org/entity/Q18921842'}
+obteniendo Flula Borg
+entidades externas encontradas {'http://www.wikidata.org/entity/Q19668395'}
+obteniendo Kyle Chandler
+entidades externas encontradas {'http://www.wikidata.org/entity/Q359604'}
+obteniendo Tony Medley
+entidades externas encontradas set()
+obteniendo Laverne Cox
+entidades externas encontradas {'http://www.wikidata.org/entity/Q6502596'}
+obteniendo Sylvester McCoy
+entidades externas encontradas {'http://www.wikidata.org/entity/Q455551'}
+obteniendo Vincent Lacoste
+entidades externas encontradas {'http://www.wikidata.org/entity/Q3559693'}
+obteniendo Jake Wilson
+entidades externas encontradas set()
+obteniendo Benjamin Biolay
+entidades externas encontradas {'http://www.wikidata.org/entity/Q182991'}
+obteniendo Satoshi Hino
+entidades externas encontradas {'http://www.wikidata.org/entity/Q11665869'}
+....
+
+encuentro que algunos todavía no tienen relacionado.
+asi que analizo como los podría incluír.
+
+agrego las ocupaciones que sean subclase de filmaking occupation..
+
+                                UNION 
+                                {
+                                    ?sen1 ps:P106 ?occ .             # ocupaciones instancia de filmmaking occupation (Q4220920)
+                                    ?occ p:P31 ?sen2 .
+                                    ?sen2 ps:P31 wd:Q4220920 .
+                                }
+
+---
+
+mejoró muchísimo los resultados, pero igual sigo viendo ambiguedades en algnuos casos.
+
+obteniendo Hernán Jiménez
+entidades externas encontradas {'http://www.wikidata.org/entity/Q28070848', 'http://www.wikidata.org/entity/Q27832751'}
+
+ese caso tenemos 2 recursos.
+1 actor
+1 director
+los 2 con profesiones relacionados al cine!! 
+ninguno de los cuales tiene asociada filmografía o trabajo.
+por lo que no puedo decidir a nivel de conuslta cual es el correcto!!.
+
+---
+
+
+veo que funcionó mi control de backoff.
+
+entidades externas encontradas {'http://www.wikidata.org/entity/Q20882479'}
+obteniendo Saori Hayami
+entidades externas encontradas {'http://www.wikidata.org/entity/Q1153079'}
+obteniendo Laverne Cox
+/src/github/facu-infor/twss/entrega5/src/personas_wikidata.py:130: DeprecationWarning: The 'warn' function is deprecated, use 'warning' instead
+  logging.warn(f'Incremento el delay para no matar el endpoint {delay} {tries}')
+WARNING:root:Incremento el delay para no matar el endpoint 2 1
+obteniendo Laverne Cox
+entidades externas encontradas {'http://www.wikidata.org/entity/Q6502596'}
+obteniendo Frank Welker
+entidades externas encontradas {'http://www.wikidata.org/entity/Q296577'}
+obteniendo Bern Collaco
+entidades externas encontradas set()
+
+---
+
+siguió consultando sin problemas.
+corregí el warning en el código.
+
+---
+
+analizando las consutlas, veo que los que no logra obtener una referencia es porque no existe
+ninguna entidad asociada en la wikipedia.
+o sea que anda bien mi consulta!!.
+estoy buscando esa gente en la wikipedia y no existe.
+
+doy por cerrada la consulta ahi.
+
+----
+
+agrego la parte de consulta de las tripletas sobre esos recursos encontrados asi 
+aumento mi dataset original.
+
+---
+
+modifico para que solo se tenga en cuenta 10 actores y ejecuto el script.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Flula Borg
+entidades externas encontradas {'http://www.wikidata.org/entity/Q19668395'}
+obteniendo Connie Britton
+entidades externas encontradas {'http://www.wikidata.org/entity/Q235519'}
+obteniendo Shun Oguri
+entidades externas encontradas {'http://www.wikidata.org/entity/Q457825'}
+obteniendo Don Hall
+entidades externas encontradas {'http://www.wikidata.org/entity/Q18921842'}
+obteniendo Martin Donovan
+entidades externas encontradas {'http://www.wikidata.org/entity/Q726130', 'http://www.wikidata.org/entity/Q61867559'}
+obteniendo Esteban Bigliardi
+entidades externas encontradas {'http://www.wikidata.org/entity/Q27949870'}
+obteniendo jayg_58
+entidades externas encontradas set()
+obteniendo Maisie Williams
+entidades externas encontradas {'http://www.wikidata.org/entity/Q234363'}
+obteniendo animación
+entidades externas encontradas set()
+obteniendo Marisol Correa
+entidades externas encontradas set()
+obteniendo Alberto Ammann
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2595437'}
+obteniendo datos de http://www.wikidata.org/entity/Q19668395
+obteniendo datos de http://www.wikidata.org/entity/Q235519
+obteniendo datos de http://www.wikidata.org/entity/Q457825
+obteniendo datos de http://www.wikidata.org/entity/Q18921842
+obteniendo datos de http://www.wikidata.org/entity/Q726130
+obteniendo datos de http://www.wikidata.org/entity/Q61867559
+obteniendo datos de http://www.wikidata.org/entity/Q27949870
+obteniendo datos de http://www.wikidata.org/entity/Q234363
+obteniendo datos de http://www.wikidata.org/entity/Q2595437
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+---
+
+
+pefecto!! me generó el dataset wikidata.ttl
+y ahora generé un subjects tambien para analizar rápido si esta ok los sameAs que agregé.
+wikidata_subjects.ttl
+
+---
 

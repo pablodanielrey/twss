@@ -6,15 +6,9 @@ http://www.semantic-web-journal.net/system/files/swj1462.pdf
 https://blog.reputationx.com/wikidata
 
 
-
-
-
-
 el editor de sparql de wikidata es muy superior al de dbpedia.
 con ejemplos. mas interactivo.
 hasta tiene una parte donde seleccionas y te da el ejemplo en código. varias alternativas de lenguajes. etc
-
-
 
 ---
 
@@ -59,3 +53,47 @@ OTRA NOTA!!!. al definir la ontología de wikidata con propiedades internas en v
 por ejemplo rdfs:subClassOf tenemos que algunas cosas no son inferidas!!. o sea no tienen la misma semántica que las propiedades de RDF.
 algo que no se si estoy interpretando bien. por ahi tendría que consultarlo en el foro.
 lo anoto para tenerlo en la cabeza.
+
+---
+
+el proceso de desarrollo de esto estoy analizando un poquito que hice en las respuestas inciales.
+y veo que a media que el desarrollo avanza veo cada vez mas que lo que hice está incompleto.
+supociciones que tenía en ciertos niveles terminan siendo no ciertas a medida que avanzamos en el desarrollo y análisis del 
+problema y de los datasets.
+esto depende también en gran parte, el análisis de datos sobre el universo esperado de respuestas.
+tener los actores para comparar lo que me debería responder las consultas, y el estar practicamente seguro de que
+casi todas esas personas, están de alguna forma representadas dentro del dataset que estoy consultando, implica que puedo
+analizar la calidad de mi consulta.
+
+me imagino que en el mundo real nosotros hacemos consultas para obtener datos para cruzar. 
+y de las cuales NO sabemos si nos está respondiendo todos los datos que necesitamos.
+es un contraste completo entre los tipos de datasets consultados.
+
+1 - datasets internos definidos por un universo limitado. donde tenemos mas o menos control de los datos que ingresan.
+y podemos cruzar y comparar
+2 - datasets abiertos como los que estamos procesando. donde los datos y la estructura de esos datos varían constantemente.
+
+esto referido a la seguridad de cuan completo es la respuesta obtenida en base a la consulta generada.
+
+---
+
+casos ambiguos en los datasets (wikidata)
+
+obteniendo Hernán Jiménez
+entidades externas encontradas {'http://www.wikidata.org/entity/Q28070848', 'http://www.wikidata.org/entity/Q27832751'}
+
+ese caso tenemos 2 recursos.
+1 actor
+1 director
+los 2 con profesiones relacionados al cine!! 
+ninguno de los cuales tiene asociada filmografía o trabajo.
+por lo que no puedo decidir a nivel de conuslta cual es el correcto!!.
+
+
+---
+
+consultas en los datasets de ontologías mas abstractas son mucho mas complejas que las consultas
+sobre datasets de ontologías no tan abstractas!!
+wikidata por sobre dbpedia.
+
+---

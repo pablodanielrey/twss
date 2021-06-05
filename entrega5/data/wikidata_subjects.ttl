@@ -1,0 +1,19 @@
+@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alberto_Ammann> ns1:sameAs <http://www.wikidata.org/entity/Q2595437> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Connie_Britton> ns1:sameAs <http://www.wikidata.org/entity/Q235519> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall> ns1:sameAs <http://www.wikidata.org/entity/Q18921842> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Esteban_Bigliardi> ns1:sameAs <http://www.wikidata.org/entity/Q27949870> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Flula_Borg> ns1:sameAs <http://www.wikidata.org/entity/Q19668395> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Maisie_Williams> ns1:sameAs <http://www.wikidata.org/entity/Q234363> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Martin_Donovan> ns1:sameAs <http://www.wikidata.org/entity/Q61867559>,
+        <http://www.wikidata.org/entity/Q726130> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Shun_Oguri> ns1:sameAs <http://www.wikidata.org/entity/Q457825> .
+

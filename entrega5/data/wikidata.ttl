@@ -1,0 +1,1249 @@
+@prefix ns1: <http://www.wikidata.org/prop/> .
+@prefix ns2: <http://www.wikidata.org/prop/direct/> .
+@prefix ns3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns4: <http://wikiba.se/ontology#> .
+@prefix ns5: <http://www.wikidata.org/prop/direct-normalized/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+
+twssd:Alberto_Ammann rdfs:label "Alberto Ammann",
+        "Амман, Альберто",
+        "آلبرتو امان",
+        "ألبيرتو أمان",
+        "البرتو امان",
+        "البيرتو امان",
+        "アルベルト・アンマン",
+        "阿爾貝托·阿曼" ;
+    schema:dateModified "2021-05-30T16:55:31Z" ;
+    schema:description "Argentina näitleja",
+        "Argentine actor",
+        "Spaans acteur",
+        "acteur argentin",
+        "actor argentino",
+        "actor argentí",
+        "actor arxentino",
+        "actor din Argentina",
+        "aktor argjentinas",
+        "aktore argentinarra",
+        "argentina aktoro",
+        "argentinisch-spanischer Schauspieler",
+        "argentinský herec",
+        "ator argentino",
+        "ator arjentina",
+        "attore argentino",
+        "dramatan Largäntänik",
+        "испанский актёр",
+        "שחקן ארגנטינאי",
+        "بازیگر اسپانیایی",
+        "ممثل أرجنتيني",
+        "আর্জেন্টিনীয় অভিনেতা" ;
+    schema:version "1431728226" ;
+    ns4:identifiers "28" ;
+    ns4:sitelinks "16" ;
+    ns4:statements "48" ;
+    ns4:timestamp "2021-05-30T16:55:33Z" ;
+    ns3:altLabel "Альберто Амман",
+        "Альберто Амманн",
+        "Амманн, Альберто" ;
+    ns1:P106 <http://www.wikidata.org/entity/statement/Q2595437-026F8EB5-7EB1-4A3B-A338-A0FBF6929245>,
+        <http://www.wikidata.org/entity/statement/Q2595437-4BEAF67D-DEC1-428D-9F65-F41F14E604A4>,
+        <http://www.wikidata.org/entity/statement/Q2595437-7A9254EB-8249-4583-99F1-2C1A23FF5855> ;
+    ns1:P1207 <http://www.wikidata.org/entity/statement/Q2595437-546D2A6B-4DEE-45AE-A462-C1C30894A548> ;
+    ns1:P1266 <http://www.wikidata.org/entity/statement/Q2595437-5fb4e6ea-4fc1-a709-a98c-9bd81dbb99c3> ;
+    ns1:P1411 <http://www.wikidata.org/entity/statement/Q2595437-1C0084A2-1AE1-4E49-9D2A-5767A09A0D98> ;
+    ns1:P1412 <http://www.wikidata.org/entity/statement/Q2595437-9D53BB0D-5039-43AC-92EC-D939933E8381> ;
+    ns1:P1649 <http://www.wikidata.org/entity/statement/Q2595437-8f14a556-4c38-bc4b-79e3-e0ba1be621a1> ;
+    ns1:P166 <http://www.wikidata.org/entity/statement/Q2595437-2A56C7A9-4F14-4235-BD3B-D32B50C0FCE5> ;
+    ns1:P18 <http://www.wikidata.org/entity/statement/Q2595437-0A142FC4-F119-4305-8525-FE76B9C5BEBD> ;
+    ns1:P19 <http://www.wikidata.org/entity/statement/Q2595437-BD4A388A-D6C1-43EB-9726-0601D6B8399D> ;
+    ns1:P2002 <http://www.wikidata.org/entity/statement/Q2595437-34d38d26-4fb1-d5a6-a967-62da8d289191> ;
+    ns1:P2003 <http://www.wikidata.org/entity/statement/Q2595437-775753f8-440f-9d73-1482-cf2ce2c41d61> ;
+    ns1:P2013 <http://www.wikidata.org/entity/statement/Q2595437-c868b01d-4458-6482-d999-9760c4939784> ;
+    ns1:P2019 <http://www.wikidata.org/entity/statement/Q2595437-9265974a-4fd4-1da7-dfce-ddc58fb89c86> ;
+    ns1:P2031 <http://www.wikidata.org/entity/statement/Q2595437-E751DC95-E4DC-4911-B738-47CE91966E80> ;
+    ns1:P21 <http://www.wikidata.org/entity/statement/Q2595437-226742EF-95BB-4BF8-8F92-28F0C374E880> ;
+    ns1:P213 <http://www.wikidata.org/entity/statement/Q2595437-BD5C34BA-A29A-4314-967D-5171BA07EA3C> ;
+    ns1:P214 <http://www.wikidata.org/entity/statement/Q2595437-1AD21B87-F2CF-44AD-8F9E-01CB97CF974F> ;
+    ns1:P22 <http://www.wikidata.org/entity/statement/Q2595437-D3D1A05A-B67A-4F8B-9785-C11C3FE8020D> ;
+    ns1:P227 <http://www.wikidata.org/entity/statement/Q2595437-9BB69826-7B54-45A1-809E-DAD663086D57> ;
+    ns1:P2397 <http://www.wikidata.org/entity/statement/Q2595437-5f1f0c46-473e-62e3-8463-7b7ac0134bb5> ;
+    ns1:P2435 <http://www.wikidata.org/entity/statement/Q2595437-e98f3cb3-467d-ec4a-6a88-9e146aa43631> ;
+    ns1:P244 <http://www.wikidata.org/entity/statement/Q2595437-DA396CFE-6024-4FC3-B1E2-9CD096D0BEEB> ;
+    ns1:P2604 <http://www.wikidata.org/entity/statement/Q2595437-53d89c8e-45ff-5637-6503-9ec51607880f> ;
+    ns1:P2605 <http://www.wikidata.org/entity/statement/Q2595437-ace11448-4eb0-4000-bdaa-cabfdfba11c5> ;
+    ns1:P2626 <http://www.wikidata.org/entity/statement/Q2595437-fbf19a9f-495a-a04d-dca3-9eb6bbb23320> ;
+    ns1:P268 <http://www.wikidata.org/entity/statement/Q2595437-373D615B-A2C0-485B-A1C5-7EB84C67E02E> ;
+    ns1:P269 <http://www.wikidata.org/entity/statement/Q2595437-2C87CF21-03E7-4E75-B659-6A4D06E24616> ;
+    ns1:P27 <http://www.wikidata.org/entity/statement/Q2595437-182FE578-2EA4-4D73-8334-D80895D743B8>,
+        <http://www.wikidata.org/entity/statement/Q2595437-5a9ccb93-4303-c085-0045-c87a5adf98b0> ;
+    ns1:P31 <http://www.wikidata.org/entity/statement/Q2595437-CA5B31C2-D20F-43EA-83B1-97EB982B5C06> ;
+    ns1:P3142 <http://www.wikidata.org/entity/statement/Q2595437-2f54d7fa-48ca-2818-9972-bec8e0972ba6> ;
+    ns1:P3144 <http://www.wikidata.org/entity/statement/Q2595437-94d6cacf-4bad-ac96-6209-c46981b46a7c> ;
+    ns1:P345 <http://www.wikidata.org/entity/statement/Q2595437-29449B8A-B4B4-4825-8392-39D53295BCD0> ;
+    ns1:P373 <http://www.wikidata.org/entity/statement/Q2595437-FE1EAEC0-765B-4339-A6A5-F6F15E091E95> ;
+    ns1:P3857 <http://www.wikidata.org/entity/statement/q2595437-320046b2-fcd4-4e94-a84c-1fbefa175d3b> ;
+    ns1:P4985 <http://www.wikidata.org/entity/statement/Q2595437-CADB5A48-01DE-4A33-B54F-468A9F6C0E4E> ;
+    ns1:P569 <http://www.wikidata.org/entity/statement/Q2595437-80E8665C-F13A-497C-9D06-5A9CE69C9687> ;
+    ns1:P646 <http://www.wikidata.org/entity/statement/Q2595437-ED5B2252-8B29-42E1-B82B-0533A0843AE5> ;
+    ns1:P734 <http://www.wikidata.org/entity/statement/Q2595437-1CF986FF-457E-465F-A7EB-6ECB1368A6A9> ;
+    ns1:P735 <http://www.wikidata.org/entity/statement/Q2595437-CBEB1162-9FBD-47AF-9A72-70CD7DFDA62B> ;
+    ns1:P7803 <http://www.wikidata.org/entity/statement/Q2595437-E9C7E7C8-B484-4621-A2DA-A3442B8F34D0> ;
+    ns1:P7859 <http://www.wikidata.org/entity/statement/Q2595437-532ACEB5-2938-486A-8E6A-2FA0AD98174C> ;
+    ns1:P8687 <http://www.wikidata.org/entity/statement/Q2595437-3184897e-5ddf-4ba2-a019-dc6606a9df90>,
+        <http://www.wikidata.org/entity/statement/Q2595437-e9c7e4ed-9882-4121-a8a4-edc348f24499> ;
+    ns1:P9404 <http://www.wikidata.org/entity/statement/Q2595437-742C0327-9362-4E8F-A32D-C9A9A2EF8A70> ;
+    ns1:P950 <http://www.wikidata.org/entity/statement/Q2595437-AAFE1EFA-29AB-4A01-AA13-C1AC303B0269> ;
+    ns5:P214 <http://viaf.org/viaf/265261028> ;
+    ns5:P227 <https://d-nb.info/gnd/1073549437> ;
+    ns5:P244 <https://id.loc.gov/authorities/names/no2011128700> ;
+    ns5:P268 <http://data.bnf.fr/ark:/12148/cb16654591j#about> ;
+    ns5:P269 <http://www.idref.fr/159764912/id> ;
+    ns5:P646 <http://g.co/kg/m/07nnf3j> ;
+    ns5:P950 <http://datos.bne.es/resource/XX4980823> ;
+    ns2:P106 <http://www.wikidata.org/entity/Q10798782>,
+        <http://www.wikidata.org/entity/Q10800557>,
+        <http://www.wikidata.org/entity/Q33999> ;
+    ns2:P1207 "n2013203350" ;
+    ns2:P1266 "236090" ;
+    ns2:P1411 <http://www.wikidata.org/entity/Q2708642> ;
+    ns2:P1412 <http://www.wikidata.org/entity/Q1321> ;
+    ns2:P1649 "00160279" ;
+    ns2:P166 <http://www.wikidata.org/entity/Q2708642> ;
+    ns2:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Alberto%20Ammann%202012.jpg> ;
+    ns2:P19 <http://www.wikidata.org/entity/Q44210> ;
+    ns2:P2002 "albertoammann" ;
+    ns2:P2003 "albertoammann" ;
+    ns2:P2013 "Alberto-Ammann-212491692228766" ;
+    ns2:P2019 "p637336" ;
+    ns2:P2031 "2008-01-01T00:00:00Z" ;
+    ns2:P21 <http://www.wikidata.org/entity/Q6581097> ;
+    ns2:P213 "0000 0003 8239 4754" ;
+    ns2:P214 "265261028" ;
+    ns2:P22 <http://www.wikidata.org/entity/Q1876310> ;
+    ns2:P227 "1073549437" ;
+    ns2:P2397 "UChFcPDYeWkJfWhlUZoq3xtg" ;
+    ns2:P2435 "328359" ;
+    ns2:P244 "no2011128700" ;
+    ns2:P2604 "1609938" ;
+    ns2:P2605 "61600" ;
+    ns2:P2626 "241505" ;
+    ns2:P268 "16654591j" ;
+    ns2:P269 "159764912" ;
+    ns2:P27 <http://www.wikidata.org/entity/Q29>,
+        <http://www.wikidata.org/entity/Q414> ;
+    ns2:P31 <http://www.wikidata.org/entity/Q5> ;
+    ns2:P3142 "n0024697" ;
+    ns2:P3144 "2969963" ;
+    ns2:P345 "nm2975962" ;
+    ns2:P373 "Alberto Ammann" ;
+    ns2:P3857 "alberto-ammann" ;
+    ns2:P4985 "110424" ;
+    ns2:P569 "1978-10-20T00:00:00Z" ;
+    ns2:P646 "/m/07nnf3j" ;
+    ns2:P734 <http://www.wikidata.org/entity/Q16479584> ;
+    ns2:P735 <http://www.wikidata.org/entity/Q16799105> ;
+    ns2:P7803 "41154" ;
+    ns2:P7859 "lccn-no2011128700" ;
+    ns2:P8687 "13120" ;
+    ns2:P9404 "43527" ;
+    ns2:P950 "XX4980823" .
+
+twssd:Connie_Britton rdfs:label "Connie Britton",
+        "Constantia Britton",
+        "Κόνι Μπρίτον",
+        "Конни Бриттон",
+        "Конні Бріттон",
+        "Քոննի Բրիթոն",
+        "קוני בריטון",
+        "كونى بريتون",
+        "كوني بريتون",
+        "کانی بریتون",
+        "کونی بریٹون",
+        "কোনি ব্রিটন",
+        "კონი ბრიტონი",
+        "コニー・ブリットン",
+        "康妮·布里登",
+        "康妮·布里頓",
+        "康妮·布里顿",
+        "코니 브리튼" ;
+    schema:dateModified "2021-05-29T17:08:19Z" ;
+    schema:description "American actress",
+        "Amerikaans actrice",
+        "US-amerikanische Schauspielerin",
+        "actrice américaine",
+        "actriu estatunidenca",
+        "actriz estadounidense",
+        "aktor merikano",
+        "aktore amerikane",
+        "ameerika näitleja",
+        "americká herečka",
+        "amerikanesch Schauspillerin",
+        "amerikansk skodespelar",
+        "amerikansk skuespiller",
+        "amerikansk skådespelare",
+        "amerikāņu aktieris",
+        "amerykańska aktorka",
+        "attrice statunitense",
+        "baaŋa ŋun nyɛ paɣa",
+        "ban-aisteoir Meiriceánach",
+        "pemeran perempuan asal Amerika Serikat",
+        "usona aktoro",
+        "yhdysvaltalainen näyttelijä",
+        "Αμερικανίδα ηθοποιός",
+        "американська акторка",
+        "זמרת אמריקאית",
+        "بازیگر آمریکایی",
+        "ممثلة أمريكية",
+        "মার্কিন অভিনেত্রী",
+        "അമേരിക്കന് ചലചിത്ര നടന്" ;
+    schema:version "1430993843" ;
+    ns4:identifiers "37" ;
+    ns4:sitelinks "34" ;
+    ns4:statements "65" ;
+    ns4:timestamp "2021-05-29T17:08:21Z" ;
+    ns3:altLabel "Constance Elaine Britton",
+        "Constance Elaine Womack",
+        "Constance Womack",
+        "Бриттон, Конни",
+        "ブラディ・コーベット",
+        "康妮·布里頓",
+        "康妮·布里顿" ;
+    ns1:P1006 <http://www.wikidata.org/entity/statement/Q235519-F6BFBC9B-49C2-401C-A805-67F2AB22B4DC> ;
+    ns1:P106 <http://www.wikidata.org/entity/statement/Q235519-2229042D-3684-4DFF-9272-F579A397B1DB>,
+        <http://www.wikidata.org/entity/statement/Q235519-5D7C4249-07A4-44FB-BB8A-A779209FF302>,
+        <http://www.wikidata.org/entity/statement/Q235519-78A011E7-D6E4-4E45-8F7A-04709270EFD0>,
+        <http://www.wikidata.org/entity/statement/Q235519-7B2D71B1-A263-427F-AB6B-BF769B5F8C4E>,
+        <http://www.wikidata.org/entity/statement/Q235519-C016E884-A284-4CCA-BDA8-C246323E1D98>,
+        <http://www.wikidata.org/entity/statement/Q235519-E10A0747-A96B-48DC-97AC-5CCEF36DC025>,
+        <http://www.wikidata.org/entity/statement/q235519-9638C1C3-0135-4EB6-B97D-B5D3D10966E2> ;
+    ns1:P1207 <http://www.wikidata.org/entity/statement/Q235519-BA9643A7-9DF5-4C24-B4C7-192D19084355> ;
+    ns1:P1263 <http://www.wikidata.org/entity/statement/Q235519-8CCA63B1-159F-41FF-8ACB-D76233DEF9CC> ;
+    ns1:P1266 <http://www.wikidata.org/entity/statement/Q235519-9f39c992-4d72-449a-541c-b7be73571ef9> ;
+    ns1:P1273 <http://www.wikidata.org/entity/statement/Q235519-B1AFABB1-7211-4AE9-8D38-318D3CB62623> ;
+    ns1:P1303 <http://www.wikidata.org/entity/statement/Q235519-0BC5003A-D5AE-4E02-8EF2-A8DDDF7ABF8E> ;
+    ns1:P1412 <http://www.wikidata.org/entity/statement/Q235519-E7C5EBC2-12B4-41E5-8771-7CA72848164F> ;
+    ns1:P166 <http://www.wikidata.org/entity/statement/Q235519-9D2EBBB5-510C-40FE-A907-6EEC4887DC1C> ;
+    ns1:P1695 <http://www.wikidata.org/entity/statement/Q235519-925b71a5-0358-419e-8e1c-a74ab427d193> ;
+    ns1:P18 <http://www.wikidata.org/entity/statement/q235519-680B8282-3A9B-4256-866B-B813E2A263FD> ;
+    ns1:P19 <http://www.wikidata.org/entity/statement/Q235519-69CFC66B-A90A-4D5D-A27F-26FD6F695290> ;
+    ns1:P1953 <http://www.wikidata.org/entity/statement/Q235519-e277f0d1-548b-481e-aa8d-495c3a3fa30b> ;
+    ns1:P2002 <http://www.wikidata.org/entity/statement/Q235519-D50E803E-C971-40F9-9671-AE1EC76E2BBB> ;
+    ns1:P2003 <http://www.wikidata.org/entity/statement/Q235519-58FB6BE1-6E21-404D-AB78-AE23983F704A> ;
+    ns1:P2013 <http://www.wikidata.org/entity/statement/Q235519-30C06E15-7BDB-426C-AC3B-0B5AB1947D65> ;
+    ns1:P2019 <http://www.wikidata.org/entity/statement/Q235519-e6d25087-4336-48dc-6b7a-a31c673578ba> ;
+    ns1:P2031 <http://www.wikidata.org/entity/statement/Q235519-52AD7DAA-8FC2-468E-8DD7-CBD7961B211F> ;
+    ns1:P21 <http://www.wikidata.org/entity/statement/q235519-F23455DF-1834-46A1-93FD-F5BFEDF54947> ;
+    ns1:P213 <http://www.wikidata.org/entity/statement/Q235519-F207E343-564E-4695-B339-A225E0240D77> ;
+    ns1:P214 <http://www.wikidata.org/entity/statement/q235519-0EB4BC2F-9CF8-4496-84DF-03C12B4FEF6D> ;
+    ns1:P2168 <http://www.wikidata.org/entity/statement/Q235519-0fe1e11b-43d8-a228-6542-006c109dfa25> ;
+    ns1:P2190 <http://www.wikidata.org/entity/statement/Q235519-27e208a3-444c-998e-bd60-62e773cd008c> ;
+    ns1:P227 <http://www.wikidata.org/entity/statement/q235519-E3ECD210-2DA6-420E-8142-6934FEDF798C> ;
+    ns1:P2387 <http://www.wikidata.org/entity/statement/Q235519-9862df02-4f73-5410-5601-fdeb5fbcd134> ;
+    ns1:P2435 <http://www.wikidata.org/entity/statement/Q235519-b0d5a559-4b76-e96f-1960-4806c3d36ac7> ;
+    ns1:P244 <http://www.wikidata.org/entity/statement/q235519-220B3728-1BE2-4C1E-9604-5BDF4981C94F> ;
+    ns1:P2519 <http://www.wikidata.org/entity/statement/Q235519-4058290e-488d-e11d-5197-3e502d4dc599> ;
+    ns1:P26 <http://www.wikidata.org/entity/statement/Q235519-46BD24B9-2141-46A4-9B10-54D1CE47E9B1> ;
+    ns1:P2604 <http://www.wikidata.org/entity/statement/Q235519-76623b7d-4348-a9e1-c4ee-ee7db4c83e87> ;
+    ns1:P2605 <http://www.wikidata.org/entity/statement/Q235519-9c81038f-4664-bb5a-1d7b-f574108da4b4> ;
+    ns1:P2638 <http://www.wikidata.org/entity/statement/Q235519-78846368-54C7-479D-B3A4-C21826E259C0> ;
+    ns1:P268 <http://www.wikidata.org/entity/statement/Q235519-774A6D14-9258-4A86-A0D6-7BC55D7B2F35> ;
+    ns1:P269 <http://www.wikidata.org/entity/statement/Q235519-46F1BC07-19BB-450F-BE95-D557E46D8960> ;
+    ns1:P27 <http://www.wikidata.org/entity/statement/q235519-DDA0E7F0-A179-45E0-9CE9-95A80F69A7F1> ;
+    ns1:P3056 <http://www.wikidata.org/entity/statement/Q235519-2498F0D1-F614-4BE9-8AC2-CEDF21051E2B> ;
+    ns1:P31 <http://www.wikidata.org/entity/statement/Q235519-FE15F737-4A82-4807-A05D-F20A9CDBEFBD> ;
+    ns1:P345 <http://www.wikidata.org/entity/statement/q235519-407592D3-4F04-4CE1-8769-A6D3CF70A8B3> ;
+    ns1:P373 <http://www.wikidata.org/entity/statement/q235519-636C9A28-468E-4963-A6E1-725D8B0D12CF> ;
+    ns1:P4208 <http://www.wikidata.org/entity/statement/Q235519-BF7507E4-48B5-494E-906E-7887F1F69EA7> ;
+    ns1:P434 <http://www.wikidata.org/entity/statement/q235519-9BF8A7C6-A502-42B9-8A68-FE927D437C40> ;
+    ns1:P4985 <http://www.wikidata.org/entity/statement/Q235519-4094A389-1A8D-488B-BBD7-55F70F89BD46> ;
+    ns1:P5033 <http://www.wikidata.org/entity/statement/Q235519-7C6D2F7F-69BE-4981-B9FA-559FE07AD176> ;
+    ns1:P551 <http://www.wikidata.org/entity/statement/Q235519-8525B71B-B9B0-4ED0-A3C0-27B0F40D8024> ;
+    ns1:P5534 <http://www.wikidata.org/entity/statement/Q235519-1262905F-26BE-4C42-BD70-37302A862AC4> ;
+    ns1:P569 <http://www.wikidata.org/entity/statement/Q235519-6B2DD379-70EF-40D8-B805-63306B48D7FF> ;
+    ns1:P5773 <http://www.wikidata.org/entity/statement/Q235519-A4A9A6E1-7073-441C-9388-DD81EDED967B> ;
+    ns1:P646 <http://www.wikidata.org/entity/statement/Q235519-64A22E77-6A95-432D-9073-71A010C49100> ;
+    ns1:P69 <http://www.wikidata.org/entity/statement/Q235519-06B7CBA3-2080-43B2-8104-FEA1DC7D1B03>,
+        <http://www.wikidata.org/entity/statement/Q235519-D2C64031-5CE0-429D-9046-A5B3C44F54D5> ;
+    ns1:P691 <http://www.wikidata.org/entity/statement/Q235519-DA0DF50D-7043-43DF-9311-91E7D9899BB7> ;
+    ns1:P7293 <http://www.wikidata.org/entity/statement/Q235519-DC3904DA-A343-4792-81AD-14D514CEA194> ;
+    ns1:P734 <http://www.wikidata.org/entity/statement/Q235519-2a477ad7-404b-3bb9-e288-cba2e44bd8c0> ;
+    ns1:P735 <http://www.wikidata.org/entity/statement/Q235519-EFC02F03-6BAA-453D-93B7-DD646DDF6DD3> ;
+    ns1:P7859 <http://www.wikidata.org/entity/statement/Q235519-9044B075-B4A0-417A-93ED-351DE45309E7> ;
+    ns1:P8687 <http://www.wikidata.org/entity/statement/Q235519-b53857e0-bcbb-4da5-aa32-a01ad3888509>,
+        <http://www.wikidata.org/entity/statement/Q235519-eca43b37-4617-4241-a3b8-19d34f9d7dd4> ;
+    ns1:P910 <http://www.wikidata.org/entity/statement/Q235519-20EBDDE9-45D1-4155-B3E8-FD8D2AC090E7> ;
+    ns1:P935 <http://www.wikidata.org/entity/statement/Q235519-B79F688C-8503-440B-8B40-2308CD14C554> ;
+    ns5:P1006 <http://data.bibliotheken.nl/id/thes/p352608277> ;
+    ns5:P214 <http://viaf.org/viaf/222453807> ;
+    ns5:P227 <https://d-nb.info/gnd/1014006694> ;
+    ns5:P244 <https://id.loc.gov/authorities/names/no2002091075> ;
+    ns5:P268 <http://data.bnf.fr/ark:/12148/cb14159227p#about> ;
+    ns5:P269 <http://www.idref.fr/160676207/id> ;
+    ns5:P434 <http://musicbrainz.org/artist/c8840658-171c-4689-81e5-2ef7d8a4a144> ;
+    ns5:P646 <http://g.co/kg/m/06x0z8> ;
+    ns2:P1006 "352608277" ;
+    ns2:P106 <http://www.wikidata.org/entity/Q10798782>,
+        <http://www.wikidata.org/entity/Q10800557>,
+        <http://www.wikidata.org/entity/Q177220>,
+        <http://www.wikidata.org/entity/Q2259451>,
+        <http://www.wikidata.org/entity/Q2405480>,
+        <http://www.wikidata.org/entity/Q33999>,
+        <http://www.wikidata.org/entity/Q578109> ;
+    ns2:P1207 "n2020001093" ;
+    ns2:P1263 "696/000132300" ;
+    ns2:P1266 "22366" ;
+    ns2:P1273 "a11585626" ;
+    ns2:P1303 <http://www.wikidata.org/entity/Q17172850> ;
+    ns2:P1412 <http://www.wikidata.org/entity/Q1860> ;
+    ns2:P166 <http://www.wikidata.org/entity/Q2350896> ;
+    ns2:P1695 "A17734770" ;
+    ns2:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Connie%20Britton%202013.jpg> ;
+    ns2:P19 <http://www.wikidata.org/entity/Q100> ;
+    ns2:P1953 "3058238" ;
+    ns2:P2002 "conniebritton" ;
+    ns2:P2003 "conniebritton" ;
+    ns2:P2013 "theconniebritton" ;
+    ns2:P2019 "p195326" ;
+    ns2:P2031 "1995-01-01T00:00:00Z" ;
+    ns2:P21 <http://www.wikidata.org/entity/Q6581072> ;
+    ns2:P213 "0000 0003 6038 8484" ;
+    ns2:P214 "222453807" ;
+    ns2:P2168 "225168" ;
+    ns2:P2190 "conniebritton" ;
+    ns2:P227 "1014006694" ;
+    ns2:P2387 "246836" ;
+    ns2:P2435 "140217" ;
+    ns2:P244 "no2002091075" ;
+    ns2:P2519 "9945" ;
+    ns2:P26 <http://www.wikidata.org/entity/Q15110041> ;
+    ns2:P2604 "2272" ;
+    ns2:P2605 "23449" ;
+    ns2:P2638 "people/connie-britton" ;
+    ns2:P268 "14159227p" ;
+    ns2:P269 "160676207" ;
+    ns2:P27 <http://www.wikidata.org/entity/Q30> ;
+    ns2:P3056 "523291" ;
+    ns2:P31 <http://www.wikidata.org/entity/Q5> ;
+    ns2:P345 "nm0110168" ;
+    ns2:P373 "Connie Britton" ;
+    ns2:P4208 "connie-britton" ;
+    ns2:P434 "c8840658-171c-4689-81e5-2ef7d8a4a144" ;
+    ns2:P4985 "86310" ;
+    ns2:P5033 "6084" ;
+    ns2:P551 <http://www.wikidata.org/entity/Q65> ;
+    ns2:P5534 "90651" ;
+    ns2:P569 "1967-03-06T00:00:00Z" ;
+    ns2:P5773 "connie-britton" ;
+    ns2:P646 "/m/06x0z8" ;
+    ns2:P69 <http://www.wikidata.org/entity/Q49116>,
+        <http://www.wikidata.org/entity/Q993267> ;
+    ns2:P691 "xx0225240" ;
+    ns2:P7293 "9810578751105606" ;
+    ns2:P734 <http://www.wikidata.org/entity/Q16860476> ;
+    ns2:P735 <http://www.wikidata.org/entity/Q19819774> ;
+    ns2:P7859 "lccn-no2002091075" ;
+    ns2:P8687 "245943" ;
+    ns2:P910 <http://www.wikidata.org/entity/Q55288061> ;
+    ns2:P935 "Connie Britton" .
+
+twssd:Don_Hall rdfs:label "Don Hall",
+        "Дон Хол",
+        "Дон Холл",
+        "Դոն Հոլ",
+        "דון הול",
+        "دان هال",
+        "دون هول",
+        "ドン・ホール",
+        "唐·霍尔",
+        "唐·霍爾",
+        "當·坷" ;
+    schema:dateModified "2021-05-26T20:26:17Z" ;
+    schema:description "Ameerika Ühendriikide filmirežissöör",
+        "American film director",
+        "Amerikaans filmregisseur",
+        "US-amerikanischer Drehbuchautor und Regisseur",
+        "director de cine estadounidense",
+        "director de cinema estadounidense",
+        "director de cinema estatunidenc",
+        "regista e scrittore statunitense",
+        "regizor de film american",
+        "regjisor amerikan",
+        "réalisateur américain",
+        "stiúrthóir scannán Meiriceánach",
+        "Режиссер мультфильмов",
+        "במאי קולנוע אמריקאי",
+        "مخرج أفلام أمريكي",
+        "মার্কিন চলচ্চিত্র পরিচালক" ;
+    schema:version "1429363314" ;
+    ns4:identifiers "21" ;
+    ns4:sitelinks "10" ;
+    ns4:statements "37" ;
+    ns4:timestamp "2021-05-26T20:26:22Z" ;
+    ns3:altLabel "唐·哈尔",
+        "唐·哈爾",
+        "唐·霍尔",
+        "湯·哈爾" ;
+    ns1:P1006 <http://www.wikidata.org/entity/statement/Q18921842-EBD96F37-3EE0-4795-B0FB-587ACF3DA1B0> ;
+    ns1:P106 <http://www.wikidata.org/entity/statement/Q18921842-C99F2331-DAD4-4BFF-86DC-22767D83EA81>,
+        <http://www.wikidata.org/entity/statement/Q18921842-D6172D7F-F20B-4DC1-8497-5C95D513BC27>,
+        <http://www.wikidata.org/entity/statement/Q18921842-D6446642-3896-43C9-AEE3-4C89A77B48C8>,
+        <http://www.wikidata.org/entity/statement/Q18921842-DBBC45A2-C309-46B1-9D91-F5F6F486289D> ;
+    ns1:P1266 <http://www.wikidata.org/entity/statement/Q18921842-986aa7ed-44c6-3863-186c-24dcebdb9e97> ;
+    ns1:P1411 <http://www.wikidata.org/entity/statement/Q18921842-E0F40CAF-E801-44A1-B4AA-38F2225C60E9> ;
+    ns1:P166 <http://www.wikidata.org/entity/statement/Q18921842-6ADFC860-249A-44DB-B23F-7C5F80F454EF> ;
+    ns1:P19 <http://www.wikidata.org/entity/statement/Q18921842-01769C6F-0781-4C9A-B8B0-80DC4EC8AA09> ;
+    ns1:P1969 <http://www.wikidata.org/entity/statement/Q18921842-c9328761-4c2c-57e3-5511-6a02169f7b84> ;
+    ns1:P2019 <http://www.wikidata.org/entity/statement/Q18921842-0fa78775-4259-ca01-b7d9-78c2ce06902d> ;
+    ns1:P21 <http://www.wikidata.org/entity/statement/Q18921842-1A3F361F-B4A8-4BD9-920C-83C334C3BFE9> ;
+    ns1:P213 <http://www.wikidata.org/entity/statement/Q18921842-008a5e11-47d2-3b8c-74a6-6dae3be5435d> ;
+    ns1:P214 <http://www.wikidata.org/entity/statement/Q18921842-3926A41C-850C-4FF5-B0A3-6E6BD9267CFB> ;
+    ns1:P2168 <http://www.wikidata.org/entity/statement/Q18921842-1009b0ed-4965-8a66-8d3f-19069b13ab32> ;
+    ns1:P227 <http://www.wikidata.org/entity/statement/Q18921842-721158F1-984A-4D6D-A8DF-C8C301023375> ;
+    ns1:P2387 <http://www.wikidata.org/entity/statement/Q18921842-7dbb218a-4a58-da56-f0d2-f2f9ac381551> ;
+    ns1:P244 <http://www.wikidata.org/entity/statement/Q18921842-08D8A2CB-F439-46B9-9BB4-802FECDC529F> ;
+    ns1:P2604 <http://www.wikidata.org/entity/statement/Q18921842-a7920723-48d2-91db-24d2-e380a1ea1b85> ;
+    ns1:P2626 <http://www.wikidata.org/entity/statement/Q18921842-f92b0aa1-4bdf-8b23-6f0f-177794c01677> ;
+    ns1:P2688 <http://www.wikidata.org/entity/statement/Q18921842-7A4533CA-B1B3-4ECF-80C1-16F2F4993DD4> ;
+    ns1:P27 <http://www.wikidata.org/entity/statement/Q18921842-D8B897C8-E677-4E03-B5DE-8E7AAA7EDC22> ;
+    ns1:P31 <http://www.wikidata.org/entity/statement/Q18921842-AAEA5D3E-6FAB-4EB4-BE3C-F77D7A480187> ;
+    ns1:P345 <http://www.wikidata.org/entity/statement/Q18921842-4dae3c09-4c82-c98f-5a91-2ac3427edec2> ;
+    ns1:P409 <http://www.wikidata.org/entity/statement/Q18921842-1e0c552a-4bbe-80fc-39cb-04bbaae59f91> ;
+    ns1:P4985 <http://www.wikidata.org/entity/statement/Q18921842-389A6FE0-4FCD-489B-AFFE-91BAAAB9CF31> ;
+    ns1:P5034 <http://www.wikidata.org/entity/statement/Q18921842-beffb4ee-bc47-4a5c-8a4d-e514055aab94> ;
+    ns1:P5534 <http://www.wikidata.org/entity/statement/Q18921842-9464C793-9678-4834-8971-3211C64CB68B> ;
+    ns1:P569 <http://www.wikidata.org/entity/statement/Q18921842-0B51CFF5-14C5-42E7-9D71-2BF9AA2623D1>,
+        <http://www.wikidata.org/entity/statement/Q18921842-2fb5dacd-bcd1-403f-a578-82a45821435e> ;
+    ns1:P6150 <http://www.wikidata.org/entity/statement/Q18921842-A516AFA3-CD17-42B0-8823-406001B08809> ;
+    ns1:P646 <http://www.wikidata.org/entity/statement/Q18921842-41714F54-F8B3-44B2-B00B-D0FE0B134E3B> ;
+    ns1:P69 <http://www.wikidata.org/entity/statement/Q18921842-69C53CE2-4A5F-4A0C-86EB-8F88F9D770C4> ;
+    ns1:P7084 <http://www.wikidata.org/entity/statement/Q18921842-902AB9AB-C461-487F-B2AF-DFB07537D9B4> ;
+    ns1:P734 <http://www.wikidata.org/entity/statement/Q18921842-04832AE2-C462-4067-83E8-B559365246BC> ;
+    ns1:P735 <http://www.wikidata.org/entity/statement/Q18921842-0CD13F61-6EEA-4543-B644-98B59BD9CF67> ;
+    ns1:P7859 <http://www.wikidata.org/entity/statement/Q18921842-954C7ADB-E0B1-435D-8AF8-7C165F4ACE51> ;
+    ns5:P1006 <http://data.bibliotheken.nl/id/thes/p335889581> ;
+    ns5:P214 <http://viaf.org/viaf/267757507> ;
+    ns5:P227 <https://d-nb.info/gnd/1017876827> ;
+    ns5:P244 <https://id.loc.gov/authorities/names/nr2001030755> ;
+    ns5:P5034 <http://lod.nl.go.kr/resource/KAC201516610> ;
+    ns5:P646 <http://g.co/kg/m/05ys_tt> ;
+    ns2:P1006 "335889581" ;
+    ns2:P106 <http://www.wikidata.org/entity/Q2405480>,
+        <http://www.wikidata.org/entity/Q2526255>,
+        <http://www.wikidata.org/entity/Q28389>,
+        <http://www.wikidata.org/entity/Q33999> ;
+    ns2:P1266 "52273" ;
+    ns2:P1411 <http://www.wikidata.org/entity/Q106800> ;
+    ns2:P166 <http://www.wikidata.org/entity/Q106800> ;
+    ns2:P19 <http://www.wikidata.org/entity/Q962841> ;
+    ns2:P1969 "27540" ;
+    ns2:P2019 "p508161" ;
+    ns2:P21 <http://www.wikidata.org/entity/Q6581097> ;
+    ns2:P213 "0000 0000 5284 613X" ;
+    ns2:P214 "267757507" ;
+    ns2:P2168 "356914" ;
+    ns2:P227 "1017876827" ;
+    ns2:P2387 "1494764" ;
+    ns2:P244 "nr2001030755" ;
+    ns2:P2604 "1649386" ;
+    ns2:P2626 "166555" ;
+    ns2:P2688 "donhall" ;
+    ns2:P27 <http://www.wikidata.org/entity/Q30> ;
+    ns2:P31 <http://www.wikidata.org/entity/Q5> ;
+    ns2:P345 "nm2320658" ;
+    ns2:P409 "36031287" ;
+    ns2:P4985 "227439" ;
+    ns2:P5034 "KAC201516610" ;
+    ns2:P5534 "88001" ;
+    ns2:P569 "1969-03-08T00:00:00Z",
+        "2000-01-01T00:00:00Z" ;
+    ns2:P6150 "7267" ;
+    ns2:P646 "/m/05ys_tt" ;
+    ns2:P69 <http://www.wikidata.org/entity/Q182973> ;
+    ns2:P7084 <http://www.wikidata.org/entity/Q21934652> ;
+    ns2:P734 <http://www.wikidata.org/entity/Q1551523> ;
+    ns2:P735 <http://www.wikidata.org/entity/Q16275555> ;
+    ns2:P7859 "lccn-no2017031580" .
+
+twssd:Esteban_Bigliardi rdfs:label "Esteban Bigliardi" ;
+    schema:dateModified "2021-05-19T19:18:27Z" ;
+    schema:description "Argentijns acteur",
+        "Argentina näitleja",
+        "Argentinian actor",
+        "acteur argentin",
+        "actor argentin",
+        "actor argentino",
+        "actor argentí",
+        "actor arxentino",
+        "actor din Argentina",
+        "aisteoir Airgintíneach",
+        "aktor argentyński",
+        "aktor argjentinas",
+        "aktore argentinarra",
+        "argentina aktoro",
+        "argentinischer Schauspieler",
+        "argentinsk skodespelar",
+        "argentinsk skuespiller",
+        "argentinsk skådespelare",
+        "ator argentino",
+        "ator arjentina",
+        "attore argentino",
+        "dramatan Largäntänik",
+        "аргентинський актор",
+        "שחקן ארגנטינאי",
+        "ممثل أرجنتيني",
+        "আর্জেন্টিনীয় অভিনেতা" ;
+    schema:version "1424476624" ;
+    ns4:identifiers "6" ;
+    ns4:sitelinks "1" ;
+    ns4:statements "14" ;
+    ns4:timestamp "2021-05-19T19:18:29Z" ;
+    ns1:P106 <http://www.wikidata.org/entity/statement/Q27949870-D9AF5391-A700-43A1-8AEF-4531CF19D45A>,
+        <http://www.wikidata.org/entity/statement/q27949870-1afb7f16-89f3-43cc-9a5b-b038ed81010a> ;
+    ns1:P1412 <http://www.wikidata.org/entity/statement/q27949870-0f0373f2-a840-407c-9f7c-2edd3a9ce8ae> ;
+    ns1:P21 <http://www.wikidata.org/entity/statement/q27949870-e1190ab6-4261-401e-9431-30e64c480af3> ;
+    ns1:P2639 <http://www.wikidata.org/entity/statement/Q27949870-70863eed-4b41-6483-a81c-14e1e634b7be> ;
+    ns1:P27 <http://www.wikidata.org/entity/statement/q27949870-03dc8a68-5368-46b8-a152-a462c3b6bd77> ;
+    ns1:P31 <http://www.wikidata.org/entity/statement/q27949870-ad3967ab-f03e-41a6-bef1-201201c42d51> ;
+    ns1:P345 <http://www.wikidata.org/entity/statement/q27949870-3ea13c2f-4ace-4f19-bdf0-48dbac482a74> ;
+    ns1:P3857 <http://www.wikidata.org/entity/statement/q27949870-7fb00913-7494-4d1f-844b-c264bd751e3a> ;
+    ns1:P4985 <http://www.wikidata.org/entity/statement/Q27949870-CEEEFA7A-9E7D-4F8A-AD92-E24890A57815> ;
+    ns1:P5068 <http://www.wikidata.org/entity/statement/Q27949870-C1B2BD91-E8EF-4C7E-8BC6-010C0D2E8C82> ;
+    ns1:P569 <http://www.wikidata.org/entity/statement/Q27949870-c4eac739-a46f-4336-a811-80731547de01> ;
+    ns1:P646 <http://www.wikidata.org/entity/statement/Q27949870-ACDA7568-20C4-4F55-8FB1-7806F5F9BED7> ;
+    ns1:P735 <http://www.wikidata.org/entity/statement/Q27949870-FBA656C1-56BB-4FE0-94B8-9CB234628D90> ;
+    ns5:P646 <http://g.co/kg/m/0gf8q74> ;
+    ns2:P106 <http://www.wikidata.org/entity/Q33999>,
+        <http://www.wikidata.org/entity/Q713200> ;
+    ns2:P1412 <http://www.wikidata.org/entity/Q1321> ;
+    ns2:P21 <http://www.wikidata.org/entity/Q6581097> ;
+    ns2:P2639 "90c51fbda42740099926d5e6b6124171" ;
+    ns2:P27 <http://www.wikidata.org/entity/Q414> ;
+    ns2:P31 <http://www.wikidata.org/entity/Q5> ;
+    ns2:P345 "nm2013399" ;
+    ns2:P3857 "esteban-bigliardi" ;
+    ns2:P4985 "1086358" ;
+    ns2:P5068 "1957752" ;
+    ns2:P569 "1973-01-01T00:00:00Z" ;
+    ns2:P646 "/m/0gf8q74" ;
+    ns2:P735 <http://www.wikidata.org/entity/Q17496543> .
+
+twssd:Flula_Borg rdfs:label "Flula Borg",
+        "Flula Borgs",
+        "Φλούλα Μποργκ",
+        "Флула Борг",
+        "Ֆլուլա Բորգ",
+        "فلولا بورج",
+        "فلولا بورق",
+        "فلولا بورگ",
+        "フルーラ・ボーグ",
+        "弗卢拉·伯格",
+        "弗盧拉·伯格" ;
+    schema:dateModified "2021-06-02T02:16:59Z" ;
+    schema:description "Duits acteur",
+        "Düütscher Schauspeler",
+        "German singer",
+        "acteur allemand",
+        "actor alemán",
+        "attore tedesco",
+        "deutscher Webvideoproduzent, Schauspieler und Techno-DJ" ;
+    schema:version "1433406597" ;
+    ns4:identifiers "21" ;
+    ns4:sitelinks "9" ;
+    ns4:statements "45" ;
+    ns4:timestamp "2021-06-02T02:17:01Z" ;
+    ns3:altLabel "フルーラ・ボルク",
+        "夫盧拉·博格",
+        "弗拉·伯格",
+        "弗拉拉·博",
+        "弗璐拉·博格",
+        "弗盧拉·伯格",
+        "弗盧拉·博格",
+        "弗魯拉·柏格",
+        "芙洛拉·伯格" ;
+    ns1:P106 <http://www.wikidata.org/entity/statement/Q19668395-26ED83D6-DEFF-47CC-AC0B-24D55480F8D3>,
+        <http://www.wikidata.org/entity/statement/Q19668395-3CA4DFE9-DC17-4B5A-A7DC-567E2FCF5374>,
+        <http://www.wikidata.org/entity/statement/Q19668395-45d3990f-40cb-82bf-6c4f-62d394b43d38>,
+        <http://www.wikidata.org/entity/statement/Q19668395-65463CA2-6B8C-4258-8E19-E57B6B9C562F>,
+        <http://www.wikidata.org/entity/statement/Q19668395-68EE4006-A9AF-483F-B18F-6887E60F36A0>,
+        <http://www.wikidata.org/entity/statement/Q19668395-A84E7166-8C5C-4DAC-B7F7-5E41D31BA3E4>,
+        <http://www.wikidata.org/entity/statement/Q19668395-E81E7B67-87D9-404E-BEA5-E44A70D7A01C>,
+        <http://www.wikidata.org/entity/statement/Q19668395-fe3bca85-4554-b3f5-d4f3-bed225888fca> ;
+    ns1:P1266 <http://www.wikidata.org/entity/statement/Q19668395-0e7966f9-45fe-754e-fba6-90bc625e9efd> ;
+    ns1:P1280 <http://www.wikidata.org/entity/statement/Q19668395-08DEF3B9-CCAE-449D-9B76-0EE7B110F452> ;
+    ns1:P136 <http://www.wikidata.org/entity/statement/Q19668395-E1107F65-961E-45AD-861E-E9FB263072B7> ;
+    ns1:P1412 <http://www.wikidata.org/entity/statement/Q19668395-431DFA05-0C28-4FA0-A7BC-22BCAE789F8A> ;
+    ns1:P1559 <http://www.wikidata.org/entity/statement/Q19668395-B2396461-759E-4971-9516-F670582D195B> ;
+    ns1:P18 <http://www.wikidata.org/entity/statement/Q19668395-A7B11593-C4EB-42E8-A868-AECC9E0A433F> ;
+    ns1:P19 <http://www.wikidata.org/entity/statement/Q19668395-C60A1D49-1D1F-4DF5-BB30-E7EFD7EA33F0> ;
+    ns1:P1953 <http://www.wikidata.org/entity/statement/Q19668395-1A789CF7-A80E-46FC-8031-9E807FFECC1A> ;
+    ns1:P2002 <http://www.wikidata.org/entity/statement/Q19668395-F3503914-B19D-4EBD-8F02-07D17126F53E> ;
+    ns1:P2003 <http://www.wikidata.org/entity/statement/Q19668395-7BE91BDF-02F1-449B-8614-861E0F96EE99> ;
+    ns1:P2013 <http://www.wikidata.org/entity/statement/Q19668395-BC185E19-2BAB-444C-832B-0FB6E750977A> ;
+    ns1:P2019 <http://www.wikidata.org/entity/statement/Q19668395-924c93ee-4e6f-d7d3-eea4-cc445a5bc1ed> ;
+    ns1:P2031 <http://www.wikidata.org/entity/statement/Q19668395-BD6C39B6-9F11-44E6-82A5-8D5DFDF6BF64> ;
+    ns1:P21 <http://www.wikidata.org/entity/statement/Q19668395-C8D4D328-9656-4F3B-B000-14B84A08D18F> ;
+    ns1:P2397 <http://www.wikidata.org/entity/statement/Q19668395-6a3812a5-459a-1ffa-fcc7-8095e8c0e705> ;
+    ns1:P2519 <http://www.wikidata.org/entity/statement/Q19668395-a17de104-46ce-6e54-641d-44df73569713> ;
+    ns1:P2604 <http://www.wikidata.org/entity/statement/Q19668395-ddbaaa8d-4636-221b-ce24-330691132004> ;
+    ns1:P2605 <http://www.wikidata.org/entity/statement/Q19668395-f75b8724-4eb0-861a-7ad1-304c198d0ab4> ;
+    ns1:P27 <http://www.wikidata.org/entity/statement/Q19668395-D927C41A-3A72-4991-A57B-A92715AF4F1D> ;
+    ns1:P31 <http://www.wikidata.org/entity/statement/Q19668395-C978B930-113A-4A59-91AB-0CA1E317636C> ;
+    ns1:P345 <http://www.wikidata.org/entity/statement/Q19668395-B57946A8-9438-4B6E-BCC6-C6CD4C467D6F> ;
+    ns1:P373 <http://www.wikidata.org/entity/statement/Q19668395-3A190FC1-7C91-47A6-9EBA-811512BF31EF> ;
+    ns1:P3790 <http://www.wikidata.org/entity/statement/Q19668395-5929181D-F491-43BB-82A8-A313AC212614> ;
+    ns1:P434 <http://www.wikidata.org/entity/statement/Q19668395-B9CE59FE-14D8-42D8-8957-9858ED8D58E5> ;
+    ns1:P4657 <http://www.wikidata.org/entity/statement/Q19668395-604FD5E8-254E-44C2-B399-FE8601B3796B> ;
+    ns1:P4666 <http://www.wikidata.org/entity/statement/Q19668395-8CF1712A-7D3D-4960-BA5C-27E5112EA315> ;
+    ns1:P4985 <http://www.wikidata.org/entity/statement/Q19668395-F78025D6-156B-4665-8F44-A3A19F0C4BE3> ;
+    ns1:P5007 <http://www.wikidata.org/entity/statement/Q19668395-C587A1F8-45C0-4190-9588-DC1F04504C41> ;
+    ns1:P569 <http://www.wikidata.org/entity/statement/Q19668395-E0DA3160-B017-4F25-B31D-FF05C40CD0C9> ;
+    ns1:P6262 <http://www.wikidata.org/entity/statement/Q19668395-FEED90E0-E120-459B-9EBA-0141FBBC7782> ;
+    ns1:P646 <http://www.wikidata.org/entity/statement/Q19668395-4E115A14-16CC-48A5-9046-79FA53986F2B> ;
+    ns1:P734 <http://www.wikidata.org/entity/statement/Q19668395-ae758373-452e-ea04-6350-b49e3511d251> ;
+    ns1:P735 <http://www.wikidata.org/entity/statement/Q19668395-cc476f72-48e8-fcf8-7cf4-726782dd2a2c> ;
+    ns1:P8125 <http://www.wikidata.org/entity/statement/Q19668395-3CC5928F-F4E5-4ABD-9B57-F3C8502B39B7> ;
+    ns1:P856 <http://www.wikidata.org/entity/statement/Q19668395-1A9D2DD8-046F-4467-A70B-C16C5F5A7CE3> ;
+    ns1:P8687 <http://www.wikidata.org/entity/statement/Q19668395-23e26fb1-f099-4df2-94c5-bf52f110e3e9>,
+        <http://www.wikidata.org/entity/statement/Q19668395-5b5a30d3-7c80-4efb-ab72-d8b2d91c6611> ;
+    ns5:P434 <http://musicbrainz.org/artist/217338f0-59b4-474e-a6e4-5f15986888f5> ;
+    ns5:P646 <http://g.co/kg/m/03y6z6g> ;
+    ns2:P106 <http://www.wikidata.org/entity/Q130857>,
+        <http://www.wikidata.org/entity/Q17125263>,
+        <http://www.wikidata.org/entity/Q183945>,
+        <http://www.wikidata.org/entity/Q245068>,
+        <http://www.wikidata.org/entity/Q33999>,
+        <http://www.wikidata.org/entity/Q36834>,
+        <http://www.wikidata.org/entity/Q4110598>,
+        <http://www.wikidata.org/entity/Q578109> ;
+    ns2:P1266 "714384" ;
+    ns2:P1280 "320693859" ;
+    ns2:P136 <http://www.wikidata.org/entity/Q851213> ;
+    ns2:P1412 <http://www.wikidata.org/entity/Q188> ;
+    ns2:P1559 "Flula Borg" ;
+    ns2:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Flula%20Borg%20Vlogbrothers%202016.jpg> ;
+    ns2:P19 <http://www.wikidata.org/entity/Q3126> ;
+    ns2:P1953 "5123885" ;
+    ns2:P2002 "flula" ;
+    ns2:P2003 "flula" ;
+    ns2:P2013 "flula" ;
+    ns2:P2019 "p798980" ;
+    ns2:P2031 "2007-01-01T00:00:00Z" ;
+    ns2:P21 <http://www.wikidata.org/entity/Q6581097> ;
+    ns2:P2397 "UCTbC3hJmqKotBt4s2BGRjrA" ;
+    ns2:P2519 "69321" ;
+    ns2:P2604 "1543450" ;
+    ns2:P2605 "174171" ;
+    ns2:P27 <http://www.wikidata.org/entity/Q183> ;
+    ns2:P31 <http://www.wikidata.org/entity/Q5> ;
+    ns2:P345 "nm2887579" ;
+    ns2:P373 "Flula Borg" ;
+    ns2:P3790 "4188" ;
+    ns2:P434 "217338f0-59b4-474e-a6e4-5f15986888f5" ;
+    ns2:P4657 "1037780401" ;
+    ns2:P4666 "559125" ;
+    ns2:P4985 "1471841" ;
+    ns2:P5007 "Flula-Borg" ;
+    ns2:P569 "1982-03-28T00:00:00Z" ;
+    ns2:P6262 "disney:Flula_Borg" ;
+    ns2:P646 "/m/03y6z6g" ;
+    ns2:P734 <http://www.wikidata.org/entity/Q1260736> ;
+    ns2:P735 <http://www.wikidata.org/entity/Q87211086> ;
+    ns2:P8125 "70280" ;
+    ns2:P8687 "88455" .
+
+twssd:Maisie_Williams rdfs:label "Maisie Williams",
+        "Μέισι Γουίλιαμς",
+        "Мейзи Уилямс",
+        "Мейсі Вільямс",
+        "Мејси Вилијамс",
+        "Мэйси Уильямс",
+        "Մեյսի Ուիլյամս",
+        "מייזי ויליאמס",
+        "مايسى ويليامز",
+        "مايسي ويليامز",
+        "مایسی ویلیامز",
+        "میسی ویلیامز",
+        "मैसी विलिअम्स",
+        "মেইজি উইলিয়ামস",
+        "ಮೈಸಿ ವಿಲಿಯಮ್ಸ್",
+        "മൈസി വില്യംസ്",
+        "მეიზი უილიამსი",
+        "メイジー・ウィリアムズ",
+        "美絲威廉斯",
+        "麥茜·威廉士",
+        "麥茜·威廉姆斯",
+        "麦茜·威廉姆斯",
+        "메이지 윌리엄스" ;
+    schema:dateModified "2021-05-29T18:51:24Z" ;
+    schema:description "Atriz britânica",
+        "British actress",
+        "Brits actrice",
+        "English actress",
+        "actrice britannique",
+        "actriu britànica",
+        "actriz británica",
+        "actriz y bailarina inglesa",
+        "attrice britannica",
+        "brita aktorino",
+        "britische Schauspielerin",
+        "britská herečka",
+        "brittisk skådespelare",
+        "brytyjska aktorka",
+        "englantilainen näyttelijä",
+        "pemeran perempuan asal Britania Raya",
+        "Βρετανίδα ηθοποιός",
+        "английская актриса",
+        "שחקנית בריטית",
+        "ممثلة بريطانية",
+        "هنرپیشه بریتانیایی",
+        "ব্রিটিশ অভিনেত্রী",
+        "ಬ್ರಿಟಿಷ್ ಚಲನಚಿತ್ರ ನಟಿ",
+        "ബ്രിട്ടനിലെ ചലച്ചിത്ര അഭിനേത്രി",
+        "미국 배우" ;
+    schema:version "1431052299" ;
+    ns4:identifiers "42" ;
+    ns4:sitelinks "51" ;
+    ns4:statements "69" ;
+    ns4:timestamp "2021-05-29T18:52:45Z" ;
+    ns3:altLabel "Margaret Constance Williams",
+        "Williams, Maisie",
+        "Уильямс, Мэйси",
+        "마거릿 콘스턴스 윌리엄스" ;
+    ns1:P106 <http://www.wikidata.org/entity/statement/Q234363-076913DD-3CA5-48C7-AC9B-471DB97CB503>,
+        <http://www.wikidata.org/entity/statement/Q234363-26FEA8EE-5F43-4A7B-B74C-12DEE4D88E13>,
+        <http://www.wikidata.org/entity/statement/Q234363-6CFCE6BE-EDEF-4665-893A-845D40F82251>,
+        <http://www.wikidata.org/entity/statement/Q234363-e781b6c1-4d97-fb2d-ba09-28b1d2f2cd99>,
+        <http://www.wikidata.org/entity/statement/q234363-F7DC3C31-A6A4-4ECC-8E7F-7FD815A766F6> ;
+    ns1:P1207 <http://www.wikidata.org/entity/statement/Q234363-B8BF40D1-6723-425B-9634-C31FD2CED87E> ;
+    ns1:P1266 <http://www.wikidata.org/entity/statement/Q234363-533d5e94-4d11-f41e-6660-0931910c5678> ;
+    ns1:P1280 <http://www.wikidata.org/entity/statement/Q234363-C3314D65-2063-437C-B8EE-870DDA4EEE58> ;
+    ns1:P140 <http://www.wikidata.org/entity/statement/Q234363-a792b7a1-4b96-d037-1986-cb20ce4b3759> ;
+    ns1:P1412 <http://www.wikidata.org/entity/statement/Q234363-a17cc499-4c6e-2b38-e2bf-e8469fb40eb5> ;
+    ns1:P1477 <http://www.wikidata.org/entity/statement/Q234363-97bb3cba-443d-7aa8-de94-78104151609d> ;
+    ns1:P1559 <http://www.wikidata.org/entity/statement/Q234363-a1ea8d20-4992-7b78-4c1a-356a5abe9e91> ;
+    ns1:P1576 <http://www.wikidata.org/entity/statement/Q234363-3ecb1eca-4699-a140-fadc-03ce5281b270> ;
+    ns1:P18 <http://www.wikidata.org/entity/statement/q234363-6A35EBCB-956A-4EE0-951A-7258CDCE6D2B> ;
+    ns1:P1816 <http://www.wikidata.org/entity/statement/Q234363-27C10EAF-EDDE-41B9-B64F-D7BE63F43CB2> ;
+    ns1:P1889 <http://www.wikidata.org/entity/statement/Q234363-5588490B-2B63-4411-A121-F41898D67465> ;
+    ns1:P19 <http://www.wikidata.org/entity/statement/Q234363-B2BEF614-E9BF-4C45-A649-C140B0FE6E79> ;
+    ns1:P2002 <http://www.wikidata.org/entity/statement/Q234363-05BAA499-FB95-410F-AF32-20C3448FF0C6> ;
+    ns1:P2003 <http://www.wikidata.org/entity/statement/Q234363-309D388D-8539-4FF9-9F24-6FCDE38130D1> ;
+    ns1:P2013 <http://www.wikidata.org/entity/statement/Q234363-96D1B161-70B2-4FE9-A7E5-597A2232D1BA> ;
+    ns1:P2019 <http://www.wikidata.org/entity/statement/Q234363-ce862897-4ee3-d0f3-0de0-476edabfedfe> ;
+    ns1:P2031 <http://www.wikidata.org/entity/statement/Q234363-3416d4d5-4b60-89f9-3319-d62b314f7447> ;
+    ns1:P21 <http://www.wikidata.org/entity/statement/q234363-604F7318-195B-4DB4-B08D-9D840207C05B> ;
+    ns1:P213 <http://www.wikidata.org/entity/statement/Q234363-6462B698-C562-4025-AA90-BE58575CC638> ;
+    ns1:P214 <http://www.wikidata.org/entity/statement/q234363-3B304ECD-A98D-4216-A35F-60EB5A64054B> ;
+    ns1:P227 <http://www.wikidata.org/entity/statement/q234363-9738E148-BA0D-407E-895E-BE27D6DE48D2> ;
+    ns1:P2435 <http://www.wikidata.org/entity/statement/Q234363-32CE1179-2FCD-4DE3-BD10-9964DC9CEF34> ;
+    ns1:P244 <http://www.wikidata.org/entity/statement/Q234363-B6227AB1-2ED2-4608-B2AA-273448192E30> ;
+    ns1:P2604 <http://www.wikidata.org/entity/statement/Q234363-49e22c4a-429a-805c-9b1e-1a0728135cd3> ;
+    ns1:P2605 <http://www.wikidata.org/entity/statement/Q234363-D4A3FC18-B7F5-47DA-AD05-BC85A890563C> ;
+    ns1:P2638 <http://www.wikidata.org/entity/statement/Q234363-8A45A39F-1D77-48B5-A634-363C51CF26CF> ;
+    ns1:P27 <http://www.wikidata.org/entity/statement/q234363-4FF7FDA5-CAA2-4405-8C7F-CA6A6B632099> ;
+    ns1:P31 <http://www.wikidata.org/entity/statement/Q234363-2DF1B8C0-B344-438F-A9E3-DE10AC327727> ;
+    ns1:P3388 <http://www.wikidata.org/entity/statement/Q234363-98136F22-DCA3-41A6-9679-605B65D5EB12> ;
+    ns1:P3417 <http://www.wikidata.org/entity/statement/Q234363-2D27E56C-C675-42BB-BEC9-EB0FDEA4AFC4> ;
+    ns1:P345 <http://www.wikidata.org/entity/statement/q234363-101BA519-F782-4150-98C8-509A9CC930BE> ;
+    ns1:P373 <http://www.wikidata.org/entity/statement/q234363-9BD851B7-B3E5-4BB9-B9F3-39F6AF481C39> ;
+    ns1:P4332 <http://www.wikidata.org/entity/statement/Q234363-406E8271-ECE2-4FA2-AE90-CB0B99CA5856> ;
+    ns1:P4657 <http://www.wikidata.org/entity/statement/Q234363-3DE0FE51-72C5-4EE5-94AE-2B4F445C7AD4> ;
+    ns1:P4666 <http://www.wikidata.org/entity/statement/Q234363-05955B40-CCBF-484B-8CB2-3318371C8722> ;
+    ns1:P4985 <http://www.wikidata.org/entity/statement/Q234363-09E98AB0-B276-444D-93A7-7C93F8F3D103> ;
+    ns1:P5008 <http://www.wikidata.org/entity/statement/Q234363-615C4C53-88E8-4C29-BD96-6158BF878A29> ;
+    ns1:P5284 <http://www.wikidata.org/entity/statement/Q234363-CC5AFC86-EF73-42D8-9CCB-E73C65000A64> ;
+    ns1:P5297 <http://www.wikidata.org/entity/statement/Q234363-072467D5-FFC4-4947-B13A-595C3B721509>,
+        <http://www.wikidata.org/entity/statement/Q234363-55C3AA01-CD13-473A-9138-DD63A9999163>,
+        <http://www.wikidata.org/entity/statement/Q234363-5CEEFD68-FE80-45DE-AA5C-38D13A9C0092>,
+        <http://www.wikidata.org/entity/statement/Q234363-94902A13-6552-41B4-BEA1-49DDE69125E2>,
+        <http://www.wikidata.org/entity/statement/Q234363-9E0FB85E-8944-4115-9285-8FC5B9841023> ;
+    ns1:P5534 <http://www.wikidata.org/entity/statement/Q234363-50C0D23B-D589-43B7-8EBA-EBA8ABF2D72E> ;
+    ns1:P5617 <http://www.wikidata.org/entity/statement/Q234363-A6D004DB-36DF-4D50-A13F-59CCC1488B91> ;
+    ns1:P569 <http://www.wikidata.org/entity/statement/Q234363-3D2B311F-4E95-43DE-9BB6-78DE461FF7A0> ;
+    ns1:P5882 <http://www.wikidata.org/entity/statement/Q234363-B3B00DF3-B650-4794-AC23-AAE9920D0A14> ;
+    ns1:P6298 <http://www.wikidata.org/entity/statement/Q234363-F3095B27-8D75-4388-BEB8-C26612F9512E> ;
+    ns1:P646 <http://www.wikidata.org/entity/statement/Q234363-00CBF95F-3F99-4C72-9496-1CE43EEB6EC7> ;
+    ns1:P6839 <http://www.wikidata.org/entity/statement/Q234363-7198d2b6-4f00-e196-fbd3-4ac23966d25c> ;
+    ns1:P6868 <http://www.wikidata.org/entity/statement/Q234363-24E7C5B4-9248-44A7-8C4F-41FDA417EC33> ;
+    ns1:P69 <http://www.wikidata.org/entity/statement/Q234363-F3266822-96DC-4D3E-9A33-DDAF72B5CDE7> ;
+    ns1:P734 <http://www.wikidata.org/entity/statement/Q234363-6976440D-5F47-4FB1-A278-74B584E5C880> ;
+    ns1:P735 <http://www.wikidata.org/entity/statement/Q234363-6673dc3d-49cb-291e-94a4-44145c03b7f8>,
+        <http://www.wikidata.org/entity/statement/Q234363-df6da61a-474e-9d6c-262a-1bb9926fb737> ;
+    ns1:P7580 <http://www.wikidata.org/entity/statement/Q234363-3973e305-4ac9-ff63-d17a-885d45998a66> ;
+    ns1:P7818 <http://www.wikidata.org/entity/statement/Q234363-FF882CBA-CCEC-4878-AD04-F05331A233D0> ;
+    ns1:P7859 <http://www.wikidata.org/entity/statement/Q234363-3F1ED3EE-4D13-4CAF-9BF0-F638F4B7590A> ;
+    ns1:P8094 <http://www.wikidata.org/entity/statement/Q234363-8719A81D-FBDF-4D62-B9F1-64F4B72AF60A> ;
+    ns1:P8672 <http://www.wikidata.org/entity/statement/Q234363-89290BA0-F89D-4260-934C-B38DF39FB060> ;
+    ns1:P8687 <http://www.wikidata.org/entity/statement/Q234363-494500fd-1664-4cc3-8d77-1faebfceb299>,
+        <http://www.wikidata.org/entity/statement/Q234363-91a3af04-9f2c-40df-8782-289cf997936a> ;
+    ns1:P950 <http://www.wikidata.org/entity/statement/Q234363-4E2BFE08-1F18-4991-8EF5-E0F4FDB97A2F> ;
+    ns1:P989 <http://www.wikidata.org/entity/statement/Q234363-8AEAF242-7F0E-4985-B9AE-E11E989B1EDA> ;
+    ns5:P214 <http://viaf.org/viaf/263795043> ;
+    ns5:P227 <https://d-nb.info/gnd/1022522299> ;
+    ns5:P244 <https://id.loc.gov/authorities/names/no2013019779> ;
+    ns5:P646 <http://g.co/kg/m/0h1gcvm> ;
+    ns5:P950 <http://datos.bne.es/resource/XX5571547> ;
+    ns2:P106 <http://www.wikidata.org/entity/Q10798782>,
+        <http://www.wikidata.org/entity/Q10800557>,
+        <http://www.wikidata.org/entity/Q2259451>,
+        <http://www.wikidata.org/entity/Q33999>,
+        <http://www.wikidata.org/entity/Q970153> ;
+    ns2:P1207 "n2017169486" ;
+    ns2:P1266 "405378" ;
+    ns2:P1280 "218621283" ;
+    ns2:P140 <http://www.wikidata.org/entity/Q6423963> ;
+    ns2:P1412 <http://www.wikidata.org/entity/Q1860> ;
+    ns2:P1477 "Margaret Constance Williams" ;
+    ns2:P1559 "Maisie Williams" ;
+    ns2:P1576 <http://www.wikidata.org/entity/Q181138> ;
+    ns2:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Maisie%20Williams%20by%20Gage%20Skidmore%203.jpg> ;
+    ns2:P1816 "mp163685" ;
+    ns2:P1889 <http://www.wikidata.org/entity/Q446512> ;
+    ns2:P19 <http://www.wikidata.org/entity/Q23154> ;
+    ns2:P2002 "Maisie_Williams" ;
+    ns2:P2003 "maisie_williams" ;
+    ns2:P2013 "MaisieWilliamsOfficial" ;
+    ns2:P2019 "p774983" ;
+    ns2:P2031 "2011-01-01T00:00:00Z" ;
+    ns2:P21 <http://www.wikidata.org/entity/Q6581072> ;
+    ns2:P213 "0000 0004 0363 5976" ;
+    ns2:P214 "263795043" ;
+    ns2:P227 "1022522299" ;
+    ns2:P2435 "355144" ;
+    ns2:P244 "no2013019779" ;
+    ns2:P2604 "1826849" ;
+    ns2:P2605 "66037" ;
+    ns2:P2638 "people/maisie-williams" ;
+    ns2:P27 <http://www.wikidata.org/entity/Q145> ;
+    ns2:P31 <http://www.wikidata.org/entity/Q5> ;
+    ns2:P3388 "247842" ;
+    ns2:P3417 "Maisie-Williams-actress" ;
+    ns2:P345 "nm3586035" ;
+    ns2:P373 "Maisie Williams" ;
+    ns2:P4332 "42431" ;
+    ns2:P4657 "836510401" ;
+    ns2:P4666 "349802" ;
+    ns2:P4985 "1181313" ;
+    ns2:P5008 <http://www.wikidata.org/entity/Q24909800> ;
+    ns2:P5284 "1314818" ;
+    ns2:P5297 "-5BnhvHVlCC3pgYKFqSt1fnemms",
+        "CJspSbBV2he4IHdxYJCNaYdH4yE",
+        "U2zlobnIzPc1UV5odDhrb52dtKI",
+        "rgSNJcofbbhnflIoSLiEuRWL-Fg",
+        "rtOklakShnpcREuSGGiPkWuKTqo" ;
+    ns2:P5534 "205562" ;
+    ns2:P5617 "maisie-williams-3301053" ;
+    ns2:P569 "1997-04-15T00:00:00Z" ;
+    ns2:P5882 "M00000519563" ;
+    ns2:P6298 "29073" ;
+    ns2:P646 "/m/0h1gcvm" ;
+    ns2:P6839 "Creator/MaisieWilliams" ;
+    ns2:P6868 "1044133167" ;
+    ns2:P69 <http://www.wikidata.org/entity/Q7060640> ;
+    ns2:P734 <http://www.wikidata.org/entity/Q1688722> ;
+    ns2:P735 <http://www.wikidata.org/entity/Q4963612>,
+        <http://www.wikidata.org/entity/Q679755> ;
+    ns2:P7580 "658835" ;
+    ns2:P7818 "Maisie_Williams" ;
+    ns2:P7859 "lccn-no2013019779" ;
+    ns2:P8094 "williamsmar" ;
+    ns2:P8672 "828657307227525120" ;
+    ns2:P8687 "2746404" ;
+    ns2:P950 "XX5571547" ;
+    ns2:P989 <http://commons.wikimedia.org/wiki/Special:FilePath/En-Maisie%20Williams-article.ogg> .
+
+twssd:Martin_Donovan rdfs:label "Martin Donovan",
+        "Μάρτιν Ντόνοβαν",
+        "Мартин Донован",
+        "Մարտին Դոնովան",
+        "מרטין דונובן",
+        "مارتن دونوفان",
+        "مارتين دونوڤان",
+        "مارتین دونوان",
+        "மார்டின் டோனவன்",
+        "มาร์ติน โดโนแวน",
+        "マーティン・ドノヴァン",
+        "馬丁·多諾萬",
+        "마틴 도너번" ;
+    schema:dateModified "2021-05-22T17:52:04Z",
+        "2021-05-29T01:33:23Z" ;
+    schema:description "American actor",
+        "Amerikaans acteur",
+        "Amerikaanse akteur",
+        "Amerikalı oyuncu",
+        "Argentine screenwriter and film director",
+        "US-amerikanischer Schauspieler",
+        "Usana aktoro",
+        "acteur américain",
+        "actor american",
+        "actor estadounidense",
+        "actor estatunidenc",
+        "aisteoir Meiriceánach",
+        "aktor amerikan",
+        "aktor merikano",
+        "ameerika näitleja",
+        "amerikai színész",
+        "amerikansk skådespelare",
+        "amerikāņu aktieris",
+        "argentinischer Filmregisseur und Drehbuchautor",
+        "ator american",
+        "attore cinematografico statunitense",
+        "dramatan Lamerikänik",
+        "pemeran laki-laki asal Amerika Serikat",
+        "scenarioschrijver",
+        "usona aktoro",
+        "yhdysvaltalainen näyttelijä",
+        "Αμερικανός ηθοποιός",
+        "американский актёр, режиссёр и сценарист",
+        "американський актор",
+        "שחקן אמריקאי",
+        "تهیهکننده، فیلمنامهنویس، و بازیگر آمریکایی",
+        "ممثل أمريكي",
+        "মার্কিন অভিনেতা",
+        "അമേരിക്കന് ചലചിത്ര നടന്" ;
+    schema:version "1426557529",
+        "1430618737" ;
+    ns4:identifiers "33",
+        "9" ;
+    ns4:sitelinks "2",
+        "28" ;
+    ns4:statements "22",
+        "51" ;
+    ns4:timestamp "2021-05-22T17:52:21Z",
+        "2021-05-29T01:33:25Z" ;
+    ns3:altLabel "Carlos Enrique Valera Y Peralta-Ramos",
+        "Donovan",
+        "Martín Donovan",
+        "Донован, Мартин",
+        "마틴 도노반" ;
+    ns1:P1006 <http://www.wikidata.org/entity/statement/Q726130-244F3D1C-8EE3-464A-8AA3-95D3923F7E30> ;
+    ns1:P106 <http://www.wikidata.org/entity/statement/Q61867559-0bebb7d3-9c26-4037-a1b5-dc43786c0c56>,
+        <http://www.wikidata.org/entity/statement/Q61867559-7171c954-a819-4a32-8acd-0569eb91a6bb>,
+        <http://www.wikidata.org/entity/statement/Q61867559-72df9c7e-fb10-425c-9c58-b5da1a588b2c>,
+        <http://www.wikidata.org/entity/statement/Q61867559-7323f2a1-3b6e-440a-9d8f-95d51236810e>,
+        <http://www.wikidata.org/entity/statement/Q61867559-963864fc-d5ee-4b28-b3c4-7c083d6e13a7>,
+        <http://www.wikidata.org/entity/statement/Q61867559-be20cfbf-755a-4c50-8c59-2e97be613e9d>,
+        <http://www.wikidata.org/entity/statement/Q726130-36194A8E-66FC-4793-8DFC-2DB866D6F07A>,
+        <http://www.wikidata.org/entity/statement/Q726130-41FECCB8-2918-492B-9249-C30E031CA7B5>,
+        <http://www.wikidata.org/entity/statement/Q726130-562452bc-40cb-6c36-aa44-84c549651447>,
+        <http://www.wikidata.org/entity/statement/Q726130-68DBF95B-4762-4CCA-B4D2-4D2BD436CA44>,
+        <http://www.wikidata.org/entity/statement/Q726130-FE9436EE-B196-4882-A5AD-7AD77BA39DE0>,
+        <http://www.wikidata.org/entity/statement/q726130-C7DBB546-8E53-4CAF-96A2-9571F845D8C8> ;
+    ns1:P1207 <http://www.wikidata.org/entity/statement/Q61867559-842CBC2B-1CAB-49C9-AACB-F10DD723533C>,
+        <http://www.wikidata.org/entity/statement/Q726130-6272D3B6-CEA3-42C4-A837-884C9517F4BB> ;
+    ns1:P1263 <http://www.wikidata.org/entity/statement/Q726130-E2704E23-FDB8-4B11-B37B-8A358D624B74> ;
+    ns1:P1266 <http://www.wikidata.org/entity/statement/Q726130-01128A11-E7EF-47FE-8028-F5C84F1E79EA> ;
+    ns1:P1412 <http://www.wikidata.org/entity/statement/Q726130-B36DD451-E472-4FCB-A1F7-7CD561980BD2> ;
+    ns1:P18 <http://www.wikidata.org/entity/statement/q726130-5449DA1B-6E5A-4702-9782-33A7E7D8A2A1> ;
+    ns1:P19 <http://www.wikidata.org/entity/statement/Q61867559-755BFC72-9426-4D4F-8EF0-8DC32EAD0D5B>,
+        <http://www.wikidata.org/entity/statement/Q726130-2C85B866-05C4-42B5-B54C-F3053B26E00F> ;
+    ns1:P1969 <http://www.wikidata.org/entity/statement/Q726130-033d2578-42a5-d0b6-ef48-c9072ab302f5> ;
+    ns1:P2002 <http://www.wikidata.org/entity/statement/Q726130-616ea467-463c-e0ff-e72d-23f86a1983a2> ;
+    ns1:P2019 <http://www.wikidata.org/entity/statement/Q726130-6c81f583-4124-2b56-15e2-abfc12ca4fac> ;
+    ns1:P2031 <http://www.wikidata.org/entity/statement/Q61867559-D43D67BD-7060-4BC2-A2D3-52DDCC26F048>,
+        <http://www.wikidata.org/entity/statement/Q726130-2A8B646C-C010-41EC-8904-EB4AAF22F1FB> ;
+    ns1:P21 <http://www.wikidata.org/entity/statement/Q61867559-7dda90b0-811d-45da-8a2e-2dff41ebf4de>,
+        <http://www.wikidata.org/entity/statement/Q726130-164DC413-A12E-4ED2-AC60-819408AE3961> ;
+    ns1:P213 <http://www.wikidata.org/entity/statement/q726130-D629E2C9-2C5B-44F8-B693-60D857C9C5CC> ;
+    ns1:P214 <http://www.wikidata.org/entity/statement/Q61867559-B7DCE3E0-0DCC-4975-B65E-14A93AC8AD66>,
+        <http://www.wikidata.org/entity/statement/q726130-33619AB4-2F3B-4337-B92C-0C0AE3C16985> ;
+    ns1:P2168 <http://www.wikidata.org/entity/statement/Q726130-b9224556-42a8-d37f-1193-63d199c0ef0d> ;
+    ns1:P227 <http://www.wikidata.org/entity/statement/q726130-5ACC67BF-FD45-4AF9-8C60-06908EF8E5F2> ;
+    ns1:P2387 <http://www.wikidata.org/entity/statement/Q61867559-3BBEA4A4-66BB-4946-9F55-470733BE8953>,
+        <http://www.wikidata.org/entity/statement/Q726130-8c3c0c76-458f-2357-4383-7433b040803f> ;
+    ns1:P2435 <http://www.wikidata.org/entity/statement/Q726130-d7fd0160-4cf5-ae0d-6b88-621d9a95239f> ;
+    ns1:P244 <http://www.wikidata.org/entity/statement/Q61867559-C93D774C-10D2-4EC8-B308-D769658B807E>,
+        <http://www.wikidata.org/entity/statement/Q726130-3D6E682B-76CD-40E9-B6EB-F80AF1E05F44> ;
+    ns1:P2519 <http://www.wikidata.org/entity/statement/Q726130-afe873fc-41e0-3a27-6087-2c4416f5c6a6> ;
+    ns1:P2604 <http://www.wikidata.org/entity/statement/Q726130-e8e5462e-4657-51dc-f3c4-52cf1367b31b> ;
+    ns1:P2605 <http://www.wikidata.org/entity/statement/Q61867559-f9079058-4b54-2762-27d9-bdf045aaaaaa>,
+        <http://www.wikidata.org/entity/statement/Q726130-a9d22c1c-4c3d-3d52-be87-0895b076b441> ;
+    ns1:P2626 <http://www.wikidata.org/entity/statement/Q726130-a4c275ff-4dda-78e0-bbfc-452efa5f4153> ;
+    ns1:P2639 <http://www.wikidata.org/entity/statement/Q726130-2FF59E31-C60E-4675-AAFF-45F955A9414C> ;
+    ns1:P268 <http://www.wikidata.org/entity/statement/Q726130-268C20D0-88E5-4709-90DA-5C9EB640EC6A> ;
+    ns1:P2688 <http://www.wikidata.org/entity/statement/Q726130-0DFED2D0-50CA-40E3-874D-C981D80F72C9> ;
+    ns1:P269 <http://www.wikidata.org/entity/statement/Q726130-34C418A0-1C5A-4AB0-8253-C1B8CA360B90> ;
+    ns1:P27 <http://www.wikidata.org/entity/statement/Q61867559-1DF75D5F-F6B0-4D74-BDB6-2BB7F25A8A2A>,
+        <http://www.wikidata.org/entity/statement/q726130-468DE142-110F-4A1A-BC21-C99D8BD46D95> ;
+    ns1:P31 <http://www.wikidata.org/entity/statement/Q61867559-81bebc88-f0e9-489b-b06f-422d66130bde>,
+        <http://www.wikidata.org/entity/statement/Q726130-592212C8-4686-445D-9EDD-2FF17DA18D5F> ;
+    ns1:P345 <http://www.wikidata.org/entity/statement/Q61867559-E9FDB80C-E92E-4336-B30D-F9AC0B4AAA50>,
+        <http://www.wikidata.org/entity/statement/q726130-8B8BD337-F433-4E32-A003-22DDF3B05174> ;
+    ns1:P4985 <http://www.wikidata.org/entity/statement/Q61867559-0EF7B3CE-87A4-4DC6-8B7C-EAC39F61A206>,
+        <http://www.wikidata.org/entity/statement/Q726130-BA73ED57-8E5C-4274-B38A-12DE455CA0DE> ;
+    ns1:P5033 <http://www.wikidata.org/entity/statement/Q726130-3409E4CF-16D6-4967-BD9C-A9A55EADC201> ;
+    ns1:P5534 <http://www.wikidata.org/entity/statement/Q726130-8494D7AA-AC98-414B-B8D1-01AD9BE6E251> ;
+    ns1:P569 <http://www.wikidata.org/entity/statement/Q61867559-e9bf9a7d-1a21-4d81-bea6-aefae64187f4>,
+        <http://www.wikidata.org/entity/statement/Q726130-07864149-BD1D-467E-9041-3AE46B5BA261> ;
+    ns1:P646 <http://www.wikidata.org/entity/statement/Q61867559-EC671E6D-3CBE-4C15-AD85-EDB2A13B6944>,
+        <http://www.wikidata.org/entity/statement/Q726130-81D03740-DDFF-4D88-A7F1-5EDF701A9C84> ;
+    ns1:P691 <http://www.wikidata.org/entity/statement/Q726130-FBF52A3A-E75A-41E9-821B-AADCAEE11673> ;
+    ns1:P7214 <http://www.wikidata.org/entity/statement/Q726130-DF3C268C-AACF-43BC-82F3-304F9BBEF18A> ;
+    ns1:P7293 <http://www.wikidata.org/entity/statement/Q726130-82E35F52-855A-4147-A805-D05D21A2DDF1> ;
+    ns1:P734 <http://www.wikidata.org/entity/statement/Q726130-5FF9F3C3-A860-4589-90DF-D41A3BAA50AE> ;
+    ns1:P735 <http://www.wikidata.org/entity/statement/Q61867559-1E2BC3A2-6CD0-4E2A-B96E-ED427CEF3331>,
+        <http://www.wikidata.org/entity/statement/Q726130-BAB11D3F-E321-44DA-AB2A-D32C03861828> ;
+    ns1:P7859 <http://www.wikidata.org/entity/statement/Q61867559-C22FD837-3D24-4B91-9251-43BBD2D32BE6>,
+        <http://www.wikidata.org/entity/statement/Q726130-BDAFC784-775B-4558-ADF7-95FFD67656B6> ;
+    ns1:P7902 <http://www.wikidata.org/entity/statement/Q726130-6FD3295D-A6EF-4BF2-A26D-290D416AD87B> ;
+    ns1:P8687 <http://www.wikidata.org/entity/statement/Q726130-2a3d4629-b775-4445-b8dd-fbcfb6924729>,
+        <http://www.wikidata.org/entity/statement/Q726130-af9ea0d2-ac96-4111-b4b3-52df4de063a6> ;
+    ns1:P950 <http://www.wikidata.org/entity/statement/Q726130-5D5F7A19-8B07-4C6F-B92A-B05016A31130> ;
+    ns5:P1006 <http://data.bibliotheken.nl/id/thes/p158699386> ;
+    ns5:P214 <http://viaf.org/viaf/2670055>,
+        <http://viaf.org/viaf/66664790> ;
+    ns5:P227 <https://d-nb.info/gnd/142315672> ;
+    ns5:P244 <https://id.loc.gov/authorities/names/n2013026650>,
+        <https://id.loc.gov/authorities/names/n92117204> ;
+    ns5:P268 <http://data.bnf.fr/ark:/12148/cb14026043v#about> ;
+    ns5:P269 <http://www.idref.fr/078684420/id> ;
+    ns5:P646 <http://g.co/kg/m/08664q>,
+        <http://g.co/kg/m/0hh2jdy> ;
+    ns5:P950 <http://datos.bne.es/resource/XX1094531> ;
+    ns2:P1006 "158699386" ;
+    ns2:P106 <http://www.wikidata.org/entity/Q10798782>,
+        <http://www.wikidata.org/entity/Q10800557>,
+        <http://www.wikidata.org/entity/Q2259451>,
+        <http://www.wikidata.org/entity/Q2526255>,
+        <http://www.wikidata.org/entity/Q28389>,
+        <http://www.wikidata.org/entity/Q3282637>,
+        <http://www.wikidata.org/entity/Q33999>,
+        <http://www.wikidata.org/entity/Q36180> ;
+    ns2:P1207 "n2008131873",
+        "n2012250369" ;
+    ns2:P1263 "902/000112566" ;
+    ns2:P1266 "2710" ;
+    ns2:P1412 <http://www.wikidata.org/entity/Q1860> ;
+    ns2:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Martin%20Donovan.jpg> ;
+    ns2:P19 <http://www.wikidata.org/entity/Q1486>,
+        <http://www.wikidata.org/entity/Q7315195> ;
+    ns2:P1969 "32116" ;
+    ns2:P2002 "DonovanWord" ;
+    ns2:P2019 "p88058" ;
+    ns2:P2031 "1965-01-01T00:00:00Z",
+        "1982-01-01T00:00:00Z" ;
+    ns2:P21 <http://www.wikidata.org/entity/Q6581097> ;
+    ns2:P213 "0000 0000 8146 5803" ;
+    ns2:P214 "2670055",
+        "66664790" ;
+    ns2:P2168 "96136" ;
+    ns2:P227 "142315672" ;
+    ns2:P2387 "116879",
+        "997108" ;
+    ns2:P2435 "5361" ;
+    ns2:P244 "n2013026650",
+        "n92117204" ;
+    ns2:P2519 "7178" ;
+    ns2:P2604 "22672" ;
+    ns2:P2605 "2194",
+        "79373" ;
+    ns2:P2626 "80071" ;
+    ns2:P2639 "5ab77cc74d92433c84f0c6663761c480" ;
+    ns2:P268 "14026043v" ;
+    ns2:P2688 "martindonovan" ;
+    ns2:P269 "078684420" ;
+    ns2:P27 <http://www.wikidata.org/entity/Q30>,
+        <http://www.wikidata.org/entity/Q414> ;
+    ns2:P31 <http://www.wikidata.org/entity/Q5> ;
+    ns2:P345 "nm0233026",
+        "nm0233027" ;
+    ns2:P4985 "1495632",
+        "42993" ;
+    ns2:P5033 "6813" ;
+    ns2:P5534 "42993" ;
+    ns2:P569 "1950-01-21T00:00:00Z",
+        "1957-08-19T00:00:00Z" ;
+    ns2:P646 "/m/08664q",
+        "/m/0hh2jdy" ;
+    ns2:P691 "xx0156182" ;
+    ns2:P7214 "1877" ;
+    ns2:P7293 "9810622001105606" ;
+    ns2:P734 <http://www.wikidata.org/entity/Q21446653> ;
+    ns2:P735 <http://www.wikidata.org/entity/Q18002399> ;
+    ns2:P7859 "lccn-n2013026650",
+        "lccn-n2013055625" ;
+    ns2:P7902 "142315672" ;
+    ns2:P8687 "1962" ;
+    ns2:P950 "XX1094531" .
+
+twssd:Shun_Oguri rdfs:label "Oguri Shun",
+        "Oguri Sun",
+        "Oguri Šün",
+        "Shun Oguri",
+        "Огури, Сюн",
+        "Սյուն Ագուրի",
+        "שון אוגורי",
+        "شون أوغوري",
+        "شون اوجورى",
+        "شون اوگوری",
+        "ชุน โอะงุริ",
+        "小栗旬",
+        "오구리 슌" ;
+    schema:dateModified "2021-05-29T07:24:13Z" ;
+    schema:description "Japanese actor, voice actor, and film director",
+        "Japans acteur",
+        "acteur",
+        "actor de voz y director de cine japonés",
+        "aktor hapones",
+        "ator japonês",
+        "attore e doppiatore giapponese",
+        "japanischer Schauspieler",
+        "japansk skodespelar",
+        "japansk skuespiller",
+        "japansk skådespelare",
+        "japoński aktor, seiyū i reżyser filmowy",
+        "pemeran laki-laki asal Jepang",
+        "بازیگر ژاپنی",
+        "ജപ്പാനിലെ ചലച്ചിത്ര അഭിനേതാവ്",
+        "日本の俳優",
+        "日本男演員" ;
+    schema:version "1430758850" ;
+    ns4:identifiers "38" ;
+    ns4:sitelinks "22" ;
+    ns4:statements "64" ;
+    ns4:timestamp "2021-05-29T07:24:30Z" ;
+    ns3:altLabel "Oguri",
+        "Oguri Shun",
+        "jap. 小栗旬",
+        "Огури Сюн",
+        "Огури Шун",
+        "Сюн Огури",
+        "Шун Огури" ;
+    ns1:P1015 <http://www.wikidata.org/entity/statement/Q457825-9629F0A6-D6BF-4F9E-9EB8-BF00DAE3C326> ;
+    ns1:P106 <http://www.wikidata.org/entity/statement/Q457825-3ADCFCCC-D0F2-43BA-89C9-0144B130FF1D>,
+        <http://www.wikidata.org/entity/statement/Q457825-7C1029A8-8764-4E4B-97A7-9A51A4A48D80>,
+        <http://www.wikidata.org/entity/statement/Q457825-87D860BE-60E4-495E-855B-6116DB27ECF9>,
+        <http://www.wikidata.org/entity/statement/Q457825-AA398E4E-3099-4829-8AA8-7FD6CCC50220>,
+        <http://www.wikidata.org/entity/statement/Q457825-CFC7DA24-214C-49E3-98F3-8B750A9AB90B>,
+        <http://www.wikidata.org/entity/statement/Q457825-F8F4D1E4-C089-4A0E-974B-52325CAB76CC>,
+        <http://www.wikidata.org/entity/statement/q457825-f9f310f7-4227-fd7d-4e85-3f0306bfe67e> ;
+    ns1:P1207 <http://www.wikidata.org/entity/statement/Q457825-ECEE6F48-ED41-460C-AC1B-3DABFB28B1A0> ;
+    ns1:P1258 <http://www.wikidata.org/entity/statement/Q457825-9534F255-B535-410E-A43B-C24F199E1E4C> ;
+    ns1:P1266 <http://www.wikidata.org/entity/statement/Q457825-976a1886-4cbc-8729-7161-434d4fdaaac6> ;
+    ns1:P1412 <http://www.wikidata.org/entity/statement/Q457825-68fd6f24-4ee7-ecfc-35a5-b42db9d16c64> ;
+    ns1:P1559 <http://www.wikidata.org/entity/statement/Q457825-2A01B633-6E3E-4031-9C65-4DCB7F3D8F43> ;
+    ns1:P166 <http://www.wikidata.org/entity/statement/Q457825-4433A933-04DB-4CD6-A10E-C1A77EFEE377> ;
+    ns1:P1814 <http://www.wikidata.org/entity/statement/Q457825-0F03D81A-DF26-45DD-8E98-FB9E9F3797D4> ;
+    ns1:P1853 <http://www.wikidata.org/entity/statement/Q457825-B17F9F39-948B-4FE3-AD2C-0885C7903226> ;
+    ns1:P19 <http://www.wikidata.org/entity/statement/Q457825-7FF6ED6E-084F-4B18-A960-256A28EA1909> ;
+    ns1:P1969 <http://www.wikidata.org/entity/statement/Q457825-322ef6d6-4cf7-b008-a2f4-31956d8f9435> ;
+    ns1:P1971 <http://www.wikidata.org/entity/statement/Q457825-DDD0BDA0-CF2B-4AE5-B1C2-E5DAC28A988A> ;
+    ns1:P1982 <http://www.wikidata.org/entity/statement/Q457825-22ABE30F-858A-43F1-B080-C7C41875A3CD> ;
+    ns1:P2019 <http://www.wikidata.org/entity/statement/Q457825-739d3429-4abf-efb5-27df-fbe04f50f269> ;
+    ns1:P2031 <http://www.wikidata.org/entity/statement/Q457825-627C59E3-558B-4A03-8584-81B462625122> ;
+    ns1:P2048 <http://www.wikidata.org/entity/statement/Q457825-8d59d694-43c5-a6aa-ccfa-f5440bb98d30> ;
+    ns1:P2067 <http://www.wikidata.org/entity/statement/Q457825-ECFF08E8-8F48-4F20-AA88-68D7D69C9659> ;
+    ns1:P21 <http://www.wikidata.org/entity/statement/Q457825-5A6F691C-55D3-473C-B8AA-EE703BBA7212> ;
+    ns1:P213 <http://www.wikidata.org/entity/statement/q457825-CDB3EE8F-3E9B-4733-AF3F-23BAF7B06B3C> ;
+    ns1:P214 <http://www.wikidata.org/entity/statement/q457825-F9C7C551-1CE1-43A4-AEF1-15958EA35982> ;
+    ns1:P22 <http://www.wikidata.org/entity/statement/Q457825-86da944a-4304-aad9-6857-e45a8cac8f1d> ;
+    ns1:P227 <http://www.wikidata.org/entity/statement/q457825-B8F916A7-F569-4919-A5B2-D60D9BB8660B> ;
+    ns1:P2387 <http://www.wikidata.org/entity/statement/Q457825-d0945f7d-4f9a-fd4a-9502-e0d9a97898d3> ;
+    ns1:P2435 <http://www.wikidata.org/entity/statement/Q457825-fd27890d-49c7-10bc-b821-6fada99a009d> ;
+    ns1:P244 <http://www.wikidata.org/entity/statement/q457825-1942F134-B6DB-467D-BDFC-859FD01C4B0F> ;
+    ns1:P2519 <http://www.wikidata.org/entity/statement/Q457825-c0ec3211-4f04-bb24-cb37-eee2e1f74ecb> ;
+    ns1:P26 <http://www.wikidata.org/entity/statement/q457825-65f07dc4-41b6-63a5-3a50-5243ba845033> ;
+    ns1:P2604 <http://www.wikidata.org/entity/statement/Q457825-f1e01b96-492f-bea8-f15a-f28e63876669> ;
+    ns1:P2605 <http://www.wikidata.org/entity/statement/Q457825-e240fa0f-4f29-da90-fb91-89f25ed8705c> ;
+    ns1:P268 <http://www.wikidata.org/entity/statement/Q457825-B886E322-A546-4EA5-9377-7D7090AA449B> ;
+    ns1:P269 <http://www.wikidata.org/entity/statement/Q457825-BE0C1478-1E00-4B91-AACB-D911BD676CF2> ;
+    ns1:P27 <http://www.wikidata.org/entity/statement/Q457825-1EBC6CDE-33C0-47F1-83F5-C5DEEE5E19CE> ;
+    ns1:P31 <http://www.wikidata.org/entity/statement/Q457825-3C36599A-A4BE-4BDF-9AE4-CB81CBAAE845> ;
+    ns1:P3284 <http://www.wikidata.org/entity/statement/Q457825-852E41E2-5346-45B8-9AD0-37BB7B8088B7> ;
+    ns1:P3305 <http://www.wikidata.org/entity/statement/Q457825-F2DD58A1-6F89-439C-82BE-0B611D99C5DF> ;
+    ns1:P345 <http://www.wikidata.org/entity/statement/q457825-29FAD5C0-5952-4855-97B0-5763CA08E04D> ;
+    ns1:P3477 <http://www.wikidata.org/entity/statement/Q457825-BEC7EF75-4FBA-4C71-817B-A106459B0308> ;
+    ns1:P349 <http://www.wikidata.org/entity/statement/Q457825-874AE721-9B85-4858-B371-9343B6E1ABAE> ;
+    ns1:P3703 <http://www.wikidata.org/entity/statement/Q457825-82F4CB31-5609-4469-8B03-549588A9CD81> ;
+    ns1:P3862 <http://www.wikidata.org/entity/statement/Q457825-72d268ee-4b78-76bb-8cf7-5719820c3719> ;
+    ns1:P4084 <http://www.wikidata.org/entity/statement/Q457825-B1FDE55F-9A59-4D48-A57C-51736091D11D> ;
+    ns1:P4779 <http://www.wikidata.org/entity/statement/Q457825-ff18b1c6-4750-67dd-7ec1-36f6faa25a73> ;
+    ns1:P4985 <http://www.wikidata.org/entity/statement/Q457825-E7B95DC9-0493-4F06-979E-115C9C2F523F> ;
+    ns1:P5007 <http://www.wikidata.org/entity/statement/Q457825-A997089D-DD4E-4559-928B-06F843094B61> ;
+    ns1:P5033 <http://www.wikidata.org/entity/statement/Q457825-8FCB08FB-511B-43C9-BCE4-3969AC29B14A> ;
+    ns1:P569 <http://www.wikidata.org/entity/statement/Q457825-B579438C-2DBE-4647-A84B-7152B6E551EF> ;
+    ns1:P5905 <http://www.wikidata.org/entity/statement/Q457825-2ecda1b1-4313-43c1-26d8-d5310be38f37> ;
+    ns1:P5909 <http://www.wikidata.org/entity/statement/Q457825-700FA2D4-5B38-4C35-9E03-8128C6C5D27E> ;
+    ns1:P6298 <http://www.wikidata.org/entity/statement/Q457825-B621D855-5D66-4DB9-BEDC-26A33E5773F3> ;
+    ns1:P646 <http://www.wikidata.org/entity/statement/Q457825-32BE05E9-916E-49B7-B951-EBE25B6BCEE8> ;
+    ns1:P7214 <http://www.wikidata.org/entity/statement/Q457825-58E5F6F2-F874-49A2-AD17-C0724E7AA5EC> ;
+    ns1:P734 <http://www.wikidata.org/entity/statement/Q457825-FCE0628D-1BA5-4E0F-95AB-826241FBB786> ;
+    ns1:P735 <http://www.wikidata.org/entity/statement/Q457825-63E10C9E-B374-4C1B-9C90-7A286B888B02> ;
+    ns1:P7745 <http://www.wikidata.org/entity/statement/Q457825-C42F4345-D3CD-461E-80A4-8B711F20EA05> ;
+    ns1:P7859 <http://www.wikidata.org/entity/statement/Q457825-8AEB1CFA-B573-45EC-A591-C5698E3BD595> ;
+    ns1:P856 <http://www.wikidata.org/entity/statement/Q457825-58370F02-4C55-451E-B844-53445BEE2C3D> ;
+    ns1:P8580 <http://www.wikidata.org/entity/statement/Q457825-DE668CE3-1837-45F7-90C2-3A4F5D7EB462> ;
+    ns5:P1015 <https://livedata.bibsys.no/authority/4095538> ;
+    ns5:P214 <http://viaf.org/viaf/119777153> ;
+    ns5:P227 <https://d-nb.info/gnd/141933909> ;
+    ns5:P244 <https://id.loc.gov/authorities/names/no2011032760> ;
+    ns5:P268 <http://data.bnf.fr/ark:/12148/cb15043821k#about> ;
+    ns5:P269 <http://www.idref.fr/113158890/id> ;
+    ns5:P349 <http://id.ndl.go.jp/auth/ndlna/00989469> ;
+    ns5:P646 <http://g.co/kg/m/0bz_rb> ;
+    ns2:P1015 "4095538" ;
+    ns2:P106 <http://www.wikidata.org/entity/Q10798782>,
+        <http://www.wikidata.org/entity/Q10800557>,
+        <http://www.wikidata.org/entity/Q2259451>,
+        <http://www.wikidata.org/entity/Q2526255>,
+        <http://www.wikidata.org/entity/Q33999>,
+        <http://www.wikidata.org/entity/Q622807>,
+        <http://www.wikidata.org/entity/Q970153> ;
+    ns2:P1207 "n2009167909" ;
+    ns2:P1258 "celebrity/shun_oguri" ;
+    ns2:P1266 "103732" ;
+    ns2:P1412 <http://www.wikidata.org/entity/Q5287> ;
+    ns2:P1559 "小栗 旬" ;
+    ns2:P166 <http://www.wikidata.org/entity/Q20649879> ;
+    ns2:P1814 "おぐり しゅん" ;
+    ns2:P1853 <http://www.wikidata.org/entity/Q19831451> ;
+    ns2:P19 <http://www.wikidata.org/entity/Q213278> ;
+    ns2:P1969 "26203" ;
+    ns2:P1971 "3" ;
+    ns2:P1982 "18009" ;
+    ns2:P2019 "p433978" ;
+    ns2:P2031 "1994-01-01T00:00:00Z" ;
+    ns2:P2048 "1.84" ;
+    ns2:P2067 "70" ;
+    ns2:P21 <http://www.wikidata.org/entity/Q6581097> ;
+    ns2:P213 "0000 0001 1780 648X" ;
+    ns2:P214 "119777153" ;
+    ns2:P22 <http://www.wikidata.org/entity/Q11462014> ;
+    ns2:P227 "141933909" ;
+    ns2:P2387 "1276972" ;
+    ns2:P2435 "225885" ;
+    ns2:P244 "no2011032760" ;
+    ns2:P2519 "30716" ;
+    ns2:P26 <http://www.wikidata.org/entity/Q1374258> ;
+    ns2:P2604 "484069" ;
+    ns2:P2605 "15699" ;
+    ns2:P268 "15043821k" ;
+    ns2:P269 "113158890" ;
+    ns2:P27 <http://www.wikidata.org/entity/Q17> ;
+    ns2:P31 <http://www.wikidata.org/entity/Q5> ;
+    ns2:P3284 "12727" ;
+    ns2:P3305 "154819" ;
+    ns2:P345 "nm1040419" ;
+    ns2:P3477 "M00-0098" ;
+    ns2:P349 "00989469" ;
+    ns2:P3703 "0743480" ;
+    ns2:P3862 "1586" ;
+    ns2:P4084 "398" ;
+    ns2:P4779 "134020" ;
+    ns2:P4985 "46364" ;
+    ns2:P5007 "Shun-Oguri" ;
+    ns2:P5033 "247372" ;
+    ns2:P569 "1982-12-26T00:00:00Z" ;
+    ns2:P5905 "4040-115247" ;
+    ns2:P5909 "9811110824703406" ;
+    ns2:P6298 "9468" ;
+    ns2:P646 "/m/0bz_rb" ;
+    ns2:P7214 "294173" ;
+    ns2:P734 <http://www.wikidata.org/entity/Q39240908> ;
+    ns2:P735 <http://www.wikidata.org/entity/Q16281447> ;
+    ns2:P7745 "155221" ;
+    ns2:P7859 "lccn-no2011032760" ;
+    ns2:P856 <http://www.ogurishun.net> ;
+    ns2:P8580 "D0009070625" .
+
