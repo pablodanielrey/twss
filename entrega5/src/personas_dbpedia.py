@@ -1,8 +1,8 @@
-
+import sys
 import json
 from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef, Literal
 
-from SPARQLWrapper import SPARQLWrapper, JSON
+from SPARQLWrapper import SPARQLWrapper, JSON, RDFXML
 
 def get_dbpedia_endpoint():
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
@@ -28,6 +28,21 @@ def get_persons_names(g:Graph, schema:Namespace):
         for ss,pp,name in g.triples((s, schema['name'], None)):
             names.append((s,str(name)))
     return names
+
+
+def add_format_triplets(g:Graph, subject:URIRef, triplets:dict):
+    """ agrega la tripleta dándole formato al grafo """
+    ''' las propiedades deberían ser todas uris '''
+    assert triplets['p']['type'] == 'uri'
+    prop = URIRef(triplets['p']['value'])
+
+    obj = triplets['o']
+    if obj['type'] == 'uri':
+        vobj = URIRef(obj['value'])
+    else:
+        vobj = Literal(obj['value'])
+    
+    g.add((subject, prop, vobj))
 
 
 if __name__ == '__main__':
@@ -70,14 +85,13 @@ if __name__ == '__main__':
         print(f'entidades externas encontradas {local_subjects}')
         subjects[my_subject] = local_subjects
 
-        break
+    gdata = Graph()
 
-
+    #sql.setReturnFormat(RDFXML)
     for my_subject, external_subjects in subjects.items():
         for subject in external_subjects:
             print(f'obteniendo datos de {subject}')
             sql.setQuery("""
-                PREFIX dbp: <http://dbpedia.org/property/>
                 select distinct ?s ?p ?o
                 where {
                     <""" + subject + """> ?p ?o .
@@ -85,7 +99,8 @@ if __name__ == '__main__':
             """)
             results = sql.query().convert()
             for result in results["results"]["bindings"]:
-                print(f'my subject : {my_subject} ')
-                print(f'external subject : {subject}')
-                print(result)
-                break
+                add_format_triplets(gdata, my_subject, result)
+
+    #gdata.serialize(sys.stdout.buffer, format='turtle')
+    with open('data/dbpedia.ttl','w') as f:
+       f.write(gdata.serialize(format='turtle').decode("utf-8"))

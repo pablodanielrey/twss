@@ -28,7 +28,7 @@ usando protegé no me quedaron claras estas cosas, claramente porque no lo se us
 
 ---
 
-también permitiría analizar un poco patrones de diseño de ontologías.
+también permitiría analizar un poco patrones de diseño de ontologías sin necesidad de desarrollar con python.
 parecido a los patrones de diseño del paradigma orientado a objetos.
 casco publicó un link a material sobre eso en el foro.
 https://patterns.dataincubator.org/book/
@@ -315,7 +315,7 @@ pablo@xiaomi:/src/github/facu-infor/twss$ curl -H 'accept:text/turtle' http://xm
 
 esto me retorna un html tal cual dice en el content-type.
 
-lo consulté en el foro a ver si puedo asumir que eso igualmente tiene presencia en la web y es desreferenciable.
+lo consulto en el foro a ver como interpretar todo esto.
 
 ----
 
@@ -619,6 +619,8 @@ c3 = for autor in autores if autor dbo:birthPlace dbr:Argentina or autor dbo:bir
 
 en este caso se recorre solamente 1 vez el dataset de autores.
 pero esto es una suposición. tengo que buscar algún motor que me permita explorar como realiza la consulta el mismo motor y que optimizaciones hace.
+me imagino que cada motor realiza distintas optimizaciones.
+
 
 ---
 
@@ -824,11 +826,17 @@ pero con lo que veo así como está no puedo inferir nada. a lo sumo lo contrari
 que se carga mediante un template de infobox de valores dentro de wikipedia y ahi le asigno valores (basicamente la sintaxis de arriba)
 y eso se inserta automáticamente en el Q784171 correspondiente generado para la página. o sea se generan las tripletas correspondientes y eso
 va a parar a wikidata. 
-ahora si este es el proceso entonces no me cuadra que cada sentencia en wikidata tiene una referencia, es requerido por wikidata por lo que averigué.
-para indicar que una sentencia es verificada.
+ahora si este es el proceso entonces no me cuadra que cada sentencia en wikidata necesita una referencia, es requerido por wikidata por lo que averigué.
+para indicar que una sentencia es verificada. y en este template no se pone en ningún lado la referencia (la fuente de donde es sacada la información)
 
 voy a seguir investigando. para mi me suena que es a la inversa: wikidata ---> wikipedia
 es lo lógico.
+pero el bootstrap de wikidata inicial y la actualización diaria de wikidata sin wikidateros sería imposible.
+asi que tiene que existir el mecanismo de wikipedia --> wikidata.
+
+obviamente existe porque veo propiedades del estilo.
+
+p143 es importado de wikimedia.
 
 ---
 
@@ -2150,11 +2158,122 @@ el de wikipedia debería ser sencillo de obtener.
 
 ahora voy a tratar de agregar todas esas tripletas en un grafo rdf para después poder serializarlo en turtle o el formato que elija.
 
+analizando un poco lo que tengo que hacer acabo de leer en el libro que nos dió diego
+CONSTRUCT!!!!.
+
+6.2.3
+CONSTRUCT Query
+construct query is another query form provided by SPARQL which, instead of
+returning a collection of query solutions, returns a new RDF graph. Let us take a
+look at some examples.
+
+In fact, a common use of the construct query form is to transform a given graph to
+a new graph that uses a different ontology.
+
+ahi está la respuesta!!!!
+y la librería que estoy usando posiblemente me retorne un grafo rdflib!!. joooooo.
+no tengo que hacer nada de procesamiento del tema.
+voy a hacer una prueba a ver si funciona.
+
+---
+
+no me funciona con construct y quiero tener algo funcionando hoy que rindo el jueves ingeniería y tengo que estudiar.
+asi que lo voy a hacer con select y después lo corrijo. de paso me sirve para comparar soluciones.
+
+---
+
+
+bueno la primer prueba que hago salió andando.
+era mas simple de lo que pensaba.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+obteniendo Natasha Rothwell
+entidades externas encontradas {'http://dbpedia.org/resource/Natasha_Rothwell'}
+obteniendo datos de http://dbpedia.org/resource/Natasha_Rothwell
+my subject : https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Natasha_Rothwell 
+external subject : http://dbpedia.org/resource/Natasha_Rothwell
+{'p': {'type': 'uri', 'value': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}, 'o': {'type': 'uri', 'value': 'http://www.w3.org/2002/07/owl#Thing'}}
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Natasha_Rothwell> a <http://www.w3.org/2002/07/owl#Thing> .
+
+
+solo lo probé con una sola propiedad para ver si funcionaba.
+le saco los break para ver si aunque sea me serializa una persona completa.
+
+
+---
+
+funciona perfectoooooo.
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+obteniendo David Oyelowo
+entidades externas encontradas {'http://dbpedia.org/resource/David_Oyelowo'}
+obteniendo datos de http://dbpedia.org/resource/David_Oyelowo
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix ns2: <http://purl.org/dc/terms/> .
+@prefix ns3: <http://dbpedia.org/property/> .
+@prefix ns4: <http://schema.org/> .
+@prefix ns5: <http://www.w3.org/2002/07/owl#> .
+@prefix ns6: <http://xmlns.com/foaf/0.1/> .
+@prefix ns7: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/David_Oyelowo> a <http://dbpedia.org/class/yago/Absentee109757653>,
+        <http://dbpedia.org/class/yago/Actor109765278>,
+        <http://dbpedia.org/class/yago/Alumnus109786338>,
+        <http://dbpedia.org/class/yago/Articulator109811712>,
+        <http://dbpedia.org/class/yago/CausalAgent100007347>,
+        <http://dbpedia.org/class/yago/Communicator109610660>,
+        <http://dbpedia.org/class/yago/Emigrant110051975>,
+        <http://dbpedia.org/class/yago/Entertainer109616922>,
+        <http://dbpedia.org/class/yago/Exile110071332>,
+        <http://dbpedia.org/class/yago/Intellectual109621545>,
+        <http://dbpedia.org/class/yago/LivingThing100004258>,
+        <http://dbpedia.org/class/yago/Migrant110314952>,
+        <http://dbpedia.org/class/yago/Narrator110345804>,
+        <http://dbpedia.org/class/yago/Object100002684>,
+        <http://dbpedia.org/class/yago/Organism100004475>,
+        <http://dbpedia.org/class/yago/Performer110415638>,
+        <http://dbpedia.org/class/yago/Person100007846>,
+        <http://dbpedia.org/class/yago/PhysicalEntity100001930>,
+        <http://dbpedia.org/class/yago/Scholar11055785
+
+        .....
+
+
+
+me quede pensando en construct, y como transformar grafos a otros namespaces.
+es una herramineta muy poderosa esto de la web semántica!!.
+a media que hago pruebas me estoy dando cuenta de que lo que quería obtener de la materia ya está mas que cumplido.
+y me estoy convenciendo que el poder de estas herramientas que tienen para combinar datos de distintos datasets es IMPRESIONANTE!!.
+además de poder hacer evolucionar una ontología inicial transformandola posteriormente e ir adaptandola es también una de las grandes ventajas por
+sobre otras tecnologías.
+inclusive sobre las bases de datos orientadas a documentos.
+
+en este punto, sin haber probado mucho, teniendo muy poca experiencia ya estoy convencido de es la herramienta correcta 
+para usar en mi laburo. como mínimo se merece un prototipo para evaluar la viabilidad de una solucion usando estas herramientas.
+por sobre bases de datos relacionales.
+
+----
+
+
+acomodo el script para escribir las tripletas en un grafo serializado a turtle dentro de data.
+le saco todos los breaks al código y lo disparo para todos las personas que tengo.
+
+---
+
+lo ejecuté y funcionó perfecto.
+asi que veo a ver con protegé a ver si me genero algo válido.
+editandolo con el editor de archivos lo veo válido.
+
+lo veo bien. asi que perfecto.
 
 
 
 
 
 
---- 
-nota p143 es importado de wikimedia.
+
+
+
