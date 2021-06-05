@@ -3420,3 +3420,48 @@ wikidata_subjects.ttl
 
 ---
 
+comento el código de chequeo solo de 10 actors y disparo todo el script.
+me voy a preparar mate porque esto con el backoff va a tardar bastante.
+
+----
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+obteniendo Jamie Dornan
+entidades externas encontradas {'http://www.wikidata.org/entity/Q976022'}
+obteniendo Walt Dohrn
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2713565'}
+obteniendo Eiza González
+entidades externas encontradas {'http://www.wikidata.org/entity/Q572761'}
+obteniendo Maisie Williams
+entidades externas encontradas {'http://www.wikidata.org/entity/Q234363'}
+obteniendo Tim Story
+entidades externas encontradas {'http://www.wikidata.org/entity/Q2005037'}
+obteniendo Millie Bobby Brown
+entidades externas encontradas {'http://www.wikidata.org/entity/Q25936414'}
+obteniendo Christophe Honoré
+entidades externas encontradas {'http://www.wikidata.org/entity/Q551772'}
+obteniendo Natasha Rothwell
+entidades externas encontradas {'http://www.wikidata.org/entity/Q62007121'}
+obteniendo Saori Hayami
+entidades externas encontradas {'http://www.wikidata.org/entity/Q1153079'}
+obteniendo Satoshi Hino
+entidades externas encontradas {'http://www.wikidata.org/entity/Q11665869'}
+obteniendo Gal Gadot
+entidades externas encontradas {'http://www.wikidata.org/entity/Q185654'}
+obteniendo Don Hall
+entidades externas encontradas {'http://www.wikidata.org/entity/Q18921842'}
+obteniendo Sam Rockwell
+entidades externas encontradas {'http://www.wikidata.org/entity/Q316446'}
+obteniendo Charlie Heaton
+entidades externas encontradas {'http://www.wikidata.org/entity/Q20974088'}
+obteniendo Justin Timberlake
+entidades externas encontradas {'http://www.wikidata.org/entity/Q43432'}
+obteniendo Sam Richardson
+entidades externas encontradas {'http://www.wikidata.org/entity/Q42531667', 'http://www.wikidata.org/entity/Q24050468'}
+obteniendo Monica Haynes
+entidades externas encontradas set()
+obteniendo Andrew Galdi
+entidades externas encontradas set()
+obteniendo John McDonald
+.....
+

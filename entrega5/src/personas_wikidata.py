@@ -143,14 +143,14 @@ if __name__ == '__main__':
         busco primero las iris remotas asi consulto por sobre esa entidad para obtener las tripletas.
     """
 
-    cantidad = 0
+    #cantidad = 0
     for my_subject, name in names:
         delay, remote_subjects = get_remote_subjects(name, delay)
         subjects[my_subject] = remote_subjects
 
-        cantidad += 1
-        if cantidad > 10:
-            break
+        #cantidad += 1
+        #if cantidad > 10:
+        #    break
 
         
     gsubjects = Graph()
