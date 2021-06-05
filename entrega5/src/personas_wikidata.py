@@ -104,6 +104,7 @@ def get_remote_subjects(name:str, delay:int):
             """)
 
             try:
+                print(f'esperando {delay}')
                 time.sleep(delay)
             except Exception as e1:
                 pass
@@ -114,6 +115,10 @@ def get_remote_subjects(name:str, delay:int):
                 local_subjects.add(subject)
             
             print(f'entidades externas encontradas {local_subjects}')
+            
+            ''' para id disminuyendo el backoff '''
+            delay = delay - 1 if delay > 2 else delay
+
             return (delay, local_subjects)
             
         except urllib.error.HTTPError as he: 
@@ -143,8 +148,11 @@ if __name__ == '__main__':
         busco primero las iris remotas asi consulto por sobre esa entidad para obtener las tripletas.
     """
 
-    #cantidad = 0
+    actual = 0
+    cantidad = len(names)
     for my_subject, name in names:
+        print(f'procesando {actual}/{cantidad}')
+        actual += 1
         delay, remote_subjects = get_remote_subjects(name, delay)
         subjects[my_subject] = remote_subjects
 
@@ -152,14 +160,31 @@ if __name__ == '__main__':
         #if cantidad > 10:
         #    break
 
-        
+
+    ''' escribo los subjects debido a que wikidata pone límites a los requests '''        
     gsubjects = Graph()
+    for my_subject, external_subjects in subjects.items():
+        for subject in external_subjects:
+            ''' agrego el sameAs de mi subject al recurso externo de dbpedia '''
+            gsubjects.add((my_subject, OWL.sameAs, URIRef(subject)))
+
+    with open('data/wikidata_subjects.ttl','w') as f:
+       f.write(gsubjects.serialize(format='turtle').decode("utf-8"))
+
+
+    delay = 2
     gdata = Graph()
     bind_schemas(gdata)
 
     #sql.setReturnFormat(RDFXML)
     for my_subject, external_subjects in subjects.items():
         for subject in external_subjects:
+            print(f'esperando {delay}')
+            try:
+                time.sleep(delay)
+            except Exception as e1:
+                pass
+
             print(f'obteniendo datos de {subject}')
             sql.setQuery("""
                 select distinct ?s ?p ?o
@@ -167,16 +192,20 @@ if __name__ == '__main__':
                     <""" + subject + """> ?p ?o .
                 }        
             """)
-            results = sql.query().convert()
-            for result in results["results"]["bindings"]:
-                add_format_triplets(gdata, my_subject, result)
+            try:
+                results = sql.query().convert()
+            
+                for result in results["results"]["bindings"]:
+                    add_format_triplets(gdata, my_subject, result)
 
-            ''' agrego el sameAs de mi subject al recurso externo de dbpedia '''
-            gsubjects.add((my_subject, OWL.sameAs, URIRef(subject)))
+                delay = delay - 1 if delay > 2 else delay
+
+            except urllib.error.HTTPError as he: 
+                logging.warning(f'Incremento el delay para no matar el endpoint {delay} {tries}')
+                delay = delay * delay
 
     #gdata.serialize(sys.stdout.buffer, format='turtle')
     with open('data/wikidata.ttl','w') as f:
        f.write(gdata.serialize(format='turtle').decode("utf-8"))
 
-    with open('data/wikidata_subjects.ttl','w') as f:
-       f.write(gsubjects.serialize(format='turtle').decode("utf-8"))       
+   

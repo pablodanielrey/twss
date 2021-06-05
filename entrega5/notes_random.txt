@@ -3465,3 +3465,22 @@ entidades externas encontradas set()
 obteniendo John McDonald
 .....
 
+----
+
+perfecto escribio los subjects que encontro en el dataset de wikidata
+wikidata_subjects.ttl
+
+el obteer los datos de cada uno de los subjects tiró error de to many requests.
+pero estoy pensanod que es exactamente el mismo código que el de dbpedia.
+asi que armo otro script para aumentarlos que tome como parámetro el archivo de subjects.
+idem al tp anterior con el archivo links.ttl
+
+---
+
+bien dejo corriendo el script para descargar los datos de wikidata.
+y modifico el de dbpedia para solo guardar los subjects.
+así este script genérico descargaría los datos usando el endpoint correcto.
+analizando que endpoint usar de acuerdo al prefijo de la iri.
+
+wikidata <---- endpoint de wikidata
+dbpedia <----- endpoint de dbpedia
