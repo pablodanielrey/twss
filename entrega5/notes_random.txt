@@ -3484,3 +3484,17 @@ analizando que endpoint usar de acuerdo al prefijo de la iri.
 
 wikidata <---- endpoint de wikidata
 dbpedia <----- endpoint de dbpedia
+
+----
+
+listo corregí el scriptpara que sea genérico a los 2 endpoints. (augment_dataset.py)
+ahora lo corro solo con los subjects de wikidata.
+tambien ajuste el tema del backoff de wikidata para que no tarde tanto y vuelva a requerir los datos 
+en el caso de falla.
+
+mientras corre voy a ajustar el script de dbpedia para que almacene los subjects nomas.
+y el proceso de obtener los datos de esos subjects se realice con este mismo script.
+
+
+---
+
