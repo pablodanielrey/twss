@@ -47,7 +47,7 @@ https://recyt.fecyt.es/index.php/ThinkEPI/article/view/thinkepi.2018.31
 ALUCINANTE el artículo!!. lo dejo como material dentro del tp.
 y casi que responde a las consultas básicas del tp y aclara las diferencias entre los 2 proyectos!.
 
-el artículo que pasó diego en el foro para el trabajo esta bueno. es medio pesado con las estadísticas pero da un panorama muchisimo mas completo de lo que es dbpedia.
+el artículo que pasó diego en el foro para el trabajo esta bueno da un panorama muchisimo mas completo de lo que es dbpedia.
 
 ----
 
@@ -1635,10 +1635,520 @@ ahora si me da ok 271 escritores correctamente!!!
 
 
 
+----
 
 
+bueno ahora que tengo un poco mas analizado todo. voy a asumir que las conusltas de arriba están ok y voy a arrancar con la parde de desarrollo. 
+así por lo menos me aseguro de que puedo llegar a la fecha de entrega con algo.
+total ni bien tengo algo repaso todo y actualizo las consultas que tenga que actualizar.
+
+y todavia me falta entender todo el proceso de scrapeo de la wikipedia hacia wikidata.
+que no encontre nada de eso hasta ahora.
+
+-----
+
+idea inicial del código para hacer pruebas.
+hacer un script que tome las personas de mi dataset y busque en dbpedia para aumentar los datos.
+almacene esos datos en otro dataset. dbpedia_aumentado.ttl
+
+personas_dbpedia.py
+
+bien, era simple obtener las personas de mi dataset. ahora voy a agregarle para consultar el endpoint de dbpedia.
+
+---
+
+bien hago una prueba en el endpoint de dbpedia para ver si obtengo algo de aunque sea un nombre
+
+select distinct ?s ?p 
+where {
+     ?s ?p "Paul Briggs"@eng .
+}
+
+nada de nada. algo me estoy confundiendo porque claramente tengo que 
+
+https://dbpedia.org/page/Paul_Briggs_(animator)
+
+dbp:name	Paul Briggs (en)
+
+o sea que aunque sea esa tripleta tendría que retornar.
+
+select distinct ?s
+where {
+     ?s dbp:name "Paul Briggs"@eng .
+}
+
+tampoco.
+claramente estoy re boleado, voy a repasar lo que hice de la dbpedia para analizar un poco como eran las consultas.
+
+select distinct ?s
+where {
+     ?s dbp:name "Paul Briggs"@en .
+}
+
+http://dbpedia.org/resource/Paul_Briggs_(American_football)
+http://dbpedia.org/resource/Paul_Briggs_(animator)
+http://dbpedia.org/resource/Paul_Briggs_(boxer)
+
+que nabo. ahora si. 
+veo que me tira 3 recursos. como se que tengo actores entonces voy a filtrar por ocupaciones.
+
+pensamiento random.
+veo que la ocupación del animador (el que estoy buscando yo) tiene un dbr:person_function_paul_briggs generado dentro de dbpedia.
+o sea que es proceso de la imporación de wikipedia, y le genera la occupation como una entidad específica de ese actor.
+
+dbo:occupation dbr:Paul_Briggs_(animator)__PersonFunction__1
+
+los datos de esa entidad en dbpedia son:
+
+dbo:title	                  Animator, voice actor (en)
+rdf:type                    owl:Thing, dbo:PersonFunction 
+is dbo:occupation of	      dbr:Paul_Briggs_(animator)
+
+obviamente importada de : https://en.wikipedia.org/wiki/Paul_Briggs_(animator)
+veo que el infobox de la wikipedia tiene:
+
+Paul Briggs
+Born	December 17, 1974 (age 46)
+San Antonio, Texas
+Nationality	American
+Education	Kansas City Art Institute
+Occupation	Animator, voice actor
+Years active	1997–present
+Employer	Walt Disney Animation Studios (1997-present)
+Known for	Head of story on Frozen, Big Hero 6 and Zootopia
+
+y mediante los mapeos y extracciones de las infobox de dbpedia va a parar al namespace "dbo"
+
+otra cosa que veo asociado en dbpedia es que dbp:occupation = Animator, voice actor
+claramente extraído mediante los extractores NLP y en vez de crearse una entidad se asocia al string.
+
+ahora el tema es que se estaría creando entidades duplicadas para todos los animadores y voiceactors.
+conclusión, al no estar asociado a una entidad de wikidata en el infobox, dbpedia no interpreta la ocupación como una entidad compartida si no que 
+crea una entidade specifica para esa ocupación solamente de la persona.
+sería lo mismo que crearle un blank node para la ocupación de la persona. algo como (en pseudocódigo):
+
+Paul_Briggs dbo:occupation [
+    rdf:type dbr:person_function;
+    rdf:label "Animator, voice actor"
+]
+
+algo así es lo que almacena dbpedia.
+en cambio si en el infobox de Paul_Briggs le asocio en la parte de ocupación una entidad Qnumber como 
+https://www.wikidata.org/wiki/Q266569
+el extractor de dbpedia asociaría dentro del mismo namespace ahora si una entidad específica compartida entre todos los recursos
+que tengan esa ocupación asociada mediante las infoboxes.
+
+solo cosas que voy notando para relacionar conceptos.
+
+--
+
+teniendo en cuenta esto me conviene filtrar los recursos por dbp:occupation inicialmente.
+por algunos strings.
+y depsues expandir ese filtro por entidades dbo para ocupaciones reales mapeadas, si no es suficiente lo anterior.
+
+hago la prueba a ver si funciona.
+
+--
+
+bien haciendo una prueba funcionó bien.
+ahora corrijo la consulta para que me traiga todas las tripletas de la persona con cierto nombre.
+
+            PREFIX dbp: <http://dbpedia.org/property/>
+            select distinct ?s ?p ?o
+            where {
+                ?s ?p ?o .
+                ?s dbp:name \"""" + name + """\"@en .
+            }        
+        """)
+
+encontro uno del dataset y encontro todas las tripletas asociadas correctamente.
+
+---
+
+ahora voy a obtener todas las ocupaciones de las personas que tengo en mi dataset.
+para analizar los datos que tiene dbpedia y wikipedia.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+obteniendo Eiza González
+{'s': {'type': 'uri', 'value': 'http://dbpedia.org/resource/Eiza_González'}, 'oc': {'type': 'literal', 'xml:lang': 'en', 'value': ''}}
+
+{'s': {'type': 'uri', 'value': 'http://dbpedia.org/resource/Eiza_González'}, 'oc': {'type': 'literal', 'xml:lang': 'en', 'value': 'singer'}}
+singer
+{'s': {'type': 'uri', 'value': 'http://dbpedia.org/resource/Eiza_González'}, 'oc': {'type': 'literal', 'xml:lang': 'en', 'value': 'Actress'}}
+Actress
+
+bueno de esta prueba obtengo que puede tener varios resultados (obviamente porque son varias tripletas) y tambien que algunos resultados 
+son nulos o sea no tienen nada.
+
+---
+las organizo dentro de un set y corro de nuevo el script.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+obteniendo Josh Boone
+{'Filmmaker'}
+
+--
+
+bien parece funcionar. descomento el break y corro para todos los nombres de mi dataset
+
+funcionó.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+obteniendo Gabriella Wilde
+obteniendo Christopher Nolan
+obteniendo Satoshi Hino
+obteniendo Chiara Mastroianni
+obteniendo Mark Meszoros
+obteniendo Carey Mulligan
+obteniendo Haruo Sotozaki
+obteniendo Valerie Kalfrin
+obteniendo Michael Gwisdek
+obteniendo Subrat Dutta
+obteniendo Pablo Rago
+obteniendo Stéphane Roger
+obteniendo Paul Briggs
+obteniendo Geoff Johns
+obteniendo Camille Cottin
+obteniendo Anthony Ramos
+obteniendo Doug Liman
+obteniendo Rick Kelvin Branch
+obteniendo Rafer Guzman
+obteniendo Lynda Carter
+obteniendo Natalia Oreiro
+obteniendo Christopher Mintz-Plasse
+obteniendo Amy Nicholson
+obteniendo Brian Tyree Henry
+obteniendo Lolita Marie
+obteniendo Stacha Hicks
+obteniendo Carlos Lopez Estrada
+obteniendo David Sims
+obteniendo Tomokazu Seki
+obteniendo Sam Richardson
+obteniendo Frank Welker
+obteniendo Henry Zaga
+obteniendo Alison Brie
+obteniendo David Bax
+obteniendo Jennifer Coolidge
+obteniendo June Foray
+obteniendo Martin Schreier
+obteniendo Natsuki Hanae
+obteniendo Bobby Cannavale
+obteniendo Jamal Alkhaldi
+obteniendo Mercedes Burgos
+obteniendo animación
+obteniendo Brian Gill
+obteniendo Kaila Ingram
+obteniendo Happy Anderson
+obteniendo Sia Alipour
+obteniendo John McDonald
+obteniendo Brittney Aleah
+obteniendo Amr Waked
+obteniendo Harrison Arevalo
+obteniendo Lyon Beckwith
+obteniendo Manoj Anand
+obteniendo Bo Burnham
+obteniendo Jeff Moore
+obteniendo Emerald Fennell
+obteniendo Andrew Ellis
+obteniendo Anya Taylor-Joy
+obteniendo Lilly Aspell
+obteniendo Ella Walker
+obteniendo Jeffrey Corazzini
+obteniendo Tom Holland
+obteniendo Dimple Kapadia
+obteniendo Ian Kenny
+obteniendo Bern Collaco
+obteniendo Dan Tabor
+obteniendo Ravi Patel
+obteniendo Penelope Kapudija
+obteniendo Chris Silcox
+obteniendo Lil Rel Howery
+obteniendo Millie Bobby Brown
+obteniendo Nina Garin
+obteniendo Daniel Dae Kim
+obteniendo Saori Hayami
+obteniendo Clancy Brown
+obteniendo Sam Rockwell
+obteniendo Sonia Goswami
+obteniendo Jake Wilson
+obteniendo Vincent Lacoste
+obteniendo Pedro Pascal
+obteniendo Michael Caine
+obteniendo Chloë Grace Moretz
+obteniendo Clemence Poésy
+obteniendo Takahiro Sakurai
+obteniendo Robin Wright
+obteniendo Marisol Correa
+obteniendo Elizabeth Debicki
+obteniendo Wilfried Hochholdinger
+obteniendo jayg_58
+obteniendo Patty Jenkins
+obteniendo Shun Oguri
+obteniendo Laverne Cox
+obteniendo Mickey Gilmore
+obteniendo Joel Morris
+obteniendo Mel Blanc
+obteniendo Aaron Taylor-Johnson
+obteniendo Andrew Galdi
+obteniendo James Corden
+obteniendo Rebecca Hall
+obteniendo Stephen Romei
+obteniendo Vanessa Curry
+obteniendo Demian Bichir
+obteniendo Natasha Rothwell
+obteniendo Julian Ferro
+obteniendo John David Washington Kenneth Branagh
+obteniendo Robert Pattinson
+obteniendo Laura López Moyano
+obteniendo Amreen N. Yaqoob
+obteniendo Ray McKinnon
+obteniendo Molly Shannon
+obteniendo Kunal Nayyar
+obteniendo Kurt Sutter
+obteniendo Spencer Trinwith
+obteniendo Jake Curran
+obteniendo Julian Dennison
+obteniendo Marla Aaron Wapner
+obteniendo William Moulton Marston
+obteniendo Jonathan Ajayi
+obteniendo Vikram Jayakumar
+obteniendo Heiner Lauterbach
+obteniendo Alexander Skarsgård
+obteniendo Nick Jonas
+obteniendo Óscar Jaenada
+obteniendo Justin Sisk
+obteniendo Mads Mikkelsen
+obteniendo Dennis Mojen
+obteniendo Rosario Dawson
+obteniendo Hernán Jiménez
+obteniendo Nicky Jam
+obteniendo Himesh Patel
+obteniendo Sarah Ward
+obteniendo Ken Duken
+obteniendo Christophe Honoré
+obteniendo Jennifer Ouellette
+obteniendo Eiza González
+obteniendo Sahil Shroff
+obteniendo Dave Callaham
+obteniendo Julius Berg
+obteniendo Adam Wingard
+obteniendo John David Washington
+obteniendo Kyle Chandler
+obteniendo César Bordón
+obteniendo Kenneth Branagh
+obteniendo Marie-Christine Adam
+obteniendo Alice Braga
+obteniendo Matt Neal
+obteniendo Nikolai Kinski
+obteniendo Isabela Palópoli
+obteniendo Carole Bouquet
+obteniendo Chance the Rapper
+obteniendo Monica Haynes
+obteniendo Kenichi Suzumura
+obteniendo Tony Medley
+obteniendo Benjamin Biolay
+obteniendo Josh Boone
+obteniendo Gastón Portal
+obteniendo Diego Peretti
+obteniendo Chris Pine
+obteniendo Jamaal Burcher
+obteniendo Daisy Ridley
+obteniendo Michael Peña
+obteniendo Martín Desalvo
+obteniendo Sheri Flanders
+obteniendo Blu Hunt
+obteniendo Oakley Bull
+obteniendo Adam Brody
+obteniendo Emilia Schüle
+obteniendo Don Hall
+obteniendo Pablo Echarri
+obteniendo David Oyelowo
+obteniendo Ian Simmons
+obteniendo Alberto Ammann
+obteniendo William Hanna
+obteniendo Maisie Williams
+obteniendo Rita Tushingham
+obteniendo Gal Gadot
+obteniendo Mark Jackson
+obteniendo Connie Britton
+obteniendo Esteban Bigliardi
+obteniendo Akari Kito
+obteniendo Alex Delescu
+obteniendo Justin Timberlake
+obteniendo Thomas Clay Strickland
+obteniendo Tessa Bonham Jones
+obteniendo Sylvester McCoy
+obteniendo Connie Nielsen
+obteniendo Max Greenfield
+obteniendo Martin Donovan
+obteniendo Cynthia Erivo
+obteniendo Katsuyuki Konishi
+obteniendo Tony Cervone
+obteniendo Yoshitsugu Matsuoka
+obteniendo Walt Dohrn
+obteniendo Kevin Carr
+obteniendo Thomas Kee
+obteniendo Avaryl Halley
+obteniendo Mora Recalde
+obteniendo Karan Soni
+obteniendo Demián Bichir
+obteniendo Charlie Heaton
+obteniendo David P Smith
+obteniendo Paul Ron Cruz
+obteniendo Kristoffer Polaha
+obteniendo Eddie Harrison
+obteniendo Eric Marchen
+obteniendo Jamie Dornan
+obteniendo Tim Story
+obteniendo Antonio Banderas
+obteniendo Hiro Shimono
+obteniendo Jessica Henwick
+obteniendo John Gettier
+obteniendo T-Pain
+obteniendo Awkwafina
+obteniendo Kelly Marie Tran
+obteniendo Flula Borg
+obteniendo Anna Kendrick
+obteniendo Kristen Wiig
+{'actor', 'Actress, singer, songwriter, beauty pageant titleholder', 'Animator, voice actor', 'Actor, comedian', 'Photographer', 'impressionist', 'record producer', 'Animator', 'Author, Poet, Writer', 'Animator, producer, director, screenwriter', 'Inventor', 'Actress, model', 'Journalist', 'Actor, producer', 'American sportswriter', 'Actor and musician', 'internet entrepreneur', 'Rapper', 'Film director, screenwriter, producer, actor, model', 'screenwriter', 'Actress & Writer', 'television host', 'http://dbpedia.org/resource/Audio_engineer', 'Film director, producer, screenwriter, editor, cinematographer, composer', 'director', 'Actor, voice actor, producer', 'Screenwriter, director, producer, actor, script consultant', 'Animator, producer, director, screenwriter, voice actor', 'musician', 'Writer', 'Film director', 'writer', 'http://dbpedia.org/resource/Master_of_ceremonies', 'philanthropist', 'http://dbpedia.org/resource/Voice_acting_in_Japan', 'voice actor', 'http://dbpedia.org/resource/Rapping', 'Filmmaker', 'http://dbpedia.org/resource/Hype_man', 'http://dbpedia.org/resource/Actor', 'Producer', 'Actor, model, musician', 'DJ', 'rapper', 'cartoonist', 'Film director, writer, voice actor', 'Singer', 'Screenwriter, director, producer, actor', 'Singer, songwriter, actress, model', 'Screenwriter', 'Psychologist', 'Voice actress', 'Actress, director', 'Actor', 'Film director, producer', 'Voice actor', 'singer', 'http://dbpedia.org/resource/Theatre_director', 'Writer and editor', 'Actor, producer, director', 'stand-up comedian', 'producer', 'Actor, writer, comedian', 'voice actress', 'Voice actor, radio personality', 'Actress, singer, songwriter', 'Actor, film director', 'Director, producer', 'comedian', 'Actor, physical comedian', 'film producer', 'Actress', 'Film director, screenwriter, actor, comedian', 'Film director, writer', 'narrator', 'Actor, Model', 'http://dbpedia.org/resource/Author', 'http://dbpedia.org/resource/List_of_YouTubers', 'Poet, Farmer, Schoolteacher', 'Writer, director, animator, musician, voice actor', 'activist', 'Model, dancer, singer-songwriter', 'Director', 'songwriter', 'Rugby union referee'}
+
+---
+
+ahora entonces uso esa colección para filtrar las ocupaciones que realmente me interesan para mi dataset.
+puedo tomar esta estrategia porque son pocas personas y realizar las consutlas para obtener todo el conjunto de datos existente
+de dbpedia.
+pero obviamente esta solución no es escalable!!! para nada.
+debería poder obtener ocupaciones de los dataset de dbpedia o wikipedia que identifiquen actores o directores y 
+usar esos datos para filtrar mis consultas.
+
+lo hago bien casero!!.
+filtro a mano los datos y corrijo el script para que las ocupaciones se encuentren dentro de ese conjunto.
+
+primero almaceno las ocupaciones en un json para poder editarlas.
+creo el script download_dbpedia_occupations.py
+
+---
+
+corri el script y descargó todas las ocupaciones de las personas que encontró con esos nombres.
+la edité a mano y la deje en data/
+el original descargado quedó con postfijo _original.json
+
+---
+
+hago una prueba con el script, primero obtengo todas las tripletas de la persona con cierto nombre y 
+chequearía si la tripleta que define la ocupación se encuentra dentro de las ocupaciones editadas y almacenadas en el json.
+pero al ejecutar el script tomo un nombre y tiró miles de tripletas!!.
+así que claramente no es efectivo. voy a realizarlo en 2 partes al proceso.
+primero filtrar por los subjects que tengan las ocupaciones correctas, y despues usando esos subjects obtener si las tripletas asociados a ellos.
+asi por lo menos la cantidad de datos que traigo son de los subjects correctos.
+
+---
+
+bueno efectivamente funciona.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+obteniendo Kenichi Suzumura
+obteniendo datos de http://dbpedia.org/resource/Kenichi_Suzumura
+{'p': {'type': 'uri', 'value': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}, 'o': {'type': 'uri', 'value': 'http://www.w3.org/2002/07/owl#Thing'}}
+
+puse un break asi no me tira todos los datos.
+
+ahora modifico el script para poder relacionar mis subjects con los encontrados.
+
+---
 
 
+ejecuto la prueba y veo que funciona ok.
+por ejmeplo tom Holland encontró las 3 entidades. una como director, otro como actor y otro como author.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+obteniendo Jonathan Ajayi
+entidades externas encontradas set()
+obteniendo Connie Britton
+entidades externas encontradas {'http://dbpedia.org/resource/Connie_Britton'}
+obteniendo Rebecca Hall
+entidades externas encontradas {'http://dbpedia.org/resource/Rebecca_Hall'}
+obteniendo Dimple Kapadia
+entidades externas encontradas {'http://dbpedia.org/resource/Dimple_Kapadia'}
+obteniendo Justin Timberlake
+entidades externas encontradas set()
+obteniendo Mads Mikkelsen
+entidades externas encontradas {'http://dbpedia.org/resource/Mads_Mikkelsen'}
+obteniendo Doug Liman
+entidades externas encontradas {'http://dbpedia.org/resource/Doug_Liman'}
+obteniendo Chloë Grace Moretz
+entidades externas encontradas {'http://dbpedia.org/resource/Chloë_Grace_Moretz'}
+obteniendo Ella Walker
+entidades externas encontradas set()
+obteniendo Michael Caine
+entidades externas encontradas {'http://dbpedia.org/resource/Michael_Caine'}
+obteniendo Patty Jenkins
+entidades externas encontradas {'http://dbpedia.org/resource/Patty_Jenkins'}
+obteniendo Stéphane Roger
+entidades externas encontradas set()
+obteniendo Brittney Aleah
+entidades externas encontradas set()
+obteniendo Himesh Patel
+entidades externas encontradas {'http://dbpedia.org/resource/Himesh_Patel'}
+obteniendo Diego Peretti
+entidades externas encontradas set()
+obteniendo Antonio Banderas
+entidades externas encontradas {'http://dbpedia.org/resource/Antonio_Banderas'}
+obteniendo Adam Wingard
+entidades externas encontradas {'http://dbpedia.org/resource/Adam_Wingard'}
+obteniendo Jeffrey Corazzini
+entidades externas encontradas set()
+obteniendo Elizabeth Debicki
+entidades externas encontradas {'http://dbpedia.org/resource/Elizabeth_Debicki'}
+obteniendo Vincent Lacoste
+entidades externas encontradas {'http://dbpedia.org/resource/Vincent_Lacoste'}
+obteniendo Brian Gill
+entidades externas encontradas set()
+obteniendo Monica Haynes
+entidades externas encontradas set()
+obteniendo Dennis Mojen
+entidades externas encontradas set()
+obteniendo Benjamin Biolay
+entidades externas encontradas {'http://dbpedia.org/resource/Benjamin_Biolay'}
+obteniendo Pablo Rago
+entidades externas encontradas {'http://dbpedia.org/resource/Pablo_Rago'}
+obteniendo John Gettier
+entidades externas encontradas set()
+obteniendo Nikolai Kinski
+entidades externas encontradas {'http://dbpedia.org/resource/Nikolai_Kinski'}
+obteniendo Thomas Clay Strickland
+entidades externas encontradas set()
+obteniendo Kaila Ingram
+entidades externas encontradas set()
+obteniendo Tom Holland
+entidades externas encontradas {'http://dbpedia.org/resource/Tom_Holland_(director)', 'http://dbpedia.org/resource/Tom_Holland_(actor)', 'http://dbpedia.org/resource/Tom_Holland_(author)'}
+obteniendo Rick Kelvin Branch
+entidades externas encontradas set()
+obteniendo Lynda Carter
+entidades externas encontradas {'http://dbpedia.org/resource/Lynda_Carter'}
+obteniendo Manoj Anand
+entidades externas encontradas set()
+
+---
+
+ahora pongo un break para probar con una persona si el resto del código funciona.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+obteniendo Charlie Heaton
+entidades externas encontradas {'http://dbpedia.org/resource/Charlie_Heaton'}
+obteniendo datos de http://dbpedia.org/resource/Charlie_Heaton
+my subject : https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Charlie_Heaton 
+external subject : http://dbpedia.org/resource/Charlie_Heaton
+{'p': {'type': 'uri', 'value': 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}, 'o': {'type': 'uri', 'value': 'http://www.w3.org/2002/07/owl#Thing'}}
+
+
+perfecto, corrió ok y trajo tripletas asociadas al subject externo a mi dataset.
+creo que ya estaría todo el script de dbpedia.
+el de wikipedia debería ser sencillo de obtener.
+
+---
+
+ahora voy a tratar de agregar todas esas tripletas en un grafo rdf para después poder serializarlo en turtle o el formato que elija.
 
 
 
