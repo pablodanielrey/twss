@@ -2269,6 +2269,12 @@ editandolo con el editor de archivos lo veo válido.
 
 lo veo bien. asi que perfecto.
 
+---
+
+agrego un bind_schemas par que quede un poquito mas legible el turtle de dbpedia.
+
+--
+
 
 
 
