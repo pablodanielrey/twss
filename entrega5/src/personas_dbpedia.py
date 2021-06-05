@@ -101,6 +101,9 @@ if __name__ == '__main__':
             for result in results["results"]["bindings"]:
                 add_format_triplets(gdata, my_subject, result)
 
+            ''' agrego el sameAs de mi subject al recurso externo de dbpedia '''
+            gdata.add((my_subject, OWL.sameAs, URIRef(subject)))
+
     #gdata.serialize(sys.stdout.buffer, format='turtle')
     with open('data/dbpedia.ttl','w') as f:
        f.write(gdata.serialize(format='turtle').decode("utf-8"))
