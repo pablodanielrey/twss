@@ -3514,3 +3514,13 @@ ej voy a eliminar estructuras intermedias que uso para solo usar los grafos en e
 
 --
 
+me acabo de dar cuenta que hya otra pregunta mas.
+el tema de :
+
+wasDirectedByOscarWinner
+
+no creo que llegue con el tiempo.
+
+--
+
+analizo rápido como se obtiene quien ganó un oscar.
