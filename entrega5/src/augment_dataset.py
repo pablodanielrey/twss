@@ -27,62 +27,56 @@ def select_endpoint(iri:str, endpoints:dict):
 
 if __name__ == '__main__':
 
+
     print('leyendo archivo de subjects')
     gsubjects = Graph()
-    with open('data/wikidata_subjects.ttl','r') as f:
+    with open('data/dbpedia_subjects.ttl','r') as f:
         gsubjects.parse(f, format='turtle')
-
-    print('convirtiendo a formato interno')
-    subjects = {}
-    ''' convierto al formato que espera el script '''
-    for s,p,o in gsubjects.triples((None,OWL.sameAs,None)):
-        my_subject = str(s)
-        external = str(o)
-        print(f'{my_subject} <-- {external}')
-        if my_subject not in subjects:
-            subjects[my_subject] = set()
-        subjects[my_subject].add(external)
 
     delay = 2
     gdata = Graph()
     bind_schemas(gdata)
 
     endpoints = get_endpoints()
-    cantidad = len(subjects)
+    cantidad = 'x'
     procesado = 0
-    for my_subject, external_subjects in subjects.items():
-        for subject in external_subjects:
-            print(f'procesando {procesado}/{cantidad}')
-            sql = select_endpoint(subject, endpoints)
-            sql.setQuery("""
-                select distinct ?s ?p ?o
-                where {
-                    <""" + subject + """> ?p ?o .
-                }        
-            """)
 
-            for tries in range(1,10):
-                print(f'esperando {delay}')
-                try:
-                    time.sleep(delay)
-                except Exception as e1:
-                    pass
+    for s,p,o in gsubjects.triples((None,OWL.sameAs,None)):
+        my_subject = str(s)
+        subject = str(o)
 
-                try:
-                    print(f'obteniendo datos de {subject}')
-                    results = sql.query().convert()
-                    for result in results["results"]["bindings"]:
-                        add_format_triplets(gdata, my_subject, result)
+        print(f'procesando {procesado}/{cantidad}')
+        sql = select_endpoint(subject, endpoints)
+        sql.setQuery("""
+            select distinct ?s ?p ?o
+            where {
+                <""" + subject + """> ?p ?o .
+            }        
+        """)
 
-                    delay = delay - 1 if delay > 2 else delay
-                    break
+        ''' pruebo 10 intentos por cada request fallido '''
+        for tries in range(1,10):
+            print(f'esperando {delay}')
+            try:
+                time.sleep(delay)
+            except Exception as e1:
+                pass
 
-                except urllib.error.HTTPError as he: 
-                    logging.warning(f'Incremento el delay para no matar el endpoint {delay}')
-                    delay = (delay * delay) + 1
+            try:
+                print(f'obteniendo datos de {subject}')
+                results = sql.query().convert()
+                for result in results["results"]["bindings"]:
+                    add_format_triplets(gdata, my_subject, result)
 
-            procesado += 1
+                delay = delay - 1 if delay > 2 else delay
+                break
+
+            except urllib.error.HTTPError as he: 
+                logging.warning(f'Incremento el delay para no matar el endpoint {delay}')
+                delay = (delay * delay) + 1
+
+        procesado += 1
 
     #gdata.serialize(sys.stdout.buffer, format='turtle')
-    with open('data/external_dataset.ttl','w') as f:
+    with open('data/external_dataset2.ttl','w') as f:
        f.write(gdata.serialize(format='turtle').decode("utf-8"))

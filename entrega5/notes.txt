@@ -97,3 +97,16 @@ sobre datasets de ontologías no tan abstractas!!
 wikidata por sobre dbpedia.
 
 ---
+
+la ontologia de wikidata me resulta un poco confusa.
+el tema de las ocupaciones de las personas.
+son a la vez.
+
+subclase de
+instancia de
+
+y las 2 clasificaciones manejan una jerarquía sobre las ocupaciones para films.
+no entiendo por que no sería una sola clasificación.
+analizarlo mejor.
+
+---

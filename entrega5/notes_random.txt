@@ -3510,5 +3510,7 @@ y lo formateo un poquito mejor.
 
 bueno termino de correr el obtenr las personas de dbpedia y funciona bien.
 así que lo que me resta por hacer es eliminar las funciones duplicadas entre los scripts y acomodar un poquito el código.
+ej voy a eliminar estructuras intermedias que uso para solo usar los grafos en el augment_dataset.py
 
 --
+
