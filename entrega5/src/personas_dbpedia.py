@@ -44,6 +44,7 @@ if __name__ == '__main__':
         for result in results["results"]["bindings"]:
             occ = result['oc']['value']
             if occ in occupations:
+                ''' se encuentra en alguna de las ocupaciones permitidas '''
                 subject = result['s']['value']
                 local_subjects.add(subject)
         
