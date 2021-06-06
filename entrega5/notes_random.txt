@@ -3498,3 +3498,17 @@ y el proceso de obtener los datos de esos subjects se realice con este mismo scr
 
 ---
 
+ahi termine de corregir el script de personas_dbpedia.py
+lo correo y debería almacenar las iris encontradas en dbpedia_subjects.ttl
+
+---
+
+elminio lo que ya no es necesario en personas_wikidata.py
+y lo formateo un poquito mejor.
+
+---
+
+bueno termino de correr el obtenr las personas de dbpedia y funciona bien.
+así que lo que me resta por hacer es eliminar las funciones duplicadas entre los scripts y acomodar un poquito el código.
+
+--

@@ -1,0 +1,242 @@
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada> owl:sameAs dbr:Óscar_Jaenada .
+
+twssd:Aaron_Taylor-Johnson owl:sameAs dbr:Aaron_Taylor-Johnson .
+
+twssd:Adam_Wingard owl:sameAs dbr:Adam_Wingard .
+
+twssd:Alberto_Ammann owl:sameAs dbr:Alberto_Ammann .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> owl:sameAs dbr:Alexander_Skarsgård .
+
+twssd:Alice_Braga owl:sameAs dbr:Alice_Braga .
+
+twssd:Alison_Brie owl:sameAs dbr:Alison_Brie .
+
+twssd:Amr_Waked owl:sameAs dbr:Amr_Waked .
+
+twssd:Anna_Kendrick owl:sameAs dbr:Anna_Kendrick .
+
+twssd:Antonio_Banderas owl:sameAs dbr:Antonio_Banderas .
+
+twssd:Anya_Taylor-Joy owl:sameAs dbr:Anya_Taylor-Joy .
+
+twssd:Awkwafina owl:sameAs dbr:Awkwafina .
+
+twssd:Benjamin_Biolay owl:sameAs dbr:Benjamin_Biolay .
+
+twssd:Blu_Hunt owl:sameAs dbr:Blu_Hunt .
+
+twssd:Bobby_Cannavale owl:sameAs dbr:Bobby_Cannavale .
+
+twssd:Camille_Cottin owl:sameAs dbr:Camille_Cottin .
+
+twssd:Carey_Mulligan owl:sameAs dbr:Carey_Mulligan .
+
+twssd:Carole_Bouquet owl:sameAs dbr:Carole_Bouquet .
+
+twssd:Chance_the_Rapper owl:sameAs dbr:Chance_the_Rapper .
+
+twssd:Charlie_Heaton owl:sameAs dbr:Charlie_Heaton .
+
+twssd:Chiara_Mastroianni owl:sameAs dbr:Chiara_Mastroianni .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chlo%C3%AB_Grace_Moretz> owl:sameAs dbr:Chloë_Grace_Moretz .
+
+twssd:Chris_Pine owl:sameAs dbr:Chris_Pine .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> owl:sameAs dbr:Christophe_Honoré .
+
+twssd:Christopher_Mintz-Plasse owl:sameAs dbr:Christopher_Mintz-Plasse .
+
+twssd:Christopher_Nolan owl:sameAs dbr:Christopher_Nolan,
+        <http://dbpedia.org/resource/Christopher_Nolan_(author)> .
+
+twssd:Clancy_Brown owl:sameAs dbr:Clancy_Brown .
+
+twssd:Connie_Britton owl:sameAs dbr:Connie_Britton .
+
+twssd:Cynthia_Erivo owl:sameAs dbr:Cynthia_Erivo .
+
+twssd:Daisy_Ridley owl:sameAs dbr:Daisy_Ridley .
+
+twssd:Daniel_Dae_Kim owl:sameAs dbr:Daniel_Dae_Kim .
+
+twssd:David_Oyelowo owl:sameAs dbr:David_Oyelowo .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Demi%C3%A1n_Bichir> owl:sameAs dbr:Demián_Bichir .
+
+twssd:Dimple_Kapadia owl:sameAs dbr:Dimple_Kapadia .
+
+twssd:Don_Hall owl:sameAs <http://dbpedia.org/resource/Don_Hall_(filmmaker)> .
+
+twssd:Doug_Liman owl:sameAs dbr:Doug_Liman .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez> owl:sameAs dbr:Eiza_González .
+
+twssd:Elizabeth_Debicki owl:sameAs dbr:Elizabeth_Debicki .
+
+twssd:Flula_Borg owl:sameAs dbr:Flula_Borg .
+
+twssd:Frank_Welker owl:sameAs dbr:Frank_Welker .
+
+twssd:Gabriella_Wilde owl:sameAs dbr:Gabriella_Wilde .
+
+twssd:Happy_Anderson owl:sameAs dbr:Happy_Anderson .
+
+twssd:Heiner_Lauterbach owl:sameAs dbr:Heiner_Lauterbach .
+
+twssd:Henry_Zaga owl:sameAs dbr:Henry_Zaga .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Hern%C3%A1n_Jim%C3%A9nez> owl:sameAs dbr:Hernán_Jiménez .
+
+twssd:Himesh_Patel owl:sameAs dbr:Himesh_Patel .
+
+twssd:Hiro_Shimono owl:sameAs dbr:Hiro_Shimono .
+
+twssd:James_Corden owl:sameAs dbr:James_Corden .
+
+twssd:Jamie_Dornan owl:sameAs dbr:Jamie_Dornan .
+
+twssd:Jennifer_Coolidge owl:sameAs dbr:Jennifer_Coolidge .
+
+twssd:Jennifer_Ouellette owl:sameAs dbr:Jennifer_Ouellette .
+
+twssd:Jessica_Henwick owl:sameAs dbr:Jessica_Henwick .
+
+twssd:John_David_Washington owl:sameAs dbr:John_David_Washington .
+
+twssd:Josh_Boone owl:sameAs <http://dbpedia.org/resource/Josh_Boone_(director)> .
+
+twssd:Julian_Dennison owl:sameAs dbr:Julian_Dennison .
+
+twssd:June_Foray owl:sameAs dbr:June_Foray .
+
+twssd:Karan_Soni owl:sameAs dbr:Karan_Soni .
+
+twssd:Katsuyuki_Konishi owl:sameAs dbr:Katsuyuki_Konishi .
+
+twssd:Kelly_Marie_Tran owl:sameAs dbr:Kelly_Marie_Tran .
+
+twssd:Ken_Duken owl:sameAs dbr:Ken_Duken .
+
+twssd:Kenichi_Suzumura owl:sameAs dbr:Kenichi_Suzumura .
+
+twssd:Kenneth_Branagh owl:sameAs dbr:Kenneth_Branagh .
+
+twssd:Kristen_Wiig owl:sameAs dbr:Kristen_Wiig .
+
+twssd:Kristoffer_Polaha owl:sameAs dbr:Kristoffer_Polaha .
+
+twssd:Kunal_Nayyar owl:sameAs dbr:Kunal_Nayyar .
+
+twssd:Kurt_Sutter owl:sameAs dbr:Kurt_Sutter .
+
+twssd:Kyle_Chandler owl:sameAs dbr:Kyle_Chandler .
+
+twssd:Laverne_Cox owl:sameAs dbr:Laverne_Cox .
+
+twssd:Lynda_Carter owl:sameAs dbr:Lynda_Carter .
+
+twssd:Mads_Mikkelsen owl:sameAs dbr:Mads_Mikkelsen .
+
+twssd:Maisie_Williams owl:sameAs dbr:Maisie_Williams .
+
+twssd:Marie-Christine_Adam owl:sameAs dbr:Marie-Christine_Adam .
+
+twssd:Mark_Jackson owl:sameAs <http://dbpedia.org/resource/Mark_Jackson_(actor)> .
+
+twssd:Martin_Donovan owl:sameAs dbr:Martin_Donovan,
+        <http://dbpedia.org/resource/Martin_Donovan_(screenwriter)> .
+
+twssd:Max_Greenfield owl:sameAs dbr:Max_Greenfield .
+
+twssd:Mel_Blanc owl:sameAs dbr:Mel_Blanc .
+
+twssd:Michael_Caine owl:sameAs dbr:Michael_Caine .
+
+twssd:Michael_Gwisdek owl:sameAs dbr:Michael_Gwisdek .
+
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Pe%C3%B1a> owl:sameAs dbr:Michael_Peña .
+
+twssd:Millie_Bobby_Brown owl:sameAs dbr:Millie_Bobby_Brown .
+
+twssd:Natalia_Oreiro owl:sameAs dbr:Natalia_Oreiro .
+
+twssd:Natasha_Rothwell owl:sameAs dbr:Natasha_Rothwell .
+
+twssd:Natsuki_Hanae owl:sameAs dbr:Natsuki_Hanae .
+
+twssd:Nick_Jonas owl:sameAs dbr:Nick_Jonas .
+
+twssd:Nicky_Jam owl:sameAs dbr:Nicky_Jam .
+
+twssd:Nikolai_Kinski owl:sameAs dbr:Nikolai_Kinski .
+
+twssd:Pablo_Echarri owl:sameAs dbr:Pablo_Echarri .
+
+twssd:Pablo_Rago owl:sameAs dbr:Pablo_Rago .
+
+twssd:Patty_Jenkins owl:sameAs dbr:Patty_Jenkins .
+
+twssd:Paul_Briggs owl:sameAs <http://dbpedia.org/resource/Paul_Briggs_(animator)> .
+
+twssd:Pedro_Pascal owl:sameAs dbr:Pedro_Pascal .
+
+twssd:Ravi_Patel owl:sameAs <http://dbpedia.org/resource/Ravi_Patel_(actor)> .
+
+twssd:Ray_McKinnon owl:sameAs <http://dbpedia.org/resource/Ray_McKinnon_(actor)> .
+
+twssd:Rebecca_Hall owl:sameAs dbr:Rebecca_Hall .
+
+twssd:Rita_Tushingham owl:sameAs dbr:Rita_Tushingham .
+
+twssd:Robert_Pattinson owl:sameAs dbr:Robert_Pattinson .
+
+twssd:Robin_Wright owl:sameAs dbr:Robin_Wright .
+
+twssd:Rosario_Dawson owl:sameAs dbr:Rosario_Dawson .
+
+twssd:Sahil_Shroff owl:sameAs dbr:Sahil_Shroff .
+
+twssd:Sam_Richardson owl:sameAs <http://dbpedia.org/resource/Sam_Richardson_(actor)> .
+
+twssd:Sam_Rockwell owl:sameAs dbr:Sam_Rockwell .
+
+twssd:Saori_Hayami owl:sameAs dbr:Saori_Hayami .
+
+twssd:Satoshi_Hino owl:sameAs dbr:Satoshi_Hino .
+
+twssd:Shun_Oguri owl:sameAs dbr:Shun_Oguri .
+
+twssd:Subrat_Dutta owl:sameAs dbr:Subrat_Dutta .
+
+twssd:Sylvester_McCoy owl:sameAs dbr:Sylvester_McCoy .
+
+twssd:T-Pain owl:sameAs dbr:T-Pain .
+
+twssd:Takahiro_Sakurai owl:sameAs dbr:Takahiro_Sakurai .
+
+twssd:Tim_Story owl:sameAs dbr:Tim_Story .
+
+twssd:Tom_Holland owl:sameAs <http://dbpedia.org/resource/Tom_Holland_(actor)>,
+        <http://dbpedia.org/resource/Tom_Holland_(author)>,
+        <http://dbpedia.org/resource/Tom_Holland_(director)> .
+
+twssd:Tomokazu_Seki owl:sameAs dbr:Tomokazu_Seki .
+
+twssd:Tony_Cervone owl:sameAs dbr:Spike_Brandt_and_Tony_Cervone .
+
+twssd:Vanessa_Curry owl:sameAs dbr:Vanessa_Curry .
+
+twssd:Vincent_Lacoste owl:sameAs dbr:Vincent_Lacoste .
+
+twssd:Walt_Dohrn owl:sameAs dbr:Walt_Dohrn .
+
+twssd:William_Hanna owl:sameAs dbr:William_Hanna .
+
+twssd:Yoshitsugu_Matsuoka owl:sameAs dbr:Yoshitsugu_Matsuoka .
+

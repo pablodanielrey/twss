@@ -7,36 +7,13 @@ from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef, Literal
 
 from SPARQLWrapper import SPARQLWrapper, JSON, RDFXML
 
+from .common import bind_schemas, get_schemas, get_persons_names
+
+
 def get_wikidata_endpoint():
     sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
     sparql.setReturnFormat(JSON)
     return sparql
-
-def get_schemas():
-    schemas = {
-        'schema': Namespace('http://schema.org/'),
-        'twss': Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#'),
-        'twssd': Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/'),
-        'dbr': Namespace('http://dbpedia.org/resource/'),
-        'dbo': Namespace('http://dbpedia.org/ontology/'),
-        'wiki': Namespace('http://en.wikipedia.org/wiki/'),
-        'foaf': Namespace('http://xmlns.com/foaf/0.1/'),
-        'owl': Namespace('http://www.w3.org/2002/07/owl#')
-    }
-    return schemas
-
-def bind_schemas(g:Graph):
-    for s, n in get_schemas().items():
-        g.bind(s,n)
-
-
-def get_persons_names(g:Graph, schema:Namespace):
-    names = []
-    for s,p,o in g.triples((None, RDF.type, schema['Person'])):
-        for ss,pp,name in g.triples((s, schema['name'], None)):
-            names.append((s,str(name)))
-    return names
-
 
 def add_format_triplets(g:Graph, subject:URIRef, triplets:dict):
     """ agrega la tripleta dándole formato al grafo """
@@ -156,56 +133,16 @@ if __name__ == '__main__':
         delay, remote_subjects = get_remote_subjects(name, delay)
         subjects[my_subject] = remote_subjects
 
-        #cantidad += 1
-        #if cantidad > 10:
-        #    break
-
-
     ''' escribo los subjects debido a que wikidata pone límites a los requests '''        
     gsubjects = Graph()
     for my_subject, external_subjects in subjects.items():
         for subject in external_subjects:
-            ''' agrego el sameAs de mi subject al recurso externo de dbpedia '''
+            ''' agrego el sameAs de mi subject al recurso externo '''
             gsubjects.add((my_subject, OWL.sameAs, URIRef(subject)))
 
     with open('data/wikidata_subjects.ttl','w') as f:
        f.write(gsubjects.serialize(format='turtle').decode("utf-8"))
 
 
-    delay = 2
-    gdata = Graph()
-    bind_schemas(gdata)
-
-    #sql.setReturnFormat(RDFXML)
-    for my_subject, external_subjects in subjects.items():
-        for subject in external_subjects:
-            print(f'esperando {delay}')
-            try:
-                time.sleep(delay)
-            except Exception as e1:
-                pass
-
-            print(f'obteniendo datos de {subject}')
-            sql.setQuery("""
-                select distinct ?s ?p ?o
-                where {
-                    <""" + subject + """> ?p ?o .
-                }        
-            """)
-            try:
-                results = sql.query().convert()
-            
-                for result in results["results"]["bindings"]:
-                    add_format_triplets(gdata, my_subject, result)
-
-                delay = delay - 1 if delay > 2 else delay
-
-            except urllib.error.HTTPError as he: 
-                logging.warning(f'Incremento el delay para no matar el endpoint {delay} {tries}')
-                delay = delay * delay
-
-    #gdata.serialize(sys.stdout.buffer, format='turtle')
-    with open('data/wikidata.ttl','w') as f:
-       f.write(gdata.serialize(format='turtle').decode("utf-8"))
 
    

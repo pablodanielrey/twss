@@ -7,6 +7,7 @@ from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef, Literal
 
 from SPARQLWrapper import SPARQLWrapper, JSON, RDFXML
 
+from common import get_schemas, bind_schemas, add_format_triplets
 
 def get_endpoints():
     endpoints = {
@@ -22,38 +23,6 @@ def select_endpoint(iri:str, endpoints:dict):
         if e in iri:
             return endpoints[e]
     raise Exception(f'enpoint desconocido para la iri {iri}')
-
-def get_schemas():
-    schemas = {
-        'schema': Namespace('http://schema.org/'),
-        'twss': Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#'),
-        'twssd': Namespace('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/'),
-        'dbr': Namespace('http://dbpedia.org/resource/'),
-        'dbo': Namespace('http://dbpedia.org/ontology/'),
-        'wiki': Namespace('http://en.wikipedia.org/wiki/'),
-        'foaf': Namespace('http://xmlns.com/foaf/0.1/'),
-        'owl': Namespace('http://www.w3.org/2002/07/owl#')
-    }
-    return schemas
-
-def bind_schemas(g:Graph):
-    for s, n in get_schemas().items():
-        g.bind(s,n)
-
-
-def add_format_triplets(g:Graph, subject:URIRef, triplets:dict):
-    """ agrega la tripleta dándole formato al grafo """
-    ''' las propiedades deberían ser todas uris '''
-    assert triplets['p']['type'] == 'uri'
-    prop = URIRef(triplets['p']['value'])
-
-    obj = triplets['o']
-    if obj['type'] == 'uri':
-        vobj = URIRef(obj['value'])
-    else:
-        vobj = Literal(obj['value'])
-    
-    g.add((URIRef(subject), prop, vobj))
 
 
 if __name__ == '__main__':

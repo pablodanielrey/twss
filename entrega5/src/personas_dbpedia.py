@@ -4,19 +4,16 @@ from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef, Literal
 
 from SPARQLWrapper import SPARQLWrapper, JSON, RDFXML
 
-from .common import get_persons_names, get_schemas, bind_schemas
+from common import get_persons_names, get_schemas, bind_schemas
 
 def get_dbpedia_endpoint():
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     sparql.setReturnFormat(JSON)
     return sparql
 
-
-
 if __name__ == '__main__':
 
     g = Graph()
-
     with open('data/dataset-original.ttl','r') as f:
         g.parse(f, format='turtle')
 
@@ -24,6 +21,7 @@ if __name__ == '__main__':
     schema = sch['schema']
     names = get_persons_names(g, schema)
 
+    ''' cargo las ocupaciones procesadas a mano '''
     with open('data/db_pedia_occupations.json','r') as f:
         occupations = json.load(f)['occupations']
         
@@ -52,26 +50,14 @@ if __name__ == '__main__':
         print(f'entidades externas encontradas {local_subjects}')
         subjects[my_subject] = local_subjects
 
-    gdata = Graph()
-    bind_schemas(gdata)
+    ''' escribo los subjects '''        
+    gsubjects = Graph()
+    bind_schemas(gsubjects)
 
-    #sql.setReturnFormat(RDFXML)
     for my_subject, external_subjects in subjects.items():
         for subject in external_subjects:
-            print(f'obteniendo datos de {subject}')
-            sql.setQuery("""
-                select distinct ?s ?p ?o
-                where {
-                    <""" + subject + """> ?p ?o .
-                }        
-            """)
-            results = sql.query().convert()
-            for result in results["results"]["bindings"]:
-                add_format_triplets(gdata, my_subject, result)
+            ''' agrego el sameAs de mi subject al recurso externo '''
+            gsubjects.add((my_subject, OWL.sameAs, URIRef(subject)))
 
-            ''' agrego el sameAs de mi subject al recurso externo de dbpedia '''
-            gdata.add((my_subject, OWL.sameAs, URIRef(subject)))
-
-    #gdata.serialize(sys.stdout.buffer, format='turtle')
-    with open('data/dbpedia.ttl','w') as f:
-       f.write(gdata.serialize(format='turtle').decode("utf-8"))
+    with open('data/dbpedia_subjects.ttl','w') as f:
+       f.write(gsubjects.serialize(format='turtle').decode("utf-8"))
