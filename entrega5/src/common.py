@@ -16,7 +16,12 @@ def get_schemas():
         'dbo': Namespace('http://dbpedia.org/ontology/'),
         'wiki': Namespace('http://en.wikipedia.org/wiki/'),
         'foaf': Namespace('http://xmlns.com/foaf/0.1/'),
-        'owl': Namespace('http://www.w3.org/2002/07/owl#')
+        'owl': Namespace('http://www.w3.org/2002/07/owl#'),
+        'wd': Namespace('http://www.wikidata.org/entity/'),
+        'wdt': Namespace('http://www.wikidata.org/prop/direct/'),
+        'wds': Namespace('http://www.wikidata.org/entity/statement/'),
+        'p': Namespace('http://www.wikidata.org/prop/'),
+        'ps': Namespace('http://www.wikidata.org/prop/statement/')
     }
     return schemas
 

@@ -15,20 +15,6 @@ def get_wikidata_endpoint():
     sparql.setReturnFormat(JSON)
     return sparql
 
-def add_format_triplets(g:Graph, subject:URIRef, triplets:dict):
-    """ agrega la tripleta dándole formato al grafo """
-    ''' las propiedades deberían ser todas uris '''
-    assert triplets['p']['type'] == 'uri'
-    prop = URIRef(triplets['p']['value'])
-
-    obj = triplets['o']
-    if obj['type'] == 'uri':
-        vobj = URIRef(obj['value'])
-    else:
-        vobj = Literal(obj['value'])
-    
-    g.add((subject, prop, vobj))
-
 def get_remote_subjects(name:str, delay:int):
     local_subjects = set()
     for tries in range(1,10):
@@ -135,6 +121,7 @@ if __name__ == '__main__':
 
     ''' escribo los subjects debido a que wikidata pone límites a los requests '''        
     gsubjects = Graph()
+    bind_schemas(gsubjects)
     for my_subject, external_subjects in subjects.items():
         for subject in external_subjects:
             ''' agrego el sameAs de mi subject al recurso externo '''
