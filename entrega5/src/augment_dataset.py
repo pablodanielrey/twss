@@ -27,7 +27,6 @@ def select_endpoint(iri:str, endpoints:dict):
 
 if __name__ == '__main__':
 
-
     print('leyendo archivo de subjects')
     gsubjects = Graph()
     with open('data/dbpedia_subjects.ttl','r') as f:

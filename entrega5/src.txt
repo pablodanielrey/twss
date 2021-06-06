@@ -1,0 +1,34 @@
+
+El proceso se divide en 2 etapas.
+un poco inspirado en el tp anterior, donde links.ttl identificaban las iris que debíamos desreferenciar.
+ahora hago lo mismo pero para desreferenciar y obtener los datos uso sparql.
+
+etapa1 :
+se usa sparql dentro de cada uno de los servicios para filtrar e identificar las iris de los recursos asociados a las personas de mi dataset. 
+en principio existen 2 scripts.
+personas_dbpedia.py
+personas_wikidata.py
+
+etapa2 :
+se usa un script 
+augment_dataset.py 
+para acceder a dbpedia y wikidata, descargando todas los datos que tienen sobre esos subjects y escribirlos
+en un nuevo grafo aumentado con esos datos.
+
+
+la sintaxis para ejcutar los scripts:
+
+cd entrega5
+python src/personas_dbpedia.py
+python src/personas_wikidata.py
+python src/augment_dataset.py
+
+
+todo el proceso de desarrollo y algunas motivaciones se encuentra dentro de notes_random.txt
+y el resumen de las conclusiones mas importantes de acuerdo a mi criterio se encuentra en notes.txt
+
+
+
+
+se usan 2 esquemas distintos para definir que subjects elegimos.
+en el caso de dbpedia se realiza primero un análisis de las ocupaciones que tiene registrado dbpedia sobre personas que asocio 
