@@ -38,14 +38,13 @@ if __name__ == '__main__':
     bind_schemas(gdata)
 
     endpoints = get_endpoints()
-    cantidad = 'x'
     procesado = 0
 
     for s,p,o in gsubjects.triples((None,OWL.sameAs,None)):
         my_subject = str(s)
         subject = str(o)
 
-        print(f'procesando {procesado}/{cantidad}')
+        print(f'procesando {procesado}')
         sql = select_endpoint(subject, endpoints)
         sql.setQuery("""
             select distinct ?s ?p ?o
