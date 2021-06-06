@@ -29,7 +29,11 @@ ultilicé una estrategia que solo es posible en mi dataset. pero no es escalable
 Defina y agregue a su base de conocimiento la object property wasDirectedByOscarWinner que relaciona a una actriz/actor de su base de conocimiento con otra persona si:
 a) la primera actuó en una película dirigida por la segunda, y 
 b) la segunda recibió un premio Oscar (en cualquier categoría). 
-Utilice Wikidata/DBPedia para obtener la información.  Muestre la consulta que utilizó para eso.
-En este ejercicio vamos a enriquecer la información que fue generando a lo largo de la asignatura relacionada al cine. La idea es que utilice consultas SPARQL sobre Wikidata y DBpedia para enriquecer sus bases de conocimiento (los archivos .ttl) que con los resultados de esas consultas.
 
-En comparación con el TP anterior (donde enriqueció en base a dereferenciación de URLs), ¿Qué diferencias, ventajas y desventajas le encuentra al uso de SPARQL?.   Si utilizó alguna librería específica comente brevemente las ventajas que encontró, y cómo le ayudo en su solución. 
+Utilice Wikidata/DBPedia para obtener la información.  Muestre la consulta que utilizó para eso.
+
+En este ejercicio vamos a enriquecer la información que fue generando a lo largo de la asignatura relacionada al cine. La idea es que utilice consultas SPARQL sobre Wikidata y DBpedia para 
+enriquecer sus bases de conocimiento (los archivos .ttl) que con los resultados de esas consultas.
+
+En comparación con el TP anterior (donde enriqueció en base a dereferenciación de URLs), ¿Qué diferencias, ventajas y desventajas le encuentra al uso de SPARQL?.   Si utilizó alguna librería específica comente brevemente 
+las ventajas que encontró, y cómo le ayudo en su solución. 
