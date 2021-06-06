@@ -51,6 +51,7 @@ if __name__ == '__main__':
                 subject = result['s']['value']
                 local_subjects.add(subject)
         
+        print(f'encontrados {local_subjects}')
         subjects[my_subject] = local_subjects
         procesado += 1
 
