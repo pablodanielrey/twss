@@ -28,7 +28,10 @@ if __name__ == '__main__':
     subjects = {}
     sql = get_dbpedia_endpoint()
 
+    cantidad = len(names)
+    procesado = 0
     for my_subject, name in names:
+        print(f'procesando {procesado}/{cantidad}')
         local_subjects = set()
 
         print(f'obteniendo {name}')
@@ -48,8 +51,8 @@ if __name__ == '__main__':
                 subject = result['s']['value']
                 local_subjects.add(subject)
         
-        print(f'entidades externas encontradas {local_subjects}')
         subjects[my_subject] = local_subjects
+        procesado += 1
 
     ''' escribo los subjects '''        
     gsubjects = Graph()
