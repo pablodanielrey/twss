@@ -1,49 +1,16 @@
 @prefix : <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dbr: <http://dbpedia.org/resource/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix wiki: <http://en.wikipedia.org/wiki/> .
 @prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
 @base <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> rdf:type owl:Ontology .
-
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  http://schema.org/hasOccupation
-<http://schema.org/hasOccupation> rdf:type owl:ObjectProperty ;
-                                  rdfs:domain <http://schema.org/Person> ;
-                                  rdfs:range <http://schema.org/Occupation> .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://schema.org/birthDate
-<http://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
-                              rdfs:domain <http://schema.org/Person> ;
-                              rdfs:range xsd:dateTime .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://schema.org/Occupation
-<http://schema.org/Occupation> rdf:type owl:Class ;
-                               rdfs:subClassOf <http://schema.org/Intangible> .
-
-
-
-
 
 #################################################################
 #    Object Properties
@@ -94,6 +61,12 @@
 <http://schema.org/eligibleRegion> rdf:type owl:ObjectProperty ;
                                    rdfs:domain <http://schema.org/Offer> ;
                                    rdfs:range <http://schema.org/Place> .
+
+
+###  http://schema.org/hasOccupation
+<http://schema.org/hasOccupation> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <http://schema.org/Person> ;
+                                  rdfs:range <http://schema.org/Occupation> .
 
 
 ###  http://schema.org/hasPart
@@ -192,6 +165,31 @@
                         rdfs:range owl:Thing .
 
 
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#cinema
+:cinema rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty ;
+        rdfs:domain :ShowRoom ;
+        rdfs:range :Cinema .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#movie
+:movie rdf:type owl:ObjectProperty ;
+       rdfs:domain :Show ;
+       rdfs:range <http://schema.org/Movie> .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#showRoom
+:showRoom rdf:type owl:ObjectProperty ;
+          rdfs:domain :Show ;
+          rdfs:range :ShowRoom .
+
+
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#wasDirectedByOscarWinner
+:wasDirectedByOscarWinner rdf:type owl:ObjectProperty ;
+                          rdfs:domain <http://schema.org/Person> ;
+                          rdfs:range <http://schema.org/Person> .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -213,6 +211,12 @@
                                rdfs:domain <http://schema.org/Rating> ;
                                rdfs:range xsd:float ,
                                           xsd:string .
+
+
+###  http://schema.org/birthDate
+<http://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/Person> ;
+                              rdfs:range xsd:dateTime .
 
 
 ###  http://schema.org/category
@@ -331,6 +335,12 @@
                               rdfs:range xsd:dateTime .
 
 
+###  http://schema.org/text
+<http://schema.org/text> rdf:type owl:DatatypeProperty ;
+                         rdfs:domain <http://schema.org/CreativeWork> ;
+                         rdfs:range xsd:string .
+
+
 ###  http://schema.org/thumbnailUrl
 <http://schema.org/thumbnailUrl> rdf:type owl:DatatypeProperty ;
                                  rdfs:domain <http://schema.org/CreativeWork> ;
@@ -361,6 +371,12 @@
                                 rdfs:range xsd:float .
 
 
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#movieFormat
+:movieFormat rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Show ;
+             rdfs:range xsd:string .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -377,6 +393,11 @@
 ###  http://schema.org/AggregateRating
 <http://schema.org/AggregateRating> rdf:type owl:Class ;
                                     rdfs:subClassOf <http://schema.org/Rating> .
+
+
+###  http://schema.org/CivicStructure
+<http://schema.org/CivicStructure> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://schema.org/Place> .
 
 
 ###  http://schema.org/Clip
@@ -426,6 +447,11 @@
                           rdfs:subClassOf <http://schema.org/CreativeWork> .
 
 
+###  http://schema.org/Occupation
+<http://schema.org/Occupation> rdf:type owl:Class ;
+                               rdfs:subClassOf <http://schema.org/Intangible> .
+
+
 ###  http://schema.org/Offer
 <http://schema.org/Offer> rdf:type owl:Class ;
                           rdfs:subClassOf <http://schema.org/Intangible> .
@@ -468,62 +494,19 @@
                                 rdfs:subClassOf <http://schema.org/ConsumeAction> .
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
-
-#################################################################
-#    Object Properties
-#################################################################
-
-:cinema rdf:type owl:ObjectProperty ;
-        rdfs:subPropertyOf owl:topObjectProperty ;
-        rdfs:domain :ShowRoom ;
-        rdfs:range :Cinema .
-
-
-:movie rdf:type owl:ObjectProperty ;
-       rdfs:domain :Show ;
-       rdfs:range <http://schema.org/Movie> .
-
-
-:showRoom rdf:type owl:ObjectProperty ;
-          rdfs:domain :Show ;
-          rdfs:range :ShowRoom .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  http://schema.org/text
-<http://schema.org/text> rdf:type owl:DatatypeProperty ;
-                         rdfs:domain <http://schema.org/CreativeWork> ;
-                         rdfs:range xsd:string .
-
-
-:movieFormat rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Show ;
-             rdfs:range xsd:string .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://schema.org/CivicStructure
-<http://schema.org/CivicStructure> rdf:type owl:Class ;
-                                   rdfs:subClassOf <http://schema.org/Place> .
-
-
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#Cinema
 :Cinema rdf:type owl:Class ;
         rdfs:subClassOf <http://schema.org/CivicStructure> .
 
 
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#Show
 :Show rdf:type owl:Class ;
       rdfs:subClassOf <http://schema.org/Event> .
 
 
+###  https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#ShowRoom
 :ShowRoom rdf:type owl:Class ;
           rdfs:subClassOf <http://schema.org/Place> .
 
 
-
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
