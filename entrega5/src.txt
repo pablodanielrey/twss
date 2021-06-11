@@ -12,7 +12,7 @@ en principio existen 2 scripts.
 personas_dbpedia.py
 personas_wikidata.py
 
-en esta etapa se encuentran las entidades dentro de cada dataset que corresponde a la entidad de mi dataset.
+en esta etapa se encuentran todas las entidades dentro de cada dataset, que correspondem a cada persona de mi dataset.
 en el caso de dbpedia existe un filtrado manual de las ocupaciones posibles.
 inclusive en el namespace mas formal y chequeado de dbpedia (dbo vs dbp), me encuentro con que no tengo las ocupaciones usando alguna clasificación.
 mas bien dbpedia les asigna un PersonFunction. con lo cual es complejo analizar si es una ocupación de la industria cinematográfica.
@@ -22,7 +22,7 @@ que genera un json con todas las ocupaciones que ve que son posibles dentro de l
 ese json es filtrado a mano por las ocupaciones que creo que estarían realacionadas con la industria y sirve como fuente de datos adicional del script: 
 personas_dbpedia.py
 así filtro mejor a las entidades posibles. 
-un enfoque similar tomo con wikidata, pero wikidata me permite analizar las ocupaciones por clase y tipo. así que no es necesario el filtrado manual.
+un enfoque similar tomo con wikidata, pero wikidata me permite analizar las ocupaciones por clase y tipo. así que no es necesario el filtrado manual y lo resuelvo todo con sparql.
 
 
 etapa2 :
@@ -35,7 +35,7 @@ en un nuevo grafo aumentado con esos datos.
 etapa3:
 unificación de mi ontología con lo obtenido.
 se usa el script:
-unify.py
+unify_datasets.py
 
 esta etapa solo es para permitir una corrección mas simple. ya que se tienen todas las etapas y sus datos generados en distintos archivos.
 es trivial usar un solo grafo para ir generando todo dentro del mismo.

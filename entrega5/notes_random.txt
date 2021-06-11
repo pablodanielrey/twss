@@ -3608,10 +3608,113 @@ pablo@xiaomi:/src/github/facu-infor/twss/entrega5$
 perfecto terminó.
 me acorde que la consigna es generar un dataset solo aumentado con todos los datos.
 asi que lo dejo en archivos separados para que lo puedan corregir mas simple.
-y armo un script unify.py 
-que toma el dataset generado y mi original y los unifica.
+y armo un script unify_datasets.py 
+que toma el dataset generado y mi original, y los unifica.
 
 ---
+
+ahora agrego la propiedad a la ontología.
+
+:wasDirectedByOscarWinner rdf:type owl:ObjectProperty ;
+                          rdfs:domain <http://schema.org/Person> ;
+                          rdfs:range <http://schema.org/Person> .
+
+
+
+---
+
+
+y analizo las conusltas necesarias en wikidata para poder obtener la información de la relación.
+
+persona ---> actor ---> movie 
+
+                        |
+persona --> director ---
+  |
+  --------> recibió --------> Oscar
+
+asumo que algo asi es la forma del grafo. en dbpedia.
+en wikidata tiene que ser con la estrcutura de sentencias agregadas en cada relación.
+
+--
+
+en dbpedia veo que :
+https://dbpedia.org/page/Academy_Awards
+https://dbpedia.org/ontology/award
+
+
+wikidata
+https://www.wikidata.org/wiki/Property:P166
+
+
+
+primer consulta, quien gano un oscar en dbpedia.
+
+select distinct ?p where {
+      ?p dbp:awards dbr:Academy_Awards .
+} limit 10
+
+
+p
+http://dbpedia.org/resource/Charles_LeMaire
+http://dbpedia.org/resource/Chris_Buck
+http://dbpedia.org/resource/Claude_Berri
+http://dbpedia.org/resource/Clyde_De_Vinna
+http://dbpedia.org/resource/Geoffrey_Rush
+http://dbpedia.org/resource/Giuseppe_Tornatore
+http://dbpedia.org/resource/Kanubhai_Hasmukhbhai_Tailor
+http://dbpedia.org/resource/Michel_Hazanavicius
+http://dbpedia.org/resource/Ingmar_Bergman
+http://dbpedia.org/resource/James_Hill_(British_director)
+
+perfecto.
+
+---
+
+con lo que para obtener esa info de dbpedia debdía usar esos sameAs generados en los pasos anteriores y hacer:
+
+mi_persona --> sameAs --> dbpedia_persona ---> dbp:awards dbr:Academy_Awards
+
+como :
+
+mi_persona --> sameAs --> dbpedia_persona 
+
+ya lo tengo en mi dataset.
+entonces solo me falta hacer la consulta por cada persona a ver si ganó un premio.
+
+---
+
+me acabo de dar cuenta de que lo que se requiere del ejercicio es consultar todos los datos de las bases externas. inclusive la info de actuar en película, etc.
+asi que etonces sigo analizando la estructra de dbpedia.
+
+
+si ejecuto la siguiente consulta tengo los directores, actroes y películas.
+donde el director ganó un oscar.
+
+select distinct  ?m ?p ?d where {
+      ?m dbo:starring ?p .
+      ?m dbo:director ?d .
+      ?d dbp:awards dbr:Academy_Awards .
+} limit 10
+
+m	p	d
+http://dbpedia.org/resource/Lucie_Aubrac_(film)	http://dbpedia.org/resource/Carole_Bouquet	http://dbpedia.org/resource/Claude_Berri
+http://dbpedia.org/resource/Lucie_Aubrac_(film)	http://dbpedia.org/resource/Daniel_Auteuil	http://dbpedia.org/resource/Claude_Berri
+http://dbpedia.org/resource/Lunch_Hour	http://dbpedia.org/resource/Robert_Stephens	http://dbpedia.org/resource/James_Hill_(British_director)
+http://dbpedia.org/resource/Lunch_Hour	http://dbpedia.org/resource/Shirley_Anne_Field	http://dbpedia.org/resource/James_Hill_(British_director)
+http://dbpedia.org/resource/Il_camorrista	http://dbpedia.org/resource/Laura_Del_Sol	http://dbpedia.org/resource/Giuseppe_Tornatore
+http://dbpedia.org/resource/Il_camorrista	http://dbpedia.org/resource/Ben_Gazzara	http://dbpedia.org/resource/Giuseppe_Tornatore
+http://dbpedia.org/resource/Il_camorrista	http://dbpedia.org/resource/Leo_Gullotta	http://dbpedia.org/resource/Giuseppe_Tornatore
+http://dbpedia.org/resource/Il_camorrista	http://dbpedia.org/resource/Franco_Interlenghi	http://dbpedia.org/resource/Giuseppe_Tornatore
+http://dbpedia.org/resource/Black_Beauty_(1971_film)	http://dbpedia.org/resource/Patrick_Mower	http://dbpedia.org/resource/James_Hill_(British_director)
+http://dbpedia.org/resource/Black_Beauty_(1971_film)	http://dbpedia.org/resource/Walter_Slezak	http://dbpedia.org/resource/James_Hill_(British_director)
+
+
+entonces puedo filtrar por director con las personas que tengo en mi base.
+---
+
+
+
 
 
 

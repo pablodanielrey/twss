@@ -7,7 +7,7 @@ from rdflib import Graph, RDF, RDFS, OWL, Namespace, BNode, URIRef, Literal
 
 from SPARQLWrapper import SPARQLWrapper, JSON, RDFXML
 
-from .common import bind_schemas, get_schemas, get_persons_names
+from common import bind_schemas, get_schemas, get_persons_names
 
 
 def get_wikidata_endpoint():

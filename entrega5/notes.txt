@@ -12,19 +12,23 @@ hasta tiene una parte donde seleccionas y te da el ejemplo en código. varias al
 
 ---
 
-similitudes con los scrapers del tp1 en el sentido de que 
+se me ocurren similitudes con los scrapers del tp1 en el sentido de que 
 es necesario aplicar cierto "tuneo" a las consutlas de cada uno de los datasets para encontrar la información que se requiere.
-como en el tp1 era necesario adaptar nuestros scrapers a cada página consultada para obtener los datos que requeríamos, en el caso de sparql y 
-unificar fuentes de datos es necesario adaptar las consultas en base a los datasets y la estructura de grafo que manejan.
+como en el tp1 era necesario adaptar nuestros scrapers a cada página consultada (fuente de datos) para obtener los datos que requeríamos, 
+en el caso de sparql, transferimos estos "tuneos" al lenguaje de consultas, y no al código del scraper mismo. 
+para unificar fuentes de datos es necesario adaptar las consultas en base a los datasets y la estructura de grafo que manejan.
+en resumen el problema es el mismo. pero en otro nivel!.
+muchisimo mas estructurado y mejor pensado para manejar este problema.
+
 
 pensamiento random, como son bases de datos colaborativas y abiertas, 
-se nos da la posibilidad de redireccionar el esfuerzo que aplicamos a mejorar los datasets en vez de en tunear los scripts para encontrar sobre información ya existente.
-o sea diseñar los scripts en base a la ontología existente correcta, y si algún recurso no cumple con esa estructura o le falta información, en vez de tunear el script para que encuentre 
-esa información, tunear el dataset para que este mas completo.
+se nos da la posibilidad de redireccionar el esfuerzo que aplicamos a mejorar los datasets en vez de en tunear los scripts para encontrar información ya existente.
+o sea diseñar los scripts en base a la ontología existente correcta, y si algún recurso no cumple con esa estructura o le falta información, en vez de tunear el script para busque distinto o mas, 
+tunear el dataset para que este mas completo.
 
-otro pensamiento random que me lo anterior,
-posibilitamos la optimización de ese proceso ya que existen mas personas con conocimientos de tunear los datasets a personas con conocimientos de 
-desarrollo y consulta de los mismos.
+otro pensamiento random,
+posibilitamos la optimización de ese proceso ya que existen mas personas con conocimientos de ncorportar datos (dadas herraminetas amigables) para tunear los datasets, 
+a personas con conocimientos de desarrollo y consulta de los mismos. (python y sparql)
 todo wikimedia por lo menos te da editores gráficos para tunear esos datasets, es la primer info que te dan. por sobre info técnica.
 
 ---
@@ -49,27 +53,27 @@ P279 <--- subclass of.
 https://www.wikidata.org/wiki/Q33999
 
 
-OTRA NOTA!!!. al definir la ontología de wikidata con propiedades internas en vez de las aceptadas como
-por ejemplo rdfs:subClassOf tenemos que algunas cosas no son inferidas!!. o sea no tienen la misma semántica que las propiedades de RDF.
+Al definir la ontología de wikidata con propiedades internas en vez de estandarizadas como
+por ejemplo rdfs:subClassOf tenemos que algunas cosas no son inferidas!!. no tienen la misma semántica que las propiedades de RDF.
 algo que no se si estoy interpretando bien. por ahi tendría que consultarlo en el foro.
 lo anoto para tenerlo en la cabeza.
 
 ---
 
-el proceso de desarrollo de esto estoy analizando un poquito que hice en las respuestas inciales.
-y veo que a media que el desarrollo avanza veo cada vez mas que lo que hice está incompleto.
+el proceso de desarrollo del tp, estoy analizando un poquito que hice en las respuestas inciales.
+a media que el desarrollo avanza, veo cada vez mas que lo que hice está incompleto.
 supociciones que tenía en ciertos niveles terminan siendo no ciertas a medida que avanzamos en el desarrollo y análisis del 
 problema y de los datasets.
-esto depende también en gran parte, el análisis de datos sobre el universo esperado de respuestas.
-tener los actores para comparar lo que me debería responder las consultas, y el estar practicamente seguro de que
-casi todas esas personas, están de alguna forma representadas dentro del dataset que estoy consultando, implica que puedo
+esto depende en gran parte al análisis de datos sobre las respuestas esperadas.
+tener los actores para comparar lo que me debería responder las consultas, y el estar prácticamente seguro de que
+casi todas esas personas están, de alguna forma, representadas dentro del dataset que estoy consultando, implica que puedo
 analizar la calidad de mi consulta.
 
 me imagino que en el mundo real nosotros hacemos consultas para obtener datos para cruzar. 
 y de las cuales NO sabemos si nos está respondiendo todos los datos que necesitamos.
 es un contraste completo entre los tipos de datasets consultados.
 
-1 - datasets internos definidos por un universo limitado. donde tenemos mas o menos control de los datos que ingresan.
+1 - datasets internos definidos por nosotros. donde tenemos mas o menos control de los datos que ingresan.
 y podemos cruzar y comparar
 2 - datasets abiertos como los que estamos procesando. donde los datos y la estructura de esos datos varían constantemente.
 
@@ -94,7 +98,8 @@ por lo que no puedo decidir a nivel de conuslta cual es el correcto!!.
 
 consultas en los datasets de ontologías mas abstractas son mucho mas complejas que las consultas
 sobre datasets de ontologías no tan abstractas!!
-wikidata por sobre dbpedia.
+wikidata es mas complejo que dbpedia.
+pero tengo mas poder sobre los datasets de wikidata que sobre los de dbpedia.
 
 ---
 
@@ -106,7 +111,18 @@ subclase de
 instancia de
 
 y las 2 clasificaciones manejan una jerarquía sobre las ocupaciones para films.
-no entiendo por que no sería una sola clasificación.
-analizarlo mejor.
+no entiendo por que no sería una sola clasificación. analizarlo mejor.
 
 ---
+
+
+creo que me cambió completamente la cabeza fue el pensar la estructura de la información es parte de la misma información.
+siempre lo vi la estructura como parte del diseño de relaciones entre pedazos de información.
+lo que estoy pensando y evaluando es que dentro de estos grafos de conocimiento la estructura y relaciones son parte de la misma información!.
+y si bien existe cierta definición de esas relaciones, puede variar y mutar.
+lo que hace wikidata para estructurar sus datos, donde codifica su propia estructura dentro de la misma información contenida.
+y el poder de consultar la "forma de esa estructura" en consultas sparql es impresionante!!. 
+los filtros que sean sobre la "forma" en vez de solamente sobre los datos. totalmente nuevo para mi. y una forma de pensar los problemas desde otro lado.
+
+---
+
