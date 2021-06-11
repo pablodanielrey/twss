@@ -2,12 +2,28 @@
 El proceso se divide en 2 etapas.
 un poco inspirado en el tp anterior, donde links.ttl identificaban las iris que debíamos desreferenciar.
 ahora hago lo mismo pero para desreferenciar y obtener los datos uso sparql.
+también pensando a que la etapa de identificación de: que entidad debería acceder en el datasource externo, y el proceso de 
+obtener esos datos son distintos.
+
 
 etapa1 :
 se usa sparql dentro de cada uno de los servicios para filtrar e identificar las iris de los recursos asociados a las personas de mi dataset. 
 en principio existen 2 scripts.
 personas_dbpedia.py
 personas_wikidata.py
+
+en esta etapa se encuentran las entidades dentro de cada dataset que corresponde a la entidad de mi dataset.
+en el caso de dbpedia existe un filtrado manual de las ocupaciones posibles.
+inclusive en el namespace mas formal y chequeado de dbpedia (dbo vs dbp), me encuentro con que no tengo las ocupaciones usando alguna clasificación.
+mas bien dbpedia les asigna un PersonFunction. con lo cual es complejo analizar si es una ocupación de la industria cinematográfica.
+asi que decidí tener un script intermedio inicial:
+download_dbpedia_occupations.py
+que genera un json con todas las ocupaciones que ve que son posibles dentro de las entidades posible de dbpedia.
+ese json es filtrado a mano por las ocupaciones que creo que estarían realacionadas con la industria y sirve como fuente de datos adicional del script: 
+personas_dbpedia.py
+así filtro mejor a las entidades posibles. 
+un enfoque similar tomo con wikidata, pero wikidata me permite analizar las ocupaciones por clase y tipo. así que no es necesario el filtrado manual.
+
 
 etapa2 :
 se usa un script 
@@ -16,19 +32,29 @@ para acceder a dbpedia y wikidata, descargando todas los datos que tienen sobre 
 en un nuevo grafo aumentado con esos datos.
 
 
+etapa3:
+unificación de mi ontología con lo obtenido.
+se usa el script:
+unify.py
+
+esta etapa solo es para permitir una corrección mas simple. ya que se tienen todas las etapas y sus datos generados en distintos archivos.
+es trivial usar un solo grafo para ir generando todo dentro del mismo.
+
+
 la sintaxis para ejcutar los scripts:
 
 cd entrega5
-python src/personas_dbpedia.py
-python src/personas_wikidata.py
-python src/augment_dataset.py
+python3 src/personas_dbpedia.py
+python3 src/personas_wikidata.py
+python3 src/augment_dataset.py
+python3 src/unify.py
 
+un cambio que se me ocurre es definir de alguna forma un template de consultas por cada datasource.
+o sea la consutla sparql como string que filtraría las entidades en el datasource externo y asociada a un datasource en particular. 
+con eso podemos tener un solo script de filtrado y generación de las referencias (los sameAs).
+no lo hago porque tengo poco tiempo y es algo de desarrollo básico, mas que conceptual de sparql. en esta etapa no aporta nada.
 
 todo el proceso de desarrollo y algunas motivaciones se encuentra dentro de notes_random.txt
 y el resumen de las conclusiones mas importantes de acuerdo a mi criterio se encuentra en notes.txt
 
 
-
-
-se usan 2 esquemas distintos para definir que subjects elegimos.
-en el caso de dbpedia se realiza primero un análisis de las ocupaciones que tiene registrado dbpedia sobre personas que asocio 

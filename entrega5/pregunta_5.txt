@@ -14,6 +14,9 @@ el valor "Keanu Reeves" y todas las tripletas en las que ese recurso sea el suje
 no, ya que el nombre se asocia con mas personas en algunos casos.
 el mismo nombre después se desambigua en distintas personas. por lo que debemos como mínimo chequear las ocupaciones
 para analizar si puede ser una persona asociada a la industria filmatográfica.
+en el ejercicio el datasource de dbpedia no me dá una forma automática. por lo que decidí hacer un procesado manual.
+
+
 
 ¿Necesita utilizar mas características para asegurar que el concepto de Wikidata (DBpedia) sea la persona que usted desea buscar?
 

@@ -3589,6 +3589,29 @@ una para la entidad de dbpedia y el otro para la entidad de wikidata.
 
 ---
 
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez <--- http://www.wikidata.org/entity/Q572761
+procesando 263/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Rita_Tushingham <--- http://www.wikidata.org/entity/Q435107
+procesando 264/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Katsuyuki_Konishi <--- http://dbpedia.org/resource/Katsuyuki_Konishi
+procesando 265/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Ouellette <--- http://dbpedia.org/resource/Jennifer_Ouellette
+procesando 266/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/John_David_Washington <--- http://www.wikidata.org/entity/Q4120019
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+
+perfecto terminó.
+me acorde que la consigna es generar un dataset solo aumentado con todos los datos.
+asi que lo dejo en archivos separados para que lo puedan corregir mas simple.
+y armo un script unify.py 
+que toma el dataset generado y mi original y los unifica.
+
+---
 
 
 
