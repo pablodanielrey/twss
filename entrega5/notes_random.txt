@@ -3514,7 +3514,7 @@ ej voy a eliminar estructuras intermedias que uso para solo usar los grafos en e
 
 --
 
-me acabo de dar cuenta que hya otra pregunta mas.
+había leido mal!!. me acabo de dar cuenta que hya otra pregunta mas.
 el tema de :
 
 wasDirectedByOscarWinner
@@ -3523,4 +3523,73 @@ no creo que llegue con el tiempo.
 
 --
 
-analizo rápido como se obtiene quien ganó un oscar.
+retomando el trabajo después de rendir ingenieria 3.
+
+--
+
+me faltaba antes que modificar la ontología unificar los 2 archivos de subjects seleccionados. o sea el de dbpedia_subjects.ttl y el wikipedia_subjects.ttl
+voy a probar con parse del grafo a ver si parseando los 2 archivos me los unifica. o sea me hace el merge.
+si no es solo cuestión de generar un grafo intermedio e ir leyendo de a uno los archvos y agregando las tripletas al grafo final.
+
+efectivamente funciona parseando los 2 archivos.
+
+
+...
+
+    gsubjects = Graph()
+    with open('data/dbpedia_subjects.ttl','r') as f:
+        gsubjects.parse(f, format='turtle')
+
+    print(len(gsubjects))
+
+    with open('data/wikidata_subjects.ttl','r') as f:
+        gsubjects.parse(f, format='turtle')    
+
+    print(len(gsubjects))
+
+
+
+asi que lo dejo asi:
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/augment_dataset.py 
+leyendo archivo de subjects
+121
+267
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+
+---
+
+realmente para algunas cosas trabajar con grafos es mucho mas simple.
+el unir bases de conocimiento aunque tengan ontologías distintas es muy simple!! comparado con otros tipos de estructuras a las que estamos acostumbrados!.
+
+---
+
+
+ahi deje corrienod la solución completa. con los subjects filtrados de cada dataset.
+veo que funciona porque accede a las urls.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/augment_dataset.py 
+leyendo archivo de subjects
+procesando 0/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Pablo_Echarri <--- http://www.wikidata.org/entity/Q2422720
+procesando 1/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bobby_Cannavale <--- http://www.wikidata.org/entity/Q428819
+procesando 2/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sylvester_McCoy <--- http://dbpedia.org/resource/Sylvester_McCoy
+procesando 3/267
+
+...
+
+no va por orden porque toma todas las tripletas sameAs. asi que en este caso para Pablo_Echarri va a aparecer 2 veces en el listado.
+una para la entidad de dbpedia y el otro para la entidad de wikidata.
+
+---
+
+
+
+
+
