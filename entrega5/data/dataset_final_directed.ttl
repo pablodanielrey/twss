@@ -13,8 +13,8 @@
 @prefix p: <http://www.wikidata.org/prop/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix twss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#> .
 @prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
-@prefix twsss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix wds: <http://www.wikidata.org/entity/statement/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
@@ -252,764 +252,764 @@ schema:worstRating a owl:DatatypeProperty ;
     rdfs:range xsd:float .
 
 twssd:show_03116052-ac3c-445e-9d59-45364b71eb67 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:20",
         "15:40",
         "18:00" ;
-    twsss:movie twssd:Tom_Y_Jerry ;
-    twsss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
 
 twssd:show_051b4412-1093-4409-83bb-342c4425633e a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:10" ;
-    twsss:movie twssd:Promising_young_woman ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
+    twss:movie twssd:Promising_young_woman ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
 
 twssd:show_05541076-d192-48c9-8731-6891727cde5c a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 .
+    twss:movie twssd:Chaos_Walking ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 .
 
 twssd:show_0566e60b-dae4-4790-83b1-1fdfac48eb20 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_53e8e31b-89b8-4988-83f5-ac420b99fade .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_53e8e31b-89b8-4988-83f5-ac420b99fade .
 
 twssd:show_0e047135-0077-4aeb-9ce0-f2052eacca97 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:45",
         "23:10" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
+    twss:movie twssd:New_Mutants ;
+    twss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
 
 twssd:show_0f0d683d-b0b1-4406-9027-5570daa9467f a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_76c431b6-667a-4d58-a9e2-88aaa58aae95 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_76c431b6-667a-4d58-a9e2-88aaa58aae95 .
 
 twssd:show_11d3c147-af1e-48f3-9a2f-74d51dbcdd59 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
+    twss:movie twssd:Chaos_Walking ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
 
 twssd:show_16856f3b-889a-4584-9703-80db40f0d84c a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:40" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:New_Mutants ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_17d97685-6857-4305-a597-945f353a2ae1 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
 
 twssd:show_18853ded-a9c1-48f4-978b-4b2b4f8e9f4a a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:10" ;
-    twsss:movie twssd:Promising_young_woman ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
+    twss:movie twssd:Promising_young_woman ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
 
 twssd:show_197bbe6e-29e0-45c8-bc5f-fdf0588af7da a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
+    twss:movie twssd:Chaos_Walking ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
 
 twssd:show_1b483fdf-6da5-4bc9-9ae0-2b02571cb6fe a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:15" ;
-    twsss:movie twssd:Trolls_2 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
+    twss:movie twssd:Trolls_2 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
 
 twssd:show_1da7df0b-651a-4148-b49f-daed6ec73bf8 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:15" ;
-    twsss:movie twssd:Trolls_2 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:Trolls_2 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_21959cdb-7338-4c4f-9f2c-6fd8bad96499 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_219a8543-9451-4d10-97f5-c3cd8af5f5a7 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:40" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
+    twss:movie twssd:New_Mutants ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
 
 twssd:show_27155744-ec7a-4582-b17a-e9e17c9194e9 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "22:45" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie twssd:Chaos_Walking ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_2819d8f5-b3d8-4b0e-b3cb-775b4c356d82 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:00",
         "18:00",
         "20:30" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie twssd:New_Mutants ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_2d7aaaab-b983-4699-afd8-e48e8b6afb14 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:10" ;
-    twsss:movie twssd:Promising_young_woman ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
+    twss:movie twssd:Promising_young_woman ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
 
 twssd:show_2ecbc018-b2d5-48dd-8a1e-07b55bd4d463 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:00" ;
-    twsss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
 
 twssd:show_324a5b2f-2ae2-4e96-95de-1d5b1a0d402d a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:00" ;
-    twsss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
 
 twssd:show_35f12a8b-bf24-4b45-9d7b-928b43a97d76 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:45",
         "22:45" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
 
 twssd:show_37484099-42a2-4255-a499-1536ce650eff a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:40" ;
-    twsss:movie twssd:La_noche_magica ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:La_noche_magica ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_397d96fb-e2e9-4318-b8cd-8697c123dca3 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
 
 twssd:show_39ed106e-ad71-4cbf-8ce2-6f89c875a5d9 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:45",
         "23:10" ;
-    twsss:movie twssd:La_noche_magica ;
-    twsss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
+    twss:movie twssd:La_noche_magica ;
+    twss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
 
 twssd:show_3cd829ac-bde8-4cbc-af02-852fcf8e0e53 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "18:05" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
+    twss:movie twssd:New_Mutants ;
+    twss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
 
 twssd:show_413dcaad-46a4-4bc3-989c-9d59b1ba6f3c a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:00" ;
-    twsss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
 
 twssd:show_42bcb48f-e573-4aec-a79b-5e31d2256169 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_ef8a54ad-e7b1-4c7f-b1e4-1773a19e656f .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_ef8a54ad-e7b1-4c7f-b1e4-1773a19e656f .
 
 twssd:show_531ae17f-d45c-4621-816e-67735121402c a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:00" ;
-    twsss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
 
 twssd:show_5696009a-c74a-4527-aff4-2106f383ab03 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:00" ;
-    twsss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> ;
-    twsss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Scooby%21> ;
+    twss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
 
 twssd:show_56da6365-ef4e-4e30-acca-784a56c4e3f6 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:00",
         "15:30",
         "18:00",
         "20:30",
         "23:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
 
 twssd:show_585c0151-9bd5-4ce6-accc-49b60d648c7e a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:00",
         "15:15",
         "17:30" ;
-    twsss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twsss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
 
 twssd:show_5b2ed3c9-0fb8-4727-a33a-e351728edb9c a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:10" ;
-    twsss:movie twssd:Promising_young_woman ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:Promising_young_woman ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_5d2afa3f-cc4c-4294-bce0-a15c507e8860 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_0b4809c9-5f10-4442-8396-ef6e8a50ab1f .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_0b4809c9-5f10-4442-8396-ef6e8a50ab1f .
 
 twssd:show_5f70e84c-c0be-4ed3-bf36-2803ed65e600 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "23:10" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:showRoom twssd:showroom_cd3b8237-6cb5-4cbd-8c19-c9300662dce1 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showRoom twssd:showroom_cd3b8237-6cb5-4cbd-8c19-c9300662dce1 .
 
 twssd:show_62d0e0c9-1ab2-400b-9e6b-7415eac002ab a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
 
 twssd:show_62ecc6ce-c061-4ccf-98e9-ca621f4c32fb a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_05447f55-5c50-4e4a-bb32-50327e8e9301 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_05447f55-5c50-4e4a-bb32-50327e8e9301 .
 
 twssd:show_65c71700-8515-4370-b9fb-a4fbafc2c2fb a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "22:15" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:showRoom twssd:showroom_b866e4df-8cf3-4f4f-b8c9-1f4747b24261 .
+    twss:movie twssd:New_Mutants ;
+    twss:showRoom twssd:showroom_b866e4df-8cf3-4f4f-b8c9-1f4747b24261 .
 
 twssd:show_6b0d8ba6-9d06-45c0-9c18-61c5e9f143e4 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
+    twss:movie twssd:Chaos_Walking ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
 
 twssd:show_6bee8d67-4560-4bd2-9383-cba5cd0abf14 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
 
 twssd:show_6d69bbbb-2890-437c-aa9f-bd8065c5a6d9 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_3e874730-f7b4-4272-90b7-0400fcb93261 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_3e874730-f7b4-4272-90b7-0400fcb93261 .
 
 twssd:show_6dd90fde-e5a3-47b8-b465-572cff79c911 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "22:45" ;
-    twsss:movie twssd:Tenet ;
-    twsss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
+    twss:movie twssd:Tenet ;
+    twss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
 
 twssd:show_6e0b1994-7c38-48f9-b079-13c31efa744c a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "14:00",
         "18:00",
         "20:00",
         "22:00" ;
-    twsss:movie twssd:On_a_magical_night ;
-    twsss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
+    twss:movie twssd:On_a_magical_night ;
+    twss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
 
 twssd:show_6f99e0ef-7ffd-4ac6-a170-4fac04c7e9ef a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:00",
         "15:30",
         "18:05",
         "20:40" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:showRoom twssd:showroom_cd3b8237-6cb5-4cbd-8c19-c9300662dce1 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showRoom twssd:showroom_cd3b8237-6cb5-4cbd-8c19-c9300662dce1 .
 
 twssd:show_6ff14774-6b9c-4912-a117-dcf105573f86 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
+    twss:movie twssd:Chaos_Walking ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
 
 twssd:show_73e46e1a-7d60-4735-a176-074f0c6b94b4 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "15:00",
         "17:40",
         "20:20" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
 
 twssd:show_741825f5-6bdc-4c4c-8fb6-0f098b3bdb0b a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_08fffccb-326a-465e-bf54-870e5432274d .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_08fffccb-326a-465e-bf54-870e5432274d .
 
 twssd:show_75f35eba-bc4c-46c2-9a65-d10062e9e4ec a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
+    twss:movie twssd:Chaos_Walking ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
 
 twssd:show_7893e6f4-3f67-4312-b065-449f5e1a474b a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:Chaos_Walking ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_7bf738af-ecd0-4fb7-9e82-ef496fb9125c a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:00" ;
-    twsss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 .
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 .
 
 twssd:show_7f8995fc-d25c-4571-b1c0-1a1b43f0379b a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:10" ;
-    twsss:movie twssd:Tenet ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
+    twss:movie twssd:Tenet ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
 
 twssd:show_80d410e2-8a3b-401a-a150-4afd4e09baad a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:00" ;
-    twsss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
 
 twssd:show_875840e9-b8cd-4610-a203-b27c280ffc75 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:10" ;
-    twsss:movie twssd:Promising_young_woman ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
+    twss:movie twssd:Promising_young_woman ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
 
 twssd:show_8a6af754-18e7-47c1-9b1c-bf7fb51b7ad4 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:00",
         "20:30" ;
-    twsss:movie twssd:Los_Intrusos ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie twssd:Los_Intrusos ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_8a9742f8-d6b6-42c1-b3d2-e0d9358cb157 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:00",
         "15:20",
         "17:50",
         "20:15",
         "22:30" ;
-    twsss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twsss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
 
 twssd:show_8a9f5cc7-f765-49ca-8a09-6a52d04dd57e a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 .
 
 twssd:show_8aa79629-dcfe-469f-a2f0-801c4e0f31dd a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:40" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
+    twss:movie twssd:New_Mutants ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
 
 twssd:show_8c5f4690-69e4-4310-89df-37eb2e8ac176 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "22:20" ;
-    twsss:movie twssd:El_silencio_del_cazador ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:El_silencio_del_cazador ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_8c6d3bd8-9960-4a9e-bfc6-33282a46d289 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:40" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
+    twss:movie twssd:New_Mutants ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
 
 twssd:show_8f690d9b-8e18-4fa7-9a15-34bc1f63c796 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:50" ;
-    twsss:movie twssd:Wonder_Woman_1984 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
 
 twssd:show_9086dcf7-789f-4711-bb5b-3a71fbb917d9 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:00" ;
-    twsss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_92fbc9ee-1752-472e-8312-b48e913b2fc9 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
 
 twssd:show_93b7fc62-e172-4c6b-bd47-e4aa8a9c8cb0 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "14:00",
         "18:25" ;
-    twsss:movie twssd:Tom_Y_Jerry ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_9555fbef-3b7e-4549-9f29-3c54c3b71ada a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:15" ;
-    twsss:movie twssd:Trolls_2 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
+    twss:movie twssd:Trolls_2 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
 
 twssd:show_9582ed0c-437c-4fe1-830f-b93f72396063 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "23:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
 
 twssd:show_979477c6-ad9f-4750-a0a5-dc0c04332c09 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:10" ;
-    twsss:movie twssd:Tenet ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:Tenet ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_980175d7-9f2f-4110-bf8d-7142e9d89036 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:40" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
+    twss:movie twssd:New_Mutants ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
 
 twssd:show_98c4912c-1635-440d-864f-423f40eb243b a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "14:00",
         "17:00",
         "19:50",
         "22:40" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_9a2215c0-85ba-4859-92fb-9578b67506f7 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:45",
         "23:10" ;
-    twsss:movie twssd:El_Secreto_Del_Bosque ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie twssd:El_Secreto_Del_Bosque ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_9c4f71c3-8151-41ad-87d5-c3b5aa2142de a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "22:10" ;
-    twsss:movie twssd:Wonder_Woman_1984 ;
-    twsss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
 
 twssd:show_9d00d764-3229-4f73-a811-fc164158f021 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:40" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
+    twss:movie twssd:New_Mutants ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
 
 twssd:show_a130bc1d-ae5f-4aad-93c1-f0a32ce767b4 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:45",
         "16:45",
         "19:45" ;
-    twsss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twsss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
 
 twssd:show_ad7ab09c-e2b5-448e-907c-356986bc3e0a a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:15" ;
-    twsss:movie twssd:Trolls_2 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
+    twss:movie twssd:Trolls_2 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 .
 
 twssd:show_b1424c3b-affb-42b5-b924-f5214d547b98 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:15",
         "15:40",
         "20:20",
         "22:50" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
+    twss:movie twssd:New_Mutants ;
+    twss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
 
 twssd:show_b2f40118-541b-4c93-8a3c-89d20af3b7b0 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "15:30",
         "23:00" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie twssd:New_Mutants ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_b45eb532-644a-4bbf-ae31-c7574c368cc4 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "14:00",
         "16:15",
         "18:30" ;
-    twsss:movie twssd:Tom_Y_Jerry ;
-    twsss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
+    twss:movie twssd:Tom_Y_Jerry ;
+    twss:showRoom twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 .
 
 twssd:show_b6030b4d-1c84-45a9-a48e-f809324fc43c a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:15" ;
-    twsss:movie twssd:Trolls_2 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 .
+    twss:movie twssd:Trolls_2 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 .
 
 twssd:show_b7d007ba-c2de-411b-9271-b17a6ba7524e a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:50" ;
-    twsss:movie twssd:Wonder_Woman_1984 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
 
 twssd:show_b7fa696a-89eb-4613-9ab6-58ce31dd7504 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "19:45" ;
-    twsss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> ;
-    twsss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/La_Fabrica_De_Sue%C3%B1os> ;
+    twss:showRoom twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 .
 
 twssd:show_bb4d30d6-c6b7-432b-a111-affae416ecea a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "23:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
+    twss:movie twssd:Chaos_Walking ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
 
 twssd:show_bf307bc6-a320-4f35-88f3-bd74281d98a0 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Francés" ;
     schema:startDate "19:50" ;
-    twsss:movie twssd:On_a_magical_night ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:On_a_magical_night ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_c22a992a-208e-430b-be2d-443e945e11b7 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10" ;
-    twsss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Trolls_2%3A_World_Tour> ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_c2f22700-d20a-4553-b9c1-c52ef7593cea a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:10",
         "18:50" ;
-    twsss:movie twssd:Tom_and_Jerry ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
+    twss:movie twssd:Tom_and_Jerry ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 .
 
 twssd:show_c49452d3-aa74-44bb-8599-ed3ec874c4bc a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:15" ;
-    twsss:movie twssd:Trolls_2 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
+    twss:movie twssd:Trolls_2 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
 
 twssd:show_c648fb4d-bf19-4d54-80b7-e91cbc51bb21 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:10",
         "15:25",
         "17:45",
         "20:00" ;
-    twsss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
-    twsss:showRoom twssd:showroom_b866e4df-8cf3-4f4f-b8c9-1f4747b24261 .
+    twss:movie twssd:Raya_Y_El_Ultimo_Dragon ;
+    twss:showRoom twssd:showroom_b866e4df-8cf3-4f4f-b8c9-1f4747b24261 .
 
 twssd:show_cb39739f-b099-444c-90ce-c6a4c56eb94e a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:50" ;
-    twsss:movie twssd:Wonder_Woman_1984 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 .
 
 twssd:show_d5b65bdc-3418-4ea4-8e9c-f7ba7eeeb20e a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "20:00" ;
-    twsss:movie twssd:Demon_Slayer_Mugen_Train ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
+    twss:movie twssd:Demon_Slayer_Mugen_Train ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
 
 twssd:show_d8bd95bc-9844-4889-9746-8b3bcd549c9f a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:40" ;
-    twsss:movie twssd:New_Mutants ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
+    twss:movie twssd:New_Mutants ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
 
 twssd:show_dfef72e0-9a57-4b91-89e5-5aff74c0175d a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:45",
         "18:15" ;
-    twsss:movie twssd:Chaos_Walking ;
-    twsss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
+    twss:movie twssd:Chaos_Walking ;
+    twss:showRoom twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f .
 
 twssd:show_e0258d60-58bc-43b1-aff8-f879077f7afc a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "16:45",
         "19:45" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:showRoom twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad .
 
 twssd:show_e6096082-e3ef-4fbb-9918-db2499904005 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:50" ;
-    twsss:movie twssd:Wonder_Woman_1984 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 .
 
 twssd:show_ea7c49a0-ad14-4cfa-98f7-1bd5c7747eb3 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "13:15",
         "15:40",
         "18:10",
         "20:30",
         "23:00" ;
-    twsss:movie twssd:Promising_young_woman ;
-    twsss:showRoom twssd:showroom_b866e4df-8cf3-4f4f-b8c9-1f4747b24261 .
+    twss:movie twssd:Promising_young_woman ;
+    twss:showRoom twssd:showroom_b866e4df-8cf3-4f4f-b8c9-1f4747b24261 .
 
 twssd:show_ee3a3251-72e3-49f4-ad71-65df81a45298 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_ec356573-549f-43e9-8023-a31a541c8fb1 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_ec356573-549f-43e9-8023-a31a541c8fb1 .
 
 twssd:show_f21e830f-5690-47f3-bddc-8a947fc00b7b a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:15" ;
-    twsss:movie twssd:Trolls_2 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
+    twss:movie twssd:Trolls_2 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b .
 
 twssd:show_f6c34a6c-cfc6-4f48-85f0-5c883211c3b6 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:40" ;
-    twsss:movie twssd:La_noche_magica ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
+    twss:movie twssd:La_noche_magica ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
 
 twssd:show_fdd01381-3764-4d74-bba6-adf0fbec107a a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:00" ;
-    twsss:movie twssd:Godzilla_vs._Kong ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_f17b045f-489a-441f-b9b3-1e498b79c411 .
+    twss:movie twssd:Godzilla_vs._Kong ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_f17b045f-489a-441f-b9b3-1e498b79c411 .
 
 twssd:show_fdf8bdab-e645-4d05-afdb-41abc53c6dc6 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:inLanguage "Inglés" ;
     schema:startDate "22:50" ;
-    twsss:movie twssd:Wonder_Woman_1984 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
+    twss:movie twssd:Wonder_Woman_1984 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 .
 
 twssd:show_feb085e7-1e6d-4422-ac21-d02bd5872274 a owl:NamedIndividual,
-        twsss:Show ;
+        twss:Show ;
     schema:startDate "17:15" ;
-    twsss:movie twssd:Trolls_2 ;
-    twsss:movieFormat "2D" ;
-    twsss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
+    twss:movie twssd:Trolls_2 ;
+    twss:movieFormat "2D" ;
+    twss:showRoom twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl> a owl:Ontology .
 
-twsss:cinema a owl:ObjectProperty ;
-    rdfs:domain twsss:ShowRoom ;
-    rdfs:range twsss:Cinema ;
+twss:cinema a owl:ObjectProperty ;
+    rdfs:domain twss:ShowRoom ;
+    rdfs:range twss:Cinema ;
     rdfs:subPropertyOf owl:topObjectProperty .
 
-twsss:movie a owl:ObjectProperty ;
-    rdfs:domain twsss:Show ;
+twss:movie a owl:ObjectProperty ;
+    rdfs:domain twss:Show ;
     rdfs:range schema:Movie .
 
-twsss:movieFormat a owl:DatatypeProperty ;
-    rdfs:domain twsss:Show ;
+twss:movieFormat a owl:DatatypeProperty ;
+    rdfs:domain twss:Show ;
     rdfs:range xsd:string .
 
-twsss:showRoom a owl:ObjectProperty ;
-    rdfs:domain twsss:Show ;
-    rdfs:range twsss:ShowRoom .
+twss:showRoom a owl:ObjectProperty ;
+    rdfs:domain twss:Show ;
+    rdfs:range twss:ShowRoom .
 
-twsss:wasDirectedByOscarWinner a owl:ObjectProperty ;
+twss:wasDirectedByOscarWinner a owl:ObjectProperty ;
     rdfs:domain schema:Person ;
     rdfs:range schema:Person .
 
@@ -2178,7 +2178,8 @@ twssd:Adam_Brody a schema:Person,
     wdt:P7803 "5495" ;
     wdt:P7859 "lccn-n2004038950" ;
     wdt:P8687 "19962" ;
-    wdt:P950 "XX1797895" .
+    wdt:P950 "XX1797895" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Adam_Wingard a <http://dbpedia.org/class/yago/CausalAgent100007347>,
         <http://dbpedia.org/class/yago/Creator109614315>,
@@ -4483,7 +4484,8 @@ twssd:Alison_Brie a <http://dbpedia.org/class/yago/Actor109765278>,
     wdt:P950 "XX4963944" ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Alison_Brie_by_Gage_Skidmore_2.jpg> ;
     foaf:isPrimaryTopicOf wiki:Alison_Brie ;
-    foaf:name "Alison Brie" .
+    foaf:name "Alison Brie" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Amr_Waked a <http://dbpedia.org/class/yago/Actor109765278>,
         <http://dbpedia.org/class/yago/CausalAgent100007347>,
@@ -7677,7 +7679,8 @@ twssd:Awkwafina a <http://dbpedia.org/class/yago/Absentee109757653>,
     wdt:P856 <https://www.awkwafina.com/> ;
     wdt:P8687 "232967" ;
     foaf:isPrimaryTopicOf wiki:Awkwafina ;
-    foaf:name "Awkwafina" .
+    foaf:name "Awkwafina" ;
+    twss:wasDirectedByOscarWinner twssd:Don_Hall .
 
 twssd:Battleship_Pretension a schema:Organization,
         owl:NamedIndividual ;
@@ -8465,7 +8468,8 @@ twssd:Bo_Burnham a schema:Person,
     wdt:P7704 "agent/base/108571" ;
     wdt:P7859 "lccn-no2011008618" ;
     wdt:P856 <https://www.boburnham.com/> ;
-    wdt:P8687 "1683030" .
+    wdt:P8687 "1683030" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Bobby_Cannavale a <http://dbpedia.org/class/yago/Actor109765278>,
         <http://dbpedia.org/class/yago/Alumnus109786338>,
@@ -9336,19 +9340,19 @@ twssd:Brittney_Aleah a schema:Person,
     wdt:P950 "XX4821686" .
 
 twssd:CINEMA_OCHO a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "CINEMA OCHO" .
 
 twssd:CINEMA_PARADISO a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "CINEMA PARADISO" .
 
 twssd:CINEMA_ROCHA a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "CINEMA ROCHA" .
 
 twssd:CINEMA_SAN_MARTIN a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "CINEMA SAN MARTIN" .
 
 twssd:Camille_Cottin a dbo:Agent,
@@ -10355,7 +10359,8 @@ twssd:Carey_Mulligan a <http://dbpedia.org/class/yago/Absentee109757653>,
     wdt:P950 "XX4890222" ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Carey_Mulligan_2,_2013.jpg> ;
     foaf:isPrimaryTopicOf wiki:Carey_Mulligan ;
-    foaf:name "Carey Mulligan" .
+    foaf:name "Carey Mulligan" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Carlos_Lopez_Estrada a schema:Person,
         owl:NamedIndividual ;
@@ -13893,7 +13898,8 @@ twssd:Christopher_Mintz-Plasse a <http://dbpedia.org/class/yago/Actor109765278>,
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Christopher_Mintz-Plasse_by_Gage_Skidmore.jpg> ;
     foaf:isPrimaryTopicOf wiki:Christopher_Mintz-Plasse ;
     foaf:name "",
-        "Christopher Mintz-Plasse" .
+        "Christopher Mintz-Plasse" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Christopher_Nolan a <http://dbpedia.org/class/yago/Actor109765278>,
         <http://dbpedia.org/class/yago/Administrator109770949>,
@@ -15081,7 +15087,7 @@ twssd:Christopher_Nolan a <http://dbpedia.org/class/yago/Actor109765278>,
     foaf:name "Christopher Nolan" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Maipú" .
 
 twssd:Clancy_Brown a <http://dbpedia.org/class/yago/Actor109765278>,
@@ -15869,7 +15875,8 @@ twssd:Clancy_Brown a <http://dbpedia.org/class/yago/Actor109765278>,
     wdt:P950 "XX1104044" ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Clancy_Brown_by_Gage_Skidmore.jpg> ;
     foaf:isPrimaryTopicOf wiki:Clancy_Brown ;
-    foaf:name "Clancy Brown" .
+    foaf:name "Clancy Brown" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clemence_Po%C3%A9sy> a schema:Person,
         owl:NamedIndividual ;
@@ -16511,7 +16518,8 @@ twssd:Connie_Britton a <http://dbpedia.org/class/yago/Actor109765278>,
     wdt:P935 "Connie Britton" ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Connie_Britton_2013.jpg> ;
     foaf:isPrimaryTopicOf wiki:Connie_Britton ;
-    foaf:name "Connie Britton" .
+    foaf:name "Connie Britton" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:CreativeWork_0e8fd0ec-0e67-4532-a836-08a0120adfe8 a schema:CreativeWork,
         owl:NamedIndividual ;
@@ -18018,7 +18026,8 @@ twssd:Daniel_Dae_Kim a <http://dbpedia.org/class/yago/Actor109765278>,
     wdt:P8687 "228103" ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Daniel_Dae_Kim_set_of_Hawaii_Five-O_2013_(cropped).jpg> ;
     foaf:isPrimaryTopicOf wiki:Daniel_Dae_Kim ;
-    foaf:name "Daniel Dae Kim" .
+    foaf:name "Daniel Dae Kim" ;
+    twss:wasDirectedByOscarWinner twssd:Don_Hall .
 
 twssd:Dave_Callaham a schema:Person,
         owl:NamedIndividual ;
@@ -19977,272 +19986,6 @@ twssd:Dimple_Kapadia a <http://dbpedia.org/class/yago/Actor109765278>,
     foaf:isPrimaryTopicOf wiki:Dimple_Kapadia ;
     foaf:name "Dimple Kapadia" .
 
-twssd:Don_Hall a dbo:Agent,
-        dbo:Person,
-        schema:Person,
-        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>,
-        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson>,
-        owl:NamedIndividual,
-        owl:Thing,
-        wd:Q215627,
-        wd:Q24229398,
-        wd:Q5,
-        foaf:Person ;
-    rdfs:label "Don Hall",
-        "Don Hall (Regisseur)",
-        "Don Hall (filmmaker)",
-        "Don Hall (produser)",
-        "Дон Хол",
-        "Дон Холл",
-        "Դոն Հոլ",
-        "דון הול",
-        "دان هال",
-        "دون هول",
-        "دون هول (صانع أفلام)",
-        "ドン・ホール",
-        "唐·霍尔",
-        "唐·霍爾",
-        "當·坷" ;
-    dbo:abstract "Don Hall ist ein US-amerikanischer Drehbuchautor und Regisseur. Don Hall ist seit 1999 für The Walt Disney Companys Animationsfilmsparte tätig. Er war bei der Stoffentwicklung bei Filmen wie Tarzan, Ein Königreich für ein Lama oder Küss den Frosch beteiligt. Für den Film Winnie Puuh war er 2011 erstmals auch als Regisseur tätig. Zusammen mit Chris Williams und Roy Conli wurde er 2015 mit dem Oscar ausgezeichnet für den Computeranimationsfilm Baymax – Riesiges Robowabohu und war damit außerdem für den British Academy Film Award und den Golden Globe nominiert.",
-        "Don Hall merupakan seorang sutradara dan penulis naskah film animasi di Walt Disney Animation Studios. Ia dikenal sebagai sutradara film Winnie the Pooh (2011), Big Hero 6 (2014) dan Moana (2016), bersama Ron Clements dan John Musker. Don Hall merupakan lulusan Universitas Iowa dengan gelar sarjana seni rupa dalam studi menggambar dan melukis.",
-        "Don Hall é um cineasta estadunidense. Venceu o Oscar de melhor filme de animação na edição de 2015 pela realização da obra Big Hero 6, ao lado de Chris Williams e Roy Conli.",
-        "Don Hall, né en 1969, est un réalisateur, scénariste, acteur et animateur américain qui travaille pour les studios Disney.",
-        "Donald Hall (born March 8, 1969) is an American film director, writer, and voice actor at Walt Disney Animation Studios. He is known for co-directing Winnie the Pooh (2011), Big Hero 6 (2014), which was inspired by the Marvel Comics team of the same name, and Moana (2016), along with Ron Clements and John Musker. Big Hero 6 won the Oscar, Golden Globe, and Annie Award for Best Animated Feature in 2015. Don is a graduate of the University of Iowa with a bachelor of fine arts degree in drawing and painting.",
-        "Donald Lee Hall (Glenwood, 8 marzo 1969) è un regista e sceneggiatore statunitense. È noto soprattutto per aver diretto i Classici Disney: Winnie the Pooh - Nuove avventure nel Bosco dei 100 Acri nel 2011 e Big Hero 6, con il quale ha vinto l'Oscar come miglior film d'animazione nel 2015.",
-        "دون هول (بالإنجليزية: Don Hall) هو مخرج وكاتب أمريكي في استديوهات والت ديزني للرسوم المتحركة. عرف كمخرج مشارك في فيلم ويني الدبدوب (2011)، وفيلم الأبطال الستة (2014)، والتي كانت مستوحاة من مارفل كومكس التي تحمل نفس الاسم. فيلم الأبطال الستة فاز بجائزة أوسكار أفضل فيلم رسوم متحركة في عام 2015.تخرج دون من جامعة أيوا حاصلا على شهادة البكالوريوس في الفنون الجميلة في الرسم والتصوير.",
-        "ドン・ホール（Don Hall）はアメリカ合衆国の映画監督、脚本家である。ウォルト・ディズニー・アニメーション・スタジオに所属しており、ディズニー映画を数多く手がける。 くまのプーサンやベイマックスの監督として知られる。" ;
-    dbo:almaMater dbr:University_of_Iowa ;
-    dbo:birthDate "1969-03-08" ;
-    dbo:birthName "Donald Hall" ;
-    dbo:birthPlace <http://dbpedia.org/resource/Glenwood,_Iowa> ;
-    dbo:birthYear "1969" ;
-    dbo:employer dbr:Walt_Disney_Animation_Studios ;
-    dbo:imdbId "2320658" ;
-    dbo:occupation <http://dbpedia.org/resource/Don_Hall_(filmmaker)__PersonFunction__1> ;
-    dbo:wikiPageID "45225250" ;
-    dbo:wikiPageLength "6881" ;
-    dbo:wikiPageRevisionID "985814388" ;
-    dbo:wikiPageWikiLink dbr:Academy_Award_for_Best_Animated_Feature,
-        dbr:Alliance_of_Women_Film_Journalists,
-        dbr:Annie_Award_for_Directing_in_a_Feature_Production,
-        dbr:Annie_Award_for_Writing_in_a_Feature_Production,
-        <http://dbpedia.org/resource/Big_Hero_6_(comics)>,
-        <http://dbpedia.org/resource/Big_Hero_6_(film)>,
-        <http://dbpedia.org/resource/Bolt_(2008_film)>,
-        dbr:British_Academy_of_Film_and_Television_Arts,
-        dbr:Brother_Bear,
-        dbr:Carlos_López_Estrada,
-        dbr:Category:1969_births,
-        dbr:Category:American_animated_film_directors,
-        dbr:Category:American_animators,
-        dbr:Category:American_male_screenwriters,
-        dbr:Category:American_male_voice_actors,
-        dbr:Category:Animation_screenwriters,
-        dbr:Category:Directors_of_Best_Animated_Feature_Academy_Award_winners,
-        dbr:Category:Film_directors_from_Iowa,
-        dbr:Category:Living_people,
-        dbr:Category:Male_actors_from_Iowa,
-        <http://dbpedia.org/resource/Category:People_from_Glenwood,_Iowa>,
-        dbr:Category:University_of_Iowa_alumni,
-        dbr:Category:Walt_Disney_Animation_Studios_people,
-        <http://dbpedia.org/resource/Chicken_Little_(2005_film)>,
-        <http://dbpedia.org/resource/Chris_Williams_(director)>,
-        dbr:Film_director,
-        <http://dbpedia.org/resource/Frozen_(2013_film)>,
-        dbr:Frozen_II,
-        <http://dbpedia.org/resource/Glenwood,_Iowa>,
-        dbr:John_Musker,
-        dbr:Mark_Dindal,
-        dbr:Marvel_Comics,
-        dbr:Meet_the_Robinsons,
-        <http://dbpedia.org/resource/Moana_(2016_film)>,
-        dbr:Ralph_Breaks_the_Internet,
-        dbr:Raya_and_the_Last_Dragon,
-        dbr:Ron_Clements,
-        dbr:Screenwriter,
-        <http://dbpedia.org/resource/Stephen_Anderson_(artist)>,
-        dbr:Storyboard_artist,
-        dbr:Tangled,
-        <http://dbpedia.org/resource/Tarzan_(1999_film)>,
-        <http://dbpedia.org/resource/The_Emperor's_New_Groove>,
-        dbr:The_Princess_and_the_Frog,
-        <http://dbpedia.org/resource/Tinker_Bell_(film)>,
-        dbr:University_of_Iowa,
-        dbr:Visual_Effects_Society_Award_for_Outstanding_Visual_Effects_in_an_Animated_Feature,
-        dbr:Walt_Disney_Animation_Studios,
-        <http://dbpedia.org/resource/Winnie_the_Pooh_(2011_film)>,
-        dbr:Wreck-It_Ralph,
-        dbr:Zootopia ;
-    ns2:almaMater dbr:University_of_Iowa ;
-    ns2:birthDate "1969-03-08" ;
-    ns2:birthName "Donald Hall" ;
-    ns2:birthPlace <http://dbpedia.org/resource/Glenwood,_Iowa> ;
-    ns2:employer dbr:Walt_Disney_Animation_Studios ;
-    ns2:name "Don Hall" ;
-    ns2:notableWorks "Big Hero 6",
-        "Moana",
-        "Tinker Bell (film)",
-        "Winnie the Pooh" ;
-    ns2:occupation "Film director, writer, voice actor" ;
-    ns2:wikiPageUsesTemplate dbr:Template:Academy_Award_for_Best_Animated_Feature,
-        dbr:Template:Authority_control,
-        dbr:Template:Birth_date_and_age,
-        dbr:Template:IMDb_name,
-        dbr:Template:Infobox_person,
-        dbr:Template:No,
-        dbr:Template:Partial,
-        dbr:Template:Reflist,
-        dbr:Template:US-film-director-stub,
-        dbr:Template:Yes ;
-    ns3:subject dbr:Category:1969_births,
-        dbr:Category:American_animated_film_directors,
-        dbr:Category:American_animators,
-        dbr:Category:American_male_screenwriters,
-        dbr:Category:American_male_voice_actors,
-        dbr:Category:Animation_screenwriters,
-        dbr:Category:Directors_of_Best_Animated_Feature_Academy_Award_winners,
-        dbr:Category:Film_directors_from_Iowa,
-        dbr:Category:Living_people,
-        dbr:Category:Male_actors_from_Iowa,
-        <http://dbpedia.org/resource/Category:People_from_Glenwood,_Iowa>,
-        dbr:Category:University_of_Iowa_alumni,
-        dbr:Category:Walt_Disney_Animation_Studios_people ;
-    schema:dateModified "2021-06-07T22:17:19Z" ;
-    schema:description "Ameerika Ühendriikide filmirežissöör",
-        "American film director",
-        "Amerikaans filmregisseur",
-        "US-amerikanischer Drehbuchautor und Regisseur",
-        "director de cine estadounidense",
-        "director de cinema estadounidense",
-        "director de cinema estatunidenc",
-        "regista e scrittore statunitense",
-        "regizor de film american",
-        "regjisor amerikan",
-        "réalisateur américain",
-        "stiúrthóir scannán Meiriceánach",
-        "Режиссер мультфильмов",
-        "במאי קולנוע אמריקאי",
-        "مخرج أفلام أمريكي",
-        "মার্কিন চলচ্চিত্র পরিচালক" ;
-    schema:name "Don Hall" ;
-    schema:sameAs <http://viaf.org/viaf/267757507> ;
-    schema:version "1437309811" ;
-    ns6:identifiers "21" ;
-    ns6:sitelinks "11" ;
-    ns6:statements "37" ;
-    ns6:timestamp "2021-06-07T22:17:21Z" ;
-    rdfs:comment "Don Hall ist ein US-amerikanischer Drehbuchautor und Regisseur. Don Hall ist seit 1999 für The Walt Disney Companys Animationsfilmsparte tätig. Er war bei der Stoffentwicklung bei Filmen wie Tarzan, Ein Königreich für ein Lama oder Küss den Frosch beteiligt. Für den Film Winnie Puuh war er 2011 erstmals auch als Regisseur tätig. Zusammen mit Chris Williams und Roy Conli wurde er 2015 mit dem Oscar ausgezeichnet für den Computeranimationsfilm Baymax – Riesiges Robowabohu und war damit außerdem für den British Academy Film Award und den Golden Globe nominiert.",
-        "Don Hall merupakan seorang sutradara dan penulis naskah film animasi di Walt Disney Animation Studios. Ia dikenal sebagai sutradara film Winnie the Pooh (2011), Big Hero 6 (2014) dan Moana (2016), bersama Ron Clements dan John Musker. Don Hall merupakan lulusan Universitas Iowa dengan gelar sarjana seni rupa dalam studi menggambar dan melukis.",
-        "Don Hall é um cineasta estadunidense. Venceu o Oscar de melhor filme de animação na edição de 2015 pela realização da obra Big Hero 6, ao lado de Chris Williams e Roy Conli.",
-        "Don Hall, né en 1969, est un réalisateur, scénariste, acteur et animateur américain qui travaille pour les studios Disney.",
-        "Donald Hall (born March 8, 1969) is an American film director, writer, and voice actor at Walt Disney Animation Studios. He is known for co-directing Winnie the Pooh (2011), Big Hero 6 (2014), which was inspired by the Marvel Comics team of the same name, and Moana (2016), along with Ron Clements and John Musker. Big Hero 6 won the Oscar, Golden Globe, and Annie Award for Best Animated Feature in 2015. Don is a graduate of the University of Iowa with a bachelor of fine arts degree in drawing and painting.",
-        "Donald Lee Hall (Glenwood, 8 marzo 1969) è un regista e sceneggiatore statunitense. È noto soprattutto per aver diretto i Classici Disney: Winnie the Pooh - Nuove avventure nel Bosco dei 100 Acri nel 2011 e Big Hero 6, con il quale ha vinto l'Oscar come miglior film d'animazione nel 2015.",
-        "دون هول (بالإنجليزية: Don Hall) هو مخرج وكاتب أمريكي في استديوهات والت ديزني للرسوم المتحركة. عرف كمخرج مشارك في فيلم ويني الدبدوب (2011)، وفيلم الأبطال الستة (2014)، والتي كانت مستوحاة من مارفل كومكس التي تحمل نفس الاسم. فيلم الأبطال الستة فاز بجائزة أوسكار أفضل فيلم رسوم متحركة في عام 2015.تخرج دون من جامعة أيوا حاصلا على شهادة البكالوريوس في الفنون الجميلة في الرسم والتصوير.",
-        "ドン・ホール（Don Hall）はアメリカ合衆国の映画監督、脚本家である。ウォルト・ディズニー・アニメーション・スタジオに所属しており、ディズニー映画を数多く手がける。 くまのプーサンやベイマックスの監督として知られる。" ;
-    owl:sameAs <http://ar.dbpedia.org/resource/دون_هول_(صانع_أفلام)>,
-        <http://d-nb.info/gnd/1017876827>,
-        <http://d-nb.info/gnd/1017876827/about/rdf>,
-        <http://dbpedia.org/resource/Don_Hall_(filmmaker)>,
-        <http://de.dbpedia.org/resource/Don_Hall_(Regisseur)>,
-        <http://fr.dbpedia.org/resource/Don_Hall>,
-        <http://id.dbpedia.org/resource/Don_Hall_(produser)>,
-        <http://it.dbpedia.org/resource/Don_Hall>,
-        <http://ja.dbpedia.org/resource/ドン・ホール>,
-        <http://pt.dbpedia.org/resource/Don_Hall>,
-        <http://rdf.freebase.com/ns/m.05ys_tt>,
-        <http://viaf.org/viaf/2093150085871015060000>,
-        <http://viaf.org/viaf/267757507>,
-        wd:Q18921842,
-        <http://yago-knowledge.org/resource/Don_Hall_(filmmaker)>,
-        <https://global.dbpedia.org/id/1p7o3> ;
-    ns4:altLabel "唐·哈尔",
-        "唐·哈爾",
-        "唐·霍尔",
-        "湯·哈爾" ;
-    ns5:wasDerivedFrom <http://en.wikipedia.org/wiki/Don_Hall_(filmmaker)?oldid=985814388&ns=0> ;
-    p:P1006 wds:Q18921842-EBD96F37-3EE0-4795-B0FB-587ACF3DA1B0 ;
-    p:P106 wds:Q18921842-C99F2331-DAD4-4BFF-86DC-22767D83EA81,
-        wds:Q18921842-D6172D7F-F20B-4DC1-8497-5C95D513BC27,
-        wds:Q18921842-D6446642-3896-43C9-AEE3-4C89A77B48C8,
-        wds:Q18921842-DBBC45A2-C309-46B1-9D91-F5F6F486289D ;
-    p:P1266 wds:Q18921842-986aa7ed-44c6-3863-186c-24dcebdb9e97 ;
-    p:P1411 wds:Q18921842-E0F40CAF-E801-44A1-B4AA-38F2225C60E9 ;
-    p:P166 wds:Q18921842-6ADFC860-249A-44DB-B23F-7C5F80F454EF ;
-    p:P19 wds:Q18921842-01769C6F-0781-4C9A-B8B0-80DC4EC8AA09 ;
-    p:P1969 wds:Q18921842-c9328761-4c2c-57e3-5511-6a02169f7b84 ;
-    p:P2019 wds:Q18921842-0fa78775-4259-ca01-b7d9-78c2ce06902d ;
-    p:P21 wds:Q18921842-1A3F361F-B4A8-4BD9-920C-83C334C3BFE9 ;
-    p:P213 wds:Q18921842-008a5e11-47d2-3b8c-74a6-6dae3be5435d ;
-    p:P214 wds:Q18921842-3926A41C-850C-4FF5-B0A3-6E6BD9267CFB ;
-    p:P2168 wds:Q18921842-1009b0ed-4965-8a66-8d3f-19069b13ab32 ;
-    p:P227 wds:Q18921842-721158F1-984A-4D6D-A8DF-C8C301023375 ;
-    p:P2387 wds:Q18921842-7dbb218a-4a58-da56-f0d2-f2f9ac381551 ;
-    p:P244 wds:Q18921842-08D8A2CB-F439-46B9-9BB4-802FECDC529F ;
-    p:P2604 wds:Q18921842-a7920723-48d2-91db-24d2-e380a1ea1b85 ;
-    p:P2626 wds:Q18921842-f92b0aa1-4bdf-8b23-6f0f-177794c01677 ;
-    p:P2688 wds:Q18921842-7A4533CA-B1B3-4ECF-80C1-16F2F4993DD4 ;
-    p:P27 wds:Q18921842-D8B897C8-E677-4E03-B5DE-8E7AAA7EDC22 ;
-    p:P31 wds:Q18921842-AAEA5D3E-6FAB-4EB4-BE3C-F77D7A480187 ;
-    p:P345 wds:Q18921842-4dae3c09-4c82-c98f-5a91-2ac3427edec2 ;
-    p:P409 wds:Q18921842-1e0c552a-4bbe-80fc-39cb-04bbaae59f91 ;
-    p:P4985 wds:Q18921842-389A6FE0-4FCD-489B-AFFE-91BAAAB9CF31 ;
-    p:P5034 wds:Q18921842-beffb4ee-bc47-4a5c-8a4d-e514055aab94 ;
-    p:P5534 wds:Q18921842-9464C793-9678-4834-8971-3211C64CB68B ;
-    p:P569 wds:Q18921842-0B51CFF5-14C5-42E7-9D71-2BF9AA2623D1,
-        wds:Q18921842-2fb5dacd-bcd1-403f-a578-82a45821435e ;
-    p:P6150 wds:Q18921842-A516AFA3-CD17-42B0-8823-406001B08809 ;
-    p:P646 wds:Q18921842-41714F54-F8B3-44B2-B00B-D0FE0B134E3B ;
-    p:P69 wds:Q18921842-69C53CE2-4A5F-4A0C-86EB-8F88F9D770C4 ;
-    p:P7084 wds:Q18921842-902AB9AB-C461-487F-B2AF-DFB07537D9B4 ;
-    p:P734 wds:Q18921842-04832AE2-C462-4067-83E8-B559365246BC ;
-    p:P735 wds:Q18921842-0CD13F61-6EEA-4543-B644-98B59BD9CF67 ;
-    p:P7859 wds:Q18921842-954C7ADB-E0B1-435D-8AF8-7C165F4ACE51 ;
-    ns1:P1006 <http://data.bibliotheken.nl/id/thes/p335889581> ;
-    ns1:P214 <http://viaf.org/viaf/267757507> ;
-    ns1:P227 <https://d-nb.info/gnd/1017876827> ;
-    ns1:P244 <https://id.loc.gov/authorities/names/nr2001030755> ;
-    ns1:P5034 <http://lod.nl.go.kr/resource/KAC201516610> ;
-    ns1:P646 <http://g.co/kg/m/05ys_tt> ;
-    wdt:P1006 "335889581" ;
-    wdt:P106 wd:Q2405480,
-        wd:Q2526255,
-        wd:Q28389,
-        wd:Q33999 ;
-    wdt:P1266 "52273" ;
-    wdt:P1411 wd:Q106800 ;
-    wdt:P166 wd:Q106800 ;
-    wdt:P19 wd:Q962841 ;
-    wdt:P1969 "27540" ;
-    wdt:P2019 "p508161" ;
-    wdt:P21 wd:Q6581097 ;
-    wdt:P213 "0000 0000 5284 613X" ;
-    wdt:P214 "267757507" ;
-    wdt:P2168 "356914" ;
-    wdt:P227 "1017876827" ;
-    wdt:P2387 "1494764" ;
-    wdt:P244 "nr2001030755" ;
-    wdt:P2604 "1649386" ;
-    wdt:P2626 "166555" ;
-    wdt:P2688 "donhall" ;
-    wdt:P27 wd:Q30 ;
-    wdt:P31 wd:Q5 ;
-    wdt:P345 "nm2320658" ;
-    wdt:P409 "36031287" ;
-    wdt:P4985 "227439" ;
-    wdt:P5034 "KAC201516610" ;
-    wdt:P5534 "88001" ;
-    wdt:P569 "1969-03-08T00:00:00Z",
-        "2000-01-01T00:00:00Z" ;
-    wdt:P6150 "7267" ;
-    wdt:P646 "/m/05ys_tt" ;
-    wdt:P69 wd:Q182973 ;
-    wdt:P7084 wd:Q21934652 ;
-    wdt:P734 wd:Q1551523 ;
-    wdt:P735 wd:Q16275555 ;
-    wdt:P7859 "lccn-no2017031580" ;
-    foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Don_Hall_(filmmaker)> ;
-    foaf:name "Don Hall" .
-
 twssd:Doug_Liman a <http://dbpedia.org/class/yago/Alumnus109786338>,
         <http://dbpedia.org/class/yago/Artist109812338>,
         <http://dbpedia.org/class/yago/Cameraman109889539>,
@@ -21621,141 +21364,6 @@ twssd:Ella_Walker a schema:Person,
         owl:NamedIndividual ;
     schema:name "Ella Walker" ;
     schema:url <https://www.metacritic.com/person/ella-walker> .
-
-twssd:Emerald_Fennell a schema:Person,
-        owl:NamedIndividual ;
-    rdfs:label "Emerald Fennell",
-        "Емеральд Феннелл",
-        "Էմերալդ Ֆեննել",
-        "אמרלד פנל",
-        "إيميرالد فينيل",
-        "ئیمڕاڵد فێنێل",
-        "الزمرد فينيل",
-        "امرالد فنل",
-        "エメラルド・フェネル",
-        "埃默拉爾德·芬內爾",
-        "艾美尔拉德·芬内尔",
-        "艾美爾拉德·芬內爾",
-        "艾蔓露芬諾",
-        "에머럴드 피넬" ;
-    schema:dateModified "2021-06-07T13:23:35Z" ;
-    schema:description "British actress and writer",
-        "Brits actrice",
-        "actrice britannique",
-        "actriz británica",
-        "attrice, sceneggiatrice e regista britannica",
-        "britische Schauspielerin",
-        "pemeran perempuan asal Britania Raya",
-        "Британская актриса, режиссер и сценарист",
-        "Британська аркторка, режисерка та сценаристка",
-        "שחקנית וסופרת בריטית",
-        "ممثلة من المملكة المتحدة",
-        "ബ്രിട്ടനിലെ ചലച്ചിത്ര അഭിനേത്രി",
-        "영국 배우, 영화 감독" ;
-    schema:name "Emerald Fennell" ;
-    schema:version "1437026137" ;
-    ns6:identifiers "22" ;
-    ns6:sitelinks "27" ;
-    ns6:statements "43" ;
-    ns6:timestamp "2021-06-07T13:27:59Z" ;
-    owl:sameAs wd:Q16207879 ;
-    ns4:altLabel "エメラルド・フェンネル",
-        "埃默拉尔德·芬内尔",
-        "翡翠芬内尔",
-        "艾美尔拉德·芬内尔",
-        "艾莫芮德·芬諾",
-        "에머럴드 릴리 피넬" ;
-    p:P1006 wds:Q16207879-43490643-40B2-4921-8183-DF26455AD7EA ;
-    p:P106 wds:Q16207879-3A5DB3A8-5C33-4812-AC08-75E0581E35E0,
-        wds:Q16207879-45916226-D357-4739-A7C4-E59D76129ACB,
-        wds:Q16207879-481749e2-4bec-b823-25c3-05cbb8beb235,
-        wds:Q16207879-89d26999-4aeb-dc7f-4dfd-c3566081b087 ;
-    p:P1233 wds:Q16207879-FF51BDB3-07BA-417B-974A-83480ED52419 ;
-    p:P1266 wds:Q16207879-97230ac9-4f0e-ba15-295e-9d27323cde16 ;
-    p:P1280 wds:Q16207879-78482AE8-A2A8-4535-9CDD-D69A08DBDB6E ;
-    p:P1412 wds:Q16207879-9254B837-A86A-4840-9E14-61125A6318C4 ;
-    p:P166 wds:Q16207879-3b618258-4f51-acc3-11f7-e6b6f63b3d3c ;
-    p:P18 wds:Q16207879-2B2671E5-E7CE-44CF-A225-0A104AB9BBAF ;
-    p:P19 wds:Q16207879-2A9298DA-CCBD-49A3-B748-38C9B0319BAC ;
-    p:P2002 wds:Q16207879-F554E1AB-848B-46A1-BA7C-47199763FF79 ;
-    p:P2019 wds:Q16207879-e69021b6-41f7-287c-74f8-5fbd64f5e829 ;
-    p:P2031 wds:Q16207879-20F125B2-4CE7-42BF-8B6E-F97FDE466552 ;
-    p:P21 wds:Q16207879-A9CE79F1-E105-47EB-85DF-4E951B4C0F8D ;
-    p:P213 wds:Q16207879-DBC0D2DF-BC9F-4ACB-B8E4-B8495CCD13B7 ;
-    p:P214 wds:Q16207879-94121C68-FB9A-49E8-AEC2-737D64929641 ;
-    p:P22 wds:Q16207879-E5F5C85F-13CC-49EE-AE17-06B2032472F0 ;
-    p:P227 wds:Q16207879-8A7952FF-2200-47E9-8191-10217D93A464 ;
-    p:P2387 wds:Q16207879-7744c8d2-45d4-6050-baeb-7e037923195c ;
-    p:P244 wds:Q16207879-A54EFFCD-0344-4B3A-94D2-4C0E27C9DD30 ;
-    p:P2604 wds:Q16207879-91094d89-4d6a-72b3-f1ba-3d5010f771b7 ;
-    p:P2605 wds:Q16207879-6ee149c3-47da-a16d-8966-75cae41cffbd ;
-    p:P27 wds:Q16207879-3188C9C4-6FF4-476F-91E5-370AD13985ED ;
-    p:P31 wds:Q16207879-51D253B0-1846-4DE9-BEF8-9C6A36614A26 ;
-    p:P3144 wds:Q16207879-266ca1e1-42a6-e774-59ee-2f47ffdc948a ;
-    p:P345 wds:Q16207879-1899B895-EE23-467F-93B8-65ADEDDB1A16 ;
-    p:P373 wds:Q16207879-08C9AA3A-6D6B-45F2-90BA-426A247D2480 ;
-    p:P4985 wds:Q16207879-F817CBAA-36B6-40A2-ABA2-1C04A1016024 ;
-    p:P5361 wds:Q16207879-F72DC80D-23CE-438E-A799-3565613B342D ;
-    p:P569 wds:Q16207879-288AB466-E27D-4200-BFE4-E97ABEBC48BD ;
-    p:P6150 wds:Q16207879-CA20553F-D397-465A-A27A-7B89039121F9 ;
-    p:P646 wds:Q16207879-4B326D19-B3BA-406B-A00C-CF5A13C269D5 ;
-    p:P69 wds:Q16207879-1030A6F8-7F4D-4B87-A4F3-44A08AE5B18C,
-        wds:Q16207879-32877B40-6E36-4623-A384-E5E76805B200 ;
-    p:P7105 wds:Q16207879-9B9D12DD-4111-40D7-AF10-0B0F1A280A60 ;
-    p:P734 wds:Q16207879-653459A4-A429-4D50-AF8C-4EB094D94EB0 ;
-    p:P735 wds:Q16207879-c2571897-47f1-c81b-49e8-111d78a8e15c ;
-    p:P7859 wds:Q16207879-70736B95-2269-41B3-B31E-C02D1127AE3C ;
-    p:P8687 wds:Q16207879-1c6be582-ffef-431d-afcd-daaca4f9ba3f,
-        wds:Q16207879-83896b9e-059c-46a2-bf7e-3a7d068d9b32 ;
-    p:P8796 wds:Q16207879-F307A03B-2702-4882-9D02-93F8EBEE2760 ;
-    ns1:P1006 <http://data.bibliotheken.nl/id/thes/p375488685> ;
-    ns1:P214 <http://viaf.org/viaf/305278628> ;
-    ns1:P227 <https://d-nb.info/gnd/1076278582> ;
-    ns1:P244 <https://id.loc.gov/authorities/names/nb2013018749> ;
-    ns1:P5361 <https://bnb.data.bl.uk/doc/person/FennellEmerald1985-> ;
-    ns1:P646 <http://g.co/kg/m/0h4nqkp> ;
-    wdt:P1006 "375488685" ;
-    wdt:P106 wd:Q10800557,
-        wd:Q2526255,
-        wd:Q28389,
-        wd:Q33999 ;
-    wdt:P1233 "184040" ;
-    wdt:P1266 "420587" ;
-    wdt:P1280 "282750819" ;
-    wdt:P1412 wd:Q1860 ;
-    wdt:P166 wd:Q41417 ;
-    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Emerald%20Fennell25-03-2013%20MarkJones.jpg> ;
-    wdt:P19 wd:Q84 ;
-    wdt:P2002 "emeraldfennell" ;
-    wdt:P2019 "p710860" ;
-    wdt:P2031 "2008-01-01T00:00:00Z" ;
-    wdt:P21 wd:Q6581072 ;
-    wdt:P213 "0000 0004 1887 5753" ;
-    wdt:P214 "305278628" ;
-    wdt:P22 wd:Q7781452 ;
-    wdt:P227 "1076278582" ;
-    wdt:P2387 "1550116" ;
-    wdt:P244 "nb2013018749" ;
-    wdt:P2604 "1283114" ;
-    wdt:P2605 "226045" ;
-    wdt:P27 wd:Q145 ;
-    wdt:P31 wd:Q5 ;
-    wdt:P3144 "1473179" ;
-    wdt:P345 "nm2193504" ;
-    wdt:P373 "Emerald Fennell" ;
-    wdt:P4985 "1252934" ;
-    wdt:P5361 "FennellEmerald1985-" ;
-    wdt:P569 "1985-10-01T00:00:00Z" ;
-    wdt:P6150 "9067" ;
-    wdt:P646 "/m/0h4nqkp" ;
-    wdt:P69 wd:Q1902016,
-        wd:Q34433 ;
-    wdt:P7105 "emerald-fennell" ;
-    wdt:P734 wd:Q21510449 ;
-    wdt:P735 wd:Q18695824 ;
-    wdt:P7859 "lccn-nb2013018749" ;
-    wdt:P8687 "21887" ;
-    wdt:P8796 "101425" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emilia_Sch%C3%BCle> a schema:Person,
         owl:NamedIndividual ;
@@ -27380,7 +26988,8 @@ twssd:Jennifer_Coolidge a <http://dbpedia.org/class/yago/Actor109765278>,
     wdt:P950 "XX4580987" ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Jennifer_Coolidge_-_Cropped.jpg> ;
     foaf:isPrimaryTopicOf wiki:Jennifer_Coolidge ;
-    foaf:name "Jennifer Coolidge" .
+    foaf:name "Jennifer Coolidge" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Jennifer_Ouellette a <http://dbpedia.org/class/yago/CausalAgent100007347>,
         <http://dbpedia.org/class/yago/Communicator109610660>,
@@ -31208,7 +30817,8 @@ twssd:Kelly_Marie_Tran a dbo:Agent,
     wdt:P7859 "lccn-no2018035502" ;
     wdt:P8687 "7026" ;
     foaf:isPrimaryTopicOf wiki:Kelly_Marie_Tran ;
-    foaf:name "Kelly Marie Tran" .
+    foaf:name "Kelly Marie Tran" ;
+    twss:wasDirectedByOscarWinner twssd:Don_Hall .
 
 twssd:Ken_Duken a <http://dbpedia.org/class/yago/Actor109765278>,
         <http://dbpedia.org/class/yago/CausalAgent100007347>,
@@ -35135,7 +34745,8 @@ twssd:Laverne_Cox a <http://dbpedia.org/class/yago/Actor109765278>,
     wdt:P8687 "685338" ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Laverne_Cox_at_Paley_Fest_Orange_Is_The_New_Black.jpg> ;
     foaf:isPrimaryTopicOf wiki:Laverne_Cox ;
-    foaf:name "Laverne Cox" .
+    foaf:name "Laverne Cox" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Lil_Rel_Howery a schema:Person,
         owl:NamedIndividual ;
@@ -38124,7 +37735,8 @@ twssd:Max_Greenfield a <http://dbpedia.org/class/yago/Actor109765278>,
     wdt:P950 "XX5268866" ;
     foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/Max_Greenfield_at_the_2013_Golden_Globe_Awards_(cropped).jpg> ;
     foaf:isPrimaryTopicOf wiki:Max_Greenfield ;
-    foaf:name "Max Greenfield" .
+    foaf:name "Max Greenfield" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Mel_Blanc a <http://dbpedia.org/class/yago/Actor109765278>,
         <http://dbpedia.org/class/yago/Alumnus109786338>,
@@ -41592,7 +41204,8 @@ twssd:Molly_Shannon a schema:Person,
     wdt:P7704 "agent/base/65653" ;
     wdt:P7859 "lccn-no99072004" ;
     wdt:P8381 "molly-shannon" ;
-    wdt:P9404 "6637" .
+    wdt:P9404 "6637" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Monica_Haynes a schema:Person,
         owl:NamedIndividual ;
@@ -45434,432 +45047,6 @@ twssd:Ravi_Patel a <http://dbpedia.org/class/yago/Actor109765278>,
     foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Ravi_Patel_(actor)> ;
     foaf:name "Ravi Patel" .
 
-twssd:Ray_McKinnon a <http://dbpedia.org/class/yago/Actor109765278>,
-        <http://dbpedia.org/class/yago/Administrator109770949>,
-        <http://dbpedia.org/class/yago/Alumnus109786338>,
-        <http://dbpedia.org/class/yago/CausalAgent100007347>,
-        <http://dbpedia.org/class/yago/Communicator109610660>,
-        <http://dbpedia.org/class/yago/Creator109614315>,
-        <http://dbpedia.org/class/yago/Director110014939>,
-        <http://dbpedia.org/class/yago/Entertainer109616922>,
-        <http://dbpedia.org/class/yago/FilmDirector110088200>,
-        <http://dbpedia.org/class/yago/FilmMaker110088390>,
-        <http://dbpedia.org/class/yago/Head110162991>,
-        <http://dbpedia.org/class/yago/Intellectual109621545>,
-        <http://dbpedia.org/class/yago/Leader109623038>,
-        <http://dbpedia.org/class/yago/LivingThing100004258>,
-        <http://dbpedia.org/class/yago/Object100002684>,
-        <http://dbpedia.org/class/yago/Organism100004475>,
-        <http://dbpedia.org/class/yago/Performer110415638>,
-        <http://dbpedia.org/class/yago/Person100007846>,
-        <http://dbpedia.org/class/yago/PhysicalEntity100001930>,
-        <http://dbpedia.org/class/yago/Producer110480018>,
-        <http://dbpedia.org/class/yago/Scholar110557854>,
-        <http://dbpedia.org/class/yago/Screenwriter110564400>,
-        <http://dbpedia.org/class/yago/Scriptwriter110564905>,
-        <http://dbpedia.org/class/yago/Whole100003553>,
-        <http://dbpedia.org/class/yago/WikicatAmericanActors>,
-        <http://dbpedia.org/class/yago/WikicatAmericanFilmDirectors>,
-        <http://dbpedia.org/class/yago/WikicatAmericanMaleFilmActors>,
-        <http://dbpedia.org/class/yago/WikicatAmericanMaleTelevisionActors>,
-        <http://dbpedia.org/class/yago/WikicatAmericanScreenwriters>,
-        <http://dbpedia.org/class/yago/WikicatDirectorsOfLiveActionShortFilmAcademyAwardWinners>,
-        <http://dbpedia.org/class/yago/WikicatLivingPeople>,
-        <http://dbpedia.org/class/yago/WikicatMaleActorsFromGeorgia(U.S.State)>,
-        <http://dbpedia.org/class/yago/WikicatPeopleFromCookCounty,Georgia>,
-        <http://dbpedia.org/class/yago/WikicatShortFilmDirectors>,
-        <http://dbpedia.org/class/yago/WikicatValdostaStateUniversityAlumni>,
-        <http://dbpedia.org/class/yago/Writer110794014>,
-        <http://dbpedia.org/class/yago/YagoLegalActor>,
-        <http://dbpedia.org/class/yago/YagoLegalActorGeo>,
-        dbo:Agent,
-        dbo:Person,
-        schema:Person,
-        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>,
-        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson>,
-        owl:NamedIndividual,
-        owl:Thing,
-        wd:Q215627,
-        wd:Q24229398,
-        wd:Q5,
-        foaf:Person ;
-    rdfs:label "Ray McKinnon",
-        "Ray McKinnon (actor)",
-        "Ρέι ΜακΚίνον",
-        "Рей Маккіннон (актор)",
-        "Рэй МакКиннон",
-        "Ռեյ Մաքինոն",
-        "ריי מקקינון",
-        "راى ماكينون",
-        "راي ماكينون",
-        "ری مککینون",
-        "レイ・マッキノン",
-        "雷·迈克金农",
-        "雷·麥金農",
-        "雷·麦金农",
-        "레이 매키넌" ;
-    dbo:abstract "Ray McKinnon (* 15. November 1957 in Adel, Georgia) ist ein US-amerikanischer Schauspieler, Drehbuchautor, Regisseur, Produzent und Oscarpreisträger.",
-        "Ray McKinnon est un acteur, producteur, réalisateur et scénariste américain né le 15 novembre 1957 à Adel, en Géorgie (États-Unis). Il a notamment créé la série Rectify, actuellement diffusée aux États-Unis sur la chaîne câblée Sundance TV, ainsi qu'en France sur Arte.",
-        "Raymond \"Ray\" McKinnon (Adel, 15 novembre 1957) è un attore, sceneggiatore, regista e produttore cinematografico statunitense.",
-        "Raymond Wilkes \"Ray\" McKinnon (born November 15, 1957) is an American actor, screenwriter, film director and producer.",
-        "Реймонд Вілкс «Рей» Маккіннон (англ. Raymond Wilkes \"Ray\" McKinnon, нар. 15 листопада 1957, Адел) — американський актор, сценарист, кінорежисер і продюсер. Маккіннон періодично з'являвся на телебаченні і найбільшу популярність здобув за роль преподобного Сміта в серіалі «Дедвуд». Він також відомий по ролі Лінкольна Поттера в четвертому сезоні серіалу Сини анархії.",
-        "راي ماكينون هو منتج أفلام وكاتب سيناريو ومخرج وممثل أمريكي، ولد في 15 نوفمبر 1957 بأدل في الولايات المتحدة. من الجوائز التي نالها جائزة الأوسكار لأفضل فيلم حي قصير.",
-        "レイ・マッキノン（Ray McKinnon、1957年11月15日 - ）は、アメリカ合衆国の俳優、映画監督、テレビプロデューサー。 ジョージア州アデル出身。2001年、短編映画The Accountantを監督（脚本・出演も）、妻で女優のリサ・ブロントと共に第74回アカデミー短編映画賞を受賞した。その後、ブロントとは2010年に死別した。 近年はテレビドラマRectifyのプロデュースを手がけている。" ;
-    dbo:activeYearsStartYear "1989" ;
-    dbo:birthDate "1957-11-15" ;
-    dbo:birthName "Raymond Wilkes McKinnon" ;
-    dbo:birthPlace <http://dbpedia.org/resource/Adel,_Georgia>,
-        <http://dbpedia.org/resource/Georgia_(U.S._state)> ;
-    dbo:birthYear "1957" ;
-    dbo:education dbr:Valdosta_State_University ;
-    dbo:knownFor dbr:Rectify ;
-    dbo:nationality dbr:Americans ;
-    dbo:occupation dbr:Actor,
-        dbr:Film_producer,
-        <http://dbpedia.org/resource/Ray_McKinnon_(actor)__PersonFunction__1>,
-        dbr:Screenwriter ;
-    dbo:spouse dbr:Lisa_Blount ;
-    dbo:stateOfOrigin dbr:Americans ;
-    dbo:thumbnail <http://commons.wikimedia.org/wiki/Special:FilePath/The_cast_and_crew_of_Rectify_at_the_74th_Annual_Peabody_Awards.jpg?width=300> ;
-    dbo:wikiPageID "13441236" ;
-    dbo:wikiPageLength "15455" ;
-    dbo:wikiPageRevisionID "983280738" ;
-    dbo:wikiPageWikiLink dbr:A_Perfect_World,
-        dbr:Academy_Award_for_Best_Live_Action_Short_Film,
-        dbr:Academy_Awards,
-        dbr:Actor,
-        <http://dbpedia.org/resource/Adel,_Georgia>,
-        dbr:Aden_Young,
-        dbr:Americans,
-        <http://dbpedia.org/resource/Any_Day_Now_(TV_series)>,
-        <http://dbpedia.org/resource/Apollo_13_(film)>,
-        dbr:Arly_Hanks,
-        dbr:Atlanta_Film_Festival,
-        dbr:Austin_Film_Festival,
-        dbr:Billy_Bob_Thornton,
-        dbr:Brooklyn_South,
-        dbr:Bugsy,
-        dbr:Category:1957_births,
-        dbr:Category:American_male_film_actors,
-        dbr:Category:American_male_television_actors,
-        dbr:Category:Directors_of_Live_Action_Short_Film_Academy_Award_winners,
-        <http://dbpedia.org/resource/Category:Film_directors_from_Georgia_(U.S._state)>,
-        dbr:Category:Living_people,
-        <http://dbpedia.org/resource/Category:Male_actors_from_Georgia_(U.S._state)>,
-        <http://dbpedia.org/resource/Category:People_from_Cook_County,_Georgia>,
-        dbr:Category:Valdosta_State_University_alumni,
-        <http://dbpedia.org/resource/Chaos_Walking_(film)>,
-        <http://dbpedia.org/resource/Chrystal_(film)>,
-        <http://dbpedia.org/resource/Comanche_Moon_(miniseries)>,
-        dbr:Come_Early_Morning,
-        dbr:DC_Independent_Film_Festival,
-        <http://dbpedia.org/resource/Dead_Man's_Walk_(miniseries)>,
-        <http://dbpedia.org/resource/Deadwood_(TV_series)>,
-        dbr:Death_row,
-        dbr:Designing_Women,
-        <http://dbpedia.org/resource/Dolly_Parton's_Heartstrings>,
-        dbr:Dolphin_Tale,
-        dbr:Driving_Miss_Daisy,
-        <http://dbpedia.org/resource/FX_(TV_channel)>,
-        dbr:Fear_the_Walking_Dead,
-        dbr:Film_director,
-        dbr:Film_producer,
-        <http://dbpedia.org/resource/Footloose_(2011_film)>,
-        dbr:Ford_v_Ferrari,
-        dbr:Forgotten_Sins,
-        <http://dbpedia.org/resource/Georgia_(U.S._state)>,
-        dbr:Ginny_Mule_Pictures,
-        dbr:Goodbye_Lover,
-        dbr:Gotham_Awards,
-        dbr:Gotham_Independent_Film_Award_for_Best_Ensemble_Cast,
-        dbr:Grace_Zabriskie,
-        dbr:HBO,
-        dbr:Harry_Dean_Stanton,
-        dbr:Harry_Lennix,
-        <http://dbpedia.org/resource/Hick_(film)>,
-        <http://dbpedia.org/resource/I'll_Fly_Away_(TV_series)>,
-        <http://dbpedia.org/resource/Improbable_(The_X-Files)>,
-        dbr:In_Sickness_and_in_Health,
-        <http://dbpedia.org/resource/In_the_Heat_of_the_Night_(TV_series)>,
-        dbr:Independent_Spirit_Award_for_Best_Supporting_Male,
-        dbr:Independent_Spirit_Awards,
-        dbr:Independent_Spirit_Robert_Altman_Award,
-        dbr:Johnny_Galecki,
-        <http://dbpedia.org/resource/Justified_(TV_series)>,
-        <http://dbpedia.org/resource/Law_&_Order:_Special_Victims_Unit>,
-        <http://dbpedia.org/resource/Legend_(TV_series)>,
-        dbr:Lisa_Blount,
-        dbr:List_of_Rectify_episodes,
-        <http://dbpedia.org/resource/Little_Rock,_Arkansas>,
-        <http://dbpedia.org/resource/Livin'_Large>,
-        <http://dbpedia.org/resource/Matlock_(TV_series)>,
-        <http://dbpedia.org/resource/Mayans_M.C.>,
-        <http://dbpedia.org/resource/Michael_Hayes_(TV_series)>,
-        <http://dbpedia.org/resource/Mud_(2012_film)>,
-        dbr:Murder_in_Mississippi,
-        dbr:NYPD_Blue,
-        dbr:Nash_Bridges,
-        dbr:Nashville_Film_Festival,
-        <http://dbpedia.org/resource/Needful_Things_(film)>,
-        <http://dbpedia.org/resource/News_of_the_World_(film)>,
-        <http://dbpedia.org/resource/O_Brother,_Where_Art_Thou%3F>,
-        dbr:Paris_Trout,
-        dbr:Peabody_Award,
-        dbr:Phil_Remington,
-        <http://dbpedia.org/resource/Philly_(TV_series)>,
-        dbr:Picket_Fences,
-        dbr:Randy_and_the_Mob,
-        dbr:Rectify,
-        <http://dbpedia.org/resource/Roswell_(film)>,
-        <http://dbpedia.org/resource/Scarlett_(miniseries)>,
-        dbr:Screenwriter,
-        <http://dbpedia.org/resource/Sisters_(American_TV_series)>,
-        dbr:Slamdance_Film_Festival,
-        dbr:Sommersby,
-        dbr:Sons_of_Anarchy,
-        dbr:South_by_Southwest,
-        dbr:Sundance_Film_Festival,
-        dbr:Sundance_TV,
-        dbr:Take_Shelter,
-        dbr:Taking_Back_My_Life:_The_Nancy_Ziegenmeyer_Story,
-        <http://dbpedia.org/resource/That_Evening_Sun_(film)>,
-        <http://dbpedia.org/resource/The_Accountant_(2001_film)>,
-        dbr:The_Badge,
-        <http://dbpedia.org/resource/The_Blind_Side_(film)>,
-        <http://dbpedia.org/resource/The_Boys_Are_Back_(TV_series)>,
-        <http://dbpedia.org/resource/The_Client_(TV_series)>,
-        <http://dbpedia.org/resource/The_Gambler_(film_series)>,
-        <http://dbpedia.org/resource/The_Grass_Harp_(film)>,
-        <http://dbpedia.org/resource/The_Gun_in_Betty_Lou's_Handbag>,
-        dbr:The_Last_Lullaby,
-        <http://dbpedia.org/resource/The_Last_Ride_(2011_film)>,
-        <http://dbpedia.org/resource/The_Missing_(2003_film)>,
-        <http://dbpedia.org/resource/The_Net_(1995_film)>,
-        dbr:The_Practice,
-        <http://dbpedia.org/resource/The_Pretender_(TV_series)>,
-        <http://dbpedia.org/resource/The_Stand_(1994_miniseries)>,
-        dbr:The_X-Files,
-        dbr:Things_That_Hang_from_Trees,
-        dbr:Tune_in_Tomorrow,
-        dbr:United_States,
-        dbr:Valdosta_State_University,
-        dbr:Walton_Goggins,
-        <http://dbpedia.org/resource/Wayne_(TV_series)>,
-        <http://dbpedia.org/resource/When_Will_I_Be_Loved%3F>,
-        dbr:Writers_Guild_of_America_Award_for_Television:_Episodic_Drama,
-        dbr:Writers_Guild_of_America_Awards ;
-    ns2:birthDate "1957-11-15" ;
-    ns2:birthName "Raymond Wilkes McKinnon" ;
-    ns2:birthPlace <http://dbpedia.org/resource/Adel,_Georgia>,
-        <http://dbpedia.org/resource/Georgia_(U.S._state)>,
-        dbr:United_States ;
-    ns2:caption "McKinnon in 2010" ;
-    ns2:education dbr:Valdosta_State_University ;
-    ns2:knownFor "Rectify" ;
-    ns2:name "Ray McKinnon" ;
-    ns2:nationality dbr:Americans ;
-    ns2:occupation "Actor",
-        "Director",
-        "Producer",
-        "Screenwriter" ;
-    ns2:spouse dbr:Lisa_Blount,
-        "",
-        "1998",
-        "2010" ;
-    ns2:wikiPageUsesTemplate dbr:Template:Authority_control,
-        dbr:Template:Birth_date_and_age,
-        dbr:Template:Commons_category,
-        dbr:Template:IMDb_name,
-        dbr:Template:Infobox_person,
-        dbr:Template:Nominated,
-        dbr:Template:Reflist,
-        dbr:Template:Short_description,
-        dbr:Template:Won ;
-    ns2:wordnet_type <http://www.w3.org/2006/03/wn/wn20/instances/synset-actor-noun-1> ;
-    ns2:yearsActive "1989" ;
-    ns3:subject dbr:Category:1957_births,
-        dbr:Category:American_male_film_actors,
-        dbr:Category:American_male_television_actors,
-        dbr:Category:Directors_of_Live_Action_Short_Film_Academy_Award_winners,
-        <http://dbpedia.org/resource/Category:Film_directors_from_Georgia_(U.S._state)>,
-        dbr:Category:Living_people,
-        <http://dbpedia.org/resource/Category:Male_actors_from_Georgia_(U.S._state)>,
-        <http://dbpedia.org/resource/Category:People_from_Cook_County,_Georgia>,
-        dbr:Category:Valdosta_State_University_alumni ;
-    schema:dateModified "2021-05-21T22:24:21Z" ;
-    schema:description "American actor",
-        "Amerikaans acteur",
-        "Amerikaanse akteur",
-        "Usana aktoro",
-        "acteur américain",
-        "actor american",
-        "actor estadounidense",
-        "actor estatunidenc",
-        "aisteoir Meiriceánach",
-        "aktor amerikan",
-        "aktor merikano",
-        "ameerika näitleja",
-        "amerikanischer Schauspieler",
-        "amerikāņu aktieris",
-        "ator american",
-        "attore, sceneggiatore, regista e produttore cinematografico statunitense",
-        "dramatan Lamerikänik",
-        "pemeran laki-laki asal Amerika Serikat",
-        "usona aktoro",
-        "yhdysvaltalainen näyttelijä",
-        "Актор",
-        "שחקן אמריקאי",
-        "تهیهکننده، فیلمنامهنویس، بازیگر، و کارگردان آمریکایی",
-        "ممثل أمريكي",
-        "মার্কিন অভিনেতা",
-        "അമേരിക്കന് ചലചിത്ര നടന്",
-        "미국 배우" ;
-    schema:name "Ray McKinnon" ;
-    schema:sameAs <http://viaf.org/viaf/170030314> ;
-    schema:version "1426015450" ;
-    ns6:identifiers "27" ;
-    ns6:sitelinks "13" ;
-    ns6:statements "48" ;
-    ns6:timestamp "2021-05-21T22:25:02Z" ;
-    rdfs:comment "Ray McKinnon (* 15. November 1957 in Adel, Georgia) ist ein US-amerikanischer Schauspieler, Drehbuchautor, Regisseur, Produzent und Oscarpreisträger.",
-        "Ray McKinnon est un acteur, producteur, réalisateur et scénariste américain né le 15 novembre 1957 à Adel, en Géorgie (États-Unis). Il a notamment créé la série Rectify, actuellement diffusée aux États-Unis sur la chaîne câblée Sundance TV, ainsi qu'en France sur Arte.",
-        "Raymond \"Ray\" McKinnon (Adel, 15 novembre 1957) è un attore, sceneggiatore, regista e produttore cinematografico statunitense.",
-        "Raymond Wilkes \"Ray\" McKinnon (born November 15, 1957) is an American actor, screenwriter, film director and producer.",
-        "Реймонд Вілкс «Рей» Маккіннон (англ. Raymond Wilkes \"Ray\" McKinnon, нар. 15 листопада 1957, Адел) — американський актор, сценарист, кінорежисер і продюсер. Маккіннон періодично з'являвся на телебаченні і найбільшу популярність здобув за роль преподобного Сміта в серіалі «Дедвуд». Він також відомий по ролі Лінкольна Поттера в четвертому сезоні серіалу Сини анархії.",
-        "راي ماكينون هو منتج أفلام وكاتب سيناريو ومخرج وممثل أمريكي، ولد في 15 نوفمبر 1957 بأدل في الولايات المتحدة. من الجوائز التي نالها جائزة الأوسكار لأفضل فيلم حي قصير.",
-        "レイ・マッキノン（Ray McKinnon、1957年11月15日 - ）は、アメリカ合衆国の俳優、映画監督、テレビプロデューサー。 ジョージア州アデル出身。2001年、短編映画The Accountantを監督（脚本・出演も）、妻で女優のリサ・ブロントと共に第74回アカデミー短編映画賞を受賞した。その後、ブロントとは2010年に死別した。 近年はテレビドラマRectifyのプロデュースを手がけている。" ;
-    owl:sameAs <http://ar.dbpedia.org/resource/راي_ماكينون>,
-        <http://azb.dbpedia.org/resource/ری_مک‌کینون_(اویونچو)>,
-        <http://d-nb.info/gnd/1011387700>,
-        <http://d-nb.info/gnd/1011387700/about/rdf>,
-        <http://dbpedia.org/resource/Ray_McKinnon_(actor)>,
-        <http://de.dbpedia.org/resource/Ray_McKinnon>,
-        <http://fa.dbpedia.org/resource/ری_مک‌کینون_(هنرپیشه)>,
-        <http://fi.dbpedia.org/resource/Ray_McKinnon>,
-        <http://fr.dbpedia.org/resource/Ray_McKinnon>,
-        <http://it.dbpedia.org/resource/Ray_McKinnon>,
-        <http://ja.dbpedia.org/resource/レイ・マッキノン>,
-        <http://musicbrainz.org/artist/f68d2d90-b097-4394-8e52-dc58e38126cf>,
-        <http://rdf.freebase.com/ns/m.03c5f7l>,
-        <http://uk.dbpedia.org/resource/Рей_Маккіннон_(актор)>,
-        <http://viaf.org/viaf/170030314>,
-        wd:Q2073496,
-        <http://yago-knowledge.org/resource/Ray_McKinnon_(actor)>,
-        <https://global.dbpedia.org/id/1ydVG> ;
-    ns4:altLabel "雷·迈克金农",
-        "雷·邁克金農",
-        "雷·麥克農",
-        "雷·麦金农",
-        "레이먼드 윌크스 매키넌" ;
-    ns5:wasDerivedFrom <http://en.wikipedia.org/wiki/Ray_McKinnon_(actor)?oldid=983280738&ns=0> ;
-    p:P1006 wds:Q2073496-0D91BE9F-AF76-426A-B476-43DAF8056B69 ;
-    p:P106 wds:Q2073496-1B9E3D7E-BD0D-4ED8-A38A-C1ABFC32774B,
-        wds:Q2073496-47BE05F8-A6E9-4F8B-A158-B2F6B57799E6,
-        wds:Q2073496-6A930922-BD15-4D3C-911F-3CBB27480ED9,
-        wds:Q2073496-A7D2FC30-69D1-4FB6-92A0-AFB0EF350776,
-        wds:Q2073496-B244278F-BDB0-4B2B-9E4D-82869F6FC845 ;
-    p:P1266 wds:Q2073496-53a4565e-448a-7f2f-e1a8-8d7608770b00 ;
-    p:P1280 wds:Q2073496-746080ED-B796-4D34-9CF3-C800A61A4BFB ;
-    p:P1411 wds:Q2073496-4BE3DE35-DA54-48BF-AB4F-237DEF3B0FE8 ;
-    p:P1412 wds:Q2073496-076DDE8C-BDCF-4D2A-9759-5055B2F04273 ;
-    p:P166 wds:Q2073496-3F80283A-BE9C-4239-86C7-D5687AB8BF7B ;
-    p:P18 wds:Q2073496-95582EF9-3B50-47C8-8A4B-9E1E7453050C ;
-    p:P19 wds:Q2073496-3B0FE3A4-5FB8-44DD-93CB-2CF5BDD40564 ;
-    p:P1969 wds:Q2073496-d4897887-4670-d501-ee33-9b475a693d75 ;
-    p:P2019 wds:Q2073496-0859b283-4669-ef56-9e8b-54dfdcc3075b ;
-    p:P2031 wds:Q2073496-C60FCD5B-197A-454F-87E6-83518DA16843 ;
-    p:P21 wds:q2073496-5b18fece-4397-683a-52e2-102833a9b631 ;
-    p:P213 wds:Q2073496-C5F12818-8742-4E0B-9F49-6D612D03F53B ;
-    p:P214 wds:q2073496-2EE676BD-6713-46ED-8E5B-56221C4408A3 ;
-    p:P2168 wds:Q2073496-143f2cbd-43dc-be72-1d45-7205df43d678 ;
-    p:P227 wds:q2073496-55DCDFC8-4F5F-4F31-9931-5EA7D99226DA ;
-    p:P2387 wds:Q2073496-1bbd3116-4ba3-42db-0934-afcd1f5dbbd3 ;
-    p:P2435 wds:Q2073496-ec48ee69-448f-894c-f3be-e22e01c50d23 ;
-    p:P244 wds:q2073496-F031775F-DA9D-4BF2-AD66-B3DBAF533621 ;
-    p:P2519 wds:Q2073496-9156d766-4ea0-c683-3906-0574541010e6 ;
-    p:P26 wds:Q2073496-E8A14F09-FD12-427C-8BC5-9DB1F267BF86 ;
-    p:P2604 wds:Q2073496-57d10f54-413e-40c8-c24b-c593a779f000 ;
-    p:P2605 wds:Q2073496-57bed611-40d6-209e-51bc-d2aa3494dfd4 ;
-    p:P2626 wds:Q2073496-57770362-40d1-f313-b62d-9142ea919eab ;
-    p:P2638 wds:Q2073496-2D428C6E-F61B-4B89-8567-23D9FACEA1EB ;
-    p:P268 wds:Q2073496-8740D18A-1C29-402F-9193-2E82DCDF230C ;
-    p:P269 wds:Q2073496-5F2728C4-27CC-4AE8-98CD-53346F7A013B ;
-    p:P27 wds:q2073496-768DBC73-B21B-49FD-984D-816FD8A2CDCC ;
-    p:P31 wds:Q2073496-C517C538-509A-4414-A5B3-6B7DE684D522 ;
-    p:P345 wds:q2073496-7EFD76D7-1BE3-4FBA-B369-3BB177FF6CB2 ;
-    p:P373 wds:q2073496-4352F14F-0BFD-4B94-B2E5-97F89C029499 ;
-    p:P434 wds:Q2073496-690804A9-5781-4A22-BC08-EF3C587303CC ;
-    p:P4985 wds:Q2073496-C2E91F60-6938-4FB0-85F3-E9218FFA9864 ;
-    p:P551 wds:Q2073496-64BB5881-1AEA-4E2D-834F-077A76AFA830 ;
-    p:P5534 wds:Q2073496-19478667-8A29-4468-AA1B-2C06873DA01C ;
-    p:P569 wds:Q2073496-F9121C09-4614-4447-95AF-73D70D6B294E ;
-    p:P6150 wds:Q2073496-427A479B-CC0F-4F96-8929-689ADBCD8098 ;
-    p:P646 wds:Q2073496-74612E9C-0146-4D8C-BBFE-32262EE5D2D7 ;
-    p:P69 wds:Q2073496-613774E6-86B3-4E0F-B254-980C8D68C653 ;
-    p:P7214 wds:Q2073496-1076B2CC-21C1-4D94-AEFF-036A9432FF63 ;
-    p:P734 wds:Q2073496-49d49b53-43cf-3b96-ae1b-ce30acc24846 ;
-    p:P735 wds:Q2073496-CCB7DD8D-22E3-49C8-987A-7B0C0A7E79AD ;
-    p:P7859 wds:Q2073496-47B948D5-CB27-4C44-9F68-0E8756FB9AC9 ;
-    ns1:P1006 <http://data.bibliotheken.nl/id/thes/p391880632> ;
-    ns1:P214 <http://viaf.org/viaf/170030314> ;
-    ns1:P227 <https://d-nb.info/gnd/1011387700> ;
-    ns1:P244 <https://id.loc.gov/authorities/names/no2001041985> ;
-    ns1:P268 <http://data.bnf.fr/ark:/12148/cb169239396#about> ;
-    ns1:P269 <http://www.idref.fr/18168621X/id> ;
-    ns1:P434 <http://musicbrainz.org/artist/f68d2d90-b097-4394-8e52-dc58e38126cf> ;
-    ns1:P646 <http://g.co/kg/m/03c5f7l> ;
-    wdt:P1006 "391880632" ;
-    wdt:P106 wd:Q10798782,
-        wd:Q2526255,
-        wd:Q28389,
-        wd:Q3282637,
-        wd:Q33999 ;
-    wdt:P1266 "80923" ;
-    wdt:P1280 "186751587" ;
-    wdt:P1411 wd:Q1324407 ;
-    wdt:P1412 wd:Q1860 ;
-    wdt:P166 wd:Q1324407 ;
-    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Ray%20McKinnon%202010.jpg> ;
-    wdt:P19 wd:Q353662 ;
-    wdt:P1969 "10688" ;
-    wdt:P2019 "p47768" ;
-    wdt:P2031 "1989-01-01T00:00:00Z" ;
-    wdt:P21 wd:Q6581097 ;
-    wdt:P213 "0000 0001 1894 3910" ;
-    wdt:P214 "170030314" ;
-    wdt:P2168 "181891" ;
-    wdt:P227 "1011387700" ;
-    wdt:P2387 "240521" ;
-    wdt:P2435 "12525" ;
-    wdt:P244 "no2001041985" ;
-    wdt:P2519 "11377" ;
-    wdt:P26 wd:Q263663 ;
-    wdt:P2604 "22092" ;
-    wdt:P2605 "18401" ;
-    wdt:P2626 "73183" ;
-    wdt:P2638 "people/ray-mckinnon" ;
-    wdt:P268 "169239396" ;
-    wdt:P269 "18168621X" ;
-    wdt:P27 wd:Q30 ;
-    wdt:P31 wd:Q5 ;
-    wdt:P345 "nm0571964" ;
-    wdt:P373 "Ray McKinnon (actor)" ;
-    wdt:P434 "f68d2d90-b097-4394-8e52-dc58e38126cf" ;
-    wdt:P4985 "1472" ;
-    wdt:P551 wd:Q23556 ;
-    wdt:P5534 "1472" ;
-    wdt:P569 "1957-11-15T00:00:00Z" ;
-    wdt:P6150 "1992" ;
-    wdt:P646 "/m/03c5f7l" ;
-    wdt:P69 wd:Q2508061 ;
-    wdt:P7214 "62694" ;
-    wdt:P734 wd:Q355383 ;
-    wdt:P735 wd:Q2133832 ;
-    wdt:P7859 "lccn-no2001041985" ;
-    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/The_cast_and_crew_of_Rectify_at_the_74th_Annual_Peabody_Awards.jpg> ;
-    foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Ray_McKinnon_(actor)> ;
-    foaf:name "Ray McKinnon" .
-
 twssd:Rebecca_Hall a <http://dbpedia.org/class/yago/Actor109765278>,
         <http://dbpedia.org/class/yago/Actress109767700>,
         <http://dbpedia.org/class/yago/Adult109605289>,
@@ -49140,7 +48327,8 @@ twssd:Sam_Richardson a dbo:Agent,
     wdt:P734 wd:Q1479191 ;
     wdt:P735 wd:Q12800694 ;
     foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Sam_Richardson_(actor)> ;
-    foaf:name "Sam Richardson" .
+    foaf:name "Sam Richardson" ;
+    twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
 
 twssd:Sam_Rockwell a <http://dbpedia.org/class/yago/Actor109765278>,
         <http://dbpedia.org/class/yago/Artist109812338>,
@@ -57804,49 +56992,49 @@ twssd:jayg_58 a schema:Person,
     schema:name "jayg_58" .
 
 twssd:showroom_05447f55-5c50-4e4a-bb32-50327e8e9301 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "4D" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> .
 
 twssd:showroom_08fffccb-326a-465e-bf54-870e5432274d a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "4D" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> .
 
 twssd:showroom_0b4809c9-5f10-4442-8396-ef6e8a50ab1f a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "4D" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> .
 
 twssd:showroom_3e874730-f7b4-4272-90b7-0400fcb93261 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "4D" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> .
 
 twssd:showroom_53e8e31b-89b8-4988-83f5-ac420b99fade a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Maip%C3%BA> .
 
 twssd:showroom_76c431b6-667a-4d58-a9e2-88aaa58aae95 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "4D" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> .
 
 twssd:showroom_ec356573-549f-43e9-8023-a31a541c8fb1 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "4D" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> .
 
 twssd:showroom_ef8a54ad-e7b1-4c7f-b1e4-1773a19e656f a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "4D" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> .
 
 twssd:showroom_f17b045f-489a-441f-b9b3-1e498b79c411 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "4D" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> .
 
 <https://resizing.flixster.com/9Pu5qp5qfehIlclgv8tIbVPGlr0=/2938x3500/v1.cjs1MDM1NztqOzE4NzY1OzEyMDA7MjkzODszNTAw> a owl:NamedIndividual .
 
@@ -58162,39 +57350,39 @@ schema:PublicationEvent a owl:Class ;
     rdfs:subClassOf schema:Event .
 
 twssd:CINEMA_CITY a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "CINEMA CITY" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Avellaneda" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Luján" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Mendoza" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Merlo" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Neuquén" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Pilar" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Recoleta" .
 
 <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> a owl:NamedIndividual,
-        twsss:Cinema ;
+        twss:Cinema ;
     schema:name "Cinépolis Rosario" .
 
 twssd:ES a schema:Country,
@@ -58867,6 +58055,433 @@ twssd:On_a_magical_night a schema:Movie,
     schema:inLanguage "Francés" ;
     schema:name "Habitacion 212",
         "On a magical night" .
+
+twssd:Ray_McKinnon a <http://dbpedia.org/class/yago/Actor109765278>,
+        <http://dbpedia.org/class/yago/Administrator109770949>,
+        <http://dbpedia.org/class/yago/Alumnus109786338>,
+        <http://dbpedia.org/class/yago/CausalAgent100007347>,
+        <http://dbpedia.org/class/yago/Communicator109610660>,
+        <http://dbpedia.org/class/yago/Creator109614315>,
+        <http://dbpedia.org/class/yago/Director110014939>,
+        <http://dbpedia.org/class/yago/Entertainer109616922>,
+        <http://dbpedia.org/class/yago/FilmDirector110088200>,
+        <http://dbpedia.org/class/yago/FilmMaker110088390>,
+        <http://dbpedia.org/class/yago/Head110162991>,
+        <http://dbpedia.org/class/yago/Intellectual109621545>,
+        <http://dbpedia.org/class/yago/Leader109623038>,
+        <http://dbpedia.org/class/yago/LivingThing100004258>,
+        <http://dbpedia.org/class/yago/Object100002684>,
+        <http://dbpedia.org/class/yago/Organism100004475>,
+        <http://dbpedia.org/class/yago/Performer110415638>,
+        <http://dbpedia.org/class/yago/Person100007846>,
+        <http://dbpedia.org/class/yago/PhysicalEntity100001930>,
+        <http://dbpedia.org/class/yago/Producer110480018>,
+        <http://dbpedia.org/class/yago/Scholar110557854>,
+        <http://dbpedia.org/class/yago/Screenwriter110564400>,
+        <http://dbpedia.org/class/yago/Scriptwriter110564905>,
+        <http://dbpedia.org/class/yago/Whole100003553>,
+        <http://dbpedia.org/class/yago/WikicatAmericanActors>,
+        <http://dbpedia.org/class/yago/WikicatAmericanFilmDirectors>,
+        <http://dbpedia.org/class/yago/WikicatAmericanMaleFilmActors>,
+        <http://dbpedia.org/class/yago/WikicatAmericanMaleTelevisionActors>,
+        <http://dbpedia.org/class/yago/WikicatAmericanScreenwriters>,
+        <http://dbpedia.org/class/yago/WikicatDirectorsOfLiveActionShortFilmAcademyAwardWinners>,
+        <http://dbpedia.org/class/yago/WikicatLivingPeople>,
+        <http://dbpedia.org/class/yago/WikicatMaleActorsFromGeorgia(U.S.State)>,
+        <http://dbpedia.org/class/yago/WikicatPeopleFromCookCounty,Georgia>,
+        <http://dbpedia.org/class/yago/WikicatShortFilmDirectors>,
+        <http://dbpedia.org/class/yago/WikicatValdostaStateUniversityAlumni>,
+        <http://dbpedia.org/class/yago/Writer110794014>,
+        <http://dbpedia.org/class/yago/YagoLegalActor>,
+        <http://dbpedia.org/class/yago/YagoLegalActorGeo>,
+        dbo:Agent,
+        dbo:Person,
+        schema:Person,
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>,
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson>,
+        owl:NamedIndividual,
+        owl:Thing,
+        wd:Q215627,
+        wd:Q24229398,
+        wd:Q5,
+        foaf:Person ;
+    rdfs:label "Ray McKinnon",
+        "Ray McKinnon (actor)",
+        "Ρέι ΜακΚίνον",
+        "Рей Маккіннон (актор)",
+        "Рэй МакКиннон",
+        "Ռեյ Մաքինոն",
+        "ריי מקקינון",
+        "راى ماكينون",
+        "راي ماكينون",
+        "ری مککینون",
+        "レイ・マッキノン",
+        "雷·迈克金农",
+        "雷·麥金農",
+        "雷·麦金农",
+        "레이 매키넌" ;
+    dbo:abstract "Ray McKinnon (* 15. November 1957 in Adel, Georgia) ist ein US-amerikanischer Schauspieler, Drehbuchautor, Regisseur, Produzent und Oscarpreisträger.",
+        "Ray McKinnon est un acteur, producteur, réalisateur et scénariste américain né le 15 novembre 1957 à Adel, en Géorgie (États-Unis). Il a notamment créé la série Rectify, actuellement diffusée aux États-Unis sur la chaîne câblée Sundance TV, ainsi qu'en France sur Arte.",
+        "Raymond \"Ray\" McKinnon (Adel, 15 novembre 1957) è un attore, sceneggiatore, regista e produttore cinematografico statunitense.",
+        "Raymond Wilkes \"Ray\" McKinnon (born November 15, 1957) is an American actor, screenwriter, film director and producer.",
+        "Реймонд Вілкс «Рей» Маккіннон (англ. Raymond Wilkes \"Ray\" McKinnon, нар. 15 листопада 1957, Адел) — американський актор, сценарист, кінорежисер і продюсер. Маккіннон періодично з'являвся на телебаченні і найбільшу популярність здобув за роль преподобного Сміта в серіалі «Дедвуд». Він також відомий по ролі Лінкольна Поттера в четвертому сезоні серіалу Сини анархії.",
+        "راي ماكينون هو منتج أفلام وكاتب سيناريو ومخرج وممثل أمريكي، ولد في 15 نوفمبر 1957 بأدل في الولايات المتحدة. من الجوائز التي نالها جائزة الأوسكار لأفضل فيلم حي قصير.",
+        "レイ・マッキノン（Ray McKinnon、1957年11月15日 - ）は、アメリカ合衆国の俳優、映画監督、テレビプロデューサー。 ジョージア州アデル出身。2001年、短編映画The Accountantを監督（脚本・出演も）、妻で女優のリサ・ブロントと共に第74回アカデミー短編映画賞を受賞した。その後、ブロントとは2010年に死別した。 近年はテレビドラマRectifyのプロデュースを手がけている。" ;
+    dbo:activeYearsStartYear "1989" ;
+    dbo:birthDate "1957-11-15" ;
+    dbo:birthName "Raymond Wilkes McKinnon" ;
+    dbo:birthPlace <http://dbpedia.org/resource/Adel,_Georgia>,
+        <http://dbpedia.org/resource/Georgia_(U.S._state)> ;
+    dbo:birthYear "1957" ;
+    dbo:education dbr:Valdosta_State_University ;
+    dbo:knownFor dbr:Rectify ;
+    dbo:nationality dbr:Americans ;
+    dbo:occupation dbr:Actor,
+        dbr:Film_producer,
+        <http://dbpedia.org/resource/Ray_McKinnon_(actor)__PersonFunction__1>,
+        dbr:Screenwriter ;
+    dbo:spouse dbr:Lisa_Blount ;
+    dbo:stateOfOrigin dbr:Americans ;
+    dbo:thumbnail <http://commons.wikimedia.org/wiki/Special:FilePath/The_cast_and_crew_of_Rectify_at_the_74th_Annual_Peabody_Awards.jpg?width=300> ;
+    dbo:wikiPageID "13441236" ;
+    dbo:wikiPageLength "15455" ;
+    dbo:wikiPageRevisionID "983280738" ;
+    dbo:wikiPageWikiLink dbr:A_Perfect_World,
+        dbr:Academy_Award_for_Best_Live_Action_Short_Film,
+        dbr:Academy_Awards,
+        dbr:Actor,
+        <http://dbpedia.org/resource/Adel,_Georgia>,
+        dbr:Aden_Young,
+        dbr:Americans,
+        <http://dbpedia.org/resource/Any_Day_Now_(TV_series)>,
+        <http://dbpedia.org/resource/Apollo_13_(film)>,
+        dbr:Arly_Hanks,
+        dbr:Atlanta_Film_Festival,
+        dbr:Austin_Film_Festival,
+        dbr:Billy_Bob_Thornton,
+        dbr:Brooklyn_South,
+        dbr:Bugsy,
+        dbr:Category:1957_births,
+        dbr:Category:American_male_film_actors,
+        dbr:Category:American_male_television_actors,
+        dbr:Category:Directors_of_Live_Action_Short_Film_Academy_Award_winners,
+        <http://dbpedia.org/resource/Category:Film_directors_from_Georgia_(U.S._state)>,
+        dbr:Category:Living_people,
+        <http://dbpedia.org/resource/Category:Male_actors_from_Georgia_(U.S._state)>,
+        <http://dbpedia.org/resource/Category:People_from_Cook_County,_Georgia>,
+        dbr:Category:Valdosta_State_University_alumni,
+        <http://dbpedia.org/resource/Chaos_Walking_(film)>,
+        <http://dbpedia.org/resource/Chrystal_(film)>,
+        <http://dbpedia.org/resource/Comanche_Moon_(miniseries)>,
+        dbr:Come_Early_Morning,
+        dbr:DC_Independent_Film_Festival,
+        <http://dbpedia.org/resource/Dead_Man's_Walk_(miniseries)>,
+        <http://dbpedia.org/resource/Deadwood_(TV_series)>,
+        dbr:Death_row,
+        dbr:Designing_Women,
+        <http://dbpedia.org/resource/Dolly_Parton's_Heartstrings>,
+        dbr:Dolphin_Tale,
+        dbr:Driving_Miss_Daisy,
+        <http://dbpedia.org/resource/FX_(TV_channel)>,
+        dbr:Fear_the_Walking_Dead,
+        dbr:Film_director,
+        dbr:Film_producer,
+        <http://dbpedia.org/resource/Footloose_(2011_film)>,
+        dbr:Ford_v_Ferrari,
+        dbr:Forgotten_Sins,
+        <http://dbpedia.org/resource/Georgia_(U.S._state)>,
+        dbr:Ginny_Mule_Pictures,
+        dbr:Goodbye_Lover,
+        dbr:Gotham_Awards,
+        dbr:Gotham_Independent_Film_Award_for_Best_Ensemble_Cast,
+        dbr:Grace_Zabriskie,
+        dbr:HBO,
+        dbr:Harry_Dean_Stanton,
+        dbr:Harry_Lennix,
+        <http://dbpedia.org/resource/Hick_(film)>,
+        <http://dbpedia.org/resource/I'll_Fly_Away_(TV_series)>,
+        <http://dbpedia.org/resource/Improbable_(The_X-Files)>,
+        dbr:In_Sickness_and_in_Health,
+        <http://dbpedia.org/resource/In_the_Heat_of_the_Night_(TV_series)>,
+        dbr:Independent_Spirit_Award_for_Best_Supporting_Male,
+        dbr:Independent_Spirit_Awards,
+        dbr:Independent_Spirit_Robert_Altman_Award,
+        dbr:Johnny_Galecki,
+        <http://dbpedia.org/resource/Justified_(TV_series)>,
+        <http://dbpedia.org/resource/Law_&_Order:_Special_Victims_Unit>,
+        <http://dbpedia.org/resource/Legend_(TV_series)>,
+        dbr:Lisa_Blount,
+        dbr:List_of_Rectify_episodes,
+        <http://dbpedia.org/resource/Little_Rock,_Arkansas>,
+        <http://dbpedia.org/resource/Livin'_Large>,
+        <http://dbpedia.org/resource/Matlock_(TV_series)>,
+        <http://dbpedia.org/resource/Mayans_M.C.>,
+        <http://dbpedia.org/resource/Michael_Hayes_(TV_series)>,
+        <http://dbpedia.org/resource/Mud_(2012_film)>,
+        dbr:Murder_in_Mississippi,
+        dbr:NYPD_Blue,
+        dbr:Nash_Bridges,
+        dbr:Nashville_Film_Festival,
+        <http://dbpedia.org/resource/Needful_Things_(film)>,
+        <http://dbpedia.org/resource/News_of_the_World_(film)>,
+        <http://dbpedia.org/resource/O_Brother,_Where_Art_Thou%3F>,
+        dbr:Paris_Trout,
+        dbr:Peabody_Award,
+        dbr:Phil_Remington,
+        <http://dbpedia.org/resource/Philly_(TV_series)>,
+        dbr:Picket_Fences,
+        dbr:Randy_and_the_Mob,
+        dbr:Rectify,
+        <http://dbpedia.org/resource/Roswell_(film)>,
+        <http://dbpedia.org/resource/Scarlett_(miniseries)>,
+        dbr:Screenwriter,
+        <http://dbpedia.org/resource/Sisters_(American_TV_series)>,
+        dbr:Slamdance_Film_Festival,
+        dbr:Sommersby,
+        dbr:Sons_of_Anarchy,
+        dbr:South_by_Southwest,
+        dbr:Sundance_Film_Festival,
+        dbr:Sundance_TV,
+        dbr:Take_Shelter,
+        dbr:Taking_Back_My_Life:_The_Nancy_Ziegenmeyer_Story,
+        <http://dbpedia.org/resource/That_Evening_Sun_(film)>,
+        <http://dbpedia.org/resource/The_Accountant_(2001_film)>,
+        dbr:The_Badge,
+        <http://dbpedia.org/resource/The_Blind_Side_(film)>,
+        <http://dbpedia.org/resource/The_Boys_Are_Back_(TV_series)>,
+        <http://dbpedia.org/resource/The_Client_(TV_series)>,
+        <http://dbpedia.org/resource/The_Gambler_(film_series)>,
+        <http://dbpedia.org/resource/The_Grass_Harp_(film)>,
+        <http://dbpedia.org/resource/The_Gun_in_Betty_Lou's_Handbag>,
+        dbr:The_Last_Lullaby,
+        <http://dbpedia.org/resource/The_Last_Ride_(2011_film)>,
+        <http://dbpedia.org/resource/The_Missing_(2003_film)>,
+        <http://dbpedia.org/resource/The_Net_(1995_film)>,
+        dbr:The_Practice,
+        <http://dbpedia.org/resource/The_Pretender_(TV_series)>,
+        <http://dbpedia.org/resource/The_Stand_(1994_miniseries)>,
+        dbr:The_X-Files,
+        dbr:Things_That_Hang_from_Trees,
+        dbr:Tune_in_Tomorrow,
+        dbr:United_States,
+        dbr:Valdosta_State_University,
+        dbr:Walton_Goggins,
+        <http://dbpedia.org/resource/Wayne_(TV_series)>,
+        <http://dbpedia.org/resource/When_Will_I_Be_Loved%3F>,
+        dbr:Writers_Guild_of_America_Award_for_Television:_Episodic_Drama,
+        dbr:Writers_Guild_of_America_Awards ;
+    ns2:birthDate "1957-11-15" ;
+    ns2:birthName "Raymond Wilkes McKinnon" ;
+    ns2:birthPlace <http://dbpedia.org/resource/Adel,_Georgia>,
+        <http://dbpedia.org/resource/Georgia_(U.S._state)>,
+        dbr:United_States ;
+    ns2:caption "McKinnon in 2010" ;
+    ns2:education dbr:Valdosta_State_University ;
+    ns2:knownFor "Rectify" ;
+    ns2:name "Ray McKinnon" ;
+    ns2:nationality dbr:Americans ;
+    ns2:occupation "Actor",
+        "Director",
+        "Producer",
+        "Screenwriter" ;
+    ns2:spouse dbr:Lisa_Blount,
+        "",
+        "1998",
+        "2010" ;
+    ns2:wikiPageUsesTemplate dbr:Template:Authority_control,
+        dbr:Template:Birth_date_and_age,
+        dbr:Template:Commons_category,
+        dbr:Template:IMDb_name,
+        dbr:Template:Infobox_person,
+        dbr:Template:Nominated,
+        dbr:Template:Reflist,
+        dbr:Template:Short_description,
+        dbr:Template:Won ;
+    ns2:wordnet_type <http://www.w3.org/2006/03/wn/wn20/instances/synset-actor-noun-1> ;
+    ns2:yearsActive "1989" ;
+    ns3:subject dbr:Category:1957_births,
+        dbr:Category:American_male_film_actors,
+        dbr:Category:American_male_television_actors,
+        dbr:Category:Directors_of_Live_Action_Short_Film_Academy_Award_winners,
+        <http://dbpedia.org/resource/Category:Film_directors_from_Georgia_(U.S._state)>,
+        dbr:Category:Living_people,
+        <http://dbpedia.org/resource/Category:Male_actors_from_Georgia_(U.S._state)>,
+        <http://dbpedia.org/resource/Category:People_from_Cook_County,_Georgia>,
+        dbr:Category:Valdosta_State_University_alumni ;
+    schema:dateModified "2021-05-21T22:24:21Z" ;
+    schema:description "American actor",
+        "Amerikaans acteur",
+        "Amerikaanse akteur",
+        "Usana aktoro",
+        "acteur américain",
+        "actor american",
+        "actor estadounidense",
+        "actor estatunidenc",
+        "aisteoir Meiriceánach",
+        "aktor amerikan",
+        "aktor merikano",
+        "ameerika näitleja",
+        "amerikanischer Schauspieler",
+        "amerikāņu aktieris",
+        "ator american",
+        "attore, sceneggiatore, regista e produttore cinematografico statunitense",
+        "dramatan Lamerikänik",
+        "pemeran laki-laki asal Amerika Serikat",
+        "usona aktoro",
+        "yhdysvaltalainen näyttelijä",
+        "Актор",
+        "שחקן אמריקאי",
+        "تهیهکننده، فیلمنامهنویس، بازیگر، و کارگردان آمریکایی",
+        "ممثل أمريكي",
+        "মার্কিন অভিনেতা",
+        "അമേരിക്കന് ചലചിത്ര നടന്",
+        "미국 배우" ;
+    schema:name "Ray McKinnon" ;
+    schema:sameAs <http://viaf.org/viaf/170030314> ;
+    schema:version "1426015450" ;
+    ns6:identifiers "27" ;
+    ns6:sitelinks "13" ;
+    ns6:statements "48" ;
+    ns6:timestamp "2021-05-21T22:25:02Z" ;
+    rdfs:comment "Ray McKinnon (* 15. November 1957 in Adel, Georgia) ist ein US-amerikanischer Schauspieler, Drehbuchautor, Regisseur, Produzent und Oscarpreisträger.",
+        "Ray McKinnon est un acteur, producteur, réalisateur et scénariste américain né le 15 novembre 1957 à Adel, en Géorgie (États-Unis). Il a notamment créé la série Rectify, actuellement diffusée aux États-Unis sur la chaîne câblée Sundance TV, ainsi qu'en France sur Arte.",
+        "Raymond \"Ray\" McKinnon (Adel, 15 novembre 1957) è un attore, sceneggiatore, regista e produttore cinematografico statunitense.",
+        "Raymond Wilkes \"Ray\" McKinnon (born November 15, 1957) is an American actor, screenwriter, film director and producer.",
+        "Реймонд Вілкс «Рей» Маккіннон (англ. Raymond Wilkes \"Ray\" McKinnon, нар. 15 листопада 1957, Адел) — американський актор, сценарист, кінорежисер і продюсер. Маккіннон періодично з'являвся на телебаченні і найбільшу популярність здобув за роль преподобного Сміта в серіалі «Дедвуд». Він також відомий по ролі Лінкольна Поттера в четвертому сезоні серіалу Сини анархії.",
+        "راي ماكينون هو منتج أفلام وكاتب سيناريو ومخرج وممثل أمريكي، ولد في 15 نوفمبر 1957 بأدل في الولايات المتحدة. من الجوائز التي نالها جائزة الأوسكار لأفضل فيلم حي قصير.",
+        "レイ・マッキノン（Ray McKinnon、1957年11月15日 - ）は、アメリカ合衆国の俳優、映画監督、テレビプロデューサー。 ジョージア州アデル出身。2001年、短編映画The Accountantを監督（脚本・出演も）、妻で女優のリサ・ブロントと共に第74回アカデミー短編映画賞を受賞した。その後、ブロントとは2010年に死別した。 近年はテレビドラマRectifyのプロデュースを手がけている。" ;
+    owl:sameAs <http://ar.dbpedia.org/resource/راي_ماكينون>,
+        <http://azb.dbpedia.org/resource/ری_مک‌کینون_(اویونچو)>,
+        <http://d-nb.info/gnd/1011387700>,
+        <http://d-nb.info/gnd/1011387700/about/rdf>,
+        <http://dbpedia.org/resource/Ray_McKinnon_(actor)>,
+        <http://de.dbpedia.org/resource/Ray_McKinnon>,
+        <http://fa.dbpedia.org/resource/ری_مک‌کینون_(هنرپیشه)>,
+        <http://fi.dbpedia.org/resource/Ray_McKinnon>,
+        <http://fr.dbpedia.org/resource/Ray_McKinnon>,
+        <http://it.dbpedia.org/resource/Ray_McKinnon>,
+        <http://ja.dbpedia.org/resource/レイ・マッキノン>,
+        <http://musicbrainz.org/artist/f68d2d90-b097-4394-8e52-dc58e38126cf>,
+        <http://rdf.freebase.com/ns/m.03c5f7l>,
+        <http://uk.dbpedia.org/resource/Рей_Маккіннон_(актор)>,
+        <http://viaf.org/viaf/170030314>,
+        wd:Q2073496,
+        <http://yago-knowledge.org/resource/Ray_McKinnon_(actor)>,
+        <https://global.dbpedia.org/id/1ydVG> ;
+    ns4:altLabel "雷·迈克金农",
+        "雷·邁克金農",
+        "雷·麥克農",
+        "雷·麦金农",
+        "레이먼드 윌크스 매키넌" ;
+    ns5:wasDerivedFrom <http://en.wikipedia.org/wiki/Ray_McKinnon_(actor)?oldid=983280738&ns=0> ;
+    p:P1006 wds:Q2073496-0D91BE9F-AF76-426A-B476-43DAF8056B69 ;
+    p:P106 wds:Q2073496-1B9E3D7E-BD0D-4ED8-A38A-C1ABFC32774B,
+        wds:Q2073496-47BE05F8-A6E9-4F8B-A158-B2F6B57799E6,
+        wds:Q2073496-6A930922-BD15-4D3C-911F-3CBB27480ED9,
+        wds:Q2073496-A7D2FC30-69D1-4FB6-92A0-AFB0EF350776,
+        wds:Q2073496-B244278F-BDB0-4B2B-9E4D-82869F6FC845 ;
+    p:P1266 wds:Q2073496-53a4565e-448a-7f2f-e1a8-8d7608770b00 ;
+    p:P1280 wds:Q2073496-746080ED-B796-4D34-9CF3-C800A61A4BFB ;
+    p:P1411 wds:Q2073496-4BE3DE35-DA54-48BF-AB4F-237DEF3B0FE8 ;
+    p:P1412 wds:Q2073496-076DDE8C-BDCF-4D2A-9759-5055B2F04273 ;
+    p:P166 wds:Q2073496-3F80283A-BE9C-4239-86C7-D5687AB8BF7B ;
+    p:P18 wds:Q2073496-95582EF9-3B50-47C8-8A4B-9E1E7453050C ;
+    p:P19 wds:Q2073496-3B0FE3A4-5FB8-44DD-93CB-2CF5BDD40564 ;
+    p:P1969 wds:Q2073496-d4897887-4670-d501-ee33-9b475a693d75 ;
+    p:P2019 wds:Q2073496-0859b283-4669-ef56-9e8b-54dfdcc3075b ;
+    p:P2031 wds:Q2073496-C60FCD5B-197A-454F-87E6-83518DA16843 ;
+    p:P21 wds:q2073496-5b18fece-4397-683a-52e2-102833a9b631 ;
+    p:P213 wds:Q2073496-C5F12818-8742-4E0B-9F49-6D612D03F53B ;
+    p:P214 wds:q2073496-2EE676BD-6713-46ED-8E5B-56221C4408A3 ;
+    p:P2168 wds:Q2073496-143f2cbd-43dc-be72-1d45-7205df43d678 ;
+    p:P227 wds:q2073496-55DCDFC8-4F5F-4F31-9931-5EA7D99226DA ;
+    p:P2387 wds:Q2073496-1bbd3116-4ba3-42db-0934-afcd1f5dbbd3 ;
+    p:P2435 wds:Q2073496-ec48ee69-448f-894c-f3be-e22e01c50d23 ;
+    p:P244 wds:q2073496-F031775F-DA9D-4BF2-AD66-B3DBAF533621 ;
+    p:P2519 wds:Q2073496-9156d766-4ea0-c683-3906-0574541010e6 ;
+    p:P26 wds:Q2073496-E8A14F09-FD12-427C-8BC5-9DB1F267BF86 ;
+    p:P2604 wds:Q2073496-57d10f54-413e-40c8-c24b-c593a779f000 ;
+    p:P2605 wds:Q2073496-57bed611-40d6-209e-51bc-d2aa3494dfd4 ;
+    p:P2626 wds:Q2073496-57770362-40d1-f313-b62d-9142ea919eab ;
+    p:P2638 wds:Q2073496-2D428C6E-F61B-4B89-8567-23D9FACEA1EB ;
+    p:P268 wds:Q2073496-8740D18A-1C29-402F-9193-2E82DCDF230C ;
+    p:P269 wds:Q2073496-5F2728C4-27CC-4AE8-98CD-53346F7A013B ;
+    p:P27 wds:q2073496-768DBC73-B21B-49FD-984D-816FD8A2CDCC ;
+    p:P31 wds:Q2073496-C517C538-509A-4414-A5B3-6B7DE684D522 ;
+    p:P345 wds:q2073496-7EFD76D7-1BE3-4FBA-B369-3BB177FF6CB2 ;
+    p:P373 wds:q2073496-4352F14F-0BFD-4B94-B2E5-97F89C029499 ;
+    p:P434 wds:Q2073496-690804A9-5781-4A22-BC08-EF3C587303CC ;
+    p:P4985 wds:Q2073496-C2E91F60-6938-4FB0-85F3-E9218FFA9864 ;
+    p:P551 wds:Q2073496-64BB5881-1AEA-4E2D-834F-077A76AFA830 ;
+    p:P5534 wds:Q2073496-19478667-8A29-4468-AA1B-2C06873DA01C ;
+    p:P569 wds:Q2073496-F9121C09-4614-4447-95AF-73D70D6B294E ;
+    p:P6150 wds:Q2073496-427A479B-CC0F-4F96-8929-689ADBCD8098 ;
+    p:P646 wds:Q2073496-74612E9C-0146-4D8C-BBFE-32262EE5D2D7 ;
+    p:P69 wds:Q2073496-613774E6-86B3-4E0F-B254-980C8D68C653 ;
+    p:P7214 wds:Q2073496-1076B2CC-21C1-4D94-AEFF-036A9432FF63 ;
+    p:P734 wds:Q2073496-49d49b53-43cf-3b96-ae1b-ce30acc24846 ;
+    p:P735 wds:Q2073496-CCB7DD8D-22E3-49C8-987A-7B0C0A7E79AD ;
+    p:P7859 wds:Q2073496-47B948D5-CB27-4C44-9F68-0E8756FB9AC9 ;
+    ns1:P1006 <http://data.bibliotheken.nl/id/thes/p391880632> ;
+    ns1:P214 <http://viaf.org/viaf/170030314> ;
+    ns1:P227 <https://d-nb.info/gnd/1011387700> ;
+    ns1:P244 <https://id.loc.gov/authorities/names/no2001041985> ;
+    ns1:P268 <http://data.bnf.fr/ark:/12148/cb169239396#about> ;
+    ns1:P269 <http://www.idref.fr/18168621X/id> ;
+    ns1:P434 <http://musicbrainz.org/artist/f68d2d90-b097-4394-8e52-dc58e38126cf> ;
+    ns1:P646 <http://g.co/kg/m/03c5f7l> ;
+    wdt:P1006 "391880632" ;
+    wdt:P106 wd:Q10798782,
+        wd:Q2526255,
+        wd:Q28389,
+        wd:Q3282637,
+        wd:Q33999 ;
+    wdt:P1266 "80923" ;
+    wdt:P1280 "186751587" ;
+    wdt:P1411 wd:Q1324407 ;
+    wdt:P1412 wd:Q1860 ;
+    wdt:P166 wd:Q1324407 ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Ray%20McKinnon%202010.jpg> ;
+    wdt:P19 wd:Q353662 ;
+    wdt:P1969 "10688" ;
+    wdt:P2019 "p47768" ;
+    wdt:P2031 "1989-01-01T00:00:00Z" ;
+    wdt:P21 wd:Q6581097 ;
+    wdt:P213 "0000 0001 1894 3910" ;
+    wdt:P214 "170030314" ;
+    wdt:P2168 "181891" ;
+    wdt:P227 "1011387700" ;
+    wdt:P2387 "240521" ;
+    wdt:P2435 "12525" ;
+    wdt:P244 "no2001041985" ;
+    wdt:P2519 "11377" ;
+    wdt:P26 wd:Q263663 ;
+    wdt:P2604 "22092" ;
+    wdt:P2605 "18401" ;
+    wdt:P2626 "73183" ;
+    wdt:P2638 "people/ray-mckinnon" ;
+    wdt:P268 "169239396" ;
+    wdt:P269 "18168621X" ;
+    wdt:P27 wd:Q30 ;
+    wdt:P31 wd:Q5 ;
+    wdt:P345 "nm0571964" ;
+    wdt:P373 "Ray McKinnon (actor)" ;
+    wdt:P434 "f68d2d90-b097-4394-8e52-dc58e38126cf" ;
+    wdt:P4985 "1472" ;
+    wdt:P551 wd:Q23556 ;
+    wdt:P5534 "1472" ;
+    wdt:P569 "1957-11-15T00:00:00Z" ;
+    wdt:P6150 "1992" ;
+    wdt:P646 "/m/03c5f7l" ;
+    wdt:P69 wd:Q2508061 ;
+    wdt:P7214 "62694" ;
+    wdt:P734 wd:Q355383 ;
+    wdt:P735 wd:Q2133832 ;
+    wdt:P7859 "lccn-no2001041985" ;
+    foaf:depiction <http://commons.wikimedia.org/wiki/Special:FilePath/The_cast_and_crew_of_Rectify_at_the_74th_Annual_Peabody_Awards.jpg> ;
+    foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Ray_McKinnon_(actor)> ;
+    foaf:name "Ray McKinnon" ;
+    twss:wasDirectedByOscarWinner twssd:Ray_McKinnon .
 
 twssd:Tim_Story a <http://dbpedia.org/class/yago/Administrator109770949>,
         <http://dbpedia.org/class/yago/CausalAgent100007347>,
@@ -59568,9 +59183,9 @@ twssd:Walt_Dohrn a <http://dbpedia.org/class/yago/Actor109765278>,
     foaf:name "Walt Dohrn" .
 
 twssd:showroom_cd3b8237-6cb5-4cbd-8c19-c9300662dce1 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "SALA 4D" ;
-    twsss:cinema twssd:CINEMA_CITY .
+    twss:cinema twssd:CINEMA_CITY .
 
 <https://www.imdb.com/title/tt7126948> a owl:NamedIndividual .
 
@@ -62867,9 +62482,9 @@ twssd:Warner_Bros._Pictures a schema:Organization,
     schema:name "animación" .
 
 twssd:showroom_b866e4df-8cf3-4f4f-b8c9-1f4747b24261 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "SALA HD" ;
-    twsss:cinema twssd:CINEMA_CITY .
+    twss:cinema twssd:CINEMA_CITY .
 
 schema:Intangible a owl:Class .
 
@@ -62878,6 +62493,272 @@ schema:Offer a owl:Class ;
 
 schema:VideoObject a owl:Class ;
     rdfs:subClassOf schema:MediaObject .
+
+twssd:Don_Hall a dbo:Agent,
+        dbo:Person,
+        schema:Person,
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>,
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson>,
+        owl:NamedIndividual,
+        owl:Thing,
+        wd:Q215627,
+        wd:Q24229398,
+        wd:Q5,
+        foaf:Person ;
+    rdfs:label "Don Hall",
+        "Don Hall (Regisseur)",
+        "Don Hall (filmmaker)",
+        "Don Hall (produser)",
+        "Дон Хол",
+        "Дон Холл",
+        "Դոն Հոլ",
+        "דון הול",
+        "دان هال",
+        "دون هول",
+        "دون هول (صانع أفلام)",
+        "ドン・ホール",
+        "唐·霍尔",
+        "唐·霍爾",
+        "當·坷" ;
+    dbo:abstract "Don Hall ist ein US-amerikanischer Drehbuchautor und Regisseur. Don Hall ist seit 1999 für The Walt Disney Companys Animationsfilmsparte tätig. Er war bei der Stoffentwicklung bei Filmen wie Tarzan, Ein Königreich für ein Lama oder Küss den Frosch beteiligt. Für den Film Winnie Puuh war er 2011 erstmals auch als Regisseur tätig. Zusammen mit Chris Williams und Roy Conli wurde er 2015 mit dem Oscar ausgezeichnet für den Computeranimationsfilm Baymax – Riesiges Robowabohu und war damit außerdem für den British Academy Film Award und den Golden Globe nominiert.",
+        "Don Hall merupakan seorang sutradara dan penulis naskah film animasi di Walt Disney Animation Studios. Ia dikenal sebagai sutradara film Winnie the Pooh (2011), Big Hero 6 (2014) dan Moana (2016), bersama Ron Clements dan John Musker. Don Hall merupakan lulusan Universitas Iowa dengan gelar sarjana seni rupa dalam studi menggambar dan melukis.",
+        "Don Hall é um cineasta estadunidense. Venceu o Oscar de melhor filme de animação na edição de 2015 pela realização da obra Big Hero 6, ao lado de Chris Williams e Roy Conli.",
+        "Don Hall, né en 1969, est un réalisateur, scénariste, acteur et animateur américain qui travaille pour les studios Disney.",
+        "Donald Hall (born March 8, 1969) is an American film director, writer, and voice actor at Walt Disney Animation Studios. He is known for co-directing Winnie the Pooh (2011), Big Hero 6 (2014), which was inspired by the Marvel Comics team of the same name, and Moana (2016), along with Ron Clements and John Musker. Big Hero 6 won the Oscar, Golden Globe, and Annie Award for Best Animated Feature in 2015. Don is a graduate of the University of Iowa with a bachelor of fine arts degree in drawing and painting.",
+        "Donald Lee Hall (Glenwood, 8 marzo 1969) è un regista e sceneggiatore statunitense. È noto soprattutto per aver diretto i Classici Disney: Winnie the Pooh - Nuove avventure nel Bosco dei 100 Acri nel 2011 e Big Hero 6, con il quale ha vinto l'Oscar come miglior film d'animazione nel 2015.",
+        "دون هول (بالإنجليزية: Don Hall) هو مخرج وكاتب أمريكي في استديوهات والت ديزني للرسوم المتحركة. عرف كمخرج مشارك في فيلم ويني الدبدوب (2011)، وفيلم الأبطال الستة (2014)، والتي كانت مستوحاة من مارفل كومكس التي تحمل نفس الاسم. فيلم الأبطال الستة فاز بجائزة أوسكار أفضل فيلم رسوم متحركة في عام 2015.تخرج دون من جامعة أيوا حاصلا على شهادة البكالوريوس في الفنون الجميلة في الرسم والتصوير.",
+        "ドン・ホール（Don Hall）はアメリカ合衆国の映画監督、脚本家である。ウォルト・ディズニー・アニメーション・スタジオに所属しており、ディズニー映画を数多く手がける。 くまのプーサンやベイマックスの監督として知られる。" ;
+    dbo:almaMater dbr:University_of_Iowa ;
+    dbo:birthDate "1969-03-08" ;
+    dbo:birthName "Donald Hall" ;
+    dbo:birthPlace <http://dbpedia.org/resource/Glenwood,_Iowa> ;
+    dbo:birthYear "1969" ;
+    dbo:employer dbr:Walt_Disney_Animation_Studios ;
+    dbo:imdbId "2320658" ;
+    dbo:occupation <http://dbpedia.org/resource/Don_Hall_(filmmaker)__PersonFunction__1> ;
+    dbo:wikiPageID "45225250" ;
+    dbo:wikiPageLength "6881" ;
+    dbo:wikiPageRevisionID "985814388" ;
+    dbo:wikiPageWikiLink dbr:Academy_Award_for_Best_Animated_Feature,
+        dbr:Alliance_of_Women_Film_Journalists,
+        dbr:Annie_Award_for_Directing_in_a_Feature_Production,
+        dbr:Annie_Award_for_Writing_in_a_Feature_Production,
+        <http://dbpedia.org/resource/Big_Hero_6_(comics)>,
+        <http://dbpedia.org/resource/Big_Hero_6_(film)>,
+        <http://dbpedia.org/resource/Bolt_(2008_film)>,
+        dbr:British_Academy_of_Film_and_Television_Arts,
+        dbr:Brother_Bear,
+        dbr:Carlos_López_Estrada,
+        dbr:Category:1969_births,
+        dbr:Category:American_animated_film_directors,
+        dbr:Category:American_animators,
+        dbr:Category:American_male_screenwriters,
+        dbr:Category:American_male_voice_actors,
+        dbr:Category:Animation_screenwriters,
+        dbr:Category:Directors_of_Best_Animated_Feature_Academy_Award_winners,
+        dbr:Category:Film_directors_from_Iowa,
+        dbr:Category:Living_people,
+        dbr:Category:Male_actors_from_Iowa,
+        <http://dbpedia.org/resource/Category:People_from_Glenwood,_Iowa>,
+        dbr:Category:University_of_Iowa_alumni,
+        dbr:Category:Walt_Disney_Animation_Studios_people,
+        <http://dbpedia.org/resource/Chicken_Little_(2005_film)>,
+        <http://dbpedia.org/resource/Chris_Williams_(director)>,
+        dbr:Film_director,
+        <http://dbpedia.org/resource/Frozen_(2013_film)>,
+        dbr:Frozen_II,
+        <http://dbpedia.org/resource/Glenwood,_Iowa>,
+        dbr:John_Musker,
+        dbr:Mark_Dindal,
+        dbr:Marvel_Comics,
+        dbr:Meet_the_Robinsons,
+        <http://dbpedia.org/resource/Moana_(2016_film)>,
+        dbr:Ralph_Breaks_the_Internet,
+        dbr:Raya_and_the_Last_Dragon,
+        dbr:Ron_Clements,
+        dbr:Screenwriter,
+        <http://dbpedia.org/resource/Stephen_Anderson_(artist)>,
+        dbr:Storyboard_artist,
+        dbr:Tangled,
+        <http://dbpedia.org/resource/Tarzan_(1999_film)>,
+        <http://dbpedia.org/resource/The_Emperor's_New_Groove>,
+        dbr:The_Princess_and_the_Frog,
+        <http://dbpedia.org/resource/Tinker_Bell_(film)>,
+        dbr:University_of_Iowa,
+        dbr:Visual_Effects_Society_Award_for_Outstanding_Visual_Effects_in_an_Animated_Feature,
+        dbr:Walt_Disney_Animation_Studios,
+        <http://dbpedia.org/resource/Winnie_the_Pooh_(2011_film)>,
+        dbr:Wreck-It_Ralph,
+        dbr:Zootopia ;
+    ns2:almaMater dbr:University_of_Iowa ;
+    ns2:birthDate "1969-03-08" ;
+    ns2:birthName "Donald Hall" ;
+    ns2:birthPlace <http://dbpedia.org/resource/Glenwood,_Iowa> ;
+    ns2:employer dbr:Walt_Disney_Animation_Studios ;
+    ns2:name "Don Hall" ;
+    ns2:notableWorks "Big Hero 6",
+        "Moana",
+        "Tinker Bell (film)",
+        "Winnie the Pooh" ;
+    ns2:occupation "Film director, writer, voice actor" ;
+    ns2:wikiPageUsesTemplate dbr:Template:Academy_Award_for_Best_Animated_Feature,
+        dbr:Template:Authority_control,
+        dbr:Template:Birth_date_and_age,
+        dbr:Template:IMDb_name,
+        dbr:Template:Infobox_person,
+        dbr:Template:No,
+        dbr:Template:Partial,
+        dbr:Template:Reflist,
+        dbr:Template:US-film-director-stub,
+        dbr:Template:Yes ;
+    ns3:subject dbr:Category:1969_births,
+        dbr:Category:American_animated_film_directors,
+        dbr:Category:American_animators,
+        dbr:Category:American_male_screenwriters,
+        dbr:Category:American_male_voice_actors,
+        dbr:Category:Animation_screenwriters,
+        dbr:Category:Directors_of_Best_Animated_Feature_Academy_Award_winners,
+        dbr:Category:Film_directors_from_Iowa,
+        dbr:Category:Living_people,
+        dbr:Category:Male_actors_from_Iowa,
+        <http://dbpedia.org/resource/Category:People_from_Glenwood,_Iowa>,
+        dbr:Category:University_of_Iowa_alumni,
+        dbr:Category:Walt_Disney_Animation_Studios_people ;
+    schema:dateModified "2021-06-07T22:17:19Z" ;
+    schema:description "Ameerika Ühendriikide filmirežissöör",
+        "American film director",
+        "Amerikaans filmregisseur",
+        "US-amerikanischer Drehbuchautor und Regisseur",
+        "director de cine estadounidense",
+        "director de cinema estadounidense",
+        "director de cinema estatunidenc",
+        "regista e scrittore statunitense",
+        "regizor de film american",
+        "regjisor amerikan",
+        "réalisateur américain",
+        "stiúrthóir scannán Meiriceánach",
+        "Режиссер мультфильмов",
+        "במאי קולנוע אמריקאי",
+        "مخرج أفلام أمريكي",
+        "মার্কিন চলচ্চিত্র পরিচালক" ;
+    schema:name "Don Hall" ;
+    schema:sameAs <http://viaf.org/viaf/267757507> ;
+    schema:version "1437309811" ;
+    ns6:identifiers "21" ;
+    ns6:sitelinks "11" ;
+    ns6:statements "37" ;
+    ns6:timestamp "2021-06-07T22:17:21Z" ;
+    rdfs:comment "Don Hall ist ein US-amerikanischer Drehbuchautor und Regisseur. Don Hall ist seit 1999 für The Walt Disney Companys Animationsfilmsparte tätig. Er war bei der Stoffentwicklung bei Filmen wie Tarzan, Ein Königreich für ein Lama oder Küss den Frosch beteiligt. Für den Film Winnie Puuh war er 2011 erstmals auch als Regisseur tätig. Zusammen mit Chris Williams und Roy Conli wurde er 2015 mit dem Oscar ausgezeichnet für den Computeranimationsfilm Baymax – Riesiges Robowabohu und war damit außerdem für den British Academy Film Award und den Golden Globe nominiert.",
+        "Don Hall merupakan seorang sutradara dan penulis naskah film animasi di Walt Disney Animation Studios. Ia dikenal sebagai sutradara film Winnie the Pooh (2011), Big Hero 6 (2014) dan Moana (2016), bersama Ron Clements dan John Musker. Don Hall merupakan lulusan Universitas Iowa dengan gelar sarjana seni rupa dalam studi menggambar dan melukis.",
+        "Don Hall é um cineasta estadunidense. Venceu o Oscar de melhor filme de animação na edição de 2015 pela realização da obra Big Hero 6, ao lado de Chris Williams e Roy Conli.",
+        "Don Hall, né en 1969, est un réalisateur, scénariste, acteur et animateur américain qui travaille pour les studios Disney.",
+        "Donald Hall (born March 8, 1969) is an American film director, writer, and voice actor at Walt Disney Animation Studios. He is known for co-directing Winnie the Pooh (2011), Big Hero 6 (2014), which was inspired by the Marvel Comics team of the same name, and Moana (2016), along with Ron Clements and John Musker. Big Hero 6 won the Oscar, Golden Globe, and Annie Award for Best Animated Feature in 2015. Don is a graduate of the University of Iowa with a bachelor of fine arts degree in drawing and painting.",
+        "Donald Lee Hall (Glenwood, 8 marzo 1969) è un regista e sceneggiatore statunitense. È noto soprattutto per aver diretto i Classici Disney: Winnie the Pooh - Nuove avventure nel Bosco dei 100 Acri nel 2011 e Big Hero 6, con il quale ha vinto l'Oscar come miglior film d'animazione nel 2015.",
+        "دون هول (بالإنجليزية: Don Hall) هو مخرج وكاتب أمريكي في استديوهات والت ديزني للرسوم المتحركة. عرف كمخرج مشارك في فيلم ويني الدبدوب (2011)، وفيلم الأبطال الستة (2014)، والتي كانت مستوحاة من مارفل كومكس التي تحمل نفس الاسم. فيلم الأبطال الستة فاز بجائزة أوسكار أفضل فيلم رسوم متحركة في عام 2015.تخرج دون من جامعة أيوا حاصلا على شهادة البكالوريوس في الفنون الجميلة في الرسم والتصوير.",
+        "ドン・ホール（Don Hall）はアメリカ合衆国の映画監督、脚本家である。ウォルト・ディズニー・アニメーション・スタジオに所属しており、ディズニー映画を数多く手がける。 くまのプーサンやベイマックスの監督として知られる。" ;
+    owl:sameAs <http://ar.dbpedia.org/resource/دون_هول_(صانع_أفلام)>,
+        <http://d-nb.info/gnd/1017876827>,
+        <http://d-nb.info/gnd/1017876827/about/rdf>,
+        <http://dbpedia.org/resource/Don_Hall_(filmmaker)>,
+        <http://de.dbpedia.org/resource/Don_Hall_(Regisseur)>,
+        <http://fr.dbpedia.org/resource/Don_Hall>,
+        <http://id.dbpedia.org/resource/Don_Hall_(produser)>,
+        <http://it.dbpedia.org/resource/Don_Hall>,
+        <http://ja.dbpedia.org/resource/ドン・ホール>,
+        <http://pt.dbpedia.org/resource/Don_Hall>,
+        <http://rdf.freebase.com/ns/m.05ys_tt>,
+        <http://viaf.org/viaf/2093150085871015060000>,
+        <http://viaf.org/viaf/267757507>,
+        wd:Q18921842,
+        <http://yago-knowledge.org/resource/Don_Hall_(filmmaker)>,
+        <https://global.dbpedia.org/id/1p7o3> ;
+    ns4:altLabel "唐·哈尔",
+        "唐·哈爾",
+        "唐·霍尔",
+        "湯·哈爾" ;
+    ns5:wasDerivedFrom <http://en.wikipedia.org/wiki/Don_Hall_(filmmaker)?oldid=985814388&ns=0> ;
+    p:P1006 wds:Q18921842-EBD96F37-3EE0-4795-B0FB-587ACF3DA1B0 ;
+    p:P106 wds:Q18921842-C99F2331-DAD4-4BFF-86DC-22767D83EA81,
+        wds:Q18921842-D6172D7F-F20B-4DC1-8497-5C95D513BC27,
+        wds:Q18921842-D6446642-3896-43C9-AEE3-4C89A77B48C8,
+        wds:Q18921842-DBBC45A2-C309-46B1-9D91-F5F6F486289D ;
+    p:P1266 wds:Q18921842-986aa7ed-44c6-3863-186c-24dcebdb9e97 ;
+    p:P1411 wds:Q18921842-E0F40CAF-E801-44A1-B4AA-38F2225C60E9 ;
+    p:P166 wds:Q18921842-6ADFC860-249A-44DB-B23F-7C5F80F454EF ;
+    p:P19 wds:Q18921842-01769C6F-0781-4C9A-B8B0-80DC4EC8AA09 ;
+    p:P1969 wds:Q18921842-c9328761-4c2c-57e3-5511-6a02169f7b84 ;
+    p:P2019 wds:Q18921842-0fa78775-4259-ca01-b7d9-78c2ce06902d ;
+    p:P21 wds:Q18921842-1A3F361F-B4A8-4BD9-920C-83C334C3BFE9 ;
+    p:P213 wds:Q18921842-008a5e11-47d2-3b8c-74a6-6dae3be5435d ;
+    p:P214 wds:Q18921842-3926A41C-850C-4FF5-B0A3-6E6BD9267CFB ;
+    p:P2168 wds:Q18921842-1009b0ed-4965-8a66-8d3f-19069b13ab32 ;
+    p:P227 wds:Q18921842-721158F1-984A-4D6D-A8DF-C8C301023375 ;
+    p:P2387 wds:Q18921842-7dbb218a-4a58-da56-f0d2-f2f9ac381551 ;
+    p:P244 wds:Q18921842-08D8A2CB-F439-46B9-9BB4-802FECDC529F ;
+    p:P2604 wds:Q18921842-a7920723-48d2-91db-24d2-e380a1ea1b85 ;
+    p:P2626 wds:Q18921842-f92b0aa1-4bdf-8b23-6f0f-177794c01677 ;
+    p:P2688 wds:Q18921842-7A4533CA-B1B3-4ECF-80C1-16F2F4993DD4 ;
+    p:P27 wds:Q18921842-D8B897C8-E677-4E03-B5DE-8E7AAA7EDC22 ;
+    p:P31 wds:Q18921842-AAEA5D3E-6FAB-4EB4-BE3C-F77D7A480187 ;
+    p:P345 wds:Q18921842-4dae3c09-4c82-c98f-5a91-2ac3427edec2 ;
+    p:P409 wds:Q18921842-1e0c552a-4bbe-80fc-39cb-04bbaae59f91 ;
+    p:P4985 wds:Q18921842-389A6FE0-4FCD-489B-AFFE-91BAAAB9CF31 ;
+    p:P5034 wds:Q18921842-beffb4ee-bc47-4a5c-8a4d-e514055aab94 ;
+    p:P5534 wds:Q18921842-9464C793-9678-4834-8971-3211C64CB68B ;
+    p:P569 wds:Q18921842-0B51CFF5-14C5-42E7-9D71-2BF9AA2623D1,
+        wds:Q18921842-2fb5dacd-bcd1-403f-a578-82a45821435e ;
+    p:P6150 wds:Q18921842-A516AFA3-CD17-42B0-8823-406001B08809 ;
+    p:P646 wds:Q18921842-41714F54-F8B3-44B2-B00B-D0FE0B134E3B ;
+    p:P69 wds:Q18921842-69C53CE2-4A5F-4A0C-86EB-8F88F9D770C4 ;
+    p:P7084 wds:Q18921842-902AB9AB-C461-487F-B2AF-DFB07537D9B4 ;
+    p:P734 wds:Q18921842-04832AE2-C462-4067-83E8-B559365246BC ;
+    p:P735 wds:Q18921842-0CD13F61-6EEA-4543-B644-98B59BD9CF67 ;
+    p:P7859 wds:Q18921842-954C7ADB-E0B1-435D-8AF8-7C165F4ACE51 ;
+    ns1:P1006 <http://data.bibliotheken.nl/id/thes/p335889581> ;
+    ns1:P214 <http://viaf.org/viaf/267757507> ;
+    ns1:P227 <https://d-nb.info/gnd/1017876827> ;
+    ns1:P244 <https://id.loc.gov/authorities/names/nr2001030755> ;
+    ns1:P5034 <http://lod.nl.go.kr/resource/KAC201516610> ;
+    ns1:P646 <http://g.co/kg/m/05ys_tt> ;
+    wdt:P1006 "335889581" ;
+    wdt:P106 wd:Q2405480,
+        wd:Q2526255,
+        wd:Q28389,
+        wd:Q33999 ;
+    wdt:P1266 "52273" ;
+    wdt:P1411 wd:Q106800 ;
+    wdt:P166 wd:Q106800 ;
+    wdt:P19 wd:Q962841 ;
+    wdt:P1969 "27540" ;
+    wdt:P2019 "p508161" ;
+    wdt:P21 wd:Q6581097 ;
+    wdt:P213 "0000 0000 5284 613X" ;
+    wdt:P214 "267757507" ;
+    wdt:P2168 "356914" ;
+    wdt:P227 "1017876827" ;
+    wdt:P2387 "1494764" ;
+    wdt:P244 "nr2001030755" ;
+    wdt:P2604 "1649386" ;
+    wdt:P2626 "166555" ;
+    wdt:P2688 "donhall" ;
+    wdt:P27 wd:Q30 ;
+    wdt:P31 wd:Q5 ;
+    wdt:P345 "nm2320658" ;
+    wdt:P409 "36031287" ;
+    wdt:P4985 "227439" ;
+    wdt:P5034 "KAC201516610" ;
+    wdt:P5534 "88001" ;
+    wdt:P569 "1969-03-08T00:00:00Z",
+        "2000-01-01T00:00:00Z" ;
+    wdt:P6150 "7267" ;
+    wdt:P646 "/m/05ys_tt" ;
+    wdt:P69 wd:Q182973 ;
+    wdt:P7084 wd:Q21934652 ;
+    wdt:P734 wd:Q1551523 ;
+    wdt:P735 wd:Q16275555 ;
+    wdt:P7859 "lccn-no2017031580" ;
+    foaf:isPrimaryTopicOf <http://en.wikipedia.org/wiki/Don_Hall_(filmmaker)> ;
+    foaf:name "Don Hall" .
 
 twssd:Patty_Jenkins a <http://dbpedia.org/class/yago/Administrator109770949>,
         <http://dbpedia.org/class/yago/Adult109605289>,
@@ -63390,9 +63271,9 @@ twssd:Raya_Y_El_Ultimo_Dragon a schema:Movie,
     schema:name "Raya Y El Ultimo Dragon" .
 
 twssd:showroom_3b078272-8090-4646-b250-2709979dcff4 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Mendoza> .
 
 schema:ImageObject a owl:Class ;
     rdfs:subClassOf schema:MediaObject .
@@ -63403,14 +63284,14 @@ schema:MediaObject a owl:Class ;
 schema:Place a owl:Class .
 
 twssd:showroom_1e863e50-ff90-428a-a8ab-02ec4d7fd063 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Luj%C3%A1n> .
 
 twssd:showroom_ee51bc5f-150a-463f-8f3e-8b6beed4b1ad a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "SALA HD" ;
-    twsss:cinema twssd:CINEMA_OCHO .
+    twss:cinema twssd:CINEMA_OCHO .
 
 twssd:Promising_young_woman a schema:Movie,
         owl:NamedIndividual ;
@@ -63569,27 +63450,27 @@ twssd:Wonder_Woman_1984 a schema:Movie,
         <https://www.rottentomatoes.com/m/wonder_woman_1984> .
 
 twssd:showroom_0e740e7e-bf27-45d8-9b19-963247c0e957 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "SALA HD" ;
-    twsss:cinema twssd:CINEMA_ROCHA .
+    twss:cinema twssd:CINEMA_ROCHA .
 
 twssd:showroom_32af65d9-a44d-4f75-b071-d73238e94159 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Merlo> .
 
 twssd:showroom_6269c010-e6fe-4a94-a59e-077e744d649b a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Rosario> .
 
 schema:AggregateRating a owl:Class ;
     rdfs:subClassOf schema:Rating .
 
 twssd:showroom_e47f440a-66d7-4b65-88e4-bcefef26435b a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Avellaneda> .
 
 twssd:Demon_Slayer_Mugen_Train a schema:Movie,
         owl:NamedIndividual ;
@@ -63642,19 +63523,19 @@ twssd:Trolls_2 a schema:Movie,
         "Trolls 2: Gira mundial" .
 
 twssd:showroom_0cd49709-c342-460a-a778-172e7db84e23 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "SALA HD" ;
-    twsss:cinema twssd:CINEMA_PARADISO .
+    twss:cinema twssd:CINEMA_PARADISO .
 
 twssd:showroom_412fc57b-3439-461c-92fd-723462b9f160 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Pilar> .
 
 twssd:showroom_48a1c6a9-0561-4e13-898b-608472f71856 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Neuqu%C3%A9n> .
 
 twssd:Tom_and_Jerry a schema:Movie,
         owl:NamedIndividual ;
@@ -63682,9 +63563,9 @@ twssd:Tom_and_Jerry a schema:Movie,
         "Tom y Jerry" .
 
 twssd:showroom_e29decd8-6e29-42db-b1ed-2dc4660a438f a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "SALA HD" ;
-    twsss:cinema twssd:CINEMA_SAN_MARTIN .
+    twss:cinema twssd:CINEMA_SAN_MARTIN .
 
 twssd:Chaos_Walking a schema:Movie,
         owl:NamedIndividual ;
@@ -63712,9 +63593,144 @@ twssd:Chaos_Walking a schema:Movie,
         "Chaos Walking" .
 
 twssd:showroom_d87dd8eb-df4b-489b-896a-98444b9e4a68 a owl:NamedIndividual,
-        twsss:ShowRoom ;
+        twss:ShowRoom ;
     schema:name "Classic" ;
-    twsss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> .
+    twss:cinema <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cin%C3%A9polis_Recoleta> .
+
+twssd:Emerald_Fennell a schema:Person,
+        owl:NamedIndividual ;
+    rdfs:label "Emerald Fennell",
+        "Емеральд Феннелл",
+        "Էմերալդ Ֆեննել",
+        "אמרלד פנל",
+        "إيميرالد فينيل",
+        "ئیمڕاڵد فێنێل",
+        "الزمرد فينيل",
+        "امرالد فنل",
+        "エメラルド・フェネル",
+        "埃默拉爾德·芬內爾",
+        "艾美尔拉德·芬内尔",
+        "艾美爾拉德·芬內爾",
+        "艾蔓露芬諾",
+        "에머럴드 피넬" ;
+    schema:dateModified "2021-06-07T13:23:35Z" ;
+    schema:description "British actress and writer",
+        "Brits actrice",
+        "actrice britannique",
+        "actriz británica",
+        "attrice, sceneggiatrice e regista britannica",
+        "britische Schauspielerin",
+        "pemeran perempuan asal Britania Raya",
+        "Британская актриса, режиссер и сценарист",
+        "Британська аркторка, режисерка та сценаристка",
+        "שחקנית וסופרת בריטית",
+        "ممثلة من المملكة المتحدة",
+        "ബ്രിട്ടനിലെ ചലച്ചിത്ര അഭിനേത്രി",
+        "영국 배우, 영화 감독" ;
+    schema:name "Emerald Fennell" ;
+    schema:version "1437026137" ;
+    ns6:identifiers "22" ;
+    ns6:sitelinks "27" ;
+    ns6:statements "43" ;
+    ns6:timestamp "2021-06-07T13:27:59Z" ;
+    owl:sameAs wd:Q16207879 ;
+    ns4:altLabel "エメラルド・フェンネル",
+        "埃默拉尔德·芬内尔",
+        "翡翠芬内尔",
+        "艾美尔拉德·芬内尔",
+        "艾莫芮德·芬諾",
+        "에머럴드 릴리 피넬" ;
+    p:P1006 wds:Q16207879-43490643-40B2-4921-8183-DF26455AD7EA ;
+    p:P106 wds:Q16207879-3A5DB3A8-5C33-4812-AC08-75E0581E35E0,
+        wds:Q16207879-45916226-D357-4739-A7C4-E59D76129ACB,
+        wds:Q16207879-481749e2-4bec-b823-25c3-05cbb8beb235,
+        wds:Q16207879-89d26999-4aeb-dc7f-4dfd-c3566081b087 ;
+    p:P1233 wds:Q16207879-FF51BDB3-07BA-417B-974A-83480ED52419 ;
+    p:P1266 wds:Q16207879-97230ac9-4f0e-ba15-295e-9d27323cde16 ;
+    p:P1280 wds:Q16207879-78482AE8-A2A8-4535-9CDD-D69A08DBDB6E ;
+    p:P1412 wds:Q16207879-9254B837-A86A-4840-9E14-61125A6318C4 ;
+    p:P166 wds:Q16207879-3b618258-4f51-acc3-11f7-e6b6f63b3d3c ;
+    p:P18 wds:Q16207879-2B2671E5-E7CE-44CF-A225-0A104AB9BBAF ;
+    p:P19 wds:Q16207879-2A9298DA-CCBD-49A3-B748-38C9B0319BAC ;
+    p:P2002 wds:Q16207879-F554E1AB-848B-46A1-BA7C-47199763FF79 ;
+    p:P2019 wds:Q16207879-e69021b6-41f7-287c-74f8-5fbd64f5e829 ;
+    p:P2031 wds:Q16207879-20F125B2-4CE7-42BF-8B6E-F97FDE466552 ;
+    p:P21 wds:Q16207879-A9CE79F1-E105-47EB-85DF-4E951B4C0F8D ;
+    p:P213 wds:Q16207879-DBC0D2DF-BC9F-4ACB-B8E4-B8495CCD13B7 ;
+    p:P214 wds:Q16207879-94121C68-FB9A-49E8-AEC2-737D64929641 ;
+    p:P22 wds:Q16207879-E5F5C85F-13CC-49EE-AE17-06B2032472F0 ;
+    p:P227 wds:Q16207879-8A7952FF-2200-47E9-8191-10217D93A464 ;
+    p:P2387 wds:Q16207879-7744c8d2-45d4-6050-baeb-7e037923195c ;
+    p:P244 wds:Q16207879-A54EFFCD-0344-4B3A-94D2-4C0E27C9DD30 ;
+    p:P2604 wds:Q16207879-91094d89-4d6a-72b3-f1ba-3d5010f771b7 ;
+    p:P2605 wds:Q16207879-6ee149c3-47da-a16d-8966-75cae41cffbd ;
+    p:P27 wds:Q16207879-3188C9C4-6FF4-476F-91E5-370AD13985ED ;
+    p:P31 wds:Q16207879-51D253B0-1846-4DE9-BEF8-9C6A36614A26 ;
+    p:P3144 wds:Q16207879-266ca1e1-42a6-e774-59ee-2f47ffdc948a ;
+    p:P345 wds:Q16207879-1899B895-EE23-467F-93B8-65ADEDDB1A16 ;
+    p:P373 wds:Q16207879-08C9AA3A-6D6B-45F2-90BA-426A247D2480 ;
+    p:P4985 wds:Q16207879-F817CBAA-36B6-40A2-ABA2-1C04A1016024 ;
+    p:P5361 wds:Q16207879-F72DC80D-23CE-438E-A799-3565613B342D ;
+    p:P569 wds:Q16207879-288AB466-E27D-4200-BFE4-E97ABEBC48BD ;
+    p:P6150 wds:Q16207879-CA20553F-D397-465A-A27A-7B89039121F9 ;
+    p:P646 wds:Q16207879-4B326D19-B3BA-406B-A00C-CF5A13C269D5 ;
+    p:P69 wds:Q16207879-1030A6F8-7F4D-4B87-A4F3-44A08AE5B18C,
+        wds:Q16207879-32877B40-6E36-4623-A384-E5E76805B200 ;
+    p:P7105 wds:Q16207879-9B9D12DD-4111-40D7-AF10-0B0F1A280A60 ;
+    p:P734 wds:Q16207879-653459A4-A429-4D50-AF8C-4EB094D94EB0 ;
+    p:P735 wds:Q16207879-c2571897-47f1-c81b-49e8-111d78a8e15c ;
+    p:P7859 wds:Q16207879-70736B95-2269-41B3-B31E-C02D1127AE3C ;
+    p:P8687 wds:Q16207879-1c6be582-ffef-431d-afcd-daaca4f9ba3f,
+        wds:Q16207879-83896b9e-059c-46a2-bf7e-3a7d068d9b32 ;
+    p:P8796 wds:Q16207879-F307A03B-2702-4882-9D02-93F8EBEE2760 ;
+    ns1:P1006 <http://data.bibliotheken.nl/id/thes/p375488685> ;
+    ns1:P214 <http://viaf.org/viaf/305278628> ;
+    ns1:P227 <https://d-nb.info/gnd/1076278582> ;
+    ns1:P244 <https://id.loc.gov/authorities/names/nb2013018749> ;
+    ns1:P5361 <https://bnb.data.bl.uk/doc/person/FennellEmerald1985-> ;
+    ns1:P646 <http://g.co/kg/m/0h4nqkp> ;
+    wdt:P1006 "375488685" ;
+    wdt:P106 wd:Q10800557,
+        wd:Q2526255,
+        wd:Q28389,
+        wd:Q33999 ;
+    wdt:P1233 "184040" ;
+    wdt:P1266 "420587" ;
+    wdt:P1280 "282750819" ;
+    wdt:P1412 wd:Q1860 ;
+    wdt:P166 wd:Q41417 ;
+    wdt:P18 <http://commons.wikimedia.org/wiki/Special:FilePath/Emerald%20Fennell25-03-2013%20MarkJones.jpg> ;
+    wdt:P19 wd:Q84 ;
+    wdt:P2002 "emeraldfennell" ;
+    wdt:P2019 "p710860" ;
+    wdt:P2031 "2008-01-01T00:00:00Z" ;
+    wdt:P21 wd:Q6581072 ;
+    wdt:P213 "0000 0004 1887 5753" ;
+    wdt:P214 "305278628" ;
+    wdt:P22 wd:Q7781452 ;
+    wdt:P227 "1076278582" ;
+    wdt:P2387 "1550116" ;
+    wdt:P244 "nb2013018749" ;
+    wdt:P2604 "1283114" ;
+    wdt:P2605 "226045" ;
+    wdt:P27 wd:Q145 ;
+    wdt:P31 wd:Q5 ;
+    wdt:P3144 "1473179" ;
+    wdt:P345 "nm2193504" ;
+    wdt:P373 "Emerald Fennell" ;
+    wdt:P4985 "1252934" ;
+    wdt:P5361 "FennellEmerald1985-" ;
+    wdt:P569 "1985-10-01T00:00:00Z" ;
+    wdt:P6150 "9067" ;
+    wdt:P646 "/m/0h4nqkp" ;
+    wdt:P69 wd:Q1902016,
+        wd:Q34433 ;
+    wdt:P7105 "emerald-fennell" ;
+    wdt:P734 wd:Q21510449 ;
+    wdt:P735 wd:Q18695824 ;
+    wdt:P7859 "lccn-nb2013018749" ;
+    wdt:P8687 "21887" ;
+    wdt:P8796 "101425" .
 
 twssd:New_Mutants a schema:Movie,
         owl:NamedIndividual ;
@@ -63744,7 +63760,7 @@ Wolfsbane, Cannonball, Magik, Mirage y Sunspot deberán enfrentar sus miedos, po
     schema:name "Los Nuevos Mutantes",
         "New Mutants" .
 
-twsss:Cinema a owl:Class ;
+twss:Cinema a owl:Class ;
     rdfs:subClassOf schema:CivicStructure .
 
 twssd:Godzilla_vs._Kong a schema:Movie,
@@ -63772,7 +63788,7 @@ twssd:Godzilla_vs._Kong a schema:Movie,
     schema:name "Godzilla Vs. Kong",
         "Godzilla vs. Kong" .
 
-twsss:ShowRoom a owl:Class ;
+twss:ShowRoom a owl:Class ;
     rdfs:subClassOf schema:Place .
 
 schema:CreativeWork a owl:Class .
@@ -63788,7 +63804,7 @@ schema:Rating a owl:Class ;
 
 schema:Organization a owl:Class .
 
-twsss:Show a owl:Class ;
+twss:Show a owl:Class ;
     rdfs:subClassOf schema:Event .
 
 schema:Person a owl:Class .

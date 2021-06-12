@@ -100,11 +100,14 @@ def get_internal_person_from_external_iri(g:Graph, persons:set):
 if __name__ == '__main__':
 
     g = Graph()
+    gdir = Graph()
+    bind_schemas(gdir)
+
     with open('data/dataset-final.ttl','r') as f:
         g.parse(f, format='turtle')
 
-    with open('data/wikidata_subjects.ttl','r') as f:
-        g.parse(f, format='turtle')        
+    #with open('data/wikidata_subjects.ttl','r') as f:
+    #    g.parse(f, format='turtle')        
 
 
     ss = get_schemas()
@@ -139,10 +142,10 @@ if __name__ == '__main__':
         for film,p,o in g.triples((None, schema.director, director)):
             for ss,pp,actor in g.triples((film, schema.actor, None)):
                 print(f'{actor} <-- wasDirectedByOscarWinner <-- {director}')
-                g.add((actor, twss.wasDirectedByOscarWinner, director))
+                gdir.add((actor, twss.wasDirectedByOscarWinner, director))
             for ss,pp,actor in g.triples((film, schema.actors, None)):
                 print(f'{actor} <-- wasDirectedByOscarWinner <-- {director}')
-                g.add((actor, twss.wasDirectedByOscarWinner, director))
+                gdir.add((actor, twss.wasDirectedByOscarWinner, director))
 
 
     """
@@ -166,4 +169,16 @@ if __name__ == '__main__':
             print(f'actores internos encontrados {len(actors)}')
             for actor in actors:
                 print(f'{actor} <--- wasDirectedByOscarWinner <--- {director}')
-                g.add((actor, twss.wasDirectedByOscarWinner, director))
+                gdir.add((actor, twss.wasDirectedByOscarWinner, director))
+
+    #gdata.serialize(sys.stdout.buffer, format='turtle')
+    with open('data/dataset_directed.ttl','w') as f:
+       f.write(gdir.serialize(format='turtle').decode("utf-8"))
+
+    gsum = Graph()
+    gsum = g + gdir
+    bind_schemas(gsum)
+
+    #gdata.serialize(sys.stdout.buffer, format='turtle')
+    with open('data/dataset_final_directed.ttl','w') as f:
+       f.write(gsum.serialize(format='turtle').decode("utf-8"))

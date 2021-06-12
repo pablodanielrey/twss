@@ -1,0 +1,35 @@
+@prefix twss: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/twss_final.ttl#> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+
+twssd:Adam_Brody twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Alison_Brie twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Awkwafina twss:wasDirectedByOscarWinner twssd:Don_Hall .
+
+twssd:Bo_Burnham twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Carey_Mulligan twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Christopher_Mintz-Plasse twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Clancy_Brown twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Connie_Britton twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Daniel_Dae_Kim twss:wasDirectedByOscarWinner twssd:Don_Hall .
+
+twssd:Jennifer_Coolidge twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Kelly_Marie_Tran twss:wasDirectedByOscarWinner twssd:Don_Hall .
+
+twssd:Laverne_Cox twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Max_Greenfield twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Molly_Shannon twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Sam_Richardson twss:wasDirectedByOscarWinner twssd:Emerald_Fennell .
+
+twssd:Ray_McKinnon twss:wasDirectedByOscarWinner twssd:Ray_McKinnon .
+
