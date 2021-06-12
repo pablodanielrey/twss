@@ -3778,7 +3778,9 @@ mmm solo esos directores?
 ----
 
 a ver que datos tengo en wikidata.
-
+veo que en el endpoint existen ejemplos de consultas relacionados a los awards.
+otro punto para wikidata que te da ejemplos super simples para ir conociendo el lenguaje y la estructura.
+pruebo el ejemplo de awards, sacandole lo del premio nobel.
 
 https://www.wikidata.org/wiki/Q19020
 
@@ -3796,51 +3798,760 @@ SELECT DISTINCT ?person ?personLabel WHERE {
  wd:Q507252	Barry Morrow
 Showing 1 to 200 of 3435 rows  rows per page‹12345...18›
 
+
+ahora me gusta un poco mas. 3455 resultados. veo que varios no son personas pero bueno.
+al filtrarlo con mi base, ya que tengo los directores que me interesan a mi voy a saber que los resultados con personas.
+también puedo probar ponerle que sea clase human. asi se que los resultados son personas solemente.
+
+--
+
+acabo de identificar una cosa. me parece que wdt hace ya el proceso de "saltar" la estructura de statements.
+si me fijo en el ejemplo estoy analizando que:
+
+wdt:P166 =  p:P166 --> statement --> ps:P166
+
+si estoy en lo correcto claramente no leí suficiente documentación antes de ponerme a hacer consultas!!.
+
+
+---
+https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial
+
+So what remains to be done in order to turn this into a proper WDQS query? On Wikidata, items and properties are not identified by human-readable names like “father” (property) or “Bach” (item). (For good reason: “Johann Sebastian Bach” is also the name of a German painter, and “Bach” might also refer to the surname, the French commune, the Mercury crater, etc.) Instead, Wikidata items and properties are assigned an identifier. To find the identifier for an item, we search for the item and copy the Q-number of the result that sounds like it’s the item we’re looking for (based on the description, for example). To find the identifier for a property, we do the same, but search for “P:search term” instead of just “search term”, which limits the search to properties. This tells us that the famous composer Johann Sebastian Bach is Q1339, and the property to designate an item’s father is P:P22.
+And last but not least, we need to include prefixes. For simple WDQS triples, items should be prefixed with wd:, and properties with wdt:. (But this only applies to fixed values – variables don’t get a prefix!)
+
+Putting this together, we arrive at our first proper WDQS query:
+
+SELECT ?child
+WHERE
+{
+# ?child  father   Bach
+  ?child wdt:P22 wd:Q1339.
+}
+
+
+por lo que dice ahi usa wdt como prefijo de las propiedades!!!.
+un punto mas para wikidata sobre wikipedia!.
+lo negativo de wikidata me parecía que era demasiado abstracto, exponiendo su estructura interna de representación de datos, pero 
+ahora veo que te da un mecanismo para saltarlo!!!. wdt:!! permite saltarte toda la estructura de statements!!!:
+así que lo dejaría equivalente a dbpedia!.
+
 ---
 
-ajusto un poco la consulta a ver que me sale.
+de nuevo leyendo un poco mas:
+
+"Well, as it happens, there is! (Aren’t rhetorical questions great?) If you include the magic text
+
+SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+somewhere within the WHERE clause, you get additional variables: For every variable ?foo in your query, you now also have a variable ?fooLabel, which contains the label of the item behind ?foo. If you add this to the SELECT clause, you get the item as well as its label:
+
+SELECT ?child ?childLabel
+WHERE
+{
+# ?child  father   Bach
+  ?child wdt:P22 wd:Q1339.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+}"
+
+
+y yo cliqueando cada Qentity para ver de que se trataba!!! mi dioooss. 
+moraleja, tomarse unos días para leer la documentación completa antes de arrancar cualquier trabajo sobre esos datos.
+
+---
+
+igual mi análisis es que después de estar trabajando un poco con esa base ahora la entiendo un poco mejor.
+al principio me parecían demasiados datos y no entendía toda la lista de prefijos y el por que de sus definiciones.
+está bien estructurada la materia. vas entendiendo poco a poco las motivaciones de generar esas herramientas.
+
+---
+
+ahora quiero entender el / usado en la consulta sparql.
+leyendo:
+
+"
+Instances and classes
+Earlier, I said that most Wikidata properties are “has” relations: has child, has father, has occupation. But sometimes (in fact, frequently), you also need to talk about what something is. But there are in fact two kinds of relations there:
+
+Gone with the Wind is a film.
+A film is a work of art.
+Gone with the Wind is one particular film. It has a particular director (Victor Fleming), a specific duration (238 minutes), a list of cast members (Clark Gable, Vivien Leigh, …), and so on.
+
+Film is a general concept. Films can have directors, durations, and cast members, but the concept “film” as such does not have any particular director, duration, or cast members. And although a film is a work of art, and a work of art usually has a creator, the concept of “film” itself does not have a creator – only particular instances of this concept do.
+
+This difference is why there are two properties for “is” in Wikidata: instance of (P31) and subclass of (P279). Gone with the Wind is a particular instance of the class “film”; the class “film” is a subclass (more specific class; specialization) of the more general class “work of art”.
+
+To help you to figure about the difference, you can try to use two different verbs: "is a" and " is a kind of". If "is a kind of" works (e.g. A film "is a kind of" work of art), it indicates that you are talking about a subclass, a specialization of a broader class and you should use subclass of (P279). If "is a kind of" does not work (e.g. the sentence Gone with the wind "is a kind of" film does not make sense), it indicates that you are talking about a particular instance and you should use instance of (P31).
+
+So what does this mean for us when we’re writing SPARQL queries? When we want to search for “all works of art”, it’s not enough to search for all items that are directly instances of “work of art”:
+
+SELECT ?work ?workLabel
+WHERE
+{
+  ?work wdt:P31 wd:Q838948. # instance of work of art
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+}
+Try it!
+
+As I’m writing this (October 2016), that query only returns 2815 results – obviously, there are more works of art than that! The problem is that this misses items like Gone with the Wind, which is only an instance of “film”, not of “work of art”. “film” is a subclass of “work of art”, but we need to tell SPARQL to take that into account when searching.
+
+One possible solution to this is the [] syntax we talked about: Gone with the Wind is an instance of some subclass of “work of art”. (For exercise, try writing that query!) But that still has problems:
+
+We’re no longer including items that are directly instances of work of art.
+We’re still missing items that are instances of some subclass of some other subclass of “work of art” – for example, Snow White and the Seven Dwarfs is an animated film, which is a film, which is a work of art. In this case, we need to follow two “subclass of” statements – but it might also be three, four, five, any number really.
+The solution: ?item wdt:P31/wdt:P279* ?class. This means that there’s one “instance of” and then any number of “subclass of” statements between the item and the class.
+
+SELECT ?work ?workLabel
+WHERE
+{
+  ?work wdt:P31/wdt:P279* wd:Q838948. # instance of any subclass of work of art
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+}
+"
+
+ahi está la respuesta!!!.
+
+work --> instanceof --> algo --> subclass of ---> algo ......... --> subclass of --> work of art
+
+
+AHORA ENTIENDO POR QUE NO ME RETORNABA RESULTADOS algunas consultas!!.
+y una de mis contras contra wikidata era justamente que no tenías una forma de consultar exactamente lo de arriba.
+una sola consulta que analice toda la jerarquía de herencias.
+bueno OBVIO. lo había. solo que no había leido lo suficiente la documentación.
+
+----
+
+
+bueno tuneando un poco la consulta. 
+ahora si obtengo todas las personas que hayan recibido un premio : P166
+que ese premio sea una subclase de Academy_Awards wd:Q19020 (analizando toda la herencia)
+y que el resultado sea una persona.
 
 SELECT DISTINCT ?person ?personLabel WHERE {
-  ?person wdt:P166 wd:Q19020 .
+  ?person wdt:P31 wd:Q5 .
+  ?person wdt:P166/wdt:P31? wd:Q19020 .
   SERVICE wikibase:label {
     bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
   }
 }
 
-128 resultados.
-
-person
-personLabel
- wd:Q3610284	Love in Bloom
- wd:Q6690237	Love
- wd:Q7962099	Walk on the Wild Side
- wd:Q17022109	Suddenly
- wd:Q15727557	The Moon Song
- wd:Q7154537	Paul Zastupnevich
 
 
-hay de todo. ya que algunas cosas no son personas!!. jaja
+perfecto funciona.
+asi que la codifico en mi script.
+obtengo todas las peronas que recibieron un award.
+
+me faltaría agregar que sea director de algún film.
+como lo hago?
 
 
----
-
-igual veo mucho mas completa la de wikidata. asi que voy a usar esa a ver que me responde.
-
----
-
-SELECT DISTINCT ?person WHERE {
-  ?person wdt:P166 wd:Q19020 .
+SELECT DISTINCT ?person ?personLabel WHERE {
+  ?person wdt:P31 wd:Q5 .
+  ?person wdt:P166/wdt:P31? wd:Q19020 .
+  ?person wdt:P106 wd:Q2526255 .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
 }
 
- wd:Q71243
- wd:Q72984
- wd:Q76895
- wd:Q80966
- wd:Q83492
- wd:Q94081
- wd:Q94123
- ....
+esto solo me da los directores de films.
+lo cual me reduce los resultados a 711.
 
- 
+pero que pasa si yo en mi base de conocimiento tengo una persona como director de cine,
+y no se encuentra con esa profesión dentro de wikidata.
+no lo estaría obteniendo desde wikidata si realizo esa consulta.
+
+por lo que, como yo en mi base tengo las personas como directores, entonces debo usar esa información de MI base.
+no de wikidata.
+y solo sacar de wikidata los que han recibido un premio!.
+así que no filtro por directores en wikidata. si no que obtengo todo humano que haya recibido un premio.
+y dentro de mi script filtro por los directores de MI grafo.
+
+con los actores realizo un razonamiento contrario.
+de que los actores que tengo en mi base, sean directores de otras películas que no tengo registradas.
+yo en mi base tengo los actores solo de las películas que analicé, pero no de todas las que hayan actuado.
+así que esa relación la voy a hacer dentro de wikidata como consulta en segunda medida.
+
+o sea el script va a 2 consutlas:
+1 - obtener los directors que recibieron premios. y con eso ir a todos los actores de mi grafo y generar esa relación.
+2 - obtener todos los actores que hayan actuado en películas de directors que recibieron premios. y generar esa relación.
+
+así genero conocimiento adicional que podría no estar en la wikidata. el punto 1. jjaja totalmente remota la posibilidad que
+se encuentre enlas careteras de los cines de aca y no se encuentre en wikidata esa info.
+
+---
 
 
+codifico el punto 1.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/add_oscar_winner.py 
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell recibió premio según wikidata
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall recibió premio según wikidata
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell'), rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall')}
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+perfecto. me trajo aunque sea 2 directores de mi base. que recibieron premios según wikidata.
+
+--
+
+
+analizando la otra consulta.
+primero saco todas las ocupaciones de gente que recibió premio:
+
+SELECT DISTINCT ?occ ?occLabel WHERE {
+  ?director wdt:P106/wdt:P31? ?occ .
+  ?director wdt:P166/wdt:P31? wd:Q19020 .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+}
+
+con eso filtro las que me interesan a mi.
+las que puedo identificar:
+
+Q33999 - actor
+Q10800557 - film actor
+Q222749 - acting
+Q26262117 - silent film actor
+Q2259451 - stage actor
+Q2526255 - film director
+Q3455803 - director
+
+algunas son subclases de film action ocuppation, pero hay mas ocupaciones que no solo es actor/director.
+
+saco los que tienen ocupación director.
+
+SELECT DISTINCT ?director ?directorLabel ?occ ?occLabel WHERE {
+  ?director wdt:P106/wdt:P31? ?occ .
+  ?director wdt:P166/wdt:P31? wd:Q19020 .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+  filter (?occ in (wd:Q2526255,wd:Q3455803))
+}
+
+
+
+SELECT DISTINCT ?film ?filmLabel ?director ?directorLabel WHERE {
+  ?film wdt:P31 wd:Q11424 .
+  ?film wdt:P57 ?director .
+  #?actor wdt:P106/wdt:P31? ?aocc .
+  #?director wdt:P106/wdt:P31? ?docc .
+  ?director wdt:P166/wdt:P31? wd:Q19020 .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+  #filter (?aocc in (wd:Q33999,wd:Q10800557,wd:Q222749,wd:Q26262117,wd:Q2259451) && ?docc in (wd:Q2526255,wd:Q3455803))
+}
+
+
+
+cambio la dirección de la consulta. voy a consultar sobre los films que tengan directores que hayan ganado awards.
+
+
+SELECT DISTINCT ?film ?filmLabel ?director ?directorLabel WHERE {
+  ?film wdt:P31 wd:Q11424 .
+  ?film wdt:P57 ?director .
+  ?director wdt:P166/wdt:P31? wd:Q19020 .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+}
+
+perfecto ahora le agrego los actores.
+
+SELECT DISTINCT ?film ?filmLabel ?director ?directorLabel ?actor ?actorLabel WHERE {
+  ?film wdt:P161 ?actor .
+  {
+    select ?film ?director where {  
+    ?film wdt:P31 wd:Q11424 .
+    ?film wdt:P57 ?director .
+    ?director wdt:P166/wdt:P31? wd:Q19020 .
+    }
+  }
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+
+}
+
+lo pruebo como subquery porque la query plana me tiró timeout.
+tambien me tira timeout.
+
+veo que también en ejemplos que da prueba que son actores usando la sintaxis del blanknode.
+asi que pruebo esa.
+
+SELECT DISTINCT ?film ?filmLabel ?director ?directorLabel ?actor ?actorLabel WHERE {
+  ?film p:P161 [ ps:P161 ?actor ] .
+  {
+    select distinct ?film where {  
+    ?film wdt:P31 wd:Q11424 .
+    ?film wdt:P57 ?director .
+    ?director wdt:P166/wdt:P31? wd:Q19020 .
+    }
+  }
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+
+} limit 10
+
+no hay caso. todas timeout. se ve que son demasiados actores.
+uno esperaría que con la sintaxis de subquery el motor de sparql solo retorne los 5000 films
+y en base a eso aplique el limit 10.
+pruebo con un limit 1.
+
+
+no hay caso. me tira timeout también.
+voy a probar con un limit el la subquery.
+
+
+SELECT DISTINCT ?film ?filmLabel ?director ?directorLabel ?actor ?actorLabel WHERE {
+  ?film p:P161 [ ps:P161 ?actor ] .
+  {
+    select distinct ?film where {  
+    ?film wdt:P31 wd:Q11424 .
+    ?film wdt:P57 ?director .
+    ?director wdt:P166/wdt:P31? wd:Q19020 .
+    } limit 10
+  }
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+
+} limit 1
+
+ahi funciona pero tarda demasiado todavia.
+o sea que para la subquery interna cruza todos los directores.
+voy a probar con un subquery interno tambien ahi.
+tampocoooo tarda una vida.
+
+--
+
+voy a analizar un poco la cosa.
+1- cuanto tarda obtener personas que hayan ganado los awards.
+
+     select ?director where {
+      ?director wdt:P166/wdt:P31? wd:Q19020 .
+     }
+
+  4544 results in 288 ms
+
+2 - cuanto tarda cruzarlo con los films que dirigieron.
+
+     select distinct ?director where {
+       ?film wdt:P31 wd:Q11424 .
+       ?film wdt:P57 ?director .
+       ?director wdt:P166/wdt:P31? wd:Q19020 .
+     }
+
+     588 results in 762 ms
+
+3 - cuanto tarda retornando tambien el film.
+
+     select distinct ?director ?film where {
+       ?film wdt:P31 wd:Q11424 .
+       ?film wdt:P57 ?director .
+       ?director wdt:P166/wdt:P31? wd:Q19020 .
+     }
+
+     5725 results in 845 ms
+
+4 - cuanto tarda si agrego actores a la consulta.
+
+     select distinct ?director ?film where {
+       ?film wdt:P161 ?actor .
+       ?film wdt:P31 wd:Q11424 .
+       ?film wdt:P57 ?director .
+       ?director wdt:P166/wdt:P31? wd:Q19020 .
+     }
+
+5044 results in 1280 ms  
+
+5 - cuanto tarda si retorno el actor.
+
+     select distinct ?director ?film ?actor where {
+       ?film wdt:P161 ?actor .
+       ?film wdt:P31 wd:Q11424 .
+       ?film wdt:P57 ?director .
+       ?director wdt:P166/wdt:P31? wd:Q19020 .
+     }
+
+     65408 results in 1714 ms
+
+  me cacho!!. aparentemente era el servicio de labels de wikidata que tardaba tanto???
+
+
+  6 - agrego el servicio de labels pero no retorno ninguna label.
+
+    select distinct ?director ?film ?actor where {
+       ?film wdt:P161 ?actor .
+       ?film wdt:P31 wd:Q11424 .
+       ?film wdt:P57 ?director .
+       ?director wdt:P166/wdt:P31? wd:Q19020 .
+       
+         SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+       
+     }
+
+
+  65408 results in 1776 ms 
+
+  7 - retorno alguna label 
+
+      select distinct ?director ?film ?actor ?actorLabel where {
+       ?film wdt:P161 ?actor .
+       ?film wdt:P31 wd:Q11424 .
+       ?film wdt:P57 ?director .
+       ?director wdt:P166/wdt:P31? wd:Q19020 .
+       
+         SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+       
+     }
+
+  65408 results in 35344 ms
+  
+  se murió!!. así que lo que tarda es para cada resultado conseguir las labels.
+  lo cual no es necesario para lo que necesito.
+
+
+---
+
+perfecto! puedo seguir entonces con el script sin necesidad de partir la consulta en varias.
+
+
+la consulta final sería :
+
+     select distinct ?director ?film ?actor where {
+       ?film wdt:P161 ?actor .
+       ?film wdt:P31 wd:Q11424 .
+       ?film wdt:P57 ?director .
+       ?director wdt:P166/wdt:P31? wd:Q19020 .
+      
+     }
+
+---
+
+ejecuto el script y analizo los resultados.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/add_oscar_winner.py 
+/////////////////////////////////////////
+Punto1
+//////////////////////////////////////////
+buscando datos específicos de wikidata sobre premios
+encontradas 2131 personas con premios, dentro de 23 directores de mi dataset, busco en 285 referencias para relacionarlos
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell recibió premio según wikidata
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall recibió premio según wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kelly_Marie_Tran <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Daniel_Dae_Kim <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Awkwafina <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Molly_Shannon <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sam_Richardson <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Adam_Brody <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laverne_Cox <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christopher_Mintz-Plasse <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Connie_Britton <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Max_Greenfield <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+
+
+
+/////////////////////////////////////////
+Punto2
+//////////////////////////////////////////
+buscando datos generales en wikidata de todas las películas que existan en wikidata
+directores de http://www.wikidata.org/entity/Q62595383 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell')}
+actores internos encontrados 5
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+directores de http://www.wikidata.org/entity/Q5115004 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon')}
+actores internos encontrados 1
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon
+directores de http://www.wikidata.org/entity/Q7292528 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon')}
+actores internos encontrados 0
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+
+
+mmmmm
+paso alog loco.
+usando el métdo 1 - encontre 2 directores internos.
+Don_Hall, Emerald_Fennell
+
+usanod el otro método encontre:
+Emerald_Fennell, Ray_McKinnon
+
+
+por lo que veo en mi base, Ray_McKinnon es actor de Chaos_Walking
+en wikidata  http://www.wikidata.org/entity/Q7292528 esa plícula fue dirigida por Ray_McKinnon
+pero no lo veo como cast_member dentro de ese film. asi que tinee que estar mal mi script.
+Ray_McKinnon no debería ser actor de esa peli.
+
+
+agrego mas info para debuggear el script.
+
+---
+
+lo ejecuto nuevamnete y efectinvamente encuentro el problema.
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/add_oscar_winner.py 
+/////////////////////////////////////////
+Punto1
+//////////////////////////////////////////
+buscando datos específicos de wikidata sobre premios
+encontradas 2131 personas con premios, dentro de 23 directores de mi dataset, busco en 285 referencias para relacionarlos
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell recibió premio según wikidata
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall recibió premio según wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sam_Richardson <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Max_Greenfield <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Adam_Brody <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Molly_Shannon <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christopher_Mintz-Plasse <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laverne_Cox <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Connie_Britton <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Awkwafina <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Daniel_Dae_Kim <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kelly_Marie_Tran <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+
+
+
+/////////////////////////////////////////
+Punto2
+//////////////////////////////////////////
+buscando datos generales en wikidata de todas las películas que existan en wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell <--- http://www.wikidata.org/entity/Q16207879
+directores de http://www.wikidata.org/entity/Q62595383 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell')}
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <--- http://www.wikidata.org/entity/Q219655
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <--- http://www.wikidata.org/entity/Q235328
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <--- http://www.wikidata.org/entity/Q4488
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <--- http://www.wikidata.org/entity/Q230278
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <--- http://www.wikidata.org/entity/Q887347
+actores internos encontrados 5
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+directores de http://www.wikidata.org/entity/Q5115004 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon')}
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+actores internos encontrados 1
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+directores de http://www.wikidata.org/entity/Q7292528 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon')}
+actores internos encontrados 0
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+
+
+https://www.wikidata.org/wiki/Q5115004
+tiene como actor a Ray_McKinnon!!.
+
+asi que mi script esta correcto. solo esta mal la info de wikidata.
+
+
+---
+
+agrego algunos espacios entre pelis para entender un poco mas:
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/add_oscar_winner.py 
+/////////////////////////////////////////
+Punto1
+//////////////////////////////////////////
+buscando datos específicos de wikidata sobre premios
+encontradas 2131 personas con premios, dentro de 23 directores de mi dataset, busco en 285 referencias para relacionarlos
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell recibió premio según wikidata
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall recibió premio según wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Awkwafina <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Daniel_Dae_Kim <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kelly_Marie_Tran <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Molly_Shannon <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Connie_Britton <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laverne_Cox <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Max_Greenfield <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sam_Richardson <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Adam_Brody <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christopher_Mintz-Plasse <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+
+
+
+/////////////////////////////////////////
+Punto2
+//////////////////////////////////////////
+buscando datos generales en wikidata de todas las películas que existan en wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell <--- http://www.wikidata.org/entity/Q16207879
+
+
+
+http://www.wikidata.org/entity/Q62595383
+directores de http://www.wikidata.org/entity/Q62595383 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell')}
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <--- http://www.wikidata.org/entity/Q230278
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <--- http://www.wikidata.org/entity/Q219655
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <--- http://www.wikidata.org/entity/Q4488
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <--- http://www.wikidata.org/entity/Q887347
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <--- http://www.wikidata.org/entity/Q235328
+actores internos encontrados 5
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+
+
+
+http://www.wikidata.org/entity/Q5115004
+directores de http://www.wikidata.org/entity/Q5115004 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon')}
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+actores internos encontrados 1
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+
+
+
+http://www.wikidata.org/entity/Q7292528
+directores de http://www.wikidata.org/entity/Q7292528 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon')}
+actores internos encontrados 0
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+
+
+en la peli : Chrystal  - https://www.wikidata.org/wiki/Q5115004
+Ray_McKinnon aparece como director y como actor.
+
+en la peli: Randy and the Mob - https://www.wikidata.org/wiki/Q7292528
+Ray_McKinnon solo aparece como director y los actores que obtengo no tengo ninguno en mi dataset para asociarle la propiedad.
+
+
+
+lo extraño es lo de Don_Hall.
+asi que modifico el script para que me imprima que Qentity es asi puedo analizar el tema.
+
+--
+
+lo ejecuto nuevamente.
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/add_oscar_winner.py 
+/////////////////////////////////////////
+Punto1
+//////////////////////////////////////////
+buscando datos específicos de wikidata sobre premios
+encontradas 2131 personas con premios, dentro de 23 directores de mi dataset, busco en 285 referencias para relacionarlos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell <--- http://www.wikidata.org/entity/Q16207879
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell recibió premio según wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall <--- http://www.wikidata.org/entity/Q18921842
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall recibió premio según wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Daniel_Dae_Kim <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kelly_Marie_Tran <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Awkwafina <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Molly_Shannon <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christopher_Mintz-Plasse <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sam_Richardson <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Connie_Britton <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laverne_Cox <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Adam_Brody <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Max_Greenfield <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+
+
+
+/////////////////////////////////////////
+Punto2
+//////////////////////////////////////////
+buscando datos generales en wikidata de todas las películas que existan en wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+
+
+
+http://www.wikidata.org/entity/Q5115004
+directores de http://www.wikidata.org/entity/Q5115004 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon')}
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+actores internos encontrados 1
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon <--- http://www.wikidata.org/entity/Q2073496
+
+
+
+http://www.wikidata.org/entity/Q7292528
+directores de http://www.wikidata.org/entity/Q7292528 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon')}
+actores internos encontrados 0
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell <--- http://www.wikidata.org/entity/Q16207879
+
+
+
+http://www.wikidata.org/entity/Q62595383
+directores de http://www.wikidata.org/entity/Q62595383 encontrados internos : 1
+{rdflib.term.URIRef('https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell')}
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <--- http://www.wikidata.org/entity/Q235328
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <--- http://www.wikidata.org/entity/Q4488
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <--- http://www.wikidata.org/entity/Q230278
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <--- http://www.wikidata.org/entity/Q887347
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <--- http://www.wikidata.org/entity/Q219655
+actores internos encontrados 5
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan <--- wasDirectedByOscarWinner <--- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ 
+
+
+
+veo que Don_Hall:  http://www.wikidata.org/entity/Q18921842
+es director de una peli animada.
+
+award received - Academy Award for Best Animated Feature 
+
+--
+
+por eso la consulta del punto 2 donde busca actores, y no voice actors no lo obtiene!!.
+perfecto. modificarla no cambia el resultado para mi caso ya que no tengo actores dentro de mi dataset.
+pero me da un panorama de como cambia lo que se quiere obtener dependiendo del enforque que se le de.
+y sorpresas que podés encontrar buscando otros aproachs a las soluciones.
+
+punto 1 - solo obtener personas con premios y usar mi dataset para todo el proceso.
+punto 2 - asumir que un dataset externo tiene información completa que vos no tenes y usar ese dataset para generar relaciones en tu dataset.
+
+---
+
+bueno voy cerrando el trabajo.
+modifico el script para que escriba un archivo solo con las tripletas de las wasDirectedByOscarWinner
+para que sea mas simple corregir.
+y otro archivo con el dataset terminado completo final con todas las tripletas de todo.
+
+---
