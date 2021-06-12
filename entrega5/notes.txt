@@ -1,10 +1,8 @@
 
 Algunas ideas y conclusiones que fuí anotando a lo largo del desarrollo.
 un poco mas filtradas que notes_random.txt.
-posiblemente a lo largo del trabajo fui cambiando de idea en varias cuestiones.
 
 ---
-
 
 https://meta.wikimedia.org/wiki/Wikidata/Notes/URI_scheme
 https://meta.wikimedia.org/wiki/Wikidata/Notes/DBpedia_and_Wikidata
@@ -32,9 +30,10 @@ pensamiento random, como son bases de datos colaborativas y abiertas,
 se nos da la posibilidad de redireccionar el esfuerzo que aplicamos a mejorar los datasets en vez de en tunear los scripts para encontrar información ya existente.
 o sea diseñar los scripts en base a la ontología existente "ideal", y si algún recurso no cumple con esa estructura o le falta información, en vez de tunear el script para busque distinto o mas, 
 tunear el dataset para que este mas completo.
+por ejemplo lo que encontré sobre las ocupaciones de las personas actores y directores. (notes_random.txt)
 
-otro pensamiento random,
-posibilitamos la optimización de ese proceso ya que existen mas personas con conocimientos de ncorportar datos (dadas herraminetas amigables) para tunear los datasets, 
+otro pensamiento,
+posibilitamos la optimización de ese proceso ya que existen mas personas con conocimientos de incorportar datos (proveyendo herraminetas amigables) para tunear los datasets, 
 a personas con conocimientos de desarrollo y consulta de los mismos. (python y sparql)
 todo wikimedia por lo menos te da editores gráficos para tunear esos datasets, es la primer info que te dan. por sobre info técnica.
 
@@ -110,8 +109,7 @@ sobre datasets de ontologías no tan abstractas!!
 wikidata es mas complejo que dbpedia.
 pero tengo mas poder sobre los datasets de wikidata que sobre los de dbpedia.
 
-(lo deje como nota porque lo concluí antes de entender bien los prefijos de wikidata. con wdt: se me resolvieron varios temas y me
-parece mucho mas cercano ahora a las consultas en dbpedia)
+así y todo wikidata con el prefijo wdt: se acerca bastante a dbpedia en algunas cuestiones.
 
 ---
 
@@ -132,21 +130,43 @@ creo que me cambió completamente la cabeza fue el pensar la estructura de la in
 siempre vi la estructura como parte del diseño de relaciones entre pedazos de información.
 lo que estoy pensando y evaluando es que dentro de estos grafos de conocimiento la estructura y relaciones son parte de la misma información!.
 y si bien existe cierta definición de esas relaciones, puede variar y mutar a medida que tocamos ontologías, etc.
-lo que hace wikidata para estructurar sus datos, donde codifica su propia estructura dentro de la misma información contenida (sentencias, las P...,).
 y el poder de consultar la "forma de esa estructura" (lo que explicó diego en la teoría) en consultas sparql es impresionante!!. 
 los filtros que sean sobre la "forma" en vez de solamente sobre que datos tiene. totalmente nuevo para mi. y una forma de pensar los problemas desde otro lado.
 
 ---
 
-como resumen lo que me llevo del trabajo, creo que me sirvió.
-la idea original que yo tenía de analizar otras formas para relacionar información, motivada por necesidades en mi trabajo, creo que está por lo menos mas dirigida.
-veo como una opción super válida comenzar a explorar por este lado alternativas de solución a lo que tenemos en el laburo implementado.
-otro pensamiento es creo que hoy con todo lo que ha surgido en pocos años en referencia a este tipo de representar información, no debería ser una materia opcional. 
-debería ser troncal a la par de base de datos. y poder contrastar alternativas de representación de los datos mas allá de los relacionales tradicionales.
-mas si existen ya motores de consulta como sparql!!.
-también no dejo de sentir que lo vi muy por arriba, tengo esa sensación del tp. que son conceptos que son necesarios explorar muchísimo mas a fondo. claramente no da el tiempo dentro de una materia optativa y 
-con todo lo que hay que analizar y probar.
-asi como objetos y bases de datos, esto es otra forma de pensar y estructurar soluciones.
-DDD 
+pensando en las bases relacionales, y como han pasado desde ser motores para procesar consultas complejas, donde prácticamente todo el software estaba implementado en sql gigantes y usando triggers,
+a bases practicamente bobas para almacenar los mapeos de los objetos usados por motores de ORM.
+el porqué de esto, y las limitaciones de asignar a un motor lógica del problema.
+no puedo dejar de preguntarme que analogía veo con sparql y que lo hace diferente. 
+hoy generando sistemas complejos con mucha lógica implementada en las consultas sparql. y como impactará el problema de unir varios dominios distintos.
+replicar información en distintos nodos, etc.
+creo que una diferencia importantísima es justamente la estructura de la información basada en grafos y en tripletas, que hace trivial el unir datasets.
+pero el procesamiento distribuído de esos datasets es lo que me queda pendiende de entender si es posble. como lo logran, etc.
+las bases de wikidata están solamente en servidores grosos? o usan algún tipo de arquitectura distribuída?. como la implementan como transfieren parte de lógica sparql entre los nodos y la dividen para procesarla, etc.
 
 ---
+
+lo que me llevo del trabajo,
+la idea original que yo tenía de analizar otras formas para relacionar información, motivada por necesidades en mi trabajo, creo que está por lo menos mas dirigida.
+veo como una opción super válida comenzar a explorar por este lado alternativas de solución a lo que tenemos en el laburo implementado o que reimplementar.
+inclusive para mi sorpresa es tan simple armar un motor de sparql usando fuseki junto con un dataset de ejemplo que armar lo mismo usando un motor de bases relacionales.
+
+creo que hoy con todo lo que ha surgido en pocos años en referencia a esta forma de representar información, no debería ser una materia opcional. 
+debería ser troncal a la par de base de datos. y poder contrastar alternativas de representación de los datos mas allá de los formatos relacionales tradicionales.
+tengo igual una sensación de que lo vi muy por arriba. que son conceptos que son necesarios explorar muchísimo mas a fondo. 
+asi como objetos y bases de datos relacionales, la web semántica es otra forma de pensar y estructurar soluciones.
+a lo largo del trabajo fui cambiando consultas, me surgieron dudas, volvi a cambiarlas, descubrí otras cosas a medida que leía documentación, volví a cambialas, 
+al final me quedaron tan simples que no se si son correctas!! jajjajaj.
+
+siento que cumplió el objetivo de introducirnos en este mundo, pero me quedan mas dudas que certezas jajja.
+me siento como la primera vez que aprendí objetos y las miles de posibilidades que se abren para explorar. 
+
+---
+
+y como última nota.
+usando el google tv que tengo en el living, viendo los ratings que saca de rotten tomatoes, y las sugerencias que da de pelis, etc. 
+jaa ahora se como funcionas!!!.
+
+---
+
