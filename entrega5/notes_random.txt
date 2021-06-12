@@ -3710,12 +3710,137 @@ http://dbpedia.org/resource/Black_Beauty_(1971_film)	http://dbpedia.org/resource
 http://dbpedia.org/resource/Black_Beauty_(1971_film)	http://dbpedia.org/resource/Walter_Slezak	http://dbpedia.org/resource/James_Hill_(British_director)
 
 
-entonces puedo filtrar por director con las personas que tengo en mi base.
+---
+
+así con la siguiente consulta puedo obtener director, actor.
+de la base de dbepdia.
+
+select distinct  ?d ?p where {
+      ?m dbo:starring ?p .
+      ?m dbo:director ?d .
+      ?d dbp:awards dbr:Academy_Awards .
+}
+
+
+
+d	p
+http://dbpedia.org/resource/Claude_Berri	http://dbpedia.org/resource/Carole_Bouquet
+http://dbpedia.org/resource/Claude_Berri	http://dbpedia.org/resource/Daniel_Auteuil
+http://dbpedia.org/resource/James_Hill_(British_director)	http://dbpedia.org/resource/Robert_Stephens
+http://dbpedia.org/resource/James_Hill_(British_director)	http://dbpedia.org/resource/Shirley_Anne_Field
+http://dbpedia.org/resource/Giuseppe_Tornatore	http://dbpedia.org/resource/Laura_Del_Sol
+http://dbpedia.org/resource/Giuseppe_Tornatore	http://dbpedia.org/resource/Ben_Gazzara
+http://dbpedia.org/resource/Giuseppe_Tornatore	http://dbpedia.org/resource/Leo_Gullotta
+http://dbpedia.org/resource/Giuseppe_Tornatore	http://dbpedia.org/resource/Franco_Interlenghi
+http://dbpedia.org/resource/James_Hill_(British_director)	http://dbpedia.org/resource/Patrick_Mower
+http://dbpedia.org/resource/James_Hill_(British_director)	http://dbpedia.org/resource/Walter_Slezak
+http://dbpedia.org/resource/James_Hill_(British_director)	http://dbpedia.org/resource/John_Nettleton_(actor)
+http://dbpedia.org/resource/James_Hill_(British_director)	http://dbpedia.org/resource/Mark_Lester
+http://dbpedia.org/resource/James_Hill_(British_director)	http://dbpedia.org/resource/Bill_Travers
+http://dbpedia.org/resource/James_Hill_(British_director)	http://dbpedia.org/resource/Virginia_McKenna
+http://dbpedia.org/resource/Giuseppe_Tornatore	http://dbpedia.org/resource/Gérard_Depardieu
+http://dbpedia.org/resource/Giuseppe_Tornatore	http://dbpedia.org/resource/Roman_Polanski
+http://dbpedia.org/resource/Ingmar_Bergman	http://dbpedia.org/resource/Bibi_Andersson
+http://dbpedia.org/resource/Ingmar_Bergman	http://dbpedia.org/resource/Lennart_Hjulström
+http://dbpedia.org/resource/Ingmar_Bergman	http://dbpedia.org/resource/Henrik_Nyberg
+http://dbpedia.org/resource/Ingmar_Bergman
+
+.....
+
+asi que con esos resultados puedo filtrar por recurso en mi base y asignar las propieades.
+
+--
+
+igual ahora que me doy cuenta las personas que tengo en mi base, tengo dentro de mi ontología si es actor o no.
+asi que solo tengo que sacar los directores que recibieron premios y despues todo le filtrado es dentro de mi grafo.
+
 ---
 
 
 
+select distinct  ?d where {
+      ?m dbo:director ?d .
+      ?d dbp:awards dbr:Academy_Awards .
+}
 
 
+
+d
+http://dbpedia.org/resource/Chris_Buck
+http://dbpedia.org/resource/Claude_Berri
+http://dbpedia.org/resource/Giuseppe_Tornatore
+http://dbpedia.org/resource/Michel_Hazanavicius
+http://dbpedia.org/resource/Ingmar_Bergman
+http://dbpedia.org/resource/James_Hill_(British_director)
+
+mmm solo esos directores?
+
+----
+
+a ver que datos tengo en wikidata.
+
+
+https://www.wikidata.org/wiki/Q19020
+
+
+SELECT DISTINCT ?person ?personLabel WHERE {
+  ?person wdt:P166/wdt:P31? wd:Q19020 .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+}
+
+ wd:Q201687	Milk
+ wd:Q391343	The Great McGinty
+ wd:Q193570	Sunset Boulevard
+ wd:Q507252	Barry Morrow
+Showing 1 to 200 of 3435 rows  rows per page‹12345...18›
+
+---
+
+ajusto un poco la consulta a ver que me sale.
+
+SELECT DISTINCT ?person ?personLabel WHERE {
+  ?person wdt:P166 wd:Q19020 .
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en" .
+  }
+}
+
+128 resultados.
+
+person
+personLabel
+ wd:Q3610284	Love in Bloom
+ wd:Q6690237	Love
+ wd:Q7962099	Walk on the Wild Side
+ wd:Q17022109	Suddenly
+ wd:Q15727557	The Moon Song
+ wd:Q7154537	Paul Zastupnevich
+
+
+hay de todo. ya que algunas cosas no son personas!!. jaja
+
+
+---
+
+igual veo mucho mas completa la de wikidata. asi que voy a usar esa a ver que me responde.
+
+---
+
+SELECT DISTINCT ?person WHERE {
+  ?person wdt:P166 wd:Q19020 .
+}
+
+ wd:Q71243
+ wd:Q72984
+ wd:Q76895
+ wd:Q80966
+ wd:Q83492
+ wd:Q94081
+ wd:Q94123
+ ....
+
+ 
 
 

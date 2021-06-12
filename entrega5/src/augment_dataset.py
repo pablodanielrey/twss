@@ -38,12 +38,17 @@ if __name__ == '__main__':
     delay = 2
     gdata = Graph()
     bind_schemas(gdata)
+    owl = get_schemas()['owl']
 
     endpoints = get_endpoints()
     procesado = 0
     cantidad = len(gsubjects)
 
     for s,p,o in gsubjects.triples((None,OWL.sameAs,None)):
+
+        ''' agrego la tripleta del sameAs así me queda interna la dataset '''
+        gdata.add((s, owl.sameAs, o))
+
         my_subject = str(s)
         subject = str(o)
 
