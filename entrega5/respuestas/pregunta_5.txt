@@ -13,31 +13,31 @@ el valor "Keanu Reeves" y todas las tripletas en las que ese recurso sea el suje
 
 no, ya que el nombre se asocia con mas personas en algunos casos.
 el mismo nombre después se relaciona con distintas personas. por lo que debemos como mínimo chequear las ocupaciones
-para analizar si puede ser una persona asociada a la industria filmatográfica.
-en el ejercicio el datasource de dbpedia no me dá una forma automática. por lo que decidí hacer un procesado manual.
+para analizar si puede ser una persona asociada a la industria cinematográfica.
+en el ejercicio el datasource de dbpedia no me dá una forma de realizar esto automáticamente. por lo que decidí hacer un procesado manual.
 en wikidata si me lo permite ya que las ocupaciones tienen clases y tipos.
+mas datos en notes_random.txt para no ensuciar esto.
 
 
 ¿Necesita utilizar mas características para asegurar que el concepto de Wikidata (DBpedia) sea la persona que usted desea buscar?
 
-si, la ocupación como mínimo.
+si, la ocupación se me ocurrió.
 como mi dataset se produjo con personas que o son actores o directores puedo filtrar usando esas ocupaciones.
 ultilicé una estrategia que solo es posible en mi dataset. pero no es trasnferible a cualquier solución.
 o sea tengo "harcodeado" que son personas relacionadas con la industria cinematográfica.
-
 
 ¿Para otros tipos de recursos que tengan algo como nombre o título, piensa que alcanzaría esa estrategia?
 
 depnde del contexto y las ontologías de las cuales necesitamos traer los datos.
 en este caso si bien tengo la misma información, se representa de formas dinstintas en cada ontología.
-dbpedia me implicó un filtraod manual.
+dbpedia me implicó un filtraod manual debido a las PersonFunctions que solo son sublcases de PersonFunction.
 wikidata me permitía hacerlo mediante sparql.
 pero claramente una estrategia para realizarlo en el ámbito de la web semántica es agregar filtros a las consultas sparql.
-se me ocurre que en algunos casos de ontologías totalmente planas y sin relaciones, es imposible filtrar mucho usando, justamente por 
-la forma en que está estructurada la ontología y también el tipo de "curado" que se le realiza. de nada sirve tener filtros si los datos no están estructurados.
+se me ocurre que en algunos casos de ontologías totalmente planas y sin relaciones, es imposible filtrar mucho mediante sparql, justamente por 
+la forma en que está estructurada la ontología y también el tipo de "curado" que se le realiza a la información. de nada sirve tener filtros si los datos no están estructurados y cumplen esos formatos.
+
 me parece que esta estrategia funciona si es que se mantiene la calidad del dataset a filtrar (los individuals) con respecto a su definición (ontología). mediante herraminetas automáticas o manualmente.
 creo que una de las herramineas mas poderosas que tiene esta forma de representar conocimiento es justamente poder filtrar por "estructura" de un subgrafo, dentro del dataset que estoy consultando.
-
 
 Defina y agregue a su base de conocimiento la object property wasDirectedByOscarWinner que relaciona a una actriz/actor de su base de conocimiento con otra persona si:
 a) la primera actuó en una película dirigida por la segunda, y 
@@ -45,8 +45,33 @@ b) la segunda recibió un premio Oscar (en cualquier categoría).
 
 Utilice Wikidata/DBPedia para obtener la información.  Muestre la consulta que utilizó para eso.
 
+es el script: add_oscar_winner.py
+el análisis se encuentra dentro de notes_random.txt.
+
 En este ejercicio vamos a enriquecer la información que fue generando a lo largo de la asignatura relacionada al cine. La idea es que utilice consultas SPARQL sobre Wikidata y DBpedia para 
 enriquecer sus bases de conocimiento (los archivos .ttl) que con los resultados de esas consultas.
 
 En comparación con el TP anterior (donde enriqueció en base a dereferenciación de URLs), ¿Qué diferencias, ventajas y desventajas le encuentra al uso de SPARQL?. Si utilizó alguna librería específica comente brevemente 
 las ventajas que encontró, y cómo le ayudo en su solución. 
+
+claramente usar sparql simplifica muchísimo. donde se tiene un motor que soluciona los filtrados en vez de hacerlo manualmente mediante código.
+es mucho mas simple probar ideas y ver resultados.
+ventajas muchas. la principal novedad para mi es filtrar los grafos por estructura. y el pensar la estructura del mismo como parte de la información y no 
+como relaciones solamente entre "pedazos"  de información. creo que es la herramienta mas poderosa que tiene con respecto a otros esquemas.
+escribo alguna conclusión sobre esto en notas.txt para tenerlo organizado.
+
+desventajas que me encontré fue or ejemplo cruzar filtros entre datasets. en la parte de agregar lo del oscar se me ocurrieron 2 posibles soluciones.
+las cuales dependen de justmente esa barrera entre datasets. que info tomamos dentro de uno y que info tomamos dentro del otro.
+leí algo sobre fuseki y quería ver si es posible conectar:
+
+    mi python ---> sparql --> fuski ---> dataset
+                                |
+                                -------> sparql ----> wikidata
+
+pero no lo vi simple y por lo que leí no lo soporta.
+la idea es que el motor de sparql de fuseki use como dataset un endpoint sparql.
+jaja pero no lo vi rápido y no tengo mucho tiempo para terminar la entrega.
+con este tipo de arquitecturas el motor de fuseki te resolvería el problema de los límites entre un dataset y el externo. por lo menos a nivel de consultas sparql.
+solo una idea.
+
+

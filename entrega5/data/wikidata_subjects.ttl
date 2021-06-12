@@ -1,286 +1,288 @@
-@prefix ns1: <http://www.w3.org/2002/07/owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix twssd: <https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada> ns1:sameAs <http://www.wikidata.org/entity/Q2066366> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/%C3%93scar_Jaenada> owl:sameAs wd:Q2066366 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Aaron_Taylor-Johnson> ns1:sameAs <http://www.wikidata.org/entity/Q45923> .
+twssd:Aaron_Taylor-Johnson owl:sameAs wd:Q45923 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Adam_Brody> ns1:sameAs <http://www.wikidata.org/entity/Q294372> .
+twssd:Adam_Brody owl:sameAs wd:Q294372 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Adam_Wingard> ns1:sameAs <http://www.wikidata.org/entity/Q4679987> .
+twssd:Adam_Wingard owl:sameAs wd:Q4679987 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alberto_Ammann> ns1:sameAs <http://www.wikidata.org/entity/Q2595437> .
+twssd:Alberto_Ammann owl:sameAs wd:Q2595437 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alex_Delescu> ns1:sameAs <http://www.wikidata.org/entity/Q87070025> .
+twssd:Alex_Delescu owl:sameAs wd:Q87070025 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> ns1:sameAs <http://www.wikidata.org/entity/Q310637> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alexander_Skarsg%C3%A5rd> owl:sameAs wd:Q310637 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alice_Braga> ns1:sameAs <http://www.wikidata.org/entity/Q230903> .
+twssd:Alice_Braga owl:sameAs wd:Q230903 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Alison_Brie> ns1:sameAs <http://www.wikidata.org/entity/Q235328> .
+twssd:Alison_Brie owl:sameAs wd:Q235328 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Amr_Waked> ns1:sameAs <http://www.wikidata.org/entity/Q602231> .
+twssd:Amr_Waked owl:sameAs wd:Q602231 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Amy_Nicholson> ns1:sameAs <http://www.wikidata.org/entity/Q106779017>,
-        <http://www.wikidata.org/entity/Q24706223> .
+twssd:Amy_Nicholson owl:sameAs wd:Q106779017,
+        wd:Q24706223 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Andrew_Ellis> ns1:sameAs <http://www.wikidata.org/entity/Q17417465> .
+twssd:Andrew_Ellis owl:sameAs wd:Q17417465 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Anna_Kendrick> ns1:sameAs <http://www.wikidata.org/entity/Q67701> .
+twssd:Anna_Kendrick owl:sameAs wd:Q67701 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Antonio_Banderas> ns1:sameAs <http://www.wikidata.org/entity/Q41548> .
+twssd:Antonio_Banderas owl:sameAs wd:Q41548 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Anya_Taylor-Joy> ns1:sameAs <http://www.wikidata.org/entity/Q20882479> .
+twssd:Anya_Taylor-Joy owl:sameAs wd:Q20882479 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Awkwafina> ns1:sameAs <http://www.wikidata.org/entity/Q15306031> .
+twssd:Awkwafina owl:sameAs wd:Q15306031 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Benjamin_Biolay> ns1:sameAs <http://www.wikidata.org/entity/Q182991> .
+twssd:Benjamin_Biolay owl:sameAs wd:Q182991 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Blu_Hunt> ns1:sameAs <http://www.wikidata.org/entity/Q35569582> .
+twssd:Blu_Hunt owl:sameAs wd:Q35569582 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bo_Burnham> ns1:sameAs <http://www.wikidata.org/entity/Q887347> .
+twssd:Bo_Burnham owl:sameAs wd:Q887347 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Bobby_Cannavale> ns1:sameAs <http://www.wikidata.org/entity/Q428819> .
+twssd:Bobby_Cannavale owl:sameAs wd:Q428819 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Brian_Tyree_Henry> ns1:sameAs <http://www.wikidata.org/entity/Q26924801> .
+twssd:Brian_Tyree_Henry owl:sameAs wd:Q26924801 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/C%C3%A9sar_Bord%C3%B3n> ns1:sameAs <http://www.wikidata.org/entity/Q5796159> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/C%C3%A9sar_Bord%C3%B3n> owl:sameAs wd:Q5796159 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Camille_Cottin> ns1:sameAs <http://www.wikidata.org/entity/Q16535251> .
+twssd:Camille_Cottin owl:sameAs wd:Q16535251 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carey_Mulligan> ns1:sameAs <http://www.wikidata.org/entity/Q219655> .
+twssd:Carey_Mulligan owl:sameAs wd:Q219655 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Carole_Bouquet> ns1:sameAs <http://www.wikidata.org/entity/Q106607> .
+twssd:Carole_Bouquet owl:sameAs wd:Q106607 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chance_the_Rapper> ns1:sameAs <http://www.wikidata.org/entity/Q12470060> .
+twssd:Chance_the_Rapper owl:sameAs wd:Q12470060 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Charlie_Heaton> ns1:sameAs <http://www.wikidata.org/entity/Q20974088> .
+twssd:Charlie_Heaton owl:sameAs wd:Q20974088 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chiara_Mastroianni> ns1:sameAs <http://www.wikidata.org/entity/Q283317> .
+twssd:Chiara_Mastroianni owl:sameAs wd:Q283317 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chlo%C3%AB_Grace_Moretz> ns1:sameAs <http://www.wikidata.org/entity/Q4509> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chlo%C3%AB_Grace_Moretz> owl:sameAs wd:Q4509 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Chris_Pine> ns1:sameAs <http://www.wikidata.org/entity/Q23466> .
+twssd:Chris_Pine owl:sameAs wd:Q23466 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> ns1:sameAs <http://www.wikidata.org/entity/Q551772> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christophe_Honor%C3%A9> owl:sameAs wd:Q551772 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christopher_Mintz-Plasse> ns1:sameAs <http://www.wikidata.org/entity/Q440956> .
+twssd:Christopher_Mintz-Plasse owl:sameAs wd:Q440956 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christopher_Nolan> ns1:sameAs <http://www.wikidata.org/entity/Q25191> .
+twssd:Christopher_Nolan owl:sameAs wd:Q25191 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Clancy_Brown> ns1:sameAs <http://www.wikidata.org/entity/Q4488> .
+twssd:Clancy_Brown owl:sameAs wd:Q4488 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Connie_Britton> ns1:sameAs <http://www.wikidata.org/entity/Q235519> .
+twssd:Connie_Britton owl:sameAs wd:Q235519 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Connie_Nielsen> ns1:sameAs <http://www.wikidata.org/entity/Q231951> .
+twssd:Connie_Nielsen owl:sameAs wd:Q231951 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Cynthia_Erivo> ns1:sameAs <http://www.wikidata.org/entity/Q21592474> .
+twssd:Cynthia_Erivo owl:sameAs wd:Q21592474 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Daisy_Ridley> ns1:sameAs <http://www.wikidata.org/entity/Q16738674> .
+twssd:Daisy_Ridley owl:sameAs wd:Q16738674 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Daniel_Dae_Kim> ns1:sameAs <http://www.wikidata.org/entity/Q299700> .
+twssd:Daniel_Dae_Kim owl:sameAs wd:Q299700 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/David_Oyelowo> ns1:sameAs <http://www.wikidata.org/entity/Q218800> .
+twssd:David_Oyelowo owl:sameAs wd:Q218800 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Demi%C3%A1n_Bichir> ns1:sameAs <http://www.wikidata.org/entity/Q449940> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Demi%C3%A1n_Bichir> owl:sameAs wd:Q449940 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Dennis_Mojen> ns1:sameAs <http://www.wikidata.org/entity/Q19883570> .
+twssd:Dennis_Mojen owl:sameAs wd:Q19883570 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Diego_Peretti> ns1:sameAs <http://www.wikidata.org/entity/Q5274770> .
+twssd:Diego_Peretti owl:sameAs wd:Q5274770 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Dimple_Kapadia> ns1:sameAs <http://www.wikidata.org/entity/Q158558> .
+twssd:Dimple_Kapadia owl:sameAs wd:Q158558 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall> ns1:sameAs <http://www.wikidata.org/entity/Q18921842> .
+twssd:Don_Hall owl:sameAs wd:Q18921842 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Doug_Liman> ns1:sameAs <http://www.wikidata.org/entity/Q349339> .
+twssd:Doug_Liman owl:sameAs wd:Q349339 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez> ns1:sameAs <http://www.wikidata.org/entity/Q572761> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Eiza_Gonz%C3%A1lez> owl:sameAs wd:Q572761 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Elizabeth_Debicki> ns1:sameAs <http://www.wikidata.org/entity/Q5362676> .
+twssd:Elizabeth_Debicki owl:sameAs wd:Q5362676 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell> ns1:sameAs <http://www.wikidata.org/entity/Q16207879> .
+twssd:Emerald_Fennell owl:sameAs wd:Q16207879 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emilia_Sch%C3%BCle> ns1:sameAs <http://www.wikidata.org/entity/Q87594> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emilia_Sch%C3%BCle> owl:sameAs wd:Q87594 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Esteban_Bigliardi> ns1:sameAs <http://www.wikidata.org/entity/Q27949870> .
+twssd:Esteban_Bigliardi owl:sameAs wd:Q27949870 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Flula_Borg> ns1:sameAs <http://www.wikidata.org/entity/Q19668395> .
+twssd:Flula_Borg owl:sameAs wd:Q19668395 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Frank_Welker> ns1:sameAs <http://www.wikidata.org/entity/Q296577> .
+twssd:Frank_Welker owl:sameAs wd:Q296577 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gabriella_Wilde> ns1:sameAs <http://www.wikidata.org/entity/Q371860> .
+twssd:Gabriella_Wilde owl:sameAs wd:Q371860 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Gal_Gadot> ns1:sameAs <http://www.wikidata.org/entity/Q185654> .
+twssd:Gal_Gadot owl:sameAs wd:Q185654 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Geoff_Johns> ns1:sameAs <http://www.wikidata.org/entity/Q1376074> .
+twssd:Geoff_Johns owl:sameAs wd:Q1376074 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Happy_Anderson> ns1:sameAs <http://www.wikidata.org/entity/Q24883904> .
+twssd:Happy_Anderson owl:sameAs wd:Q24883904 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Haruo_Sotozaki> ns1:sameAs <http://www.wikidata.org/entity/Q28687612> .
+twssd:Haruo_Sotozaki owl:sameAs wd:Q28687612 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Heiner_Lauterbach> ns1:sameAs <http://www.wikidata.org/entity/Q97423> .
+twssd:Heiner_Lauterbach owl:sameAs wd:Q97423 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Henry_Zaga> ns1:sameAs <http://www.wikidata.org/entity/Q30998289> .
+twssd:Henry_Zaga owl:sameAs wd:Q30998289 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Hern%C3%A1n_Jim%C3%A9nez> ns1:sameAs <http://www.wikidata.org/entity/Q27832751>,
-        <http://www.wikidata.org/entity/Q28070848> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Hern%C3%A1n_Jim%C3%A9nez> owl:sameAs wd:Q27832751,
+        wd:Q28070848 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Himesh_Patel> ns1:sameAs <http://www.wikidata.org/entity/Q2835788> .
+twssd:Himesh_Patel owl:sameAs wd:Q2835788 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ian_Kenny> ns1:sameAs <http://www.wikidata.org/entity/Q56305623> .
+twssd:Ian_Kenny owl:sameAs wd:Q56305623 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jake_Curran> ns1:sameAs <http://www.wikidata.org/entity/Q63432264> .
+twssd:Jake_Curran owl:sameAs wd:Q63432264 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jake_Wilson> ns1:sameAs <http://www.wikidata.org/entity/Q100956503> .
+twssd:Jake_Wilson owl:sameAs wd:Q100956503 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/James_Corden> ns1:sameAs <http://www.wikidata.org/entity/Q767499> .
+twssd:James_Corden owl:sameAs wd:Q767499 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jamie_Dornan> ns1:sameAs <http://www.wikidata.org/entity/Q976022> .
+twssd:Jamie_Dornan owl:sameAs wd:Q976022 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jennifer_Coolidge> ns1:sameAs <http://www.wikidata.org/entity/Q230278> .
+twssd:Jennifer_Coolidge owl:sameAs wd:Q230278 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Jessica_Henwick> ns1:sameAs <http://www.wikidata.org/entity/Q6187270> .
+twssd:Jessica_Henwick owl:sameAs wd:Q6187270 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/John_David_Washington> ns1:sameAs <http://www.wikidata.org/entity/Q4120019> .
+twssd:John_David_Washington owl:sameAs wd:Q4120019 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Josh_Boone> ns1:sameAs <http://www.wikidata.org/entity/Q6288682> .
+twssd:Josh_Boone owl:sameAs wd:Q6288682 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Julian_Dennison> ns1:sameAs <http://www.wikidata.org/entity/Q24189388> .
+twssd:Julian_Dennison owl:sameAs wd:Q24189388 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/June_Foray> ns1:sameAs <http://www.wikidata.org/entity/Q241646> .
+twssd:June_Foray owl:sameAs wd:Q241646 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Justin_Timberlake> ns1:sameAs <http://www.wikidata.org/entity/Q43432> .
+twssd:Justin_Timberlake owl:sameAs wd:Q43432 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Karan_Soni> ns1:sameAs <http://www.wikidata.org/entity/Q22815258> .
+twssd:Karan_Soni owl:sameAs wd:Q22815258 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Katsuyuki_Konishi> ns1:sameAs <http://www.wikidata.org/entity/Q725392> .
+twssd:Katsuyuki_Konishi owl:sameAs wd:Q725392 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kelly_Marie_Tran> ns1:sameAs <http://www.wikidata.org/entity/Q30305927> .
+twssd:Kelly_Marie_Tran owl:sameAs wd:Q30305927 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ken_Duken> ns1:sameAs <http://www.wikidata.org/entity/Q68084> .
+twssd:Ken_Duken owl:sameAs wd:Q68084 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kenneth_Branagh> ns1:sameAs <http://www.wikidata.org/entity/Q55294> .
+twssd:Kenneth_Branagh owl:sameAs wd:Q55294 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kristen_Wiig> ns1:sameAs <http://www.wikidata.org/entity/Q231382> .
+twssd:Kristen_Wiig owl:sameAs wd:Q231382 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kristoffer_Polaha> ns1:sameAs <http://www.wikidata.org/entity/Q726708> .
+twssd:Kristoffer_Polaha owl:sameAs wd:Q726708 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kunal_Nayyar> ns1:sameAs <http://www.wikidata.org/entity/Q310375> .
+twssd:Kunal_Nayyar owl:sameAs wd:Q310375 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kurt_Sutter> ns1:sameAs <http://www.wikidata.org/entity/Q955336> .
+twssd:Kurt_Sutter owl:sameAs wd:Q955336 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Kyle_Chandler> ns1:sameAs <http://www.wikidata.org/entity/Q359604> .
+twssd:Kyle_Chandler owl:sameAs wd:Q359604 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laura_L%C3%B3pez_Moyano> ns1:sameAs <http://www.wikidata.org/entity/Q106243176> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laura_L%C3%B3pez_Moyano> owl:sameAs wd:Q106243176 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Laverne_Cox> ns1:sameAs <http://www.wikidata.org/entity/Q6502596> .
+twssd:Laverne_Cox owl:sameAs wd:Q6502596 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Lil_Rel_Howery> ns1:sameAs <http://www.wikidata.org/entity/Q21067271> .
+twssd:Lil_Rel_Howery owl:sameAs wd:Q21067271 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Lilly_Aspell> ns1:sameAs <http://www.wikidata.org/entity/Q66660262> .
+twssd:Lilly_Aspell owl:sameAs wd:Q66660262 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Lynda_Carter> ns1:sameAs <http://www.wikidata.org/entity/Q242903> .
+twssd:Lynda_Carter owl:sameAs wd:Q242903 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mads_Mikkelsen> ns1:sameAs <http://www.wikidata.org/entity/Q294647> .
+twssd:Mads_Mikkelsen owl:sameAs wd:Q294647 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Maisie_Williams> ns1:sameAs <http://www.wikidata.org/entity/Q234363> .
+twssd:Maisie_Williams owl:sameAs wd:Q234363 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Marie-Christine_Adam> ns1:sameAs <http://www.wikidata.org/entity/Q2724026> .
+twssd:Marie-Christine_Adam owl:sameAs wd:Q2724026 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mark_Jackson> ns1:sameAs <http://www.wikidata.org/entity/Q51955088> .
+twssd:Mark_Jackson owl:sameAs wd:Q51955088 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Martin_Donovan> ns1:sameAs <http://www.wikidata.org/entity/Q61867559>,
-        <http://www.wikidata.org/entity/Q726130> .
+twssd:Martin_Donovan owl:sameAs wd:Q61867559,
+        wd:Q726130 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Martin_Schreier> ns1:sameAs <http://www.wikidata.org/entity/Q43536128> .
+twssd:Martin_Schreier owl:sameAs wd:Q43536128 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Max_Greenfield> ns1:sameAs <http://www.wikidata.org/entity/Q891796> .
+twssd:Max_Greenfield owl:sameAs wd:Q891796 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Mel_Blanc> ns1:sameAs <http://www.wikidata.org/entity/Q349690> .
+twssd:Mel_Blanc owl:sameAs wd:Q349690 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Caine> ns1:sameAs <http://www.wikidata.org/entity/Q123351> .
+twssd:Michael_Caine owl:sameAs wd:Q123351 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Gwisdek> ns1:sameAs <http://www.wikidata.org/entity/Q70727> .
+twssd:Michael_Gwisdek owl:sameAs wd:Q70727 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Pe%C3%B1a> ns1:sameAs <http://www.wikidata.org/entity/Q359488> .
+<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Michael_Pe%C3%B1a> owl:sameAs wd:Q359488 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Millie_Bobby_Brown> ns1:sameAs <http://www.wikidata.org/entity/Q25936414> .
+twssd:Millie_Bobby_Brown owl:sameAs wd:Q25936414 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Molly_Shannon> ns1:sameAs <http://www.wikidata.org/entity/Q239145> .
+twssd:Molly_Shannon owl:sameAs wd:Q239145 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Natalia_Oreiro> ns1:sameAs <http://www.wikidata.org/entity/Q232458> .
+twssd:Natalia_Oreiro owl:sameAs wd:Q232458 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Natasha_Rothwell> ns1:sameAs <http://www.wikidata.org/entity/Q62007121> .
+twssd:Natasha_Rothwell owl:sameAs wd:Q62007121 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Nick_Jonas> ns1:sameAs <http://www.wikidata.org/entity/Q201656> .
+twssd:Nick_Jonas owl:sameAs wd:Q201656 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Nikolai_Kinski> ns1:sameAs <http://www.wikidata.org/entity/Q712449> .
+twssd:Nikolai_Kinski owl:sameAs wd:Q712449 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Oakley_Bull> ns1:sameAs <http://www.wikidata.org/entity/Q70535485> .
+twssd:Oakley_Bull owl:sameAs wd:Q70535485 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Pablo_Echarri> ns1:sameAs <http://www.wikidata.org/entity/Q2422720> .
+twssd:Pablo_Echarri owl:sameAs wd:Q2422720 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Pablo_Rago> ns1:sameAs <http://www.wikidata.org/entity/Q3290318> .
+twssd:Pablo_Rago owl:sameAs wd:Q3290318 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Patty_Jenkins> ns1:sameAs <http://www.wikidata.org/entity/Q456910> .
+twssd:Patty_Jenkins owl:sameAs wd:Q456910 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Paul_Briggs> ns1:sameAs <http://www.wikidata.org/entity/Q20974031> .
+twssd:Paul_Briggs owl:sameAs wd:Q20974031 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Pedro_Pascal> ns1:sameAs <http://www.wikidata.org/entity/Q14752155> .
+twssd:Pedro_Pascal owl:sameAs wd:Q14752155 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ravi_Patel> ns1:sameAs <http://www.wikidata.org/entity/Q7296648> .
+twssd:Ravi_Patel owl:sameAs wd:Q7296648 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Ray_McKinnon> ns1:sameAs <http://www.wikidata.org/entity/Q2073496> .
+twssd:Ray_McKinnon owl:sameAs wd:Q2073496 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Rebecca_Hall> ns1:sameAs <http://www.wikidata.org/entity/Q230534> .
+twssd:Rebecca_Hall owl:sameAs wd:Q230534 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Rita_Tushingham> ns1:sameAs <http://www.wikidata.org/entity/Q435107> .
+twssd:Rita_Tushingham owl:sameAs wd:Q435107 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Robert_Pattinson> ns1:sameAs <http://www.wikidata.org/entity/Q36767> .
+twssd:Robert_Pattinson owl:sameAs wd:Q36767 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Robin_Wright> ns1:sameAs <http://www.wikidata.org/entity/Q272972> .
+twssd:Robin_Wright owl:sameAs wd:Q272972 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Rosario_Dawson> ns1:sameAs <http://www.wikidata.org/entity/Q228692> .
+twssd:Rosario_Dawson owl:sameAs wd:Q228692 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sahil_Shroff> ns1:sameAs <http://www.wikidata.org/entity/Q7399640>,
-        <http://www.wikidata.org/entity/Q95903159> .
+twssd:Sahil_Shroff owl:sameAs wd:Q7399640,
+        wd:Q95903159 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sam_Richardson> ns1:sameAs <http://www.wikidata.org/entity/Q24050468>,
-        <http://www.wikidata.org/entity/Q42531667> .
+twssd:Sam_Richardson owl:sameAs wd:Q24050468,
+        wd:Q42531667 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sam_Rockwell> ns1:sameAs <http://www.wikidata.org/entity/Q316446> .
+twssd:Sam_Rockwell owl:sameAs wd:Q316446 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Saori_Hayami> ns1:sameAs <http://www.wikidata.org/entity/Q1153079> .
+twssd:Saori_Hayami owl:sameAs wd:Q1153079 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sarah_Ward> ns1:sameAs <http://www.wikidata.org/entity/Q18528126>,
-        <http://www.wikidata.org/entity/Q22910723> .
+twssd:Sarah_Ward owl:sameAs wd:Q18528126,
+        wd:Q22910723 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Satoshi_Hino> ns1:sameAs <http://www.wikidata.org/entity/Q11665869> .
+twssd:Satoshi_Hino owl:sameAs wd:Q11665869 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Shun_Oguri> ns1:sameAs <http://www.wikidata.org/entity/Q457825> .
+twssd:Shun_Oguri owl:sameAs wd:Q457825 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sia_Alipour> ns1:sameAs <http://www.wikidata.org/entity/Q81823145> .
+twssd:Sia_Alipour owl:sameAs wd:Q81823145 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Subrat_Dutta> ns1:sameAs <http://www.wikidata.org/entity/Q18785250> .
+twssd:Subrat_Dutta owl:sameAs wd:Q18785250 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sylvester_McCoy> ns1:sameAs <http://www.wikidata.org/entity/Q455551> .
+twssd:Sylvester_McCoy owl:sameAs wd:Q455551 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Thomas_Kee> ns1:sameAs <http://www.wikidata.org/entity/Q88438553> .
+twssd:Thomas_Kee owl:sameAs wd:Q88438553 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Tim_Story> ns1:sameAs <http://www.wikidata.org/entity/Q2005037> .
+twssd:Tim_Story owl:sameAs wd:Q2005037 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Tom_Holland> ns1:sameAs <http://www.wikidata.org/entity/Q1236243>,
-        <http://www.wikidata.org/entity/Q1340923>,
-        <http://www.wikidata.org/entity/Q2023710> .
+twssd:Tom_Holland owl:sameAs wd:Q1236243,
+        wd:Q1340923,
+        wd:Q2023710 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Tomokazu_Seki> ns1:sameAs <http://www.wikidata.org/entity/Q284401> .
+twssd:Tomokazu_Seki owl:sameAs wd:Q284401 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Tony_Cervone> ns1:sameAs <http://www.wikidata.org/entity/Q13600413> .
+twssd:Tony_Cervone owl:sameAs wd:Q13600413 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Vincent_Lacoste> ns1:sameAs <http://www.wikidata.org/entity/Q3559693> .
+twssd:Vincent_Lacoste owl:sameAs wd:Q3559693 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Walt_Dohrn> ns1:sameAs <http://www.wikidata.org/entity/Q2713565> .
+twssd:Walt_Dohrn owl:sameAs wd:Q2713565 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Wilfried_Hochholdinger> ns1:sameAs <http://www.wikidata.org/entity/Q89486> .
+twssd:Wilfried_Hochholdinger owl:sameAs wd:Q89486 .
 
-<https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/William_Hanna> ns1:sameAs <http://www.wikidata.org/entity/Q263324> .
+twssd:William_Hanna owl:sameAs wd:Q263324 .
 

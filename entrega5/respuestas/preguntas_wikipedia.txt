@@ -22,8 +22,9 @@ o cuando la misma sentencia es su propia referencia (da el ejemplo del autor de 
 
 wikidata inicialmente fue un hub centralizador de links entre lenguajes de artículos de wikis.
 por esto cada artículo de wikipedia tiene un item de wikidata (no así a la inversa)
-
-
+no puedo encontrar documentación específica de sobre que parte de wikipedia ---> wikidata
+todo lo que puedo analizar indica lo inverso.
+también describo algunas pruebas que hago en notes_random.txt.
 
 
 4. ¿Cual es el esquema de URIs que utiliza Wikidata? 
@@ -33,6 +34,7 @@ http://www.wikidata.org/wiki/Pxxxxx  donde xxxxx es un número.
 
 
 fuente: https://meta.wikimedia.org/wiki/Wikidata/Notes/URI_scheme
+
 
 5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en Wikidata? 
 
@@ -50,8 +52,9 @@ Wikidata item ID	Q784171
 con lo cual la url sería:
 http://www.wikidata.org/wiki/Q784171
 
-- La ultima que encontré y para mi la mejor es consultar la base estructurada usando sparql por el dato que necesitamos.
-el concepto principal es usar los sitelinks para encontrar la entidad principal del recurso.
+- La ultima que encontré, y para mi la mejor, es consultar la base estructurada usando sparql por el dato que necesitamos.
+el enfoque es usar los sitelinks para encontrar la entidad principal del recurso.
+si o si tiene que tener un identificador de entidad dentro de wikidata.
 
 select ?o where {
       <https://es.wikipedia.org/wiki/Universidad_Nacional_de_La_Plata> schema:about ?o
@@ -64,9 +67,24 @@ http://www.wikidata.org/wiki/Q784171
 
 6. ¿Que diferencias y similitudes encuentra con DBpedia?
 
+dbpedia es una ontologia menos abstracta que la de wikidata. algo mas cercano a lo que estamos acostumbrados.
+dbpedia es generada a partir de datos de wikipedia y los transofrma a su estructura de ontología.
+wikidata es una ontología mas abstracta, preparada para representar como instancias la estructura del conocimiento adicionalmente a el conocimiento en si.
+wikidata por lo que puedo ver tiene propiedades que "simulan" a las propiedades y semánticas de RDFS, OWL.
+antes de entender como funciona wikidata prefería dbpedia. ahora creo que prefiero wikidata para realizar las consultas.
+lleva tiempo acostumbrarse a lo mas abstracto pero con los prefijos como wdt: se simplifica mucho.
+dbpedia y wikidata tratan de representar la misma información de forma estructurada.
+wikidata asumo que está siempre mas actualizada. mas por los períodos que define dbpedia de los releases. cada 6 meses.
+la gran diferencia que pude entender se resumen en:
 
+wikipedia ----> dbpedia
+wikipedia <---- wikidata
+
+la info de dbpedia es scrapeada de wikipedia.
+la info de wikidata genera info y estructura la info de wikipedia.
 
 7. Adapte las queries que construyo en los puntos c y d del ejercicio anterior en el endpoint de Wikidata. (https://query.wikidata.org). ¿Obtuvo resultados diferentes? Si la respuesta es si, ¿a que se deben?
+
 
 
 c - Utilizando el keyword filter (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay 
@@ -92,3 +110,5 @@ SELECT DISTINCT ?per
         UNION
         { ?per wdt:P19 wd:Q77 . }
 	}
+
+        

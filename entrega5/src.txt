@@ -1,5 +1,5 @@
 
-El proceso se divide en 2 etapas.
+El proceso se divide en varias etapas.
 un poco inspirado en el tp anterior, donde links.ttl identificaban las iris que debíamos desreferenciar.
 ahora hago lo mismo pero para desreferenciar y obtener los datos uso sparql.
 también pensando a que la etapa de identificación de: que entidad debería acceder en el datasource externo, y el proceso de 
@@ -41,6 +41,17 @@ esta etapa solo es para permitir una corrección mas simple. ya que se tienen to
 es trivial usar un solo grafo para ir generando todo dentro del mismo.
 
 
+estapa 4:
+implementa la parte de agregar a la ontología el : wasDirectedByOscarWinner
+el script : add_oscar_winner.py
+
+para resolver esto tomo 2 direcciones.
+en el punto 1 de la solución uso mi base de conocimiento como la principal y solo obtengo de bases externas que personas tienen premios.
+y en el punto 2 de la solución ignoro mi base de conocimiento y uso la base externa como principal, donde los actores, directores y premios salen de esa info. 
+mi base solo la uso como fuente de personas.
+la idea fue ver las diferencias entre los 2 enfoques.
+
+
 la sintaxis para ejcutar los scripts:
 
 cd entrega5
@@ -48,13 +59,35 @@ python3 src/personas_dbpedia.py
 python3 src/personas_wikidata.py
 python3 src/augment_dataset.py
 python3 src/unify.py
+python3 src/add_oscar_winner.py
 
-un cambio que se me ocurre es definir de alguna forma un template de consultas por cada datasource.
-o sea la consutla sparql como string que filtraría las entidades en el datasource externo y asociada a un datasource en particular. 
-con eso podemos tener un solo script de filtrado y generación de las referencias (los sameAs).
-no lo hago porque tengo poco tiempo y es algo de desarrollo básico, mas que conceptual de sparql. en esta etapa no aporta nada.
 
-todo el proceso de desarrollo y algunas motivaciones se encuentra dentro de notes_random.txt
-y el resumen de las conclusiones mas importantes de acuerdo a mi criterio se encuentra en notes.txt
+archivos :
+varios de los archivos generados son para hacer mas simple la corrección. en algunos casos se usan como archvios intermedios pero no serían necesarios. se pueden unificar todo y evitar etapas.
+inclusive no importan la ontología, con lo cual protegé los muestra incompletos, o sea sin las clases, etc.
+son pensados para visualizar e identificar información mas simple usando un editor de texto.
 
+
+dataset-original.ttl                <-- dataset unificado de la ontología de los trabajos anteriores. con los individuals y datos.
+
+db_pedia_occupations_original.json  <-- archivo de ocupaciones de las personas que tengo en mi base- segun dbpedia.
+db_pedia_occupations.json           <-- archivo filtrado a mano de las ocupaciones que me parecen correctas.
+dbpedia_subjects.ttl                <-- tripletas de las referenicias a las entidades de dbpedia que representan a mis personas.
+external_dataset2.ttl               <-- tripletas de los datos obtenidos de las entidades de dbpedia. solo como referencia para la corrección. ya que fue unificado el script que las generaba.
+
+
+wikidata_subjects.ttl               <-- tripletas de las referenicas a las entidades de wikidata que representan a mis personas.   
+external_dataset.ttl                <-- tripletas de los datos obtendios de wikidata de esas entidades, solo como referencia para la corrección ya que fue unificado el script que las generaba.
+
+external_dataset_final.ttl          <-- tripletas con los datos de las bases externas (dbpedia, wikidata) generado por augment_dataset.py (esto es para mas simple corrección)     
+dataset_final.ttl                   <-- todos los datos con las bases externas (dbpedia, wikidata) generado por unify_datasets.py 
+
+dataset_directed.ttl                <-- tripletas con los wasDirectedByOscarWinner, solo para la corrección sea mas simple. ya que estos datos se encuentran en el siguiente archivo.
+dataset_final_directed.ttl          <-- tripletas de toda la base con todos los datos. inclusive con wasDirectedByOscarWinner.
+
+
+
+todo lo que se me va ocurriendo y lo que voy probando lo trato de anotar en notes_random.txt.
+es un archivo desordenado y algunos de los conceptos pueden estar mal. voy anotando para acordarme de por que hago cada cosa. y las cosas que se me van ocurriendo a lo largo del camino.
+las conclusiones mas importantes filtradas están dentro de notes.txt
 

@@ -8,7 +8,7 @@ un proyecto que se generó para estructurar la información que existe en wikipe
 la idea del proyecto es formalizar mediante una ontología la información publicada. 
 sacando textualmente del artículo que publicaron en el foro.
 "la disponibilidad de conjuntos de datos estructurados que formalizan y estructuran dicho conocimiento supone una herramienta de incalculable valor"
-la ontología está pensada como una ontología universal, no está basada en la estructura de wikipedia.
+la ontología está pensada como una ontología universal, no está basada en la estructura interna de wikipedia.
 
 2. ¿De donde sale la información disponible en dbpedia?
 
@@ -16,9 +16,9 @@ dbpedia la scrapea de wikipedia mediante bots automáticos, que corren cada cier
 y la información adaptada por la comunidad de dbpedia a su ontología.
 existen distintos tipos de mapeo automático que se realiza.
 mapeo del infobox - extracción basada en mapeos manuales.
-extracción del infobox automática - cuando no existe el mapeo anterior, se trata de automáticamente extraer de forma autormática.
+extracción del infobox automática - cuando no existe el mapeo anterior, se trata de extraer de forma autormática.
 extracción de características - características específicas como las coordenadas geográficas, etc.
-extracción estadística - basada en procesamiento del lenguaje natural.
+extracción estadística - basada en procesamiento del lenguaje natural. PNL
 
 3. ¿Que partes de los artículos de Wikipedia se transforman en tripletas?
 
@@ -41,10 +41,10 @@ y la parte estandarizada para la cual existen versiones en inglés de la wiki.
 para todos estos namespaces la iri del recurso al que se asocian los datos están representados en un término agnóstico del lenguaje dentro de
 http://dbpedia.org/resource/
 
-también existe una explicación dentro de las uris de wikidata.
 
 
-5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en dbpedia? ¿Cuál sería para Argentina? ¿Y para Uruguay? (exprese su respuesta aprovechando el prefijo dbr:  para referirse a http://dbpedia.org/resource/)
+5. ¿Dado el articulo en Wikipedia de "National University of La Plata", como infiero la URL del recurso correspondiente en dbpedia? ¿Cuál sería para Argentina? ¿Y para Uruguay? (exprese su respuesta 
+aprovechando el prefijo dbr:  para referirse a http://dbpedia.org/resource/)
 
 se toma la url del artículo de wikipedia y se usa esa url dentro del espacio de nombres http://dbpedia.org/resource/
 después de buscar en wikipedia:
@@ -105,7 +105,7 @@ Responda:
 
  para el caso de las iris de las propieades.
  las iris internas de dbpedia.org, tenemos que tienen presencia web. al desreferenciar sus iris llegamos a datos que contienen una representación para una máquina.
- en las iris de las propieadades de otros dominios no siempre pasa esto. por lo que analizo el caso normal es que NO pase esto. que no sean desreferenciables.
+ en las iris de las propieadades de otros dominios, externos a dbpedia, no siempre pasa esto. por lo que analizo el caso normal es que NO pase esto. que no sean desreferenciables.
 
  para el caso de los objetos pasa algo similar:
  para los objetos que son iris, las internas a dbpedia tienen presencia web y se pueden desreferenciar.
@@ -114,7 +114,8 @@ Responda:
  http://rdf.freebase.com/ns/m.07_yzv no tiene.
 
  en resumen, todo lo referenciado dentro de dbpedia parece que tiene presencia web y puede ser interpertado por una máquina.
- lo demás no siempre, y el caso general es que no lo sea, por una u otra razón. (expiran los dominios y no los renuevan, nunca los registraron o las iris usadas no son directamente desrefereciables, si no que publican la ontología en una mas general, etc)
+ lo demás no siempre, y el caso general es que no lo sea, por una u otra razón. (expiran los dominios y no los renuevan, nunca los registraron o las iris usadas no son directamente desrefereciables, si no que publican la ontología en otra iri. una mas general, etc)
+ los casos analizados los anote en notes_random.txt
 
 ---
 
@@ -125,15 +126,13 @@ está mejor para alquien que no sabe sparql. ya que tenes listbox que te agregan
 ej te arma el template de la consulta select.
 
 
-
-
 ----
 
 Ejercicio 3: Realizar consultas Sparql en dbpedia
 Para cada caso reporte la consulta sparql correspondiente y el resultado de la misma. En las consultas, de preferencia al uso de clases y propiedades en la ontología de dbpedia (dbo) 
 
 PARA LAS RESPUESTAS DE LAS CONSULTAS, APROVECHO QUE PUEDO EXPORTARLO A SCV Y LAS DEJO DENTRO DE LA ENTREGA.
-dentro de la carpeta respuestas/
+dentro de la carpeta respuestas/dbpedia
 
 a) Obtener a los escritores que hayan nacido en una ciudad de Argentina. 
 
@@ -167,8 +166,7 @@ SELECT DISTINCT ?s
                 ?s rdf:type dbo:Writer .
 			}
 
-por lo que veo dbpedia infiere siempre cuando tiene la info de la ciudad. le pone también la info del país 
-en birthPlace.
+por lo que veo, dbpedia infiere siempre, cuando un recurso tiene la info de la ciudad, le pone también la info del país en birthPlace.
 
 
 c) Utilizando el keyword filter (vea sección 6.3.2.6 del libro), obtener a los escritores que hayan nacido en una ciudad de Argentina o de Uruguay 

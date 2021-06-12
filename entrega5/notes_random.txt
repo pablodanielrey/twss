@@ -4555,3 +4555,80 @@ para que sea mas simple corregir.
 y otro archivo con el dataset terminado completo final con todas las tripletas de todo.
 
 ---
+
+
+genial quedo separado y simple de corregir.
+
+dataset_directed.ttl <--- solo las tripletas que fueron generadas en base a la info externa.
+dataset_final_directed.ttl <--- las tripletas de todo final. completo con mi dataset, la info agregada de wikidata y dbpedia, etc.
+
+---
+
+ejecuto por las dudas todos los procesos nuevamente para verificar que funcionen.
+
+--
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+procesando 0/216
+obteniendo Molly Shannon
+encontrados set()
+....
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_wikidata.py 
+procesando 0/216
+obteniendo Kenneth Branagh
+esperando 2
+entidades externas encontradas {'http://www.wikidata.org/entity/Q55294'}
+procesando 1/216
+....
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/personas_dbpedia.py 
+procesando 0/216
+obteniendo Brian Gill
+...
+
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/augment_dataset.py 
+leyendo archivo de subjects
+procesando 0/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Christopher_Nolan <--- http://www.wikidata.org/entity/Q25191
+procesando 1/267
+esperando 2 segundos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Brian_Tyree_Henry <--- http://www.wikidata.org/entity/Q26924801
+procesando 2/267
+esperando 2 segundos
+...
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/unify_datasets.py 
+leyendo archivo 1
+leyendo archivo 2
+escribiendo dataset unificado final
+
+pablo@xiaomi:/src/github/facu-infor/twss/entrega5$ python3 src/add_oscar_winner.py 
+/////////////////////////////////////////
+Punto1
+//////////////////////////////////////////
+buscando datos específicos de wikidata sobre premios
+encontradas 2131 personas con premios, dentro de 23 directores de mi dataset, busco en 297 referencias para relacionarlos
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell <--- http://www.wikidata.org/entity/Q16207879
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell recibió premio según wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall <--- http://www.wikidata.org/entity/Q18921842
+El director https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Don_Hall recibió premio según wikidata
+https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Sam_Richardson <-- wasDirectedByOscarWinner <-- https://raw.githubusercontent.com/pablodanielrey/twss/master/owl/data/Emerald_Fennell
+https://raw.githubusercontent.com/pablodan
+...
+
+
+--
+
+perfecto. todo corrió como lo esperaba y sin problemas.
+veo en git que me generó de nuevo los archvios o sea que bien. son los archivos que quería generar.
+reviso un poco las preguntas a ver si contesté todas y veo a ver si se me ocurre alguna conclusión mas.
+
+---
+
+
+
+
+
